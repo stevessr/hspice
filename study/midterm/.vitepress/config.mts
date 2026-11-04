@@ -8,6 +8,7 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: false,
   ignoreDeadLinks: false,
+  markdown: { math: true, image: { lazyLoad: true } },
   head: [
     ['meta', { name: 'theme-color', content: '#24668d' }]
   ],
