@@ -12,5 +12,8 @@ for src,dst in items:
     dst.parent.mkdir(parents=True,exist_ok=True)
     p=subprocess.run(['pandoc','--from=markdown+pipe_tables+tex_math_dollars+fenced_code_blocks','--to=typst','--wrap=none',str(src)],capture_output=True,text=True)
     if p.returncode: raise SystemExit(f'{src}: {p.stderr}')
-    dst.write_text('// GENERATED FILE -- edit Markdown and run scripts/sync_typst.py\n'+p.stdout,encoding='utf-8')
+    # Pandoc 3.1 emits #blockquote[...] but Typst 0.14 provides #quote.
+    # Normalize the output instead of maintaining hand-edited generated chapters.
+    typst = p.stdout.replace('#blockquote[', '#quote(block: true)[')
+    dst.write_text('// GENERATED FILE -- edit Markdown and run scripts/sync_typst.py\\n'+typst,encoding='utf-8')
     print(f'{src.relative_to(ROOT)} -> {dst.relative_to(ROOT)}')
