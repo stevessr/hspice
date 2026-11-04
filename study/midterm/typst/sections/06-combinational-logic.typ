@@ -1,0 +1,100 @@
+// GENERATED FILE -- edit Markdown and run scripts/sync_typst.py
+= CMOS 组合逻辑门
+<cmos-组合逻辑门>
+== 静态 CMOS 结构的设计原则
+<静态-cmos-结构的设计原则>
+静态互补 CMOS 逻辑由#strong[上拉网络 PUN（PMOS）];和#strong[下拉网络 PDN（NMOS）];组成。下拉网络在输出应为 0 时导通，上拉网络在输出应为 1 时导通，二者理想情况下互为对偶：#strong[NMOS 串联对应逻辑“与”，并联对应逻辑“或”；PMOS 网络用对偶拓扑实现互补条件。]
+
+== 两输入 NAND 与 NOR
+<两输入-nand-与-nor>
+#figure(
+align(center)[#table(
+  columns: 5,
+  align: (col, row) => (center,center,center,center,center,).at(col),
+  inset: 6pt,
+  [$A$], [$B$], [$overline(A B)$ NAND], [$overline(A + B)$ NOR], [$A xor B$ XOR],
+  [0],
+  [0],
+  [1],
+  [1],
+  [0],
+  [0],
+  [1],
+  [1],
+  [0],
+  [1],
+  [1],
+  [0],
+  [1],
+  [0],
+  [1],
+  [1],
+  [1],
+  [0],
+  [0],
+  [0],
+)]
+)
+
+#strong[NAND：];PDN 两个 NMOS 串联，PUN 两个 PMOS 并联；只有 $A = B = 1$ 时输出为 0。#strong[NOR：];PDN 两个 NMOS 并联，PUN 两个 PMOS 串联；只有 $A = B = 0$ 时输出为 1。
+
+#emph[（示意图参阅原讲义 PDF；此处保留理论说明。）]
+
+== 不同输入扫描方式为什么会改变 VTC
+<不同输入扫描方式为什么会改变-vtc>
+实验七对比了两种情形：①固定一个输入，仅扫描另一个输入；②两个输入连接并同步扫描。虽然逻辑功能相同，但实际同时导通的晶体管数目、等效导通强度和内部节点电压不同，所以电压传输曲线、转换点及传播延迟可能不同。对于堆叠结构，还应考虑串联器件次序及内部节点影响。#strong["逻辑等价"不意味着“模拟电压特性完全相同”。]
+
+== 多输入门的尺寸选择
+<多输入门的尺寸选择>
+相对于基准反相器，为补偿两只 NMOS 串联造成的下拉电阻增大，常将 NAND2 的每只串联 NMOS 的宽度近似增大到基准的两倍；为补偿 NOR2 的两只 PMOS 串联，常将每只串联 PMOS 加宽。并联网络的每条分支一般不需要因并联本身而直接加倍宽度。这是#strong[一阶等效电阻设计法];，实际仍要由波形、最坏延迟与面积验证。（资料对应：实验七；教材第 5 章。）
+
+== XOR、XNOR 与二选一多路选择器
+<xorxnor-与二选一多路选择器>
+$ F_(X O R) & = overline(A) B + A overline(B) = A xor B ,\
+F_(X N O R) & = A B + overline(A) thin overline(B) = overline(A xor B) ,\
+F_(M U X) & = A S + B overline(S) . $
+
+本讲义采用与实验八的#strong[选择器符号图一致];的约定：$S = 1$ 选 $A$，$S = 0$ 选 $B$。#strong[考试必须以题目给出的选择器引脚标注为准];，如果题目将 0／1 输入的定义互换，函数亦需相应调整。
+
+#figure(
+align(center)[#table(
+  columns: 6,
+  align: (col, row) => (center,center,center,center,center,center,).at(col),
+  inset: 6pt,
+  [$A$], [$B$], [XOR], [XNOR], [$F_(M U X) (S = 0)$], [$F_(M U X) (S = 1)$],
+  [0],
+  [0],
+  [0],
+  [1],
+  [0],
+  [0],
+  [0],
+  [1],
+  [1],
+  [0],
+  [1],
+  [0],
+  [1],
+  [0],
+  [1],
+  [0],
+  [0],
+  [1],
+  [1],
+  [1],
+  [0],
+  [1],
+  [1],
+  [1],
+)]
+)
+
+#strong[推导法：];XOR 在输入不同时为 1；XNOR 在输入相同时为 1；MUX 可采用 Shannon 展开为 $F = S dot.op F lr(|""_(S = 1) + overline(S) dot.op F|)_(S = 0)$。（资料对应：实验八。）
+
+#quote(block: true)[
+#strong[题型：逻辑功能综合。];若需输出 $F = 1$ 当且仅当 $A = B$，优先识别为 XNOR。若需 $S = 1$ 输出 $A$，$S = 0$ 输出 $B$，写出 $F = A S + B S^(‾)$，再使用实验八给出的互补 CMOS 结构或现成逻辑门实现。画门级电路前先完成真值表，能够显著减少漏项与极性错误。
+]
+
+#quote(block: true)[
+在异或门、同或门和多路选择器的瞬态波形中，输入几乎同时改变或不同支路传播延迟不一致时，可能出现短时毛刺。判读时应分别说明#strong[稳定后的逻辑真值];与#strong[翻转瞬间的动态现象];。仅凭瞬态尖峰不能判定布尔表达式错误。（资料对应：实验八的输入输出波形。）
+]

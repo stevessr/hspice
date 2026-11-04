@@ -1,0 +1,39 @@
+name: Build HSPICE midterm Typst study guide
+on:
+  push:
+    paths:
+      - 'study/midterm/**'
+      - '.github/workflows/study-typst.yml'
+  pull_request:
+    paths:
+      - 'study/midterm/**'
+      - '.github/workflows/study-typst.yml'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pandoc and CJK fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc fonts-noto-cjk
+      - name: Install Typst
+        uses: typst-community/setup-typst@v5
+        with:
+          typst-version: ^0.14.0
+      - name: Regenerate Typst from Markdown
+        run: python3 study/midterm/scripts/sync_typst.py
+      - name: Verify committed Typst files are synchronized
+        run: git diff --exit-code -- study/midterm/typst/
+      - name: Compile PDF
+        run: |
+          mkdir -p study/midterm/build
+          typst compile study/midterm/main.typ study/midterm/build/midterm-review.pdf
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: hspice-midterm-review
+          path: study/midterm/build/midterm-review.pdf
