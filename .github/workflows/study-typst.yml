@@ -1,6 +1,8 @@
-name: Build HSPICE midterm Typst study guide
+name: Build and deploy HSPICE midterm study guide
+
 on:
   push:
+    branches: [main]
     paths:
       - 'study/midterm/**'
       - '.github/workflows/study-typst.yml'
@@ -9,31 +11,105 @@ on:
       - 'study/midterm/**'
       - '.github/workflows/study-typst.yml'
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-midterm-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
+    name: Verify Markdown and build PDF
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
     steps:
       - uses: actions/checkout@v4
-      - name: Install Pandoc and CJK fonts
+
+      - name: Install Pandoc and Chinese fonts
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc fonts-noto-cjk
+
       - name: Install Typst
         uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.14.0
+
+      - name: Check source structure
+        run: python3 study/midterm/scripts/validate.py
+
       - name: Regenerate Typst from Markdown
         run: python3 study/midterm/scripts/sync_typst.py
-      - name: Verify committed Typst files are synchronized
+
+      - name: Verify committed Typst matches Markdown
         run: git diff --exit-code -- study/midterm/typst/
+
       - name: Compile PDF
         run: |
           mkdir -p study/midterm/build
           typst compile study/midterm/main.typ study/midterm/build/midterm-review.pdf
-      - name: Upload PDF
+
+      - name: Upload PDF build artifact
         uses: actions/upload-artifact@v4
         with:
           name: hspice-midterm-review
           path: study/midterm/build/midterm-review.pdf
+          if-no-files-found: error
+
+      - name: Prepare GitHub Pages website
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          mkdir -p _site
+          cp study/midterm/build/midterm-review.pdf _site/midterm-review.pdf
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="zh-CN">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <meta name="description" content="电子信息与集成电路期中复习：MOS、CMOS、逻辑电路与 HSPICE。">
+            <title>电子信息与集成电路 · 期中复习</title>
+            <style>
+              body{font-family:system-ui,"Noto Sans CJK SC",sans-serif;max-width:780px;margin:8vh auto;padding:0 24px;line-height:1.8;color:#192d3a}
+              h1{font-size:clamp(1.5rem,4vw,2.2rem)}a{color:#075a91}
+              .button{display:inline-block;background:#075a91;color:white;padding:10px 20px;border-radius:8px;text-decoration:none}
+              .muted{color:#586b78}.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px}
+            </style>
+          </head>
+          <body>
+            <h1>电子信息与集成电路 · 期中复习讲义</h1>
+            <p>依据实验一至实验九及教材相关内容编写，包含 MOS 管工作状态、CMOS 逻辑、锁存器、HSPICE 网表与公式附录。</p>
+            <p><a class="button" href="./midterm-review.pdf">在线查看 / 下载 PDF</a></p>
+            <div class="links">
+              <a href="https://github.com/stevessr/hspice/tree/main/study/midterm/content">阅读 Markdown 章节</a>
+              <a href="https://github.com/stevessr/hspice/tree/main/study/midterm">Typst 源码与构建说明</a>
+              <a href="https://github.com/stevessr/hspice/actions/workflows/study-typst.yml">构建状态</a>
+            </div>
+            <p class="muted">本资料为学习整理，不代表教师公布的考试范围。</p>
+          </body>
+          </html>
+          HTML
+
+      - name: Upload GitHub Pages artifact
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Publish to GitHub Pages
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -49,6 +49,18 @@ study/midterm/
 
 本版本从既有期中复习讲义重新拆分，涵盖实验一至九；仓库中另有实验十 PDF，但由于未收到其对应教学内容，本复习讲义尚未将实验十列为考试范围或生成该实验的知识章节。正文中的图示需参考原讲义 PDF 或实验 PDF；本次转换保留文字、表格、计算及代码，不承诺完全还原原 LaTeX 自绘图。
 
+## GitHub Pages 自动部署
+
+工作流文件：[`.github/workflows/study-typst.yml`](../../.github/workflows/study-typst.yml)（从仓库根目录访问）。
+
+在 `main` 分支更新 `study/midterm/**` 后，GitHub Actions 将进行 Markdown 结构检查、Typst 同步校验、PDF 编译，并发布静态页面。
+
+- **发布地址：** https://stevessr.github.io/hspice/
+- **PDF：** https://stevessr.github.io/hspice/midterm-review.pdf
+- **工作流：** https://github.com/stevessr/hspice/actions/workflows/study-typst.yml
+
+首次部署前，需要在仓库 **Settings → Pages → Build and deployment → Source** 中选择 **GitHub Actions**。如果工作流失败，请先查看 Actions 日志；只有构建与部署均成功后，上述链接才会生效。Pull request 只执行编译检查，不会发布站点。
+
 ## 本地构建
 
 依赖 Pandoc ≥ 3.1、Typst ≥ 0.14 及中文字体（建议 Noto CJK）：
@@ -68,5 +80,5 @@ typst compile main.typ build/midterm-review.pdf
 
 - Markdown 各章节为独立文件，公式使用 `$...$` 和 `$$...$$`，真值表使用 GFM 表格。
 - Typst 生成文件添加 GENERATED 标记，确保单一事实来源。
-- 图片使用相对路径；GitHub Actions 可在提交后构建 PDF 并上传 artifact。
+- 图片使用相对路径；GitHub Actions 在提交后构建 PDF、上传 artifact，并在 main 分支更新 GitHub Pages。
 - 具体 HSPICE 网表是否能运行，取决于工艺模型库与 HSPICE 安装环境；文中示例不是硅片工艺参数校准报告。
