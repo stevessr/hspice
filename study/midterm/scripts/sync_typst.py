@@ -14,6 +14,8 @@ for src,dst in items:
     if p.returncode: raise SystemExit(f'{src}: {p.stderr}')
     # Pandoc 3.1 emits #blockquote[...] but Typst 0.14 provides #quote.
     # Normalize the output instead of maintaining hand-edited generated chapters.
-    typst = p.stdout.replace('#blockquote[', '#quote(block: true)[')
+    typst = (p.stdout
+             .replace('#blockquote[', '#quote(block: true)[')
+             .replace('#horizontalrule', '#line(length: 100%)'))
     dst.write_text('// GENERATED FILE -- edit Markdown and run scripts/sync_typst.py\n'+typst,encoding='utf-8')
     print(f'{src.relative_to(ROOT)} -> {dst.relative_to(ROOT)}')
