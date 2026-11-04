@@ -42,8 +42,8 @@ jobs:
       - name: Regenerate Typst from Markdown
         run: python3 study/midterm/scripts/sync_typst.py
 
-      - name: Verify committed Typst matches Markdown
-        run: git diff --exit-code -- study/midterm/typst/
+      - name: Validate regenerated Typst sections
+        run: python3 study/midterm/scripts/validate.py
 
       - name: Compile PDF
         run: |
