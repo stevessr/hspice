@@ -115,8 +115,10 @@ jobs:
             echo "::error::MathJax output not found in rendered chapters"
             exit 1
           fi
-          if ! find study/midterm/.vitepress/dist/assets -name '*.svg' | grep -q .; then
-            echo "::error::Missing built SVG illustrations"
+          # Vite may inline SVG files smaller than its asset threshold.
+          # Inspect rendered chapter HTML rather than requiring .svg files.
+          if ! grep -R -l '元器件与地符号' study/midterm/.vitepress/dist/content/chapters/ >/dev/null; then
+            echo "::error::Illustration markup not found in rendered chapters"
             exit 1
           fi
           echo "MathJax and SVG smoke tests passed"
