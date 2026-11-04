@@ -1,4 +1,6 @@
 build/
-*.pdf
+node_modules/
+public/
+.vitepress/dist/
+.vitepress/cache/
 .DS_Store
-__pycache__/

@@ -1,84 +1,73 @@
-# 电子信息与集成电路 · 期中复习讲义
+# 电子信息与集成电路 · 期中复习资料
 
-基于**实验一至实验九**与《数字集成电路分析与设计——深亚微米工艺（第三版）》相关章节整理。
+依据实验一至实验九及既有课程复习提纲组织。**自编题目不代表正式考试原题**，计算值须区分理想近似与工艺库仿真。
 
-> **内容规范：**复习重点为编写者依据课程材料的整理，不代表教师公布的考试范围；原实验材料的数值、单位和网表差异，参见附录 E。教材与实验的原始图表版权仍归各自权利人所有；此仓库仅保存重新组织的学习笔记与自绘示意图。
+## 在线阅读
 
-## 内容导航
+- **VitePress 网站：** https://stevessr.github.io/hspice/
+- **系统复习：** https://stevessr.github.io/hspice/content/00-reading-guide
+- **实践题库（五大主题，题解分离）：** https://stevessr.github.io/hspice/content/practice/
+- **PDF 内嵌阅读器：** https://stevessr.github.io/hspice/pdf
+- **PDF 直链：** https://stevessr.github.io/hspice/midterm-review.pdf
 
-- [使用说明](content/00-reading-guide.md)
-- [知识结构与复习范围](content/chapters/01-knowledge-map.md)
-- [MOS 晶体管的基础与工作状态](content/chapters/02-mos-basics.md)
-- [传输特性、器件尺寸与参数提取](content/chapters/03-device-parameters.md)
-- [反相器、负载线与噪声容限](content/chapters/04-inverters-noise.md)
-- [功耗、动态行为与延迟](content/chapters/05-power-delay.md)
-- [CMOS 组合逻辑门](content/chapters/06-combinational-logic.md)
-- [SR 锁存器与主从 JK 触发器](content/chapters/07-sequential-logic.md)
-- [HSPICE 网表、扫描与结果判读](content/chapters/08-hspice-netlists.md)
-- [典型题型与标准作答示例](content/chapters/09-practice.md)
-
-### 附录
-
-- [附录 A · 常用公式速查](content/appendices/a-formula-reference.md)
-- [附录 B · 逻辑功能与真值表速查](content/appendices/b-truth-tables.md)
-- [附录 C · HSPICE 指令及模板速查](content/appendices/c-hspice-quick-reference.md)
-- [附录 D · 九项实验索引与教材定位](content/appendices/d-experiment-index.md)
-- [附录 E · 原始资料的差异、错误与核对建议](content/appendices/e-source-discrepancies.md)
-- [附录 F · 考试前自查清单](content/appendices/f-checklist.md)
-
-## 目录结构
+## 目录及单一内容来源
 
 ```text
 study/midterm/
-├── README.md                    # GitHub 内容入口
-├── content/                     # Markdown：唯一手工维护的正文
+├── index.md                 # VitePress 首页
+├── pdf.md                   # PDF 在线查看 / 切换实验资料
+├── .vitepress/
+│   ├── config.mts           # 导航、侧栏、搜索、/hspice/ base
+│   └── theme/               # 响应式排版增强
+├── content/
 │   ├── 00-reading-guide.md
-│   ├── chapters/                # 九章正文
-│   └── appendices/              # 附录 A–F
-├── typst/                       # 从 Markdown 生成，可作为排版级二次编辑起点
-│   ├── reading-guide.typ
-│   ├── sections/
-│   └── appendices/
-├── assets/figures/              # 矢量图 SVG
-├── scripts/sync_typst.py        # Markdown -> Typst
-├── main.typ                     # Typst 文档入口
+│   ├── chapters/            # 九章理论
+│   ├── appendices/          # 六项附录
+│   └── practice/            # 五组专题练习 + answers/ 五份解析
+├── typst/                   # 从 Markdown 自动生成
+├── main.typ                 # PDF 排版入口
+├── public/                  # 构建时生成的 PDF（不入库）
+├── scripts/
+│   ├── sync_typst.py
+│   └── validate.py
+├── package.json             # VitePress
 └── Makefile
 ```
 
-## 来源与适用性
-
-本版本从既有期中复习讲义重新拆分，涵盖实验一至九；仓库中另有实验十 PDF，但由于未收到其对应教学内容，本复习讲义尚未将实验十列为考试范围或生成该实验的知识章节。正文中的图示需参考原讲义 PDF 或实验 PDF；本次转换保留文字、表格、计算及代码，不承诺完全还原原 LaTeX 自绘图。
-
-## GitHub Pages 自动部署
-
-工作流文件：[`.github/workflows/study-typst.yml`](../../.github/workflows/study-typst.yml)（从仓库根目录访问）。
-
-在 `main` 分支更新 `study/midterm/**` 后，GitHub Actions 将进行 Markdown 结构检查、Typst 同步校验、PDF 编译，并发布静态页面。
-
-- **发布地址：** https://stevessr.github.io/hspice/
-- **PDF：** https://stevessr.github.io/hspice/midterm-review.pdf
-- **工作流：** https://github.com/stevessr/hspice/actions/workflows/study-typst.yml
-
-首次部署前，需要在仓库 **Settings → Pages → Build and deployment → Source** 中选择 **GitHub Actions**。如果工作流失败，请先查看 Actions 日志；只有构建与部署均成功后，上述链接才会生效。Pull request 只执行编译检查，不会发布站点。
-
 ## 本地构建
 
-依赖 Pandoc ≥ 3.1、Typst ≥ 0.14 及中文字体（建议 Noto CJK）：
+依赖：Python 3、Pandoc ≥ 3.1、Typst ≥ 0.14、Node.js 22、Noto CJK 字体。
 
 ```bash
 cd study/midterm
-python3 scripts/sync_typst.py   # 改动 Markdown 后同步 Typst
+python3 scripts/validate.py
+python3 scripts/sync_typst.py
+python3 scripts/validate.py --generated
 mkdir -p build
+
 typst compile main.typ build/midterm-review.pdf
+mkdir -p public/experiments
+cp build/midterm-review.pdf public/midterm-review.pdf
+# 从仓库根目录复制原始实验 PDF：
+cp ../../实验*.pdf public/experiments/
+
+npm install
+npm run docs:build
+npm run docs:preview
 ```
 
-也可以运行 `make all`。若只阅读源码，GitHub 直接预览 `content/` 中的 Markdown 即可，不需要安装 Typst。
+本地开发：`npm run docs:dev`；注意构建前必须确保 `public/` 已放入 PDF，否则仅有网页无法展示 PDF。发布地址使用 `base: '/hspice/'`，防止 GitHub Pages 子路径造成静态资源 404。
 
-**编辑约定：**优先改 `content/`，同步后生成 `typst/`。如需仅针对出版版式微调 Typst，请单独维护 patch 或在 `main.typ` 修改样式，避免同步覆盖。`assets/` 中的图片由两种格式共用。
+## GitHub Actions
 
-## 内容检验
+`.github/workflows/study-typst.yml` 在 `main` 推送后自动执行：
 
-- Markdown 各章节为独立文件，公式使用 `$...$` 和 `$$...$$`，真值表使用 GFM 表格。
-- Typst 生成文件添加 GENERATED 标记，确保单一事实来源。
-- 图片使用相对路径；GitHub Actions 在提交后构建 PDF、上传 artifact，并在 main 分支更新 GitHub Pages。
-- 具体 HSPICE 网表是否能运行，取决于工艺模型库与 HSPICE 安装环境；文中示例不是硅片工艺参数校准报告。
+1. 验证 Markdown 章节、练习及链接，重新生成 Typst。
+2. 编译包含实践题及答案的完整 PDF，上传 PDF artifact。
+3. 将完整复习 PDF 和实验一至十原始 PDF 放到 VitePress 的 `public/`。
+4. 构建 VitePress 网站，校验页面链接，上传站点 artifact。
+5. 由 `actions/deploy-pages` 发布静态站点；PR 仅构建，不部署。
+
+仓库必须在 **Settings → Pages → Build and deployment → Source** 中启用 **GitHub Actions**，并允许 Pages 工作流部署。只有 Actions 的构建与部署任务均成功，才表示发布完成。
+
+**维护原则：**手工只编辑 `content/` 的 Markdown；`typst/` 为可重复生成的镜像；网站直接渲染原始 Markdown，不维护第二套正文。原始实验 PDF 不在构建中修改。

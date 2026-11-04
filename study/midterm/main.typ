@@ -40,6 +40,19 @@
 #include "typst/sections/08-hspice-netlists.typ"
 #include "typst/sections/09-practice.typ"
 #pagebreak()
+// 自编实践题目与解答同时进入打印版；Markdown 是唯一人工维护的来源。
+#include "typst/practice/01-mos.typ"
+#include "typst/practice/02-inverter.typ"
+#include "typst/practice/03-logic.typ"
+#include "typst/practice/04-sequential.typ"
+#include "typst/practice/05-hspice.typ"
+#pagebreak()
+#include "typst/practice/answers/01-mos.typ"
+#include "typst/practice/answers/02-inverter.typ"
+#include "typst/practice/answers/03-logic.typ"
+#include "typst/practice/answers/04-sequential.typ"
+#include "typst/practice/answers/05-hspice.typ"
+#pagebreak()
 #set heading(numbering: none)
 #include "typst/appendices/a-formula-reference.typ"
 #include "typst/appendices/b-truth-tables.typ"

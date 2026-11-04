@@ -1,0 +1,8 @@
+:root { --vp-c-brand-1: #24668d; --vp-c-brand-2: #347fa5; --vp-c-brand-3: #1d5a7c; }
+.dark { --vp-c-brand-1: #7bc2ed; --vp-c-brand-2: #559ec4; --vp-c-brand-3: #347fa5; }
+.vp-doc table { display: block; width: max-content; max-width: 100%; overflow-x: auto; }
+.vp-doc .language-text { font-size: 0.91rem; }
+.pdf-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin: 1rem 0; }
+.pdf-controls select { background: var(--vp-c-bg); color: var(--vp-c-text-1); border: 1px solid var(--vp-c-divider); border-radius: 8px; padding: 0.55rem 0.7rem; max-width: 100%; }
+.pdf-viewer { display: block; width: 100%; height: min(80vh, 940px); min-height: 460px; border: 1px solid var(--vp-c-divider); border-radius: 8px; }
+@media (max-width: 640px) { .pdf-viewer { min-height: 420px; height: 67vh; } }
