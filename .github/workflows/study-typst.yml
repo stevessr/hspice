@@ -1,16 +1,22 @@
-name: Build PDF and deploy VitePress study site
+name: Build Typst PDF
 
 on:
   push:
     branches: [main]
     paths:
-      - 'study/midterm/**'
-      - '实验*.pdf'
+      - 'study/midterm/content/**'
+      - 'study/midterm/typst/**'
+      - 'study/midterm/assets/figures/**'
+      - 'study/midterm/main.typ'
+      - 'study/midterm/scripts/**'
       - '.github/workflows/study-typst.yml'
   pull_request:
     paths:
-      - 'study/midterm/**'
-      - '实验*.pdf'
+      - 'study/midterm/content/**'
+      - 'study/midterm/typst/**'
+      - 'study/midterm/assets/figures/**'
+      - 'study/midterm/main.typ'
+      - 'study/midterm/scripts/**'
       - '.github/workflows/study-typst.yml'
   workflow_dispatch:
 
@@ -18,100 +24,69 @@ permissions:
   contents: read
 
 concurrency:
-  group: hspice-pages-${{ github.ref }}
-  cancel-in-progress: false
+  group: hspice-pdf-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
-    name: Validate source, compile PDF, build VitePress
+  pdf:
+    name: Validate and compile standalone PDF
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Validate Markdown source and links
+        run: python3 study/midterm/scripts/validate.py
+
+      - name: Restore content-addressed PDF cache
+        id: pdf-cache
+        uses: actions/cache@v4
         with:
-          node-version: '22'
+          path: study/midterm/build/midterm-review.pdf
+          key: midterm-pdf-v2-${{ runner.os }}-${{ hashFiles('study/midterm/content/**/*.md', 'study/midterm/main.typ', 'study/midterm/scripts/sync_typst.py', 'study/midterm/assets/figures/*.svg') }}
+
+      - name: Cache Typst resources
+        if: steps.pdf-cache.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/typst
+          key: midterm-typst-resource-v1-${{ runner.os }}-0.14
 
       - name: Install Pandoc and Chinese fonts
+        if: steps.pdf-cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc fonts-noto-cjk
 
       - name: Install Typst
+        if: steps.pdf-cache.outputs.cache-hit != 'true'
         uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.14.0
 
-      - name: Validate Markdown and practice links
-        run: python3 study/midterm/scripts/validate.py
-
-      - name: Regenerate all Typst chapters and practice sheets
+      - name: Convert Markdown to Typst
+        if: steps.pdf-cache.outputs.cache-hit != 'true'
         run: python3 study/midterm/scripts/sync_typst.py
 
       - name: Validate generated Typst
+        if: steps.pdf-cache.outputs.cache-hit != 'true'
         run: python3 study/midterm/scripts/validate.py --generated
 
-      - name: Compile PDF
+      - name: Compile PDF (bounded)
+        if: steps.pdf-cache.outputs.cache-hit != 'true'
+        timeout-minutes: 12
         run: |
           mkdir -p study/midterm/build
           typst compile study/midterm/main.typ study/midterm/build/midterm-review.pdf
 
-      - name: Upload print-ready PDF
+      - name: Confirm PDF exists
+        run: test -s study/midterm/build/midterm-review.pdf
+
+      - name: Upload PDF artifact independently of Pages
         uses: actions/upload-artifact@v4
         with:
           name: hspice-midterm-review
           path: study/midterm/build/midterm-review.pdf
+          retention-days: 30
           if-no-files-found: error
-
-      - name: Prepare PDFs for public VitePress pages
-        shell: bash
-        run: |
-          mkdir -p study/midterm/public/experiments
-          cp study/midterm/build/midterm-review.pdf study/midterm/public/midterm-review.pdf
-          for file in 实验*.pdf; do
-            if [ -f "$file" ]; then
-              cp "$file" study/midterm/public/experiments/
-            fi
-          done
-          for name in 一 二 三 四 五 六 七 八 九 十; do
-            test -s "study/midterm/public/experiments/实验${name}.pdf"
-          done
-
-      - name: Install VitePress dependencies
-        working-directory: study/midterm
-        run: npm install --no-audit --no-fund
-
-      - name: Build searchable documentation site
-        working-directory: study/midterm
-        run: npm run docs:build
-
-      - name: Upload website build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: hspice-vitepress-site
-          path: study/midterm/.vitepress/dist/
-          if-no-files-found: error
-
-      - name: Upload GitHub Pages artifact
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: study/midterm/.vitepress/dist/
-
-  deploy:
-    name: Publish VitePress to GitHub Pages
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      pages: write
-      id-token: write
-    steps:
-      - name: Deploy site
-        uses: actions/deploy-pages@v4
-        id: deployment

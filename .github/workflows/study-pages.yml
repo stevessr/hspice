@@ -1,0 +1,152 @@
+name: Deploy VitePress study site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'study/midterm/**'
+      - '实验*.pdf'
+      - '.github/workflows/study-pages.yml'
+      - '.github/workflows/study-typst.yml'
+  pull_request:
+    paths:
+      - 'study/midterm/**'
+      - '实验*.pdf'
+      - '.github/workflows/study-pages.yml'
+  workflow_run:
+    workflows: ['Build Typst PDF']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: vitepress-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build Markdown and VitePress (no Typst)
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push' &&
+       github.event.workflow_run.head_branch == 'main' &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Cache npm and installed dependencies
+        id: node-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            study/midterm/node_modules
+          key: vitepress-node22-${{ runner.os }}-${{ hashFiles('study/midterm/package.json') }}
+
+      - name: Validate Markdown and image references
+        run: python3 study/midterm/scripts/validate.py
+
+      - name: Install VitePress
+        if: steps.node-cache.outputs.cache-hit != 'true'
+        working-directory: study/midterm
+        run: npm install --no-audit --no-fund --prefer-offline
+
+      - name: Copy original experiment PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p study/midterm/public/experiments
+          for f in 实验*.pdf; do
+            test -s "$f"
+            cp "$f" study/midterm/public/experiments/
+          done
+          for name in 一 二 三 四 五 六 七 八 九 十; do
+            test -s "study/midterm/public/experiments/实验${name}.pdf"
+          done
+
+      - name: Restore latest successfully built review PDF (optional)
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/hspice-pdf-artifact
+          # Use the last successful standalone PDF build. Fall back to the
+          # previous combined workflow until the new PDF workflow succeeds.
+          for workflow in study-typst.yml; do
+            runs="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "$workflow" --branch main --status success --limit 10 --json databaseId --jq '.[].databaseId' 2>/dev/null || true)"
+            for run_id in $runs; do
+              rm -f /tmp/hspice-pdf-artifact/midterm-review.pdf
+              if gh run download "$run_id" --repo "$GITHUB_REPOSITORY" --name hspice-midterm-review --dir /tmp/hspice-pdf-artifact >/dev/null 2>&1; then
+                if test -s /tmp/hspice-pdf-artifact/midterm-review.pdf; then
+                  cp /tmp/hspice-pdf-artifact/midterm-review.pdf study/midterm/public/midterm-review.pdf
+                  echo "Using PDF artifact from run $run_id"
+                  break 2
+                fi
+              fi
+            done
+          done
+          if ! test -s study/midterm/public/midterm-review.pdf; then
+            echo "::warning::No successful review PDF artifact yet; Markdown Pages will still deploy."
+          fi
+
+      - name: Build VitePress documentation and local search
+        working-directory: study/midterm
+        run: npm run docs:build
+
+      - name: Check math and figure output
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s study/midterm/.vitepress/dist/index.html
+          if ! grep -R -l 'mjx-container' study/midterm/.vitepress/dist/content/chapters/ >/dev/null; then
+            echo "::error::MathJax output not found in rendered chapters"
+            exit 1
+          fi
+          if ! find study/midterm/.vitepress/dist/assets -name '*.svg' | grep -q .; then
+            echo "::error::Missing built SVG illustrations"
+            exit 1
+          fi
+          echo "MathJax and SVG smoke tests passed"
+
+      - name: Upload site build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hspice-vitepress-site
+          path: study/midterm/.vitepress/dist/
+          if-no-files-found: error
+
+      - name: Upload GitHub Pages site
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: study/midterm/.vitepress/dist/
+
+  deploy:
+    name: Publish Markdown and PDF preview to Pages
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy GitHub Pages
+        id: publish
+        uses: actions/deploy-pages@v4

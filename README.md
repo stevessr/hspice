@@ -8,6 +8,6 @@
 - **PDF 在线预览（含实验资料）：** https://stevessr.github.io/hspice/pdf
 - [源代码、排版说明与构建方法](study/midterm/README.md)
 
-网站使用现有 Markdown 作为唯一手工维护的内容源，Pandoc 将课程章节与实践题生成 Typst，GitHub Actions 编译 PDF 并用 VitePress 构建网站，统一发布至 GitHub Pages。
+网站使用现有 Markdown 作为唯一手工维护的内容源，VitePress 网站与 Typst PDF 采用**独立的 GitHub Actions 工作流**：网站可不依赖 PDF 编译直接部署；PDF 构建使用内容哈希缓存，成功后自动触发网站更新在线预览，Node 依赖也单独缓存。
 
 课程范围由学习者自行核对；实验十已纳入 PDF 资源阅读列表，但未因文件存在而自动推定属于期中考试范围。

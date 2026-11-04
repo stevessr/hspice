@@ -58,16 +58,14 @@ npm run docs:preview
 
 本地开发：`npm run docs:dev`；注意构建前必须确保 `public/` 已放入 PDF，否则仅有网页无法展示 PDF。发布地址使用 `base: '/hspice/'`，防止 GitHub Pages 子路径造成静态资源 404。
 
-## GitHub Actions
+## GitHub Actions：网站与 PDF 分离
 
-`.github/workflows/study-typst.yml` 在 `main` 推送后自动执行：
+- [`study-pages.yml`](../../.github/workflows/study-pages.yml)：**独立 VitePress 网站构建与 GitHub Pages 部署**。只使用 Node.js，不安装 Pandoc、Typst。缓存 npm 下载目录及 `node_modules`，缓存键包含 `package.json` 的哈希。
+- [`study-typst.yml`](../../.github/workflows/study-typst.yml)：**独立 Typst PDF 生成**。根据 Markdown、Typst 入口、转换脚本及 SVG 的内容哈希缓存已编译 PDF，并缓存 Typst 资源；每次成功后上传 `hspice-midterm-review` artifact。
+- 网站构建会**尽力获取最近一次成功生成的 PDF artifact**；PDF 编译失败或超时时仍然可以独立发布 Markdown 章节、实践题和原始实验 PDF。
+- PDF 工作流完成且成功后自动触发网站再次部署，更新在线 PDF；在两次构建之间，网站可能暂时提供上一版成功构建的 PDF。
+- PR 只验证代码，不发布 GitHub Pages。两个工作流拥有独立的并发组与超时控制。
 
-1. 验证 Markdown 章节、练习及链接，重新生成 Typst。
-2. 编译包含实践题及答案的完整 PDF，上传 PDF artifact。
-3. 将完整复习 PDF 和实验一至十原始 PDF 放到 VitePress 的 `public/`。
-4. 构建 VitePress 网站，校验页面链接，上传站点 artifact。
-5. 由 `actions/deploy-pages` 发布静态站点；PR 仅构建，不部署。
-
-仓库必须在 **Settings → Pages → Build and deployment → Source** 中启用 **GitHub Actions**，并允许 Pages 工作流部署。只有 Actions 的构建与部署任务均成功，才表示发布完成。
+Pages 的部署源需要在 **Settings → Pages → Build and deployment → Source** 中选择 **GitHub Actions**。在线预览地址仍为 https://stevessr.github.io/hspice/pdf 。
 
 **维护原则：**手工只编辑 `content/` 的 Markdown；`typst/` 为可重复生成的镜像；网站直接渲染原始 Markdown，不维护第二套正文。原始实验 PDF 不在构建中修改。
