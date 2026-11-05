@@ -26,6 +26,10 @@ jobs:
       - uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.14.2
+      - name: Verify math and truth-table syntax from latest proofreading round
+        run: |
+          typst compile fullbook/native/fixtures/proofread-syntax.typ /tmp/proofread-syntax.pdf
+          test -s /tmp/proofread-syntax.pdf
       - name: Install CJK fonts for accurate editable PDF rendering
         timeout-minutes: 5
         run: |
@@ -38,10 +42,6 @@ jobs:
           typst compile fullbook/native/template.typ /tmp/fullbook-native-smoke.pdf
           test -s /tmp/fullbook-native-smoke.pdf
           test -s /tmp/fullbook-native-smoke.pdf
-      - name: Verify math and truth-table syntax from latest proofreading round
-        run: |
-          typst compile fullbook/native/fixtures/proofread-syntax.typ /tmp/proofread-syntax.pdf
-          test -s /tmp/proofread-syntax.pdf
       - name: Compile partially transcribed native chapter preview
         run: |
           mkdir -p /tmp/native-editable
