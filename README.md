@@ -7,7 +7,8 @@
 - **实践题库与参考答案：** https://stevessr.github.io/hspice/content/practice/
 - **电路图解总览：** https://stevessr.github.io/hspice/figures
 - **14 题在线自测：** https://stevessr.github.io/hspice/quiz
-- **PDF 在线预览（含实验资料）：** https://stevessr.github.io/hspice/pdf
+- **PDF 分章资料库（含实验资料）：** https://stevessr.github.io/hspice/pdf
+- **九章教材 Typst 复习精编：** https://stevessr.github.io/hspice/textbook
 - [源代码、排版说明与构建方法](study/midterm/README.md)
 
 网站使用现有 Markdown 作为唯一手工维护的内容源，VitePress 网站与 Typst PDF 采用**独立的 GitHub Actions 工作流**：网站可不依赖 PDF 编译直接部署；PDF 构建使用内容哈希缓存，成功后自动触发网站更新在线预览，Node 依赖也单独缓存。

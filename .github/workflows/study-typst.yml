@@ -8,6 +8,7 @@ on:
       - 'study/midterm/typst/**'
       - 'study/midterm/assets/figures/**'
       - 'study/midterm/main.typ'
+      - 'study/midterm/textbook/**'
       - 'study/midterm/scripts/**'
       - '.github/workflows/study-typst.yml'
   pull_request:
@@ -43,8 +44,11 @@ jobs:
         id: pdf-cache
         uses: actions/cache@v4
         with:
-          path: study/midterm/build/midterm-review.pdf
-          key: midterm-pdf-v2-${{ runner.os }}-${{ hashFiles('study/midterm/content/**/*.md', 'study/midterm/main.typ', 'study/midterm/scripts/**', 'study/midterm/assets/figures/*.svg') }}
+          path: |
+            study/midterm/build/midterm-review.pdf
+            study/midterm/build/textbook-review.pdf
+            study/midterm/build/publish/
+          key: midterm-pdf-v4-${{ runner.os }}-${{ hashFiles('study/midterm/content/**/*.md', 'study/midterm/main.typ', 'study/midterm/textbook/**/*.typ', 'study/midterm/scripts/**', 'study/midterm/assets/figures/*.svg') }}
 
       - name: Cache Typst resources
         if: steps.pdf-cache.outputs.cache-hit != 'true'
@@ -86,8 +90,30 @@ jobs:
         timeout-minutes: 18
         run: python3 study/midterm/scripts/build_pdf.py
 
-      - name: Confirm PDF exists
-        run: test -s study/midterm/build/midterm-review.pdf
+      - name: Verify both PDFs and the chapter manifest
+        run: |
+          test -s study/midterm/build/midterm-review.pdf
+          test -s study/midterm/build/textbook-review.pdf
+          test -s study/midterm/build/publish/pdf-index.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          base = Path('study/midterm/build/publish')
+          data = json.loads((base/'pdf-index.json').read_text(encoding='utf-8'))
+          items = data['items']
+          assert len(items) >= 38, len(items)
+          for entry in items:
+              assert (base/entry['path']).is_file(), entry
+          print('Validated', len(items), 'PDF preview entries')
+          PY
+
+      - name: Upload complete chapter PDF collection
+        uses: actions/upload-artifact@v4
+        with:
+          name: hspice-study-pdf-bundle
+          path: study/midterm/build/publish/
+          retention-days: 30
+          if-no-files-found: error
 
       - name: Upload PDF artifact independently of Pages
         uses: actions/upload-artifact@v4
@@ -96,3 +122,4 @@ jobs:
           path: study/midterm/build/midterm-review.pdf
           retention-days: 30
           if-no-files-found: error
+

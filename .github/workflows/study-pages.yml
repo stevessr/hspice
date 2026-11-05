@@ -83,23 +83,53 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p /tmp/hspice-pdf-artifact
-          # Use the last successful standalone PDF build. Fall back to the
-          # previous combined workflow until the new PDF workflow succeeds.
-          for workflow in study-typst.yml; do
-            runs="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "$workflow" --branch main --status success --limit 10 --json databaseId --jq '.[].databaseId' 2>/dev/null || true)"
+          # Download a coherent, validated bundle from one successful PDF run.
+          # No local PDF compilation occurs during Pages deployment.
+          found_bundle=false
+          runs="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow study-typst.yml --branch main --status success --limit 12 --json databaseId --jq '.[].databaseId' 2>/dev/null || true)"
+          for run_id in $runs; do
+            rm -rf /tmp/hspice-pdf-artifact/*
+            if gh run download "$run_id" --repo "$GITHUB_REPOSITORY" --name hspice-study-pdf-bundle --dir /tmp/hspice-pdf-artifact >/dev/null 2>&1; then
+              if test -s /tmp/hspice-pdf-artifact/pdf-index.json &&
+                 test -s /tmp/hspice-pdf-artifact/midterm-review.pdf &&
+                 test -s /tmp/hspice-pdf-artifact/textbook-review.pdf; then
+                cp -a /tmp/hspice-pdf-artifact/. study/midterm/public/
+                echo "Using split PDF bundle from run $run_id"
+                found_bundle=true
+                break
+              fi
+            fi
+          done
+          if [ "$found_bundle" = false ]; then
+            # Backward compatibility with the previous single-PDF artifacts.
             for run_id in $runs; do
-              rm -f /tmp/hspice-pdf-artifact/midterm-review.pdf
+              rm -rf /tmp/hspice-pdf-artifact/*
               if gh run download "$run_id" --repo "$GITHUB_REPOSITORY" --name hspice-midterm-review --dir /tmp/hspice-pdf-artifact >/dev/null 2>&1; then
                 if test -s /tmp/hspice-pdf-artifact/midterm-review.pdf; then
-                  cp /tmp/hspice-pdf-artifact/midterm-review.pdf study/midterm/public/midterm-review.pdf
-                  echo "Using PDF artifact from run $run_id"
-                  break 2
+                  cp /tmp/hspice-pdf-artifact/midterm-review.pdf study/midterm/public/
+                  echo "Using legacy PDF from run $run_id"
+                  break
                 fi
               fi
             done
-          done
+          fi
           if ! test -s study/midterm/public/midterm-review.pdf; then
             echo "::warning::No successful review PDF artifact yet; Markdown Pages will still deploy."
+          fi
+
+      - name: Check downloaded chapter PDFs (when available)
+        shell: bash
+        run: |
+          if [ -f study/midterm/public/pdf-index.json ]; then
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('study/midterm/public')
+          items = json.loads((root/'pdf-index.json').read_text(encoding='utf-8'))['items']
+          for item in items:
+              assert (root/item['path']).is_file(), item['path']
+          print('Pages PDF preview collection:', len(items), 'files')
+          PY
           fi
 
       - name: Build VitePress documentation and local search

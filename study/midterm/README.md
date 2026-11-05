@@ -11,13 +11,17 @@
 - **PDF 直链：** https://stevessr.github.io/hspice/midterm-review.pdf
 - **图解索引：** https://stevessr.github.io/hspice/figures
 - **在线自测：** https://stevessr.github.io/hspice/quiz
+- **教材九章 Typst 复习精编：** https://stevessr.github.io/hspice/textbook
+- **分章 PDF 资料库：** https://stevessr.github.io/hspice/pdf
 
 ## 目录及单一内容来源
 
 ```text
 study/midterm/
 ├── index.md                 # VitePress 首页
-├── pdf.md                   # PDF 在线查看 / 切换实验资料
+├── pdf.md                   # 统一 PDF 阅读器：整册/章节/习题/实验
+├── textbook.md              # 教材九章的知识与页码索引
+├── textbook/units/          # 直接编写的九章 Typst 复习精编
 ├── figures.md               # 电路图解索引
 ├── quiz.md                  # 14 道自测题与答案解析
 ├── .vitepress/
@@ -35,6 +39,7 @@ study/midterm/
 │   ├── sync_typst.py
 │   └── validate.py
 ├── package.json             # VitePress
+├── scripts/build_pdf.py      # 逐章编译、合并并输出分章清单
 └── Makefile
 ```
 
@@ -53,6 +58,7 @@ mkdir -p build
 python3 -m pip install 'pypdf>=5,<7'
 python3 scripts/build_pdf.py
 mkdir -p public/experiments
+cp -a build/publish/. public/
 cp build/midterm-review.pdf public/midterm-review.pdf
 # 从仓库根目录复制原始实验 PDF：
 cp ../../实验*.pdf public/experiments/
@@ -84,3 +90,10 @@ Pages 的部署源需要在 **Settings → Pages → Build and deployment → So
 每章设置编译超时。构建时将教学 SVG 在 `assets/figures/` 中转换为**最大宽度约 1200 像素的 PNG 中间文件**供 Typst 排版，VitePress 仍使用原始 SVG。若插图仍导致某一章节无法编译，工作流会明确警告，并且只对该章节退回“请参阅在线 Markdown 版”的文字提示。
 
 网站通过 `study-pages.yml` 单独构建并发布，PDF 失败不阻断 Markdown 文档站。VitePress 的 MathJax 渲染与插图存在性由 Actions 自动检查。
+
+
+## 独立发布的 PDF 资源
+
+`build_pdf.py` 在同一次成功构建中提供 `midterm-review.pdf`（期中复习整册）、`textbook-review.pdf`（教材九章 Typst 精编整册）、所有原有讲义的独立章节 PDF，以及教材九章的独立 PDF。输出目录为 `build/publish/`，同时生成 `pdf-index.json`，列出每份资料的标题、类别、页数与链接。Pages 工作流下载最新成功的 `hspice-study-pdf-bundle` 并原样发布，不在网站任务中重复进行 Typst 编译。
+
+教材精编为按目录结构组织的原创学习资料；上传教材的目录章名和页码已进行核对，内容旨在课堂复习而非逐字复刻教材。课程期中范围之外的存储器章节作为拓展保留。

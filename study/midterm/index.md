@@ -12,8 +12,11 @@ hero:
       text: 进入实践题库
       link: /content/practice/
     - theme: alt
-      text: 在线阅读 PDF
+      text: PDF 分章资料库
       link: /pdf
+    - theme: alt
+      text: 教材 Typst 精编
+      link: /textbook
     - theme: alt
       text: 公式与电路图解
       link: /figures
@@ -24,9 +27,12 @@ features:
   - title: 五类专题训练
     details: MOS 器件、反相器、组合逻辑、时序电路与 HSPICE，题目和参考解析分开组织。
     link: /content/practice/
-  - title: Typst PDF 在线预览
-    details: 独立 PDF 工作流分章编译并合并，成功的构建产物由网站发布流程读取。
+  - title: PDF 分章资料库
+    details: 整册、章节、练习、解答、附录及实验原始 PDF 均可检索与独立预览。
     link: /pdf
+  - title: 教材九章 Typst 复习精编
+    details: 按教材九章结构重新讲解 MOS、反相器、CMOS 逻辑、时序与存储器等知识。
+    link: /textbook
   - title: 电路结构图解
     details: MOS 端口、反相器、NAND/NOR、SR 锁存器、主从 JK 和等效 RC 结构的 SVG 汇总。
     link: /figures

@@ -20,10 +20,25 @@ export default defineConfig({
       { text: '实践题库', link: '/content/practice/' },
       { text: '电路图解', link: '/figures' },
       { text: '在线自测', link: '/quiz' },
-      { text: 'PDF 在线预览', link: '/pdf' },
+      { text: 'PDF 资料库', link: '/pdf' },
+      { text: '教材 Typst 精编', link: '/textbook' },
       { text: 'GitHub 仓库', link: 'https://github.com/stevessr/hspice' }
     ],
     sidebar: {
+      '/pdf': [
+        { text: 'PDF 在线阅读', items: [
+          { text: '分章资料库', link: '/pdf' },
+          { text: '教材精编索引', link: '/textbook' },
+          { text: '课程 Markdown 讲义', link: '/content/00-reading-guide' }
+        ]}
+      ],
+      '/textbook': [
+        { text: 'Typst 教材复习精编', items: [
+          { text: '教材九章索引', link: '/textbook' },
+          { text: 'PDF 分章阅读', link: '/pdf' },
+          { text: '课程实验索引', link: '/content/appendices/d-experiment-index' }
+        ]}
+      ],
       '/figures': [
         { text: '电路图解', items: [
           { text: '图解总览', link: '/figures' },
