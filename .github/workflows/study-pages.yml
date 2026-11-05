@@ -146,6 +146,17 @@ jobs:
       - name: Export reviewed native Typst sections to semantic HTML
         run: python3 fullbook/native/web/build_html.py --output study/midterm/public/native-typst
 
+      - name: Export exact-sized native Typst page SVG (no PDF)
+        shell: bash
+        run: |
+          set -euo pipefail
+          typst compile --features html --format svg \
+            --root fullbook/native \
+            fullbook/native/web/03-page-026-layout.typ \
+            study/midterm/public/native-typst/03-page-026-layout.svg
+          test -s study/midterm/public/native-typst/03-page-026-layout.svg
+          grep -q 'viewBox="0 0 506.8346 729.6"' study/midterm/public/native-typst/03-page-026-layout.svg
+
       - name: Verify native Typst HTML and source availability
         shell: bash
         run: |
@@ -197,6 +208,7 @@ jobs:
           test -s study/midterm/.vitepress/dist/native-typst/01-gates-noise-delay.html
           test -s study/midterm/.vitepress/dist/native-typst/02-mos-threshold.html
           test -s study/midterm/.vitepress/dist/native-typst/03-page-026.html
+          test -s study/midterm/.vitepress/dist/native-typst/03-page-026-layout.svg
           echo "MathJax, SVG, and Typst HTML smoke tests passed"
 
       - name: Upload site build artifact
