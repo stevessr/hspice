@@ -9,31 +9,57 @@
 
 == 图1.4：缓冲器、或非门与与非门
 
-#gate-symbol(kind: "buffer")
-#gate-symbol(kind: "inverter")
-#gate-symbol(kind: "inverter")
+#context {
+  if target() == "paged" {
+    grid(columns: (1fr, 1fr), column-gutter: 12pt, row-gutter: 2pt,
+      [#gate-symbol(kind: "buffer")],
+      [#gate-symbol(kind: "inverter") #gate-symbol(kind: "inverter")],
+      [#gate-symbol(kind: "nor", inputs: 3)],
+      [#gate-symbol(kind: "and", inputs: 3, inverted-inputs: true)],
+      [#gate-symbol(kind: "nand", inputs: 3)],
+      [#gate-symbol(kind: "or", inputs: 3, inverted-inputs: true)]
+    )
+  } else {
+    [
+      #gate-symbol(kind: "buffer")
+      #gate-symbol(kind: "inverter")
+      #gate-symbol(kind: "inverter")
 
-缓冲器
+      缓冲器
 
-#gate-symbol(kind: "nor", inputs: 3)
-#gate-symbol(kind: "and", inputs: 3, inverted-inputs: true)
+      #gate-symbol(kind: "nor", inputs: 3)
+      #gate-symbol(kind: "and", inputs: 3, inverted-inputs: true)
 
-3 输入 NOR
+      3 输入 NOR
 
-#gate-symbol(kind: "nand", inputs: 3)
-#gate-symbol(kind: "or", inputs: 3, inverted-inputs: true)
+      #gate-symbol(kind: "nand", inputs: 3)
+      #gate-symbol(kind: "or", inputs: 3, inverted-inputs: true)
 
-3 输入 NAND
+      3 输入 NAND
+    ]
+  }
+}
 
 *图1.4　缓冲器、或非门和与非门的两种不同表示法。*
 
 *练习1.1*　仅用图1.3和图1.4中的门，画出下面各个门的详细逻辑电路：AND、OR、XOR、XNOR和2输入的多路选择器。
 
-#gate-symbol(kind: "and")
-#gate-symbol(kind: "xor")
-#mux-symbol()
-#gate-symbol(kind: "or")
-#gate-symbol(kind: "xnor")
+#context {
+  if target() == "paged" {
+    grid(columns: (1fr, 1fr, 1fr), column-gutter: 6pt, row-gutter: 1pt,
+      [#gate-symbol(kind: "and")], [#gate-symbol(kind: "xor")], [#mux-symbol()],
+      [#gate-symbol(kind: "or")], [#gate-symbol(kind: "xnor")], []
+    )
+  } else {
+    [
+      #gate-symbol(kind: "and")
+      #gate-symbol(kind: "xor")
+      #mux-symbol()
+      #gate-symbol(kind: "or")
+      #gate-symbol(kind: "xnor")
+    ]
+  }
+}
 
 == D型触发器与图1.5
 
@@ -43,13 +69,9 @@
 
 图1.5给出了一个简单的D型触发器（DFF，D-type flip-flop）及其相应的激励表。当时钟从低到高发生转换时，数据输入端的值读入到DFF，然后经过传输，在输出端得到这个值。在所有其他条件下，输出端的值都保持为它的前一个值。这就是所谓的上升沿触发的触发器，意味着输入仅在时钟的上升沿才被采样。表中的X状态表示“不确定”状态，标志此时的输出并不取决于相应的输入值。
 
-#dff-symbol()
-
-DFF示意图
-
-#table(
+#let excitation = table(
   columns: (auto, auto, auto, auto),
-  inset: (x: 7pt, y: 3pt),
+  inset: (x: 5pt, y: 2pt),
   table.header([*Clk*], [*D*], [*Q（旧）*], [*Q（新）*]),
   [0], [X], [0], [0],
   [0], [X], [1], [1],
@@ -60,6 +82,19 @@ DFF示意图
   [1→0], [X], [0], [0],
   [1→0], [X], [1], [1],
 )
+#context {
+  if target() == "paged" {
+    grid(columns: (1fr, 1.7fr), column-gutter: 10pt,
+      [#dff-symbol() DFF示意图],
+      [#excitation])
+  } else {
+    [#dff-symbol()
+     DFF示意图
+
+     #excitation
+     激励表]
+  }
+}
 
 *图1.5　上升沿触发的D型触发器。*
 
