@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent
 SECTIONS = [
     ("01-gates-noise-delay", "第1章：逻辑门、噪声与延迟", [26,27,28,29,30,31,32]),
     ("02-mos-threshold", "第2章：MOS结构与阈值", [48,49,50,51,52,53,54,55,56,57]),
+    ("03-page-026", "原书第26页：逻辑门与DFF图", [26]),
 ]
 CSS = """
 <style>
