@@ -22,7 +22,7 @@ TIMEOUT_SECONDS = 55
 
 
 def render(source: Path, target: Path):
-    cmd = ["typst", "compile", str(source), str(target)]
+    cmd = ["typst", "compile", "--root", str(ROOT), str(source), str(target)]
     started = time.monotonic()
     try:
         result = subprocess.run(
