@@ -22,9 +22,17 @@ export default defineConfig({
       { text: '在线自测', link: '/quiz' },
       { text: 'PDF 资料库', link: '/pdf' },
       { text: '教材 Typst 精编', link: '/textbook' },
+      { text: 'Typst 精修网页', link: '/native-typst' },
       { text: 'GitHub 仓库', link: 'https://github.com/stevessr/hspice' }
     ],
     sidebar: {
+      '/native-typst': [
+        { text: '原生 Typst 校对', items: [
+          { text: '网页预览与校对记录', link: '/native-typst' },
+          { text: '教材目录精编', link: '/textbook' },
+          { text: 'MOS 系统复习', link: '/content/chapters/02-mos-basics' }
+        ]}
+      ],
       '/pdf': [
         { text: 'PDF 在线阅读', items: [
           { text: '分章资料库', link: '/pdf' },

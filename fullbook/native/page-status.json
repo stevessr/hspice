@@ -145,43 +145,78 @@
       "pdf_page": 26,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-logic.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 27,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-history-timing.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 28,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-logic.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 29,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-logic.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 30,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-history-timing.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 31,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-logic.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 32,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-history-timing.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 33,
@@ -253,23 +288,43 @@
     },
     {
       "pdf_page": 48,
-      "status": "partially-transcribed"
+      "status": "partially-transcribed",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 49,
-      "status": "partially-transcribed"
+      "status": "partially-transcribed",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 50,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-mos.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 51,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-mos.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 52,
@@ -282,7 +337,12 @@
       "formulas_checked_against_scan": true,
       "native_tables_checked": false,
       "layout_verified": false,
-      "figures_verified": false
+      "figures_verified": false,
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 53,
@@ -295,23 +355,48 @@
       "formulas_checked_against_scan": true,
       "native_tables_checked": false,
       "layout_verified": false,
-      "figures_verified": false
+      "figures_verified": false,
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 54,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 55,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 56,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 57,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "reviewed_key_concepts_against_scan": true,
+      "native_html_selection_available": true,
+      "visual_figures_verified": false,
+      "full_page_verified": false,
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
     },
     {
       "pdf_page": 58,
@@ -1890,5 +1975,31 @@
     ],
     "fully_accepted_pages": 0,
     "notes": "Editorial page content is supplied in the user-held private ZIP, not in this public repository."
+  },
+  "proofread_round_3": {
+    "date": "2026-11-05",
+    "scan_pages": [
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "website_route": "/native-typst",
+    "published_format": "Typst -> experimental HTML, no PDF",
+    "full_pages_verified": 0,
+    "note": "原生网站仅展示修订选段及研究性释义，未完整转录图片与所有脚注。"
   }
 }

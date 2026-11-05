@@ -59,3 +59,31 @@
   .pdf-library-item { min-width: 205px; flex: 0 0 205px; }
   .pdf-library-frame { min-height: 430px; height: 62vh; }
 }
+
+
+/* Native Typst HTML editor-reviewed selections: PDF-free web preview. */
+.VPDoc:has(.native-review) .container { max-width: 1450px; }
+.VPDoc:has(.native-review) .content { max-width: none; }
+.VPDoc:has(.native-review) .content-container { max-width: none; }
+.native-review { margin: 1.5rem 0; border: 1px solid var(--vp-c-divider);
+  border-radius: 13px; overflow: hidden; background: var(--vp-c-bg); }
+.native-review-nav { display: flex; flex-wrap: wrap; gap: .5rem; padding: .85rem;
+  background: var(--vp-c-bg-soft); border-bottom: 1px solid var(--vp-c-divider); }
+.native-review-nav button { padding: .5rem .7rem; border: 1px solid var(--vp-c-divider);
+  border-radius: 9px; color: var(--vp-c-text-1); font-size: .88rem; text-align: start;
+  cursor: pointer; background: var(--vp-c-bg); }
+.native-review-nav button:hover, .native-review-nav button.selected {
+  border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+.native-review-nav button:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 2px; }
+.native-review-summary { padding: 1rem; display: flex; flex-wrap: wrap;
+  gap: .5rem 1rem; align-items: baseline; }
+.native-review-summary strong { font-size: 1.03rem; }
+.native-review-summary span { font-size: .85rem; color: var(--vp-c-text-2); }
+.native-review-links { display: flex; flex-wrap: wrap; gap: 1rem; width: 100%; font-size: .85rem; }
+.native-review-links a { text-decoration: underline; }
+.native-review-frame { width: 100%; height: min(75vh, 1000px); min-height: 560px;
+  border: 0; border-top: 1px solid var(--vp-c-divider); background: #fff; }
+@media (max-width: 760px) {
+  .native-review-nav { flex-direction: column; }
+  .native-review-frame { height: 70vh; min-height: 420px; }
+}

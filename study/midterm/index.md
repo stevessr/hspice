@@ -18,6 +18,9 @@ hero:
       text: 教材 Typst 精编
       link: /textbook
     - theme: alt
+      text: Typst 精修网页
+      link: /native-typst
+    - theme: alt
       text: 公式与电路图解
       link: /figures
 features:
@@ -33,6 +36,9 @@ features:
   - title: 教材九章 Typst 复习精编
     details: 按教材九章结构重新讲解 MOS、反相器、CMOS 逻辑、时序与存储器等知识。
     link: /textbook
+  - title: 原生 Typst 精修网页
+    details: 直接由可编辑 Typst 编译 HTML；展示源扫描页定位、校对后的公式和表格，无需 PDF。
+    link: /native-typst
   - title: 电路结构图解
     details: MOS 端口、反相器、NAND/NOR、SR 锁存器、主从 JK 和等效 RC 结构的 SVG 汇总。
     link: /figures

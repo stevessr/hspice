@@ -41,3 +41,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ### 原书页码核对纠正
 
 重新检查原 PDF 后确认，**第 2 页**才是书名页；第 3 页是内容简介、版权和出版资料。早期进度表把第 3 页标记为书名页是错误的；现在已修正。第 2 页的编辑版在本次对话的本地下载包中保存，第 3 页仍待转写。
+
+
+## 第三轮：Typst 原生 HTML 预览
+
+新增 `web/01-gates-noise-delay.typ`、`web/02-mos-threshold.typ`，对应扫描 PDF 第 26—32 页与第 48—57 页的精修知识选段。采用 `web/build_html.py` 调用 Typst 实验性 HTML 导出，直接在 VitePress `/native-typst` 中以 HTML 阅读，不生成 PDF，也不将整页扫描图作为正文。网页公开内容为核对选段和概念释义，原书全文 OCR 留在用户独立持有的校对工程中。HTML 编译失败会令网站构建失败，避免误发布陈旧内容。全书整页最终验收仍为 0/445。
