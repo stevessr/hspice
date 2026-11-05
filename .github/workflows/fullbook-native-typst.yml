@@ -1,0 +1,41 @@
+name: Verify native editable Typst layout
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'fullbook/native/**'
+      - '.github/workflows/fullbook-native-typst.yml'
+  pull_request:
+    paths:
+      - 'fullbook/native/**'
+      - '.github/workflows/fullbook-native-typst.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Chinese font
+        run: sudo apt-get update -qq && sudo apt-get install -y fonts-noto-cjk poppler-utils
+      - uses: typst-community/setup-typst@v5
+        with:
+          typst-version: ^0.14.2
+      - name: Validate source page map
+        run: python3 fullbook/native/validate.py
+      - name: Compile native editable math, table and diagram
+        run: |
+          typst compile fullbook/native/template.typ /tmp/fullbook-native-smoke.pdf
+          test -s /tmp/fullbook-native-smoke.pdf
+          pdfinfo /tmp/fullbook-native-smoke.pdf | grep -E '^Pages:[[:space:]]+[1-9]'
+      - name: Check source does not embed scanned pages
+        run: |
+          if grep -R -E '#image\(.*page-[0-9]{3}' fullbook/native --include='*.typ'; then
+            echo "::error::Source page images must not be embedded in native transcription."
+            exit 1
+          fi
