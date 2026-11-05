@@ -87,3 +87,37 @@
   .native-review-nav { flex-direction: column; }
   .native-review-frame { height: 70vh; min-height: 420px; }
 }
+
+/* Offline book proofreading: raw scanned images never leave the browser. */
+.VPDoc:has(.book-workbench) .container { max-width: 1560px; }
+.VPDoc:has(.book-workbench) .content,
+.VPDoc:has(.book-workbench) .content-container { max-width: none; }
+.book-workbench { margin: 1rem 0; font-size: .92rem; }
+.book-workbench-input, .book-workbench-nav, .book-workbench-actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; padding: .7rem 0; }
+.book-workbench-input input { width: min(100%, 310px); }
+.book-workbench-nav input { width: 75px; padding: .3rem; background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider); border-radius: 6px; color: var(--vp-c-text-1); }
+.book-workbench button { border: 1px solid var(--vp-c-divider); border-radius: 7px;
+  padding: .35rem .65rem; background: var(--vp-c-bg-soft); cursor: pointer; }
+.book-workbench button:hover:not(:disabled) { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+.book-workbench button:disabled { opacity: .5; cursor: not-allowed; }
+.book-workbench-columns { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr);
+  gap: 1rem; align-items: start; }
+.book-workbench-scan, .book-workbench-code { min-width: 0;
+  border: 1px solid var(--vp-c-divider); border-radius: 10px; padding: .85rem; }
+.book-workbench-scan img { display: block; width: 100%; height: auto;
+  max-width: 670px; margin: 0 auto; background: white; }
+.book-workbench-source h3, .book-workbench-scan h3 { margin: .3rem 0 .65rem; }
+.book-workbench-code textarea { display: block; width: 100%; min-height: 580px; height: 72vh;
+  border-radius: 8px; padding: .8rem; resize: vertical; border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg); color: var(--vp-c-text-1);
+  font-family: "DejaVu Sans Mono", monospace; font-size: .78rem; line-height: 1.6; }
+.book-workbench-code pre { max-height: 380px; white-space: pre-wrap; overflow: auto;
+  padding: .7rem; background: var(--vp-c-bg-soft); }
+.book-risk { font-size: .8rem; color: var(--vp-c-text-2); }
+.book-error { color: var(--vp-c-danger-1); }
+@media(max-width: 950px) {
+ .book-workbench-columns { grid-template-columns: 1fr; }
+ .book-workbench-code textarea { height: 46vh; min-height: 320px; }
+}

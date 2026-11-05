@@ -21,6 +21,9 @@ hero:
       text: Typst 精修网页
       link: /native-typst
     - theme: alt
+      text: 445页逐页校对
+      link: /native-workbench
+    - theme: alt
       text: 公式与电路图解
       link: /figures
 features:
@@ -36,6 +39,9 @@ features:
   - title: 教材九章 Typst 复习精编
     details: 按教材九章结构重新讲解 MOS、反相器、CMOS 逻辑、时序与存储器等知识。
     link: /textbook
+  - title: 445页原书逐页核对
+    details: 在浏览器本地打开源扫描和 Typst 全书 OCR 工程，对照修改、查漏并导出补丁，不上传教材。
+    link: /native-workbench
   - title: 原生 Typst 精修网页
     details: 直接由可编辑 Typst 编译 HTML；展示源扫描页定位、校对后的公式和表格，无需 PDF。
     link: /native-typst

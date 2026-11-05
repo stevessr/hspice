@@ -23,9 +23,17 @@ export default defineConfig({
       { text: 'PDF 资料库', link: '/pdf' },
       { text: '教材 Typst 精编', link: '/textbook' },
       { text: 'Typst 精修网页', link: '/native-typst' },
+      { text: '445页校对工作台', link: '/native-workbench' },
       { text: 'GitHub 仓库', link: 'https://github.com/stevessr/hspice' }
     ],
     sidebar: {
+      '/native-workbench': [
+        { text: '原书逐页核对', items: [
+          { text: '445页本地校对工作台', link: '/native-workbench' },
+          { text: '精修选段 HTML', link: '/native-typst' },
+          { text: '教材九章索引', link: '/textbook' }
+        ]}
+      ],
       '/native-typst': [
         { text: '原生 Typst 校对', items: [
           { text: '网页预览与校对记录', link: '/native-typst' },
