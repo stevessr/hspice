@@ -131,7 +131,7 @@ onBeforeUnmount(() => {if (scanUrl.value) URL.revokeObjectURL(scanUrl.value)})
     <div class="book-workbench-columns">
       <section class="book-workbench-scan">
         <h3>原书扫描 · PDF 第 {{ page }} 页</h3>
-        <img v-if="scanUrl" :src="scanUrl" :alt="'原书扫描第 ' + page + ' 页" />
+        <img v-if="scanUrl" :src="scanUrl" :alt="'原书扫描第 ' + page + ' 页'" />
         <p v-else>ZIP 缺少该页扫描缩略图。请导入带有 preview_scans 目录的版本。</p>
       </section>
       <section class="book-workbench-code">
