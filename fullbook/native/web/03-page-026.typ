@@ -1,7 +1,7 @@
 // PDF 026 / printed page 7; source-based native Typst editing draft.
 // HTML export is structural: avoid layout-only align/grid wrappers around diagrams.
 // Native geometry lives in ../figures/gate-symbols.typ and is always editable.
-#import "../figures/gate-symbols.typ": gate-symbol, dff-symbol, mux-symbol
+#import "../figures/gate-symbols.typ": gate-symbol, dff-symbol, mux-symbol, buffer-alternative
 #set document(title: "原书第26页：逻辑门、D触发器及激励表")
 #set text(lang: "zh")
 
@@ -13,7 +13,7 @@
   if target() == "paged" {
     grid(columns: (1fr, 1fr), column-gutter: 12pt, row-gutter: 2pt,
       [#gate-symbol(kind: "buffer")],
-      [#gate-symbol(kind: "inverter") #gate-symbol(kind: "inverter")],
+      [#buffer-alternative()],
       [#gate-symbol(kind: "nor", inputs: 3)],
       [#gate-symbol(kind: "and", inputs: 3, inverted-inputs: true)],
       [#gate-symbol(kind: "nand", inputs: 3)],
@@ -22,8 +22,7 @@
   } else {
     [
       #gate-symbol(kind: "buffer")
-      #gate-symbol(kind: "inverter")
-      #gate-symbol(kind: "inverter")
+      #buffer-alternative()
 
       缓冲器
 
