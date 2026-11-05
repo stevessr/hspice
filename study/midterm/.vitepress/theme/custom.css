@@ -121,3 +121,9 @@
  .book-workbench-columns { grid-template-columns: 1fr; }
  .book-workbench-code textarea { height: 46vh; min-height: 320px; }
 }
+
+/* Source-page-sized SVG proofreading: show the actual Typst layout with no PDF. */
+.native-review-layout { padding: 1rem; background: var(--vp-c-bg-soft); }
+.native-review-layout p { color: var(--vp-c-text-2); font-size: .84rem; }
+.native-review-layout img { width: min(100%, 780px); height: auto; display: block;
+  margin: .8rem auto; border: 1px solid var(--vp-c-divider); background: #fff; }
