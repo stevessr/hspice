@@ -1,0 +1,4 @@
+Pillow>=10
+numpy>=1.26
+scikit-image>=0.22
+CairoSVG>=2.7
