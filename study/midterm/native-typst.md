@@ -15,6 +15,9 @@ const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
 const htmlUrl = computed(() => withBase('/native-typst/' + active.value.id + '.html'))
 const sourceUrl = computed(() => active.value.id === '03-page-026' ? 'https://github.com/stevessr/hspice/blob/main/fullbook/native/web/03-page-026.typ' : withBase('/native-typst/' + active.value.id + '.typ'))
+const visualMode = ref(false)
+const canShowVisual = computed(() => active.value.id === '03-page-026')
+const layoutUrl = computed(() => withBase('/native-typst/03-page-026-layout.svg'))
 </script>
 
 <div class="native-review">
@@ -31,9 +34,22 @@ const sourceUrl = computed(() => active.value.id === '03-page-026' ? 'https://gi
       <a :href="sourceUrl" target="_blank" rel="noopener noreferrer">查看可编辑 Typst 源码</a>
     </div>
   </div>
-  <iframe :key="active.id" class="native-review-frame" :src="htmlUrl"
+  <div v-if="canShowVisual" class="native-review-nav" role="group" aria-label="预览模式">
+    <button type="button" :aria-pressed="!visualMode" :class="{ selected: !visualMode }"
+      @click="visualMode = false">语义 HTML · 可检索</button>
+    <button type="button" :aria-pressed="visualMode" :class="{ selected: visualMode }"
+      @click="visualMode = true">固定页尺寸 SVG · 视觉比对</button>
+    <a :href="layoutUrl" target="_blank" rel="noopener noreferrer">单独打开整页 SVG</a>
+  </div>
+  <iframe v-if="!visualMode || !canShowVisual" :key="active.id" class="native-review-frame" :src="htmlUrl"
     :title="'原生 Typst HTML：' + active.title" loading="lazy"></iframe>
+  <div v-else class="native-review-layout">
+    <p>原 PDF 页面尺寸 506.8346 × 729.6 pt。此图由 Typst 源码排版导出，不是原扫描图，也尚未通过 1:1 几何验收。</p>
+    <img :src="layoutUrl" alt="第26页可编辑 Typst 固定尺寸 SVG 预览，待版式精校" />
+  </div>
 </div>
+
+此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
 
 ## 本轮校对记录
 
