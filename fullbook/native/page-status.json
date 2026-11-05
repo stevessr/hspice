@@ -9,7 +9,14 @@
     {
       "pdf_page": 2,
       "status": "draft-transcribed",
-      "notes": "Title page in the user's local editable draft; confirmed original PDF source page 2, not page 3."
+      "notes": "原书书名页的书名、作者、译者和出版项已对照扫描；版式尚未最终验收。",
+      "proofread_round": "2026-11-05-pass2",
+      "editorial_typst_draft": true,
+      "text_checked_against_scan": true,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "layout_verified": false,
+      "figures_verified": false
     },
     {
       "pdf_page": 3,
@@ -82,7 +89,15 @@
     },
     {
       "pdf_page": 20,
-      "status": "partially-transcribed"
+      "status": "partially-transcribed",
+      "proofread_round": "2026-11-05-pass2",
+      "editorial_typst_draft": true,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "notes": "第1章标题、提要、1.1节开头与脚注已有部分人工转写；未完成整页核对。"
     },
     {
       "pdf_page": 21,
@@ -104,13 +119,27 @@
       "pdf_page": 24,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-logic.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "表1.1、文字、INV/NAND/NOR真值表已经对照扫描；逻辑门图符仍需按图1.3复刻。",
+      "proofread_round": "2026-11-05-pass2",
+      "editorial_typst_draft": true,
+      "text_checked_against_scan": true,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "layout_verified": false,
+      "figures_verified": false
     },
     {
       "pdf_page": 25,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-logic.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "积之和、和之积、XOR、MUX与德摩根定律(1.1)已重排并对照扫描；最终视觉排版待验收。",
+      "proofread_round": "2026-11-05-pass2",
+      "editorial_typst_draft": true,
+      "text_checked_against_scan": true,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "layout_verified": false,
+      "figures_verified": false
     },
     {
       "pdf_page": 26,
@@ -212,7 +241,15 @@
     },
     {
       "pdf_page": 47,
-      "status": "partially-transcribed"
+      "status": "partially-transcribed",
+      "proofread_round": "2026-11-05-pass2",
+      "editorial_typst_draft": true,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "notes": "第2章标题、提要、绪论开头已局部校对，末段未完整转写。"
     },
     {
       "pdf_page": 48,
@@ -238,13 +275,27 @@
       "pdf_page": 52,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-mos.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "式(2.1)-(2.3)及其重要术语核对；能带图2.4仍待原生矢量复刻。",
+      "proofread_round": "2026-11-05-pass2",
+      "editorial_typst_draft": true,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "layout_verified": false,
+      "figures_verified": false
     },
     {
       "pdf_page": 53,
       "status": "partially-transcribed",
       "source_file": "editorial/sample-mos.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "notes": "式(2.4)-(2.5)及NMOS机制文字核对；横截面图2.5尚未完成。",
+      "proofread_round": "2026-11-05-pass2",
+      "editorial_typst_draft": true,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "layout_verified": false,
+      "figures_verified": false
     },
     {
       "pdf_page": 54,
@@ -1816,5 +1867,28 @@
     }
   ],
   "progress_policy": "Verified means exact source-content transcription plus math/table/diagram verification. All current source pages remain unverified.",
-  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427"
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "proofread_round_2": {
+    "touched_pages": [
+      2,
+      20,
+      24,
+      25,
+      47,
+      52,
+      53
+    ],
+    "text_checked_pages": [
+      2,
+      24,
+      25
+    ],
+    "formula_checked_pages": [
+      25,
+      52,
+      53
+    ],
+    "fully_accepted_pages": 0,
+    "notes": "Editorial page content is supplied in the user-held private ZIP, not in this public repository."
+  }
 }
