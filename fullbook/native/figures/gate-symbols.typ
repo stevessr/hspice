@@ -77,6 +77,11 @@
         line(length: 36pt, stroke: 0.9pt))
       #place(top + left, dx: 71pt, dy: 79pt,
         line(end: (0pt, 17pt), stroke: 0.9pt))
+      #place(top + left, dx: 65pt, dy: 70pt,
+        curve(stroke: 0.9pt, fill: white,
+          curve.move((0pt, 9pt)),
+          curve.line((6pt, 0pt)),
+          curve.line((12pt, 9pt))))
       #place(top + left, dx: 45pt, dy: 10pt, text(size: 9pt)[D])
       #place(top + left, dx: 84pt, dy: 10pt, text(size: 9pt)[Q])
       #place(top + left, dx: 53pt, dy: 53pt, text(size: 8pt)[Clk])
@@ -106,3 +111,30 @@
     ]
   )
 }
+
+
+// Two inverters connected in series represent a buffer (Fig. 1.4 alternative).
+// All curves and connection strokes remain editable Typst geometry.
+#let buffer-alternative() = html.frame(
+  block(width: 112pt, height: 52pt)[
+    #place(top + left, dx: 4pt, dy: 27pt, line(length: 13pt, stroke: 0.9pt))
+    #place(top + left, dx: 17pt, dy: 12pt,
+      curve(fill: white, stroke: 0.9pt,
+        curve.move((0pt, 0pt)),
+        curve.line((0pt, 30pt)),
+        curve.line((29pt, 15pt)),
+        curve.close(mode: "straight")))
+    #place(top + left, dx: 48pt, dy: 24pt,
+      circle(radius: 3pt, fill: white, stroke: 0.9pt))
+    #place(top + left, dx: 54pt, dy: 27pt, line(length: 9pt, stroke: 0.9pt))
+    #place(top + left, dx: 63pt, dy: 12pt,
+      curve(fill: white, stroke: 0.9pt,
+        curve.move((0pt, 0pt)),
+        curve.line((0pt, 30pt)),
+        curve.line((29pt, 15pt)),
+        curve.close(mode: "straight")))
+    #place(top + left, dx: 94pt, dy: 24pt,
+      circle(radius: 3pt, fill: white, stroke: 0.9pt))
+    #place(top + left, dx: 100pt, dy: 27pt, line(length: 12pt, stroke: 0.9pt))
+  ]
+)
