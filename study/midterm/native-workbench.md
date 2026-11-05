@@ -5,6 +5,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, shallowRef } from 'vue'
 import { unzipSync } from 'fflate'
+import { withBase } from 'vitepress'
 
 type PageQuality = { source_pdf_page: number; flags?: string[]; status?: string; editorial_note?: string }
 const files = shallowRef<Record<string, Uint8Array>>({})
@@ -146,6 +147,12 @@ onBeforeUnmount(() => {if (scanUrl.value) URL.revokeObjectURL(scanUrl.value)})
             @change="checked[page] = ($event.target as HTMLInputElement).checked" />
             我已人工初检（不代表整页验收）</label>
         </div>
+        <details v-if="page === 26" class="book-visual-compare">
+          <summary>查看已发布的第26页 Typst 固定版式 SVG（不包含当前未导出的修改）</summary>
+          <p>这份 SVG 与右侧源文件可能存在版本差异；用于逐项对照，不作为已验收的判定依据。</p>
+          <img :src="withBase('/native-typst/03-page-026-layout.svg')"
+            alt="第26页 Typst 可编辑图元生成的固定页尺寸 SVG" />
+        </details>
         <details><summary>对比原 OCR 文字</summary><pre>{{ oldOcr }}</pre></details>
         <details><summary>查看修改前 Typst</summary><pre>{{ original }}</pre></details>
       </section>
