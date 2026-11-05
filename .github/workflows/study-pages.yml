@@ -148,7 +148,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for section in 01-gates-noise-delay 02-mos-threshold; do
+          for section in 01-gates-noise-delay 02-mos-threshold 03-page-026; do
             test -s "study/midterm/public/native-typst/${section}.html"
             test -s "study/midterm/public/native-typst/${section}.typ"
             grep -qi '<html' "study/midterm/public/native-typst/${section}.html"
@@ -160,7 +160,7 @@ jobs:
           data=json.loads((root/'index.json').read_text(encoding='utf-8'))
           assert data['format']=='native-typst-html'
           assert data['accepted_full_pages']==0
-          assert len(data['items'])==2
+          assert len(data['items'])==3
           print('Native Typst HTML previews validated')
           PY
 
@@ -194,6 +194,7 @@ jobs:
           test -s study/midterm/.vitepress/dist/native-typst.html
           test -s study/midterm/.vitepress/dist/native-typst/01-gates-noise-delay.html
           test -s study/midterm/.vitepress/dist/native-typst/02-mos-threshold.html
+          test -s study/midterm/.vitepress/dist/native-typst/03-page-026.html
           echo "MathJax, SVG, and Typst HTML smoke tests passed"
 
       - name: Upload site build artifact
