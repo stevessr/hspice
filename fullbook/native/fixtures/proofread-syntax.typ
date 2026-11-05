@@ -39,4 +39,4 @@
 #align(center)[$phi_(F p) = (k T)/q ln(n_i/p) quad "(2.3a)"$]
 #align(center)[$phi_(F n) = (k T)/q ln(n/n_i) quad "(2.3b)"$]
 #align(center)[$phi_(F p) = (k T)/q ln(n_i/N_A) quad "(2.4)"$]
-#align(center)[$C_("ox") = epsilon_("ox")/t_(ox) quad "(2.5)"$]
+#align(center)[$C_("ox") = epsilon_("ox")/t_("ox") quad "(2.5)"$]
