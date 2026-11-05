@@ -57,6 +57,11 @@ def main():
             raise RuntimeError(f"HTML head not found: {dest}")
         if not re.search(r"<body(?:\\s|>)", html, re.I) or len(html) < 600:
             raise RuntimeError(f"Export missing its source content: {dest}")
+        if stem == "03-page-026":
+            missing = [token for token in ("图 1.4", "图 1.5", "触发器", "激励表") if token not in html]
+            if missing or "<svg" not in html.lower():
+                print("HTML DEBUG:", html[:1800], flush=True)
+                raise RuntimeError(f"Incomplete native diagram/page HTML: missing={missing}; inline SVG={'<svg' in html.lower()}")
         dest.write_text(html,encoding="utf-8")
         shutil.copy2(src,args.output/f"{stem}.typ")
         index.append(dict(id=stem,title=title,source_pdf_pages=pages,
