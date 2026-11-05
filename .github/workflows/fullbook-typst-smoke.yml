@@ -24,6 +24,8 @@ jobs:
       - uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.14.2
+      - name: Install PDF inspection tool
+        run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils
       - name: Verify two-page Typst layout without third-party textbook content
         run: |
           typst compile fullbook/SMOKE.typ /tmp/fullbook-smoke.pdf
