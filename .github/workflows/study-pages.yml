@@ -7,6 +7,7 @@ on:
       - 'study/midterm/**'
       - '实验*.pdf'
       - 'fullbook/native/web/**'
+      - 'fullbook/native/figures/**'
       - 'fullbook/native/page-status.json'
       - 'fullbook/native/tools/fidelity_gate.py'
       - '.github/workflows/study-pages.yml'
@@ -16,6 +17,7 @@ on:
       - 'study/midterm/**'
       - '实验*.pdf'
       - 'fullbook/native/web/**'
+      - 'fullbook/native/figures/**'
       - '.github/workflows/study-pages.yml'
   workflow_run:
     workflows: ['Build Typst PDF']
