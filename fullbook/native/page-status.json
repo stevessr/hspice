@@ -8,11 +8,13 @@
     },
     {
       "pdf_page": 2,
-      "status": "not-started"
+      "status": "draft-transcribed",
+      "notes": "Title page in the user's local editable draft; confirmed original PDF source page 2, not page 3."
     },
     {
       "pdf_page": 3,
-      "status": "draft-transcribed"
+      "status": "not-started",
+      "notes": "PDF source page 3 is publication/copyright information, not title page; previous mapping corrected."
     },
     {
       "pdf_page": 4,
