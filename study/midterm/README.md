@@ -40,11 +40,12 @@ study/midterm/
 
 ## 本地构建
 
-依赖：Python 3、Pandoc ≥ 3.1、Typst ≥ 0.14、Node.js 22、Noto CJK 字体。
+依赖：Python 3、Pandoc ≥ 3.1、Typst ≥ 0.14、Node.js 22、Noto CJK 字体，以及 `rsvg-convert`（由 `librsvg2-bin` 提供，用于打印版 PNG 图示）。
 
 ```bash
 cd study/midterm
 python3 scripts/validate.py
+python3 scripts/rasterize_svg.py
 python3 scripts/sync_typst.py
 python3 scripts/validate.py --generated
 mkdir -p build
@@ -80,6 +81,6 @@ Pages 的部署源需要在 **Settings → Pages → Build and deployment → So
 
 从 `main.typ` 中按原顺序读取 26 个 Typst 模块，逐章独立编译并由 pypdf 合并为 `build/midterm-review.pdf`。这种方式可防止跨章节分页布局使整个编译进程长期停滞。输出中保留 PDF 书签索引；各章节在 Typst 生成阶段独立分页，因此其页码属于分章页码，不能当作整册连续页码引用。
 
-每章设置编译超时。当 SVG 图示导致特定章节无法编译时，工作流明确输出警告，并将其替换为“请参阅在线 Markdown 版”的文字提示；网站上的原始 SVG 图示仍可正常阅读。对教学插图而言，在线版是优先的可视化来源，PDF 为辅助打印材料。
+每章设置编译超时。构建时将教学 SVG 在 `assets/figures/` 中转换为**最大宽度约 1200 像素的 PNG 中间文件**供 Typst 排版，VitePress 仍使用原始 SVG。若插图仍导致某一章节无法编译，工作流会明确警告，并且只对该章节退回“请参阅在线 Markdown 版”的文字提示。
 
 网站通过 `study-pages.yml` 单独构建并发布，PDF 失败不阻断 Markdown 文档站。VitePress 的 MathJax 渲染与插图存在性由 Actions 自动检查。

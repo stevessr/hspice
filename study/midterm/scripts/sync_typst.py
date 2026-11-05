@@ -5,6 +5,7 @@ Requires Pandoc >= 3.1. `content/` is the single source of course text.
 The two Pandoc output aliases below need normalization for Typst 0.14.
 """
 from pathlib import Path
+import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -28,6 +29,12 @@ for source, target in pairs:
     typst = (converted.stdout
              .replace('#blockquote[', '#quote(block: true)[')
              .replace('#horizontalrule', '#line(length: 100%)'))
+    # Embed rasterized illustrations in the printed PDF while retaining SVG in VitePress.
+    typst = re.sub(
+        r'#image\("([^"]+)\.svg"\)',
+        lambda m: '#image("' + m.group(1) + '.png", width: 90%)',
+        typst,
+    )
     target.write_text('// GENERATED FILE -- edit Markdown and run scripts/sync_typst.py\n' + typst,
                       encoding='utf-8')
     print(f'{source.relative_to(ROOT)} -> {target.relative_to(ROOT)}')

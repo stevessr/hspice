@@ -57,13 +57,17 @@ jobs:
         if: steps.pdf-cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc fonts-noto-cjk
+          sudo apt-get install -y pandoc fonts-noto-cjk librsvg2-bin
 
       - name: Install Typst
         if: steps.pdf-cache.outputs.cache-hit != 'true'
         uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.14.0
+
+      - name: Rasterize SVG figures for print (VitePress retains SVG)
+        if: steps.pdf-cache.outputs.cache-hit != 'true'
+        run: python3 study/midterm/scripts/rasterize_svg.py
 
       - name: Convert Markdown to Typst
         if: steps.pdf-cache.outputs.cache-hit != 'true'

@@ -29,7 +29,10 @@ if '--generated' in sys.argv:
     for path in expected:
         generated = root/'typst'/path
         assert generated.is_file(), f'Missing generated Typst file: {generated}'
-        assert generated.read_text(encoding='utf-8').startswith('// GENERATED FILE'), generated
+        generated_text = generated.read_text(encoding='utf-8')
+        assert generated_text.startswith('// GENERATED FILE'), generated
+        for image_path in re.findall(r'#image\("([^"]+\.png)"', generated_text):
+            assert (generated.parent / image_path).is_file(), f'Missing rasterized figure: {image_path}'
     print(f'OK: {len(files)} Markdown source files, {len(expected)} generated Typst files')
 else:
     print(f'OK: {len(files)} Markdown source files and {len(questions)} practice sets')
