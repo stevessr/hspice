@@ -1,0 +1,163 @@
+{
+  "source_pages": 445,
+  "page_size_pt": [
+    506.8346,
+    729.6
+  ],
+  "mode": "image-only visual Typst facsimile; not editable transcription",
+  "chapters": [
+    {
+      "start_pdf_page": 20,
+      "title": "第1章 深亚微米数字集成电路设计"
+    },
+    {
+      "start_pdf_page": 47,
+      "title": "第2章 MOS晶体管"
+    },
+    {
+      "start_pdf_page": 87,
+      "title": "第3章 制造、版图和模拟"
+    },
+    {
+      "start_pdf_page": 127,
+      "title": "第4章 MOS反相器电路"
+    },
+    {
+      "start_pdf_page": 167,
+      "title": "第5章 静态MOS门电路"
+    },
+    {
+      "start_pdf_page": 208,
+      "title": "第6章 高速CMOS逻辑设计"
+    },
+    {
+      "start_pdf_page": 254,
+      "title": "第7章 传输门和动态逻辑设计"
+    },
+    {
+      "start_pdf_page": 292,
+      "title": "第8章 半导体存储器的设计"
+    },
+    {
+      "start_pdf_page": 322,
+      "title": "第9章 存储器设计中的其他课题"
+    }
+  ],
+  "chunks": [
+    {
+      "file": "chunks/001-020.typ",
+      "start_page": 1,
+      "end_page": 20
+    },
+    {
+      "file": "chunks/021-040.typ",
+      "start_page": 21,
+      "end_page": 40
+    },
+    {
+      "file": "chunks/041-060.typ",
+      "start_page": 41,
+      "end_page": 60
+    },
+    {
+      "file": "chunks/061-080.typ",
+      "start_page": 61,
+      "end_page": 80
+    },
+    {
+      "file": "chunks/081-100.typ",
+      "start_page": 81,
+      "end_page": 100
+    },
+    {
+      "file": "chunks/101-120.typ",
+      "start_page": 101,
+      "end_page": 120
+    },
+    {
+      "file": "chunks/121-140.typ",
+      "start_page": 121,
+      "end_page": 140
+    },
+    {
+      "file": "chunks/141-160.typ",
+      "start_page": 141,
+      "end_page": 160
+    },
+    {
+      "file": "chunks/161-180.typ",
+      "start_page": 161,
+      "end_page": 180
+    },
+    {
+      "file": "chunks/181-200.typ",
+      "start_page": 181,
+      "end_page": 200
+    },
+    {
+      "file": "chunks/201-220.typ",
+      "start_page": 201,
+      "end_page": 220
+    },
+    {
+      "file": "chunks/221-240.typ",
+      "start_page": 221,
+      "end_page": 240
+    },
+    {
+      "file": "chunks/241-260.typ",
+      "start_page": 241,
+      "end_page": 260
+    },
+    {
+      "file": "chunks/261-280.typ",
+      "start_page": 261,
+      "end_page": 280
+    },
+    {
+      "file": "chunks/281-300.typ",
+      "start_page": 281,
+      "end_page": 300
+    },
+    {
+      "file": "chunks/301-320.typ",
+      "start_page": 301,
+      "end_page": 320
+    },
+    {
+      "file": "chunks/321-340.typ",
+      "start_page": 321,
+      "end_page": 340
+    },
+    {
+      "file": "chunks/341-360.typ",
+      "start_page": 341,
+      "end_page": 360
+    },
+    {
+      "file": "chunks/361-380.typ",
+      "start_page": 361,
+      "end_page": 380
+    },
+    {
+      "file": "chunks/381-400.typ",
+      "start_page": 381,
+      "end_page": 400
+    },
+    {
+      "file": "chunks/401-420.typ",
+      "start_page": 401,
+      "end_page": 420
+    },
+    {
+      "file": "chunks/421-440.typ",
+      "start_page": 421,
+      "end_page": 440
+    },
+    {
+      "file": "chunks/441-445.typ",
+      "start_page": 441,
+      "end_page": 445
+    }
+  ]
+}

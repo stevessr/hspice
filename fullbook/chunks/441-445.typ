@@ -1,0 +1,12 @@
+// Visual facsimile; scans are not editable.
+#set document(title: "数字集成电路分析与设计——深亚微米工艺（第三版）·视觉复刻")
+#set page(width: 506.8346pt, height: 729.6pt, margin: 0pt, fill: white)
+#image("../pages/page-440.png", width: 506.8346pt, height: 729.6pt, fit: "stretch")
+#pagebreak()
+#image("../pages/page-441.png", width: 506.8346pt, height: 729.6pt, fit: "stretch")
+#pagebreak()
+#image("../pages/page-442.png", width: 506.8346pt, height: 729.6pt, fit: "stretch")
+#pagebreak()
+#image("../pages/page-443.png", width: 506.8346pt, height: 729.6pt, fit: "stretch")
+#pagebreak()
+#image("../pages/page-444.png", width: 506.8346pt, height: 729.6pt, fit: "stretch")
