@@ -44,7 +44,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: study/midterm/build/midterm-review.pdf
-          key: midterm-pdf-v2-${{ runner.os }}-${{ hashFiles('study/midterm/content/**/*.md', 'study/midterm/main.typ', 'study/midterm/scripts/sync_typst.py', 'study/midterm/assets/figures/*.svg') }}
+          key: midterm-pdf-v2-${{ runner.os }}-${{ hashFiles('study/midterm/content/**/*.md', 'study/midterm/main.typ', 'study/midterm/scripts/**', 'study/midterm/assets/figures/*.svg') }}
 
       - name: Cache Typst resources
         if: steps.pdf-cache.outputs.cache-hit != 'true'
@@ -73,12 +73,14 @@ jobs:
         if: steps.pdf-cache.outputs.cache-hit != 'true'
         run: python3 study/midterm/scripts/validate.py --generated
 
-      - name: Compile PDF (bounded)
+      - name: Install PDF merge library
         if: steps.pdf-cache.outputs.cache-hit != 'true'
-        timeout-minutes: 12
-        run: |
-          mkdir -p study/midterm/build
-          typst compile study/midterm/main.typ study/midterm/build/midterm-review.pdf
+        run: python3 -m pip install --user 'pypdf>=5,<7'
+
+      - name: Compile isolated Typst sections and merge PDF
+        if: steps.pdf-cache.outputs.cache-hit != 'true'
+        timeout-minutes: 18
+        run: python3 study/midterm/scripts/build_pdf.py
 
       - name: Confirm PDF exists
         run: test -s study/midterm/build/midterm-review.pdf
