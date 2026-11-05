@@ -36,7 +36,7 @@ jobs:
       - name: Compile partially transcribed native chapter preview
         run: |
           mkdir -p /tmp/native-editable
-          typst compile fullbook/native/editorial/main.typ /tmp/native-editable/editorial-preview.pdf
+          typst compile --root fullbook/native fullbook/native/editorial/main.typ /tmp/native-editable/editorial-preview.pdf
           test -s /tmp/native-editable/editorial-preview.pdf
       - name: Upload editable chapter PDF preview
         uses: actions/upload-artifact@v4
