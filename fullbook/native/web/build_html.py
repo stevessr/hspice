@@ -44,7 +44,7 @@ def main():
         src=ROOT/f"{stem}.typ"
         dest=args.output/f"{stem}.html"
         result=subprocess.run(
-            [args.typst,"compile","--features","html","--format","html",str(src),str(dest)],
+            [args.typst,"compile","--root",str(ROOT.parent),"--features","html","--format","html",str(src),str(dest)],
             text=True,capture_output=True,timeout=120
         )
         if result.returncode:
