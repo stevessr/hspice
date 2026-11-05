@@ -8,12 +8,13 @@ import { withBase } from 'vitepress'
 
 const sections = [
   { id: '01-gates-noise-delay', title: '第1章 · 逻辑门、噪声容限、延迟与功耗', pages: '扫描第26—32页', summary: '门电路、理想与实际电平、转换时间、式（1.2）—（1.5）' },
-  { id: '02-mos-threshold', title: '第2章 · MOS结构、费米势和阈值', pages: '扫描第48—57页', summary: '四端器件、平带电压、耗尽区、体效应、式（2.1）—（2.12）' }
+  { id: '02-mos-threshold', title: '第2章 · MOS结构、费米势和阈值', pages: '扫描第48—57页', summary: '四端器件、平带电压、耗尽区、体效应、式（2.1）—（2.12）' },
+  { id: '03-page-026', title: '原书第26页 · 门电路与D触发器原生重绘', pages: 'PDF第26页/印刷第7页', summary: '图1.4、图1.5与8行DFF激励表的原生Typst草稿；版式仍需比对' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
 const htmlUrl = computed(() => withBase('/native-typst/' + active.value.id + '.html'))
-const sourceUrl = computed(() => withBase('/native-typst/' + active.value.id + '.typ'))
+const sourceUrl = computed(() => active.value.id === '03-page-026' ? 'https://github.com/stevessr/hspice/blob/main/fullbook/native/web/03-page-026.typ' : withBase('/native-typst/' + active.value.id + '.typ'))
 </script>
 
 <div class="native-review">
@@ -38,7 +39,8 @@ const sourceUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 
 | 原书 PDF 页码 | 已核对的核心项目 | 未完成的部分 |
 | --- | --- | --- |
-| 26—27 | 三输入 NAND/NOR、D 触发器、理想与实际逻辑门 | 图 1.4—1.6 尚待忠实矢量重绘 |
+| 26 | 门电路、MUX、DFF原生Typst曲线与图元、8行激励表已重排 | 图1.4/1.5几何与页面布局仍需逐元素核验 |
+| 27 | 理想与实际逻辑门 | 图1.6尚未重绘 |
 | 28 | 噪声容限 $NMH=V_{OH}-V_{IH}$、$NML=V_{IL}-V_{OL}$ | 图 1.7 曲线的完整图形 |
 | 29—30 | 10%—90% 转换时间与 50% 传播延迟的区别 | 图 1.8 的全部波形标注、图 1.9 散点 |
 | 31—32 | 功耗式（1.2）—（1.5）、MOS 开关基本结构 | 图 1.10 的精确几何及脚注 |
