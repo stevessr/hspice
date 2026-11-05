@@ -37,31 +37,31 @@
   html.frame(
     block(width: 112pt, height: 52pt)[
       #place(top + left, dx: 23pt, dy: 7pt, gate-outline(kind))
-      #for i in range(count) {
-        let y = if count == 1 { 25pt } else { 12pt + i * (26pt / (count - 1)) }
-        place(top + left, dx: 0pt, dy: y, line(length: 23pt, stroke: 0.9pt))
-        if inverted-inputs {
-          place(top + left, dx: 17pt, dy: y - 3pt, circle(radius: 3pt, stroke: 0.9pt, fill: white))
-        }
-      }
-      if kind == "xor" or kind == "xnor" {
-        place(top + left, dx: 18pt, dy: 7pt,
-          curve(
-            stroke: 0.9pt,
+      #for i in range(count) [
+        #place(top + left, dx: 0pt,
+          dy: if count == 1 { 25pt } else { 12pt + i * (26pt / (count - 1)) },
+          line(length: 23pt, stroke: 0.9pt))
+        #if inverted-inputs [
+          #place(top + left, dx: 17pt,
+            dy: (if count == 1 { 25pt } else { 12pt + i * (26pt / (count - 1)) }) - 3pt,
+            circle(radius: 3pt, stroke: 0.9pt, fill: white))
+        ]
+      ]
+      #if kind == "xor" or kind == "xnor" [
+        #place(top + left, dx: 18pt, dy: 7pt,
+          curve(stroke: 0.9pt,
             curve.move((0pt, 0pt)),
-            curve.cubic((11pt, 12pt), (11pt, 24pt), (0pt, 36pt))
-          )
-        )
-      }
-      if output-bubble {
-        place(top + left, dx: 74pt, dy: 22pt,
+            curve.cubic((11pt, 12pt), (11pt, 24pt), (0pt, 36pt))))
+      ]
+      #if output-bubble [
+        #place(top + left, dx: 74pt, dy: 22pt,
           circle(radius: 3pt, stroke: 0.9pt, fill: white))
-        place(top + left, dx: 80pt, dy: 25pt,
+        #place(top + left, dx: 80pt, dy: 25pt,
           line(length: 28pt, stroke: 0.9pt))
-      } else {
-        place(top + left, dx: 75pt, dy: 25pt,
+      ] else [
+        #place(top + left, dx: 75pt, dy: 25pt,
           line(length: 33pt, stroke: 0.9pt))
-      }
+      ]
     ]
   )
 }
