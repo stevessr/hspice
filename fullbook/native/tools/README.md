@@ -1,0 +1,1 @@
+本目录用于将用户自行持有的 445 页扫描教材 OCR 纯文本转换为可编辑 Typst，代码不执行 OCR。将 page-001.txt 等依次放入一个私有目录，再调用 import_ocr_text.py --input <目录> --output <输出目录>，最后用 audit_ocr_text.py 检查页码覆盖。此过程不能证明中文识别、数学公式、表格、电路图已经正确转写。必须逐页核对后才能完成真正的教材重排。完整 OCR 转写稿以本轮对话私人 ZIP 提供，未上传 Public GitHub。

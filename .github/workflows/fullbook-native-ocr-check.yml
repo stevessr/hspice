@@ -1,0 +1,29 @@
+name: Check editable OCR importer
+on:
+  push:
+    branches: [main]
+    paths: ['fullbook/native/tools/**', '.github/workflows/fullbook-native-ocr-check.yml']
+  pull_request:
+    paths: ['fullbook/native/tools/**', '.github/workflows/fullbook-native-ocr-check.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: typst-community/setup-typst@v5
+        with:
+          typst-version: ^0.14.2
+      - name: Generate and compile synthetic 3-page Typst OCR
+        run: |
+          mkdir -p /tmp/ocr-in /tmp/ocr-book
+          printf '示例：MOS 晶体管。\n' > /tmp/ocr-in/page-001.txt
+          printf '公式 VGS = 1.2 V，需要人工核对。\n' > /tmp/ocr-in/page-002.txt
+          printf '文字中包含括号 []、引号 " 和井号 #。\n' > /tmp/ocr-in/page-003.txt
+          python3 fullbook/native/tools/import_ocr_text.py --input /tmp/ocr-in --output /tmp/ocr-book --pages 3
+          python3 fullbook/native/tools/audit_ocr_text.py /tmp/ocr-book
+          typst compile /tmp/ocr-book/main.typ /tmp/ocr-book/book.pdf
+          test -s /tmp/ocr-book/book.pdf
