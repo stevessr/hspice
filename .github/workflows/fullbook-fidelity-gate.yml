@@ -1,0 +1,40 @@
+name: Audit fullbook 1-to-1 editorial fidelity
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'fullbook/native/tools/fidelity_gate.py'
+      - 'fullbook/native/page-status.json'
+      - '.github/workflows/fullbook-fidelity-gate.yml'
+  pull_request:
+    paths:
+      - 'fullbook/native/tools/fidelity_gate.py'
+      - 'fullbook/native/page-status.json'
+      - '.github/workflows/fullbook-fidelity-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check complete 445-page metadata and produce evidence report
+        run: |
+          python3 fullbook/native/tools/fidelity_gate.py \
+            --status fullbook/native/page-status.json \
+            --json /tmp/fullbook-fidelity.json
+      - name: Verify strict mode rejects incomplete textbook reconstruction
+        run: |
+          set +e
+          python3 fullbook/native/tools/fidelity_gate.py \
+            --status fullbook/native/page-status.json --strict > /tmp/strict.log
+          status=$?
+          set -e
+          test "$status" -eq 2
+          echo 'Correctly rejected OCR-only source as incomplete 1-to-1 book'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fullbook-fidelity-metadata
+          path: /tmp/fullbook-fidelity.json

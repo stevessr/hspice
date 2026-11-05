@@ -7,6 +7,8 @@ on:
       - 'study/midterm/**'
       - '实验*.pdf'
       - 'fullbook/native/web/**'
+      - 'fullbook/native/page-status.json'
+      - 'fullbook/native/tools/fidelity_gate.py'
       - '.github/workflows/study-pages.yml'
       - '.github/workflows/study-typst.yml'
   pull_request:
@@ -162,6 +164,12 @@ jobs:
           print('Native Typst HTML previews validated')
           PY
 
+      - name: Publish strict 1-to-1 fidelity status (metadata only)
+        run: |
+          python3 fullbook/native/tools/fidelity_gate.py \
+            --status fullbook/native/page-status.json \
+            --json study/midterm/public/native-fidelity.json
+
       - name: Build VitePress documentation and local search
         working-directory: study/midterm
         run: npm run docs:build
@@ -181,6 +189,8 @@ jobs:
             echo "::error::Illustration markup not found in rendered chapters"
             exit 1
           fi
+          test -s study/midterm/.vitepress/dist/native-workbench.html
+          test -s study/midterm/.vitepress/dist/native-fidelity.json
           test -s study/midterm/.vitepress/dist/native-typst.html
           test -s study/midterm/.vitepress/dist/native-typst/01-gates-noise-delay.html
           test -s study/midterm/.vitepress/dist/native-typst/02-mos-threshold.html
