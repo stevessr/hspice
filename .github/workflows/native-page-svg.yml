@@ -1,0 +1,41 @@
+name: Verify page-sized native Typst SVG (no PDF)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'fullbook/native/web/**'
+      - 'fullbook/native/figures/**'
+      - '.github/workflows/native-page-svg.yml'
+  pull_request:
+    paths:
+      - 'fullbook/native/web/**'
+      - 'fullbook/native/figures/**'
+      - '.github/workflows/native-page-svg.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  svg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: typst-community/setup-typst@v5
+        with:
+          typst-version: ^0.15.0
+      - name: Export all source-sized Typst vector pages (not PDF)
+        run: |
+          mkdir -p /tmp/source-pages
+          typst compile --features html --format svg \
+            --root fullbook/native \
+            fullbook/native/web/03-page-026-layout.typ \
+            '/tmp/source-pages/page-{0p}.svg'
+          test "$(find /tmp/source-pages -name '*.svg' | wc -l)" -eq 1
+          test -s /tmp/source-pages/page-1.svg
+          grep -q '<svg' /tmp/source-pages/page-1.svg
+      - name: Publish visual audit artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: typst-native-source-page-026-svg
+          path: /tmp/source-pages/
+          if-no-files-found: error
