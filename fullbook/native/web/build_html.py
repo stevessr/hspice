@@ -55,7 +55,7 @@ def main():
         html,n=re.subn(r"</head\s*>",CSS+"\n</head>",html,count=1,flags=re.I)
         if n!=1:
             raise RuntimeError(f"HTML head not found: {dest}")
-        if "扫描" not in html and "教材" not in html:
+        if not re.search(r"<body(?:\\s|>)", html, re.I) or len(html) < 600:
             raise RuntimeError(f"Export missing its source content: {dest}")
         dest.write_text(html,encoding="utf-8")
         shutil.copy2(src,args.output/f"{stem}.typ")
