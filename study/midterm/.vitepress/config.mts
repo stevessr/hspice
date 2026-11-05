@@ -18,10 +18,28 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '系统复习', link: '/content/00-reading-guide' },
       { text: '实践题库', link: '/content/practice/' },
+      { text: '电路图解', link: '/figures' },
+      { text: '在线自测', link: '/quiz' },
       { text: 'PDF 在线预览', link: '/pdf' },
       { text: 'GitHub 仓库', link: 'https://github.com/stevessr/hspice' }
     ],
     sidebar: {
+      '/figures': [
+        { text: '电路图解', items: [
+          { text: '图解总览', link: '/figures' },
+          { text: 'MOS 基础', link: '/content/chapters/02-mos-basics' },
+          { text: '反相器', link: '/content/chapters/04-inverters-noise' },
+          { text: '逻辑门', link: '/content/chapters/06-combinational-logic' },
+          { text: '时序电路', link: '/content/chapters/07-sequential-logic' }
+        ]}
+      ],
+      '/quiz': [
+        { text: '在线自测', items: [
+          { text: '基础概念测验', link: '/quiz' },
+          { text: '专题实践题', link: '/content/practice/' },
+          { text: '公式速查', link: '/content/appendices/a-formula-reference' }
+        ]}
+      ],
       '/content/practice/': [
         {
           text: '实践题库',
@@ -61,7 +79,9 @@ export default defineConfig({
         { text: '仿真与习题', items: [
           { text: '08 HSPICE 网表', link: '/content/chapters/08-hspice-netlists' },
           { text: '09 典型题型', link: '/content/chapters/09-practice' },
-          { text: '分专题实践题库', link: '/content/practice/' }
+          { text: '分专题实践题库', link: '/content/practice/' },
+          { text: '电路图解总览', link: '/figures' },
+          { text: '在线自测', link: '/quiz' }
         ]},
         { text: '附录（速查）', collapsed: true, items: [
           { text: 'A 常用公式', link: '/content/appendices/a-formula-reference' },

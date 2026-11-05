@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: 在线阅读 PDF
       link: /pdf
+    - theme: alt
+      text: 公式与电路图解
+      link: /figures
 features:
   - title: 分章 Markdown 阅读
     details: 九章理论讲义与六项附录，支持目录导航、公式渲染、移动端阅读与全文搜索。
@@ -22,8 +25,14 @@ features:
     details: MOS 器件、反相器、组合逻辑、时序电路与 HSPICE，题目和参考解析分开组织。
     link: /content/practice/
   - title: Typst PDF 在线预览
-    details: GitHub Actions 从 Markdown 生成 Typst 讲义，编译 PDF 后与网站一起发布。
+    details: 独立 PDF 工作流分章编译并合并，成功的构建产物由网站发布流程读取。
     link: /pdf
+  - title: 电路结构图解
+    details: MOS 端口、反相器、NAND/NOR、SR 锁存器、主从 JK 和等效 RC 结构的 SVG 汇总。
+    link: /figures
+  - title: 在线自测
+    details: 14 道概念题，支持即时评分、逐题参考解析与重新作答。
+    link: /quiz
 ---
 
 ## 内容范围

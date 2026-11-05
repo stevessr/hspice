@@ -9,6 +9,8 @@
 - **实践题库（五大主题，题解分离）：** https://stevessr.github.io/hspice/content/practice/
 - **PDF 内嵌阅读器：** https://stevessr.github.io/hspice/pdf
 - **PDF 直链：** https://stevessr.github.io/hspice/midterm-review.pdf
+- **图解索引：** https://stevessr.github.io/hspice/figures
+- **在线自测：** https://stevessr.github.io/hspice/quiz
 
 ## 目录及单一内容来源
 
@@ -16,6 +18,8 @@
 study/midterm/
 ├── index.md                 # VitePress 首页
 ├── pdf.md                   # PDF 在线查看 / 切换实验资料
+├── figures.md               # 电路图解索引
+├── quiz.md                  # 14 道自测题与答案解析
 ├── .vitepress/
 │   ├── config.mts           # 导航、侧栏、搜索、/hspice/ base
 │   └── theme/               # 响应式排版增强
@@ -45,7 +49,8 @@ python3 scripts/sync_typst.py
 python3 scripts/validate.py --generated
 mkdir -p build
 
-typst compile main.typ build/midterm-review.pdf
+python3 -m pip install 'pypdf>=5,<7'
+python3 scripts/build_pdf.py
 mkdir -p public/experiments
 cp build/midterm-review.pdf public/midterm-review.pdf
 # 从仓库根目录复制原始实验 PDF：
@@ -69,3 +74,12 @@ npm run docs:preview
 Pages 的部署源需要在 **Settings → Pages → Build and deployment → Source** 中选择 **GitHub Actions**。在线预览地址仍为 https://stevessr.github.io/hspice/pdf 。
 
 **维护原则：**手工只编辑 `content/` 的 Markdown；`typst/` 为可重复生成的镜像；网站直接渲染原始 Markdown，不维护第二套正文。原始实验 PDF 不在构建中修改。
+
+
+## 分章 PDF 构建及质量检查
+
+从 `main.typ` 中按原顺序读取 26 个 Typst 模块，逐章独立编译并由 pypdf 合并为 `build/midterm-review.pdf`。这种方式可防止跨章节分页布局使整个编译进程长期停滞。输出中保留 PDF 书签索引；各章节在 Typst 生成阶段独立分页，因此其页码属于分章页码，不能当作整册连续页码引用。
+
+每章设置编译超时。当 SVG 图示导致特定章节无法编译时，工作流明确输出警告，并将其替换为“请参阅在线 Markdown 版”的文字提示；网站上的原始 SVG 图示仍可正常阅读。对教学插图而言，在线版是优先的可视化来源，PDF 为辅助打印材料。
+
+网站通过 `study-pages.yml` 单独构建并发布，PDF 失败不阻断 Markdown 文档站。VitePress 的 MathJax 渲染与插图存在性由 Actions 自动检查。

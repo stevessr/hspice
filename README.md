@@ -5,6 +5,8 @@
 - **VitePress 在线站点：** https://stevessr.github.io/hspice/
 - **在线阅读课程章节：** https://stevessr.github.io/hspice/content/00-reading-guide
 - **实践题库与参考答案：** https://stevessr.github.io/hspice/content/practice/
+- **电路图解总览：** https://stevessr.github.io/hspice/figures
+- **14 题在线自测：** https://stevessr.github.io/hspice/quiz
 - **PDF 在线预览（含实验资料）：** https://stevessr.github.io/hspice/pdf
 - [源代码、排版说明与构建方法](study/midterm/README.md)
 
