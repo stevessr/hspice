@@ -88,47 +88,69 @@
     },
     {
       "pdf_page": 22,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-history-timing.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 23,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-history-timing.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 24,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-logic.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 25,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-logic.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 26,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-logic.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 27,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-history-timing.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 28,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-logic.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 29,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-logic.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 30,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-history-timing.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 31,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-logic.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 32,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-history-timing.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 33,
@@ -200,19 +222,27 @@
     },
     {
       "pdf_page": 50,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-mos.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 51,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-mos.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 52,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-mos.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 53,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "editorial/sample-mos.typ",
+      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
     },
     {
       "pdf_page": 54,
@@ -1782,5 +1812,7 @@
       "pdf_page": 445,
       "status": "not-started"
     }
-  ]
+  ],
+  "progress_policy": "Verified means exact source-content transcription plus math/table/diagram verification. All current source pages remain unverified.",
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427"
 }

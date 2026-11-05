@@ -33,6 +33,18 @@ jobs:
           typst compile fullbook/native/template.typ /tmp/fullbook-native-smoke.pdf
           test -s /tmp/fullbook-native-smoke.pdf
           test -s /tmp/fullbook-native-smoke.pdf
+      - name: Compile partially transcribed native chapter preview
+        run: |
+          mkdir -p /tmp/native-editable
+          typst compile fullbook/native/editorial/main.typ /tmp/native-editable/editorial-preview.pdf
+          test -s /tmp/native-editable/editorial-preview.pdf
+      - name: Upload editable chapter PDF preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: fullbook-native-editorial-preview
+          path: /tmp/native-editable/editorial-preview.pdf
+          retention-days: 14
+          if-no-files-found: error
       - name: Check source does not embed scanned pages
         run: |
           if grep -R -E '#image\(.*page-[0-9]{3}' fullbook/native --include='*.typ'; then
