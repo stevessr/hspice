@@ -1,0 +1,66 @@
+name: Verify PDF scan-to-Typst pipeline
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'fullbook/native/tools/**'
+      - '.github/workflows/fullbook-scan-native.yml'
+  pull_request:
+    paths:
+      - 'fullbook/native/tools/**'
+      - '.github/workflows/fullbook-scan-native.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  local-scan-fixture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: typst-community/setup-typst@v5
+        with:
+          typst-version: ^0.14.2
+      - name: Install OCR and CJK fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-chi-sim fonts-noto-cjk
+          python3 -m pip install -r fullbook/native/tools/requirements-scan.txt
+      - name: Create two-page bitmap-only synthetic PDF
+        run: |
+          python3 - <<'PY'
+          import fitz
+          src = fitz.open()
+          for n in (1,2):
+              page = src.new_page(width=506.8346,height=729.6)
+              page.insert_text((60,100), f'MOS DIGITAL CIRCUIT PAGE {n}',fontsize=18)
+          dest = fitz.open()
+          for page in src:
+              pix = page.get_pixmap(matrix=fitz.Matrix(1.5,1.5))
+              dest.new_page(width=page.rect.width,height=page.rect.height).insert_image(page.rect,stream=pix.tobytes("png"))
+          dest.save('/tmp/synthetic.pdf')
+          assert all(not p.get_text() for p in fitz.open('/tmp/synthetic.pdf'))
+          PY
+      - name: OCR, check editable content and compile
+        run: |
+          python3 fullbook/native/tools/scan_to_native.py \
+            --pdf /tmp/synthetic.pdf --output /tmp/native-ocr \
+            --pages 2 --workers 2 --archive /tmp/native-ocr.zip
+          python3 fullbook/native/tools/audit_ocr_text.py /tmp/native-ocr
+          python3 - <<'PY'
+          import json,zipfile
+          from pathlib import Path
+          root=Path('/tmp/native-ocr')
+          assert '#pagebreak()' in (root/'chapters/chapter-front.typ').read_text()
+          q=json.loads((root/'quality/pages.json').read_text())
+          assert len(q['page_data'])==2 and q['accepted_full_pages']==0
+          with zipfile.ZipFile('/tmp/native-ocr.zip') as z:
+              assert 'editable_pages/page-002.typ' in z.namelist()
+              assert 'preview_scans/page-002.jpg' in z.namelist()
+          PY
+          if python3 fullbook/native/tools/audit_ocr_text.py /tmp/native-ocr --require-proofread; then
+            echo '::error::Unverified OCR must never satisfy the proofread gate'
+            exit 1
+          fi
+          typst compile /tmp/native-ocr/main.typ /tmp/native-ocr-preview.pdf
+          test -s /tmp/native-ocr-preview.pdf

@@ -32,9 +32,12 @@ main=['#set document(title: "扫描教材机器转写 Typst 初稿")',
 for name,lo,hi in outline:
     if lo>a.pages:break
     path=chapters/f'chapter-{name}.typ'
-    body=[f'= PDF 原扫描范围 {lo}—{min(hi,a.pages)} （机器转写未校对）']
-    body.extend(f'#include "../editable_pages/page-{n:03d}.typ"' for n in range(lo,min(hi,a.pages)+1))
+    body=[f'// SOURCE PDF PAGES {lo}-{min(hi,a.pages)}; OCR unverified']
+    for n in range(lo,min(hi,a.pages)+1):
+        if n>lo: body.append('#pagebreak()')
+        body.append(f'#include "../editable_pages/page-{n:03d}.typ"')
     path.write_text('\n'.join(body)+'\n',encoding='utf-8')
+    if lo>1: main.append('#pagebreak()')
     main.append(f'#include "chapters/{path.name}"')
 (a.output/'main.typ').write_text('\n'.join(main)+'\n',encoding='utf-8')
 (a.output/'page-status.json').write_text(json.dumps(dict(source_pages=a.pages,pages=status),ensure_ascii=False,indent=2),encoding='utf-8')
