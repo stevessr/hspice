@@ -27,7 +27,7 @@ outline=[('front',1,19),('01',20,46),('02',47,86),('03',87,126),
 ('04',127,166),('05',167,207),('06',208,253),
 ('07',254,291),('08',292,321),('09',322,445)]
 main=['#set document(title: "扫描教材机器转写 Typst 初稿")',
-'#set page(paper: "a4", margin: 25mm)',
+'#set page(width: 506.8346pt, height: 729.6pt, margin: (top: 35pt, bottom: 40pt, left: 44pt, right: 43pt))',
 '#set text(font: ("Noto Serif CJK SC", "DejaVu Serif"), size: 9.5pt, lang: "zh")']
 for name,lo,hi in outline:
     if lo>a.pages:break
