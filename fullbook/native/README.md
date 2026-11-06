@@ -76,3 +76,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF 64—70：速度饱和、临界场和α功率定律
 
 `web/41-page-064.typ` 至 `web/47-page-070.typ` 对应原书图2.11—2.14、式2.21—2.30a与例2.6—2.8。`figures/mos-velocity-native.typ` 提供可编辑趋势示意，并非原实验散点数据的复刻。`qa/check_velocity_sat.py`校验主要数值与公式边界；现有45个连续源页均为选段，严格全页验收依旧为0/445。
+
+
+## PDF71—76：α功率、亚阈值斜率和MOS电容
+
+新增 `web/48-page-071.typ` 到 `web/53-page-076.typ`、`figures/mos-cap-native.typ` 及 `qa/check_subthreshold_cap.py`。覆盖式2.30b—2.39、例2.9—2.11、图2.15—2.19。现有51个连续编辑选段，尚无任何1:1整页验收。原书实验曲线与版式需要逐页比较。

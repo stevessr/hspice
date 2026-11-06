@@ -739,27 +739,81 @@
     },
     {
       "pdf_page": 71,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/48-page-071.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式2.30b/2.31、图2.15 α功率拟合和例2.9 130/220μA转录；实测散点尚未精确复制。"
     },
     {
       "pdf_page": 72,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/49-page-072.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "2.7节亚阈值传导与式2.32，图2.16对数曲线原生重绘但定量数据未标定。"
     },
     {
       "pdf_page": 73,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/50-page-073.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式2.33斜率因子及例2.10 10nA/100nA对应0.140/0.212V、72mV/decade已校对。"
     },
     {
       "pdf_page": 74,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/51-page-074.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图2.17 MOS栅电容结构与式2.34、不同工艺1.6fF/μm示例已重排；图形位置尚未精校。"
     },
     {
       "pdf_page": 75,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/52-page-075.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图2.18栅电容与工作区、例2.11的0.64/0.32/0.43fF已核对；曲线仍是示意。"
     },
     {
       "pdf_page": 76,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/53-page-076.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "2.8.2节结电容式2.36—2.39及图2.19原生曲线；原图几何和脚注待校核。"
     },
     {
       "pdf_page": 77,

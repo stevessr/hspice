@@ -53,7 +53,13 @@ const sections = [
   { id: '44-page-067', title: '原书第67页 · 高场线性和饱和电流方程', pages: 'PDF第67页/印刷第48页', summary: '式2.25—2.29' },
   { id: '45-page-068', title: '原书第68页 · 长短沟道极限与例2.6', pages: 'PDF第68页/印刷第49页', summary: '图2.14、0.6V/1.0V饱和阈值' },
   { id: '46-page-069', title: '原书第69页 · 例2.7与驱动电流比', pages: 'PDF第69页/印刷第50页', summary: '585/256 μA/μm，电流比2.3' },
-  { id: '47-page-070', title: '原书第70页 · 例2.8和α功率定律', pages: 'PDF第70页/印刷第51页', summary: '0.34V/0.60V，式2.30a' }
+  { id: '47-page-070', title: '原书第70页 · 例2.8和α功率定律', pages: 'PDF第70页/印刷第51页', summary: '0.34V/0.60V，式2.30a' },
+  { id: '48-page-071', title: '原书第71页 · α功率定律与例2.9', pages: 'PDF第71页/印刷第52页', summary: '式2.30b、2.31、图2.15与α约1.25' },
+  { id: '49-page-072', title: '原书第72页 · 亚阈值传导模型', pages: 'PDF第72页/印刷第53页', summary: '图2.16、式2.32及漏电流' },
+  { id: '50-page-073', title: '原书第73页 · 亚阈值斜率与例2.10', pages: 'PDF第73页/印刷第54页', summary: '式2.33、72mV/decade，MOS电容' },
+  { id: '51-page-074', title: '原书第74页 · 栅电容及图2.17', pages: 'PDF第74页/印刷第55页', summary: '式2.34、历史1.6fF/μm示例' },
+  { id: '52-page-075', title: '原书第75页 · 栅电容分配及例2.11', pages: 'PDF第75页/印刷第56页', summary: '图2.18与0.64fF、0.32fF、0.43fF' },
+  { id: '53-page-076', title: '原书第76页 · pn结电容模型', pages: 'PDF第76页/印刷第57页', summary: '图2.19及式2.36—2.39' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -94,6 +100,10 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第2章亚阈值与电容：PDF 第71—76页
+
+新增式（2.30b）—（2.39）、α功率拟合例2.9、亚阈值斜率例2.10、栅电容例2.11及图2.15—2.19的原生矢量概念图。关键复核数据包括：$\\alpha\\approx1.25$、$S\\approx72$ mV/decade、$C_G=0.64$ fF。在线阅读范围扩展为 **PDF 第26—76页，共51个连续可编辑选段**。原始测量散点尚未量化，且仍无整页通过严格1:1验收。
 
 ## 第2章速度饱和与α功率定律：PDF 第64—70页
 
