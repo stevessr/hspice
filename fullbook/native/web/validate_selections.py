@@ -4,8 +4,8 @@ from pathlib import Path
 import re
 root=Path(__file__).resolve().parent
 pages={}
-for src in root.glob("??-page-???.typ"):
-    match=re.fullmatch(r"(\d{2})-page-(\d{3})\.typ", src.name)
+for src in root.glob("*-page-???.typ"):
+    match=re.fullmatch(r"(\d{2,3})-page-(\d{3})\.typ", src.name)
     assert match, src
     ordinal,page=map(int,match.groups())
     assert page==ordinal+23,src.name
