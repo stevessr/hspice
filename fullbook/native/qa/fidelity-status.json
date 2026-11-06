@@ -522,8 +522,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "unresolved": [
+        "逐行正文与标点复校",
+        "图形坐标比例与全部标签逐项复校",
+        "页眉页脚、断行与原书页面几何比对"
+      ],
+      "notes": "第28页已新增可编辑Typst文字和图1.7四个子图的矢量重排候选；语义、版式和图形准确性仍须进一步验证。",
       "page_source_verified": false
     },
     {
@@ -540,8 +544,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "unresolved": [
+        "逐行正文与标点复校",
+        "图形坐标比例与全部标签逐项复校",
+        "页眉页脚、断行与原书页面几何比对"
+      ],
+      "notes": "第29页已新增可编辑Typst文字和图1.8(a)瞬态波形的矢量重排候选；语义、版式和图形准确性仍须进一步验证。",
       "page_source_verified": false
     },
     {
