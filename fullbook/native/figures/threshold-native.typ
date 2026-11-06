@@ -1,0 +1,57 @@
+// Editable MOS capacitor and depletion geometry.
+// Conceptual tracing of scanned diagrams 2.5–2.7; not an exact visual reproduction.
+#let oxide-and-channel() = html.frame(block(width: 345pt,height: 178pt)[
+  #place(top + left,dx: 25pt,dy: 74pt,rect(width:293pt,height:90pt,stroke:.9pt,fill:white))
+  #place(top + left,dx: 42pt,dy: 75pt,rect(width:68pt,height:26pt,stroke:.8pt,fill:rgb("dddddd")))
+  #place(top + left,dx: 229pt,dy: 75pt,rect(width:68pt,height:26pt,stroke:.8pt,fill:rgb("dddddd")))
+  #place(top + left,dx: 115pt,dy: 69pt,rect(width:110pt,height:6pt,stroke:.8pt,fill:rgb("f2f2f2")))
+  #place(top + left,dx: 115pt,dy: 46pt,rect(width:110pt,height:23pt,stroke:.8pt,fill:rgb("bbbbbb")))
+  #place(top + left,dx: 165pt,dy: 46pt,line(end:(0pt,-26pt),stroke:.8pt))
+  #place(top + left,dx: 26pt,dy: 16pt,text(size:8pt)[$V_("GS")$]))
+  #place(top + left,dx: 153pt,dy: 10pt,text(size:8pt)[G 栅]))
+  #place(top + left,dx: 51pt,dy: 82pt,text(size:8pt)[$n^+$]))
+  #place(top + left,dx: 250pt,dy: 82pt,text(size:8pt)[$n^+$]))
+  #place(top + left,dx: 134pt,dy: 77pt,text(size:8pt)[反型沟道]))
+  #place(top + left,dx: 132pt,dy: 124pt,text(size:9pt)[$p$ 型衬底]))
+  #place(top + left,dx: 235pt,dy: 58pt,text(size:8pt)[$t_("ox")$]))
+  #place(top + left,dx: 42pt,dy: 52pt,text(size:8pt)[源 S]))
+  #place(top + left,dx: 254pt,dy: 52pt,text(size:8pt)[漏 D]))
+])
+
+#let charge-sheet() = html.frame(block(width: 347pt,height: 168pt)[
+  #place(top + left,dx: 22pt,dy: 34pt,rect(width:79pt,height:101pt,stroke:.8pt,fill:rgb("eeeeee")))
+  #place(top + left,dx: 101pt,dy: 34pt,rect(width:36pt,height:101pt,stroke:.8pt,fill:rgb("dddddd")))
+  #place(top + left,dx: 137pt,dy: 34pt,rect(width:178pt,height:101pt,stroke:.8pt,fill:white))
+  #place(top + left,dx: 25pt,dy: 8pt,text(size:8pt)[金属栅]))
+  #place(top + left,dx: 98pt,dy: 8pt,text(size:8pt)[SiO₂]))
+  #place(top + left,dx: 214pt,dy: 8pt,text(size:8pt)[p型半导体]))
+  #place(top + left,dx: 46pt,dy: 55pt,text(size:8pt)[$Q_G$]))
+  #place(top + left,dx: 105pt,dy: 55pt,text(size:8pt)[$Q_("ox")$]))
+  #place(top + left,dx: 159pt,dy: 55pt,text(size:8pt)[$Q_s$]))
+  #place(top + left,dx: 151pt,dy: 82pt,text(size:8pt)[耗尽层]))
+  #place(top + left,dx: 230pt,dy: 82pt,text(size:8pt)[电中性区]))
+  #place(top + left,dx: 136pt,dy: 141pt,line(length:61pt,stroke:.8pt))
+  #place(top + left,dx: 161pt,dy: 147pt,text(size:8pt)[$X_d$]))
+  #place(top + left,dx: 26pt,dy: 149pt,text(size:8pt)[栅—氧化层—衬底的电荷分布概念图])
+])
+
+#let depletion-bending() = html.frame(block(width:347pt,height:178pt)[
+  #place(top + left,dx: 18pt,dy: 24pt,rect(width:60pt,height:129pt,stroke:.8pt,fill:rgb("dedede")))
+  #place(top + left,dx: 79pt,dy: 24pt,rect(width:29pt,height:129pt,stroke:.8pt,fill:rgb("f3f3f3")))
+  #place(top + left,dx: 108pt,dy: 24pt,rect(width:219pt,height:129pt,stroke:.8pt,fill:white))
+  #place(top + left,dx: 27pt,dy: 4pt,text(size:8pt)[栅 G]))
+  #place(top + left,dx: 77pt,dy: 4pt,text(size:8pt)[氧化层]))
+  #place(top + left,dx: 202pt,dy: 4pt,text(size:8pt)[半导体]))
+  #place(top + left,dx: 110pt,dy: 38pt,
+    curve(stroke:1pt,curve.move((0pt,0pt)),curve.cubic((44pt,21pt),(54pt,23pt),(201pt,24pt))))
+  #place(top + left,dx: 110pt,dy: 75pt,
+    curve(stroke:1pt,curve.move((0pt,0pt)),curve.cubic((44pt,21pt),(54pt,22pt),(201pt,23pt))))
+  #place(top + left,dx: 110pt,dy: 113pt,
+    curve(stroke:1pt,curve.move((0pt,0pt)),curve.cubic((44pt,21pt),(54pt,22pt),(201pt,23pt))))
+  #place(top + left,dx: 298pt,dy: 48pt,text(size:8pt)[$E_C$]))
+  #place(top + left,dx: 298pt,dy: 87pt,text(size:8pt)[$E_i$]))
+  #place(top + left,dx: 298pt,dy: 129pt,text(size:8pt)[$E_V$]))
+  #place(top + left,dx: 116pt,dy: 143pt,line(length:74pt,stroke:.7pt))
+  #place(top + left,dx: 151pt,dy: 150pt,text(size:8pt)[$X_d$]))
+  #place(top + left,dx: 18pt,dy: 161pt,text(size:7pt)[示意栅压引起的能带弯曲与耗尽层，非精确求解曲线])
+])
