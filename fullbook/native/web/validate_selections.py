@@ -4,8 +4,8 @@ from pathlib import Path
 import re
 root=Path(__file__).resolve().parent
 pages={}
-for src in root.glob("??-page-???.typ"):
-    match=re.fullmatch(r"(\d{2})-page-(\d{3})\.typ", src.name)
+for src in root.glob("*-page-???.typ"):
+    match=re.fullmatch(r"(\d{2,3})-page-(\d{3})\.typ", src.name)
     assert match, src
     ordinal,page=map(int,match.groups())
     assert page==ordinal+23,src.name
@@ -17,5 +17,5 @@ for src in root.glob("??-page-???.typ"):
     assert '#include "'+src.name+'"' in content,layout
     assert "506.8346pt" in content and "729.6pt" in content,layout
     pages[page]=src
-assert sorted(pages)==list(range(26,117)),sorted(pages)
-print("Native partial selections cover source pages 26..116, 91 pages; full-page acceptance 0")
+assert sorted(pages)==list(range(26,127)),sorted(pages)
+print("Native partial selections cover source pages 26..126, 101 pages; full-page acceptance 0")

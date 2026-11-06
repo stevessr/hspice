@@ -1337,43 +1337,133 @@
     },
     {
       "pdf_page": 117,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/94-page-117.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.15寄生PNPN闩锁网络与触发、防护方法的编辑矢量示意；原图转折曲线及器件比例待校。"
     },
     {
       "pdf_page": 118,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/95-page-118.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.16 SOI、BOX、PD-SOI/FD-SOI结构可编辑；原衬底层厚及图注尚未逐项验收。"
     },
     {
       "pdf_page": 119,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/96-page-119.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "表3.1 LEVEL1教学参数名称、默认值与示例重排，JS默认及TPG实例的原书空格保留。"
     },
     {
       "pdf_page": 120,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/97-page-120.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "表3.2第一部分一般几何、工艺和迁移率参数可编辑，单位的复杂次幂尚待逐格验收。"
     },
     {
       "pdf_page": 121,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/98-page-121.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "表3.2第二部分迁移率、亚阈值及DIBL参数可编辑，部分特殊加载系数单位仍需核对。"
     },
     {
       "pdf_page": 122,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/99-page-122.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "表3.2第三部分温度/电容/侧壁参数可编辑；原表行间距及完整字距未验收。"
     },
     {
       "pdf_page": 123,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/100-page-123.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "3.10共12项参考文献及P3.1测试拓扑；仍待原图电源符号几何精校。"
     },
     {
       "pdf_page": 124,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/101-page-124.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "表P3.1四组偏置和漏电流值已核对；P3.2/3.3的电路当前仅用文字结构化描述，待原生绘图。"
     },
     {
       "pdf_page": 125,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/102-page-125.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "P3.4—P3.8各原题偏置、尺寸与公式已选段编辑，图P3.4—P3.6尚缺原生几何。"
     },
     {
       "pdf_page": 126,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/103-page-126.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "P3.8六组PMOS偏置和P3.9—P3.14题设参数已核对，完整正文行距尚未验收。"
     },
     {
       "pdf_page": 127,
