@@ -1,4 +1,4 @@
-// Source PDF page101 / printed82, figure3.10 and detailed instance table.
+// SOURCE PDF PAGE 101 / editorial Typst candidate, not 1:1 accepted.
 #import "../figures/ch3-layout-spice-native.typ": mos-spice-geometry
 #set document(title:"第3章 · 图3.10与MOS晶体管实例描述 · PDF101")
 #set text(lang:"zh")

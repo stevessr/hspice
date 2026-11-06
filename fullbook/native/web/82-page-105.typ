@@ -1,4 +1,4 @@
-// Source PDF105 / printed86. Fig3.11 parameter extraction and example3.3.
+// SOURCE PDF PAGE 105 / editorial Typst candidate, not 1:1 accepted.
 #import "../figures/ch3-layout-spice-native.typ": bsim-grid
 #set document(title:"第3章 · 图3.11参数提取和例3.3 · PDF105")
 #set text(lang:"zh")

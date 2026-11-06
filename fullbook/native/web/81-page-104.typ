@@ -1,4 +1,4 @@
-// Source PDF104 / printed85. Junction cap eq 3.10, extraction3.11.
+// SOURCE PDF PAGE 104 / editorial Typst candidate, not 1:1 accepted.
 #set document(title:"第3章 · 结电容参数与MOS LEVEL1提取 · PDF104")
 #set text(lang:"zh")
 = 第3章 · 印刷第85页

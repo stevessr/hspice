@@ -1,4 +1,4 @@
-// PDF scan106 / printed87. BSIM3 intro and figure3.12.
+// SOURCE PDF PAGE 106 / editorial Typst candidate, not 1:1 accepted.
 #import "../figures/ch3-layout-spice-native.typ": bsim-grid
 #set document(title:"第3章 · 3.6 BSIM3模型与区域分箱 · PDF106")
 #set text(lang:"zh")

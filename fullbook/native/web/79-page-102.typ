@@ -1,4 +1,4 @@
-// Source PDF102 / printed83: Eq3.2 and Example3.2.
+// SOURCE PDF PAGE 102 / editorial Typst candidate, not 1:1 accepted.
 #set document(title:"第3章 · 有效沟道尺寸及SPICE网表示例3.2 · PDF102")
 #set text(lang:"zh")
 = 第3章 · 印刷第83页

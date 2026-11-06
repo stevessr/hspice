@@ -1,4 +1,4 @@
-// Source PDF page100 / printed81.
+// SOURCE PDF PAGE 100 / editorial Typst candidate, not 1:1 accepted.
 #set document(title:"第3章 · MOS晶体管模型构造和SPICE发展 · PDF100")
 #set text(lang:"zh")
 = 第3章 · 印刷第81页
