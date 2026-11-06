@@ -68,8 +68,11 @@
     #place(top + left,dx:x+17pt,dy:11pt,text(size:7pt)[#data.at(0)])
     #place(top + left,dx:x,dy:56pt,text(size:7pt)[#data.at(1)])
     #place(top + left,dx:x+16pt,dy:113pt,text(size:7pt)[#data.at(2)])
-    #place(top + left,dx:x+25pt,dy:135pt,text(size:8pt)[(#{"abcd".at(i)})])
   ]
+  #place(top + left,dx:42pt,dy:135pt,text(size:8pt)[(a)])
+  #place(top + left,dx:131pt,dy:135pt,text(size:8pt)[(b)])
+  #place(top + left,dx:220pt,dy:135pt,text(size:8pt)[(c)])
+  #place(top + left,dx:309pt,dy:135pt,text(size:8pt)[(d)])
 ])
 
 #let mos-charge-cases() = html.frame(block(width: 354pt,height:150pt)[
