@@ -79,15 +79,15 @@
   #for (i, topVoltage) in ((0,"1.0 V"),(1,"0.6 V")) [
     #let x=55pt+i*171pt
     #place(top + left,dx:x,dy:21pt,line(end:(0pt,34pt),stroke:.9pt))
-    #place(top + left,dx:x-4pt,dy:55pt,line(end:(0pt,30pt),stroke:1pt))
-    #place(top + left,dx:x-32pt,dy:64pt,line(length:25pt,stroke:.9pt))
+    #place(top + left,dx:x - 4pt,dy:55pt,line(end:(0pt,30pt),stroke:1pt))
+    #place(top + left,dx:x - 32pt,dy:64pt,line(length:25pt,stroke:.9pt))
     #place(top + left,dx:x,dy:86pt,line(end:(0pt,18pt),stroke:.9pt))
-    #place(top + left,dx:x-9pt,dy:104pt,line(length:18pt,stroke:.9pt))
-    #place(top + left,dx:x-9pt,dy:109pt,line(length:18pt,stroke:.9pt))
+    #place(top + left,dx:x - 9pt,dy:104pt,line(length:18pt,stroke:.9pt))
+    #place(top + left,dx:x - 9pt,dy:109pt,line(length:18pt,stroke:.9pt))
     #place(top + left,dx:x,dy:110pt,line(end:(0pt,16pt),stroke:.8pt))
-    #place(top + left,dx:x-12pt,dy:126pt,line(length:24pt,stroke:.8pt))
-    #place(top + left,dx:x-20pt,dy:8pt,text(size:8pt)[#topVoltage])
-    #place(top + left,dx:x-43pt,dy:53pt,text(size:8pt)[1.2 V])
+    #place(top + left,dx:x - 12pt,dy:126pt,line(length:24pt,stroke:.8pt))
+    #place(top + left,dx:x - 20pt,dy:8pt,text(size:8pt)[#topVoltage])
+    #place(top + left,dx:x - 43pt,dy:53pt,text(size:8pt)[1.2 V])
     #place(top + left,dx:x+7pt,dy:95pt,text(size:8pt)[$V_x$]))
   ]
   #place(top + left,dx:18pt,dy:138pt,text(size:7pt)[(a) 漏1.0 V；(b) 漏0.6 V；电容起始为0 V。仅作电路拓扑候选。])
