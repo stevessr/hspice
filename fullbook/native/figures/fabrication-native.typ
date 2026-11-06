@@ -31,7 +31,7 @@
 #let lithography-steps() = html.frame(block(width:358pt,height:228pt)[
   #for i in range(5) [
     #let y = 15pt + i*42pt
-    #place(top + left,dx: 5pt,dy:y+7pt,text(size:8pt)[#i.])
+    #place(top + left,dx: 5pt,dy:y+7pt,text(size:8pt)[#(i + 1).])
     #place(top + left,dx: 55pt,dy:y,rect(width:209pt,height:27pt,stroke:.6pt,fill:rgb("eeeeee")))
     #place(top + left,dx: 55pt,dy:y,rect(width:209pt,height:6pt,stroke:.7pt,fill:rgb("bfbfbf")))
     #place(top + left,dx: 271pt,dy:y+6pt,line(length:28pt,stroke:.7pt))
