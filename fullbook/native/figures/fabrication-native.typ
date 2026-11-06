@@ -54,7 +54,7 @@
 #let cmos-stages() = html.frame(block(width:357pt,height:232pt)[
   #for i in range(4) [
     #let y=14pt + i*53pt
-    #place(top + left,dx:7pt,dy:y+11pt,text(size:8pt)[步骤 #i])
+    #place(top + left,dx:7pt,dy:y+11pt,text(size:8pt)[步骤 #(i + 1)])
     #place(top + left,dx:56pt,dy:y,rect(width:190pt,height:43pt,stroke:.7pt,fill:rgb("ededed")))
     #place(top + left,dx:73pt,dy:y+8pt,rect(width:53pt,height:30pt,stroke:.6pt,fill:rgb("d0d0d0")))
     #place(top + left,dx:178pt,dy:y+8pt,rect(width:52pt,height:30pt,stroke:.6pt,fill:rgb("b9b9b9")))
