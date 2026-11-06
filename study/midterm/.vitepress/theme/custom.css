@@ -127,3 +127,22 @@
 .native-review-layout p { color: var(--vp-c-text-2); font-size: .84rem; }
 .native-review-layout img { width: min(100%, 780px); height: auto; display: block;
   margin: .8rem auto; border: 1px solid var(--vp-c-divider); background: #fff; }
+
+
+/* Strict 445-page editorial acceptance: no inferred completion. */
+.fidelity-panel{border:1px solid var(--vp-c-divider);border-radius:12px;overflow:hidden;margin:1rem 0}
+.fidelity-top{padding:1rem;background:var(--vp-c-bg-soft);display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+.fidelity-top p{color:var(--vp-c-text-2);font-size:.84rem}
+.fidelity-top progress{width:min(100%,240px);accent-color:var(--vp-c-brand-1)}
+.fidelity-filters{display:flex;flex-wrap:wrap;gap:.8rem;padding:1rem}
+.fidelity-filters label{display:flex;gap:.6rem;align-items:center;font-size:.88rem}
+.fidelity-filters select{padding:.35rem .55rem;border:1px solid var(--vp-c-divider);border-radius:7px;background:var(--vp-c-bg);color:var(--vp-c-text-1)}
+.fidelity-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(43px,1fr));gap:5px;padding:0 1rem 1rem;max-height:310px;overflow:auto}
+.fidelity-grid button{padding:.44rem .2rem;font-size:.8rem;border:1px solid var(--vp-c-divider);border-radius:6px;background:var(--vp-c-bg-soft);color:var(--vp-c-text-2);cursor:pointer}
+.fidelity-grid button.issue{border-style:dashed;border-color:var(--vp-c-warning-1)}
+.fidelity-grid button.accepted{background:var(--vp-c-green-soft);border-color:var(--vp-c-green-1)}
+.fidelity-grid button.active,.fidelity-grid button:focus-visible{outline:2px solid var(--vp-c-brand-1);outline-offset:1px}
+.fidelity-detail{padding:1rem 1.25rem;border-top:1px solid var(--vp-c-divider)}
+.fidelity-checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.5rem;padding:.8rem;background:var(--vp-c-bg-soft);border-radius:8px}
+.fidelity-empty{padding:1rem;color:var(--vp-c-text-2)}
+@media(max-width:650px){.fidelity-grid{grid-template-columns:repeat(auto-fill,minmax(38px,1fr))}}

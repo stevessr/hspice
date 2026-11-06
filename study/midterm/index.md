@@ -21,6 +21,9 @@ hero:
       text: Typst 精修网页
       link: /native-typst
     - theme: alt
+      text: 445 页质量验收
+      link: /fidelity
+    - theme: alt
       text: 445页逐页校对
       link: /native-workbench
     - theme: alt
@@ -45,6 +48,9 @@ features:
   - title: 原生 Typst 精修网页
     details: 直接由可编辑 Typst 编译 HTML；展示源扫描页定位、校对后的公式和表格，无需 PDF。
     link: /native-typst
+  - title: 445 页 1:1 重排质量验收
+    details: 逐页追踪文字、公式、图表、脚注和版式。OCR 全量覆盖不等于已验收；仅审核全部通过才标记完成。
+    link: /fidelity
   - title: 电路结构图解
     details: MOS 端口、反相器、NAND/NOR、SR 锁存器、主从 JK 和等效 RC 结构的 SVG 汇总。
     link: /figures

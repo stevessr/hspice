@@ -7,6 +7,7 @@ on:
       - 'study/midterm/**'
       - '实验*.pdf'
       - 'fullbook/native/web/**'
+      - 'fullbook/native/qa/**'
       - 'fullbook/native/figures/**'
       - 'fullbook/native/page-status.json'
       - 'fullbook/native/tools/fidelity_gate.py'
@@ -183,6 +184,11 @@ jobs:
             --status fullbook/native/page-status.json \
             --json study/midterm/public/native-fidelity.json
 
+      - name: Audit 1:1 editable textbook progress without accepting OCR as complete
+        run: |
+          python3 fullbook/native/qa/audit.py --input fullbook/native/qa/fidelity-status.json
+          cp fullbook/native/qa/fidelity-status.json study/midterm/public/native-fidelity.json
+
       - name: Build VitePress documentation and local search
         working-directory: study/midterm
         run: npm run docs:build
@@ -207,6 +213,8 @@ jobs:
           test -s study/midterm/.vitepress/dist/native-typst.html
           test -s study/midterm/.vitepress/dist/native-typst/01-gates-noise-delay.html
           test -s study/midterm/.vitepress/dist/native-typst/02-mos-threshold.html
+          test -s study/midterm/.vitepress/dist/fidelity.html
+          test -s study/midterm/.vitepress/dist/native-fidelity.json
           test -s study/midterm/.vitepress/dist/native-typst/03-page-026.html
           test -s study/midterm/.vitepress/dist/native-typst/03-page-026-layout.svg
           echo "MathJax, SVG, and Typst HTML smoke tests passed"

@@ -23,10 +23,18 @@ export default defineConfig({
       { text: 'PDF 资料库', link: '/pdf' },
       { text: '教材 Typst 精编', link: '/textbook' },
       { text: 'Typst 精修网页', link: '/native-typst' },
+      { text: '445 页验收矩阵', link: '/fidelity' },
       { text: '445页校对工作台', link: '/native-workbench' },
       { text: 'GitHub 仓库', link: 'https://github.com/stevessr/hspice' }
     ],
     sidebar: {
+      '/fidelity': [
+        { text: '原书重排质量', items: [
+          { text: '445 页验收矩阵', link: '/fidelity' },
+          { text: 'Typst 精修选段', link: '/native-typst' },
+          { text: '九章复习提纲', link: '/textbook' }
+        ] }
+      ],
       '/native-workbench': [
         { text: '原书逐页核对', items: [
           { text: '445页本地校对工作台', link: '/native-workbench' },
