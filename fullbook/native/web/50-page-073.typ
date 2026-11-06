@@ -10,7 +10,7 @@
 
 $ S = Delta V_("GS") = (n k T / q) ln(10) quad "(2.33)" $
 
-室温下 $kT/q approx 26 " mV"$，所以理想 $n=1$ 对应 $S approx 60 " mV/decade"$；书中指出实际 $n$ 经常为1.5到2，相应的 $S$ 约90至120 mV/decade。
+室温下 $k T/q approx 26 " mV"$，所以理想 $n=1$ 对应 $S approx 60 " mV/decade"$；书中指出实际 $n$ 经常为1.5到2，相应的 $S$ 约90至120 mV/decade。
 
 == 例2.10　亚阈值摆幅参数的计算
 
