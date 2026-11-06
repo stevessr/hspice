@@ -24,7 +24,12 @@ const sections = [
   { id: '15-page-038', title: '原书第38页 · CAD物理设计流程', pages: 'PDF第38页/印刷第19页', summary: '图1.20设计流程拓扑示意' },
   { id: '16-page-039', title: '原书第39页 · SPICE电路分析', pages: 'PDF第39页/印刷第20页', summary: '1.5.1节SPICE与电路验证概念' },
   { id: '17-page-040', title: '原书第40页 · ITRS工艺路线图', pages: 'PDF第40页/印刷第21页', summary: '表1.2已逐格核对，共9行6列' },
-  { id: '18-page-041', title: '原书第41页 · 电压、功耗与电流趋势', pages: 'PDF第41页/印刷第22页', summary: '图1.21供电电压与功耗历史趋势' }
+  { id: '18-page-041', title: '原书第41页 · 电压、功耗与电流趋势', pages: 'PDF第41页/印刷第22页', summary: '图1.21供电电压与功耗历史趋势' },
+  { id: '19-page-042', title: '原书第42页 · ITRS设计生产力与SoC', pages: 'PDF第42页/印刷第23页', summary: '图1.22设计生产力差距、图1.23 IP复用' },
+  { id: '20-page-043', title: '原书第43页 · SoC实例、章节小结', pages: 'PDF第43页/印刷第24页', summary: '图1.24 SoC功能分区、1.7小结、1.8参考' },
+  { id: '21-page-044', title: '原书第44页 · 习题P1.1—P1.7与半加器', pages: 'PDF第44页/印刷第25页', summary: 'P1.4 半加器真值表、P1.1—P1.7概览' },
+  { id: '22-page-045', title: '原书第45页 · 反相器、RC延迟与开关', pages: 'PDF第45页/印刷第26页', summary: 'P1.7五级反相器和P1.8/P1.9 RC电路' },
+  { id: '23-page-046', title: '原书第46页 · 习题P1.10—P1.12', pages: 'PDF第46页/印刷第27页', summary: '工艺倍增、处理器代际与电容充电题解' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -66,7 +71,11 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
 
-## 新一轮精修：PDF 第35—41页
+## 补齐第1章末尾：PDF 第42—46页
+
+新增原生可编辑的图1.22、图1.23、SoC功能分区示意、半加器P1.4真值表、五级反相器链和RC充电图。对应的数字实例包括 **12.5 kΩ × 100 fF = 1.25 ns**、**25 fF 电容在30 ps升高0.6 V需要0.5 mA**；题解属于学习补充，原书并未给出对应答案。第1章连续可编辑选段扩展为 PDF 第26—46页，共21页，原纸版式和全部原图仍未完成1:1验收。
+
+## 上轮精修：PDF 第35—41页
 
 新增七个 Typst 原生选段及独立的 HTML、SVG。图1.14—1.16、1.18—1.21具备原生可编辑拓扑或趋势示意；表1.2的历史 ITRS 预测值9行6列已对照源扫描重建。图1.13与1.17是扫描照片及分布图，不以虚构矢量代替原图。仍未完成逐字、逐元素、逐页的 1:1 排版验收。
 

@@ -319,23 +319,68 @@
     },
     {
       "pdf_page": 42,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/19-page-042.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "原书23页：ITRS设计生产力与SoC复用示意可编辑；图1.22曲线点位与原图1.23细节待严格验收。"
     },
     {
       "pdf_page": 43,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/20-page-043.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "原书24页：SoC芯片功能分区图编辑版；图1.24原版微照片尚未移植，参考文献未全部恢复。"
     },
     {
       "pdf_page": 44,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/21-page-044.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "原书25页：P1.4半加器真值表四行四列逐格核对；P1.1、P1.6原题上划线逻辑式待逐符号转写。"
     },
     {
       "pdf_page": 45,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/22-page-045.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "原书26页：图P1.7反相器链、图P1.8 RC电路原生重绘；图P1.9部分拓扑和页内几何待精修。"
     },
     {
       "pdf_page": 46,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/23-page-046.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "原书27页：P1.10、P1.11、P1.12全部题目数据和公式示例核对；题解为额外内容，与原题区分。"
     },
     {
       "pdf_page": 47,
