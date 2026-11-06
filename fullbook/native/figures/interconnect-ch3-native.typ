@@ -4,7 +4,7 @@
 #let metal-steps() = html.frame(block(width:359pt,height:235pt)[
   #for i in range(4) [
     #let y=12pt + i*53pt
-    #place(top + left,dx:8pt,dy:y+8pt,text(size:8pt)[步骤 #i])
+    #place(top + left,dx:8pt,dy:y+8pt,text(size:8pt)[步骤 #(i + 1)])
     #place(top + left,dx:54pt,dy:y+17pt,rect(width:188pt,height:28pt,stroke:.6pt,fill:rgb("eee")))
     #place(top + left,dx:76pt,dy:y+22pt,rect(width:45pt,height:23pt,stroke:.6pt,fill:rgb("ccc")))
     #place(top + left,dx:179pt,dy:y+22pt,rect(width:43pt,height:23pt,stroke:.6pt,fill:rgb("bbb")))

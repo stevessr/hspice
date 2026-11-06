@@ -34,6 +34,14 @@ for n,tokens in MUST.items():
   assert '#include "'+src.name+'"' in frame,n
   assert "506.8346pt" in frame and "729.6pt" in frame,n
 
+# All source diagrams must use the printed 1-based process-stage indices.
+fab=(ROOT/"figures/fabrication-native.typ").read_text(encoding="utf-8")
+metal=(ROOT/"figures/interconnect-ch3-native.typ").read_text(encoding="utf-8")
+assert "步骤 #(i + 1)" in fab and "步骤 #(i + 1)" in metal
+assert "[#(i + 1).]" in fab
+assert "步骤 #i" not in fab and "步骤 #i" not in metal
+assert "[#i.]" not in fab
+
 # Preserve original edition's formula numbering. PDF95 has (3.1);
 # PDF96 does not number either sheet resistance or wire resistance.
 page95=(WEB/"72-page-095.typ").read_text(encoding="utf-8")
