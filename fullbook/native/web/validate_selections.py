@@ -10,7 +10,7 @@ for src in root.glob("??-page-???.typ"):
     ordinal,page=map(int,match.groups())
     assert page==ordinal+23,src.name
     assert page not in pages,src.name
-    assert re.search(rf"\\b{page:03d}\\b", src.read_text(encoding="utf-8")[:240]),src
+    assert re.search(rf"\b{page:03d}\b", src.read_text(encoding="utf-8")[:240]),src
     layout=src.with_name(src.stem+"-layout.typ")
     assert layout.is_file(),layout
     content=layout.read_text(encoding="utf-8")
