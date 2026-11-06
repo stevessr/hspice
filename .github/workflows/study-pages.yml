@@ -157,12 +157,18 @@ jobs:
             study/midterm/public/native-typst/03-page-026-layout.svg
           test -s study/midterm/public/native-typst/03-page-026-layout.svg
           grep -q 'viewBox="0 0 506.8346 729.6"' study/midterm/public/native-typst/03-page-026-layout.svg
+          typst compile --features html --format svg \
+            --root fullbook/native \
+            fullbook/native/web/04-page-027-layout.typ \
+            study/midterm/public/native-typst/04-page-027-layout.svg
+          test -s study/midterm/public/native-typst/04-page-027-layout.svg
+          grep -q 'viewBox="0 0 506.8346 729.6"' study/midterm/public/native-typst/04-page-027-layout.svg
 
       - name: Verify native Typst HTML and source availability
         shell: bash
         run: |
           set -euo pipefail
-          for section in 01-gates-noise-delay 02-mos-threshold 03-page-026; do
+          for section in 01-gates-noise-delay 02-mos-threshold 03-page-026 04-page-027; do
             test -s "study/midterm/public/native-typst/${section}.html"
             test -s "study/midterm/public/native-typst/${section}.typ"
             grep -qi '<html' "study/midterm/public/native-typst/${section}.html"
@@ -213,6 +219,7 @@ jobs:
           test -s study/midterm/.vitepress/dist/native-typst.html
           test -s study/midterm/.vitepress/dist/native-typst/01-gates-noise-delay.html
           test -s study/midterm/.vitepress/dist/native-typst/02-mos-threshold.html
+          test -s study/midterm/.vitepress/dist/native-typst/04-page-027-layout.svg
           test -s study/midterm/.vitepress/dist/fidelity.html
           test -s study/midterm/.vitepress/dist/native-fidelity.json
           test -s study/midterm/.vitepress/dist/native-typst/03-page-026.html

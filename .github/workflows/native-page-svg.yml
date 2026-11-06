@@ -37,9 +37,17 @@ jobs:
           test "$(find /tmp/source-pages -name '*.svg' | wc -l)" -eq 1
           test -s /tmp/source-pages/page-1.svg
           grep -q '<svg' /tmp/source-pages/page-1.svg
+          rm -f /tmp/source-pages/page-*.svg
+          typst compile --features html --format svg \
+            --root fullbook/native \
+            fullbook/native/web/04-page-027-layout.typ \
+            '/tmp/source-pages/page-{0p}.svg'
+          test "$(find /tmp/source-pages -name '*.svg' | wc -l)" -eq 1
+          test -s /tmp/source-pages/page-1.svg
+          grep -q '<svg' /tmp/source-pages/page-1.svg
       - name: Publish visual audit artifact
         uses: actions/upload-artifact@v4
         with:
-          name: typst-native-source-page-026-svg
+          name: typst-native-source-page-027-svg
           path: /tmp/source-pages/
           if-no-files-found: error

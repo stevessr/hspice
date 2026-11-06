@@ -16,6 +16,7 @@ SECTIONS = [
     ("01-gates-noise-delay", "第1章：逻辑门、噪声与延迟", [26,27,28,29,30,31,32]),
     ("02-mos-threshold", "第2章：MOS结构与阈值", [48,49,50,51,52,53,54,55,56,57]),
     ("03-page-026", "原书第26页：逻辑门与DFF图", [26]),
+    ("04-page-027", "原书第27页：理想逻辑电路与数字电平特性", [27]),
 ]
 CSS = """
 <style>
@@ -62,6 +63,10 @@ def main():
             if missing or "<svg" not in html.lower() or "<table" not in html.lower():
                 print("HTML DEBUG:", html[:1800], flush=True)
                 raise RuntimeError(f"Incomplete native diagram/page HTML: missing={missing}; inline SVG={'<svg' in html.lower()}; semantic table={'<table' in html.lower()}")
+        if stem == "04-page-027":
+            missing = [token for token in ("1.3.2", "图 1.6", "扇出", "扇入") if token not in html]
+            if missing or "<svg" not in html.lower():
+                raise RuntimeError(f"Incomplete source-page-027 HTML: missing={missing}; SVG={'<svg' in html.lower()}")
         dest.write_text(html,encoding="utf-8")
         shutil.copy2(src,args.output/f"{stem}.typ")
         index.append(dict(id=stem,title=title,source_pdf_pages=pages,
