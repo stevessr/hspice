@@ -101,3 +101,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF107—116：BSIM3阈值及附加效应
 
 新增`web/84-page-107.typ`至`web/93-page-116.typ`、`figures/bsim-effects-native.typ`及`qa/check_bsim_effects.py`。覆盖式（3.12）—（3.25）、图3.13/3.14、例3.4—3.7的工艺角/温度SPICE、源漏电容与电阻、热载流子和CMOS闩锁。部分例题源网表为可编辑结构性选段，实验散点和所有几何仍需验证。现有连续源页26—116共91页；完整1:1通过页仍为0/445。
+
+
+## PDF117—126：第3章SOI、模型参数表与习题
+
+新增`web/94-page-117.typ`至`web/103-page-126.typ`及相应layout，图3.15、3.16可编辑拓扑，表3.1 LEVEL1、表3.2 BSIM3v3、12项参考文献、表P3.1和P3.1—P3.14原书习题。新增`qa/check_ch3_summary.py`验证公式、页界、单元格、题号和典型数值。PDF26—126形成101个连续原生可编辑选段，整页严格1:1验证依旧为0/445；各表单位、图形和版式仍要逐项精校。

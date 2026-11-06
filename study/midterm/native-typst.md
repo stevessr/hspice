@@ -99,7 +99,17 @@ const sections = [
   { id: '90-page-113', title: '原书第113页 · 结电容、源漏电阻', pages: 'PDF第113页/印刷第94页', summary: '式3.22、3.23，工艺角' },
   { id: '91-page-114', title: '原书第114页 · 温度对MOS的影响', pages: 'PDF第114页/印刷第95页', summary: '式3.24/3.25、例3.7' },
   { id: '92-page-115', title: '原书第115页 · SPICE温度扫描', pages: 'PDF第115页/印刷第96页', summary: '不同栅压下泄漏与导通电流趋势' },
-  { id: '93-page-116', title: '原书第116页 · HCE和CMOS闩锁', pages: 'PDF第116页/印刷第97页', summary: '3.7.4高场极限与3.7.5闩锁' }
+  { id: '93-page-116', title: '原书第116页 · HCE和CMOS闩锁', pages: 'PDF第116页/印刷第97页', summary: '3.7.4高场极限与3.7.5闩锁' },
+  { id: '94-page-117', title: '原书第117页 · 图3.15 CMOS闩锁', pages: 'PDF第117页/印刷第98页', summary: 'PNPN寄生反馈与防护' },
+  { id: '95-page-118', title: '原书第118页 · 图3.16 SOI器件结构', pages: 'PDF第118页/印刷第99页', summary: 'PD-SOI/FD-SOI及埋氧层' },
+  { id: '96-page-119', title: '原书第119页 · 表3.1 LEVEL1参数', pages: 'PDF第119页/印刷第100页', summary: 'VTO/KP/GAMMA及27行模型参数' },
+  { id: '97-page-120', title: '原书第120页 · 表3.2 BSIM3参数（一）', pages: 'PDF第120页/印刷第101页', summary: '尺寸、工艺及迁移率参数' },
+  { id: '98-page-121', title: '原书第121页 · 表3.2 BSIM3参数（二）', pages: 'PDF第121页/印刷第102页', summary: '迁移率、亚阈值与DIBL' },
+  { id: '99-page-122', title: '原书第122页 · 表3.2 BSIM3参数（三）', pages: 'PDF第122页/印刷第103页', summary: '温度、电容和侧壁参数' },
+  { id: '100-page-123', title: '原书第123页 · 参考文献及P3.1', pages: 'PDF第123页/印刷第104页', summary: '12篇参考、NMOS模型提取电路' },
+  { id: '101-page-124', title: '原书第124页 · 表P3.1及P3.2/3.3', pages: 'PDF第124页/印刷第105页', summary: '四组I–V值与电容充电条件' },
+  { id: '102-page-125', title: '原书第125页 · 习题P3.4—P3.8', pages: 'PDF第125页/印刷第106页', summary: '沟道调制、体效应与SPICE' },
+  { id: '103-page-126', title: '原书第126页 · 第3章习题P3.8—P3.14', pages: 'PDF第126页/印刷第107页', summary: 'PMOS阈值、温度、介质与互连' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -140,6 +150,12 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第3章小结与习题：PDF 第117—126页
+
+本轮增加图3.15寄生PNPN闩锁、图3.16 SOI结构，以及可编辑的表3.1 LEVEL1参数与表3.2 BSIM3参数。第123页的12项参考文献和P3.1测试电路，第124页表P3.1的四组漏电流值（1000/280/276/741 μA），以及P3.2—P3.14题目条件均按原扫描选段重排。未把练习答案作为原书正文写入。
+
+连续可编辑源页选段现为 **PDF第26—126页，共101页**，目前第3章源页覆盖至章末。整页完整1:1保真验收仍为0/445。
 
 ## 第3章BSIM3与附加效应：PDF 第107—116页
 
