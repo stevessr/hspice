@@ -91,3 +91,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## 第3章 PDF87—96：制造流程、CMOS器件和互连C/R
 
 `web/64-page-087.typ` 到 `web/73-page-096.typ` 新增10个编辑选段及各自原纸大小 SVG 草稿。`figures/fabrication-native.typ`、`figures/interconnect-ch3-native.typ` 绘制工艺、CMOS截面、M1–M6、寄生电容和电阻几何。式(3.1)见PDF95页；PDF96页方块电阻与电阻公式原页无(3.2)/(3.3)编号，不能臆加。`qa/check_ch3_fabrication.py` 检查工艺关键参数、页码和式号。连续选段26—96共71页，完整1:1验收0/445。
+
+
+## PDF 97—106 · 版图基础和SPICE LEVEL1/BSIM3
+
+新增`web/74-page-097.typ`到`web/83-page-106.typ`、`figures/ch3-layout-spice-native.typ`。覆盖图3.6—3.12、例3.1（0.2、10、11 Ω）、例3.2实例、式3.2—3.11、例3.3模型卡和BSIM3九区分箱。严格按原扫描保留公式编号起点为第102页，不把第96页原本无编号的公式误记为式3.2。源页编辑选段连续26—106共81页，不代表原版1:1验收，后者仍为0/445。

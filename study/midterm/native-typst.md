@@ -79,7 +79,17 @@ const sections = [
   { id: '70-page-093', title: '原书第93页 · 3.2.4制造连线', pages: 'PDF第93页/印刷第74页', summary: '接触孔/金属层1/通孔/金属层2' },
   { id: '71-page-094', title: '原书第94页 · 图3.3多层金属互连', pages: 'PDF第94页/印刷第75页', summary: 'M1—M6、铜、双镶嵌、CMP' },
   { id: '72-page-095', title: '原书第95页 · 图3.4/3.5与式3.1', pages: 'PDF第95页/印刷第76页', summary: '平行板电容、金属线寄生几何' },
-  { id: '73-page-096', title: '原书第96页 · 互连电容与方块电阻', pages: 'PDF第96页/印刷第77页', summary: 'R=ρL/(TW)，Rsq=ρ/T（原书未编号）' }
+  { id: '73-page-096', title: '原书第96页 · 互连电容与方块电阻', pages: 'PDF第96页/印刷第77页', summary: 'R=ρL/(TW)，Rsq=ρ/T（原书未编号）' },
+  { id: '74-page-097', title: '原书第97页 · 互连尺寸与例3.1', pages: 'PDF第97页/印刷第78页', summary: '图3.6、0.2/10/11Ω电阻与版图概述' },
+  { id: '75-page-098', title: '原书第98页 · GDS-II流程与λ规则', pages: 'PDF第98页/印刷第79页', summary: '图3.7、DRC和λ栅长单位' },
+  { id: '76-page-099', title: '原书第99页 · 版图基本设计规则', pages: 'PDF第99页/印刷第80页', summary: '图3.8—3.9最小线宽/间距/触点' },
+  { id: '77-page-100', title: '原书第100页 · SPICE器件模型概述', pages: 'PDF第100页/印刷第81页', summary: '3.4、3.4.1模型族与参数' },
+  { id: '78-page-101', title: '原书第101页 · MOS实例字段与图3.10', pages: 'PDF第101页/印刷第82页', summary: 'D/G/S/B与L/W/AD/PD/AS/PS' },
+  { id: '79-page-102', title: '原书第102页 · 有效沟道与例3.2', pages: 'PDF第102页/印刷第83页', summary: '式（3.2）与两个SPICE实例网表' },
+  { id: '80-page-103', title: '原书第103页 · LEVEL1电流公式', pages: 'PDF第103页/印刷第84页', summary: '式（3.3）—（3.9），VTO/KP/GAMMA' },
+  { id: '81-page-104', title: '原书第104页 · 结电容与参数提取', pages: 'PDF第104页/印刷第85页', summary: '式（3.10）—（3.11）' },
+  { id: '82-page-105', title: '原书第105页 · 图3.11及例3.3', pages: 'PDF第105页/印刷第86页', summary: 'VTO/KP/GAMMA/LAMBDA及模型卡' },
+  { id: '83-page-106', title: '原书第106页 · BSIM3模型与分箱', pages: 'PDF第106页/印刷第87页', summary: '3.6/3.6.1及图3.12' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -120,6 +130,12 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第3章版图规则与SPICE建模：PDF 第97—106页
+
+原扫描逐页核对例3.1的三个连线电阻（约0.2、10、11Ω），GDS-II与λ设计规则图3.6—3.10，SPICE MOS四端实例、例3.2双网表，LEVEL1模型式（3.2）—（3.11），例3.3模型卡，以及BSIM3分箱图3.12。特别保留**PDF第96页的无编号方块电阻公式**与**第102页才开始出现的式（3.2）**的区别。图形为原生编辑候选，实验曲线尚非逐点原始数据。
+
+连续源页选段扩展为 **PDF第26—106页，共81页**，严格整页1:1验收仍为0/445。
 
 ## 第3章制造与连线模型：PDF 第87—96页
 
