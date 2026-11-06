@@ -17,7 +17,7 @@ EXPECTED={
  70:["例2.8","2.30a","0.34","0.60"],
 }
 assert STATUS["source_pdf_pages"]==445 and len(STATUS["pages"])==445
-for n,tokens in EXPECT.items():
+for n,tokens in EXPECTED.items():
  p=STATUS["pages"][n-1]
  assert p["pdf_page"]==n
  assert p["status"]=="partially-transcribed"
