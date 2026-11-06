@@ -37,6 +37,12 @@ for n, terms in REQUIRED.items():
     lay=layout.read_text(encoding="utf-8")
     assert '#include "'+src.name+'"' in lay,n
     assert "506.8346pt" in lay and "729.6pt" in lay,n
+# Preserve source-printing ambiguity without silently rewriting to conventional MOS formulae.
+chapter_summary=(WEB/"59-page-082.typ").read_text(encoding="utf-8")
+assert "原页印作" in chapter_summary
+assert "alpha_1" in chapter_summary and "alpha_2" in chapter_summary
+assert "beta_1" in chapter_summary and "beta_2" in chapter_summary
+assert "排印疑点" in chapter_summary
 # Example 2.12 numerical conservation, one-sided substrate step.
 nominal=1.6*(.3+.05)*.4
 small=nominal/math.sqrt(1+1.2)
