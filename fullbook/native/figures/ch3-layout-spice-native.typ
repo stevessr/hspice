@@ -95,3 +95,33 @@
   #place(top + left,dx:40pt,dy:162pt,text(size:8pt)[$W_("min")$]))
   #place(top + left,dx:264pt,dy:164pt,text(size:8pt)[$L_("max")$]))
 ])
+
+#let level1-parameter-extraction() = html.frame(block(width:355pt,height:205pt)[
+  // Fig3.11: source topology and data-fitting trends, not digitized measurements.
+  #place(top + left,dx:10pt,dy:5pt,text(size:7.5pt)[(a) 体偏与 $sqrt(2 I_D)$–$V_("GS")$ 拟合])
+  #place(top + left,dx:30pt,dy:91pt,line(length:135pt,stroke:.8pt))
+  #place(top + left,dx:30pt,dy:91pt,line(end:(0pt,-60pt),stroke:.8pt))
+  #place(top + left,dx:52pt,dy:91pt,line(end:(70pt,-51pt),stroke:1pt))
+  #place(top + left,dx:75pt,dy:91pt,line(end:(65pt,-46pt),stroke:1pt))
+  #place(top + left,dx:98pt,dy:91pt,line(end:(56pt,-40pt),stroke:1pt))
+  #place(top + left,dx:50pt,dy:96pt,text(size:7pt)[$V_("T0")$]))
+  #place(top + left,dx:78pt,dy:96pt,text(size:7pt)[$V_("T1")$]))
+  #place(top + left,dx:108pt,dy:96pt,text(size:7pt)[$V_("T2")$]))
+  #place(top + left,dx:137pt,dy:31pt,text(size:7pt)[$V_("SB")=0$]))
+  #place(top + left,dx:11pt,dy:23pt,text(size:7pt)[$sqrt(2 I_D)$]))
+  #place(top + left,dx:139pt,dy:92pt,text(size:7pt)[$V_("GS")$]))
+  #place(top + left,dx:186pt,dy:5pt,text(size:7.5pt)[(b) 饱和电流与 $V_("DS")$])
+  #place(top + left,dx:196pt,dy:91pt,line(length:147pt,stroke:.8pt))
+  #place(top + left,dx:196pt,dy:91pt,line(end:(0pt,-60pt),stroke:.8pt))
+  #place(top + left,dx:197pt,dy:90pt,
+    curve(stroke:1.2pt,curve.move((0pt,0pt)),
+      curve.cubic((31pt,-43pt),(68pt,-51pt),(146pt,-56pt))))
+  #place(top + left,dx:243pt,dy:91pt,line(end:(0pt,-45pt),stroke:(dash:"dashed",thickness:.7pt)))
+  #place(top + left,dx:302pt,dy:91pt,line(end:(0pt,-52pt),stroke:(dash:"dashed",thickness:.7pt)))
+  #place(top + left,dx:237pt,dy:96pt,text(size:7pt)[$V_("D1")$]))
+  #place(top + left,dx:298pt,dy:96pt,text(size:7pt)[$V_("D2")$]))
+  #place(top + left,dx:204pt,dy:23pt,text(size:7pt)[$I_D$]))
+  #place(top + left,dx:315pt,dy:92pt,text(size:7pt)[$V_("DS")$]))
+  #place(top + left,dx:18pt,dy:121pt,text(size:7.5pt)[图3.11：VTO截距、KP斜率、GAMMA阈值偏移、LAMBDA饱和区斜率])
+  #place(top + left,dx:18pt,dy:145pt,text(size:7pt)[数据点和各测试电路的完整端口结构仍需按扫描逐元复核])
+])
