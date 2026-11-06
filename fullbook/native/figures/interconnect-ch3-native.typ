@@ -26,12 +26,12 @@
   #for i in range(6) [
     #let y = 175pt - i*31pt
     #let w = if i < 2 { 138pt } else if i < 4 { 166pt } else { 216pt }
-    #let x = 64pt - if i >= 4 {20pt} else {0pt}
+    #let x = if i >= 4 {44pt} else {64pt}
     #place(top + left,dx:x,dy:y,rect(width:w,height:9pt,stroke:.7pt,fill:rgb("c6c6c6")))
-    #place(top + left,dx:284pt,dy:y-2pt,text(size:8pt)[M#{i+1}])
+    #place(top + left,dx:284pt,dy:y-2pt,text(size:8pt)[M#(i + 1)])
     #if i < 5 [
       #place(top + left,dx:119pt,dy:y-22pt,rect(width:11pt,height:22pt,stroke:.6pt,fill:rgb("aaaaaa")))
-      #place(top + left,dx:302pt,dy:y-18pt,text(size:6.8pt)[通孔#{i+1}])
+      #place(top + left,dx:302pt,dy:y-18pt,text(size:6.8pt)[通孔#(i + 1)])
     ]
   ]
   #place(top + left,dx:87pt,dy:191pt,rect(width:12pt,height:14pt,fill:rgb("888")))
