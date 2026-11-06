@@ -144,57 +144,51 @@ jobs:
         with:
           typst-version: ^0.15.0
 
-      - name: Install CJK fonts for SVG visual fidelity
-        run: sudo apt-get update -qq && sudo apt-get install -y fonts-noto-cjk
+      - name: Install CJK fonts with bounded mirror wait
+        timeout-minutes: 4
+        run: |
+          if timeout 35s sudo apt-get update -qq && timeout 100s sudo apt-get install -y fonts-noto-cjk; then
+            echo "Noto CJK installed"
+          else
+            echo "::warning::CJK font mirror unavailable; using Typst fallback fonts"
+          fi
 
       - name: Export reviewed native Typst sections to semantic HTML
         run: python3 fullbook/native/web/build_html.py --output study/midterm/public/native-typst
 
-      - name: Export exact-sized native Typst page SVG (no PDF)
+      - name: Export all 16 source-sized Typst page SVG previews
         shell: bash
         run: |
           set -euo pipefail
-          typst compile --features html --format svg \
-            --root fullbook/native \
-            fullbook/native/web/03-page-026-layout.typ \
-            study/midterm/public/native-typst/03-page-026-layout.svg
-          test -s study/midterm/public/native-typst/03-page-026-layout.svg
-          grep -q 'viewBox="0 0 506.8346 729.6"' study/midterm/public/native-typst/03-page-026-layout.svg
-          typst compile --features html --format svg \
-            --root fullbook/native \
-            fullbook/native/web/04-page-027-layout.typ \
-            study/midterm/public/native-typst/04-page-027-layout.svg
-          test -s study/midterm/public/native-typst/04-page-027-layout.svg
-          grep -q 'viewBox="0 0 506.8346 729.6"' study/midterm/public/native-typst/04-page-027-layout.svg
-          for section in 05-page-028 06-page-029 07-page-030 08-page-031 09-page-032 10-page-033 11-page-034; do
-            typst compile --features html --format svg \
-              --root fullbook/native \
-              "fullbook/native/web/${section}-layout.typ" \
-              "study/midterm/public/native-typst/${section}-layout.svg"
-            test -s "study/midterm/public/native-typst/${section}-layout.svg"
-            grep -q 'viewBox="0 0 506.8346 729.6"' "study/midterm/public/native-typst/${section}-layout.svg"
+          python3 fullbook/native/web/validate_selections.py
+          for source in fullbook/native/web/*-page-*-layout.typ; do
+            stem="$(basename "${source%-layout.typ}")"
+            target="study/midterm/public/native-typst/${stem}-layout.svg"
+            typst compile --features html --format svg --root fullbook/native "$source" "$target"
+            test -s "$target"
+            grep -q 'viewBox="0 0 506.8346 729.6"' "$target"
           done
-
-      - name: Verify native Typst HTML and source availability
-        shell: bash
+      - name: Validate all Typst HTML and SVG content
         run: |
-          set -euo pipefail
-          for section in 01-gates-noise-delay 02-mos-threshold 03-page-026 04-page-027 05-page-028 06-page-029 07-page-030 08-page-031 09-page-032 10-page-033 11-page-034; do
-            test -s "study/midterm/public/native-typst/${section}.html"
-            test -s "study/midterm/public/native-typst/${section}.typ"
-            grep -qi '<html' "study/midterm/public/native-typst/${section}.html"
-          done
           python3 - <<'PY'
-          from pathlib import Path
           import json
+          from pathlib import Path
           root=Path('study/midterm/public/native-typst')
           data=json.loads((root/'index.json').read_text(encoding='utf-8'))
           assert data['format']=='native-typst-html'
           assert data['accepted_full_pages']==0
-          assert len(data['items'])==11
-          print('Native Typst HTML previews validated')
+          assert len(data['items'])==18
+          ids=set()
+          for item in data['items']:
+              assert item['id'] not in ids,item
+              ids.add(item['id'])
+              assert (root/item['html']).is_file(),item
+              assert '<html' in (root/item['html']).read_text(encoding='utf-8').lower(),item
+              assert (root/item['typst']).is_file(),item
+              if '-page-' in item['id']:
+                  assert (root/(item['id']+'-layout.svg')).is_file(),item
+          print(f'Validated {len(ids)} Typst HTML selections and 16 editable page SVGs')
           PY
-
       - name: Publish strict 1-to-1 fidelity status (metadata only)
         run: |
           python3 fullbook/native/tools/fidelity_gate.py \
