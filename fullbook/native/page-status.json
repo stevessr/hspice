@@ -947,43 +947,133 @@
     },
     {
       "pdf_page": 87,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/64-page-087.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "第3章封面与原目录3.1–3.11、3.1绪论：章节结构与主题匹配，全文暂为源页编辑选段。"
     },
     {
       "pdf_page": 88,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/65-page-088.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "3.2.1硅片200–300mm、0.35–1.25mm、100–200项操作与基本工艺术语已按扫描核对。"
     },
     {
       "pdf_page": 89,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/66-page-089.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.1的设备照片尚无可编辑精确替代；当前用原生矢量重绘工序关系，3.2.2第一步已转写。"
     },
     {
       "pdf_page": 90,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/67-page-090.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "光刻步骤2–5按源扫描排列，含正性胶、OPC/PSM、3.2.3 STI定义；图元比例待校准。"
     },
     {
       "pdf_page": 91,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/68-page-091.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "3.2.3第二至第五步，22Å栅氧化、自对准多晶硅栅及n+/p+注入已核对；剖面仍为编辑示意。"
     },
     {
       "pdf_page": 92,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/69-page-092.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.2 CMOS双阱/STI/硅化物结构、k约4及高k 10–12历史说明已核对；细部版图待精校。"
     },
     {
       "pdf_page": 93,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/70-page-093.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "3.2.4金属互连四步与平面、截面原生图；通孔与金属位置待扫描逐元验收。"
     },
     {
       "pdf_page": 94,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/71-page-094.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.3 M1—M6、通孔与钨触点、Cu阻挡层、dual Damascene、CMP关键术语转写。"
     },
     {
       "pdf_page": 95,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/72-page-095.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.4、图3.5与式（3.1）已核对，W/L/T/S/H等几何参数使用编辑版图元，尚非原图精确透视。"
     },
     {
       "pdf_page": 96,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/73-page-096.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "方块电阻关系、Al/Cu/W电阻率核对；源扫描未给Rsq及R=Rsq L/W单独编号，已保持无编号。"
     },
     {
       "pdf_page": 97,

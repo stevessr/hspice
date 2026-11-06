@@ -86,3 +86,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF77—86 · 第2章章末精修
 
 新增 `web/54-page-077.typ` 至 `web/63-page-086.typ`、`figures/mos-ch2-end-native.typ` 和 `qa/check_ch2_finish.py`。编辑范围包含结底及侧壁电容式2.40—2.45、覆盖电容式2.46—2.47、例2.12—2.13、章末工作区/电容表、八条参考文献、习题表P2.1、P2.1—P2.10。固定原纸尺寸源码 SVG 与语义HTML连续源页扩展至26—86（61页）。无一页达到整页严格1:1保真验收，全部图示仍为编辑候选。
+
+
+## 第3章 PDF87—96：制造流程、CMOS器件和互连C/R
+
+`web/64-page-087.typ` 到 `web/73-page-096.typ` 新增10个编辑选段及各自原纸大小 SVG 草稿。`figures/fabrication-native.typ`、`figures/interconnect-ch3-native.typ` 绘制工艺、CMOS截面、M1–M6、寄生电容和电阻几何。式(3.1)见PDF95页；PDF96页方块电阻与电阻公式原页无(3.2)/(3.3)编号，不能臆加。`qa/check_ch3_fabrication.py` 检查工艺关键参数、页码和式号。连续选段26—96共71页，完整1:1验收0/445。
