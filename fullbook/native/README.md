@@ -96,3 +96,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF 97—106 · 版图基础和SPICE LEVEL1/BSIM3
 
 新增`web/74-page-097.typ`到`web/83-page-106.typ`、`figures/ch3-layout-spice-native.typ`。覆盖图3.6—3.12、例3.1（0.2、10、11 Ω）、例3.2实例、式3.2—3.11、例3.3模型卡和BSIM3九区分箱。严格按原扫描保留公式编号起点为第102页，不把第96页原本无编号的公式误记为式3.2。源页编辑选段连续26—106共81页，不代表原版1:1验收，后者仍为0/445。
+
+
+## PDF107—116：BSIM3阈值及附加效应
+
+新增`web/84-page-107.typ`至`web/93-page-116.typ`、`figures/bsim-effects-native.typ`及`qa/check_bsim_effects.py`。覆盖式（3.12）—（3.25）、图3.13/3.14、例3.4—3.7的工艺角/温度SPICE、源漏电容与电阻、热载流子和CMOS闩锁。部分例题源网表为可编辑结构性选段，实验散点和所有几何仍需验证。现有连续源页26—116共91页；完整1:1通过页仍为0/445。
