@@ -570,27 +570,81 @@
     },
     {
       "pdf_page": 58,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/35-page-058.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "表2.1十项符号约定、例2.4 +0.08V已按扫描核对；完整字距、引文和分页未验收。"
     },
     {
       "pdf_page": 59,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/36-page-059.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例2.5 3.2e12 ions/cm²计算核对，并重编2.4节引言；未逐字复刻全文。"
     },
     {
       "pdf_page": 60,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/37-page-060.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图2.8栅偏置NMOS原生矢量示意，式2.13—2.16可编辑；尚未通过源图线条比对。"
     },
     {
       "pdf_page": 61,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/38-page-061.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图2.9不合理二次式延伸与夹断重绘，式2.17a/b、2.18已校验；原图坐标需精校。"
     },
     {
       "pdf_page": 62,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/39-page-062.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图2.10三区域多条I–V曲线示意，式2.19、2.20核对；定量坐标/曲线未标定。"
     },
     {
       "pdf_page": 63,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/40-page-063.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "2.5节速度饱和说明；对比1.3V平方律预测与0.6V曲线估计，图2.11见后页。"
     },
     {
       "pdf_page": 64,
