@@ -23,31 +23,31 @@ jobs:
       - uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.15.0
-      - name: Install original-style Chinese text fonts
-        run: sudo apt-get update -qq && sudo apt-get install -y fonts-noto-cjk
-      - name: Export all source-sized Typst vector pages (not PDF)
+      - name: Install fonts with bounded mirror wait
+        timeout-minutes: 4
         run: |
+          if timeout 35s sudo apt-get update -qq && timeout 100s sudo apt-get install -y fonts-noto-cjk; then
+            echo 'CJK fonts ready'
+          else
+            echo '::warning::Font mirror timed out; compiling with fallback fonts'
+          fi
+      - name: Compile every source-sized Typst page
+        run: |
+          set -euo pipefail
           mkdir -p /tmp/source-pages
-          typst compile --features html --format svg \
-            --root fullbook/native \
-            fullbook/native/web/03-page-026-layout.typ \
-            '/tmp/source-pages/page-{0p}.svg'
-          echo "Rendered SVG pages:"
-          ls -lh /tmp/source-pages/
-          test "$(find /tmp/source-pages -name '*.svg' | wc -l)" -eq 1
-          test -s /tmp/source-pages/page-1.svg
-          grep -q '<svg' /tmp/source-pages/page-1.svg
-          rm -f /tmp/source-pages/page-*.svg
-          typst compile --features html --format svg \
-            --root fullbook/native \
-            fullbook/native/web/04-page-027-layout.typ \
-            '/tmp/source-pages/page-{0p}.svg'
-          test "$(find /tmp/source-pages -name '*.svg' | wc -l)" -eq 1
-          test -s /tmp/source-pages/page-1.svg
-          grep -q '<svg' /tmp/source-pages/page-1.svg
+          python3 fullbook/native/web/validate_selections.py
+          for source in fullbook/native/web/*-page-*-layout.typ; do
+            stem="$(basename "${source%-layout.typ}")"
+            dest="/tmp/source-pages/${stem}.svg"
+            typst compile --features html --format svg --root fullbook/native "$source" "$dest"
+            test -s "$dest"
+            grep -q 'viewBox="0 0 506.8346 729.6"' "$dest"
+          done
+          test "$(find /tmp/source-pages -type f -name '*.svg' | wc -l)" -eq 16
+
       - name: Publish visual audit artifact
         uses: actions/upload-artifact@v4
         with:
-          name: typst-native-source-page-027-svg
+          name: typst-native-pages-026-041-svg
           path: /tmp/source-pages/
           if-no-files-found: error
