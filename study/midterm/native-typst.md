@@ -35,7 +35,12 @@ const sections = [
   { id: '26-page-049', title: '原书第49页 · NMOS结构与沟道', pages: 'PDF第49页/印刷第30页', summary: '图2.1 NMOS可编辑横截面' },
   { id: '27-page-050', title: '原书第50页 · PMOS剖面与阈值', pages: 'PDF第50页/印刷第31页', summary: '图2.2 PMOS器件和阈值极性' },
   { id: '28-page-051', title: '原书第51页 · CMOS阱与隔离结构', pages: 'PDF第51页/印刷第32页', summary: '图2.3 CMOS阱与STI隔离' },
-  { id: '29-page-052', title: '原书第52页 · 能带与载流子平衡', pages: 'PDF第52页/印刷第33页', summary: '图2.4能带、质量作用定律及费米势' }
+  { id: '29-page-052', title: '原书第52页 · 能带与载流子平衡', pages: 'PDF第52页/印刷第33页', summary: '图2.4能带、质量作用定律及费米势' },
+  { id: '30-page-053', title: '原书第53页 · 氧化层电容与反型沟道', pages: 'PDF第53页/印刷第34页', summary: '图2.5反型沟道、氧化层电容' },
+  { id: '31-page-054', title: '原书第54页 · MOS电荷和平带状态', pages: 'PDF第54页/印刷第35页', summary: '图2.6 MOS平带及表面电荷' },
+  { id: '32-page-055', title: '原书第55页 · 耗尽层宽度和电荷', pages: 'PDF第55页/印刷第36页', summary: '图2.7耗尽层、电荷分布、泊松方程' },
+  { id: '33-page-056', title: '原书第56页 · 强反型和体偏置耗尽电荷', pages: 'PDF第56页/印刷第37页', summary: '强反型与源体反偏、例2.1—2.2' },
+  { id: '34-page-057', title: '原书第57页 · 阈值电压与体效应', pages: 'PDF第57页/印刷第38页', summary: '式2.10—2.12、体效应系数、例2.3' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -76,6 +81,10 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第2章阈值模型续页：PDF 第53—57页
+
+新增公式2.4—2.12相关的 Typst 数学表达与可编辑的图2.5—2.7示意，特别标明了 p 型费米势的负号、耗尽电荷的负号以及体效应表达式。当前连续原生选段扩展为 **PDF第26—57页，共32页**；所有页的整页1:1验收仍为0/445。
 
 ## 第2章前六页：PDF 第47—52页
 
