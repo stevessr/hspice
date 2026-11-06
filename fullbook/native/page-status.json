@@ -485,12 +485,12 @@
     {
       "pdf_page": 53,
       "status": "partially-transcribed",
-      "source_file": "editorial/sample-mos.typ",
-      "notes": "式(2.4)-(2.5)及NMOS机制文字核对；横截面图2.5尚未完成。",
-      "proofread_round": "2026-11-05-pass2",
+      "source_file": "web/30-page-053.typ",
+      "notes": "栅氧化层电容、费米势式2.4/2.5和图2.5原生结构；图位置与正文未完全校对。",
+      "proofread_round": "2026-11-06-pass1",
       "editorial_typst_draft": true,
       "text_checked_against_scan": false,
-      "formulas_checked_against_scan": true,
+      "formulas_checked_against_scan": false,
       "native_tables_checked": false,
       "layout_verified": false,
       "figures_verified": false,
@@ -507,7 +507,15 @@
       "native_html_selection_available": true,
       "visual_figures_verified": false,
       "full_page_verified": false,
-      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。",
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/31-page-054.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图2.6 MOS栅—氧—半导体电荷示意；平带状态和功函数概念可编辑，原页非全文转写。"
     },
     {
       "pdf_page": 55,
@@ -516,7 +524,15 @@
       "native_html_selection_available": true,
       "visual_figures_verified": false,
       "full_page_verified": false,
-      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。",
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/32-page-055.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图2.7能带弯曲与耗尽区、公式2.7/2.8已编辑，原下标和图元需校核。"
     },
     {
       "pdf_page": 56,
@@ -525,7 +541,15 @@
       "native_html_selection_available": true,
       "visual_figures_verified": false,
       "full_page_verified": false,
-      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。",
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/33-page-056.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例2.1/2.2及源体偏压对耗尽电荷的作用；中间数值和原文尚未逐字核对。"
     },
     {
       "pdf_page": 57,
@@ -534,7 +558,15 @@
       "native_html_selection_available": true,
       "visual_figures_verified": false,
       "full_page_verified": false,
-      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。"
+      "round3_note": "关键公式/术语已对照扫描图复核并编成 Typst 网页选段；非原页逐字完整重排。",
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/34-page-057.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式2.10—2.12 MOS阈值和体效应可编辑，原书计算例与页面几何待验收。"
     },
     {
       "pdf_page": 58,
