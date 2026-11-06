@@ -33,4 +33,9 @@ for n, markers in EXPECT.items():
     assert all(marker in text for marker in markers), (n, [x for x in markers if x not in text])
     assert f"#include \"{src.name}\"" in layout.read_text(encoding="utf-8"), n
     assert not re.search(r"(?m)^\s*#image\s*\(", text), n
+# Independently sanity-check the numerics used in the textbook examples.
+oxide_cap=1.6e-6
+implant_density=(oxide_cap*(0.4-0.08))/1.6e-19
+assert abs(implant_density/3.2e12 - 1) < 1e-9
+assert round(-0.99 + 0.88 + 0.188 - 0.002, 2) == 0.08
 print("MOS scan-page editorial regression: 58-63 / equations 2.13-2.20 / status gates OK")

@@ -36,6 +36,7 @@ jobs:
           set -euo pipefail
           mkdir -p /tmp/source-pages
           python3 fullbook/native/web/validate_selections.py
+          python3 fullbook/native/qa/check_mos_iv.py
           for source in fullbook/native/web/*-page-*-layout.typ; do
             stem="$(basename "${source%-layout.typ}")"
             dest="/tmp/source-pages/${stem}.svg"
