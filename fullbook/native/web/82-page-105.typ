@@ -1,10 +1,12 @@
 // SOURCE PDF PAGE 105 / editorial Typst candidate, not 1:1 accepted.
-#import "../figures/ch3-layout-spice-native.typ": bsim-grid
+#import "../figures/ch3-layout-spice-native.typ": level1-parameter-extraction
 #set document(title:"第3章 · 图3.11参数提取和例3.3 · PDF105")
 #set text(lang:"zh")
 = 第3章 · 印刷第86页
 
 == 图3.11　MOS晶体管的参数提取
+
+#level1-parameter-extraction()
 
 原书图3.11(a)在固定漏源电压的饱和区，绘制 $sqrt(2 I_D)$ 对 $V_("GS")$ 的直线；不同体偏压 $V_("SB")=0$、1、2 V 对应不同横轴截距。
 
