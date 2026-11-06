@@ -156,7 +156,7 @@ jobs:
       - name: Export reviewed native Typst sections to semantic HTML
         run: python3 fullbook/native/web/build_html.py --output study/midterm/public/native-typst
 
-      - name: Export all 61 source-sized Typst page SVG previews
+      - name: Export all 71 source-sized Typst page SVG previews
         shell: bash
         run: |
           set -euo pipefail
@@ -165,6 +165,7 @@ jobs:
           python3 fullbook/native/qa/check_velocity_sat.py
           python3 fullbook/native/qa/check_subthreshold_cap.py
           python3 fullbook/native/qa/check_ch2_finish.py
+          python3 fullbook/native/qa/check_ch3_fabrication.py
           for source in fullbook/native/web/*-page-*-layout.typ; do
             stem="$(basename "${source%-layout.typ}")"
             target="study/midterm/public/native-typst/${stem}-layout.svg"
@@ -181,7 +182,7 @@ jobs:
           data=json.loads((root/'index.json').read_text(encoding='utf-8'))
           assert data['format']=='native-typst-html'
           assert data['accepted_full_pages']==0
-          assert len(data['items'])==63
+          assert len(data['items'])==73
           ids=set()
           for item in data['items']:
               assert item['id'] not in ids,item
@@ -191,7 +192,7 @@ jobs:
               assert (root/item['typst']).is_file(),item
               if '-page-' in item['id']:
                   assert (root/(item['id']+'-layout.svg')).is_file(),item
-          print(f'Validated {len(ids)} Typst HTML selections and 61 editable page SVGs')
+          print(f'Validated {len(ids)} Typst HTML selections and 71 editable page SVGs')
           PY
       - name: Publish strict 1-to-1 fidelity status (metadata only)
         run: |
