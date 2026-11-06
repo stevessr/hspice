@@ -29,7 +29,13 @@ const sections = [
   { id: '20-page-043', title: '原书第43页 · SoC实例、章节小结', pages: 'PDF第43页/印刷第24页', summary: '图1.24 SoC功能分区、1.7小结、1.8参考' },
   { id: '21-page-044', title: '原书第44页 · 习题P1.1—P1.7与半加器', pages: 'PDF第44页/印刷第25页', summary: 'P1.4 半加器真值表、P1.1—P1.7概览' },
   { id: '22-page-045', title: '原书第45页 · 反相器、RC延迟与开关', pages: 'PDF第45页/印刷第26页', summary: 'P1.7五级反相器和P1.8/P1.9 RC电路' },
-  { id: '23-page-046', title: '原书第46页 · 习题P1.10—P1.12', pages: 'PDF第46页/印刷第27页', summary: '工艺倍增、处理器代际与电容充电题解' }
+  { id: '23-page-046', title: '原书第46页 · 习题P1.10—P1.12', pages: 'PDF第46页/印刷第27页', summary: '工艺倍增、处理器代际与电容充电题解' },
+  { id: '24-page-047', title: '原书第47页 · MOS晶体管章节提要', pages: 'PDF第47页/印刷第28页', summary: '第2章11节索引与器件模型' },
+  { id: '25-page-048', title: '原书第48页 · MOS器件及四端结构', pages: 'PDF第48页/印刷第29页', summary: '2.1—2.2 MOS四端器件对照' },
+  { id: '26-page-049', title: '原书第49页 · NMOS结构与沟道', pages: 'PDF第49页/印刷第30页', summary: '图2.1 NMOS可编辑横截面' },
+  { id: '27-page-050', title: '原书第50页 · PMOS剖面与阈值', pages: 'PDF第50页/印刷第31页', summary: '图2.2 PMOS器件和阈值极性' },
+  { id: '28-page-051', title: '原书第51页 · CMOS阱与隔离结构', pages: 'PDF第51页/印刷第32页', summary: '图2.3 CMOS阱与STI隔离' },
+  { id: '29-page-052', title: '原书第52页 · 能带与载流子平衡', pages: 'PDF第52页/印刷第33页', summary: '图2.4能带、质量作用定律及费米势' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -71,7 +77,11 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
 
-## 补齐第1章末尾：PDF 第42—46页
+## 第2章前六页：PDF 第47—52页
+
+新增原生 MOS 横截面与 CMOS 阱结构，覆盖第2章章节提要、2.1绪论、2.2 MOS结构、2.3阈值电压开头；器件物理公式采用Typst math，图2.1—2.4均有可编辑简化图元。当前连续选段为 **PDF 第26—52页，共27页**，仍不是任何一页的完整1:1验收。
+
+## 第1章末尾：PDF 第42—46页
 
 新增原生可编辑的图1.22、图1.23、SoC功能分区示意、半加器P1.4真值表、五级反相器链和RC充电图。对应的数字实例包括 **12.5 kΩ × 100 fF = 1.25 ns**、**25 fF 电容在30 ps升高0.6 V需要0.5 mA**；题解属于学习补充，原书并未给出对应答案。第1章连续可编辑选段扩展为 PDF 第26—46页，共21页，原纸版式和全部原图仍未完成1:1验收。
 
