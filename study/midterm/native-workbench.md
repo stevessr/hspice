@@ -65,11 +65,17 @@ async function loadZip(ev: Event) {
     filename.value = file.name
     edited.value = {}
     checked.value = {}
-    const record = locateNamed('quality/pages.json')
+    const record = locateNamed('quality/pages.json') || locateNamed('page-status.json')
     if (record) {
       try {
         const data = JSON.parse(decoder.decode(record))
-        quality.value = Array.isArray(data.page_data) ? data.page_data : []
+        quality.value = Array.isArray(data.page_data)
+          ? data.page_data
+          : (Array.isArray(data.pages) ? data.pages.map((p: any) => ({
+              source_pdf_page: p.page,
+              status: p.human_verified ? '人工初检' : '机器 OCR · 未校对',
+              flags: p.issues || p.needs_review || ['未人工验收'],
+            })) : [])
       } catch { quality.value = [] }
     }
     loaded.value = true

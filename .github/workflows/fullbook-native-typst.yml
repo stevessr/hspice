@@ -30,11 +30,15 @@ jobs:
         run: |
           typst compile fullbook/native/fixtures/proofread-syntax.typ /tmp/proofread-syntax.pdf
           test -s /tmp/proofread-syntax.pdf
-      - name: Install CJK fonts for accurate editable PDF rendering
-        timeout-minutes: 5
+      - name: Try installing CJK fonts with bounded mirror wait
+        timeout-minutes: 3
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends fonts-noto-cjk
+          set -euo pipefail
+          if timeout 35s sudo apt-get update -qq && timeout 85s sudo apt-get install -y --no-install-recommends fonts-noto-cjk; then
+            echo "Noto CJK fonts installed"
+          else
+            echo "::warning::Ubuntu font mirror timed out; compiling with Typst fallback fonts"
+          fi
       - name: Validate source page map
         run: python3 fullbook/native/validate.py
       - name: Compile native editable math, table and diagram
