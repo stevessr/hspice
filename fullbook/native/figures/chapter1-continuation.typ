@@ -141,3 +141,160 @@
   #place(top + left,dx: 196pt,dy: 78pt,text(size:8pt)[$V_("out")$ = 低])
   #place(top + left,dx: 143pt,dy: 107pt,text(size:8pt)[$I_("DC")$])
 ])
+
+// Figure 1.9: 126 candidate scatter markers automatically traced from the
+// scanned chart. Sources: original PDF page 030, plotted marker centers;
+// classification as MPU/DSP is heuristic and unverified. No invented data values.
+#let chart-points = (
+(132.0pt, 55.6pt, false),
+(74.7pt, 73.4pt, false),
+(180.1pt, 83.4pt, false),
+(17.1pt, 116.8pt, true),
+(123.8pt, 54.4pt, false),
+(139.3pt, 83.4pt, true),
+(131.5pt, 108.5pt, true),
+(115.2pt, 53.9pt, false),
+(172.9pt, 41.2pt, false),
+(74.2pt, 109.3pt, true),
+(148.1pt, 85.9pt, false),
+(66.4pt, 111.0pt, true),
+(115.2pt, 64.1pt, false),
+(41.6pt, 139.3pt, true),
+(82.9pt, 74.1pt, false),
+(172.4pt, 90.5pt, true),
+(107.2pt, 77.6pt, true),
+(107.5pt, 61.2pt, true),
+(164.9pt, 38.3pt, false),
+(90.4pt, 100.5pt, true),
+(164.3pt, 82.2pt, true),
+(123.0pt, 108.5pt, true),
+(107.0pt, 87.3pt, true),
+(164.1pt, 112.2pt, false),
+(172.1pt, 112.4pt, false),
+(139.5pt, 52.2pt, false),
+(180.6pt, 27.6pt, false),
+(156.3pt, 47.1pt, false),
+(172.6pt, 32.4pt, false),
+(57.6pt, 116.8pt, true),
+(171.3pt, 128.3pt, true),
+(131.8pt, 74.6pt, false),
+(57.9pt, 94.4pt, false),
+(180.1pt, 75.6pt, false),
+(57.6pt, 122.9pt, true),
+(123.0pt, 91.0pt, true),
+(147.8pt, 102.2pt, true),
+(180.6pt, 44.1pt, false),
+(130.7pt, 117.8pt, true),
+(131.5pt, 103.4pt, true),
+(99.0pt, 77.8pt, false),
+(180.4pt, 112.4pt, false),
+(99.2pt, 67.3pt, false),
+(147.8pt, 111.2pt, false),
+(16.8pt, 131.2pt, true),
+(74.4pt, 81.5pt, false),
+(99.2pt, 59.8pt, false),
+(49.4pt, 109.0pt, true),
+(139.8pt, 48.3pt, false),
+(180.6pt, 31.5pt, false),
+(66.9pt, 79.0pt, true),
+(147.5pt, 132.7pt, true),
+(155.8pt, 91.0pt, true),
+(171.3pt, 136.1pt, true),
+(57.6pt, 102.2pt, true),
+(164.1pt, 122.4pt, true),
+(41.9pt, 114.9pt, true),
+(172.9pt, 50.5pt, false),
+(122.7pt, 100.2pt, false),
+(115.0pt, 85.6pt, false),
+(123.8pt, 59.8pt, false),
+(91.5pt, 63.2pt, true),
+(115.0pt, 95.4pt, true),
+(66.7pt, 103.7pt, true),
+(115.2pt, 78.8pt, true),
+(123.8pt, 46.6pt, false),
+(90.4pt, 90.7pt, false),
+(147.8pt, 99.3pt, true),
+(139.3pt, 88.8pt, true),
+(180.1pt, 136.1pt, true),
+(138.8pt, 102.7pt, true),
+(147.3pt, 142.0pt, true),
+(139.3pt, 73.2pt, true),
+(74.2pt, 69.0pt, false),
+(148.6pt, 71.2pt, false),
+(49.4pt, 96.6pt, true),
+(49.6pt, 112.4pt, true),
+(90.7pt, 73.2pt, true),
+(180.6pt, 100.5pt, true),
+(16.8pt, 126.6pt, true),
+(164.3pt, 42.0pt, false),
+(74.2pt, 104.9pt, true),
+(57.9pt, 87.6pt, false),
+(57.9pt, 111.0pt, true),
+(172.4pt, 94.6pt, true),
+(74.4pt, 96.1pt, false),
+(156.3pt, 57.1pt, false),
+(164.6pt, 51.5pt, false),
+(82.7pt, 82.2pt, false),
+(172.4pt, 68.0pt, true),
+(90.4pt, 80.2pt, true),
+(99.0pt, 50.7pt, false),
+(132.0pt, 100.7pt, false),
+(57.4pt, 98.3pt, false),
+(33.1pt, 91.0pt, true),
+(139.3pt, 96.3pt, true),
+(156.3pt, 60.2pt, false),
+(74.2pt, 84.4pt, true),
+(132.0pt, 84.6pt, true),
+(131.5pt, 92.4pt, true),
+(172.4pt, 59.3pt, false),
+(115.0pt, 92.2pt, false),
+(32.8pt, 134.9pt, true),
+(180.4pt, 104.6pt, true),
+(42.1pt, 101.2pt, true),
+(164.1pt, 125.4pt, false),
+(148.1pt, 55.9pt, false),
+(90.4pt, 70.5pt, true),
+(131.5pt, 79.3pt, false),
+(57.9pt, 108.0pt, false),
+(33.1pt, 125.6pt, false),
+(49.4pt, 103.7pt, true),
+(83.5pt, 84.9pt, true),
+(151.7pt, 84.4pt, false),
+(156.3pt, 85.1pt, true),
+(168.7pt, 41.0pt, false),
+(180.6pt, 107.6pt, true),
+(66.7pt, 93.9pt, true),
+(156.3pt, 53.4pt, false),
+(155.6pt, 78.5pt, false),
+(49.9pt, 93.7pt, false),
+(49.4pt, 101.0pt, true),
+(151.7pt, 58.8pt, false),
+(126.9pt, 102.2pt, false),
+(34.4pt, 86.3pt, true),
+(25.1pt, 96.1pt, false),
+)
+#let power-scatter = html.frame(block(width: 291pt, height: 231pt)[
+  #place(top + left, dx: 38pt, dy: 13pt, rect(width: 206pt, height: 174pt, stroke: .8pt, fill: white))
+  #for point in chart-points {
+    let x = point.at(0)
+    let y = point.at(1)
+    let filled = point.at(2)
+    place(top + left, dx: 40pt + x, dy: 15pt + y,
+      circle(radius: 1.5pt, stroke: .55pt, fill: if filled { black } else { white }))
+  }
+  #for (t, label) in ((13pt, [1000]), (48pt, [100]), (83pt, [10]), (117pt, [1]), (152pt, [0.1]), (187pt, [0.01])) {
+    place(top + left, dx: 3pt, dy: t, text(size: 8pt)[#label])
+  }
+  #for (t, label) in ((38pt, [1980]), (78pt, [1985]), (118pt, [1990]), (158pt, [1995]), (198pt, [2000]), (238pt, [2005])) {
+    place(top + left, dx: t - 11pt, dy: 193pt, text(size: 7pt)[#label])
+  }
+  #place(top + left, dx: 119pt, dy: 214pt, text(size: 9pt)[年份])
+  #place(top + left, dx: 245pt, dy: 88pt, text(size: 8pt)[功耗（W）])
+  #place(top + left, dx: 45pt, dy: 21pt, text(size: 7pt)[○ MPU  ● DSP])
+  #place(top + left, dx: 60pt, dy: 112pt,
+    line(end: (49pt, -61pt), stroke: (dash: "dashed", thickness: 1pt)))
+  #place(top + left, dx: 141pt, dy: 64pt,
+    line(end: (59pt, -15pt), stroke: (dash: "dashed", thickness: 1pt)))
+  #place(top + left, dx: 61pt, dy: 97pt, text(size: 7pt)[×4 / 3年])
+  #place(top + left, dx: 142pt, dy: 29pt, text(size: 7pt)[×1.4 / 3年])
+])

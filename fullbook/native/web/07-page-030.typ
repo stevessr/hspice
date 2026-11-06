@@ -1,6 +1,6 @@
 // PDF scan page 030 / book printed page 11.
 // Native editable draft, referenced to the user-provided scan. NOT 1:1 accepted.
-#import "../figures/chapter1-continuation.typ": step-delay
+#import "../figures/chapter1-continuation.typ": step-delay, power-scatter
 #set document(title: "原书第30页 · 理想瞬态及功耗估算")
 #set text(lang: "zh")
 
@@ -20,8 +20,10 @@
 
 图1.9为以年份为横轴、每个芯片功耗（W）为纵轴的双对数/半对数呈现历史 MPU 与 DSP 数据，纵轴标注 0.01、0.1、1、10、100、1000 W，两条趋势参考线分别表示“×4/3年”和“×1.4/3年”。
 
-#text(size: 8pt, fill: rgb("b45628"))[图1.9含大量独立散点，当前未将扫描图替换为猜测数据。原图的全部坐标、系列类别和趋势线仍待逐点数字化并以 Typst 可编辑点阵重画。]
+#power-scatter()
+
+#text(size: 8pt, fill: rgb("b45628"))[图1.9已由原扫描自动追踪得到126个候选散点位置，并采用Typst原生圆点与趋势虚线重绘；MPU／DSP类别的判断、被遗漏的重叠点及精确横纵坐标尚未逐点人工验收，不能用这幅图替代原始实验数据。]
 
 在设计早期，确定一块芯片的实际功耗是困难的。单个门的功耗有可能较精确地计算，但整块芯片的功耗依赖运行活动状态及存储器、时钟、模拟电路等模块的贡献。下一页继续讨论不同功耗的计算方法。
 
-#text(size: 8pt, fill: gray)[源页检查：文字段落和图1.8(b)已作编辑性转写；图1.9未完成原生逐点重绘，脚注、标题与几何排版尚未通过1:1验收。]
+#text(size: 8pt, fill: gray)[源页检查：文字段落和图1.8(b)已作编辑性转写；图1.9已原生点阵化、但逐点验证尚未完成，脚注、标题与几何排版尚未通过1:1验收。]
