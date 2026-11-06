@@ -1077,43 +1077,133 @@
     },
     {
       "pdf_page": 97,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/74-page-097.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.6工艺7种线宽与例3.1 0.2/10/11Ω已按原扫描核对；图形宽高未精校。"
     },
     {
       "pdf_page": 98,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/75-page-098.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.7 GDS-II/代工厂DRC、2λ定义和两个栅长示例；图示结构编辑版。"
     },
     {
       "pdf_page": 99,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/76-page-099.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.8/3.9金属3λ、覆盖2λ、触点2λ×2λ与包围λ；图元几何尚需对照。"
     },
     {
       "pdf_page": 100,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/77-page-100.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "3.4与3.4.1 SPICE模型族与参数物理/经验属性；非全文逐字校验。"
     },
     {
       "pdf_page": 101,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/78-page-101.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.10四端MOS版图，12字段实例参数表已与原扫描核对；图形尺寸比例未验收。"
     },
     {
       "pdf_page": 102,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/79-page-102.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "原书3.2双行共号有效尺寸公式、例3.2两条完整网表；可能需要按模型单位再核对细节。"
     },
     {
       "pdf_page": 103,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/80-page-103.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "原书3.3—3.9 SPICE LEVEL1 PHI/TOX/GAMMA/VTO/KP、线性与饱和电流公式已转写；上下标待逐一精校。"
     },
     {
       "pdf_page": 104,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/81-page-104.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式3.10底部/侧壁结电容与式3.11 sqrt(2Id)拟合已转写；全文逐字尚未核对。"
     },
     {
       "pdf_page": 105,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/82-page-105.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.11参数提取方法说明和例3.3 LEVEL1模型卡已校验；测试数据散点尚未原生重建。"
     },
     {
       "pdf_page": 106,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/83-page-106.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "3.6 BSIM3模型与3.6.1参数分箱，图3.12九个尺寸区域的矢量候选；公式尚未延伸到后页。"
     },
     {
       "pdf_page": 107,
