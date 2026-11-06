@@ -273,7 +273,7 @@
 (34.4pt, 86.3pt, true),
 (25.1pt, 96.1pt, false),
 )
-#let power-scatter = html.frame(block(width: 291pt, height: 231pt)[
+#let power-scatter() = html.frame(block(width: 291pt, height: 231pt)[
   #place(top + left, dx: 38pt, dy: 13pt, rect(width: 206pt, height: 174pt, stroke: .8pt, fill: white))
   #for point in chart-points {
     let x = point.at(0)
