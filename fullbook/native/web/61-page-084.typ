@@ -14,7 +14,7 @@
 
 == P2.2　高垂直电场中的PMOS迁移率
 
-在 $t_("ox")=22 " Å"$、$abs(V_("GS")-V_T)=0.8 " V"$ 情形下，求 PMOS 的有效迁移率 $\mu_e$；题设 $\theta=4 times 10^6 " V/cm"$、$\eta=1.85$，低场 $\mu_0=130 " cm"^2/("V" dot "s")$。
+在 $t_("ox")=22 " Å"$、$abs(V_("GS")-V_T)=0.8 " V"$ 情形下，求 PMOS 的有效迁移率 $mu_e$；题设 $theta=4 times 10^6 " V/cm"$、$eta=1.85$，低场 $mu_0=130 " cm"^2/("V" dot "s")$。
 
 == P2.3　0.13 μm MOS I—V 特性
 
