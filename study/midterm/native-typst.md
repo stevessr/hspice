@@ -89,7 +89,17 @@ const sections = [
   { id: '80-page-103', title: '原书第103页 · LEVEL1电流公式', pages: 'PDF第103页/印刷第84页', summary: '式（3.3）—（3.9），VTO/KP/GAMMA' },
   { id: '81-page-104', title: '原书第104页 · 结电容与参数提取', pages: 'PDF第104页/印刷第85页', summary: '式（3.10）—（3.11）' },
   { id: '82-page-105', title: '原书第105页 · 图3.11及例3.3', pages: 'PDF第105页/印刷第86页', summary: 'VTO/KP/GAMMA/LAMBDA及模型卡' },
-  { id: '83-page-106', title: '原书第106页 · BSIM3模型与分箱', pages: 'PDF第106页/印刷第87页', summary: '3.6/3.6.1及图3.12' }
+  { id: '83-page-106', title: '原书第106页 · BSIM3模型与分箱', pages: 'PDF第106页/印刷第87页', summary: '3.6/3.6.1及图3.12' },
+  { id: '84-page-107', title: '原书第107页 · BSIM3短沟道阈值', pages: 'PDF第107页/印刷第88页', summary: '式3.12—3.16 NCH/NSUB、γ1/γ2' },
+  { id: '85-page-108', title: '原书第108页 · 图3.13 SCE与RSCE', pages: 'PDF第108页/印刷第89页', summary: '式3.17、阈值随沟道长度的变化' },
+  { id: '86-page-109', title: '原书第109页 · 图3.14 DIBL及迁移率', pages: 'PDF第109页/印刷第90页', summary: '式3.18—3.20、临界场VSAT' },
+  { id: '87-page-110', title: '原书第110页 · 例3.4 BSIM3直流I–V', pages: 'PDF第110页/印刷第91页', summary: '1.8V/0.18μm SPICE扫描选段' },
+  { id: '88-page-111', title: '原书第111页 · 例3.5及电容模型引言', pages: 'PDF第111页/印刷第92页', summary: '约2.8倍NMOS/PMOS单位宽度驱动' },
+  { id: '89-page-112', title: '原书第112页 · 亚阈值SPICE示例和电容', pages: 'PDF第112页/印刷第93页', summary: '半对数曲线、3.6.6电容模型' },
+  { id: '90-page-113', title: '原书第113页 · 结电容、源漏电阻', pages: 'PDF第113页/印刷第94页', summary: '式3.22、3.23，工艺角' },
+  { id: '91-page-114', title: '原书第114页 · 温度对MOS的影响', pages: 'PDF第114页/印刷第95页', summary: '式3.24/3.25、例3.7' },
+  { id: '92-page-115', title: '原书第115页 · SPICE温度扫描', pages: 'PDF第115页/印刷第96页', summary: '不同栅压下泄漏与导通电流趋势' },
+  { id: '93-page-116', title: '原书第116页 · HCE和CMOS闩锁', pages: 'PDF第116页/印刷第97页', summary: '3.7.4高场极限与3.7.5闩锁' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -130,6 +140,12 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第3章BSIM3与附加效应：PDF 第107—116页
+
+新增式（3.12）—（3.25）的BSIM3阈值、体效应、迁移率、DIBL和源漏寄生模型，例3.4—3.7的SPICE扫描选段，图3.13/3.14的可编辑短沟道趋势与温度示意。源书示例中SPICE图的实测点未逐点数字化，不宣称定量复刻。
+
+连续原生可编辑选段扩展为 **PDF第26—116页，共91页**；全书OCR底稿445页已经存在，严格整页1:1人工验收依旧为0/445。
 
 ## 第3章版图规则与SPICE建模：PDF 第97—106页
 

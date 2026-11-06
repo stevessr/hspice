@@ -1207,43 +1207,133 @@
     },
     {
       "pdf_page": 107,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/84-page-107.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式3.12—3.16 BSIM3双掺杂NCH/NSUB与K1/K2参数；公式标号和关键变量按扫描核对。"
     },
     {
       "pdf_page": 108,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/85-page-108.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式3.17、图3.13 SCE/RSCE趋势概念重绘；原图转折坐标未定量标定。"
     },
     {
       "pdf_page": 109,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/86-page-109.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图3.14 DIBL、式3.18—3.20有效迁移率、VSAT临界场已编辑；下标待终审。"
     },
     {
       "pdf_page": 110,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/87-page-110.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例3.4 0.18μm BSIM3器件直流扫描参数及输出趋势；网表只为结构性可编辑骨架。"
     },
     {
       "pdf_page": 111,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/88-page-111.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例3.5宽度比较与3.6.6电容模型引言；第二组电流数值未逐格复核。"
     },
     {
       "pdf_page": 112,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/89-page-112.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例3.6亚阈值SPICE半对数曲线的叙述与电容模型；测量点图尚未还原。"
     },
     {
       "pdf_page": 113,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/90-page-113.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式3.22底部与面向沟道侧壁电容，3.23 RDSW/Weff；3.7.1工艺角开头。"
     },
     {
       "pdf_page": 114,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/91-page-114.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式3.24温度迁移率与3.25载流子温度表达、例3.7任务；源公式数字已转写。"
     },
     {
       "pdf_page": 115,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/92-page-115.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例3.7 -40至100°C和不同栅偏扫描；I–T实验曲线目前仅为趋势示意。"
     },
     {
       "pdf_page": 116,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/93-page-116.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "3.7.4热载流子、穿通和3.7.5 CMOS闩锁技术选段；原书边界及脚注仍需逐字核对。"
     },
     {
       "pdf_page": 117,
