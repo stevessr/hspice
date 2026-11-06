@@ -13,7 +13,7 @@ $ L_("eff") = L - Delta L $
 
 $ W_("eff") = W - Delta W quad "(3.2)" $
 
-两式在原书中共用式号（3.2）。$\Delta L$、$\Delta W$ 反映制造过程导致的有效几何缩减。
+两式在原书中共用式号（3.2）。$Delta L$、$Delta W$ 反映制造过程导致的有效几何缩减。
 
 == 例3.2　SPICE MOS 晶体管规格
 
