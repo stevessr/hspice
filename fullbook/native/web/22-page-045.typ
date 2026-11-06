@@ -15,7 +15,7 @@
 
 $ t_("path") = 5 t_p = 10 " ns" $
 
-当五个反相器闭合成奇数级环形振荡器，理想延迟模型的振荡周期为 $T approx 2 cdot 5 t_p = 20 " ns"$，因此 $f approx 50 " MHz"$。
+当五个反相器闭合成奇数级环形振荡器，理想延迟模型的振荡周期为 $T approx 2 dot 5 t_p = 20 " ns"$，因此 $f approx 50 " MHz"$。
 
 == P1.8　RC 阶跃充电
 
