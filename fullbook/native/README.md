@@ -81,3 +81,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF71—76：α功率、亚阈值斜率和MOS电容
 
 新增 `web/48-page-071.typ` 到 `web/53-page-076.typ`、`figures/mos-cap-native.typ` 及 `qa/check_subthreshold_cap.py`。覆盖式2.30b—2.39、例2.9—2.11、图2.15—2.19。现有51个连续编辑选段，尚无任何1:1整页验收。原书实验曲线与版式需要逐页比较。
+
+
+## PDF77—86 · 第2章章末精修
+
+新增 `web/54-page-077.typ` 至 `web/63-page-086.typ`、`figures/mos-ch2-end-native.typ` 和 `qa/check_ch2_finish.py`。编辑范围包含结底及侧壁电容式2.40—2.45、覆盖电容式2.46—2.47、例2.12—2.13、章末工作区/电容表、八条参考文献、习题表P2.1、P2.1—P2.10。固定原纸尺寸源码 SVG 与语义HTML连续源页扩展至26—86（61页）。无一页达到整页严格1:1保真验收，全部图示仍为编辑候选。

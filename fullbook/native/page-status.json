@@ -817,43 +817,133 @@
     },
     {
       "pdf_page": 77,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/54-page-077.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图2.20版图和pn结截面的可编辑重画、式2.40及底结面积已核对；图元尺度和全文未验收。"
     },
     {
       "pdf_page": 78,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/55-page-078.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "结电容底部/侧壁式2.41、简化式2.42及非线性积分的正文选段；分行、脚注待检查。"
     },
     {
       "pdf_page": 79,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/56-page-079.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式2.43—2.45、例2.12 1V内建电势、1.6fF/μm²、0.22fF核对；并非整页逐字复刻。"
     },
     {
       "pdf_page": 80,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/57-page-080.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例2.12 0.16/0.18fF、式2.46—2.47、图2.21重绘；立体图几何仍是概念图。"
     },
     {
       "pdf_page": 81,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/58-page-081.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例2.13 0.25fF/μm和2.9小结第一段的NMOS/PMOS极性表；原书行距未验收。"
     },
     {
       "pdf_page": 82,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/59-page-082.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "第2章小结的速度饱和、亚阈值和栅电容3工作区表；原页末综合表仍有部分项目待定量复核。"
     },
     {
       "pdf_page": 83,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/60-page-083.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "8篇参考文献、表P2.1工艺参数及P2.1(a)重排；参考文献字距和引用斜体待验收。"
     },
     {
       "pdf_page": 84,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/61-page-084.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "P2.1(b–d)、P2.2—P2.5转为可编辑选段；图P2.4/P2.5原生电路示意待拓扑逐元核验。"
     },
     {
       "pdf_page": 85,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/62-page-085.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "P2.6—P2.8关键参数及版图示意重排；P2.6器件具体连接待逐线定型。"
     },
     {
       "pdf_page": 86,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/63-page-086.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "P2.9/2.10题目条件与公式转录；页下半原本为空白，未添加额外题解。"
     },
     {
       "pdf_page": 87,
