@@ -648,31 +648,94 @@
     },
     {
       "pdf_page": 64,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/41-page-064.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图2.11两族I–V曲线可编辑趋势示意及2.5.1节历史电场数值，测量散点未数字化。"
     },
     {
       "pdf_page": 65,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/42-page-065.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式2.21迁移率退化、式2.22临界场、图2.12速度饱和曲线；已核对扫描例题。"
     },
     {
       "pdf_page": 66,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/43-page-066.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图2.13载流子速度实验曲线的趋势示意与式2.23a/b、2.24；原图对数坐标未精确刻度重绘。"
     },
     {
       "pdf_page": 67,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/44-page-067.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式2.25至2.29短沟道线性和饱和电流、饱和电压推导完整编号；排版需精校。"
     },
     {
       "pdf_page": 68,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/45-page-068.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例2.6 0.6V、1.0V及图2.14 NMOS/PMOS对比示意；散点坐标仍需扫描量化。"
     },
     {
       "pdf_page": 69,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/46-page-069.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例2.7 585μA/μm与256μA/μm以及尺寸比2.3，配套工作区判别。"
     },
     {
       "pdf_page": 70,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-06-pass1",
+      "source_file": "web/47-page-070.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例2.8饱和电压0.34V/0.60V，式2.30a α功率定律；后续公式不得提前移入本页。"
     },
     {
       "pdf_page": 71,
