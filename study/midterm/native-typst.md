@@ -12,7 +12,12 @@ const sections = [
   { id: '03-page-026', title: '原书第26页 · 门电路与D触发器原生重绘', pages: 'PDF第26页/印刷第7页', summary: '图1.4、图1.5与8行DFF激励表的原生Typst草稿；版式仍需比对' },
   { id: '04-page-027', title: '原书第27页 · 理想逻辑电路与传输曲线', pages: 'PDF第27页/印刷第8页', summary: '图1.6原生可编辑曲线、五条数字逻辑基本特性；仍需版式对照' },
   { id: '05-page-028', title: '原书第28页 · 逻辑振幅与噪声容限', pages: 'PDF第28页/印刷第9页', summary: '原生重绘图1.7(a)—(d)，VTC、噪声容限及四个图示' },
-  { id: '06-page-029', title: '原书第29页 · 瞬态转换及延迟', pages: 'PDF第29页/印刷第10页', summary: '原生重绘图1.8(a)波形、10/50/90%阈值、传播延迟' }
+  { id: '06-page-029', title: '原书第29页 · 瞬态转换及延迟', pages: 'PDF第29页/印刷第10页', summary: '原生重绘图1.8(a)波形、10/50/90%阈值、传播延迟' },
+  { id: '07-page-030', title: '原书第30页 · 理想瞬态与功耗统计', pages: 'PDF第30页/印刷第11页', summary: '图1.8(b)原生波形；图1.9历史散点仍待逐点重画' },
+  { id: '08-page-031', title: '原书第31页 · 功耗公式与设计权衡', pages: 'PDF第31页/印刷第12页', summary: '式(1.2)—(1.5)的可编辑 Typst 数学表达和设计概念' },
+  { id: '09-page-032', title: '原书第32页 · NMOS器件结构', pages: 'PDF第32页/印刷第13页', summary: '图1.10原生栅、氧化层、源漏、p型衬底截面' },
+  { id: '10-page-033', title: '原书第33页 · CMOS与NMOS反相器', pages: 'PDF第33页/印刷第14页', summary: '图1.11互补反相器、电路状态及静态功耗' },
+  { id: '11-page-034', title: '原书第34页 · NMOS负载与互连', pages: 'PDF第34页/印刷第15页', summary: '图1.12可编辑电阻负载反相器、深亚微米互连' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -53,6 +58,10 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 本轮新增第30—34页
+
+新增图1.8(b)的原生瞬态波形、式(1.2)—(1.5)完整数学表达、图1.10 MOS横截面、图1.11 CMOS反相器和图1.12 NMOS电阻负载反相器。**图1.9包含大量散点，尚未可靠逐点数字化，因此保留明确的未完成标记，不伪造数据。** 所有新增页均可在网页切换至可编辑文字 HTML 或固定页尺寸 SVG，仍须进行1:1验收。
 
 ## 本轮校对记录
 

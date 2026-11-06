@@ -566,8 +566,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "unresolved": [
+        "图1.9散点数据逐点矢量化",
+        "图1.8(b)曲线标注与原书精确匹配",
+        "正文、脚注和排版复校"
+      ],
+      "notes": "PDF第30页已有原生Typst段落和数学/电路结构候选，图文完整性与逐元素的1:1视觉审核尚未完成。",
       "page_source_verified": false
     },
     {
@@ -584,8 +588,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "unresolved": [
+        "式(1.2)—(1.5)与原书手工复校",
+        "全页逐字和原版式行距复校"
+      ],
+      "notes": "PDF第31页已有原生Typst段落和数学/电路结构候选，图文完整性与逐元素的1:1视觉审核尚未完成。",
       "page_source_verified": false
     },
     {
@@ -602,13 +609,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "unresolved": [
+        "电路图元尺寸及标注连线逐项精校",
+        "全页正文、脚注、断行与原图比对"
+      ],
+      "notes": "PDF第32页已有原生Typst段落和数学/电路结构候选，图文完整性与逐元素的1:1视觉审核尚未完成。",
       "page_source_verified": false
     },
     {
       "pdf_page": 33,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -620,13 +630,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "电路图元尺寸及标注连线逐项精校",
+        "全页正文、脚注、断行与原图比对"
+      ],
+      "notes": "PDF第33页已有原生Typst段落和数学/电路结构候选，图文完整性与逐元素的1:1视觉审核尚未完成。",
       "page_source_verified": false
     },
     {
       "pdf_page": 34,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -638,8 +651,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "电路图元尺寸及标注连线逐项精校",
+        "全页正文、脚注、断行与原图比对"
+      ],
+      "notes": "PDF第34页已有原生Typst段落和数学/电路结构候选，图文完整性与逐元素的1:1视觉审核尚未完成。",
       "page_source_verified": false
     },
     {
