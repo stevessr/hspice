@@ -17,7 +17,14 @@ const sections = [
   { id: '08-page-031', title: '原书第31页 · 功耗公式与设计权衡', pages: 'PDF第31页/印刷第12页', summary: '式(1.2)—(1.5)的可编辑 Typst 数学表达和设计概念' },
   { id: '09-page-032', title: '原书第32页 · NMOS器件结构', pages: 'PDF第32页/印刷第13页', summary: '图1.10原生栅、氧化层、源漏、p型衬底截面' },
   { id: '10-page-033', title: '原书第33页 · CMOS与NMOS反相器', pages: 'PDF第33页/印刷第14页', summary: '图1.11互补反相器、电路状态及静态功耗' },
-  { id: '11-page-034', title: '原书第34页 · NMOS负载与互连', pages: 'PDF第34页/印刷第15页', summary: '图1.12可编辑电阻负载反相器、深亚微米互连' }
+  { id: '11-page-034', title: '原书第34页 · NMOS负载与互连', pages: 'PDF第34页/印刷第15页', summary: '图1.12可编辑电阻负载反相器、深亚微米互连' },
+  { id: '12-page-035', title: '原书第35页 · 互连电阻与耦合', pages: 'PDF第35页/印刷第16页', summary: '图1.13–1.15，RC/IR和耦合原生图' },
+  { id: '13-page-036', title: '原书第36页 · 时钟树与偏斜', pages: 'PDF第36页/印刷第17页', summary: '图1.16时钟树拓扑，原书照片仍待重排' },
+  { id: '14-page-037', title: '原书第37页 · 串扰与分布RLC', pages: 'PDF第37页/印刷第18页', summary: '图1.17–1.19，耦合及分布RLC可编辑' },
+  { id: '15-page-038', title: '原书第38页 · CAD物理设计流程', pages: 'PDF第38页/印刷第19页', summary: '图1.20设计流程拓扑示意' },
+  { id: '16-page-039', title: '原书第39页 · SPICE电路分析', pages: 'PDF第39页/印刷第20页', summary: '1.5.1节SPICE与电路验证概念' },
+  { id: '17-page-040', title: '原书第40页 · ITRS工艺路线图', pages: 'PDF第40页/印刷第21页', summary: '表1.2已逐格核对，共9行6列' },
+  { id: '18-page-041', title: '原书第41页 · 电压、功耗与电流趋势', pages: 'PDF第41页/印刷第22页', summary: '图1.21供电电压与功耗历史趋势' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -59,7 +66,11 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
 
-## 本轮新增第30—34页
+## 新一轮精修：PDF 第35—41页
+
+新增七个 Typst 原生选段及独立的 HTML、SVG。图1.14—1.16、1.18—1.21具备原生可编辑拓扑或趋势示意；表1.2的历史 ITRS 预测值9行6列已对照源扫描重建。图1.13与1.17是扫描照片及分布图，不以虚构矢量代替原图。仍未完成逐字、逐元素、逐页的 1:1 排版验收。
+
+## 前轮新增第30—34页
 
 新增图1.8(b)的原生瞬态波形、式(1.2)—(1.5)完整数学表达、图1.10 MOS横截面、图1.11 CMOS反相器和图1.12 NMOS电阻负载反相器。**图1.9已从原扫描追踪出126个候选点位，重绘为可编辑 Typst 点阵；类别、坐标、重叠点仍需人工校验，不作为定量数据使用。** 所有新增页均可在网页切换至可编辑文字 HTML 或固定页尺寸 SVG，仍须进行1:1验收。
 

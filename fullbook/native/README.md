@@ -46,3 +46,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## 第三轮：Typst 原生 HTML 预览
 
 新增 `web/01-gates-noise-delay.typ`、`web/02-mos-threshold.typ`，对应扫描 PDF 第 26—32 页与第 48—57 页的精修知识选段。采用 `web/build_html.py` 调用 Typst 实验性 HTML 导出，直接在 VitePress `/native-typst` 中以 HTML 阅读，不生成 PDF，也不将整页扫描图作为正文。网页公开内容为核对选段和概念释义，原书全文 OCR 留在用户独立持有的校对工程中。HTML 编译失败会令网站构建失败，避免误发布陈旧内容。全书整页最终验收仍为 0/445。
+
+
+## 2026-11-06 新增源扫描第35—41页的原生选段
+
+`web/12-page-035.typ` 到 `web/18-page-041.typ` 各有独立 HTML 与固定原纸尺寸 SVG 布局；`figures/interconnect-native.typ` 提供原生互连电阻、电容、RC/IR、时钟树、RLC 与图1.21趋势等可编辑元素。已将第40页表1.2重建为 Typst 表格。图1.13、图1.17的原版位图素材仍缺，其他简化示意也没有逐元素通过1:1验收。整页严格验收仍为0/445。
