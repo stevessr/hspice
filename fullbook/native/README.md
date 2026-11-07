@@ -116,3 +116,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF137—146：NMOS负载尺寸及CMOS反相器
 
 新增`web/114-page-137.typ`至`web/123-page-146.typ`、`figures/ch4-mos-loads-native.typ`，编辑式4.8a—4.13、例4.2—4.5、图4.10饱和/图4.11线性NMOS上拉以及CMOS双管互补连接。`qa/check_ch4_mosloads.py`检查参数、页码和关键数值。连续可编辑源页选段26—146共121页，严格整页1:1仍为0/445。
+
+
+## PDF147—156：CMOS五工作区、SPICE VTC、版图与伪NMOS
+
+新增`web/124-page-147.typ`到`web/133-page-156.typ`，以及`figures/ch4-cmos-continued-native.typ`的原生曲线和电路示意，重排式(4.14)—(4.21)、例4.6—4.8及图4.12—4.14的主要内容；单独核对0.60/0.53 V、0.891/0.626 V和0.065 V。VitePress/原页SVG编辑选段连续PDF26—156，共131页。严禁把部分编辑选段冒充整页逐字/逐图1:1通过；后者仍0/445。

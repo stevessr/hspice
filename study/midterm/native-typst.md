@@ -129,7 +129,17 @@ const sections = [
   { id: '120-page-143', title: '原书第143页 · 式4.12与例4.4', pages: 'PDF第143页/印刷第124页', summary: 'VOH约0.73V' },
   { id: '121-page-144', title: '原书第144页 · 例4.5负载器件尺寸设计', pages: 'PDF第144页/印刷第125页', summary: '目标VOL=0.1V、工艺参数' },
   { id: '122-page-145', title: '原书第145页 · 4.5.2、图4.11及式4.13', pages: 'PDF第145页/印刷第126页', summary: '线性增强型NMOS负载' },
-  { id: '123-page-146', title: '原书第146页 · 4.6与4.6.1 CMOS反相器', pages: 'PDF第146页/印刷第127页', summary: 'CMOS互补连接与静态状态' }
+  { id: '123-page-146', title: '原书第146页 · 4.6与4.6.1 CMOS反相器', pages: 'PDF第146页/印刷第127页', summary: 'CMOS互补连接与静态状态' },
+  { id: '124-page-147', title: '原书第147页 · 图4.12 CMOS五工作区', pages: 'PDF第147页/印刷第128页', summary: 'I—V工作区与直流电流关系' },
+  { id: '125-page-148', title: '原书第148页 · 式4.14/4.15 CMOS切换电平', pages: 'PDF第148页/印刷第129页', summary: 'χ比例和VS解析式' },
+  { id: '126-page-149', title: '原书第149页 · 例4.6 CMOS切换点', pages: 'PDF第149页/印刷第130页', summary: '0.60V与0.53V' },
+  { id: '127-page-150', title: '原书第150页 · CMOS输入低门限、式4.16', pages: 'PDF第150页/印刷第131页', summary: 'VIL处PMOS线性区' },
+  { id: '128-page-151', title: '原书第151页 · 式4.17—4.19与例4.7', pages: 'PDF第151页/印刷第132页', summary: 'VIL/VIH和工艺数据' },
+  { id: '129-page-152', title: '原书第152页 · 例4.7 SPICE网表和VTC', pages: 'PDF第152页/印刷第133页', summary: '0.891V、0.626V噪声容限' },
+  { id: '130-page-153', title: '原书第153页 · 例4.7校验与4.6.2版图', pages: 'PDF第153页/印刷第134页', summary: '手算VS约0.83V和工艺层' },
+  { id: '131-page-154', title: '原书第154页 · 图4.13版图与4.7伪NMOS', pages: 'PDF第154页/印刷第135页', summary: 'W/L/AS/AD/PS/PD' },
+  { id: '132-page-155', title: '原书第155页 · 图4.14、式4.20/4.21', pages: 'PDF第155页/印刷第136页', summary: '伪NMOS的高低电平' },
+  { id: '133-page-156', title: '原书第156页 · 例4.8 SPICE与4.8尺寸确定', pages: 'PDF第156页/印刷第137页', summary: 'Wn/Wp约2、VOL 0.065V' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -170,6 +180,12 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第4章 CMOS 工作区、版图、伪NMOS：PDF 第147—156页
+
+本批以源扫描为依据重排图4.12—4.14对应概念、CMOS五工作区、式（4.14）—（4.21）及例4.6—4.8。保留例4.6两种宽度对应的切换点0.60 V与0.53 V，例4.7的原始SPICE示例噪声容限0.891 V与0.626 V，以及例4.8输出低电平0.065 V。可编辑电路图与VTC为定性示意，图4.13的版图没有逐像素描摹。
+
+连续可编辑**源页选段 PDF第26—156页，共131页**；445页严格整页1:1人工验收仍为0页。
 
 ## 第4章 NMOS 负载到 CMOS 反相器：PDF 第137—146页
 
