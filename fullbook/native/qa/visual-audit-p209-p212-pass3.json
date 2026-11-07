@@ -1,0 +1,86 @@
+{
+  "schema": "native-typst-strict-visual-audit-pass3-v1",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    209,
+    212
+  ],
+  "method": {
+    "render": "original PDF via PyMuPDF; Typst SVG via CairoSVG",
+    "scale": 1.25,
+    "threshold": 190,
+    "tolerance_pixels": 2,
+    "metric": "F1 from ink precision and recall with 2px tolerance; cannot certify semantic fidelity"
+  },
+  "actions_run_id": 42348542785,
+  "source_svg_artifact": "typst-native-pages-020-220-svg",
+  "strict_fidelity_accepted_pages": 0,
+  "pages": [
+    {
+      "pdf_page": 209,
+      "source_png_sha256": "c793f7a2f39501b7ef0574dc077e7ba50d880ab039ce579b42a3bc0fd83441a5",
+      "initial_f1": 0.03089,
+      "source_paragraph_reflow_f1": 0.43559,
+      "font_spacing_round_f1": 0.53504,
+      "math_display_spacing_round_f1": 0.53504,
+      "change_from_initial": 0.50415,
+      "accepted": false,
+      "unresolved": [
+        "full-page text punctuation check",
+        "original figure curves/transistor connections and measured axes",
+        "original-font glyph shape and margin geometry",
+        "complete human review of equations, figures and captions"
+      ]
+    },
+    {
+      "pdf_page": 210,
+      "source_png_sha256": "3902f9a08fafb649ade474440236735e6ca129cf899acf6e05723264d04f0619",
+      "initial_f1": 0.09936,
+      "source_paragraph_reflow_f1": 0.22307,
+      "font_spacing_round_f1": 0.35427,
+      "math_display_spacing_round_f1": 0.35427,
+      "change_from_initial": 0.25491,
+      "accepted": false,
+      "unresolved": [
+        "full-page text punctuation check",
+        "original figure curves/transistor connections and measured axes",
+        "original-font glyph shape and margin geometry",
+        "complete human review of equations, figures and captions"
+      ]
+    },
+    {
+      "pdf_page": 211,
+      "source_png_sha256": "b1321d9f4e2981bd848b1acd2f08220c39075404e66e35ddbeb5c3540a4ec509",
+      "initial_f1": 0.10312,
+      "source_paragraph_reflow_f1": 0.1967,
+      "font_spacing_round_f1": 0.33046,
+      "math_display_spacing_round_f1": 0.33421,
+      "change_from_initial": 0.23109,
+      "accepted": false,
+      "unresolved": [
+        "full-page text punctuation check",
+        "original figure curves/transistor connections and measured axes",
+        "original-font glyph shape and margin geometry",
+        "complete human review of equations, figures and captions"
+      ]
+    },
+    {
+      "pdf_page": 212,
+      "source_png_sha256": "b5bd60736fd70c0361fd0d45b1cf0a30c9fb5a5ccf0ea78b5b30d85d1b5326b4",
+      "initial_f1": 0.07709,
+      "source_paragraph_reflow_f1": 0.18406,
+      "font_spacing_round_f1": 0.19674,
+      "math_display_spacing_round_f1": 0.37477,
+      "change_from_initial": 0.29768,
+      "accepted": false,
+      "unresolved": [
+        "full-page text punctuation check",
+        "original figure curves/transistor connections and measured axes",
+        "original-font glyph shape and margin geometry",
+        "complete human review of equations, figures and captions"
+      ]
+    }
+  ],
+  "review_scope": "These are current editorial reflow previews, not fully verified pages; equations and cited numeric examples were manually spotchecked against source scan."
+}

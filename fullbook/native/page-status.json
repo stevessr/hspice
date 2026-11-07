@@ -2646,10 +2646,12 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "第三轮依据源扫描补录原文及公式，图6.1—6.3采用原生可编辑草图；尚未全文逐字符终验及原图完整逐线1:1验收。",
+      "notes": "第三轮源页逐段重排与可编辑图元；实际SVG叠图F1=0.53504, 初版0.03089；布局、全部符号/器件连接、逐像素位置尚未1:1验收。",
       "native_content_level": "source-paragraphs-and-editable-math",
       "source_text_manual_spotcheck": true,
-      "visual_scan_comparison_complete": false
+      "visual_scan_comparison_complete": false,
+      "visual_probe_f1": 0.53504,
+      "visual_probe_version": "scan-vs-ci-svg-2026-11-07-pass3"
     },
     {
       "pdf_page": 210,
@@ -2666,10 +2668,12 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "第三轮依据源扫描补录原文及公式，图6.1—6.3采用原生可编辑草图；尚未全文逐字符终验及原图完整逐线1:1验收。",
+      "notes": "第三轮源页逐段重排与可编辑图元；实际SVG叠图F1=0.35427, 初版0.09936；布局、全部符号/器件连接、逐像素位置尚未1:1验收。",
       "native_content_level": "source-paragraphs-and-editable-math",
       "source_text_manual_spotcheck": true,
-      "visual_scan_comparison_complete": false
+      "visual_scan_comparison_complete": false,
+      "visual_probe_f1": 0.35427,
+      "visual_probe_version": "scan-vs-ci-svg-2026-11-07-pass3"
     },
     {
       "pdf_page": 211,
@@ -2686,10 +2690,12 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "第三轮依据源扫描补录原文及公式，图6.1—6.3采用原生可编辑草图；尚未全文逐字符终验及原图完整逐线1:1验收。",
+      "notes": "第三轮源页逐段重排与可编辑图元；实际SVG叠图F1=0.33421, 初版0.10312；布局、全部符号/器件连接、逐像素位置尚未1:1验收。",
       "native_content_level": "source-paragraphs-and-editable-math",
       "source_text_manual_spotcheck": true,
-      "visual_scan_comparison_complete": false
+      "visual_scan_comparison_complete": false,
+      "visual_probe_f1": 0.33421,
+      "visual_probe_version": "scan-vs-ci-svg-2026-11-07-pass3"
     },
     {
       "pdf_page": 212,
@@ -2706,10 +2712,12 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "第三轮依据源扫描补录原文及公式，图6.1—6.3采用原生可编辑草图；尚未全文逐字符终验及原图完整逐线1:1验收。",
+      "notes": "第三轮源页逐段重排与可编辑图元；实际SVG叠图F1=0.37477, 初版0.07709；布局、全部符号/器件连接、逐像素位置尚未1:1验收。",
       "native_content_level": "source-paragraphs-and-editable-math",
       "source_text_manual_spotcheck": true,
-      "visual_scan_comparison_complete": false
+      "visual_scan_comparison_complete": false,
+      "visual_probe_f1": 0.37477,
+      "visual_probe_version": "scan-vs-ci-svg-2026-11-07-pass3"
     },
     {
       "pdf_page": 213,
