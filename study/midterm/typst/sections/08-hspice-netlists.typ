@@ -210,6 +210,18 @@ XN1 d g s b n15ll_mis_ckt L=100n W=200n
 
 例如实验中的 `XP1 x a vdd vdd p15ll_mis_ckt ...`，在确认声明端口为 D、G、S、B 后，才能解释为漏端 x、栅端 a、源端与体端均接 vdd。观察 X 实例的支路电流时，优先测量串接的电压源电流；`I(XN1)` 不能直接当作所有子电路都支持的漏电流表达式。
 
+== 用零伏电压源测量指定支路电流
+<用零伏电压源测量指定支路电流>
+电源总电流与单个器件的支路电流并不总是相同。例如多个门共用 `VDD` 时，`I(VDD)` 是所有供电支路的合计。需要观察其中一条支路时，可在该支路串接零伏电压源：
+
+```text
+VSENSE vdd vdd_local DC 0
+Xmp out in vdd_local vdd_local p18_ckt L=0.2u W=0.8u
+.probe tran I(VSENSE)
+```
+
+此处用 `Xmp` 替换原 PMOS 实例；子电路及其端口顺序沿用附录模型。`VSENSE` 两端电压为零，因此 vdd\_local 与 vdd 等电位。正电流方向由其正端 vdd 指向负端 vdd\_local，所以此处向 PMOS 支路供电时 `I(VSENSE)` 通常为正。串联测流源须插入原支路，不能并联在电源两端；每个实例名仍须唯一。
+
 == PULSE、PWL 与时间参数
 <pulsepwl-与时间参数>
 ```text
@@ -260,7 +272,7 @@ Cx x 0 1f
 
 == 用 .measure 测量反相器延迟与功耗
 <用-.measure-测量反相器延迟与功耗>
-以下语句接在附录反相器的瞬态配置中，并放在 `.end` 之前。设电源为 1.8 V、输入延迟为 1 ns、上升／下降时间为 0.1 ns、高电平宽度为 10 ns、周期为 20 ns：
+使用以下配置替换附录反相器中原有的 `VIN` 与 `.tran` 行，将测量语句放在 `.end` 之前。设电源为 1.8 V、输入延迟为 1 ns、上升／下降时间为 0.1 ns、高电平宽度为 10 ns、周期为 20 ns：
 
 ```text
 * Replace the original VIN; do not add a second VIN
