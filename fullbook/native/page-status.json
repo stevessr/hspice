@@ -2637,7 +2637,7 @@
       "source_file": "web/186-page-209.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass3-source-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.8857,
       "source_scan_landmarks_checked": true,
@@ -2646,7 +2646,10 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "第三轮依据源扫描补录原文及公式，图6.1—6.3采用原生可编辑草图；尚未全文逐字符终验及原图完整逐线1:1验收。",
+      "native_content_level": "source-paragraphs-and-editable-math",
+      "source_text_manual_spotcheck": true,
+      "visual_scan_comparison_complete": false
     },
     {
       "pdf_page": 210,
@@ -2654,7 +2657,7 @@
       "source_file": "web/187-page-210.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass3-source-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.6836,
       "source_scan_landmarks_checked": true,
@@ -2663,7 +2666,10 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "第三轮依据源扫描补录原文及公式，图6.1—6.3采用原生可编辑草图；尚未全文逐字符终验及原图完整逐线1:1验收。",
+      "native_content_level": "source-paragraphs-and-editable-math",
+      "source_text_manual_spotcheck": true,
+      "visual_scan_comparison_complete": false
     },
     {
       "pdf_page": 211,
@@ -2671,7 +2677,7 @@
       "source_file": "web/188-page-211.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass3-source-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.5282,
       "source_scan_landmarks_checked": true,
@@ -2680,7 +2686,10 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "第三轮依据源扫描补录原文及公式，图6.1—6.3采用原生可编辑草图；尚未全文逐字符终验及原图完整逐线1:1验收。",
+      "native_content_level": "source-paragraphs-and-editable-math",
+      "source_text_manual_spotcheck": true,
+      "visual_scan_comparison_complete": false
     },
     {
       "pdf_page": 212,
@@ -2688,7 +2697,7 @@
       "source_file": "web/189-page-212.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass3-source-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.6504,
       "source_scan_landmarks_checked": true,
@@ -2697,7 +2706,10 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "第三轮依据源扫描补录原文及公式，图6.1—6.3采用原生可编辑草图；尚未全文逐字符终验及原图完整逐线1:1验收。",
+      "native_content_level": "source-paragraphs-and-editable-math",
+      "source_text_manual_spotcheck": true,
+      "visual_scan_comparison_complete": false
     },
     {
       "pdf_page": 213,

@@ -54,6 +54,7 @@ jobs:
           python3 fullbook/native/qa/check_ch5_dff_power.py
           python3 fullbook/native/qa/check_ch5_end.py
           python3 fullbook/native/qa/check_ch6_delay_cap.py
+          python3 fullbook/native/qa/check_ch6_source_pages.py
           python3 fullbook/native/qa/check_ch6_spice_sources.py
           python3 fullbook/native/qa/check_status_consistency.py
           for source in fullbook/native/web/*-page-*-layout.typ; do
