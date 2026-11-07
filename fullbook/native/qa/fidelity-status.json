@@ -4624,12 +4624,12 @@
       },
       "evidence": {},
       "unresolved": [
-        "全页文字尚未逐字对照",
-        "公式和全部参数尚未全部验收",
-        "晶体管/RC图形拓扑与线段位置仍非1:1",
-        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+        "原文字词与全部符号尚未逐字符终审",
+        "MOS晶体管及电容准确节点、版图几何逐线检查未完成",
+        "页眉、公式位置及图注仍需SVG对照校正",
+        "未取得全页人工终验"
       ],
-      "notes": "原生Typst选段；第二次独立OCR文本一致率 73.20%，仅作风险提示，不作为验收。",
+      "notes": "PDF213: paragraph/equation source-image reflow; original geometry and full-page text/diagram acceptance incomplete.",
       "page_source_verified": false
     },
     {
@@ -4647,12 +4647,12 @@
       },
       "evidence": {},
       "unresolved": [
-        "全页文字尚未逐字对照",
-        "公式和全部参数尚未全部验收",
-        "晶体管/RC图形拓扑与线段位置仍非1:1",
-        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+        "原文字词与全部符号尚未逐字符终审",
+        "MOS晶体管及电容准确节点、版图几何逐线检查未完成",
+        "页眉、公式位置及图注仍需SVG对照校正",
+        "未取得全页人工终验"
       ],
-      "notes": "原生Typst选段；第二次独立OCR文本一致率 91.44%，仅作风险提示，不作为验收。",
+      "notes": "PDF214: paragraph/equation source-image reflow; original geometry and full-page text/diagram acceptance incomplete.",
       "page_source_verified": false
     },
     {
@@ -4670,12 +4670,12 @@
       },
       "evidence": {},
       "unresolved": [
-        "全页文字尚未逐字对照",
-        "公式和全部参数尚未全部验收",
-        "晶体管/RC图形拓扑与线段位置仍非1:1",
-        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+        "原文字词与全部符号尚未逐字符终审",
+        "MOS晶体管及电容准确节点、版图几何逐线检查未完成",
+        "页眉、公式位置及图注仍需SVG对照校正",
+        "未取得全页人工终验"
       ],
-      "notes": "原生Typst选段；第二次独立OCR文本一致率 83.81%，仅作风险提示，不作为验收。",
+      "notes": "PDF215: paragraph/equation source-image reflow; original geometry and full-page text/diagram acceptance incomplete.",
       "page_source_verified": false
     },
     {
@@ -4693,12 +4693,12 @@
       },
       "evidence": {},
       "unresolved": [
-        "全页文字尚未逐字对照",
-        "公式和全部参数尚未全部验收",
-        "晶体管/RC图形拓扑与线段位置仍非1:1",
-        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+        "原文字词与全部符号尚未逐字符终审",
+        "MOS晶体管及电容准确节点、版图几何逐线检查未完成",
+        "页眉、公式位置及图注仍需SVG对照校正",
+        "未取得全页人工终验"
       ],
-      "notes": "原生Typst选段；第二次独立OCR文本一致率 65.25%，仅作风险提示，不作为验收。",
+      "notes": "PDF216: paragraph/equation source-image reflow; original geometry and full-page text/diagram acceptance incomplete.",
       "page_source_verified": false
     },
     {
@@ -4716,12 +4716,12 @@
       },
       "evidence": {},
       "unresolved": [
-        "全页文字尚未逐字对照",
-        "公式和全部参数尚未全部验收",
-        "晶体管/RC图形拓扑与线段位置仍非1:1",
-        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+        "原文字词与全部符号尚未逐字符终审",
+        "MOS晶体管及电容准确节点、版图几何逐线检查未完成",
+        "页眉、公式位置及图注仍需SVG对照校正",
+        "未取得全页人工终验"
       ],
-      "notes": "原生Typst选段；第二次独立OCR文本一致率 82.91%，仅作风险提示，不作为验收。",
+      "notes": "PDF217: paragraph/equation source-image reflow; original geometry and full-page text/diagram acceptance incomplete.",
       "page_source_verified": false
     },
     {
@@ -4739,12 +4739,12 @@
       },
       "evidence": {},
       "unresolved": [
-        "全页文字尚未逐字对照",
-        "公式和全部参数尚未全部验收",
-        "晶体管/RC图形拓扑与线段位置仍非1:1",
-        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+        "原文字词与全部符号尚未逐字符终审",
+        "MOS晶体管及电容准确节点、版图几何逐线检查未完成",
+        "页眉、公式位置及图注仍需SVG对照校正",
+        "未取得全页人工终验"
       ],
-      "notes": "原生Typst选段；第二次独立OCR文本一致率 67.82%，仅作风险提示，不作为验收。",
+      "notes": "PDF218: paragraph/equation source-image reflow; original geometry and full-page text/diagram acceptance incomplete.",
       "page_source_verified": false
     },
     {
@@ -4762,12 +4762,12 @@
       },
       "evidence": {},
       "unresolved": [
-        "全页文字尚未逐字对照",
-        "公式和全部参数尚未全部验收",
-        "晶体管/RC图形拓扑与线段位置仍非1:1",
-        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+        "原文字词与全部符号尚未逐字符终审",
+        "MOS晶体管及电容准确节点、版图几何逐线检查未完成",
+        "页眉、公式位置及图注仍需SVG对照校正",
+        "未取得全页人工终验"
       ],
-      "notes": "原生Typst选段；第二次独立OCR文本一致率 83.40%，仅作风险提示，不作为验收。",
+      "notes": "PDF219: paragraph/equation source-image reflow; original geometry and full-page text/diagram acceptance incomplete.",
       "page_source_verified": false
     },
     {
@@ -4785,12 +4785,12 @@
       },
       "evidence": {},
       "unresolved": [
-        "全页文字尚未逐字对照",
-        "公式和全部参数尚未全部验收",
-        "晶体管/RC图形拓扑与线段位置仍非1:1",
-        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+        "原文字词与全部符号尚未逐字符终审",
+        "MOS晶体管及电容准确节点、版图几何逐线检查未完成",
+        "页眉、公式位置及图注仍需SVG对照校正",
+        "未取得全页人工终验"
       ],
-      "notes": "原生Typst选段；第二次独立OCR文本一致率 86.86%，仅作风险提示，不作为验收。",
+      "notes": "PDF220: paragraph/equation source-image reflow; original geometry and full-page text/diagram acceptance incomplete.",
       "page_source_verified": false
     },
     {
