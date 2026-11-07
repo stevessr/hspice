@@ -220,11 +220,23 @@
     },
     {
       "pdf_page": 33,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "web/10-page-33.typ",
+      "native_html_selection_available": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "notes": "补齐跨表进度：已有原生 Typst 选段，但正文及图形仍未完成整页验收。"
     },
     {
       "pdf_page": 34,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "web/11-page-34.typ",
+      "native_html_selection_available": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "notes": "补齐跨表进度：已有原生 Typst 选段，但正文及图形仍未完成整页验收。"
     },
     {
       "pdf_page": 35,
