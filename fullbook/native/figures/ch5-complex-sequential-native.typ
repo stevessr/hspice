@@ -4,7 +4,7 @@
  #place(top+left,dx:27pt,dy:29pt,rect(width:115pt,height:89pt,stroke:.8pt,fill:rgb("f1f1f1")))
  #place(top+left,dx:204pt,dy:29pt,rect(width:115pt,height:89pt,stroke:.8pt,fill:rgb("e5e5e5")))
  #place(top+left,dx:38pt,dy:40pt,text(size:8pt)[PUN：上拉]))
- #place(top+left,dx:38pt,dy:60pt,text(size:8pt)[$(A bar B)+bar C$]))
+ #place(top+left,dx:38pt,dy:60pt,text(size:8pt)[$bar(A) bar(B)+bar(C)$]))
  #place(top+left,dx:216pt,dy:40pt,text(size:8pt)[PDN：下拉]))
  #place(top+left,dx:216pt,dy:60pt,text(size:8pt)[$(A+B)C$]))
  #place(top+left,dx:145pt,dy:66pt,line(length:58pt,stroke:.8pt))
