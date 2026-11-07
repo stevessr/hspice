@@ -149,7 +149,17 @@ const sections = [
   { id: '140-page-163', title: '原书第163页 · P4.6—P4.8', pages: 'PDF第163页/印刷第144页', summary: '2%噪声恢复、伪PMOS及异常接线' },
   { id: '141-page-164', title: '原书第164页 · P4.9—P4.12', pages: 'PDF第164页/印刷第145页', summary: '尺寸比例、VTC与峰值电流' },
   { id: '142-page-165', title: '原书第165页 · P4.12—P4.15', pages: 'PDF第165页/印刷第146页', summary: '目标输出电平与非典型VTC' },
-  { id: '143-page-166', title: '原书第166页 · P4.15—P4.16', pages: 'PDF第166页/印刷第147页', summary: '三态缓冲器两种堆叠结构' }
+  { id: '143-page-166', title: '原书第166页 · P4.15—P4.16', pages: 'PDF第166页/印刷第147页', summary: '三态缓冲器两种堆叠结构' },
+  { id: '144-page-167', title: '原书第167页 · 第5章章首与5.1绪论', pages: 'PDF第167页/印刷第148页', summary: '12节目录，静态MOS组合/时序' },
+  { id: '145-page-168', title: '原书第168页 · 5.2 CMOS门电路', pages: 'PDF第168页/印刷第149页', summary: 'NAND/NOR互补网络' },
+  { id: '146-page-169', title: '原书第169页 · 图5.1与5.2.1尺寸确定', pages: 'PDF第169页/印刷第150页', summary: 'CMOS NAND/NOR最坏导通路径' },
+  { id: '147-page-170', title: '原书第170页 · 图5.2 CMOS门尺寸', pages: 'PDF第170页/印刷第151页', summary: '2W、4W、3W、6W规则' },
+  { id: '148-page-171', title: '原书第171页 · 图5.3/5.4及式5.1/5.2', pages: 'PDF第171页/印刷第152页', summary: '串并联等效宽度Weq' },
+  { id: '149-page-172', title: '原书第172页 · 例5.1、5.2.2与式5.3', pages: 'PDF第172页/印刷第153页', summary: '3输入尺寸与DeMorgan' },
+  { id: '150-page-173', title: '原书第173页 · 图5.5—5.7八输入门', pages: 'PDF第173页/印刷第154页', summary: 'NAND8和逻辑变换' },
+  { id: '151-page-174', title: '原书第174页 · 图5.8/5.9多级门与扇出', pages: 'PDF第174页/印刷第155页', summary: 'NAND4树和FO4' },
+  { id: '152-page-175', title: '原书第175页 · 5.2.3 NAND门VTC', pages: 'PDF第175页/印刷第156页', summary: '图5.10多输入切换' },
+  { id: '153-page-176', title: '原书第176页 · 图5.11 NOR VTC及例5.2', pages: 'PDF第176页/印刷第157页', summary: '0.18μm单输入切换点≈0.77V' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -190,6 +200,12 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第5章静态CMOS门：PDF 第167—176页
+
+根据原扫描建立第5章章首12节提要、5.1/5.2/5.2.1—5.2.3、CMOS NAND/NOR尺寸与等效宽度式（5.1）—（5.3）。原生可编辑示意图覆盖图5.1—5.11的核心逻辑关系（并非每个图号所有细节）。例5.1三输入门按最坏导通路径匹配，例5.2的0.18 μm CMOS NAND单输入切换点约0.77 V。
+
+连续可编辑原生源页扩展到 **PDF第26—176页共151页**；全书机器OCR初稿445页。严格完整整页1:1验收继续为0/445，未复核的实验数据和所有原图位置不能以编译成功代替。
 
 ## 第4章尺寸确定、三态与章末习题：PDF 第157—166页
 
