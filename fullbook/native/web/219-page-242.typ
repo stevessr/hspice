@@ -1,11 +1,11 @@
 // SOURCE PDF PAGE 242, printed 223. Skewed inverter rise/fall LE derivations.
-#import "../figures/ch6-logical-effort-native.typ": le-panel
+#import "../figures/ch6-logical-effort-native.typ": skew-inverter-panel
 #set document(title:"第6章 · 例6.12偏斜反相器逻辑强度 · PDF242")
 #align(center)[#text(size:8pt,weight:"bold")[第6章　高速 CMOS 逻辑设计　　　　　　　　　　　　223]]
 #line(length:100%,stroke:.5pt)
 
 #align(center)[
-  #le-panel(kind:"INV",up:"1",down:"1",le:"?")]
+  #skew-inverter-panel(up:"1",down:"1")]
 
 *解答：*
 
@@ -19,7 +19,7 @@
 
 上升情况——使所有的器件尺寸变为原来的两倍以获得相同的上升延迟：
 
-#align(center)[#le-panel(kind:"INV",up:"2",down:"2",le:"4/3")]
+#align(center)[#skew-inverter-panel(up:"2",down:"2")]
 
 #align(center)[$"LE"_r = ((C_("in"))_("gate"))/((C_("in"))_("inv")) = (2+2)/(1+2)=4/3$]
 
