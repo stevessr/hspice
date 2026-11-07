@@ -37,7 +37,7 @@
   #seg(233pt,97pt,289pt,97pt)
   #cap(281pt,46pt,label:"90")
   #cap(281pt,108pt,label:"90")
-  #place(top+left,dx:100pt,dy:111pt,text(size:7.5pt)[分支强度 BE=2]))
+  #place(top+left,dx:100pt,dy:111pt,text(size:7.5pt)[分支强度 BE=2])
 ])
 #let fig-example616()=html.frame(block(width:370pt,height:112pt)[
   #seg(5pt,47pt,35pt,47pt)
@@ -50,38 +50,38 @@
   #cap(13pt,67pt,label:"1")
   #cap(167pt,67pt,label:"A")
   #cap(304pt,67pt,label:"B")
-  #place(top+left,dx:163pt,dy:93pt,text(size:7pt)[固定旁路负载]))
+  #place(top+left,dx:163pt,dy:93pt,text(size:7pt)[固定旁路负载])
 ])
 #let fig-p64()=grid(columns:(1fr,1fr),column-gutter:11pt,
   [#block(height:150pt)[
-    #place(top+left,dx:20pt,dy:5pt,text(size:8pt)[(a) A 后到达]))
+    #place(top+left,dx:20pt,dy:5pt,text(size:8pt)[(a) A 后到达])
     #for i in (0,1,2) [
-      #mos(68pt,20pt+i*37pt,p:false,label:"3W")
+      #mos(68pt,20pt + i * 37pt,p:false,label:"3W")
     ]
-    #place(top+left,dx:105pt,dy:127pt,text(size:7pt)[VDD→0]))
+    #place(top+left,dx:105pt,dy:127pt,text(size:7pt)[VDD→0])
   ]],
   [#block(height:150pt)[
-    #place(top+left,dx:20pt,dy:5pt,text(size:8pt)[(b) B 后到达]))
+    #place(top+left,dx:20pt,dy:5pt,text(size:8pt)[(b) B 后到达])
     #for i in (0,1,2) [
-      #mos(68pt,20pt+i*37pt,label:"3W")
+      #mos(68pt,20pt + i * 37pt,label:"3W")
     ]
-    #place(top+left,dx:105pt,dy:127pt,text(size:7pt)[VDD→0]))
+    #place(top+left,dx:105pt,dy:127pt,text(size:7pt)[VDD→0])
   ]])
 #let fig-p65()=html.frame(block(width:360pt,height:138pt)[
   #mos(89pt,36pt,label:"4λ")
   #seg(89pt,62pt,89pt,81pt)
   #cap(112pt,17pt,label:"CL")
   #for i in (0,1,2) [
-    #mos(231pt,15pt+i*37pt,label:"12λ")
+    #mos(231pt,15pt + i * 37pt,label:"12λ")
   ]
-  #place(top+left,dx:77pt,dy:121pt,text(size:8pt)[(a)]))
-  #place(top+left,dx:223pt,dy:121pt,text(size:8pt)[(b)]))
+  #place(top+left,dx:77pt,dy:121pt,text(size:8pt)[(a)])
+  #place(top+left,dx:223pt,dy:121pt,text(size:8pt)[(b)])
 ])
 #let fig-p66()=html.frame(block(width:390pt,height:108pt)[
   #seg(7pt,53pt,25pt,53pt)
   #cap(8pt,66pt,label:"C_in")
   #for i in (0,1,2,3) [
-    #let x=27pt+i*84pt
+    #let x=27pt + i * 84pt
     #inv(x,37pt,label:""+str(i+1))
     #seg(x + 46pt,53pt,x + 81pt,53pt)
   ]
@@ -92,27 +92,27 @@
   #mos(146pt,29pt,p:true,label:"W")
   #seg(146pt,55pt,146pt,69pt)
   #for i in (0,1,2) [
-    #mos(101pt+i*55pt,77pt,label:"W")
+    #mos(101pt + i * 55pt,77pt,label:"W")
   ]
   #seg(101pt,103pt,211pt,103pt)
   #seg(146pt,68pt,286pt,68pt)
-  #place(top+left,dx:34pt,dy:75pt,text(size:8pt)[A、B、C]))
-  #place(top+left,dx:287pt,dy:57pt,text(size:8pt)[$F$]))
+  #place(top+left,dx:34pt,dy:75pt,text(size:8pt)[A、B、C])
+  #place(top+left,dx:287pt,dy:57pt,text(size:8pt)[$F$])
 ])
 #let fig-p69()=grid(columns:(1fr,1fr),column-gutter:10pt,
   [#block(height:180pt)[
     #for i in (0,1) [
-      #mos(71pt,28pt+i*53pt,p:true,label:"8λ")
+      #mos(71pt,28pt + i * 53pt,p:true,label:"8λ")
     ]
     #seg(71pt,134pt,71pt,142pt)
     #mos(69pt,144pt,label:"2λ")
-    #place(top+left,dx:21pt,dy:10pt,text(size:8pt)[(a)]))
+    #place(top+left,dx:21pt,dy:10pt,text(size:8pt)[(a)])
   ]],
   [#block(height:180pt)[
     #for i in (0,1,2) [
-      #mos(72pt,18pt+i*43pt,p:i==0,label:"6λ")
+      #mos(72pt,18pt + i * 43pt,p:i==0,label:"6λ")
     ]
-    #place(top+left,dx:21pt,dy:10pt,text(size:8pt)[(b)]))
+    #place(top+left,dx:21pt,dy:10pt,text(size:8pt)[(b)])
   ]])
 #let fig-p611()=html.frame(block(width:375pt,height:108pt)[
   #seg(10pt,49pt,27pt,49pt)
