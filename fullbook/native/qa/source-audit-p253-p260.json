@@ -1,0 +1,103 @@
+{
+  "schema": "native-typst-pass8-ch7-scan-proof",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    253,
+    260
+  ],
+  "render": "Original scanned pages via PyMuPDF at 1.5×; manually compared text/formulas/some figure labels, archived original OCR as secondary pointer only",
+  "strict_full_pages_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 253,
+      "source_scan_sha256": "c07e7c296ff822272c1b1d35d2a93a4fd2b679dbcdf617dc99c1fefea67d7998",
+      "source_formula_landmarks_reviewed": true,
+      "all_source_characters_verified": false,
+      "complete_native_circuit_topology_verified": false,
+      "exact_print_layout_verified": false,
+      "human_signoff": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 254,
+      "source_scan_sha256": "1842f51c076c992fc445b1f2b71fef7b787933b51a631cc970c8dd358995b6c9",
+      "source_formula_landmarks_reviewed": true,
+      "all_source_characters_verified": false,
+      "complete_native_circuit_topology_verified": false,
+      "exact_print_layout_verified": false,
+      "human_signoff": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 255,
+      "source_scan_sha256": "9bc8680b780cbe6411288ebdae91f40a7f1af23d58296812334c8548a3136d89",
+      "source_formula_landmarks_reviewed": true,
+      "all_source_characters_verified": false,
+      "complete_native_circuit_topology_verified": false,
+      "exact_print_layout_verified": false,
+      "human_signoff": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 256,
+      "source_scan_sha256": "700ca261df9438d8e8333f6f40f38d4a5c97cde743135a60ccd4ecfbd0040876",
+      "source_formula_landmarks_reviewed": true,
+      "all_source_characters_verified": false,
+      "complete_native_circuit_topology_verified": false,
+      "exact_print_layout_verified": false,
+      "human_signoff": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 257,
+      "source_scan_sha256": "47837387dfa95b8284060d2f9430eae6b9df20bbbff56a3bcfd9bb767498032d",
+      "source_formula_landmarks_reviewed": true,
+      "all_source_characters_verified": false,
+      "complete_native_circuit_topology_verified": false,
+      "exact_print_layout_verified": false,
+      "human_signoff": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 258,
+      "source_scan_sha256": "e12d6cf0226784ccf679335f160af7dd030a4f2bcc5586f369c1f10bf287e606",
+      "source_formula_landmarks_reviewed": true,
+      "all_source_characters_verified": false,
+      "complete_native_circuit_topology_verified": false,
+      "exact_print_layout_verified": false,
+      "human_signoff": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 259,
+      "source_scan_sha256": "7812aacedd2c448390fbc7f02f5aa5496a5978a6246a918ef2a86b08c1618474",
+      "source_formula_landmarks_reviewed": true,
+      "all_source_characters_verified": false,
+      "complete_native_circuit_topology_verified": false,
+      "exact_print_layout_verified": false,
+      "human_signoff": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 260,
+      "source_scan_sha256": "c58a22f391e1b2ee5f378daefccb1d44b1d1fbbc8eb9bc7be9d9fb382cbe129c",
+      "source_formula_landmarks_reviewed": true,
+      "all_source_characters_verified": false,
+      "complete_native_circuit_topology_verified": false,
+      "exact_print_layout_verified": false,
+      "human_signoff": false,
+      "accepted": false
+    }
+  ],
+  "landmarks": [
+    "P6.14/P6.15/P6.16 original formula FO4=constant×L",
+    "Chapter7 7.1/7.2/7.2.1, Figure7.1 six MOS pass states",
+    "NMOS passes 0 strongly, 1 limited to VDD−VTn; PMOS complementary",
+    "Figure7.2/7.3 transmission cascades and body effect",
+    "Feedthrough 7.1 Cf(V1−V2)=CgndV2; 7.2 V2=CfV1/(Cf+Cgnd); 7.3 ΔV2=CfΔV1/(Cf+Cgnd)",
+    "Example7.1 Vout≈0.73, Cf=.05 fF, Cgnd=.2 fF, feedthrough .24 V, low case Vout −.67 V",
+    "Charge sharing7.4 Q=C1V1+C2V2; 7.5 Q=(C1+C2)V*;7.6 V*=(C1V1+C2V2)/(C1+C2)",
+    "Example7.2 cases 0.2,0.6,1.0 V"
+  ]
+}
