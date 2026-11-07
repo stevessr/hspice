@@ -6,9 +6,9 @@
 
 对于或非门，同样参考图6.27来确定P。通过正确地考虑版图中共用的源/漏区，可以计算如下：
 
-#align(center)[$P_("nor")=LE_("nor") times gamma_("nor") = LE times (C_("self")/C_("in"))$]
+#align(center)[$P_("nor")=LE_("nor") times gamma_("nor") = "LE" times (C_("self")/C_("in"))$]
 
-#align(center)[$=LE times (C_("eff")(W+4W+4W))/(C_g(W+4W))=LE times (C_("eff")/C_g) times 9/5 =5/3 times 1/2 times 9/5=3/2$]
+#align(center)[$="LE" times (C_("eff")(W+4W+4W))/(C_g(W+4W))="LE" times (C_("eff")/C_g) times 9/5 =5/3 times 1/2 times 9/5=3/2$]
 
 精确计算该值的最好办法是通过模拟。然而，为了进行快速手工计算，可以使用下面近似的表6.2。
 
@@ -18,7 +18,7 @@
  table.header([门的类型],[1输入],[2输入],[3输入],[4输入]),
  [反相器],[$P_("inv")=1/2$],[—],[—],[—],
  [与非门],[—],[$2P_("inv")=1$],[$3P_("inv")=3/2$],[$4P_("inv")=2$],
- [或非门],[—],[$3P_("inv")=3/2$],[$4.5P_("inv")=9/4$],[$6P_("inv")=3$])
+ [或非门],[—],[$3P_("inv")=3/2$],[$4.5 P_("inv")=9/4$],[$6P_("inv")=3$])
 
 #line(length:100%,stroke:.5pt)
 *例6.11　用逻辑强度进行路径优化*

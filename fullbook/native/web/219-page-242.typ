@@ -25,7 +25,7 @@
 
 *方法二：* 用逻辑强度的定义：
 
-#align(center)[$LE=((R_("eff") C_("in"))_("gate"))/((R_("eff") C_("in"))_("inv"))$]
+#align(center)[$"LE"=((R_("eff") C_("in"))_("gate"))/((R_("eff") C_("in"))_("inv"))$]
 
 对于下降情况：
 
@@ -39,4 +39,4 @@
 
 因此，该门的平均逻辑强度是：
 
-#align(center)[$LE = ((2/3)+(4/3))/2=1$]
+#align(center)[$"LE" = ((2/3)+(4/3))/2=1$]

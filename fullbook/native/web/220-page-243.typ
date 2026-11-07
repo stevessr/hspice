@@ -17,7 +17,7 @@
 
 首先，计算总的路径强度：
 
-#align(center)[$"总的路径强度" = product(LE times "FO")$]
+#align(center)[$"总的路径强度" = product("LE" times ""FO"")$]
 
 #align(center)[$=1 (X/10) times 5/3 (Y/X) times 4/3 (Z/Y) times 1 (20/Z)$]
 
@@ -25,13 +25,13 @@
 
 在这个例子中，顺序地通过每一级门并计算其LE×FO。然后，可以通过将这些值相乘来获得总路径强度。另一种获得相同答案的方法是把所有的LE乘起来（得到20/9），再把所有的FO乘起来（得到20/10），最后把这两个值相乘（得到400/90）。这种方法只适用于没有分支的单一路径的情况。
 
-下一步，通过计算上面结果的几何平均值算出最优的级强度 $SE^*$：
+下一步，通过计算上面结果的几何平均值算出最优的级强度 $"SE"^*$：
 
-#align(center)[$SE^* = "最优的级强度" = (400/90)^(1/4) approx 1.45$]
+#align(center)[$"SE"^* = "最优的级强度" = (400/90)^(1/4) approx 1.45$]
 
 计算路径强度的四次方根是因为在这个例子中有四级逻辑门。这是要给该路径中的所有门赋予的最优的级强度。总路径延迟可以计算如下：
 
-#align(center)[$D = 4(SE^*) + 2P_("inv")+P_("nor")+P_("nand")$]
+#align(center)[$D = 4("SE"^*) + 2P_("inv")+P_("nor")+P_("nand")$]
 
 #align(center)[$=4(1.45)+1.0+1.5+1.0=9.3$]
 
@@ -39,9 +39,9 @@
 
 实际的尺寸可以通过从输出到输入反向计算得到。利用如下事实，对每一个门有：
 
-#align(center)[$SE^* = LE times "FO"=LE (C_("out")/C_("in"))$]
+#align(center)[$"SE"^* = "LE" times ""FO""="LE" (C_("out")/C_("in"))$]
 
-#align(center)[$therefore C_("in") = LE (C_("out")/SE^*)$]
+#align(center)[$therefore C_("in") = "LE" (C_("out")/"SE"^*)$]
 
 因此，从输出到输入反向计算：
 

@@ -23,7 +23,7 @@
 
 下一步计算寄生参数项P。遗憾的是，这个参数项依赖于工艺以及逻辑门。在一种给定的工艺下，对于所有不同类型的门，这个参数项需要一一重新计算。先从一个简单的反相器开始并确定其P值。已经介绍过这个参数项是按以下公式给出的：
 
-#align(center)[$P = LE_("inv") times gamma_("inv") = LE times (C_("self")/C_("in")) = LE times (C_("eff") 3W)/(C_g 3W)=LE times (C_("eff")/C_g)$]
+#align(center)[$P = LE_("inv") times gamma_("inv") = "LE" times (C_("self")/C_("in")) = "LE" times (C_("eff") 3W)/(C_g 3W)="LE" times (C_("eff")/C_g)$]
 
 事实上，P值依赖于结电容的系数和门电容的系数。代入LE的值和由工艺决定的参数，得到：
 
@@ -31,6 +31,6 @@
 
 对于与非门，参考图6.27来确定P。考虑到版图中有共用的源/漏区，可以计算如下：
 
-#align(center)[$P_("nand")=LE_("nand") times gamma_("nand") = LE times (C_("self")/C_("in"))$]
+#align(center)[$P_("nand")=LE_("nand") times gamma_("nand") = "LE" times (C_("self")/C_("in"))$]
 
-#align(center)[$=LE times (C_("eff")(2W+2W+2W))/(C_g(2W+2W))=4/3 times 1/2 times 3/2=1$]
+#align(center)[$="LE" times (C_("eff")(2W+2W+2W))/(C_g(2W+2W))=4/3 times 1/2 times 3/2=1$]

@@ -8,7 +8,7 @@
 
 #align(center)[$tau times C_("load")=R_("eff") C_("in") C_("load")=R_("eff") C_("load") C_("in")$]
 
-#align(center)[$therefore LE=((R_("eff") C_("load") C_("in"))_("gate"))/((R_("eff") C_("load") C_("in"))_("inv"))$]
+#align(center)[$therefore "LE"=((R_("eff") C_("load") C_("in"))_("gate"))/((R_("eff") C_("load") C_("in"))_("inv"))$]
 
 使用这种形式，就有了另外两种计算逻辑强度的方法：
 
@@ -19,11 +19,11 @@
 
 对于与非门：
 
-#align(center)[$LE = ((C_("in"))_("nand"))/((C_("in"))_("inv")) = (2+2)/3 = 4/3$]
+#align(center)[$"LE" = ((C_("in"))_("nand"))/((C_("in"))_("inv")) = (2+2)/3 = 4/3$]
 
 对于或非门：
 
-#align(center)[$LE = ((C_("in"))_("nor"))/((C_("in"))_("inv")) = (4+1)/3 = 5/3$]
+#align(center)[$"LE" = ((C_("in"))_("nor"))/((C_("in"))_("inv")) = (4+1)/3 = 5/3$]
 
 #fig627()
 #align(center)[*图6.27　延迟相等时各个门的逻辑强度的计算*]

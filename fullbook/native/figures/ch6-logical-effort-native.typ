@@ -4,15 +4,15 @@
 #let seg(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,line(end:(x2 - x1,y2 - y1),stroke:.8pt))
 #let cap(x,y,label:"")={
   place(top+left,dx:x,dy:y,line(length:13pt,stroke:.7pt))
-  place(top+left,dx:x,dy:y+5pt,line(length:13pt,stroke:.7pt))
-  if label!="" {place(top+left,dx:x+16pt,dy:y-4pt,text(size:7pt)[#label])}
+  place(top+left,dx:x,dy:y + 5pt,line(length:13pt,stroke:.7pt))
+  if label!="" {place(top+left,dx:x + 16pt,dy:y - 4pt,text(size:7pt)[#label])}
 }
 #let mos(x,y,p:false,label:"")={
-  seg(x,y,x,y+29pt)
-  seg(x-4pt,y,x-4pt,y+29pt)
-  seg(x-20pt,y+15pt,x-4pt,y+15pt)
-  if p {place(top+left,dx:x-7pt,dy:y+13pt,circle(radius:2.3pt,stroke:.65pt,fill:white))}
-  if label!="" {place(top+left,dx:x+5pt,dy:y+11pt,text(size:7pt)[#label])}
+  seg(x,y,x,y + 29pt)
+  seg(x - 4pt,y,x - 4pt,y + 29pt)
+  seg(x - 20pt,y + 15pt,x - 4pt,y + 15pt)
+  if p {place(top+left,dx:x - 7pt,dy:y + 13pt,circle(radius:2.3pt,stroke:.65pt,fill:white))}
+  if label!="" {place(top+left,dx:x + 5pt,dy:y + 11pt,text(size:7pt)[#label])}
 }
 #let le-panel(kind:"INV",up:"2",down:"1",le:"1")=html.frame(block(width:120pt,height:200pt)[
   #place(top+left,dx:27pt,dy:6pt,text(size:8pt)[$V_("DD")$]))
@@ -50,9 +50,9 @@
   #place(top+left,dx:4pt,dy:10pt,text(size:8pt)[$D$]))
   #place(top+left,dx:292pt,dy:177pt,text(size:8pt)[$"FO"$]))
   #for i in (0,1,2,3,4,5) [
-    #let x=36pt+i*42pt
+    #let x=36pt+i * 42pt
     #seg(x,176pt,x,179pt)
-    #place(top+left,dx:x-3pt,dy:182pt,text(size:7pt)[#str(i)])
+    #place(top+left,dx:x - 3pt,dy:182pt,text(size:7pt)[#str(i)])
   ]
   #seg(37pt,155pt,269pt,39pt)
   #seg(37pt,131pt,231pt,16pt)
@@ -64,13 +64,13 @@
 ])
 #let gate(x,y,kind:"NAND",wide:60pt)={
   place(top+left,dx:x,dy:y,rect(width:wide,height:31pt,radius:9pt,stroke:.85pt))
-  place(top+left,dx:x+5pt,dy:y+10pt,text(size:8pt)[#kind]))
+  place(top+left,dx:x + 5pt,dy:y + 10pt,text(size:8pt)[#kind]))
 }
 #let inverter(x,y)={
-  seg(x,y,x,y+29pt)
-  seg(x,y,x+37pt,y+14pt)
-  seg(x,y+29pt,x+37pt,y+14pt)
-  place(top+left,dx:x+38pt,dy:y+12pt,circle(radius:2pt,stroke:.75pt,fill:white))
+  seg(x,y,x,y + 29pt)
+  seg(x,y,x + 37pt,y + 14pt)
+  seg(x,y + 29pt,x + 37pt,y + 14pt)
+  place(top+left,dx:x + 38pt,dy:y + 12pt,circle(radius:2pt,stroke:.75pt,fill:white))
 }
 #let fig613path()=html.frame(block(width:390pt,height:100pt)[
   #seg(6pt,40pt,33pt,40pt)
@@ -103,7 +103,7 @@
 ])
 #let fig614b()=html.frame(block(width:390pt,height:148pt)[
   #for k in (0,1,2,3) [
-    #gate(18pt,8pt+k*32pt,kind:"NAND2",wide:62pt)
+    #gate(18pt,8pt+k * 32pt,kind:"NAND2",wide:62pt)
   ]
   #gate(129pt,21pt,kind:"NOR2")
   #gate(129pt,86pt,kind:"NOR2")
