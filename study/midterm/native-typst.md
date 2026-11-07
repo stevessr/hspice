@@ -249,7 +249,15 @@ const sections = [
   { id: '234-page-257', title: '原书PDF第257页 · 图7.3与7.2.2电容馈通', pages: 'PDF第257页/印刷第238页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
   { id: '235-page-258', title: '原书PDF第258页 · 图7.5、式7.1—7.3与例7.1', pages: 'PDF第258页/印刷第239页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
   { id: '236-page-259', title: '原书PDF第259页 · 例7.1计算和7.2.3电荷共享', pages: 'PDF第259页/印刷第240页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
-  { id: '237-page-260', title: '原书PDF第260页 · 式7.4—7.6与例7.2', pages: 'PDF第260页/印刷第241页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' }
+  { id: '237-page-260', title: '原书PDF第260页 · 式7.4—7.6与例7.2', pages: 'PDF第260页/印刷第241页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
+  { id: '238-page-261', title: '原书PDF第261页 · 7.2电荷泄漏与7.3 CMOS传输门', pages: 'PDF第261页/印刷第242页', summary: '可编辑原生内容，全部公式、图线与版心仍未通过1:1验收' },
+  { id: '239-page-262', title: '原书PDF第262页 · 图7.8与7.3.1多路器', pages: 'PDF第262页/印刷第243页', summary: '可编辑原生内容，全部公式、图线与版心仍未通过1:1验收' },
+  { id: '240-page-263', title: '原书PDF第263页 · 图7.10/7.11 XOR、XNOR和MUX', pages: 'PDF第263页/印刷第244页', summary: '可编辑原生内容，全部公式、图线与版心仍未通过1:1验收' },
+  { id: '241-page-264', title: '原书PDF第264页 · 图7.12/7.13传输门竞争与逻辑', pages: 'PDF第264页/印刷第245页', summary: '可编辑原生内容，全部公式、图线与版心仍未通过1:1验收' },
+  { id: '242-page-265', title: '原书PDF第265页 · 例7.3传输门组合函数', pages: 'PDF第265页/印刷第246页', summary: '可编辑原生内容，全部公式、图线与版心仍未通过1:1验收' },
+  { id: '243-page-266', title: '原书PDF第266页 · 图7.14/7.15和7.3.2 RC模型', pages: 'PDF第266页/印刷第247页', summary: '可编辑原生内容，全部公式、图线与版心仍未通过1:1验收' },
+  { id: '244-page-267', title: '原书PDF第267页 · 图7.16 NMOS/PMOS导通电阻', pages: 'PDF第267页/印刷第248页', summary: '可编辑原生内容，全部公式、图线与版心仍未通过1:1验收' },
+  { id: '245-page-268', title: '原书PDF第268页 · 式7.7—7.9与传输门结电容', pages: 'PDF第268页/印刷第249页', summary: '可编辑原生内容，全部公式、图线与版心仍未通过1:1验收' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
