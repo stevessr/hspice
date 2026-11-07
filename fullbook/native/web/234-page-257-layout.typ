@@ -1,6 +1,6 @@
-// Source PDF257. Native editor source; original geometry not certified.
-#set page(width:506.8346pt,height:729.6pt,margin:(top:33pt,bottom:24pt,left:43pt,right:43pt))
-#set text(font:("Noto Serif CJK SC","DejaVu Serif"),size:10.6pt,lang:"zh")
-#set par(justify:true,first-line-indent:1.6em,leading:5.7pt,spacing:5.5pt)
-#show heading.where(level:3):set text(font:"Noto Sans CJK SC",size:10pt,weight:"bold")
+// SOURCE PDF 257, original 506.8346x729.6pt. Strict 1:1 not certified.
+#set page(width:506.8346pt,height:729.6pt,margin:(top:35pt,bottom:23pt,left:44pt,right:43pt))
+#set text(font:("Noto Serif CJK SC","DejaVu Serif"),size:9.0pt,lang:"zh")
+#set par(justify:true,first-line-indent:1.6em,leading:3.8pt,spacing:4pt)
+#show heading.where(level:2):set text(font:"Noto Sans CJK SC",size:11pt,weight:"bold")
 #include "234-page-257.typ"
