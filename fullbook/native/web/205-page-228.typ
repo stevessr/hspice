@@ -13,7 +13,7 @@
 
 （b）为了使延迟最小，写出前两个反相器的延迟方程：
 
-#align(center)[$D=sum RC=(R_P)(C_g+C_("eff"))(W_P+W_N)+(R_N)(C_g+C_("eff"))(W_P+W_N)$]
+#align(center)[$D=sum R C=(R_P)(C_g+C_("eff"))(W_P+W_N)+(R_N)(C_g+C_("eff"))(W_P+W_N)$]
 
 #align(center)[$= ((30 L_P)/W_P + (12.5 L_N)/W_N)(C_g+C_("eff"))(W_P+W_N)$]
 
