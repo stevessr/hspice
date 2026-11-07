@@ -139,7 +139,17 @@ const sections = [
   { id: '130-page-153', title: '原书第153页 · 例4.7校验与4.6.2版图', pages: 'PDF第153页/印刷第134页', summary: '手算VS约0.83V和工艺层' },
   { id: '131-page-154', title: '原书第154页 · 图4.13版图与4.7伪NMOS', pages: 'PDF第154页/印刷第135页', summary: 'W/L/AS/AD/PS/PD' },
   { id: '132-page-155', title: '原书第155页 · 图4.14、式4.20/4.21', pages: 'PDF第155页/印刷第136页', summary: '伪NMOS的高低电平' },
-  { id: '133-page-156', title: '原书第156页 · 例4.8 SPICE与4.8尺寸确定', pages: 'PDF第156页/印刷第137页', summary: 'Wn/Wp约2、VOL 0.065V' }
+  { id: '133-page-156', title: '原书第156页 · 例4.8 SPICE与4.8尺寸确定', pages: 'PDF第156页/印刷第137页', summary: 'Wn/Wp约2、VOL 0.065V' },
+  { id: '134-page-157', title: '原书第157页 · 图4.15与式4.22—4.23', pages: 'PDF第157页/印刷第138页', summary: '时序RC模型和MOS方块电阻' },
+  { id: '135-page-158', title: '原书第158页 · 式4.24与例4.9', pages: 'PDF第158页/印刷第139页', summary: 'Wn0.875μm、Wp2.1μm' },
+  { id: '136-page-159', title: '原书第159页 · 例4.9结果与4.9三态', pages: 'PDF第159页/印刷第140页', summary: '伪NMOS Wp0.665μm、图4.16' },
+  { id: '137-page-160', title: '原书第160页 · 4.10小结与4.11参考文献', pages: 'PDF第160页/印刷第141页', summary: '0.18/0.13μm工艺参数表' },
+  { id: '138-page-161', title: '原书第161页 · 4.11文献与P4.1', pages: 'PDF第161页/印刷第142页', summary: '4项参考和四种反相器' },
+  { id: '139-page-162', title: '原书第162页 · 图P4.2与P4.2—P4.6', pages: 'PDF第162页/印刷第143页', summary: 'NMOS负载、切换点和八级链' },
+  { id: '140-page-163', title: '原书第163页 · P4.6—P4.8', pages: 'PDF第163页/印刷第144页', summary: '2%噪声恢复、伪PMOS及异常接线' },
+  { id: '141-page-164', title: '原书第164页 · P4.9—P4.12', pages: 'PDF第164页/印刷第145页', summary: '尺寸比例、VTC与峰值电流' },
+  { id: '142-page-165', title: '原书第165页 · P4.12—P4.15', pages: 'PDF第165页/印刷第146页', summary: '目标输出电平与非典型VTC' },
+  { id: '143-page-166', title: '原书第166页 · P4.15—P4.16', pages: 'PDF第166页/印刷第147页', summary: '三态缓冲器两种堆叠结构' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -180,6 +190,12 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第4章尺寸确定、三态与章末习题：PDF 第157—166页
+
+源扫描的式（4.22a—c）RC延迟、式（4.23a/b）与式（4.24a/b）等效方块电阻均按原页保留；例4.9在50 fF、50 ps条件下，CMOS尺寸WN=0.875 μm、WP=2.1 μm，伪NMOS上拉WP=0.665 μm。图4.15时序、图4.16三态功能以及第4章P4.1—P4.16题目条件重新制作成可编辑源页选段。P4.1—P4.16的图形几何尚未逐元绘出，不能标记为整页验收通过。
+
+第4章第127—166页已建立40个编辑选段，连续PDF26—166共有 **141个可编辑选段**，严格整页1:1验收仍为0/445。
 
 ## 第4章 CMOS 工作区、版图、伪NMOS：PDF 第147—156页
 
