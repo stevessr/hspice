@@ -6,20 +6,20 @@
 #let cap(x,y,label:"")={
   place(top+left,dx:x,dy:y,line(length:14pt,stroke:.75pt))
   place(top+left,dx:x,dy:y + 5pt,line(length:14pt,stroke:.75pt))
-  if label!="" {place(top+left,dx:x+16pt,dy:y-2pt,text(size:7pt)[#label])}
+  if label!="" {place(top+left,dx:x + 16pt,dy:y - 2pt,text(size:7pt)[#label])}
 }
 #let inv(x,y,scale:1,label:"")={
-  wire(x,y,x,y+29pt*scale)
-  wire(x,y,x+34pt*scale,y+14pt*scale)
-  wire(x,y+29pt*scale,x+34pt*scale,y+14pt*scale)
-  place(top+left,dx:x+35pt*scale,dy:y+12pt*scale,circle(radius:2pt,stroke:.7pt,fill:white))
-  if label!="" {place(top+left,dx:x+6pt,dy:y+34pt*scale,text(size:7pt)[#label])}
+  wire(x,y,x,y + 29pt*scale)
+  wire(x,y,x + 34pt*scale,y + 14pt*scale)
+  wire(x,y + 29pt*scale,x + 34pt*scale,y + 14pt*scale)
+  place(top+left,dx:x + 35pt*scale,dy:y + 12pt*scale,circle(radius:2pt,stroke:.7pt,fill:white))
+  if label!="" {place(top+left,dx:x + 6pt,dy:y + 34pt*scale,text(size:7pt)[#label])}
 }
 #let inverters(xs:(18pt,83pt,148pt),width:315pt,height:105pt,labels:("1","f","f²"),load:"C_load")=
   html.frame(block(width:width,height:height)[
     #for (i,x) in xs.enumerate() [
       #inv(x,17pt,label:labels.at(i))
-      #wire(x+38pt,31pt,x+64pt,31pt)
+      #wire(x + 38pt,31pt,x + 64pt,31pt)
     ]
     #cap(xs.last()+56pt,58pt,label:load)
     #place(top+left,dx:10pt,dy:14pt,text(size:8pt)[$C_("in")$]))
@@ -62,12 +62,12 @@
   #place(top+left,dx:5pt,dy:14pt,text(size:8pt)[延迟]))
   #place(top+left,dx:310pt,dy:168pt,text(size:8pt)[$f$]))
   #for i in (0,1,2,3) [
-    #let yy=70pt+i*17pt
-    #wire(65pt,yy-10pt,93pt,yy+33pt)
-    #wire(93pt,yy+33pt,148pt,yy+40pt)
-    #wire(148pt,yy+40pt,225pt,yy+36pt)
-    #wire(225pt,yy+36pt,280pt,yy+24pt)
-    #place(top+left,dx:240pt,dy:yy+3pt,text(size:7pt)[#("γ="+str(i*0.5))]))
+    #let yy=70pt+i * 17pt
+    #wire(65pt,yy - 10pt,93pt,yy + 33pt)
+    #wire(93pt,yy + 33pt,148pt,yy + 40pt)
+    #wire(148pt,yy + 40pt,225pt,yy + 36pt)
+    #wire(225pt,yy + 36pt,280pt,yy + 24pt)
+    #place(top+left,dx:240pt,dy:yy + 3pt,text(size:7pt)[#("γ="+str(i * 0.5))]))
   ]
   #place(top+left,dx:97pt,dy:174pt,text(size:7pt)[最佳扇出因子约2.5～4]))
 ])
@@ -77,11 +77,11 @@
 ])
 #let fig625()=html.frame(block(width:340pt,height:85pt)[
   #for k in (0,1,2) [
-    #let x=32pt+k*99pt
+    #let x=32pt+k * 99pt
     #place(top+left,dx:x,dy:24pt,rect(width:53pt,height:34pt,radius:10pt,stroke:.8pt))
-    #wire(x-18pt,41pt,x,41pt)
-    #wire(x+53pt,41pt,x+80pt,41pt)
-    #place(top+left,dx:x+16pt,dy:35pt,text(size:7pt)[NAND]))
+    #wire(x - 18pt,41pt,x,41pt)
+    #wire(x + 53pt,41pt,x + 80pt,41pt)
+    #place(top+left,dx:x + 16pt,dy:35pt,text(size:7pt)[NAND]))
   ]
 ])
 #let fig626()=html.frame(block(width:357pt,height:95pt)[
