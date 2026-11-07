@@ -1,0 +1,135 @@
+{
+  "schema": "native-typst-source-scan-pass5-p229-p236",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    229,
+    236
+  ],
+  "second_scan_evidence": "Original scan images independently reviewed against archived private PSM3 text, mathematical/diagram landmarks manually checked; an attempted additional PSM6 OCR batch timed out and no PSM6 agreement is claimed",
+  "full_page_accepted": 0,
+  "qa_levels": {
+    "source_image_landmarks": "selected verified",
+    "all_text": "pending",
+    "all_diagrams": "pending",
+    "all_equations": "pending",
+    "pixel_position": "pending",
+    "human_signature": "pending"
+  },
+  "pages": [
+    {
+      "pdf_page": 229,
+      "printed_page": 210,
+      "source_scan_sha256": "d2042fa1be1e0f0e914655fc08c051012b368c1be8e5fe859f5bd0611aec23c5",
+      "archived_psm3_normalized_characters": 873,
+      "independent_psm6_status": "timed_out_not_available",
+      "strictly_accepted": false,
+      "blocking": [
+        "full character-level transcription reconciliation",
+        "original figure curves/nodes/captions",
+        "precise page composition and line placement"
+      ]
+    },
+    {
+      "pdf_page": 230,
+      "printed_page": 211,
+      "source_scan_sha256": "af480902d00bf145e0440472959bab711530260c829106997c4cc2efccb68be2",
+      "archived_psm3_normalized_characters": 877,
+      "independent_psm6_status": "timed_out_not_available",
+      "strictly_accepted": false,
+      "blocking": [
+        "full character-level transcription reconciliation",
+        "original figure curves/nodes/captions",
+        "precise page composition and line placement"
+      ]
+    },
+    {
+      "pdf_page": 231,
+      "printed_page": 212,
+      "source_scan_sha256": "1dee4feba4a523e87a160a384c285e4a799b89bf7eee656b006c9ac17ab59568",
+      "archived_psm3_normalized_characters": 546,
+      "independent_psm6_status": "timed_out_not_available",
+      "strictly_accepted": false,
+      "blocking": [
+        "full character-level transcription reconciliation",
+        "original figure curves/nodes/captions",
+        "precise page composition and line placement"
+      ]
+    },
+    {
+      "pdf_page": 232,
+      "printed_page": 213,
+      "source_scan_sha256": "e03ee6156cdcaeff94b6ed1186414f707100bd33eccfeb5a283c2c182f5a4a91",
+      "archived_psm3_normalized_characters": 698,
+      "independent_psm6_status": "timed_out_not_available",
+      "strictly_accepted": false,
+      "blocking": [
+        "full character-level transcription reconciliation",
+        "original figure curves/nodes/captions",
+        "precise page composition and line placement"
+      ]
+    },
+    {
+      "pdf_page": 233,
+      "printed_page": 214,
+      "source_scan_sha256": "77c94fb63f40074c3abb68fce829df3b357caf6e0d39beb6e358c5cfb3997b34",
+      "archived_psm3_normalized_characters": 500,
+      "independent_psm6_status": "timed_out_not_available",
+      "strictly_accepted": false,
+      "blocking": [
+        "full character-level transcription reconciliation",
+        "original figure curves/nodes/captions",
+        "precise page composition and line placement"
+      ]
+    },
+    {
+      "pdf_page": 234,
+      "printed_page": 215,
+      "source_scan_sha256": "a3c433d6a9a2b2c55b751b743dfa2771b8d00a1eca20f1d3d05980c962d07c0b",
+      "archived_psm3_normalized_characters": 611,
+      "independent_psm6_status": "timed_out_not_available",
+      "strictly_accepted": false,
+      "blocking": [
+        "full character-level transcription reconciliation",
+        "original figure curves/nodes/captions",
+        "precise page composition and line placement"
+      ]
+    },
+    {
+      "pdf_page": 235,
+      "printed_page": 216,
+      "source_scan_sha256": "fe6b050b76afeca89494dc68cc6711f139b81b41439147ef735227e160e0518f",
+      "archived_psm3_normalized_characters": 687,
+      "independent_psm6_status": "timed_out_not_available",
+      "strictly_accepted": false,
+      "blocking": [
+        "full character-level transcription reconciliation",
+        "original figure curves/nodes/captions",
+        "precise page composition and line placement"
+      ]
+    },
+    {
+      "pdf_page": 236,
+      "printed_page": 217,
+      "source_scan_sha256": "0ffd72ef3692166d8eb0b2f7c0d55a6b02b68b374739dc217ba020bd7185b87b",
+      "archived_psm3_normalized_characters": 527,
+      "independent_psm6_status": "timed_out_not_available",
+      "strictly_accepted": false,
+      "blocking": [
+        "full character-level transcription reconciliation",
+        "original figure curves/nodes/captions",
+        "precise page composition and line placement"
+      ]
+    }
+  ],
+  "numerical_landmarks": [
+    "6.16 Cin=3CgWn",
+    "6.18 tau_inv=3Reqn Cg Ln",
+    "Example6.8 tau_inv=7.5ps gamma=0.5",
+    "6.21 N=ln(Cload/Cin)/ln f",
+    "Example6.9 3 stages f≈5.84, 142.8ps vs 4 stages f≈3.8,128ps",
+    "6.24 NAND intrinsic=4ReqnCgLn, NOR=5ReqnCgLn",
+    "6.25 mixed NAND INV NOR path",
+    "Example6.10 gate capacitances 2,9.1,55fF and widths"
+  ]
+}
