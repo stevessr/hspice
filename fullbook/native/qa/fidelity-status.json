@@ -4340,7 +4340,7 @@
     },
     {
       "pdf_page": 201,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4352,13 +4352,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "正文尚未逐字完整验收",
+        "电路图及几何尚未逐元素验收",
+        "公式上划线和全部数值待人工核定",
+        "页脚、图注与版面尚未1:1完成"
+      ],
+      "notes": "PDF201: second OCR agreement 0.916 (NOT fidelity). Editable textbook exercise/EDP selections; entire page unaccepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 202,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4370,13 +4375,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "正文尚未逐字完整验收",
+        "电路图及几何尚未逐元素验收",
+        "公式上划线和全部数值待人工核定",
+        "页脚、图注与版面尚未1:1完成"
+      ],
+      "notes": "PDF202: second OCR agreement 0.745 (NOT fidelity). Editable textbook exercise/EDP selections; entire page unaccepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 203,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4388,13 +4398,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "正文尚未逐字完整验收",
+        "电路图及几何尚未逐元素验收",
+        "公式上划线和全部数值待人工核定",
+        "页脚、图注与版面尚未1:1完成"
+      ],
+      "notes": "PDF203: second OCR agreement 0.955 (NOT fidelity). Editable textbook exercise/EDP selections; entire page unaccepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 204,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4406,13 +4421,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "正文尚未逐字完整验收",
+        "电路图及几何尚未逐元素验收",
+        "公式上划线和全部数值待人工核定",
+        "页脚、图注与版面尚未1:1完成"
+      ],
+      "notes": "PDF204: second OCR agreement 0.671 (NOT fidelity). Editable textbook exercise/EDP selections; entire page unaccepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 205,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4424,13 +4444,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "正文尚未逐字完整验收",
+        "电路图及几何尚未逐元素验收",
+        "公式上划线和全部数值待人工核定",
+        "页脚、图注与版面尚未1:1完成"
+      ],
+      "notes": "PDF205: second OCR agreement 0.865 (NOT fidelity). Editable textbook exercise/EDP selections; entire page unaccepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 206,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4442,13 +4467,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "正文尚未逐字完整验收",
+        "电路图及几何尚未逐元素验收",
+        "公式上划线和全部数值待人工核定",
+        "页脚、图注与版面尚未1:1完成"
+      ],
+      "notes": "PDF206: second OCR agreement 0.839 (NOT fidelity). Editable textbook exercise/EDP selections; entire page unaccepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 207,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4460,8 +4490,13 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "正文尚未逐字完整验收",
+        "电路图及几何尚未逐元素验收",
+        "公式上划线和全部数值待人工核定",
+        "页脚、图注与版面尚未1:1完成"
+      ],
+      "notes": "PDF207: second OCR agreement 0.869 (NOT fidelity). Editable textbook exercise/EDP selections; entire page unaccepted.",
       "page_source_verified": false
     },
     {
