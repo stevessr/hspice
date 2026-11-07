@@ -1,0 +1,107 @@
+{
+  "schema": "source-vs-native-svg-PDF253-260-pass8",
+  "scope": [
+    253,
+    260
+  ],
+  "pages_in_source": 445,
+  "baseline_run_id": 42384540054,
+  "tuned_run_id": 42384916651,
+  "source_dpi_scale": 1.25,
+  "ink_threshold": 190,
+  "dilation_tolerance_px": 2,
+  "mean_initial_f1": 0.2772,
+  "mean_tuned_f1": 0.31911,
+  "accepted_pages": 0,
+  "metric_disclaimer": "Overlap F1 is only diagnostic; no source text, image topology or formatting 1:1 pass",
+  "pages": [
+    {
+      "pdf_page": 253,
+      "f1_baseline": 0.35727,
+      "f1_tuned": 0.35727,
+      "fully_accepted": false,
+      "open_issues": [
+        "source-by-character proofreading",
+        "editable MOS/capacitance exact electrical connectivity",
+        "scan-aligned font, figure coordinates and display formula spacing"
+      ]
+    },
+    {
+      "pdf_page": 254,
+      "f1_baseline": 0.32187,
+      "f1_tuned": 0.32187,
+      "fully_accepted": false,
+      "open_issues": [
+        "source-by-character proofreading",
+        "editable MOS/capacitance exact electrical connectivity",
+        "scan-aligned font, figure coordinates and display formula spacing"
+      ]
+    },
+    {
+      "pdf_page": 255,
+      "f1_baseline": 0.27286,
+      "f1_tuned": 0.27286,
+      "fully_accepted": false,
+      "open_issues": [
+        "source-by-character proofreading",
+        "editable MOS/capacitance exact electrical connectivity",
+        "scan-aligned font, figure coordinates and display formula spacing"
+      ]
+    },
+    {
+      "pdf_page": 256,
+      "f1_baseline": 0.45044,
+      "f1_tuned": 0.45044,
+      "fully_accepted": false,
+      "open_issues": [
+        "source-by-character proofreading",
+        "editable MOS/capacitance exact electrical connectivity",
+        "scan-aligned font, figure coordinates and display formula spacing"
+      ]
+    },
+    {
+      "pdf_page": 257,
+      "f1_baseline": 0.12963,
+      "f1_tuned": 0.25685,
+      "fully_accepted": false,
+      "open_issues": [
+        "source-by-character proofreading",
+        "editable MOS/capacitance exact electrical connectivity",
+        "scan-aligned font, figure coordinates and display formula spacing"
+      ]
+    },
+    {
+      "pdf_page": 258,
+      "f1_baseline": 0.2149,
+      "f1_tuned": 0.32789,
+      "fully_accepted": false,
+      "open_issues": [
+        "source-by-character proofreading",
+        "editable MOS/capacitance exact electrical connectivity",
+        "scan-aligned font, figure coordinates and display formula spacing"
+      ]
+    },
+    {
+      "pdf_page": 259,
+      "f1_baseline": 0.26443,
+      "f1_tuned": 0.28831,
+      "fully_accepted": false,
+      "open_issues": [
+        "source-by-character proofreading",
+        "editable MOS/capacitance exact electrical connectivity",
+        "scan-aligned font, figure coordinates and display formula spacing"
+      ]
+    },
+    {
+      "pdf_page": 260,
+      "f1_baseline": 0.20618,
+      "f1_tuned": 0.27739,
+      "fully_accepted": false,
+      "open_issues": [
+        "source-by-character proofreading",
+        "editable MOS/capacitance exact electrical connectivity",
+        "scan-aligned font, figure coordinates and display formula spacing"
+      ]
+    }
+  ]
+}
