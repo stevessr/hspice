@@ -13,7 +13,7 @@
   "tolerance_px": 2,
   "measurement": "F1(ink precision,ink recall) with ±2 px tolerance; a visual diagnostic, never a 1:1 certificate",
   "mean_baseline_f1": 0.24549,
-  "mean_final_f1": 0.31139,
+  "mean_final_f1": 0.3114,
   "strict_full_page_acceptance": 0,
   "pages": [
     {
