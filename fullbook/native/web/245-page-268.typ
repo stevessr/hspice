@@ -8,11 +8,11 @@
 
 可以进行一个简化的分析来估计并联器件在上升和下降情况时的导通电阻。如果我们要传输 $V_("DD")$，PMOS器件的作用是一个通常的上拉器件，其导通电阻近似为 $R_("eqp")=30 " kΩ/□"$。对于一个单位尺寸器件，阻值为30 kΩ。另一方面，在传输一个高电压，并且当源节点电压接近 $V_("DD")$ 时，n沟道器件的导通电阻将增加。因为NMOS器件正在关断，所以该电阻将最终达到无限大。平均导通电阻将大概为其标称值 $R_("eqn")=12.5 " kΩ/□"$ 的两倍。对于一个单位器件，这个值是25 kΩ。这两个器件的并联得到了一个在阻值上接近NMOS器件电阻的等效电阻值：
 
-#align(center)[$R_("TG")=R_N slashslash R_P=2R_("eqn") slashslash R_("eqp") approx 2R_("eqn") slashslash 2.4R_("eqn") = 1.1 R_("eqn") approx R_("eqn")$]
+#align(center)[$R_("TG")=R_N "∥" R_P=2R_("eqn") "∥" R_("eqp") approx 2R_("eqn") "∥" 2.4R_("eqn") = 1.1 R_("eqn") approx R_("eqn")$]
 
 现在考虑通过传输门传送0 V时的情况。在这种情况下，n沟道器件是导通的且阻值为 $R_("eqn")$。p沟道器件最初是导通的，且当电压下降到0 V时开始关断，因此，其阻值大约为 $2R_("eqp")$，这大约是 $R_("eqn")$ 的5倍。这两个值并联得到：
 
-#align(center)[$R_("TG")=R_N slashslash R_P=R_("eqn") slashslash 2R_("eqp") approx R_("eqn") slashslash 4.8R_("eqn")=0.83R_("eqn") approx R_("eqn")$]
+#align(center)[$R_("TG")=R_N "∥" R_P=R_("eqn") "∥" 2R_("eqp") approx R_("eqn") "∥" 4.8R_("eqn")=0.83R_("eqn") approx R_("eqn")$]
 
 实际上，无论是上升还是下降，CMOS传输门的导通电阻近似为 $R_("eqn")$。因此，我们对不同W/L值进行适当的调整，并将在所有电阻计算中使用以下这个值：
 
