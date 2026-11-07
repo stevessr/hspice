@@ -1,7 +1,8 @@
-// SOURCE PDF PAGE 208; native paper-sized editorial selection; NOT accepted 1:1.
-#set page(width:506.8346pt,height:729.6pt,margin:(top:17pt,bottom:18pt,left:25pt,right:25pt))
-#set text(font:("Noto Serif CJK SC","DejaVu Serif"),size:6pt,lang:"zh")
-#set par(justify:true,first-line-indent:1em,leading:.1em,spacing:.12em)
-#show heading.where(level:1):set text(font:"Noto Sans CJK SC",size:9.1pt,weight:"bold")
-#show heading.where(level:2):set text(font:"Noto Sans CJK SC",size:7.7pt,weight:"bold")
+// SOURCE PDF PAGE 208, printed 189. Fixed paper-size editable layout.
+// Full-page visual comparison remains blocked; do NOT label this as verified.
+#set page(width:506.8346pt,height:729.6pt,margin:(top:100pt,bottom:26pt,left:50pt,right:46pt))
+#set text(font:("Noto Serif CJK SC","DejaVu Serif"),size:9.8pt,lang:"zh")
+#set par(justify:true,first-line-indent:2em,leading:8.3pt,spacing:5.6pt)
+#show heading.where(level:1):set text(font:"Noto Sans CJK SC",size:18pt,weight:"bold")
+#show heading.where(level:2):set text(font:"Noto Sans CJK SC",size:14.3pt,weight:"bold")
 #include "185-page-208.typ"

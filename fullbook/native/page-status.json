@@ -2627,7 +2627,9 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "PDF208 chapter opener rewritten from source scan; actual source-vs-Typst SVG optical F1 improved 0 to 0.58336 at CI run 42346271001; typography/illustrations/punctuation and exact 1:1 page acceptance still pending.",
+      "visual_probe_f1": 0.58336,
+      "full_page_verified": false
     },
     {
       "pdf_page": 209,
