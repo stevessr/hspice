@@ -4,14 +4,14 @@
 #let seg(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,line(end:(x2 - x1,y2 - y1),stroke:.8pt))
 #let cap(x,y,label:"")={
   place(top+left,dx:x,dy:y,line(length:16pt,stroke:.7pt))
-  place(top+left,dx:x,dy:y+5pt,line(length:16pt,stroke:.7pt))
-  if label!="" {place(top+left,dx:x+18pt,dy:y-3pt,text(size:7.5pt)[#label])}
+  place(top+left,dx:x,dy:y + 5pt,line(length:16pt,stroke:.7pt))
+  if label!="" {place(top+left,dx:x + 18pt,dy:y-3pt,text(size:7.5pt)[#label])}
 }
 #let mos(x,y,label:"")={
   place(top+left,dx:x,dy:y,line(end:(0pt,28pt),stroke:.9pt))
   place(top+left,dx:x-5pt,dy:y,line(end:(0pt,28pt),stroke:.9pt))
-  place(top+left,dx:x-26pt,dy:y+14pt,line(length:21pt,stroke:.9pt))
-  if label!="" {place(top+left,dx:x+6pt,dy:y+8pt,text(size:7.5pt)[#label])}
+  place(top+left,dx:x-26pt,dy:y + 14pt,line(length:21pt,stroke:.9pt))
+  if label!="" {place(top+left,dx:x + 6pt,dy:y + 8pt,text(size:7.5pt)[#label])}
 }
 #let fig612()=html.frame(block(width:300pt,height:170pt)[
   #seg(122pt,13pt,122pt,29pt)
@@ -53,9 +53,9 @@
   #place(top+left,dx:259pt,dy:163pt,text(size:7pt)[$V_("in")$]))
   #place(top+left,dx:24pt,dy:7pt,text(size:7pt)[$V_("out")$]))
   #for off in (0pt,14pt,28pt,42pt,56pt,70pt,84pt) [
-    #seg(52pt,30pt+off,98pt+off/2,30pt+off)
-    #seg(98pt+off/2,30pt+off,105pt+off/2,122pt+off/2)
-    #seg(105pt+off/2,122pt+off/2,249pt,129pt+off/2)
+    #seg(52pt,30pt + off,98pt + off / 2,30pt + off)
+    #seg(98pt + off / 2,30pt + off,105pt + off / 2,122pt + off / 2)
+    #seg(105pt + off / 2,122pt + off / 2,249pt,129pt + off / 2)
   ]
   #place(top+left,dx:134pt,dy:32pt,text(size:8pt)[$i_("out")=0$ VTC]))
   #place(top+left,dx:73pt,dy:179pt,text(size:7.5pt)[充电电流]))
@@ -74,10 +74,10 @@
   #place(top+left,dx:11pt,dy:4pt,text(size:8pt)[斜坡输入下的四级反相器链及累计延迟]))
   #seg(8pt,62pt,35pt,62pt)
   #for idx in (0,1,2,3) [
-    #let x=40pt+idx*82pt
+    #let x=40pt + idx * 82pt
     #place(top+left,dx:x,dy:42pt,rect(width:57pt,height:40pt,stroke:.7pt))
-    #place(top+left,dx:x+21pt,dy:53pt,text(size:9pt)[#(idx+1)]))
-    #seg(x+57pt,62pt,x+82pt,62pt)
+    #place(top+left,dx:x + 21pt,dy:53pt,text(size:9pt)[#(idx + 1)]))
+    #seg(x + 57pt,62pt,x + 82pt,62pt)
   ]
   #place(top+left,dx:19pt,dy:105pt,text(size:8pt)[$t_("total") = t_("in")/2 + t_("pHL1") + t_("in1")/2 + dots$]))
   #place(top+left,dx:19pt,dy:131pt,text(size:8pt)[$"Total_delay" approx sum_i R_i C_i$]))
@@ -85,11 +85,11 @@
 #let fig-inverter-4()=html.frame(block(width:390pt,height:120pt)[
   #seg(12pt,56pt,45pt,56pt)
   #for idx in (0,1,2,3) [
-    #let x=49pt+idx*86pt
+    #let x=49pt + idx * 86pt
     #place(top+left,dx:x,dy:29pt,rect(width:61pt,height:59pt,stroke:.7pt))
-    #place(top+left,dx:x+4pt,dy:41pt,text(size:8pt)[$W_P$]))
-    #place(top+left,dx:x+4pt,dy:64pt,text(size:8pt)[4λ]))
-    #seg(x+61pt,56pt,x+86pt,56pt)
+    #place(top+left,dx:x + 4pt,dy:41pt,text(size:8pt)[$W_P$]))
+    #place(top+left,dx:x + 4pt,dy:64pt,text(size:8pt)[4λ]))
+    #seg(x + 61pt,56pt,x + 86pt,56pt)
   ]
   #place(top+left,dx:33pt,dy:105pt,text(size:7pt)[所有NMOS为4λ，比较PMOS 8λ、10λ与约6.2λ的延迟]))
 ])
