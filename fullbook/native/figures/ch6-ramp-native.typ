@@ -61,21 +61,48 @@
   #place(top+left,dx:73pt,dy:179pt,text(size:7.5pt)[充电电流]))
   #place(top+left,dx:188pt,dy:179pt,text(size:7.5pt)[放电电流]))
 ])
-#let fig615-panel(label:"")=html.frame(block(width:187pt,height:190pt)[
-  #seg(24pt,165pt,171pt,165pt)
-  #seg(24pt,165pt,24pt,19pt)
-  #for off in (0pt,12pt,24pt,36pt,48pt) [
-    #seg(26pt,30pt + off,71pt + off / 2,30pt + off)
-    #seg(71pt + off / 2,30pt + off,78pt + off / 2,115pt + off / 2)
-    #seg(78pt + off / 2,115pt + off / 2,164pt,127pt + off / 2)
+#let fig615-panel(label:"",ramp:false)=html.frame(block(width:187pt,height:247pt)[
+  // Upper subfigure: CMOS circuit and an explicit capacitive output.
+  #place(top+left,dx:82pt,dy:3pt,text(size:7pt)[$V_("DD")$]))
+  #seg(94pt,16pt,94pt,30pt)
+  #mos(94pt,30pt,label:"P")
+  #seg(94pt,58pt,94pt,67pt)
+  #mos(94pt,67pt,label:"N")
+  #seg(94pt,95pt,94pt,110pt)
+  #seg(94pt,64pt,143pt,64pt)
+  #cap(143pt,78pt,label:"CL")
+  #place(top+left,dx:144pt,dy:54pt,text(size:7pt)[$V_("out")$]))
+  #place(top+left,dx:12pt,dy:63pt,text(size:7pt)[$V_("in")$]))
+  #seg(44pt,63pt,66pt,63pt)
+  #seg(66pt,44pt,66pt,87pt)
+  // Lower contour: voltage-dependent switching trajectory with marked corners.
+  #seg(30pt,221pt,174pt,221pt)
+  #seg(30pt,221pt,30pt,123pt)
+  #place(top+left,dx:4pt,dy:118pt,text(size:7pt)[$V_("out")$]))
+  #place(top+left,dx:164pt,dy:225pt,text(size:7pt)[$V_("in")$]))
+  #for k in (0,1,2,3,4,5,6) [
+    #let y=134pt + k * 11pt
+    #let bend=72pt + k * 6pt
+    #seg(36pt,y,bend,y)
+    #seg(bend,y,bend + 9pt,204pt - k * 3pt)
+    #seg(bend + 9pt,204pt - k * 3pt,164pt,211pt - k * 2pt)
   ]
-  #place(top+left,dx:28pt,dy:5pt,text(size:7pt)[$V_("out")$]))
-  #place(top+left,dx:160pt,dy:169pt,text(size:7pt)[$V_("in")$]))
-  #place(top+left,dx:46pt,dy:177pt,text(size:7pt)[#label]))
+  #place(top+left,dx:34pt,dy:127pt,text(size:7pt)[A]))
+  #place(top+left,dx:148pt,dy:127pt,text(size:7pt)[B]))
+  #place(top+left,dx:34pt,dy:205pt,text(size:7pt)[D]))
+  #place(top+left,dx:150pt,dy:205pt,text(size:7pt)[C]))
+  #if ramp [
+    #seg(45pt,129pt,94pt,159pt)
+    #seg(94pt,159pt,145pt,203pt)
+  ] else [
+    #seg(45pt,129pt,150pt,129pt)
+    #seg(150pt,129pt,150pt,203pt)
+  ]
+  #place(top+left,dx:43pt,dy:234pt,text(size:7pt)[#label]))
 ])
 #let fig615()=grid(columns:(1fr,1fr),column-gutter:6pt,
   [#fig615-panel(label:"（a）阶跃轨迹")],
-  [#fig615-panel(label:"（b）斜坡轨迹")])
+  [#fig615-panel(label:"（b）斜坡轨迹",ramp:true)])
 #let fig616()=html.frame(block(width:390pt,height:162pt)[
   #place(top+left,dx:11pt,dy:4pt,text(size:8pt)[斜坡输入下的四级反相器链及累计延迟]))
   #seg(8pt,62pt,35pt,62pt)
