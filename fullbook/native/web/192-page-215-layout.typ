@@ -1,7 +1,7 @@
-// SOURCE PDF PAGE 215; editable partial layout, not verified full-page.
-#set page(width:506.8346pt,height:729.6pt,margin:(top:17pt,bottom:18pt,left:25pt,right:25pt))
-#set text(font:("Noto Serif CJK SC","DejaVu Serif"),size:6pt,lang:"zh")
-#set par(justify:true,first-line-indent:1em,leading:.1em,spacing:.12em)
-#show heading.where(level:1):set text(font:"Noto Sans CJK SC",size:9.1pt,weight:"bold")
-#show heading.where(level:2):set text(font:"Noto Sans CJK SC",size:7.7pt,weight:"bold")
+// PDF 215, paper 506.8346×729.6 pt, page-native editable layout.
+// NO automatic 1:1 acceptance; inspect exported SVG against source scan.
+#set page(width:506.8346pt,height:729.6pt,margin:(top:34pt,bottom:26pt,left:45pt,right:43pt))
+#set text(font:("Noto Serif CJK SC","DejaVu Serif"),size:7.4pt,lang:"zh")
+#set par(justify:true,first-line-indent:1.7em,leading:1.5pt,spacing:2.8pt)
+#show heading.where(level:2):set text(font:"Noto Sans CJK SC",size:10pt,weight:"bold")
 #include "192-page-215.typ"
