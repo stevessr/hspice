@@ -9,18 +9,22 @@
 同样得到了相同的结果：为了最优化延迟，必须使所有门延迟的扇出部分相等。
 
 #line(length:100%,stroke:.5pt)
+#v(14pt)
 *例6.10　计算关键路径上最优化的门尺寸*
 
 *问题：* 找出下面电路中指定路径上的器件尺寸，以使延迟最优化。
 
+#v(8pt)
 #fig-example610()
 
+#v(16pt)
 *解答：*
 
 必须使延迟的扇出部分相等。因此，
 
 #align(center)[$tau_("nand") ((C_(j+1))/(C_("in"))) = tau_("inv") ((C_(j+2))/(C_(j+1))) = tau_("nor") ((C_("load"))/(C_(j+2)))$]
 
+#v(6pt)
 取这三部分的乘积，然后计算其几何平均值：
 
 #align(center)[$"扇出延迟"=root(3,tau_("nand") (C_(j+1)/C_("in")) times tau_("inv") (C_(j+2)/C_(j+1)) times tau_("nor") (C_("load")/C_(j+2)))$]

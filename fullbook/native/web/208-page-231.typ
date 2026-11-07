@@ -2,7 +2,8 @@
 #import "../figures/ch6-path-sizing-native.typ": fig621
 #set document(title:"第6章 · 反相器本征延迟及最优尺寸公式 · PDF231")
 #align(center)[#text(size:8pt,weight:"bold")[212　数字集成电路分析与设计——深亚微米工艺（第三版）]]
-#line(length:100%,stroke:.5pt)
+ #line(length:100%,stroke:.5pt)
+#v(12pt)
 
 为了把固有时间常量 $tau_("inv")$ 结合到式中，我们通过乘除 $C_("in")$ 将该式做如下变换：
 
@@ -15,6 +16,7 @@
 因为 $C_("self")$ 依赖于版图，所以这个值高度依赖于门的版图。$C_("out")/C_("in")$ 的比值叫做扇出比 $f$ 或电学强度。
 
 #line(length:100%,stroke:.5pt)
+#v(22pt)
 *例6.8　针对0.13 μm的工艺计算 $tau_("inv")$ 和 $gamma_("inv")$*
 
 *问题：* 计算在0.13 μm工艺下一个反相器的 $tau_("inv")$ 和 $gamma_("inv")$。
@@ -26,12 +28,14 @@
 #align(center)[$gamma_("inv") = (C_("self"))/(C_("in")) = (C_("eff")(3W_n))/(C_g(3W_n)) = (1 " fF/μm")/(2 " fF/μm") = 0.5$]
 
 #line(length:100%,stroke:.5pt)
+#v(12pt)
 *练习6.3　针对0.18 μm工艺计算 $tau_("inv")$ 和 $gamma_("inv")$。*
 
 回到确定反相器尺寸的问题上，我们想要最优化图6.21中反相器链的延迟。通过各级的延迟可以计算如下：
 
 #align(center)[$"总延迟" = sum_j tau_("inv") ((C_(j+1))/(C_j) + gamma_("inv"))$]
 
+#v(17pt)
 #fig621()
 #align(center)[*图6.21　反相器链尺寸的最优化*]
 
