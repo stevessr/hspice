@@ -14,8 +14,8 @@ assert all(not x["accepted"] and not x["checks"]["full_text"] for x in audit["pa
 assert audit["pages"][3]["normalized_similarity"]==0.5282
 landmarks={
 208:("高速 CMOS","6.1"),
-209:("图6.1","propagation"),
-210:("图6.2","图6.3","6.2","equivalent"),
+209:("图6.1","figure-6-1","负传播延迟"),
+210:("图6.2","图6.3","6.2","figure-6-2","figure-6-3"),
 211:("(6.1)","(6.2)","(6.3)","(6.4a)","(6.4b)","(6.5a)","(6.5b)","0.34","0.6"),
 212:("例6.1","14.5","33.5","12.5","30","(6.6)"),
 213:("图6.4","图6.5","stacking"),

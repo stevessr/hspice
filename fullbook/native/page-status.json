@@ -2637,7 +2637,7 @@
       "source_file": "web/186-page-209.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass3-source-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.8857,
       "source_scan_landmarks_checked": true,
@@ -2646,7 +2646,12 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "第三轮源页逐段重排与可编辑图元；实际SVG叠图F1=0.53504, 初版0.03089；布局、全部符号/器件连接、逐像素位置尚未1:1验收。",
+      "native_content_level": "source-paragraphs-and-editable-math",
+      "source_text_manual_spotcheck": true,
+      "visual_scan_comparison_complete": false,
+      "visual_probe_f1": 0.53504,
+      "visual_probe_version": "scan-vs-ci-svg-2026-11-07-pass3"
     },
     {
       "pdf_page": 210,
@@ -2654,7 +2659,7 @@
       "source_file": "web/187-page-210.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass3-source-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.6836,
       "source_scan_landmarks_checked": true,
@@ -2663,7 +2668,12 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "第三轮源页逐段重排与可编辑图元；实际SVG叠图F1=0.35427, 初版0.09936；布局、全部符号/器件连接、逐像素位置尚未1:1验收。",
+      "native_content_level": "source-paragraphs-and-editable-math",
+      "source_text_manual_spotcheck": true,
+      "visual_scan_comparison_complete": false,
+      "visual_probe_f1": 0.35427,
+      "visual_probe_version": "scan-vs-ci-svg-2026-11-07-pass3"
     },
     {
       "pdf_page": 211,
@@ -2671,7 +2681,7 @@
       "source_file": "web/188-page-211.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass3-source-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.5282,
       "source_scan_landmarks_checked": true,
@@ -2680,7 +2690,12 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "第三轮源页逐段重排与可编辑图元；实际SVG叠图F1=0.33421, 初版0.10312；布局、全部符号/器件连接、逐像素位置尚未1:1验收。",
+      "native_content_level": "source-paragraphs-and-editable-math",
+      "source_text_manual_spotcheck": true,
+      "visual_scan_comparison_complete": false,
+      "visual_probe_f1": 0.33421,
+      "visual_probe_version": "scan-vs-ci-svg-2026-11-07-pass3"
     },
     {
       "pdf_page": 212,
@@ -2688,7 +2703,7 @@
       "source_file": "web/189-page-212.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass3-source-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.6504,
       "source_scan_landmarks_checked": true,
@@ -2697,7 +2712,12 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "第三轮源页逐段重排与可编辑图元；实际SVG叠图F1=0.37477, 初版0.07709；布局、全部符号/器件连接、逐像素位置尚未1:1验收。",
+      "native_content_level": "source-paragraphs-and-editable-math",
+      "source_text_manual_spotcheck": true,
+      "visual_scan_comparison_complete": false,
+      "visual_probe_f1": 0.37477,
+      "visual_probe_version": "scan-vs-ci-svg-2026-11-07-pass3"
     },
     {
       "pdf_page": 213,
