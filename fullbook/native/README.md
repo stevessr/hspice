@@ -136,3 +136,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF177—186：第5章复合门、XOR/MUX及SR锁存器
 
 新增`web/154-page-177.typ`到`web/163-page-186.typ`和`figures/ch5-complex-sequential-native.typ`。包含例5.2三条0.745/0.721/0.883V的VTC对照、式5.4/5.5复合CMOS、例5.3、5.4 XOR/XNOR、5.5 MUX、5.6双稳态和NOR/NAND SR、式5.6以及例5.4的WN440nm/WP1.76µm。新脚本`qa/check_ch5_complex_sequential.py`核对原书主要数值和禁用态。连续原生选段PDF26—186共161页，严格整页1:1验收0/445。
+
+
+## 2026-11-07：第5章 JK、主从和边沿触发选段（扫描187—188页）
+
+新增 `web/164-page-187.typ`、`web/165-page-188.typ`、原纸尺寸 SVG 布局和 `figures/ch5-jk-native.typ`。包含图5.19—5.21的原生概念重绘、JK功能真值表、主从一次锁存效应、练习5.5及建立／保持时间；`qa/check_ch5_jk.py` 校验关键页号与概念。连续可编辑选段为 PDF26—188 共163页，整页1:1验收仍为0/445。源扫描的每条逻辑连线及全部正文未完全复刻，禁止标记为 verified。
