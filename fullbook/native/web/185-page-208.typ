@@ -8,7 +8,7 @@
 #v(31pt)
 
 #block(height:155pt, width:100%,fill:rgb("e3e3e3"),inset:(x:7pt,y:5pt))[
-  #stack(dir:ttb,spacing:5pt,
+  #stack(dir:ttb,spacing:8pt,
     text(size:9.2pt,weight:"bold")[本章提要],
     text(size:9.1pt)[　　6.1　绪论],
     text(size:9.1pt)[　　6.2　转变时间分析],
