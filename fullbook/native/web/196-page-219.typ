@@ -6,7 +6,7 @@
 
 结果显示栅电容在由低到高转换的情况下稍高。如期望的那样，获得 $C_g$ 的平均值 $C_g=2 " fF/μm"$。下面运行一个指定面积和周长的模拟，并基于相对于先前SPICE运行结果的传播延迟增加量来计算 $C_("eff")$ 的值。
 
-#show raw.where(block:true):set text(size:5.7pt)
+#show raw.where(block:true):set text(size:7.2pt)
 #raw(read("../examples/ch6-example6-2-with-area.sp"),block:true,lang:"spice")
 
 下降时的传播延迟是44 ps，上升时的传播延迟是59 ps。可以在这两种情况下使用相同的延迟公式求出 $C_("eff")$：

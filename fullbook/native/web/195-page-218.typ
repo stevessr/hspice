@@ -18,7 +18,7 @@
 
 *解答：* 运行两种模拟。在第一种情况下，设置所有面积和周长值为0以便忽略结电容。测量上升和下降时的传播延迟并提取 $C_g$。然后，将所有面积和周长值设置为正确值并再次测量传播延迟。延迟的增加是由于结电容引起的，所以 $C_("eff")$ 的值可以提取出来。
 
-#show raw.where(block:true):set text(size:5.7pt)
+#show raw.where(block:true):set text(size:7.2pt)
 #raw(read("../examples/ch6-example6-2-no-area.sp"),block:true,lang:"spice")
 
 下降时的传播延迟是40 ps，上升时的传播延迟是55 ps。在这两种情况下可以用延迟公式来求出 $C_g$：
