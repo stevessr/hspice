@@ -189,7 +189,14 @@ const sections = [
   { id: '174-page-197', title: '原书第197页 · NOR瞬态仿真', pages: 'PDF第197页/印刷第178页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
   { id: '175-page-198', title: '原书第198页 · 亚阈值泄漏', pages: 'PDF第198页/印刷第179页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
   { id: '176-page-199', title: '原书第199页 · 完整功耗模型与例5.8', pages: 'PDF第199页/印刷第180页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '177-page-200', title: '原书第200页 · PDP/EDP折中指标', pages: 'PDF第200页/印刷第181页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' }
+  { id: '177-page-200', title: '原书第200页 · PDP/EDP折中指标', pages: 'PDF第200页/印刷第181页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '178-page-201', title: '原书第201页 · EDP的最优电源电压', pages: 'PDF第201页/印刷第182页', summary: '双OCR、原生选段；严格完整页验收待完成' },
+  { id: '179-page-202', title: '原书第202页 · 例5.9双设计与小结', pages: 'PDF第202页/印刷第183页', summary: '双OCR、原生选段；严格完整页验收待完成' },
+  { id: '180-page-203', title: '原书第203页 · 八条参考文献与P5.1—P5.5', pages: 'PDF第203页/印刷第184页', summary: '双OCR、原生选段；严格完整页验收待完成' },
+  { id: '181-page-204', title: '原书第204页 · MOS练习图P5.4—P5.6', pages: 'PDF第204页/印刷第185页', summary: '双OCR、原生选段；严格完整页验收待完成' },
+  { id: '182-page-205', title: '原书第205页 · 习题P5.7—P5.11', pages: 'PDF第205页/印刷第186页', summary: '双OCR、原生选段；严格完整页验收待完成' },
+  { id: '183-page-206', title: '原书第206页 · 功耗习题P5.11—P5.14', pages: 'PDF第206页/印刷第187页', summary: '双OCR、原生选段；严格完整页验收待完成' },
+  { id: '184-page-207', title: '原书第207页 · 章末习题P5.14—P5.19', pages: 'PDF第207页/印刷第188页', summary: '双OCR、原生选段；严格完整页验收待完成' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
