@@ -1,3 +1,4 @@
+// SOURCE PDF PAGE 215; original image landmark for selection validation.
 // ORIGINAL PDF215 / PRINTED196 · all displayed equations checked against image
 #import "../figures/ch6-pass4-native.typ": fig67
 #set document(title:"第6章·门的负载电容与扇出电容·PDF215")

@@ -1,3 +1,4 @@
+// SOURCE PDF PAGE 214; original image landmark for selection validation.
 // ORIGINAL PDF214 / PRINTED195 · source paragraph reflow and figure 6.6
 #import "../figures/ch6-pass4-native.typ": fig66
 #set document(title:"第6章·速度饱和的器件尺寸与负载电容·PDF214")

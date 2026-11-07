@@ -1,3 +1,4 @@
+// SOURCE PDF PAGE 220; original image landmark for selection validation.
 // ORIGINAL PDF220 / PRINTED201 · NOR shared-diffusion figure and NAND3 example
 #import "../figures/ch6-pass4-native.typ": fig611, fig-example63
 #set document(title:"第6章·图6.11共享扩散与例6.3·PDF220")

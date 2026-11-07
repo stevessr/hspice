@@ -1,3 +1,4 @@
+// SOURCE PDF PAGE 218; original image landmark for selection validation.
 // ORIGINAL PDF218 / PRINTED199 · Example6.2 original code via user-supplied .sp file.
 #set document(title:"第6章·例6.2在0.18μm用SPICE提取Cg·PDF218")
 #align(center)[#text(size:8pt,weight:"bold")[第6章　高速 CMOS 逻辑设计　　　　　　　　　　　　199]]

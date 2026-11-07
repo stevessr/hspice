@@ -1,3 +1,4 @@
+// SOURCE PDF PAGE 216; original image landmark for selection validation.
 // ORIGINAL PDF216 / PRINTED197 · fig6.8 gate capacitances and source section6.3.2
 #import "../figures/ch6-pass4-native.typ": cap-inverter-panel
 #set document(title:"第6章·输入电容计算与自身电容·PDF216")

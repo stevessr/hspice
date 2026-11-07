@@ -1,3 +1,4 @@
+// SOURCE PDF PAGE 219; original image landmark for selection validation.
 // ORIGINAL PDF219 / PRINTED200 · verified transistor netlist + shared diffusion Eq6.11.
 #set document(title:"第6章·例6.2有效自身电容·共享源漏结电容·PDF219")
 #align(center)[#text(size:8pt,weight:"bold")[200　数字集成电路分析与设计——深亚微米工艺（第三版）]]

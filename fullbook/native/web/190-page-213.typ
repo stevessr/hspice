@@ -1,3 +1,4 @@
+// SOURCE PDF PAGE 213; original image landmark for selection validation.
 // ORIGINAL PDF213 / PRINTED194 · third-pass visual source transcription.
 // Typst body and editable native figures; complete 1:1 acceptance NOT granted.
 #import "../figures/ch6-pass4-native.typ": fig64, fig65

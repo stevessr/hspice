@@ -1,3 +1,4 @@
+// SOURCE PDF PAGE 217; original image landmark for selection validation.
 // ORIGINAL PDF217 / PRINTED198 · complete scan-grounded Miller derivation.
 #import "../figures/ch6-pass4-native.typ": cap-inverter-panel, miller-panel
 #set document(title:"第6章·自身电容的计算与米勒效应·PDF217")
