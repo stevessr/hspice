@@ -1597,43 +1597,133 @@
     },
     {
       "pdf_page": 137,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/114-page-137.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式4.8a/b电阻负载反相器单位增益点和VIL解析式，原图长段公式需逐步检查。"
     },
     {
       "pdf_page": 138,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/115-page-138.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式4.8c—f高电平输入门限、式4.9切换点、例4.2初始参数转录。"
     },
     {
       "pdf_page": 139,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/116-page-139.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例4.2 0.08/0.46/0.77/0.38/0.43V和例4.3 SPICE网表；用户工艺模型库应另行提供。"
     },
     {
       "pdf_page": 140,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/117-page-140.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例4.3原SPICE参考结果0.085/0.558/0.972/0.78V，编辑曲线非逐点原输出。"
     },
     {
       "pdf_page": 141,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/118-page-141.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "4.5及4.5.1饱和增强型NMOS负载逻辑，承接图4.10。"
     },
     {
       "pdf_page": 142,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/119-page-142.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图4.10饱和NMOS负载、KR尺寸比式4.10、体效应式4.11；概念矢量非精确扫描。"
     },
     {
       "pdf_page": 143,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/120-page-143.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式4.12 VOH与体效应的非线性迭代、例4.4固定点约0.73V。"
     },
     {
       "pdf_page": 144,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/121-page-144.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例4.5工艺和目标VOL=0.1V，电流平衡公式；书中完整中间值待最终验算。"
     },
     {
       "pdf_page": 145,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/122-page-145.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例4.5 KR约1.7结果，4.5.2线性增强型负载、式4.13和图4.11概念矢量。"
     },
     {
       "pdf_page": 146,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/123-page-146.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "4.6 CMOS/4.6.1直流分析，互补CMOS静态上拉下拉和逻辑高低；图4.12尚未完全重绘。"
     },
     {
       "pdf_page": 147,

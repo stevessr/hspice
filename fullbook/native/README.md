@@ -111,3 +111,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF127—136：第4章反相器VTC、噪声容限与电阻负载
 
 新增`web/104-page-127.typ`到`web/113-page-136.typ`及配套纸张尺寸layout，`figures/ch4-inverter-native.typ`提供可编辑VTC、级联链路、噪声裕量、NMOS电阻负载和I-V负载线；源书式4.1—4.7与例4.1已按源页顺序放置，QA脚本`qa/check_ch4_inverter.py`。连续可编辑选段26—136共111页，整页1:1验证0/445。
+
+
+## PDF137—146：NMOS负载尺寸及CMOS反相器
+
+新增`web/114-page-137.typ`至`web/123-page-146.typ`、`figures/ch4-mos-loads-native.typ`，编辑式4.8a—4.13、例4.2—4.5、图4.10饱和/图4.11线性NMOS上拉以及CMOS双管互补连接。`qa/check_ch4_mosloads.py`检查参数、页码和关键数值。连续可编辑源页选段26—146共121页，严格整页1:1仍为0/445。
