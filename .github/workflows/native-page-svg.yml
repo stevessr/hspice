@@ -63,6 +63,7 @@ jobs:
           python3 fullbook/native/qa/check_ch6_logical_effort.py
           python3 fullbook/native/qa/check_ch6_logical_visual.py
           python3 fullbook/native/qa/check_ch6_pass7.py
+          python3 fullbook/native/qa/check_ch6_visual_pass7.py
           python3 fullbook/native/qa/check_ch6_visual_progress.py
           python3 fullbook/native/qa/check_ch6_spice_sources.py
           python3 fullbook/native/qa/check_status_consistency.py
