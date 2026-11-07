@@ -1,0 +1,109 @@
+{
+  "schema": "native-source-6.6-logical-effort-pass6",
+  "source_pdf_pages": 445,
+  "scope": [
+    237,
+    244
+  ],
+  "method": "Original source PDF scan page visual review and archived PSM3 baseline; second independent OCR batch not completed; math landmarks spotchecked",
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "strict_pages_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 237,
+      "printed_page": 218,
+      "source_png_sha256": "beaeac48bd5ee702679536cc30a5fe66634d57e76433a104953a3fd8bd33264f",
+      "archived_ocr_characters": 961,
+      "independent_second_ocr": "not_completed",
+      "full_text_verified": false,
+      "all_figures_verified": false,
+      "layout_verified": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 238,
+      "printed_page": 219,
+      "source_png_sha256": "a8ff333057549221b74faf54fc2b9d3a7123ef547fe7d8daf471e3d5bcd1e683",
+      "archived_ocr_characters": 711,
+      "independent_second_ocr": "not_completed",
+      "full_text_verified": false,
+      "all_figures_verified": false,
+      "layout_verified": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 239,
+      "printed_page": 220,
+      "source_png_sha256": "99229dd346d69d8e1923735d21ccbe51e50bb31c1db83e64a0d350e8bb84ea89",
+      "archived_ocr_characters": 747,
+      "independent_second_ocr": "not_completed",
+      "full_text_verified": false,
+      "all_figures_verified": false,
+      "layout_verified": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 240,
+      "printed_page": 221,
+      "source_png_sha256": "b27c93746b7b7f57c1556b539fa98b2a453d632fd613af60eba2c55aa1444846",
+      "archived_ocr_characters": 601,
+      "independent_second_ocr": "not_completed",
+      "full_text_verified": false,
+      "all_figures_verified": false,
+      "layout_verified": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 241,
+      "printed_page": 222,
+      "source_png_sha256": "68e6d17bdefdae52f7722b6cdbcc23f3777a99bc5821b03290598592fb13b172",
+      "archived_ocr_characters": 729,
+      "independent_second_ocr": "not_completed",
+      "full_text_verified": false,
+      "all_figures_verified": false,
+      "layout_verified": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 242,
+      "printed_page": 223,
+      "source_png_sha256": "7c699fb44b12eaef377830ebd884e96ef7c181d957372f75412f10792b43abc5",
+      "archived_ocr_characters": 418,
+      "independent_second_ocr": "not_completed",
+      "full_text_verified": false,
+      "all_figures_verified": false,
+      "layout_verified": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 243,
+      "printed_page": 224,
+      "source_png_sha256": "cd1071af6c8a092c5590dbe94e136b50864e8f88ae62f514fbb2edd202ea0346",
+      "archived_ocr_characters": 618,
+      "independent_second_ocr": "not_completed",
+      "full_text_verified": false,
+      "all_figures_verified": false,
+      "layout_verified": false,
+      "accepted": false
+    },
+    {
+      "pdf_page": 244,
+      "printed_page": 225,
+      "source_png_sha256": "ef983008a18fc7fc45896d8ba55bd119a9c4f2d5f8ad7b3daa3e1ae5b3514e59",
+      "archived_ocr_characters": 608,
+      "independent_second_ocr": "not_completed",
+      "full_text_verified": false,
+      "all_figures_verified": false,
+      "layout_verified": false,
+      "accepted": false
+    }
+  ],
+  "math_landmarks": [
+    "LEinv 1; LEnand4/3; LEnor5/3",
+    "P_inv1/2, P_nand1, P_nor3/2",
+    "Example 6.11 path effort 222.2, stage effort approx6, normalized D21, 157.5 ps",
+    "Example 6.12 skew inverter LE falling2/3 and rising4/3, mean1",
+    "Example 6.13 H400/90, optimal stage effort1.45, delay9.3, widths X14.5,Y12.7,Z13.8",
+    "Example 6.14 8-input AND option1 D≈13 vs option2 D≈13.3"
+  ]
+}
