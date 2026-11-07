@@ -28,7 +28,7 @@ for i, (a, b) in enumerate(zip(source["pages"], fidelity["pages"]), 1):
     else:
         assert a["status"] != "verified", i
 for n in range(20, 201):
-    stem = f"{n-23}-page-{n:03d}" if n >= 26 else f"{n-19:02d}-page-{n:03d}"
+    stem = f"{n-23:02d}-page-{n:03d}" if n >= 26 else f"{n-19:02d}-page-{n:03d}"
     assert (root / "web" / f"{stem}.typ").is_file(), n
     assert (root / "web" / f"{stem}-layout.typ").is_file(), n
     assert source["pages"][n-1]["status"] == "partially-transcribed", n
