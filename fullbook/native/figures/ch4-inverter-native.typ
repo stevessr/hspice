@@ -25,8 +25,8 @@
   #place(top + left, dx: 7pt, dy: 4pt, text(size: 8pt)[输入噪声沿六级反相器传播的示意])
   #for i in range(6) [
     #let x = 18pt + i*51pt
-    #place(top + left, dx:x,dy:47pt, polygon(3,rotation:90deg,
-       radius:20pt,stroke:.75pt,fill:rgb("eeeeee")))
+    #place(top + left, dx:x,dy:47pt, polygon((0pt,0pt),(30pt,16pt),(0pt,32pt),
+       stroke:.75pt,fill:rgb("eeeeee")))
     #place(top + left, dx:x + 25pt,dy:47pt,circle(radius:2pt,stroke:.7pt,fill:white))
     #place(top + left, dx:x + 16pt,dy:72pt,text(size:7pt)[#(i + 1)])
     #if i < 5 [
