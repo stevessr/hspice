@@ -17,5 +17,5 @@ for src in root.glob("*-page-???.typ"):
     assert '#include "'+src.name+'"' in content,layout
     assert "506.8346pt" in content and "729.6pt" in content,layout
     pages[page]=src
-assert sorted(pages)==list(range(20,187)),sorted(pages)
-print("Native partial selections cover source pages 20..186, 167 pages; full-page acceptance 0")
+assert sorted(pages)==list(range(20,189)),sorted(pages)
+print("Native partial selections cover source pages 20..188, 169 pages; full-page acceptance 0")
