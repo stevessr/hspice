@@ -126,3 +126,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF157—166：第4章时序、尺寸、三态及全部习题
 
 `web/134-page-157.typ`—`web/143-page-166.typ`及配套layout新增式4.22—4.24 RC延迟与等效电阻、例4.9 CMOS与伪NMOS尺寸比较、4.9三态逻辑、4.10工艺表、4.11四项参考文献、4.12习题P4.1—P4.16；`figures/ch4-delay-tristate-native.typ`包含可编辑时序图、三态级联和习题VTC。回归`qa/check_ch4_end.py`核对几何比例数值及章节习题编号。当前连续原生选段26—166共141页，所有源页仍严格0/445整页1:1验收。
+
+
+## PDF167—176：第5章静态CMOS门电路开头
+
+新增`web/144-page-167.typ`至`web/153-page-176.typ`、`figures/ch5-cmos-gates-native.typ`。按扫描保留章首12节目录、NAND/NOR互补网络、图5.1—5.11的主要原生结构、式5.1/5.2串并联等效宽度和式5.3德摩根律、例5.1三输入门以及例5.2 0.18um NAND首个切换电平0.77V。新QA`qa/check_ch5_gates.py`核对页面、公式、例题数值。连续原生内容选段PDF26—176共151页；严格全页1:1验收0/445。

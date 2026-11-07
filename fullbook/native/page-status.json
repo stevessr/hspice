@@ -1987,43 +1987,133 @@
     },
     {
       "pdf_page": 167,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/144-page-167.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "第5章章首目录和5.1静态组合、时序门概述，灰底目录未复刻。"
     },
     {
       "pdf_page": 168,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/145-page-168.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "第5章5.2 CMOS NAND/NOR的PUN/PDN互补拓扑，未逐字校对所有描述。"
     },
     {
       "pdf_page": 169,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/146-page-169.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.1 NAND2/NOR2，5.2.1最坏路径尺寸原则；左NOR右NAND关系已校准。"
     },
     {
       "pdf_page": 170,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/147-page-170.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.2 NAND2/NOR2/反相器尺寸及三输入扩展，原图尺寸布局待校准。"
     },
     {
       "pdf_page": 171,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/148-page-171.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.3伪NMOS三输入栈、图5.4，式5.1串联Weq/5.2并联Weq。"
     },
     {
       "pdf_page": 172,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/149-page-172.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例5.1 NAND3/NOR3尺寸、5.2.2扇入和DeMorgan式5.3；原例布局未逐图。"
     },
     {
       "pdf_page": 173,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/150-page-173.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.5/5.6/5.7 8输入NAND/DeMorgan/伪NMOS转换，结构性编辑选段。"
     },
     {
       "pdf_page": 174,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/151-page-174.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.8 NAND4-INV-NAND2-INV；图5.9 FO4概念，电路图元尚需原图复刻。"
     },
     {
       "pdf_page": 175,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/152-page-175.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "5.2.3 NAND门不同输入切换VTC及图5.10，曲线数据仅示意未取点。"
     },
     {
       "pdf_page": 176,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/153-page-176.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.11 NOR VTC、例5.2 0.18um CMOS NAND单输入切换0.77V，继续次页。"
     },
     {
       "pdf_page": 177,
