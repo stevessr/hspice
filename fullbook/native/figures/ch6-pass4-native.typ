@@ -2,15 +2,15 @@
 // figures, reconstructed from the supplied Chinese textbook PDF213–220.
 // No embedded scan images. Strict per-figure 1:1 placement is NOT yet accepted.
 #let w(x1,y1,x2,y2) = place(top+left,dx:x1,dy:y1,
-  line(end:(x2-x1,y2-y1),stroke:.75pt))
+  line(end:(x2 - x1,y2 - y1),stroke:.75pt))
 #let dot(x,y) = place(top+left,dx:x,dy:y,circle(radius:1.6pt,fill:black))
 #let mos(x,y,p:false,label:"",size:"") = {
   place(top+left,dx:x,dy:y,line(end:(0pt,29pt),stroke:1pt))
-  place(top+left,dx:x-5pt,dy:y,line(end:(0pt,29pt),stroke:.8pt))
-  place(top+left,dx:x-23pt,dy:y+14pt,line(length:18pt,stroke:.75pt))
-  if p {place(top+left,dx:x-7pt,dy:y+12pt,circle(radius:2.4pt,stroke:.6pt,fill:white))}
-  if label!="" {place(top+left,dx:x+5pt,dy:y+5pt,text(size:7pt)[#label])}
-  if size!="" {place(top+left,dx:x+19pt,dy:y+17pt,text(size:7pt)[#size])}
+  place(top+left,dx:x - 5pt,dy:y,line(end:(0pt,29pt),stroke:.8pt))
+  place(top+left,dx:x - 23pt,dy:y + 14pt,line(length:18pt,stroke:.75pt))
+  if p {place(top+left,dx:x - 7pt,dy:y + 12pt,circle(radius:2.4pt,stroke:.6pt,fill:white))}
+  if label!="" {place(top+left,dx:x + 5pt,dy:y + 5pt,text(size:7pt)[#label])}
+  if size!="" {place(top+left,dx:x + 19pt,dy:y + 17pt,text(size:7pt)[#size])}
 }
 #let inv-panel()=html.frame(block(width:120pt,height:140pt)[
   #w(61pt,9pt,61pt,27pt)
@@ -91,15 +91,15 @@
   [#curve-stack-panel()], [#curve-stack-panel(stacked:true)])
 #let cap-mark(x,y,label:"") = {
   place(top+left,dx:x,dy:y,line(length:12pt,stroke:.8pt))
-  place(top+left,dx:x,dy:y+5pt,line(length:12pt,stroke:.8pt))
-  if label!="" {place(top+left,dx:x+14pt,dy:y-4pt,text(size:7pt)[#label])}
+  place(top+left,dx:x,dy:y + 5pt,line(length:12pt,stroke:.8pt))
+  if label!="" {place(top+left,dx:x + 14pt,dy:y - 4pt,text(size:7pt)[#label])}
 }
 #let fig67()=html.frame(block(width:385pt,height:145pt)[
   #w(13pt,62pt,350pt,62pt)
   #place(top+left,dx:11pt,dy:40pt,text(size:8pt)[Driver ▷]))
   #for part in ((100pt,"self"),(173pt,"wire"),(247pt,"fanout")) [
     #w(part.at(0),62pt,part.at(0),90pt)
-    #cap-mark(part.at(0)-6pt,90pt,label:part.at(1))
+    #cap-mark(part.at(0) - 6pt,90pt,label:part.at(1))
     #w(part.at(0),96pt,part.at(0),119pt)
   ]
   #w(310pt,62pt,310pt,38pt)
