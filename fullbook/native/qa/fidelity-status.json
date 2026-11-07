@@ -4971,7 +4971,7 @@
     },
     {
       "pdf_page": 229,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4983,13 +4983,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "未完成全文逐字核验及全图逐线复刻",
+        "特殊数学符号、上标、下标需要逐元素人工终审",
+        "版心、图注、线宽与原印刷页存在差异",
+        "仅有可编辑原生结构初稿，完整页1:1验收未通过"
+      ],
+      "notes": "PDF229 source-image review and native Typst excerpt; strict checks still open; do not claim OCR2 completed.",
       "page_source_verified": false
     },
     {
       "pdf_page": 230,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5001,13 +5006,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "未完成全文逐字核验及全图逐线复刻",
+        "特殊数学符号、上标、下标需要逐元素人工终审",
+        "版心、图注、线宽与原印刷页存在差异",
+        "仅有可编辑原生结构初稿，完整页1:1验收未通过"
+      ],
+      "notes": "PDF230 source-image review and native Typst excerpt; strict checks still open; do not claim OCR2 completed.",
       "page_source_verified": false
     },
     {
       "pdf_page": 231,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5019,13 +5029,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "未完成全文逐字核验及全图逐线复刻",
+        "特殊数学符号、上标、下标需要逐元素人工终审",
+        "版心、图注、线宽与原印刷页存在差异",
+        "仅有可编辑原生结构初稿，完整页1:1验收未通过"
+      ],
+      "notes": "PDF231 source-image review and native Typst excerpt; strict checks still open; do not claim OCR2 completed.",
       "page_source_verified": false
     },
     {
       "pdf_page": 232,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5037,13 +5052,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "未完成全文逐字核验及全图逐线复刻",
+        "特殊数学符号、上标、下标需要逐元素人工终审",
+        "版心、图注、线宽与原印刷页存在差异",
+        "仅有可编辑原生结构初稿，完整页1:1验收未通过"
+      ],
+      "notes": "PDF232 source-image review and native Typst excerpt; strict checks still open; do not claim OCR2 completed.",
       "page_source_verified": false
     },
     {
       "pdf_page": 233,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5055,13 +5075,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "未完成全文逐字核验及全图逐线复刻",
+        "特殊数学符号、上标、下标需要逐元素人工终审",
+        "版心、图注、线宽与原印刷页存在差异",
+        "仅有可编辑原生结构初稿，完整页1:1验收未通过"
+      ],
+      "notes": "PDF233 source-image review and native Typst excerpt; strict checks still open; do not claim OCR2 completed.",
       "page_source_verified": false
     },
     {
       "pdf_page": 234,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5073,13 +5098,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "未完成全文逐字核验及全图逐线复刻",
+        "特殊数学符号、上标、下标需要逐元素人工终审",
+        "版心、图注、线宽与原印刷页存在差异",
+        "仅有可编辑原生结构初稿，完整页1:1验收未通过"
+      ],
+      "notes": "PDF234 source-image review and native Typst excerpt; strict checks still open; do not claim OCR2 completed.",
       "page_source_verified": false
     },
     {
       "pdf_page": 235,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5091,13 +5121,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "未完成全文逐字核验及全图逐线复刻",
+        "特殊数学符号、上标、下标需要逐元素人工终审",
+        "版心、图注、线宽与原印刷页存在差异",
+        "仅有可编辑原生结构初稿，完整页1:1验收未通过"
+      ],
+      "notes": "PDF235 source-image review and native Typst excerpt; strict checks still open; do not claim OCR2 completed.",
       "page_source_verified": false
     },
     {
       "pdf_page": 236,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5109,8 +5144,13 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "未完成全文逐字核验及全图逐线复刻",
+        "特殊数学符号、上标、下标需要逐元素人工终审",
+        "版心、图注、线宽与原印刷页存在差异",
+        "仅有可编辑原生结构初稿，完整页1:1验收未通过"
+      ],
+      "notes": "PDF236 source-image review and native Typst excerpt; strict checks still open; do not claim OCR2 completed.",
       "page_source_verified": false
     },
     {
