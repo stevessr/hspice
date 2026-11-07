@@ -13,7 +13,7 @@ $ times [(V_("DD")-V_("in")-abs(V_("TP")))(V_("DD")-V_("out")) -(V_("DD")-V_("ou
 
 将 $V_("in")$ 代入，可以确定区域II的VTC并解出 $V_("out")$。
 
-区域III：**n-sat, p-sat**。两器件均饱和，VTC在这一段近似为垂直线段。根据
+区域III：*n-sat, p-sat*。两器件均饱和，VTC在这一段近似为垂直线段。根据
 
 $ I_("DN")("sat") = I_("DP")("sat") $
 
