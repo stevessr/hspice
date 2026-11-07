@@ -13,15 +13,15 @@
   #trace(((25pt,28pt),(45pt,28pt),(58pt,27pt),(66pt,21pt),(74pt,10pt),(83pt,5pt),(97pt,4pt),(153pt,4pt)))
   #trace(((28pt,78pt),(50pt,78pt),(68pt,73pt),(79pt,65pt),(87pt,50pt),(95pt,32pt),(104pt,26pt),(153pt,26pt)))
   #if kind=="negative" {
-    #trace(((27pt,27pt),(48pt,27pt),(62pt,29pt),(73pt,39pt),(81pt,58pt),(95pt,72pt),(153pt,73pt)))
-    #trace(((27pt,74pt),(48pt,72pt),(60pt,63pt),(72pt,50pt),(84pt,37pt),(98pt,31pt),(153pt,30pt)))
+    trace(((27pt,27pt),(48pt,27pt),(62pt,29pt),(73pt,39pt),(81pt,58pt),(95pt,72pt),(153pt,73pt)))
+    trace(((27pt,74pt),(48pt,72pt),(60pt,63pt),(72pt,50pt),(84pt,37pt),(98pt,31pt),(153pt,30pt)))
   }
   #if kind!="negative" {
-    #place(top+left,dx:82pt,dy:7pt,line(end:(0pt,75pt),stroke:.55pt))
-    #place(top+left,dx:98pt,dy:7pt,line(end:(0pt,75pt),stroke:.55pt))
+    place(top+left,dx:82pt,dy:7pt,line(end:(0pt,75pt),stroke:.55pt))
+    place(top+left,dx:98pt,dy:7pt,line(end:(0pt,75pt),stroke:.55pt))
   } else {
-    #place(top+left,dx:74pt,dy:7pt,line(end:(0pt,75pt),stroke:.55pt))
-    #place(top+left,dx:91pt,dy:7pt,line(end:(0pt,75pt),stroke:.55pt))
+    place(top+left,dx:74pt,dy:7pt,line(end:(0pt,75pt),stroke:.55pt))
+    place(top+left,dx:91pt,dy:7pt,line(end:(0pt,75pt),stroke:.55pt))
   }
   #place(top+left,dx:13pt,dy:18pt,text(size:7pt)[#if kind=="threshold" [与非门的 $V_s$] else [输入的50%点]])
   #place(top+left,dx:99pt,dy:38pt,text(size:7pt)[#if kind=="threshold" [或非门的 $V_s$] else [输出的50%点]])
@@ -51,9 +51,9 @@
 }
 #let rise-panel(falling:false) = html.frame(block(width:183pt,height:98pt)[
   #if falling {
-    #trace(((20pt,13pt),(48pt,13pt),(59pt,14pt),(69pt,24pt),(80pt,43pt),(95pt,62pt),(112pt,71pt),(155pt,72pt)))
+    trace(((20pt,13pt),(48pt,13pt),(59pt,14pt),(69pt,24pt),(80pt,43pt),(95pt,62pt),(112pt,71pt),(155pt,72pt)))
   } else {
-    #trace(((20pt,72pt),(48pt,71pt),(59pt,68pt),(69pt,56pt),(80pt,39pt),(95pt,20pt),(112pt,15pt),(155pt,14pt)))
+    trace(((20pt,72pt),(48pt,71pt),(59pt,68pt),(69pt,56pt),(80pt,39pt),(95pt,20pt),(112pt,15pt),(155pt,14pt)))
   }
   #place(top+left,dx:69pt,dy:8pt,line(end:(0pt,71pt),stroke:.55pt))
   #place(top+left,dx:99pt,dy:8pt,line(end:(0pt,71pt),stroke:.55pt))
