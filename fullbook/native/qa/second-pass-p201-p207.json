@@ -1,0 +1,69 @@
+{
+  "schema": "native-typst-second-pass-ocr-v1",
+  "range": [
+    201,
+    207
+  ],
+  "method": "first pass Tesseract chi_sim+eng PSM3, second independent scan render 1400px Tesseract chi_sim+eng PSM6",
+  "note": "OCR agreement is a disagreement signal, not transcription fidelity",
+  "pages": [
+    {
+      "pdf_page": 201,
+      "normalized_similarity": 0.916,
+      "scan_image_compared": true,
+      "source_equation_spotchecked": true,
+      "strict_full_page_accepted": false
+    },
+    {
+      "pdf_page": 202,
+      "normalized_similarity": 0.745,
+      "scan_image_compared": true,
+      "source_equation_spotchecked": true,
+      "strict_full_page_accepted": false
+    },
+    {
+      "pdf_page": 203,
+      "normalized_similarity": 0.955,
+      "scan_image_compared": true,
+      "source_equation_spotchecked": true,
+      "strict_full_page_accepted": false
+    },
+    {
+      "pdf_page": 204,
+      "normalized_similarity": 0.671,
+      "scan_image_compared": true,
+      "source_equation_spotchecked": true,
+      "strict_full_page_accepted": false
+    },
+    {
+      "pdf_page": 205,
+      "normalized_similarity": 0.865,
+      "scan_image_compared": true,
+      "source_equation_spotchecked": true,
+      "strict_full_page_accepted": false
+    },
+    {
+      "pdf_page": 206,
+      "normalized_similarity": 0.839,
+      "scan_image_compared": true,
+      "source_equation_spotchecked": true,
+      "strict_full_page_accepted": false
+    },
+    {
+      "pdf_page": 207,
+      "normalized_similarity": 0.869,
+      "scan_image_compared": true,
+      "source_equation_spotchecked": true,
+      "strict_full_page_accepted": false
+    }
+  ],
+  "full_page_accepted": 0,
+  "source_confirmed": [
+    "PDF201: VDD optimum in the source model is 3/2 VT (not 3 VT)",
+    "PDF202: example 5.9 gives 32.4W and 36W, EDP 130e-18 and 36e-18 J.s",
+    "PDF204: diagrams P5.4/P5.5/P5.6 comprise three different MOS topologies; they remain schematic descriptions",
+    "PDF205: problem P5.9 load 100 fF and P5.10 load 75 fF",
+    "PDF206: problem P5.13 loads 20/40/80 fF, rise/fall intervals 0.01/0.1/0.2ns at 200 MHz",
+    "PDF207: exercises P5.15–P5.19, chapter 5 ends before PDF208"
+  ]
+}
