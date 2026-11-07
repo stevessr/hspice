@@ -46,7 +46,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "原书书名页的书名、作者、译者和出版项已对照扫描；版式尚未最终验收。",
       "page_source_verified": false
     },
@@ -370,7 +374,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "第1章标题、提要、1.1节开头与脚注已有部分人工转写；未完成整页核对。",
       "page_source_verified": false
     },
@@ -388,8 +396,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；未完成所有原文、图示及版式的逐页验收",
       "page_source_verified": false
     },
     {
@@ -406,7 +418,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
       "page_source_verified": false
     },
@@ -424,7 +440,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
       "page_source_verified": false
     },
@@ -442,7 +462,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "表1.1、文字、INV/NAND/NOR真值表已经对照扫描；逻辑门图符仍需按图1.3复刻。",
       "page_source_verified": false
     },
@@ -460,7 +484,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "积之和、和之积、XOR、MUX与德摩根定律(1.1)已重排并对照扫描；最终视觉排版待验收。",
       "page_source_verified": false
     },
@@ -660,7 +688,7 @@
     },
     {
       "pdf_page": 35,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -672,13 +700,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书第16页：图1.13的版图照片未重建；图1.14、1.15以原生拓扑解释寄生R、C、IR。正文非逐字转写。",
       "page_source_verified": false
     },
     {
       "pdf_page": 36,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -690,13 +722,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书第17页：图1.16原生时钟树示意；实际照片和全部文字未完成校对。",
       "page_source_verified": false
     },
     {
       "pdf_page": 37,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -708,13 +744,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书第18页：图1.17分布照片未移植；图1.18、1.19耦合和RLC图元已重排。",
       "page_source_verified": false
     },
     {
       "pdf_page": 38,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -726,13 +766,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书第19页：图1.20 CAD设计流程原生示意，拓扑节点还需全量校对。",
       "page_source_verified": false
     },
     {
       "pdf_page": 39,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -744,13 +788,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书第20页：1.5.1 SPICE与1.6节结构化教学内容，尚非完整原文。",
       "page_source_verified": false
     },
     {
       "pdf_page": 40,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -762,13 +810,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书第21页：表1.2 9行6列已与扫描逐项核对；正文与布局尚未验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 41,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -780,13 +832,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书第22页：图1.21原生趋势示意为非定量重绘；曲线坐标尚未校核。",
       "page_source_verified": false
     },
     {
       "pdf_page": 42,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -798,13 +854,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书23页：ITRS设计生产力与SoC复用示意可编辑；图1.22曲线点位与原图1.23细节待严格验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 43,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -816,13 +876,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书24页：SoC芯片功能分区图编辑版；图1.24原版微照片尚未移植，参考文献未全部恢复。",
       "page_source_verified": false
     },
     {
       "pdf_page": 44,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -834,13 +898,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书25页：P1.4半加器真值表四行四列逐格核对；P1.1、P1.6原题上划线逻辑式待逐符号转写。",
       "page_source_verified": false
     },
     {
       "pdf_page": 45,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -852,13 +920,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书26页：图P1.7反相器链、图P1.8 RC电路原生重绘；图P1.9部分拓扑和页内几何待精修。",
       "page_source_verified": false
     },
     {
       "pdf_page": 46,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -870,8 +942,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书27页：P1.10、P1.11、P1.12全部题目数据和公式示例核对；题解为额外内容，与原题区分。",
       "page_source_verified": false
     },
     {
@@ -888,7 +964,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "第2章标题、提要、绪论开头已局部校对，末段未完整转写。",
       "page_source_verified": false
     },
@@ -906,8 +986,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；2.1绪论与2.2 MOS结构：栅漏源体四端表已编辑，仍需核对原页全部段落。",
       "page_source_verified": false
     },
     {
@@ -924,8 +1008,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.1 NMOS四端和沟道横截面使用原生可编辑图元；尚未图像几何验收。",
       "page_source_verified": false
     },
     {
@@ -942,7 +1030,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
       "page_source_verified": false
     },
@@ -960,7 +1052,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
       "page_source_verified": false
     },
@@ -978,7 +1074,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "式(2.1)-(2.3)及其重要术语核对；能带图2.4仍待原生矢量复刻。",
       "page_source_verified": false
     },
@@ -996,7 +1096,11 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
       "notes": "式(2.4)-(2.5)及NMOS机制文字核对；横截面图2.5尚未完成。",
       "page_source_verified": false
     },
@@ -1014,8 +1118,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.6 MOS栅—氧—半导体电荷示意；平带状态和功函数概念可编辑，原页非全文转写。",
       "page_source_verified": false
     },
     {
@@ -1032,8 +1140,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.7能带弯曲与耗尽区、公式2.7/2.8已编辑，原下标和图元需校核。",
       "page_source_verified": false
     },
     {
@@ -1050,8 +1162,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例2.1/2.2及源体偏压对耗尽电荷的作用；中间数值和原文尚未逐字核对。",
       "page_source_verified": false
     },
     {
@@ -1068,13 +1184,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式2.10—2.12 MOS阈值和体效应可编辑，原书计算例与页面几何待验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 58,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1086,13 +1206,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；表2.1十项符号约定、例2.4 +0.08V已按扫描核对；完整字距、引文和分页未验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 59,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1104,13 +1228,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例2.5 3.2e12 ions/cm²计算核对，并重编2.4节引言；未逐字复刻全文。",
       "page_source_verified": false
     },
     {
       "pdf_page": 60,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1122,13 +1250,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.8栅偏置NMOS原生矢量示意，式2.13—2.16可编辑；尚未通过源图线条比对。",
       "page_source_verified": false
     },
     {
       "pdf_page": 61,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1140,13 +1272,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.9不合理二次式延伸与夹断重绘，式2.17a/b、2.18已校验；原图坐标需精校。",
       "page_source_verified": false
     },
     {
       "pdf_page": 62,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1158,13 +1294,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.10三区域多条I–V曲线示意，式2.19、2.20核对；定量坐标/曲线未标定。",
       "page_source_verified": false
     },
     {
       "pdf_page": 63,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1176,13 +1316,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；2.5节速度饱和说明；对比1.3V平方律预测与0.6V曲线估计，图2.11见后页。",
       "page_source_verified": false
     },
     {
       "pdf_page": 64,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1194,13 +1338,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.11两族I–V曲线可编辑趋势示意及2.5.1节历史电场数值，测量散点未数字化。",
       "page_source_verified": false
     },
     {
       "pdf_page": 65,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1212,13 +1360,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式2.21迁移率退化、式2.22临界场、图2.12速度饱和曲线；已核对扫描例题。",
       "page_source_verified": false
     },
     {
       "pdf_page": 66,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1230,13 +1382,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.13载流子速度实验曲线的趋势示意与式2.23a/b、2.24；原图对数坐标未精确刻度重绘。",
       "page_source_verified": false
     },
     {
       "pdf_page": 67,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1248,13 +1404,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式2.25至2.29短沟道线性和饱和电流、饱和电压推导完整编号；排版需精校。",
       "page_source_verified": false
     },
     {
       "pdf_page": 68,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1266,13 +1426,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例2.6 0.6V、1.0V及图2.14 NMOS/PMOS对比示意；散点坐标仍需扫描量化。",
       "page_source_verified": false
     },
     {
       "pdf_page": 69,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1284,13 +1448,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例2.7 585μA/μm与256μA/μm以及尺寸比2.3，配套工作区判别。",
       "page_source_verified": false
     },
     {
       "pdf_page": 70,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1302,13 +1470,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例2.8饱和电压0.34V/0.60V，式2.30a α功率定律；后续公式不得提前移入本页。",
       "page_source_verified": false
     },
     {
       "pdf_page": 71,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1320,13 +1492,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式2.30b/2.31、图2.15 α功率拟合和例2.9 130/220μA转录；实测散点尚未精确复制。",
       "page_source_verified": false
     },
     {
       "pdf_page": 72,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1338,13 +1514,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；2.7节亚阈值传导与式2.32，图2.16对数曲线原生重绘但定量数据未标定。",
       "page_source_verified": false
     },
     {
       "pdf_page": 73,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1356,13 +1536,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式2.33斜率因子及例2.10 10nA/100nA对应0.140/0.212V、72mV/decade已校对。",
       "page_source_verified": false
     },
     {
       "pdf_page": 74,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1374,13 +1558,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.17 MOS栅电容结构与式2.34、不同工艺1.6fF/μm示例已重排；图形位置尚未精校。",
       "page_source_verified": false
     },
     {
       "pdf_page": 75,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1392,13 +1580,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.18栅电容与工作区、例2.11的0.64/0.32/0.43fF已核对；曲线仍是示意。",
       "page_source_verified": false
     },
     {
       "pdf_page": 76,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1410,13 +1602,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；2.8.2节结电容式2.36—2.39及图2.19原生曲线；原图几何和脚注待校核。",
       "page_source_verified": false
     },
     {
       "pdf_page": 77,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1428,13 +1624,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图2.20版图和pn结截面的可编辑重画、式2.40及底结面积已核对；图元尺度和全文未验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 78,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1446,13 +1646,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；结电容底部/侧壁式2.41、简化式2.42及非线性积分的正文选段；分行、脚注待检查。",
       "page_source_verified": false
     },
     {
       "pdf_page": 79,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1464,13 +1668,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式2.43—2.45、例2.12 1V内建电势、1.6fF/μm²、0.22fF核对；并非整页逐字复刻。",
       "page_source_verified": false
     },
     {
       "pdf_page": 80,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1482,13 +1690,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例2.12 0.16/0.18fF、式2.46—2.47、图2.21重绘；立体图几何仍是概念图。",
       "page_source_verified": false
     },
     {
       "pdf_page": 81,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1500,13 +1712,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例2.13 0.25fF/μm和2.9小结第一段的NMOS/PMOS极性表；原书行距未验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 82,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1518,13 +1734,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；第2章小结的速度饱和、亚阈值和栅电容3工作区表；原页末综合表仍有部分项目待定量复核。",
       "page_source_verified": false
     },
     {
       "pdf_page": 83,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1536,13 +1756,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；8篇参考文献、表P2.1工艺参数及P2.1(a)重排；参考文献字距和引用斜体待验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 84,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1554,13 +1778,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；P2.1(b–d)、P2.2—P2.5转为可编辑选段；图P2.4/P2.5原生电路示意待拓扑逐元核验。",
       "page_source_verified": false
     },
     {
       "pdf_page": 85,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1572,13 +1800,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；P2.6—P2.8关键参数及版图示意重排；P2.6器件具体连接待逐线定型。",
       "page_source_verified": false
     },
     {
       "pdf_page": 86,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1590,13 +1822,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；P2.9/2.10题目条件与公式转录；页下半原本为空白，未添加额外题解。",
       "page_source_verified": false
     },
     {
       "pdf_page": 87,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1608,13 +1844,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；第3章封面与原目录3.1–3.11、3.1绪论：章节结构与主题匹配，全文暂为源页编辑选段。",
       "page_source_verified": false
     },
     {
       "pdf_page": 88,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1626,13 +1866,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；3.2.1硅片200–300mm、0.35–1.25mm、100–200项操作与基本工艺术语已按扫描核对。",
       "page_source_verified": false
     },
     {
       "pdf_page": 89,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1644,13 +1888,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.1的设备照片尚无可编辑精确替代；当前用原生矢量重绘工序关系，3.2.2第一步已转写。",
       "page_source_verified": false
     },
     {
       "pdf_page": 90,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1662,13 +1910,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；光刻步骤2–5按源扫描排列，含正性胶、OPC/PSM、3.2.3 STI定义；图元比例待校准。",
       "page_source_verified": false
     },
     {
       "pdf_page": 91,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1680,13 +1932,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；3.2.3第二至第五步，22Å栅氧化、自对准多晶硅栅及n+/p+注入已核对；剖面仍为编辑示意。",
       "page_source_verified": false
     },
     {
       "pdf_page": 92,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1698,13 +1954,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.2 CMOS双阱/STI/硅化物结构、k约4及高k 10–12历史说明已核对；细部版图待精校。",
       "page_source_verified": false
     },
     {
       "pdf_page": 93,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1716,13 +1976,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；3.2.4金属互连四步与平面、截面原生图；通孔与金属位置待扫描逐元验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 94,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1734,13 +1998,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.3 M1—M6、通孔与钨触点、Cu阻挡层、dual Damascene、CMP关键术语转写。",
       "page_source_verified": false
     },
     {
       "pdf_page": 95,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1752,13 +2020,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.4、图3.5与式（3.1）已核对，W/L/T/S/H等几何参数使用编辑版图元，尚非原图精确透视。",
       "page_source_verified": false
     },
     {
       "pdf_page": 96,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1770,13 +2042,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；方块电阻关系、Al/Cu/W电阻率核对；源扫描未给Rsq及R=Rsq L/W单独编号，已保持无编号。",
       "page_source_verified": false
     },
     {
       "pdf_page": 97,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1788,13 +2064,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.6工艺7种线宽与例3.1 0.2/10/11Ω已按原扫描核对；图形宽高未精校。",
       "page_source_verified": false
     },
     {
       "pdf_page": 98,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1806,13 +2086,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.7 GDS-II/代工厂DRC、2λ定义和两个栅长示例；图示结构编辑版。",
       "page_source_verified": false
     },
     {
       "pdf_page": 99,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1824,13 +2108,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.8/3.9金属3λ、覆盖2λ、触点2λ×2λ与包围λ；图元几何尚需对照。",
       "page_source_verified": false
     },
     {
       "pdf_page": 100,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1842,13 +2130,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；3.4与3.4.1 SPICE模型族与参数物理/经验属性；非全文逐字校验。",
       "page_source_verified": false
     },
     {
       "pdf_page": 101,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1860,13 +2152,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.10四端MOS版图，12字段实例参数表已与原扫描核对；图形尺寸比例未验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 102,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1878,13 +2174,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书3.2双行共号有效尺寸公式、例3.2两条完整网表；可能需要按模型单位再核对细节。",
       "page_source_verified": false
     },
     {
       "pdf_page": 103,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1896,13 +2196,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；原书3.3—3.9 SPICE LEVEL1 PHI/TOX/GAMMA/VTO/KP、线性与饱和电流公式已转写；上下标待逐一精校。",
       "page_source_verified": false
     },
     {
       "pdf_page": 104,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1914,13 +2218,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式3.10底部/侧壁结电容与式3.11 sqrt(2Id)拟合已转写；全文逐字尚未核对。",
       "page_source_verified": false
     },
     {
       "pdf_page": 105,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1932,13 +2240,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.11参数提取方法说明和例3.3 LEVEL1模型卡已校验；测试数据散点尚未原生重建。",
       "page_source_verified": false
     },
     {
       "pdf_page": 106,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1950,13 +2262,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；3.6 BSIM3模型与3.6.1参数分箱，图3.12九个尺寸区域的矢量候选；公式尚未延伸到后页。",
       "page_source_verified": false
     },
     {
       "pdf_page": 107,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1968,13 +2284,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式3.12—3.16 BSIM3双掺杂NCH/NSUB与K1/K2参数；公式标号和关键变量按扫描核对。",
       "page_source_verified": false
     },
     {
       "pdf_page": 108,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -1986,13 +2306,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式3.17、图3.13 SCE/RSCE趋势概念重绘；原图转折坐标未定量标定。",
       "page_source_verified": false
     },
     {
       "pdf_page": 109,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2004,13 +2328,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.14 DIBL、式3.18—3.20有效迁移率、VSAT临界场已编辑；下标待终审。",
       "page_source_verified": false
     },
     {
       "pdf_page": 110,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2022,13 +2350,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例3.4 0.18μm BSIM3器件直流扫描参数及输出趋势；网表只为结构性可编辑骨架。",
       "page_source_verified": false
     },
     {
       "pdf_page": 111,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2040,13 +2372,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例3.5宽度比较与3.6.6电容模型引言；第二组电流数值未逐格复核。",
       "page_source_verified": false
     },
     {
       "pdf_page": 112,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2058,13 +2394,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例3.6亚阈值SPICE半对数曲线的叙述与电容模型；测量点图尚未还原。",
       "page_source_verified": false
     },
     {
       "pdf_page": 113,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2076,13 +2416,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式3.22底部与面向沟道侧壁电容，3.23 RDSW/Weff；3.7.1工艺角开头。",
       "page_source_verified": false
     },
     {
       "pdf_page": 114,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2094,13 +2438,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式3.24温度迁移率与3.25载流子温度表达、例3.7任务；源公式数字已转写。",
       "page_source_verified": false
     },
     {
       "pdf_page": 115,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2112,13 +2460,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例3.7 -40至100°C和不同栅偏扫描；I–T实验曲线目前仅为趋势示意。",
       "page_source_verified": false
     },
     {
       "pdf_page": 116,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2130,13 +2482,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；3.7.4热载流子、穿通和3.7.5 CMOS闩锁技术选段；原书边界及脚注仍需逐字核对。",
       "page_source_verified": false
     },
     {
       "pdf_page": 117,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2148,13 +2504,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.15寄生PNPN闩锁网络与触发、防护方法的编辑矢量示意；原图转折曲线及器件比例待校。",
       "page_source_verified": false
     },
     {
       "pdf_page": 118,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2166,13 +2526,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图3.16 SOI、BOX、PD-SOI/FD-SOI结构可编辑；原衬底层厚及图注尚未逐项验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 119,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2184,13 +2548,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；表3.1 LEVEL1教学参数名称、默认值与示例重排，JS默认及TPG实例的原书空格保留。",
       "page_source_verified": false
     },
     {
       "pdf_page": 120,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2202,13 +2570,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；表3.2第一部分一般几何、工艺和迁移率参数可编辑，单位的复杂次幂尚待逐格验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 121,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2220,13 +2592,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；表3.2第二部分迁移率、亚阈值及DIBL参数可编辑，部分特殊加载系数单位仍需核对。",
       "page_source_verified": false
     },
     {
       "pdf_page": 122,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2238,13 +2614,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；表3.2第三部分温度/电容/侧壁参数可编辑；原表行间距及完整字距未验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 123,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2256,13 +2636,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；3.10共12项参考文献及P3.1测试拓扑；仍待原图电源符号几何精校。",
       "page_source_verified": false
     },
     {
       "pdf_page": 124,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2274,13 +2658,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；表P3.1四组偏置和漏电流值已核对；P3.2/3.3的电路当前仅用文字结构化描述，待原生绘图。",
       "page_source_verified": false
     },
     {
       "pdf_page": 125,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2292,13 +2680,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；P3.4—P3.8各原题偏置、尺寸与公式已选段编辑，图P3.4—P3.6尚缺原生几何。",
       "page_source_verified": false
     },
     {
       "pdf_page": 126,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2310,13 +2702,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；P3.8六组PMOS偏置和P3.9—P3.14题设参数已核对，完整正文行距尚未验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 127,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2328,13 +2724,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；第4章章首12节提要和静态/动态电路对照选段；目录灰底和文字行距待验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 128,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2346,13 +2746,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图4.1与式4.1 VTC微分增益重排；理想转折位置确认。",
       "page_source_verified": false
     },
     {
       "pdf_page": 129,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2364,13 +2768,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图4.2/4.3实际VTC与级联输入噪声的概念性编辑示意，非原图逐点曲线。",
       "page_source_verified": false
     },
     {
       "pdf_page": 130,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2382,13 +2790,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；4.3/4.3.1 SSNM的定义与噪声级联分析选段，全文文字未逐句终审。",
       "page_source_verified": false
     },
     {
       "pdf_page": 131,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2400,13 +2812,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图4.4/4.5 SSNM双行式4.2及六级反相器链路示意；图形位置待精校。",
       "page_source_verified": false
     },
     {
       "pdf_page": 132,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2418,13 +2834,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图4.6/4.7和4.3.2多源噪声容限，原扫描曲线的迭代点未数字化。",
       "page_source_verified": false
     },
     {
       "pdf_page": 133,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2436,13 +2856,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图4.8单位增益点与式4.3 NM_H/NM_L，曲线仅为趋势编辑候选。",
       "page_source_verified": false
     },
     {
       "pdf_page": 134,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2454,13 +2878,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例4.1缓冲器同相VTC与4.4节电阻负载设计；正斜率原图待重画。",
       "page_source_verified": false
     },
     {
       "pdf_page": 135,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2472,13 +2900,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图4.9三子图、负载线与式4.4电流相等已转写；原准确IV曲线比例尚未验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 136,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2490,13 +2922,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式4.5、4.6a-d与4.7解析推导及设计权衡；数学符号可编辑，完整排版待逐页核验。",
       "page_source_verified": false
     },
     {
       "pdf_page": 137,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2508,13 +2944,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式4.8a/b电阻负载反相器单位增益点和VIL解析式，原图长段公式需逐步检查。",
       "page_source_verified": false
     },
     {
       "pdf_page": 138,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2526,13 +2966,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式4.8c—f高电平输入门限、式4.9切换点、例4.2初始参数转录。",
       "page_source_verified": false
     },
     {
       "pdf_page": 139,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2544,13 +2988,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例4.2 0.08/0.46/0.77/0.38/0.43V和例4.3 SPICE网表；用户工艺模型库应另行提供。",
       "page_source_verified": false
     },
     {
       "pdf_page": 140,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2562,13 +3010,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例4.3原SPICE参考结果0.085/0.558/0.972/0.78V，编辑曲线非逐点原输出。",
       "page_source_verified": false
     },
     {
       "pdf_page": 141,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2580,13 +3032,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；4.5及4.5.1饱和增强型NMOS负载逻辑，承接图4.10。",
       "page_source_verified": false
     },
     {
       "pdf_page": 142,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2598,13 +3054,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图4.10饱和NMOS负载、KR尺寸比式4.10、体效应式4.11；概念矢量非精确扫描。",
       "page_source_verified": false
     },
     {
       "pdf_page": 143,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2616,13 +3076,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式4.12 VOH与体效应的非线性迭代、例4.4固定点约0.73V。",
       "page_source_verified": false
     },
     {
       "pdf_page": 144,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2634,13 +3098,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例4.5工艺和目标VOL=0.1V，电流平衡公式；书中完整中间值待最终验算。",
       "page_source_verified": false
     },
     {
       "pdf_page": 145,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2652,13 +3120,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例4.5 KR约1.7结果，4.5.2线性增强型负载、式4.13和图4.11概念矢量。",
       "page_source_verified": false
     },
     {
       "pdf_page": 146,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2670,13 +3142,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；4.6 CMOS/4.6.1直流分析，互补CMOS静态上拉下拉和逻辑高低；图4.12尚未完全重绘。",
       "page_source_verified": false
     },
     {
       "pdf_page": 147,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2688,13 +3164,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；PDF147图4.12 CMOS五区域、n/p管偏置与静态通过电流；示意图非实验采点。",
       "page_source_verified": false
     },
     {
       "pdf_page": 148,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2706,13 +3186,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；PDF148式(4.14)和(4.15)chi切换点推导，与源公式符号对照，图未逐线验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 149,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2724,13 +3208,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；PDF149例4.6宽度400/100nm且WN100nm，VS0.6/0.53V，n-lin/p-sat至关断。",
       "page_source_verified": false
     },
     {
       "pdf_page": 150,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2742,13 +3230,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；PDF150式(4.16)输入低门限处NMOS饱和PMOS线性，整页公式字距待审。",
       "page_source_verified": false
     },
     {
       "pdf_page": 151,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2760,13 +3252,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；PDF151式(4.17-4.19)VIL/VIH求解、例4.7题设；单位增益点条件保留。",
       "page_source_verified": false
     },
     {
       "pdf_page": 152,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2778,13 +3274,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；PDF152例4.7 CMOS网表及SPICE读数VIL=.626, VIH=.909, NMH=.891, NML=.626；图仅趋势。",
       "page_source_verified": false
     },
     {
       "pdf_page": 153,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2796,13 +3296,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；PDF153例4.7手算chi1.41,VS.83V和4.6.2版图七层、实际误差约15%；全文未终审。",
       "page_source_verified": false
     },
     {
       "pdf_page": 154,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2814,13 +3318,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；PDF154图4.13原生可编辑层次草图及4.7伪NMOS引言；金属/接触几何待精校。",
       "page_source_verified": false
     },
     {
       "pdf_page": 155,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2832,13 +3340,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；PDF155图4.14伪NMOS拓扑及式4.20/4.21、例4.8设计条件；I-V子图未复刻。",
       "page_source_verified": false
     },
     {
       "pdf_page": 156,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2850,13 +3362,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；PDF156例4.8 WN/WP=2、400/800nm、VOL0.065V和HSPICE网表；下一节4.8简介。",
       "page_source_verified": false
     },
     {
       "pdf_page": 157,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2868,13 +3384,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图4.15 RC时序，式4.22a/b/c传播延迟与式4.23方块电阻，未精确数字化源波形。",
       "page_source_verified": false
     },
     {
       "pdf_page": 158,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2886,13 +3406,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式4.24尺寸电阻关系、例4.9 CMOS 50fF/50ps/Wn.875μm/Wp2.1μm。",
       "page_source_verified": false
     },
     {
       "pdf_page": 159,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2904,13 +3428,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例4.9伪NMOS Wp.665μm、PLH>100ps与4.9三态缓冲器及图4.16逻辑表。",
       "page_source_verified": false
     },
     {
       "pdf_page": 160,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2922,13 +3450,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；4.10小结两种历史工艺表、噪声容限和电阻公式及4.11标题。",
       "page_source_verified": false
     },
     {
       "pdf_page": 161,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2940,13 +3472,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；4.11四项参考文献和P4.1五个子问与四幅电路的器件参数；图未完整描摹。",
       "page_source_verified": false
     },
     {
       "pdf_page": 162,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2958,13 +3494,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图P4.2和P4.2—P4.6，图P4.6八级链路，源每个元件仍需细画。",
       "page_source_verified": false
     },
     {
       "pdf_page": 163,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2976,13 +3516,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；P4.6输入噪声0.45V、误差2%，P4.7伪PMOS、P4.8非常规器件连接；原图待补。",
       "page_source_verified": false
     },
     {
       "pdf_page": 164,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -2994,13 +3538,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；P4.9/4.10/4.11/P4.12目标VTC、尺寸、原源图位置未验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 165,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3012,13 +3560,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；P4.12三种目标VOL及P4.13/4.14/P4.15；图P4.15为编辑示意非逐点原图。",
       "page_source_verified": false
     },
     {
       "pdf_page": 166,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3030,13 +3582,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；P4.15延续及P4.16两种三态栈；图P4.16的两幅电路非逐元精确。",
       "page_source_verified": false
     },
     {
       "pdf_page": 167,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3048,13 +3604,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；第5章章首目录和5.1静态组合、时序门概述，灰底目录未复刻。",
       "page_source_verified": false
     },
     {
       "pdf_page": 168,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3066,13 +3626,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；第5章5.2 CMOS NAND/NOR的PUN/PDN互补拓扑，未逐字校对所有描述。",
       "page_source_verified": false
     },
     {
       "pdf_page": 169,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3084,13 +3648,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.1 NAND2/NOR2，5.2.1最坏路径尺寸原则；左NOR右NAND关系已校准。",
       "page_source_verified": false
     },
     {
       "pdf_page": 170,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3102,13 +3670,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.2 NAND2/NOR2/反相器尺寸及三输入扩展，原图尺寸布局待校准。",
       "page_source_verified": false
     },
     {
       "pdf_page": 171,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3120,13 +3692,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.3伪NMOS三输入栈、图5.4，式5.1串联Weq/5.2并联Weq。",
       "page_source_verified": false
     },
     {
       "pdf_page": 172,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3138,13 +3714,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例5.1 NAND3/NOR3尺寸、5.2.2扇入和DeMorgan式5.3；原例布局未逐图。",
       "page_source_verified": false
     },
     {
       "pdf_page": 173,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3156,13 +3736,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.5/5.6/5.7 8输入NAND/DeMorgan/伪NMOS转换，结构性编辑选段。",
       "page_source_verified": false
     },
     {
       "pdf_page": 174,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3174,13 +3758,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.8 NAND4-INV-NAND2-INV；图5.9 FO4概念，电路图元尚需原图复刻。",
       "page_source_verified": false
     },
     {
       "pdf_page": 175,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3192,13 +3780,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；5.2.3 NAND门不同输入切换VTC及图5.10，曲线数据仅示意未取点。",
       "page_source_verified": false
     },
     {
       "pdf_page": 176,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3210,13 +3802,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.11 NOR VTC、例5.2 0.18um CMOS NAND单输入切换0.77V，继续次页。",
       "page_source_verified": false
     },
     {
       "pdf_page": 177,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3228,13 +3824,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例5.2: NAND2三种扫描条件及0.9V手工切换近似；完整原网表端口与结参数待终审。",
       "page_source_verified": false
     },
     {
       "pdf_page": 178,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3246,13 +3846,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；第178页NAND SPICE VTC三个读数0.745/0.721/0.883V，源扫描为准，式5.4 AOI逻辑。",
       "page_source_verified": false
     },
     {
       "pdf_page": 179,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3264,13 +3868,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；式5.5 DeMorgan、图5.12 AOI21 PUN/PDN逻辑关系，晶体管逐线结构未通过。",
       "page_source_verified": false
     },
     {
       "pdf_page": 180,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3282,13 +3890,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.13通用复杂门与例5.3 F=overline(AB+CD) 对偶网络，原器件图需描摹。",
       "page_source_verified": false
     },
     {
       "pdf_page": 181,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3300,13 +3912,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.14 XOR/XNOR静态CMOS逻辑，源电路的多余PMOS连接未逐元重绘。",
       "page_source_verified": false
     },
     {
       "pdf_page": 182,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3318,13 +3934,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.15 2选1MUX及5.6组合/时序定义，原八管连接未全部编辑。",
       "page_source_verified": false
     },
     {
       "pdf_page": 183,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3336,13 +3956,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；5.6.1图5.16两交叉反相器、三个VTC交点A/B/C，原曲线及节点待重绘。",
       "page_source_verified": false
     },
     {
       "pdf_page": 184,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3354,13 +3978,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.17 NOR SR锁存器与式5.6平均传播延迟，真值表逻辑已核对。",
       "page_source_verified": false
     },
     {
       "pdf_page": 185,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3372,13 +4000,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；例5.4 0.13µm 400ps输出延迟、100fF、WN440nm WP1.76µm；原晶体管拓扑未完整。",
       "page_source_verified": false
     },
     {
       "pdf_page": 186,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3390,13 +4022,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；图5.18 NAND低有效SR及5.6.3 JK输入/时钟介绍，图5.19留待下页。",
       "page_source_verified": false
     },
     {
       "pdf_page": 187,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3408,13 +4044,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.838); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 188,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3426,13 +4066,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.915); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 189,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3444,13 +4088,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.916); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 190,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3462,13 +4110,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.929); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 191,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3480,13 +4132,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.842); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 192,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3498,13 +4154,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.926); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 193,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3516,13 +4176,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.797); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 194,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3534,13 +4198,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.912); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 195,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3552,13 +4220,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.764); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 196,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3570,13 +4242,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.977); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 197,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3588,13 +4264,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.799); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 198,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3606,13 +4286,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.845); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 199,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3624,13 +4308,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.905); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {
       "pdf_page": 200,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -3642,8 +4330,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整正文未逐字验收",
+        "公式、表格与图注尚待逐元素核验",
+        "版面、页眉与脚注尚未完整复刻"
+      ],
+      "notes": "已有可编辑原生Typst章节选段；Double OCR PSM3/PSM6 (agreement 0.826); limited source-page equation/figure landmark checks; full text, figures and layout still unverified.；已进行第二次独立OCR一致性比较（不等于整页验收）",
       "page_source_verified": false
     },
     {

@@ -1,0 +1,167 @@
+{
+  "schema": "native-typst-second-pass-ocr-v1",
+  "source": "User-provided 445-page scan of Analysis and Design of Digital Integrated Circuits, Chinese third edition",
+  "scope": "PDF187..200",
+  "rounds": [
+    "first pass: archived tesseract chi_sim+eng PSM3",
+    "second pass: independent 1400-pixel-height scan render, tesseract chi_sim+eng PSM6"
+  ],
+  "caution": "High OCR agreement does not establish correct formulas or a verified 1:1 page.",
+  "evidence_status": "source-image landmarks reviewed, not a complete human full-page acceptance",
+  "full_page_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 187,
+      "normalized_similarity": 0.838,
+      "first_pass_characters": 709,
+      "second_pass_characters": 1028,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 188,
+      "normalized_similarity": 0.915,
+      "first_pass_characters": 994,
+      "second_pass_characters": 1231,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 189,
+      "normalized_similarity": 0.916,
+      "first_pass_characters": 1138,
+      "second_pass_characters": 1294,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 190,
+      "normalized_similarity": 0.929,
+      "first_pass_characters": 990,
+      "second_pass_characters": 1105,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 191,
+      "normalized_similarity": 0.842,
+      "first_pass_characters": 647,
+      "second_pass_characters": 703,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 192,
+      "normalized_similarity": 0.926,
+      "first_pass_characters": 1341,
+      "second_pass_characters": 1451,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 193,
+      "normalized_similarity": 0.797,
+      "first_pass_characters": 1000,
+      "second_pass_characters": 935,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 194,
+      "normalized_similarity": 0.912,
+      "first_pass_characters": 1573,
+      "second_pass_characters": 1613,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 195,
+      "normalized_similarity": 0.764,
+      "first_pass_characters": 1211,
+      "second_pass_characters": 1287,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 196,
+      "normalized_similarity": 0.977,
+      "first_pass_characters": 1554,
+      "second_pass_characters": 1564,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 197,
+      "normalized_similarity": 0.799,
+      "first_pass_characters": 1100,
+      "second_pass_characters": 917,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 198,
+      "normalized_similarity": 0.845,
+      "first_pass_characters": 1483,
+      "second_pass_characters": 1551,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 199,
+      "normalized_similarity": 0.905,
+      "first_pass_characters": 1171,
+      "second_pass_characters": 1311,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    },
+    {
+      "pdf_page": 200,
+      "normalized_similarity": 0.826,
+      "first_pass_characters": 1163,
+      "second_pass_characters": 1290,
+      "source_scan_available": true,
+      "full_page_accepted": false,
+      "manual_equations_only_spotchecked": true
+    }
+  ],
+  "source_confirmed_corrections": [
+    {
+      "pdf_page": 194,
+      "description": "Example 5.6 frequency is 250 MHz, not 230 MHz.",
+      "canonical": "250 MHz",
+      "related": [
+        "40.5 μW",
+        "46.3 μW",
+        "approximately 14%"
+      ]
+    },
+    {
+      "pdf_page": 194,
+      "description": "The example prompt specifies 300 ps but its printed SPICE PULSE uses 200 ps; do not silently reconcile.",
+      "canonical": "prompt 300 ps / netlist 200 ps"
+    },
+    {
+      "pdf_page": 199,
+      "description": "Example 5.8 results are 250 microampere and 300 microwatt, not pico-units.",
+      "canonical": "250 μA / 300 μW"
+    },
+    {
+      "pdf_page": 193,
+      "description": "Example 5.5 counts 4 edges over 8 cycles as two charging events, alpha=25%.",
+      "canonical": "(4/2)/8=25%"
+    }
+  ]
+}

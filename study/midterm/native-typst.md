@@ -9,6 +9,12 @@ import { withBase } from 'vitepress'
 const sections = [
   { id: '01-gates-noise-delay', title: '第1章 · 逻辑门、噪声容限、延迟与功耗', pages: '扫描第26—32页', summary: '门电路、理想与实际电平、转换时间、式（1.2）—（1.5）' },
   { id: '02-mos-threshold', title: '第2章 · MOS结构、费米势和阈值', pages: '扫描第48—57页', summary: '四端器件、平带电压、耗尽区、体效应、式（2.1）—（2.12）' },
+  { id: '01-page-20', title: '原书第20页 · 第1章绪论和目录', pages: 'PDF第20页/印刷第1页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
+  { id: '02-page-21', title: '原书第21页 · 集成电路发展', pages: 'PDF第21页/印刷第2页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
+  { id: '03-page-22', title: '原书第22页 · 深亚微米工艺', pages: 'PDF第22页/印刷第3页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
+  { id: '04-page-23', title: '原书第23页 · 技术演进与工艺图', pages: 'PDF第23页/印刷第4页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
+  { id: '05-page-24', title: '原书第24页 · 数字逻辑基本结构', pages: 'PDF第24页/印刷第5页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
+  { id: '06-page-25', title: '原书第25页 · 布尔代数与德摩根律', pages: 'PDF第25页/印刷第6页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
   { id: '03-page-026', title: '原书第26页 · 门电路与D触发器原生重绘', pages: 'PDF第26页/印刷第7页', summary: '图1.4、图1.5与8行DFF激励表的原生Typst草稿；版式仍需比对' },
   { id: '04-page-027', title: '原书第27页 · 理想逻辑电路与传输曲线', pages: 'PDF第27页/印刷第8页', summary: '图1.6原生可编辑曲线、五条数字逻辑基本特性；仍需版式对照' },
   { id: '05-page-028', title: '原书第28页 · 逻辑振幅与噪声容限', pages: 'PDF第28页/印刷第9页', summary: '原生重绘图1.7(a)—(d)，VTC、噪声容限及四个图示' },
@@ -169,7 +175,21 @@ const sections = [
   { id: '160-page-183', title: '原书第183页 · 图5.16基本双稳态', pages: 'PDF第183页/印刷第164页', summary: '交叉反相器稳定点A/B/C' },
   { id: '161-page-184', title: '原书第184页 · 图5.17及式5.6 SR锁存器', pages: 'PDF第184页/印刷第165页', summary: 'NOR高有效SR及平均延迟' },
   { id: '162-page-185', title: '原书第185页 · 例5.4 SR尺寸设计', pages: 'PDF第185页/印刷第166页', summary: '400ps/100fF/Wn440nm/Wp1.76μm' },
-  { id: '163-page-186', title: '原书第186页 · 图5.18及5.6.3 JK触发器', pages: 'PDF第186页/印刷第167页', summary: 'NAND低有效SR与JK行为' }
+  { id: '163-page-186', title: '原书第186页 · 图5.18及5.6.3 JK触发器', pages: 'PDF第186页/印刷第167页', summary: 'NAND低有效SR与JK行为' },
+  { id: '164-page-187', title: '原书第187页 · JK真值表和主从触发器', pages: 'PDF第187页/印刷第168页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '165-page-188', title: '原书第188页 · 边沿触发JK时序', pages: 'PDF第188页/印刷第169页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '166-page-189', title: '原书第189页 · D锁存器与D触发器', pages: 'PDF第189页/印刷第170页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '167-page-190', title: '原书第190页 · DFF建立和保持时间', pages: 'PDF第190页/印刷第171页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '168-page-191', title: '原书第191页 · 锁存器门级实现', pages: 'PDF第191页/印刷第172页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '169-page-192', title: '原书第192页 · CMOS动态功耗', pages: 'PDF第192页/印刷第173页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '170-page-193', title: '原书第193页 · 行为因子与例5.5', pages: 'PDF第193页/印刷第174页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '171-page-194', title: '原书第194页 · 例5.6反相器手算与SPICE', pages: 'PDF第194页/印刷第175页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '172-page-195', title: '原书第195页 · 短路电流和动态功耗', pages: 'PDF第195页/印刷第176页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '173-page-196', title: '原书第196页 · NOR逻辑毛刺', pages: 'PDF第196页/印刷第177页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '174-page-197', title: '原书第197页 · NOR瞬态仿真', pages: 'PDF第197页/印刷第178页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '175-page-198', title: '原书第198页 · 亚阈值泄漏', pages: 'PDF第198页/印刷第179页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '176-page-199', title: '原书第199页 · 完整功耗模型与例5.8', pages: 'PDF第199页/印刷第180页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
+  { id: '177-page-200', title: '原书第200页 · PDP/EDP折中指标', pages: 'PDF第200页/印刷第181页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
