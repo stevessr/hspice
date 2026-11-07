@@ -1,11 +1,9 @@
 // SOURCE PDF PAGE 147 / printed 128
-#import "../figures/ch4-mos-loads-native.typ": cmos-inverter
 #import "../figures/ch4-cmos-continued-native.typ": five-regions, through-current
 #set document(title:"第4章 · 图4.12 CMOS五工作区 · PDF147")
 = 第4章 · 印刷第128页
 
 == 图4.12　CMOS反相器的特性
-#cmos-inverter()
 #five-regions()
 #through-current()
 

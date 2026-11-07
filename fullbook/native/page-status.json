@@ -1727,43 +1727,133 @@
     },
     {
       "pdf_page": 147,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/124-page-147.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "PDF147图4.12 CMOS五区域、n/p管偏置与静态通过电流；示意图非实验采点。"
     },
     {
       "pdf_page": 148,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/125-page-148.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "PDF148式(4.14)和(4.15)chi切换点推导，与源公式符号对照，图未逐线验收。"
     },
     {
       "pdf_page": 149,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/126-page-149.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "PDF149例4.6宽度400/100nm且WN100nm，VS0.6/0.53V，n-lin/p-sat至关断。"
     },
     {
       "pdf_page": 150,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/127-page-150.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "PDF150式(4.16)输入低门限处NMOS饱和PMOS线性，整页公式字距待审。"
     },
     {
       "pdf_page": 151,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/128-page-151.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "PDF151式(4.17-4.19)VIL/VIH求解、例4.7题设；单位增益点条件保留。"
     },
     {
       "pdf_page": 152,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/129-page-152.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "PDF152例4.7 CMOS网表及SPICE读数VIL=.626, VIH=.909, NMH=.891, NML=.626；图仅趋势。"
     },
     {
       "pdf_page": 153,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/130-page-153.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "PDF153例4.7手算chi1.41,VS.83V和4.6.2版图七层、实际误差约15%；全文未终审。"
     },
     {
       "pdf_page": 154,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/131-page-154.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "PDF154图4.13原生可编辑层次草图及4.7伪NMOS引言；金属/接触几何待精校。"
     },
     {
       "pdf_page": 155,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/132-page-155.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "PDF155图4.14伪NMOS拓扑及式4.20/4.21、例4.8设计条件；I-V子图未复刻。"
     },
     {
       "pdf_page": 156,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/133-page-156.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "PDF156例4.8 WN/WP=2、400/800nm、VOL0.065V和HSPICE网表；下一节4.8简介。"
     },
     {
       "pdf_page": 157,
