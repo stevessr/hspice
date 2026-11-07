@@ -70,11 +70,11 @@ jobs:
             test -s "$dest"
             grep -q 'viewBox="0 0 506.8346 729.6"' "$dest"
           done
-          test "$(find /tmp/source-pages -type f -name '*.svg' | wc -l)" -eq 217
+          test "$(find /tmp/source-pages -type f -name '*.svg' | wc -l)" -eq 225
 
       - name: Publish visual audit artifact
         uses: actions/upload-artifact@v4
         with:
-          name: typst-native-pages-020-236-svg
+          name: typst-native-pages-020-244-svg
           path: /tmp/source-pages/
           if-no-files-found: error
