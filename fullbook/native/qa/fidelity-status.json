@@ -5155,7 +5155,7 @@
     },
     {
       "pdf_page": 237,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5167,13 +5167,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字校勘和每个公式符号未全量签收",
+        "原始晶体管和逻辑门每根线、每个图注未完全复刻",
+        "精确扫描版心、字体及输出SVG几何偏差未完全校验"
+      ],
+      "notes": "PDF237: source-image math/figure spot checks and editable native Typst; strict 1:1 not accepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 238,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5185,13 +5189,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字校勘和每个公式符号未全量签收",
+        "原始晶体管和逻辑门每根线、每个图注未完全复刻",
+        "精确扫描版心、字体及输出SVG几何偏差未完全校验"
+      ],
+      "notes": "PDF238: source-image math/figure spot checks and editable native Typst; strict 1:1 not accepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 239,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5203,13 +5211,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字校勘和每个公式符号未全量签收",
+        "原始晶体管和逻辑门每根线、每个图注未完全复刻",
+        "精确扫描版心、字体及输出SVG几何偏差未完全校验"
+      ],
+      "notes": "PDF239: source-image math/figure spot checks and editable native Typst; strict 1:1 not accepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 240,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5221,13 +5233,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字校勘和每个公式符号未全量签收",
+        "原始晶体管和逻辑门每根线、每个图注未完全复刻",
+        "精确扫描版心、字体及输出SVG几何偏差未完全校验"
+      ],
+      "notes": "PDF240: source-image math/figure spot checks and editable native Typst; strict 1:1 not accepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 241,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5239,13 +5255,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字校勘和每个公式符号未全量签收",
+        "原始晶体管和逻辑门每根线、每个图注未完全复刻",
+        "精确扫描版心、字体及输出SVG几何偏差未完全校验"
+      ],
+      "notes": "PDF241: source-image math/figure spot checks and editable native Typst; strict 1:1 not accepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 242,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5257,13 +5277,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字校勘和每个公式符号未全量签收",
+        "原始晶体管和逻辑门每根线、每个图注未完全复刻",
+        "精确扫描版心、字体及输出SVG几何偏差未完全校验"
+      ],
+      "notes": "PDF242: source-image math/figure spot checks and editable native Typst; strict 1:1 not accepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 243,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5275,13 +5299,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字校勘和每个公式符号未全量签收",
+        "原始晶体管和逻辑门每根线、每个图注未完全复刻",
+        "精确扫描版心、字体及输出SVG几何偏差未完全校验"
+      ],
+      "notes": "PDF243: source-image math/figure spot checks and editable native Typst; strict 1:1 not accepted.",
       "page_source_verified": false
     },
     {
       "pdf_page": 244,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5293,8 +5321,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字校勘和每个公式符号未全量签收",
+        "原始晶体管和逻辑门每根线、每个图注未完全复刻",
+        "精确扫描版心、字体及输出SVG几何偏差未完全校验"
+      ],
+      "notes": "PDF244: source-image math/figure spot checks and editable native Typst; strict 1:1 not accepted.",
       "page_source_verified": false
     },
     {
