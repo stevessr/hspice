@@ -4,14 +4,14 @@
 #let seg(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,line(end:(x2 - x1,y2 - y1),stroke:.75pt))
 #let cap(x,y,name:"")={
   place(top+left,dx:x,dy:y,line(length:12pt,stroke:.75pt))
-  place(top+left,dx:x,dy:y+5pt,line(length:12pt,stroke:.75pt))
-  if name!="" {place(top+left,dx:x+14pt,dy:y-3pt,text(size:7pt)[#name])}
+  place(top+left,dx:x,dy:y + 5pt,line(length:12pt,stroke:.75pt))
+  if name!="" {place(top+left,dx:x + 14pt,dy:y - 3pt,text(size:7pt)[#name])}
 }
 #let mos(x,y,p:false)={
-  seg(x,y,x+36pt,y)
-  seg(x+14pt,y-6pt,x+23pt,y-6pt)
-  seg(x+18pt,y-25pt,x+18pt,y-7pt)
-  if p {place(top+left,dx:x+16pt,dy:y-11pt,circle(radius:2.2pt,stroke:.8pt,fill:white))}
+  seg(x,y,x + 36pt,y)
+  seg(x + 14pt,y - 6pt,x + 23pt,y - 6pt)
+  seg(x + 18pt,y - 25pt,x + 18pt,y - 7pt)
+  if p {place(top+left,dx:x + 16pt,dy:y - 11pt,circle(radius:2.2pt,stroke:.8pt,fill:white))}
 }
 #let pass-case(a:"0 V",b:"0 V",gate:"VDD",p:false)=html.frame(block(width:181pt,height:117pt)[
   #seg(12pt,61pt,45pt,61pt)
@@ -34,9 +34,9 @@
 #let stack-case(n:1,low:false,p:false)=html.frame(block(width:119pt,height:139pt)[
   #seg(23pt,31pt,44pt,31pt)
   #for i in range(n) [
-    #mos(44pt+i*13pt,31pt+i*22pt,p:p)
+    #mos(44pt + i * 13pt,31pt + i * 22pt,p:p)
   ]
-  #seg(44pt+(n-1)*13pt+36pt,31pt+(n-1)*22pt,110pt,31pt+(n-1)*22pt)
+  #seg(44pt+(n - 1)*13pt+36pt,31pt+(n - 1)*22pt,110pt,31pt+(n - 1)*22pt)
   #cap(88pt,85pt,name:"C")
   #place(top+left,dx:7pt,dy:10pt,text(size:7pt)[#if p [PMOS] else [NMOS]])
   #place(top+left,dx:6pt,dy:112pt,text(size:7pt)[#if low [级联降栅压] else [同栅压]])
