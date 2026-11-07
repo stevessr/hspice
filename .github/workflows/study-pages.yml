@@ -161,6 +161,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 fullbook/native/web/validate_selections.py
+          python3 fullbook/native/qa/check_status_consistency.py
           python3 fullbook/native/qa/check_mos_iv.py
           python3 fullbook/native/qa/check_velocity_sat.py
           python3 fullbook/native/qa/check_subthreshold_cap.py
