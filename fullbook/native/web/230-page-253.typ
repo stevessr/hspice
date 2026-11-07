@@ -1,25 +1,16 @@
 // SOURCE PDF PAGE 253 · PRINTED 234. Final chapter 6 problems.
+#import "../figures/ch6-final-exercises-native.typ": figure-p612, figure-p613
 #set document(title:"第6章 习题P6.12—P6.16 · PDF253")
 #align(center)[#text(size:8pt,weight:"bold")[234　数字集成电路分析与设计——深亚微米工艺（第三版）]]
 #line(length:100%,stroke:.55pt)
 
 #align(center)[*图P6.12　包含反相器、与非门和四个并联或非门的复杂路径*]
-#grid(columns:(1fr,1fr,1fr,1fr),column-gutter:6pt,
-  [#rect(width:49pt,height:24pt,stroke:.7pt)[INV]],
-  [#rect(width:49pt,height:24pt,stroke:.7pt)[NAND]],
-  [#rect(width:49pt,height:24pt,stroke:.7pt)[NOR×4]],
-  [#rect(width:49pt,height:24pt,stroke:.7pt)[NAND]])
-#align(center)[$C_("in") quad arrow quad 1000 C_("inv")$]
+#figure-p612()
 
 #v(12pt)
 
 #align(center)[*图P6.13　在路径中增加扇出和旁路电容的电路*]
-#grid(columns:(1fr,1fr,1fr,1fr),column-gutter:6pt,
-  [#rect(width:49pt,height:24pt,stroke:.7pt)[INV]],
-  [#rect(width:49pt,height:24pt,stroke:.7pt)[NAND]],
-  [#rect(width:49pt,height:24pt,stroke:.7pt)[NOR×4]],
-  [#rect(width:49pt,height:24pt,stroke:.7pt)[NAND]])
-#align(center)[$C_("in") quad arrow quad 500 C_("inv") quad arrow quad 8000 C_("inv")$]
+#figure-p613()
 
 *P6.14*　从例6.2中可以看出，低电平转换到高电平时的 $C_g$ 平均值要比高电平转换到低电平时的大。解释为什么这种情况总是正确的。
 
