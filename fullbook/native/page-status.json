@@ -1857,43 +1857,133 @@
     },
     {
       "pdf_page": 157,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/134-page-157.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图4.15 RC时序，式4.22a/b/c传播延迟与式4.23方块电阻，未精确数字化源波形。"
     },
     {
       "pdf_page": 158,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/135-page-158.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式4.24尺寸电阻关系、例4.9 CMOS 50fF/50ps/Wn.875μm/Wp2.1μm。"
     },
     {
       "pdf_page": 159,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/136-page-159.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例4.9伪NMOS Wp.665μm、PLH>100ps与4.9三态缓冲器及图4.16逻辑表。"
     },
     {
       "pdf_page": 160,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/137-page-160.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "4.10小结两种历史工艺表、噪声容限和电阻公式及4.11标题。"
     },
     {
       "pdf_page": 161,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/138-page-161.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "4.11四项参考文献和P4.1五个子问与四幅电路的器件参数；图未完整描摹。"
     },
     {
       "pdf_page": 162,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/139-page-162.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图P4.2和P4.2—P4.6，图P4.6八级链路，源每个元件仍需细画。"
     },
     {
       "pdf_page": 163,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/140-page-163.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "P4.6输入噪声0.45V、误差2%，P4.7伪PMOS、P4.8非常规器件连接；原图待补。"
     },
     {
       "pdf_page": 164,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/141-page-164.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "P4.9/4.10/4.11/P4.12目标VTC、尺寸、原源图位置未验收。"
     },
     {
       "pdf_page": 165,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/142-page-165.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "P4.12三种目标VOL及P4.13/4.14/P4.15；图P4.15为编辑示意非逐点原图。"
     },
     {
       "pdf_page": 166,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/143-page-166.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "P4.15延续及P4.16两种三态栈；图P4.16的两幅电路非逐元精确。"
     },
     {
       "pdf_page": 167,

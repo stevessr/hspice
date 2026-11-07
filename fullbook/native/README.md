@@ -121,3 +121,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF147—156：CMOS五工作区、SPICE VTC、版图与伪NMOS
 
 新增`web/124-page-147.typ`到`web/133-page-156.typ`，以及`figures/ch4-cmos-continued-native.typ`的原生曲线和电路示意，重排式(4.14)—(4.21)、例4.6—4.8及图4.12—4.14的主要内容；单独核对0.60/0.53 V、0.891/0.626 V和0.065 V。VitePress/原页SVG编辑选段连续PDF26—156，共131页。严禁把部分编辑选段冒充整页逐字/逐图1:1通过；后者仍0/445。
+
+
+## PDF157—166：第4章时序、尺寸、三态及全部习题
+
+`web/134-page-157.typ`—`web/143-page-166.typ`及配套layout新增式4.22—4.24 RC延迟与等效电阻、例4.9 CMOS与伪NMOS尺寸比较、4.9三态逻辑、4.10工艺表、4.11四项参考文献、4.12习题P4.1—P4.16；`figures/ch4-delay-tristate-native.typ`包含可编辑时序图、三态级联和习题VTC。回归`qa/check_ch4_end.py`核对几何比例数值及章节习题编号。当前连续原生选段26—166共141页，所有源页仍严格0/445整页1:1验收。
