@@ -19,11 +19,11 @@
 
 如果有 $n$ 个不同的反相器，只须按如下方式将它们加起来：
 
-#align(center)[$sum C_G = 2 " fF/μm" times (W_(p1) + W_(n1) + W_(p2) + W_(n2) + dots)$]
+#align(center)[$sum C_G = 2 " fF/μm" times (W_("p1") + W_("n1") + W_("p2") + W_("n2") + dots)$]
 
 对于与非门、或非门，或者其他复杂门，可以利用被驱动晶体管的适当宽度简单地使用上面的公式：
 
-#align(center)[$sum C_G = 2 " fF/μm" times (W_(p1) + W_(n1) + W_(p2) + W_(n2) + dots)$]
+#align(center)[$sum C_G = 2 " fF/μm" times (W_("p1") + W_("n1") + W_("p2") + W_("n2") + dots)$]
 
 == 6.3.2　自身电容计算
 
