@@ -16,7 +16,7 @@ terms={
 249:("6.8","6.9","P6.1","P6.2","P6.3","H. Veendrick"),
 250:("P6.4","P6.5","fig-p64","fig-p65","50 fF"),
 251:("P6.6","P6.7","P6.8","P6.9","fig-p66","fig-p68","fig-p69"),
-252:("P6.10","P6.11","P6.12","P6.13","fig-p69","fig-p611")
+252:("P6.10","P6.11","P6.12","P6.13","fig-p69-cont","fig-p610","fig-p611")
 }
 for n,vals in terms.items():
  src=r/"web"/f"{n-23}-page-{n:03d}.typ"
