@@ -165,3 +165,5 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 新增 `web/185-page-208.typ` 至 `web/197-page-220.typ`、13份固定原书纸张尺寸的可编辑 SVG 布局及 `figures/ch6-delay-capacitance-native.typ`，内容包括第6章绪论、式（6.1）—（6.11）、例6.1（14.5/33.5 kΩ，SPICE参考12.5/30 kΩ）、例6.2（40/55ps与44/59ps、Cg约1.9/2.2 fF/μm、Ceff约0.8/0.7 fF/μm）、图6.1—6.11与例6.3的题设。校验脚本 `qa/check_ch6_delay_cap.py` 检查页号、公式号、来源数值和单位数量级。
 
 当前原生 Typst *教学选段* 以连续序列覆盖 PDF20—220 共201页，严格逐字逐图完整验收依然 **0/445**。验收矩阵与源码进度一致，所有新页在文字、晶体管器件/结电容节点、原图曲线、图注、脚注、版心等方面仍保持未验收状态。不能把双OCR高一致率、Typst编译成功或草图作为1:1复刻完成证据。
+
+例6.2的两份可编辑原书SPICE网表：[`examples/ch6-example6-2-no-area.sp`](examples/ch6-example6-2-no-area.sp) 与 [`examples/ch6-example6-2-with-area.sp`](examples/ch6-example6-2-with-area.sp)。原扫描中的设备名称、尺寸与几何参数已结构性复核；这些网表引用的工艺模型库需由学习者自行提供，未把没有模型的仿真结果作为已实测结果。
