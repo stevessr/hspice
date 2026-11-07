@@ -119,7 +119,17 @@ const sections = [
   { id: '110-page-133', title: '原书第133页 · 图4.8及式4.3', pages: 'PDF第133页/印刷第114页', summary: '单位增益点VIL/VIH与NM' },
   { id: '111-page-134', title: '原书第134页 · 例4.1缓冲器、4.4节', pages: 'PDF第134页/印刷第115页', summary: '正斜率VTC与电阻负载结构' },
   { id: '112-page-135', title: '原书第135页 · 图4.9及式4.4', pages: 'PDF第135页/印刷第116页', summary: '负载线与NMOS电流交点' },
-  { id: '113-page-136', title: '原书第136页 · 式4.5—4.7电阻负载设计', pages: 'PDF第136页/印刷第117页', summary: 'VOH/VOL二次近似与静态功耗' }
+  { id: '113-page-136', title: '原书第136页 · 式4.5—4.7电阻负载设计', pages: 'PDF第136页/印刷第117页', summary: 'VOH/VOL二次近似与静态功耗' },
+  { id: '114-page-137', title: '原书第137页 · 式4.8a/b低输入单位增益点', pages: 'PDF第137页/印刷第118页', summary: 'VIL = VT + 1/(kRL)' },
+  { id: '115-page-138', title: '原书第138页 · 式4.8c—f、式4.9及例4.2', pages: 'PDF第138页/印刷第119页', summary: 'VIH与切换点VS' },
+  { id: '116-page-139', title: '原书第139页 · 例4.2结果与例4.3 SPICE', pages: 'PDF第139页/印刷第120页', summary: 'VOL≈0.08V、NL=0.38V、NH=0.43V' },
+  { id: '117-page-140', title: '原书第140页 · 例4.3 SPICE VTC验证', pages: 'PDF第140页/印刷第121页', summary: '噪声容限0.473V/0.828V' },
+  { id: '118-page-141', title: '原书第141页 · 4.5 NMOS负载及4.5.1', pages: 'PDF第141页/印刷第122页', summary: '饱和增强型上拉NMOS' },
+  { id: '119-page-142', title: '原书第142页 · 图4.10与式4.10/4.11', pages: 'PDF第142页/印刷第123页', summary: '尺寸比KR及体效应阈值' },
+  { id: '120-page-143', title: '原书第143页 · 式4.12与例4.4', pages: 'PDF第143页/印刷第124页', summary: 'VOH约0.73V' },
+  { id: '121-page-144', title: '原书第144页 · 例4.5负载器件尺寸设计', pages: 'PDF第144页/印刷第125页', summary: '目标VOL=0.1V、工艺参数' },
+  { id: '122-page-145', title: '原书第145页 · 4.5.2、图4.11及式4.13', pages: 'PDF第145页/印刷第126页', summary: '线性增强型NMOS负载' },
+  { id: '123-page-146', title: '原书第146页 · 4.6与4.6.1 CMOS反相器', pages: 'PDF第146页/印刷第127页', summary: 'CMOS互补连接与静态状态' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -160,6 +170,12 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第4章 NMOS 负载到 CMOS 反相器：PDF 第137—146页
+
+按扫描逐页整理式（4.8a—f）、式（4.9）—（4.13）、例4.2—4.5的参数与结果。包含图4.10饱和增强型负载的可编辑拓扑、图4.11线性增强型负载的可编辑拓扑，以及4.6节CMOS反相器的双管连接草图。例4.3的原始SPICE I–V曲线未逐点数字化；公式、模拟结果选段不等同于整页重排。
+
+连续源页编辑选段为 **PDF第26—146页，共121页**；严格整页1:1校验仍为0/445。
 
 ## 第4章反相器 VTC 与噪声容限：PDF 第127—136页
 
