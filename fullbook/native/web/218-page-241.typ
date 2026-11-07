@@ -6,15 +6,15 @@
 
 假设可以接收该延迟，则从输出到输入反向计算器件尺寸：
 
-#align(center)[$"FO"_(j+2) LE_("nor")=6 arrow LE_("nor") (C_("load")/C_(j+2))=6$]
+#align(center)[$"FO"_(j+2) "LE"_("nor")=6 arrow "LE"_("nor") (C_("load")/C_(j+2))=6$]
 
 #align(center)[$therefore C_(j+2)=(5/3)(200 " fF"/6) approx 55 " fF"$]
 
-#align(center)[$"FO"_(j+1) LE_("inv")=6 arrow LE_("inv") (C_(j+2)/C_(j+1))=6$]
+#align(center)[$"FO"_(j+1) "LE"_("inv")=6 arrow "LE"_("inv") (C_(j+2)/C_(j+1))=6$]
 
 #align(center)[$therefore C_(j+1)=(1)(55 " fF"/6) approx 9.1 " fF"$]
 
-#align(center)[$"FO"_j LE_("nand")=6 arrow LE_("nand") (C_(j+1)/C_("in"))=6$]
+#align(center)[$"FO"_j "LE"_("nand")=6 arrow "LE"_("nand") (C_(j+1)/C_("in"))=6$]
 
 #align(center)[$therefore C_("in")=(4/3)(9.1 " fF"/6) approx 2 " fF"$]
 

@@ -17,11 +17,11 @@
 
 在归一化的形式中，该延迟公式是：
 
-#align(center)[$D=(LE_("nand") "FO"_j + P_("nand"))+(LE_("inv") "FO"_(j+1) + P_("inv"))+(LE_("nor") "FO"_(j+2)+P_("nor"))$]
+#align(center)[$D=("LE"_("nand") "FO"_j + P_("nand"))+("LE"_("inv") "FO"_(j+1) + P_("inv"))+("LE"_("nor") "FO"_(j+2)+P_("nor"))$]
 
 在该延迟表达式中，每一个门产生一个参数项 $"LE" times "FO"+P$，这可以写成一种更简洁的形式：
 
-#align(center)[$D=sum_i (LE_i times "FO"_i+P_i)$]
+#align(center)[$D=sum_i ("LE"_i times "FO"_i+P_i)$]
 
 其中，$"LE"=tau_("gate")/tau_("inv")$，同时 $ "FO"_i = C_(i+1)/C_i$，且寄生参数 $P="LE" times gamma_("gate")$。
 
@@ -43,4 +43,4 @@
 
 使用这些值，得到：
 
-#align(center)[$LE_("inv")=1 quad LE_("nand")=4/3 quad LE_("nor")=5/3$]
+#align(center)[$"LE"_("inv")=1 quad "LE"_("nand")=4/3 quad "LE"_("nor")=5/3$]

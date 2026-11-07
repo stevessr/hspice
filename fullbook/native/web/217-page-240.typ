@@ -6,7 +6,7 @@
 
 对于或非门，同样参考图6.27来确定P。通过正确地考虑版图中共用的源/漏区，可以计算如下：
 
-#align(center)[$P_("nor")=LE_("nor") times gamma_("nor") = "LE" times (C_("self")/C_("in"))$]
+#align(center)[$P_("nor")="LE"_("nor") times gamma_("nor") = "LE" times (C_("self")/C_("in"))$]
 
 #align(center)[$="LE" times (C_("eff")(W+4W+4W))/(C_g(W+4W))="LE" times (C_("eff")/C_g) times 9/5 =5/3 times 1/2 times 9/5=3/2$]
 
@@ -33,7 +33,7 @@
 
 首先，计算所有门的LE×FO乘积：
 
-#align(center)[$"总的路径强度" = LE_("nand") times LE_("inv") times LE_("nor") times (C_("load")/C_("in"))$]
+#align(center)[$"总的路径强度" = "LE"_("nand") times "LE"_("inv") times "LE"_("nor") times (C_("load")/C_("in"))$]
 
 #align(center)[$=(4/3)(1)(5/3)(200/2)=222.2$]
 

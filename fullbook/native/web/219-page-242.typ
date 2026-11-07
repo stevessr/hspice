@@ -15,13 +15,13 @@
 
 下降情况——下降延迟已经和常规的反相器相同了：
 
-#align(center)[$LE_f = ((C_("in"))_("gate"))/((C_("in"))_("inv")) = (1+1)/(1+2)=2/3$]
+#align(center)[$"LE"_f = ((C_("in"))_("gate"))/((C_("in"))_("inv")) = (1+1)/(1+2)=2/3$]
 
 上升情况——使所有的器件尺寸变为原来的两倍以获得相同的上升延迟：
 
 #align(center)[#le-panel(kind:"INV",up:"2",down:"2",le:"4/3")]
 
-#align(center)[$LE_r = ((C_("in"))_("gate"))/((C_("in"))_("inv")) = (2+2)/(1+2)=4/3$]
+#align(center)[$"LE"_r = ((C_("in"))_("gate"))/((C_("in"))_("inv")) = (2+2)/(1+2)=4/3$]
 
 *方法二：* 用逻辑强度的定义：
 
@@ -29,11 +29,11 @@
 
 对于下降情况：
 
-#align(center)[$LE_f = (R_("eqn")(2C_g W))/(R_("eqn")(3C_g W))=2/3$]
+#align(center)[$"LE"_f = (R_("eqn")(2C_g W))/(R_("eqn")(3C_g W))=2/3$]
 
 对于上升情况：
 
-#align(center)[$LE_r = (2R_("eqn")(2C_g W))/(R_("eqn")(3C_g W))=4/3$]
+#align(center)[$"LE"_r = (2R_("eqn")(2C_g W))/(R_("eqn")(3C_g W))=4/3$]
 
 上升和下降情况的LE值是不同的，因此可以基于任何一个值进行优化。但是要想实现两种变化过程，则要用LE的平均值来确定晶体管的尺寸。
 
