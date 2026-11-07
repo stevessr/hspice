@@ -63,15 +63,15 @@
 #let curve-stack-panel(stacked:false)=html.frame(block(width:195pt,height:190pt)[
   #place(top+left,dx:4pt,dy:4pt,text(size:7.3pt)[#if stacked [2只 2W 串联] else [1只 W]])
   #w(72pt,17pt,72pt,30pt)
-  #if stacked {
+  #if stacked [
     #mos(72pt,30pt,label:"M2",size:"2W")
     #w(72pt,59pt,72pt,64pt)
     #mos(72pt,64pt,label:"M1",size:"2W")
     #w(72pt,93pt,72pt,106pt)
-  } else {
+  ] else [
     #mos(72pt,30pt,label:"M0",size:"W")
     #w(72pt,59pt,72pt,106pt)
-  }
+  ]
   #w(72pt,17pt,134pt,17pt)
   #place(top+left,dx:136pt,dy:14pt,text(size:7pt)[$C_L$])
   #w(35pt,162pt,173pt,162pt)
@@ -81,11 +81,11 @@
   #w(53pt,151pt,69pt,139pt)
   #w(69pt,139pt,89pt,133pt)
   #w(89pt,133pt,160pt,133pt)
-  #if stacked {
+  #if stacked [
     #w(53pt,155pt,66pt,145pt)
     #w(66pt,145pt,90pt,139pt)
     #w(90pt,139pt,160pt,139pt)
-  }
+  ]
 ])
 #let fig65()=grid(columns:(1fr,1fr),column-gutter:5pt,
   [#curve-stack-panel()], [#curve-stack-panel(stacked:true)])
@@ -97,12 +97,11 @@
 #let fig67()=html.frame(block(width:385pt,height:145pt)[
   #w(13pt,62pt,350pt,62pt)
   #place(top+left,dx:11pt,dy:40pt,text(size:8pt)[Driver ▷]))
-  #for part in ((100pt,"self"),(173pt,"wire"),(247pt,"fanout")) {
-    #let x=part.at(0)
-    #w(x,62pt,x,90pt)
-    #cap-mark(x-6pt,90pt,label:part.at(1))
-    #w(x,96pt,x,119pt)
-  }
+  #for part in ((100pt,"self"),(173pt,"wire"),(247pt,"fanout")) [
+    #w(part.at(0),62pt,part.at(0),90pt)
+    #cap-mark(part.at(0)-6pt,90pt,label:part.at(1))
+    #w(part.at(0),96pt,part.at(0),119pt)
+  ]
   #w(310pt,62pt,310pt,38pt)
   #w(329pt,62pt,329pt,38pt)
   #place(top+left,dx:290pt,dy:10pt,text(size:7.5pt)[后级门1]))
@@ -167,11 +166,11 @@
 #let fig-example63()=html.frame(block(width:390pt,height:220pt)[
   #place(top+left,dx:8pt,dy:4pt,text(size:8pt)[三输入 NAND：三只PMOS并联各2W，NMOS串联各3W]))
   #w(30pt,29pt,339pt,29pt)
-  #for x in (83pt,175pt,266pt) {
+  #for x in (83pt,175pt,266pt) [
     #w(x,29pt,x,49pt)
     #mos(x,49pt,p:true,size:"2W")
     #w(x,78pt,x,94pt)
-  }
+  ]
   #w(83pt,94pt,300pt,94pt)
   #w(185pt,94pt,185pt,111pt)
   #mos(185pt,111pt,size:"3W")
