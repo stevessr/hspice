@@ -109,7 +109,17 @@ const sections = [
   { id: '100-page-123', title: '原书第123页 · 参考文献及P3.1', pages: 'PDF第123页/印刷第104页', summary: '12篇参考、NMOS模型提取电路' },
   { id: '101-page-124', title: '原书第124页 · 表P3.1及P3.2/3.3', pages: 'PDF第124页/印刷第105页', summary: '四组I–V值与电容充电条件' },
   { id: '102-page-125', title: '原书第125页 · 习题P3.4—P3.8', pages: 'PDF第125页/印刷第106页', summary: '沟道调制、体效应与SPICE' },
-  { id: '103-page-126', title: '原书第126页 · 第3章习题P3.8—P3.14', pages: 'PDF第126页/印刷第107页', summary: 'PMOS阈值、温度、介质与互连' }
+  { id: '103-page-126', title: '原书第126页 · 第3章习题P3.8—P3.14', pages: 'PDF第126页/印刷第107页', summary: 'PMOS阈值、温度、介质与互连' },
+  { id: '104-page-127', title: '原书第127页 · 第4章章首与4.1绪论', pages: 'PDF第127页/印刷第108页', summary: '12节章节提要、静态/动态电路' },
+  { id: '105-page-128', title: '原书第128页 · 理想VTC和增益式4.1', pages: 'PDF第128页/印刷第109页', summary: '图4.1理想切换与dVout/dVin' },
+  { id: '106-page-129', title: '原书第129页 · 实际VTC与级联噪声', pages: 'PDF第129页/印刷第110页', summary: '图4.2/4.3、实际输出过渡' },
+  { id: '107-page-130', title: '原书第130页 · 4.3噪声容限的定义', pages: 'PDF第130页/印刷第111页', summary: '4.3.1单源噪声容限SSNM' },
+  { id: '108-page-131', title: '原书第131页 · 图4.4/4.5及式4.2', pages: 'PDF第131页/印刷第112页', summary: 'SSNM_H与SSNM_L双行公式' },
+  { id: '109-page-132', title: '原书第132页 · 图4.6/4.7与多源噪声', pages: 'PDF第132页/印刷第113页', summary: 'MSNM以及f(Vin+vn)' },
+  { id: '110-page-133', title: '原书第133页 · 图4.8及式4.3', pages: 'PDF第133页/印刷第114页', summary: '单位增益点VIL/VIH与NM' },
+  { id: '111-page-134', title: '原书第134页 · 例4.1缓冲器、4.4节', pages: 'PDF第134页/印刷第115页', summary: '正斜率VTC与电阻负载结构' },
+  { id: '112-page-135', title: '原书第135页 · 图4.9及式4.4', pages: 'PDF第135页/印刷第116页', summary: '负载线与NMOS电流交点' },
+  { id: '113-page-136', title: '原书第136页 · 式4.5—4.7电阻负载设计', pages: 'PDF第136页/印刷第117页', summary: 'VOH/VOL二次近似与静态功耗' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -150,6 +160,12 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第4章反相器 VTC 与噪声容限：PDF 第127—136页
+
+新增第4章章首目录、4.1—4.4节前段及原生可编辑的理想/实际反相器 VTC、六级反相器噪声传播、单位增益点噪声容限、电阻负载NMOS及负载线。公式（4.1）—（4.7）按扫描页界放置，例4.1缓冲器VTC只完成文本与概念，尚未达到完整原图几何一致。
+
+连续可编辑源页为 **PDF第26—136页共111页**；严格全页1:1验收仍为 **0/445**，该范围是关键内容选段，而非整页原文。
 
 ## 第3章小结与习题：PDF 第117—126页
 
