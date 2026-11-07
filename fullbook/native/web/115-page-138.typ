@@ -6,7 +6,7 @@
 $ k [(V_("in")-V_T)V_("out")-V_("out")^2/2] approx
  (V_("DD")-V_("out"))/R_L quad "(4.8c)" $
 对输入求导，利用单位增益斜率 $dif V_("out")/dif V_("in") = -1$，得到：
-$ V_("IH") = V_T + 2V_("out")-1/(kR_L) quad "(4.8d)" $
+$ V_("IH") = V_T + 2 V_("out")-1/(k R_L) quad "(4.8d)" $
 将式（4.8d）代回电流关系：
 $ k/2 [2(V_("IH")-V_T)V_("out")-V_("out")^2]
  =(V_("DD")-V_("out"))/R_L quad "(4.8e)" $

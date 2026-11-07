@@ -5,7 +5,7 @@
 按上一页所给 $k'=430 " μA/V"^2$、$W/L=2$、$R_L=20 " kΩ"$、$V_T=0.4 " V"$ 和 $V_("DD")=1.2 " V"$：
 $ V_("OL") approx V_("DD")/(1 + k R_L (V_("DD")-V_T)) approx 0.08 " V" $
 $ V_("IL") = V_T + 1/(k R_L) approx 0.46 " V" $
-$ V_("IH") = V_T + sqrt((8 V_("DD"))/(3kR_L)) - 1/(k R_L)
+$ V_("IH") = V_T + sqrt((8 V_("DD"))/(3k R_L)) - 1/(k R_L)
  approx 0.77 " V" $
 据此计算：
 $ "NM_L" = V_("IL")-V_("OL") = 0.38 " V" $

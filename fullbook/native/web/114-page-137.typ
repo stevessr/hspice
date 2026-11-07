@@ -8,7 +8,7 @@ $ I_R = I_("DS") "（sat）" quad "(4.8a)" $
 $ (V_("DD")-V_("out"))/R_L =
  (W v_("sat") C_("ox") (V_("in")-V_T)^2)/((V_("in")-V_T)+E_c L) $
 在输入接近阈值时，使用近似后的平方律：
-$ (V_("DD")-V_("out"))/R_L approx (W mu_n C_("ox")(V_("in")-V_T)^2)/(2L) $
+$ (V_("DD")-V_("out"))/R_L approx (W mu_n C_("ox")(V_("in")-V_T)^2)/(2 L) $
 令 $k=(W/L)mu_n C_("ox")$，以输入电压对上式微分，在单位增益点有：
 $ -1/R_L (dif V_("out"))/(dif V_("in"))=k(V_("in")-V_T) $
 由 $V_("in")=V_("IL")$ 且斜率为 $-1$，得到：
