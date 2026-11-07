@@ -241,7 +241,15 @@ const sections = [
   { id: '226-page-249', title: '原书第249页 · 6.8参考文献及P6.1—P6.3', pages: 'PDF第249页/印刷第230页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
   { id: '227-page-250', title: '原书第250页 · P6.4—P6.5 CMOS拓扑', pages: 'PDF第250页/印刷第231页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
   { id: '228-page-251', title: '原书第251页 · P6.6—P6.9路径优化与逻辑强度', pages: 'PDF第251页/印刷第232页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
-  { id: '229-page-252', title: '原书第252页 · P6.9—P6.13与复杂逻辑电路', pages: 'PDF第252页/印刷第233页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' }
+  { id: '229-page-252', title: '原书第252页 · P6.9—P6.13与复杂逻辑电路', pages: 'PDF第252页/印刷第233页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
+  { id: '230-page-253', title: '原书PDF第253页 · 第6章末尾P6.14—P6.16与图P6.12/13', pages: 'PDF第253页/印刷第234页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
+  { id: '231-page-254', title: '原书PDF第254页 · 第7章7.1绪论与本章提要', pages: 'PDF第254页/印刷第235页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
+  { id: '232-page-255', title: '原书PDF第255页 · 7.2.1传输管及图7.1', pages: 'PDF第255页/印刷第236页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
+  { id: '233-page-256', title: '原书PDF第256页 · NMOS/PMOS阈值传输与图7.2', pages: 'PDF第256页/印刷第237页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
+  { id: '234-page-257', title: '原书PDF第257页 · 图7.3与7.2.2电容馈通', pages: 'PDF第257页/印刷第238页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
+  { id: '235-page-258', title: '原书PDF第258页 · 图7.5、式7.1—7.3与例7.1', pages: 'PDF第258页/印刷第239页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
+  { id: '236-page-259', title: '原书PDF第259页 · 例7.1计算和7.2.3电荷共享', pages: 'PDF第259页/印刷第240页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
+  { id: '237-page-260', title: '原书PDF第260页 · 式7.4—7.6与例7.2', pages: 'PDF第260页/印刷第241页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
