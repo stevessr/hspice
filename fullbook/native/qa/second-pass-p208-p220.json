@@ -1,0 +1,366 @@
+{
+  "schema": "native-ch6-second-scan-v2",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    208,
+    220
+  ],
+  "method": {
+    "pass1": "archived private Tesseract chi_sim+eng PSM3",
+    "pass2": "independently rendered page images, Tesseract chi_sim+eng PSM6",
+    "agreement": "difflib SequenceMatcher ratio after whitespace normalization; not a correctness metric"
+  },
+  "full_page_accepted": 0,
+  "mean_ocr_agreement": 0.7737,
+  "high_risk_pages": [
+    210,
+    211,
+    212,
+    216,
+    218
+  ],
+  "landmarks": [
+    "208 chapter6 title",
+    "209 Figure6.1",
+    "210 Figures6.2-6.3",
+    "211 equations6.1-6.5b",
+    "212 example6.1 equation6.6",
+    "213 figures6.4-6.5",
+    "214 figure6.6 section6.3",
+    "215 equation6.7-6.9",
+    "216 6.3.2 section",
+    "217 equation6.10",
+    "218 example6.2 first SPICE",
+    "219 example6.2 second SPICE and equation6.11",
+    "220 figure6.11 and example6.3"
+  ],
+  "pages": [
+    {
+      "pdf_page": 208,
+      "source_scan_sha256": "9cc5dacc30ea42bcd14975a4f7dd8616f143de0c0b75d47eb3be06ce0e78f5f7",
+      "normalized_similarity": 0.9627,
+      "round1_characters": 850,
+      "round2_characters": 856,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": false,
+        "selected_figures": false,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 209,
+      "source_scan_sha256": "c793f7a2f39501b7ef0574dc077e7ba50d880ab039ce579b42a3bc0fd83441a5",
+      "normalized_similarity": 0.8857,
+      "round1_characters": 1121,
+      "round2_characters": 1215,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 210,
+      "source_scan_sha256": "3902f9a08fafb649ade474440236735e6ca129cf899acf6e05723264d04f0619",
+      "normalized_similarity": 0.6836,
+      "round1_characters": 700,
+      "round2_characters": 839,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 211,
+      "source_scan_sha256": "b1321d9f4e2981bd848b1acd2f08220c39075404e66e35ddbeb5c3540a4ec509",
+      "normalized_similarity": 0.5282,
+      "round1_characters": 1305,
+      "round2_characters": 1276,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 212,
+      "source_scan_sha256": "b5bd60736fd70c0361fd0d45b1cf0a30c9fb5a5ccf0ea78b5b30d85d1b5326b4",
+      "normalized_similarity": 0.6504,
+      "round1_characters": 906,
+      "round2_characters": 959,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 213,
+      "source_scan_sha256": "c95b201c8a5fdc729cfe4786f67d744ee372ec11ff18c0228293efc8f02f13db",
+      "normalized_similarity": 0.732,
+      "round1_characters": 785,
+      "round2_characters": 1243,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 214,
+      "source_scan_sha256": "75544b3e635a1150d9af1ae386f6eb66366245631646a84f05149eb1748ab4e3",
+      "normalized_similarity": 0.9144,
+      "round1_characters": 1183,
+      "round2_characters": 1383,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 215,
+      "source_scan_sha256": "b8a1b9dc9c2d55969d5c058ae556283381505942d182b317f4e99f3ed5454583",
+      "normalized_similarity": 0.8381,
+      "round1_characters": 933,
+      "round2_characters": 1019,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 216,
+      "source_scan_sha256": "ba7452437230ad014480b91c2c9db38c82e2ac6890e3d3b5730e16c2c4032aec",
+      "normalized_similarity": 0.6525,
+      "round1_characters": 719,
+      "round2_characters": 891,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 217,
+      "source_scan_sha256": "169b9bbd3e1390b9b0813c35eb044590982a874e213b6fb9936164951b2f1d95",
+      "normalized_similarity": 0.8291,
+      "round1_characters": 759,
+      "round2_characters": 1086,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 218,
+      "source_scan_sha256": "dda91a3d6f4aa30d3837d3f6fc029d5a2c6046d535ac4f5c8e7080f6e9096051",
+      "normalized_similarity": 0.6782,
+      "round1_characters": 1482,
+      "round2_characters": 1518,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 219,
+      "source_scan_sha256": "46f0763f32f37cf4b9180f65fa5750b22d884272a642eb7ed191235a325f7fdf",
+      "normalized_similarity": 0.834,
+      "round1_characters": 1688,
+      "round2_characters": 1707,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    },
+    {
+      "pdf_page": 220,
+      "source_scan_sha256": "cb27be596c706f3ca4bae571248d7a7a6b393dc720602597806a420bfd8f0d72",
+      "normalized_similarity": 0.8686,
+      "round1_characters": 667,
+      "round2_characters": 1011,
+      "status": "partially-transcribed",
+      "checks": {
+        "heading": true,
+        "selected_math": true,
+        "selected_figures": true,
+        "full_text": false,
+        "full_figures": false,
+        "full_tables": false,
+        "full_captions": false,
+        "full_footnotes": false,
+        "layout": false
+      },
+      "accepted": false,
+      "blocking": [
+        "full-text source comparison missing",
+        "figure topology and dimensions not fully traced",
+        "layout and footnotes not 1:1 accepted"
+      ]
+    }
+  ],
+  "notes": "All full-page fidelity gates remain false. Source image and OCR text retained only in the user-held local comparison package."
+}
