@@ -1,0 +1,116 @@
+{
+  "schema": "scan-vs-svg-visual-pass6",
+  "pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "pdf_page_count": 445,
+  "scope": [
+    237,
+    244
+  ],
+  "svg_before_action": 42380097180,
+  "svg_after_action": 42380430831,
+  "threshold_grayscale": 190,
+  "pixel_tolerance": 2,
+  "comparison_scale": 1.25,
+  "metric": "two-way foreground F1 with 2px dilation, only a visual diagnostic",
+  "baseline_mean_f1": 0.29099,
+  "final_mean_f1": 0.31606,
+  "full_page_strictly_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 237,
+      "f1_before": 0.3676,
+      "f1_after": 0.3676,
+      "accepted": false,
+      "remaining": [
+        "literal text and punctuation against source",
+        "full circuit connection and editable curve replication",
+        "page positioning and typographic fidelity",
+        "human figure and caption review"
+      ]
+    },
+    {
+      "pdf_page": 238,
+      "f1_before": 0.31296,
+      "f1_after": 0.31296,
+      "accepted": false,
+      "remaining": [
+        "literal text and punctuation against source",
+        "full circuit connection and editable curve replication",
+        "page positioning and typographic fidelity",
+        "human figure and caption review"
+      ]
+    },
+    {
+      "pdf_page": 239,
+      "f1_before": 0.39694,
+      "f1_after": 0.39694,
+      "accepted": false,
+      "remaining": [
+        "literal text and punctuation against source",
+        "full circuit connection and editable curve replication",
+        "page positioning and typographic fidelity",
+        "human figure and caption review"
+      ]
+    },
+    {
+      "pdf_page": 240,
+      "f1_before": 0.28288,
+      "f1_after": 0.28288,
+      "accepted": false,
+      "remaining": [
+        "literal text and punctuation against source",
+        "full circuit connection and editable curve replication",
+        "page positioning and typographic fidelity",
+        "human figure and caption review"
+      ]
+    },
+    {
+      "pdf_page": 241,
+      "f1_before": 0.29048,
+      "f1_after": 0.29048,
+      "accepted": false,
+      "remaining": [
+        "literal text and punctuation against source",
+        "full circuit connection and editable curve replication",
+        "page positioning and typographic fidelity",
+        "human figure and caption review"
+      ]
+    },
+    {
+      "pdf_page": 242,
+      "f1_before": 0.18095,
+      "f1_after": 0.38149,
+      "accepted": false,
+      "remaining": [
+        "literal text and punctuation against source",
+        "full circuit connection and editable curve replication",
+        "page positioning and typographic fidelity",
+        "human figure and caption review"
+      ]
+    },
+    {
+      "pdf_page": 243,
+      "f1_before": 0.27365,
+      "f1_after": 0.27365,
+      "accepted": false,
+      "remaining": [
+        "literal text and punctuation against source",
+        "full circuit connection and editable curve replication",
+        "page positioning and typographic fidelity",
+        "human figure and caption review"
+      ]
+    },
+    {
+      "pdf_page": 244,
+      "f1_before": 0.22246,
+      "f1_after": 0.22246,
+      "accepted": false,
+      "remaining": [
+        "literal text and punctuation against source",
+        "full circuit connection and editable curve replication",
+        "page positioning and typographic fidelity",
+        "human figure and caption review"
+      ]
+    }
+  ]
+}
