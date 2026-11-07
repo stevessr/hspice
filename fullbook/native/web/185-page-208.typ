@@ -5,24 +5,24 @@
 #set text(lang:"zh")
 = 第6章　高速 CMOS 逻辑设计
 
-#v(37pt)
+#v(31pt)
 
 #block(height:155pt, width:100%,fill:rgb("e3e3e3"),inset:(x:7pt,y:5pt))[
-  #stack(dir:ttb,spacing:3pt,
-    text(size:8.9pt,weight:"bold")[本章提要],
-    text(size:8.8pt)[　　6.1　绪论],
-    text(size:8.8pt)[　　6.2　转变时间分析],
-    text(size:8.8pt)[　　6.3　负载电容的详细计算],
-    text(size:8.8pt)[　　6.4　斜波输入情况下改善延迟计算],
-    text(size:8.8pt)[　　6.5　针对最佳路径延迟确定门的尺寸],
-    text(size:8.8pt)[　　6.6　用逻辑强度优化路径],
-    text(size:8.8pt)[　　6.7　小结],
-    text(size:8.8pt)[　　6.8　参考文献],
-    text(size:8.8pt)[　　6.9　习题],
+  #stack(dir:ttb,spacing:5pt,
+    text(size:9.2pt,weight:"bold")[本章提要],
+    text(size:9.1pt)[　　6.1　绪论],
+    text(size:9.1pt)[　　6.2　转变时间分析],
+    text(size:9.1pt)[　　6.3　负载电容的详细计算],
+    text(size:9.1pt)[　　6.4　斜波输入情况下改善延迟计算],
+    text(size:9.1pt)[　　6.5　针对最佳路径延迟确定门的尺寸],
+    text(size:9.1pt)[　　6.6　用逻辑强度优化路径],
+    text(size:9.1pt)[　　6.7　小结],
+    text(size:9.1pt)[　　6.8　参考文献],
+    text(size:9.1pt)[　　6.9　习题],
   )
 ]
 
-#v(13pt)
+#v(4pt)
 
 == 6.1　绪论
 
