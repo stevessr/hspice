@@ -5,12 +5,12 @@
 #let cap(x,y,label:"")={
   place(top+left,dx:x,dy:y,line(length:16pt,stroke:.7pt))
   place(top+left,dx:x,dy:y + 5pt,line(length:16pt,stroke:.7pt))
-  if label!="" {place(top+left,dx:x + 18pt,dy:y-3pt,text(size:7.5pt)[#label])}
+  if label!="" {place(top+left,dx:x + 18pt,dy:y - 3pt,text(size:7.5pt)[#label])}
 }
 #let mos(x,y,label:"")={
   place(top+left,dx:x,dy:y,line(end:(0pt,28pt),stroke:.9pt))
-  place(top+left,dx:x-5pt,dy:y,line(end:(0pt,28pt),stroke:.9pt))
-  place(top+left,dx:x-26pt,dy:y + 14pt,line(length:21pt,stroke:.9pt))
+  place(top+left,dx:x - 5pt,dy:y,line(end:(0pt,28pt),stroke:.9pt))
+  place(top+left,dx:x - 26pt,dy:y + 14pt,line(length:21pt,stroke:.9pt))
   if label!="" {place(top+left,dx:x + 6pt,dy:y + 8pt,text(size:7.5pt)[#label])}
 }
 #let fig612()=html.frame(block(width:300pt,height:170pt)[
