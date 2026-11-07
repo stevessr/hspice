@@ -5515,7 +5515,7 @@
     },
     {
       "pdf_page": 253,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5527,13 +5527,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "尚未完成全部字符/符号/公式原样的逐行核对",
+        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
+        "页眉/页脚/断行/图注视觉叠图差异未验收"
+      ],
+      "notes": "PDF253: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 254,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5545,13 +5549,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "尚未完成全部字符/符号/公式原样的逐行核对",
+        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
+        "页眉/页脚/断行/图注视觉叠图差异未验收"
+      ],
+      "notes": "PDF254: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 255,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5563,13 +5571,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "尚未完成全部字符/符号/公式原样的逐行核对",
+        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
+        "页眉/页脚/断行/图注视觉叠图差异未验收"
+      ],
+      "notes": "PDF255: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 256,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5581,13 +5593,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "尚未完成全部字符/符号/公式原样的逐行核对",
+        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
+        "页眉/页脚/断行/图注视觉叠图差异未验收"
+      ],
+      "notes": "PDF256: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 257,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5599,13 +5615,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "尚未完成全部字符/符号/公式原样的逐行核对",
+        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
+        "页眉/页脚/断行/图注视觉叠图差异未验收"
+      ],
+      "notes": "PDF257: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 258,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5617,13 +5637,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "尚未完成全部字符/符号/公式原样的逐行核对",
+        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
+        "页眉/页脚/断行/图注视觉叠图差异未验收"
+      ],
+      "notes": "PDF258: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 259,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5635,13 +5659,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "尚未完成全部字符/符号/公式原样的逐行核对",
+        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
+        "页眉/页脚/断行/图注视觉叠图差异未验收"
+      ],
+      "notes": "PDF259: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 260,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5653,8 +5681,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "尚未完成全部字符/符号/公式原样的逐行核对",
+        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
+        "页眉/页脚/断行/图注视觉叠图差异未验收"
+      ],
+      "notes": "PDF260: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
       "page_source_verified": false
     },
     {
