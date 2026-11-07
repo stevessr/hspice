@@ -1,0 +1,91 @@
+{
+  "schema": "source-vs-typst-svg-PDF245-252-pass7",
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "first_ci_run": 42381496874,
+  "refined_ci_run": 42381819387,
+  "scope": [
+    245,
+    252
+  ],
+  "threshold": 190,
+  "tolerance_pixels": 2,
+  "scale": 1.25,
+  "baseline_mean_f1": 0.21747,
+  "refined_mean_f1": 0.25998,
+  "strict_full_pages_accepted": 0,
+  "notes": "Measured SVG visual overlap only; never a text/semantics/1:1 certificate. Page253 still holds chapter6 exercises; chapter7 starts PDF254.",
+  "pages": [
+    {
+      "pdf_page": 245,
+      "baseline_f1": 0.33163,
+      "refined_f1": 0.33163,
+      "accepted": false,
+      "source_text_fully_verified": false,
+      "schematic_topology_fully_verified": false,
+      "exact_typesetting_accepted": false
+    },
+    {
+      "pdf_page": 246,
+      "baseline_f1": 0.21288,
+      "refined_f1": 0.21288,
+      "accepted": false,
+      "source_text_fully_verified": false,
+      "schematic_topology_fully_verified": false,
+      "exact_typesetting_accepted": false
+    },
+    {
+      "pdf_page": 247,
+      "baseline_f1": 0.16079,
+      "refined_f1": 0.16079,
+      "accepted": false,
+      "source_text_fully_verified": false,
+      "schematic_topology_fully_verified": false,
+      "exact_typesetting_accepted": false
+    },
+    {
+      "pdf_page": 248,
+      "baseline_f1": 0.14939,
+      "refined_f1": 0.25286,
+      "accepted": false,
+      "source_text_fully_verified": false,
+      "schematic_topology_fully_verified": false,
+      "exact_typesetting_accepted": false
+    },
+    {
+      "pdf_page": 249,
+      "baseline_f1": 0.19797,
+      "refined_f1": 0.19797,
+      "accepted": false,
+      "source_text_fully_verified": false,
+      "schematic_topology_fully_verified": false,
+      "exact_typesetting_accepted": false
+    },
+    {
+      "pdf_page": 250,
+      "baseline_f1": 0.16215,
+      "refined_f1": 0.16215,
+      "accepted": false,
+      "source_text_fully_verified": false,
+      "schematic_topology_fully_verified": false,
+      "exact_typesetting_accepted": false
+    },
+    {
+      "pdf_page": 251,
+      "baseline_f1": 0.38009,
+      "refined_f1": 0.38009,
+      "accepted": false,
+      "source_text_fully_verified": false,
+      "schematic_topology_fully_verified": false,
+      "exact_typesetting_accepted": false
+    },
+    {
+      "pdf_page": 252,
+      "baseline_f1": 0.14489,
+      "refined_f1": 0.38148,
+      "accepted": false,
+      "source_text_fully_verified": false,
+      "schematic_topology_fully_verified": false,
+      "exact_typesetting_accepted": false
+    }
+  ]
+}

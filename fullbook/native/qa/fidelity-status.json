@@ -5331,7 +5331,7 @@
     },
     {
       "pdf_page": 245,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5343,13 +5343,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文全部字符、数学符号与脚注终验未完成",
+        "完整MOS连接/示意图和脚注几何尚未逐线比对",
+        "SVG版心与原扫描墨迹位置仍需校对",
+        "严格整页验收未通过"
+      ],
+      "notes": "PDF245 source scan image and editable original-content draft, no 1:1 pass",
       "page_source_verified": false
     },
     {
       "pdf_page": 246,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5361,13 +5366,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文全部字符、数学符号与脚注终验未完成",
+        "完整MOS连接/示意图和脚注几何尚未逐线比对",
+        "SVG版心与原扫描墨迹位置仍需校对",
+        "严格整页验收未通过"
+      ],
+      "notes": "PDF246 source scan image and editable original-content draft, no 1:1 pass",
       "page_source_verified": false
     },
     {
       "pdf_page": 247,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5379,13 +5389,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文全部字符、数学符号与脚注终验未完成",
+        "完整MOS连接/示意图和脚注几何尚未逐线比对",
+        "SVG版心与原扫描墨迹位置仍需校对",
+        "严格整页验收未通过"
+      ],
+      "notes": "PDF247 source scan image and editable original-content draft, no 1:1 pass",
       "page_source_verified": false
     },
     {
       "pdf_page": 248,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5397,13 +5412,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文全部字符、数学符号与脚注终验未完成",
+        "完整MOS连接/示意图和脚注几何尚未逐线比对",
+        "SVG版心与原扫描墨迹位置仍需校对",
+        "严格整页验收未通过"
+      ],
+      "notes": "PDF248 source scan image and editable original-content draft, no 1:1 pass",
       "page_source_verified": false
     },
     {
       "pdf_page": 249,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5415,13 +5435,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文全部字符、数学符号与脚注终验未完成",
+        "完整MOS连接/示意图和脚注几何尚未逐线比对",
+        "SVG版心与原扫描墨迹位置仍需校对",
+        "严格整页验收未通过"
+      ],
+      "notes": "PDF249 source scan image and editable original-content draft, no 1:1 pass",
       "page_source_verified": false
     },
     {
       "pdf_page": 250,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5433,13 +5458,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文全部字符、数学符号与脚注终验未完成",
+        "完整MOS连接/示意图和脚注几何尚未逐线比对",
+        "SVG版心与原扫描墨迹位置仍需校对",
+        "严格整页验收未通过"
+      ],
+      "notes": "PDF250 source scan image and editable original-content draft, no 1:1 pass",
       "page_source_verified": false
     },
     {
       "pdf_page": 251,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5451,13 +5481,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文全部字符、数学符号与脚注终验未完成",
+        "完整MOS连接/示意图和脚注几何尚未逐线比对",
+        "SVG版心与原扫描墨迹位置仍需校对",
+        "严格整页验收未通过"
+      ],
+      "notes": "PDF251 source scan image and editable original-content draft, no 1:1 pass",
       "page_source_verified": false
     },
     {
       "pdf_page": 252,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5469,8 +5504,13 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文全部字符、数学符号与脚注终验未完成",
+        "完整MOS连接/示意图和脚注几何尚未逐线比对",
+        "SVG版心与原扫描墨迹位置仍需校对",
+        "严格整页验收未通过"
+      ],
+      "notes": "PDF252 source scan image and editable original-content draft, no 1:1 pass",
       "page_source_verified": false
     },
     {

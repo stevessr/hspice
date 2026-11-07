@@ -1,0 +1,150 @@
+{
+  "schema": "source-image-pass7-PDF245-252",
+  "pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "pdf_pages": 445,
+  "scan_pages": [
+    245,
+    252
+  ],
+  "method": "Source PDF render 1.7x, source text checked manually against original scans, no second OCR parity claimed",
+  "strict_full_pages_accepted": 0,
+  "known_print_inconsistencies": [
+    {
+      "pdf_page": 248,
+      "printed_page": 229,
+      "printed": "D = Σ(LE×FO×P)",
+      "earlier_derivation": "D = Σ(LE×FO + P)",
+      "action": "retain literal print in page source and record difference; do not silently correct"
+    }
+  ],
+  "pages": [
+    {
+      "pdf_page": 245,
+      "printed_page": 226,
+      "source_png_sha256": "7c6a57d68d2a1b42305bcdd2291e29833ccb92440e237c5b716938b003a65809",
+      "source_paragraph_editable": true,
+      "all_text_verified": false,
+      "all_equations_verified": false,
+      "all_device_connectivity_verified": false,
+      "visual_1_to_1_verified": false,
+      "strictly_accepted": false,
+      "unresolved": [
+        "complete source character and punctuation review",
+        "precise transistor connections and individual input arrow/capacitor placement",
+        "full original font/layout/figure geometry review"
+      ]
+    },
+    {
+      "pdf_page": 246,
+      "printed_page": 227,
+      "source_png_sha256": "1fe355daef7a8c423ca4c7b7c0c6d3794e746fc647cf31fe951a7d837672f673",
+      "source_paragraph_editable": true,
+      "all_text_verified": false,
+      "all_equations_verified": false,
+      "all_device_connectivity_verified": false,
+      "visual_1_to_1_verified": false,
+      "strictly_accepted": false,
+      "unresolved": [
+        "complete source character and punctuation review",
+        "precise transistor connections and individual input arrow/capacitor placement",
+        "full original font/layout/figure geometry review"
+      ]
+    },
+    {
+      "pdf_page": 247,
+      "printed_page": 228,
+      "source_png_sha256": "c6c51a548cf9bdb7d7ee0fdd91ce58ce2028a08d4f512e10bac745dcb55731a2",
+      "source_paragraph_editable": true,
+      "all_text_verified": false,
+      "all_equations_verified": false,
+      "all_device_connectivity_verified": false,
+      "visual_1_to_1_verified": false,
+      "strictly_accepted": false,
+      "unresolved": [
+        "complete source character and punctuation review",
+        "precise transistor connections and individual input arrow/capacitor placement",
+        "full original font/layout/figure geometry review"
+      ]
+    },
+    {
+      "pdf_page": 248,
+      "printed_page": 229,
+      "source_png_sha256": "3ad3799470de934d121ed69decfddedd61b222bb087ab62d797b7702fa42926b",
+      "source_paragraph_editable": true,
+      "all_text_verified": false,
+      "all_equations_verified": false,
+      "all_device_connectivity_verified": false,
+      "visual_1_to_1_verified": false,
+      "strictly_accepted": false,
+      "unresolved": [
+        "complete source character and punctuation review",
+        "precise transistor connections and individual input arrow/capacitor placement",
+        "full original font/layout/figure geometry review"
+      ]
+    },
+    {
+      "pdf_page": 249,
+      "printed_page": 230,
+      "source_png_sha256": "0b12eadda59fa75d2737c513ed4ffbc6318de8a5a21e9d8d71d2d37ef54c7020",
+      "source_paragraph_editable": true,
+      "all_text_verified": false,
+      "all_equations_verified": false,
+      "all_device_connectivity_verified": false,
+      "visual_1_to_1_verified": false,
+      "strictly_accepted": false,
+      "unresolved": [
+        "complete source character and punctuation review",
+        "precise transistor connections and individual input arrow/capacitor placement",
+        "full original font/layout/figure geometry review"
+      ]
+    },
+    {
+      "pdf_page": 250,
+      "printed_page": 231,
+      "source_png_sha256": "dc0f8ed549cb6e2f880397b163a29734537581ce38105622573e8dfd7c6db784",
+      "source_paragraph_editable": true,
+      "all_text_verified": false,
+      "all_equations_verified": false,
+      "all_device_connectivity_verified": false,
+      "visual_1_to_1_verified": false,
+      "strictly_accepted": false,
+      "unresolved": [
+        "complete source character and punctuation review",
+        "precise transistor connections and individual input arrow/capacitor placement",
+        "full original font/layout/figure geometry review"
+      ]
+    },
+    {
+      "pdf_page": 251,
+      "printed_page": 232,
+      "source_png_sha256": "b3bc518c69512a7256a24910ed14e72f410a8cd835dc0ba8855baa8cd3c133de",
+      "source_paragraph_editable": true,
+      "all_text_verified": false,
+      "all_equations_verified": false,
+      "all_device_connectivity_verified": false,
+      "visual_1_to_1_verified": false,
+      "strictly_accepted": false,
+      "unresolved": [
+        "complete source character and punctuation review",
+        "precise transistor connections and individual input arrow/capacitor placement",
+        "full original font/layout/figure geometry review"
+      ]
+    },
+    {
+      "pdf_page": 252,
+      "printed_page": 233,
+      "source_png_sha256": "0a4976cc03f06e203a79716fe2c9670bf3dd829296f0a144e9c3a7ea515a0655",
+      "source_paragraph_editable": true,
+      "all_text_verified": false,
+      "all_equations_verified": false,
+      "all_device_connectivity_verified": false,
+      "visual_1_to_1_verified": false,
+      "strictly_accepted": false,
+      "unresolved": [
+        "complete source character and punctuation review",
+        "precise transistor connections and individual input arrow/capacitor placement",
+        "full original font/layout/figure geometry review"
+      ]
+    }
+  ]
+}
