@@ -17,7 +17,7 @@
 
 首先，计算总的路径强度：
 
-#align(center)[$"总的路径强度" = product("LE" times ""FO"")$]
+#align(center)[$"总的路径强度" = product("LE" times "FO")$]
 
 #align(center)[$=1 (X/10) times 5/3 (Y/X) times 4/3 (Z/Y) times 1 (20/Z)$]
 
@@ -39,7 +39,7 @@
 
 实际的尺寸可以通过从输出到输入反向计算得到。利用如下事实，对每一个门有：
 
-#align(center)[$"SE"^* = "LE" times ""FO""="LE" (C_("out")/C_("in"))$]
+#align(center)[$"SE"^* = "LE" times "FO"="LE" (C_("out")/C_("in"))$]
 
 #align(center)[$therefore C_("in") = "LE" (C_("out")/"SE"^*)$]
 
