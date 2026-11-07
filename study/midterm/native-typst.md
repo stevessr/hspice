@@ -159,7 +159,17 @@ const sections = [
   { id: '150-page-173', title: '原书第173页 · 图5.5—5.7八输入门', pages: 'PDF第173页/印刷第154页', summary: 'NAND8和逻辑变换' },
   { id: '151-page-174', title: '原书第174页 · 图5.8/5.9多级门与扇出', pages: 'PDF第174页/印刷第155页', summary: 'NAND4树和FO4' },
   { id: '152-page-175', title: '原书第175页 · 5.2.3 NAND门VTC', pages: 'PDF第175页/印刷第156页', summary: '图5.10多输入切换' },
-  { id: '153-page-176', title: '原书第176页 · 图5.11 NOR VTC及例5.2', pages: 'PDF第176页/印刷第157页', summary: '0.18μm单输入切换点≈0.77V' }
+  { id: '153-page-176', title: '原书第176页 · 图5.11 NOR VTC及例5.2', pages: 'PDF第176页/印刷第157页', summary: '0.18μm单输入切换点≈0.77V' },
+  { id: '154-page-177', title: '原书第177页 · 例5.2 NAND HSPICE（三组）', pages: 'PDF第177页/印刷第158页', summary: 'A/B扫描网表与手算VS≈0.9V' },
+  { id: '155-page-178', title: '原书第178页 · 例5.2 SPICE VTC与式5.4', pages: 'PDF第178页/印刷第159页', summary: '0.745/0.721/0.883V、5.3引言' },
+  { id: '156-page-179', title: '原书第179页 · 图5.12及式5.5 AOI21', pages: 'PDF第179页/印刷第160页', summary: '互补复合MOS与DeMorgan' },
+  { id: '157-page-180', title: '原书第180页 · 例5.3图5.13复杂CMOS', pages: 'PDF第180页/印刷第161页', summary: 'AB+CD复合网络及伪NMOS' },
+  { id: '158-page-181', title: '原书第181页 · 图5.14 XOR/XNOR', pages: 'PDF第181页/印刷第162页', summary: '异或同或逻辑及互补网络' },
+  { id: '159-page-182', title: '原书第182页 · 图5.15 MUX和5.6', pages: 'PDF第182页/印刷第163页', summary: '2:1MUX选择函数与时序电路' },
+  { id: '160-page-183', title: '原书第183页 · 图5.16基本双稳态', pages: 'PDF第183页/印刷第164页', summary: '交叉反相器稳定点A/B/C' },
+  { id: '161-page-184', title: '原书第184页 · 图5.17及式5.6 SR锁存器', pages: 'PDF第184页/印刷第165页', summary: 'NOR高有效SR及平均延迟' },
+  { id: '162-page-185', title: '原书第185页 · 例5.4 SR尺寸设计', pages: 'PDF第185页/印刷第166页', summary: '400ps/100fF/Wn440nm/Wp1.76μm' },
+  { id: '163-page-186', title: '原书第186页 · 图5.18及5.6.3 JK触发器', pages: 'PDF第186页/印刷第167页', summary: 'NAND低有效SR与JK行为' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)
@@ -200,6 +210,12 @@ const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '
 </div>
 
 此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+
+## 第5章复合门、MUX与锁存器：PDF 第177—186页
+
+新增例5.2三种SPICE电压传输曲线的原始参考切换点（A变化0.745V、B变化0.721V、共同变化0.883V），与手算0.9V分开记录。式（5.4）—（5.6）、图5.12—5.18、例5.3/5.4、5.4 XOR/XNOR、5.5 MUX、5.6 SR锁存器和JK引言转为可编辑选段。例5.4保留0.13 μm、100 fF、400 ps的尺寸结果WN=440 nm、WP=1.76 μm。晶体管级原图并未精确描摹。
+
+连续可编辑源页为 **PDF第26—186页，共161页**；445页机器OCR尚需逐字修订，严格整页1:1验收仍为0/445。
 
 ## 第5章静态CMOS门：PDF 第167—176页
 

@@ -131,3 +131,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF167—176：第5章静态CMOS门电路开头
 
 新增`web/144-page-167.typ`至`web/153-page-176.typ`、`figures/ch5-cmos-gates-native.typ`。按扫描保留章首12节目录、NAND/NOR互补网络、图5.1—5.11的主要原生结构、式5.1/5.2串并联等效宽度和式5.3德摩根律、例5.1三输入门以及例5.2 0.18um NAND首个切换电平0.77V。新QA`qa/check_ch5_gates.py`核对页面、公式、例题数值。连续原生内容选段PDF26—176共151页；严格全页1:1验收0/445。
+
+
+## PDF177—186：第5章复合门、XOR/MUX及SR锁存器
+
+新增`web/154-page-177.typ`到`web/163-page-186.typ`和`figures/ch5-complex-sequential-native.typ`。包含例5.2三条0.745/0.721/0.883V的VTC对照、式5.4/5.5复合CMOS、例5.3、5.4 XOR/XNOR、5.5 MUX、5.6双稳态和NOR/NAND SR、式5.6以及例5.4的WN440nm/WP1.76µm。新脚本`qa/check_ch5_complex_sequential.py`核对原书主要数值和禁用态。连续原生选段PDF26—186共161页，严格整页1:1验收0/445。

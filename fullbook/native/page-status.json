@@ -2117,43 +2117,133 @@
     },
     {
       "pdf_page": 177,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/154-page-177.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例5.2: NAND2三种扫描条件及0.9V手工切换近似；完整原网表端口与结参数待终审。"
     },
     {
       "pdf_page": 178,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/155-page-178.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "第178页NAND SPICE VTC三个读数0.745/0.721/0.883V，源扫描为准，式5.4 AOI逻辑。"
     },
     {
       "pdf_page": 179,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/156-page-179.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式5.5 DeMorgan、图5.12 AOI21 PUN/PDN逻辑关系，晶体管逐线结构未通过。"
     },
     {
       "pdf_page": 180,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/157-page-180.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.13通用复杂门与例5.3 F=overline(AB+CD) 对偶网络，原器件图需描摹。"
     },
     {
       "pdf_page": 181,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/158-page-181.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.14 XOR/XNOR静态CMOS逻辑，源电路的多余PMOS连接未逐元重绘。"
     },
     {
       "pdf_page": 182,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/159-page-182.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.15 2选1MUX及5.6组合/时序定义，原八管连接未全部编辑。"
     },
     {
       "pdf_page": 183,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/160-page-183.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "5.6.1图5.16两交叉反相器、三个VTC交点A/B/C，原曲线及节点待重绘。"
     },
     {
       "pdf_page": 184,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/161-page-184.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.17 NOR SR锁存器与式5.6平均传播延迟，真值表逻辑已核对。"
     },
     {
       "pdf_page": 185,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/162-page-185.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例5.4 0.13µm 400ps输出延迟、100fF、WN440nm WP1.76µm；原晶体管拓扑未完整。"
     },
     {
       "pdf_page": 186,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/163-page-186.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图5.18 NAND低有效SR及5.6.3 JK输入/时钟介绍，图5.19留待下页。"
     },
     {
       "pdf_page": 187,
