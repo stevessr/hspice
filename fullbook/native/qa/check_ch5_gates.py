@@ -31,7 +31,7 @@ for n,words in terms.items():
  assert "506.8346pt" in l and "729.6pt" in l
  assert '#include "'+src.name+'"' in l
 fig=(N/"figures/ch5-cmos-gates-native.typ").read_text(encoding="utf8")
-assert "左NOR右NAND" in (W/"146-page-169.typ").read_text(encoding="utf8")
+assert "左为NOR、右为NAND" in (W/"146-page-169.typ").read_text(encoding="utf8")
 assert fig.index("[NOR2]))")<fig.index("[NAND2]))")
 # Equivalent W check: 3 identical 3W in series yields W; parallel W+W+W=3W.
 W0=1.;r=1/(1/(3*W0)+1/(3*W0)+1/(3*W0))
