@@ -1,0 +1,149 @@
+{
+  "schema": "source-to-typst-optical-audit-p229-p236-v1",
+  "source_pdf_pages": 445,
+  "scope": [
+    229,
+    236
+  ],
+  "baseline_actions_run_id": 42360333506,
+  "typography_actions_run_id": 42360636327,
+  "final_actions_run_id": 42360854796,
+  "scale": 1.25,
+  "greyscale_threshold": 190,
+  "tolerance_px": 2,
+  "measurement": "F1(ink precision,ink recall) with ±2 px tolerance; a visual diagnostic, never a 1:1 certificate",
+  "mean_baseline_f1": 0.24549,
+  "mean_final_f1": 0.31139,
+  "strict_full_page_acceptance": 0,
+  "pages": [
+    {
+      "pdf_page": 229,
+      "initial_f1": 0.2844,
+      "final_f1": 0.3879,
+      "improvement": 0.1035,
+      "fully_accepted": false,
+      "text_by_character_verified": false,
+      "original_figure_geometry_verified": false,
+      "placement_fully_verified": false,
+      "unresolved": [
+        "source glyph and punctuation discrepancies",
+        "formula marker spacing/position",
+        "diagram circuit topology and source curve coordinates",
+        "page framing, footer, captions and page composition"
+      ]
+    },
+    {
+      "pdf_page": 230,
+      "initial_f1": 0.3281,
+      "final_f1": 0.3834,
+      "improvement": 0.0553,
+      "fully_accepted": false,
+      "text_by_character_verified": false,
+      "original_figure_geometry_verified": false,
+      "placement_fully_verified": false,
+      "unresolved": [
+        "source glyph and punctuation discrepancies",
+        "formula marker spacing/position",
+        "diagram circuit topology and source curve coordinates",
+        "page framing, footer, captions and page composition"
+      ]
+    },
+    {
+      "pdf_page": 231,
+      "initial_f1": 0.2837,
+      "final_f1": 0.2385,
+      "improvement": -0.0452,
+      "fully_accepted": false,
+      "text_by_character_verified": false,
+      "original_figure_geometry_verified": false,
+      "placement_fully_verified": false,
+      "unresolved": [
+        "source glyph and punctuation discrepancies",
+        "formula marker spacing/position",
+        "diagram circuit topology and source curve coordinates",
+        "page framing, footer, captions and page composition"
+      ]
+    },
+    {
+      "pdf_page": 232,
+      "initial_f1": 0.1634,
+      "final_f1": 0.2374,
+      "improvement": 0.074,
+      "fully_accepted": false,
+      "text_by_character_verified": false,
+      "original_figure_geometry_verified": false,
+      "placement_fully_verified": false,
+      "unresolved": [
+        "source glyph and punctuation discrepancies",
+        "formula marker spacing/position",
+        "diagram circuit topology and source curve coordinates",
+        "page framing, footer, captions and page composition"
+      ]
+    },
+    {
+      "pdf_page": 233,
+      "initial_f1": 0.2634,
+      "final_f1": 0.4119,
+      "improvement": 0.1485,
+      "fully_accepted": false,
+      "text_by_character_verified": false,
+      "original_figure_geometry_verified": false,
+      "placement_fully_verified": false,
+      "unresolved": [
+        "source glyph and punctuation discrepancies",
+        "formula marker spacing/position",
+        "diagram circuit topology and source curve coordinates",
+        "page framing, footer, captions and page composition"
+      ]
+    },
+    {
+      "pdf_page": 234,
+      "initial_f1": 0.2361,
+      "final_f1": 0.2956,
+      "improvement": 0.0595,
+      "fully_accepted": false,
+      "text_by_character_verified": false,
+      "original_figure_geometry_verified": false,
+      "placement_fully_verified": false,
+      "unresolved": [
+        "source glyph and punctuation discrepancies",
+        "formula marker spacing/position",
+        "diagram circuit topology and source curve coordinates",
+        "page framing, footer, captions and page composition"
+      ]
+    },
+    {
+      "pdf_page": 235,
+      "initial_f1": 0.2216,
+      "final_f1": 0.277,
+      "improvement": 0.0554,
+      "fully_accepted": false,
+      "text_by_character_verified": false,
+      "original_figure_geometry_verified": false,
+      "placement_fully_verified": false,
+      "unresolved": [
+        "source glyph and punctuation discrepancies",
+        "formula marker spacing/position",
+        "diagram circuit topology and source curve coordinates",
+        "page framing, footer, captions and page composition"
+      ]
+    },
+    {
+      "pdf_page": 236,
+      "initial_f1": 0.1832,
+      "final_f1": 0.2595,
+      "improvement": 0.0763,
+      "fully_accepted": false,
+      "text_by_character_verified": false,
+      "original_figure_geometry_verified": false,
+      "placement_fully_verified": false,
+      "unresolved": [
+        "source glyph and punctuation discrepancies",
+        "formula marker spacing/position",
+        "diagram circuit topology and source curve coordinates",
+        "page framing, footer, captions and page composition"
+      ]
+    }
+  ],
+  "notes": "Page231 degraded relative to initial despite improved overall mean; prioritise targeted reflow rather than marking it complete. Original figure6.22 printed caption says NAND chain although drawing shows inverter chain, so source caption preserved and discrepancy flagged."
+}
