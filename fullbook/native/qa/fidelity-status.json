@@ -5691,7 +5691,7 @@
     },
     {
       "pdf_page": 261,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5703,13 +5703,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "所有字符、公式和表格尚未逐字签收",
+        "MOS结构、互补控制信号和多路器连接精确图形未逐线终验",
+        "原书版心图形坐标、字间距和分栏缺陷待SVG复核"
+      ],
+      "notes": "PDF261 scanned page with source math and editable native vector circuits; 1:1 acceptance incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 262,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5721,13 +5725,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "所有字符、公式和表格尚未逐字签收",
+        "MOS结构、互补控制信号和多路器连接精确图形未逐线终验",
+        "原书版心图形坐标、字间距和分栏缺陷待SVG复核"
+      ],
+      "notes": "PDF262 scanned page with source math and editable native vector circuits; 1:1 acceptance incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 263,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5739,13 +5747,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "所有字符、公式和表格尚未逐字签收",
+        "MOS结构、互补控制信号和多路器连接精确图形未逐线终验",
+        "原书版心图形坐标、字间距和分栏缺陷待SVG复核"
+      ],
+      "notes": "PDF263 scanned page with source math and editable native vector circuits; 1:1 acceptance incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 264,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5757,13 +5769,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "所有字符、公式和表格尚未逐字签收",
+        "MOS结构、互补控制信号和多路器连接精确图形未逐线终验",
+        "原书版心图形坐标、字间距和分栏缺陷待SVG复核"
+      ],
+      "notes": "PDF264 scanned page with source math and editable native vector circuits; 1:1 acceptance incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 265,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5775,13 +5791,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "所有字符、公式和表格尚未逐字签收",
+        "MOS结构、互补控制信号和多路器连接精确图形未逐线终验",
+        "原书版心图形坐标、字间距和分栏缺陷待SVG复核"
+      ],
+      "notes": "PDF265 scanned page with source math and editable native vector circuits; 1:1 acceptance incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 266,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5793,13 +5813,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "所有字符、公式和表格尚未逐字签收",
+        "MOS结构、互补控制信号和多路器连接精确图形未逐线终验",
+        "原书版心图形坐标、字间距和分栏缺陷待SVG复核"
+      ],
+      "notes": "PDF266 scanned page with source math and editable native vector circuits; 1:1 acceptance incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 267,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5811,13 +5835,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "所有字符、公式和表格尚未逐字签收",
+        "MOS结构、互补控制信号和多路器连接精确图形未逐线终验",
+        "原书版心图形坐标、字间距和分栏缺陷待SVG复核"
+      ],
+      "notes": "PDF267 scanned page with source math and editable native vector circuits; 1:1 acceptance incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 268,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5829,8 +5857,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "所有字符、公式和表格尚未逐字签收",
+        "MOS结构、互补控制信号和多路器连接精确图形未逐线终验",
+        "原书版心图形坐标、字间距和分栏缺陷待SVG复核"
+      ],
+      "notes": "PDF268 scanned page with source math and editable native vector circuits; 1:1 acceptance incomplete.",
       "page_source_verified": false
     },
     {
