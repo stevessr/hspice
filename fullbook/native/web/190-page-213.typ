@@ -1,19 +1,19 @@
-// SOURCE PDF PAGE 213 / printed 194; figures 6.4 and 6.5.
-#import "../figures/ch6-delay-capacitance-native.typ": stacking
-#set document(title:"第6章 · 串联管速度饱和与尺寸 · PDF213")
-#set text(lang:"zh")
-= 第6章 · 印刷第194页
+// SOURCE PDF PAGE 213; original image landmark for selection validation.
+// ORIGINAL PDF213 / PRINTED194 · third-pass visual source transcription.
+// Typst body and editable native figures; complete 1:1 acceptance NOT granted.
+#import "../figures/ch6-pass4-native.typ": fig64, fig65
+#set document(title:"第6章·速度饱和的堆叠器件·PDF213")
+#align(center)[#text(size:8pt,weight:"bold")[194　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-== 图6.4　考虑速度饱和效应时确定CMOS门尺寸
+寸的操作，参考图6.4所示的3个标准门。反相器有一个尺寸为 $2W$ 的上拉器件和一个尺寸为 $W$ 的下拉器件。与非门由两个均为 $2W$ 的上拉器件和两个均为 $2W$ 的下拉器件组成。或非门由两个均为 $4W$ 的上拉器件和两个均为 $W$ 的下拉器件组成。这些尺寸对于二次器件模型来说是正确的，但是没有考虑速度饱和效应的影响。现在，介绍一些调整方法从而把速度饱和效应考虑进去。
 
-单级反相器采用PMOS约2W、NMOS W。理想等效电阻法会把NAND的两只串联NMOS调到各2W，把NOR的两只串联PMOS调到各4W。
+#fig64()
+#align(center)[*图6.4　考虑速度饱和效应时确定的 CMOS 门尺寸*]
 
-#stacking()
+为了理解速度饱和效应，我们将单个的器件和一对堆叠器件进行对比，如图6.5所示。暂时忽略除 $C_L$ 以外的其他所有电容，将会发现图6.5（a）中尺寸为 $W$ 的单个器件要比图6.5（b）中尺寸为 $2W$ 的串联堆叠器件花费较长的时间来给负载电容放电。出现这种现象的原因可以基于这两种情况中晶体管操作的区域来解释。单个器件 $M_0$ 在输出从 $V_("DD")$ 到 $V_("DD")/2$ 转换的全过程中都处于饱和状态，并提供电流 $I_0$。两个串联的器件 $M_1$ 和 $M_2$ 在从 $V_("DD")$ 到 $V_("DD")/2$ 的转换过程中分别工作在不同的区域。我们知道每一个管子都传导相同数量的电流。为了满足这一需求，$M_1$ 需要工作于线形区域并且有一个较小的 $V_("DS1")$，而 $M_2$ 工作在饱和区并且有一个较大的 $V_("DS2")$。
 
-但两只串联器件并非在整个转换期间工作于完全相同的偏置；串联堆叠中的内部节点抬升会改变上管的 $V_("GS")$ 与 $V_("DS")$，使速度饱和条件与单管不同。
+#fig65()
+#align(center)[*图6.5　速度饱和的堆叠器件*]
 
-== 图6.5　速度饱和的堆叠器件
-
-图6.5比较了宽W的单个NMOS及两只宽2W的串联NMOS在给负载放电时的电流—电压特性。单管的输出端饱和电流与堆叠两管电流不宜直接假定完全一致。
-
-_本页的全部原始I–V坐标、器件M0/M1/M2的曲线与回路尚待精确逐线重画。_
+_图6.4与图6.5已改为编辑用矢量结构；原图每个栅极布线和曲线坐标仍待逐线终审。_

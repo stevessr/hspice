@@ -2725,7 +2725,7 @@
       "source_file": "web/190-page-213.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass4-scan-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.732,
       "source_scan_landmarks_checked": true,
@@ -2734,7 +2734,8 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "Replaced abbreviated selection with scan-grounded source paragraphs and editable MOS/topology diagrams; selected formula and topology review, not full literal/diagram/layout acceptance.",
+      "native_content_level": "source-paragraph-reflow-with-editable-topology"
     },
     {
       "pdf_page": 214,
@@ -2742,7 +2743,7 @@
       "source_file": "web/191-page-214.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass4-scan-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.9144,
       "source_scan_landmarks_checked": true,
@@ -2751,7 +2752,8 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "Replaced abbreviated selection with scan-grounded source paragraphs and editable MOS/topology diagrams; selected formula and topology review, not full literal/diagram/layout acceptance.",
+      "native_content_level": "source-paragraph-reflow-with-editable-topology"
     },
     {
       "pdf_page": 215,
@@ -2759,7 +2761,7 @@
       "source_file": "web/192-page-215.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass4-scan-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.8381,
       "source_scan_landmarks_checked": true,
@@ -2768,7 +2770,8 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "Replaced abbreviated selection with scan-grounded source paragraphs and editable MOS/topology diagrams; selected formula and topology review, not full literal/diagram/layout acceptance.",
+      "native_content_level": "source-paragraph-reflow-with-editable-topology"
     },
     {
       "pdf_page": 216,
@@ -2776,7 +2779,7 @@
       "source_file": "web/193-page-216.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass4-scan-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.6525,
       "source_scan_landmarks_checked": true,
@@ -2785,7 +2788,8 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "Replaced abbreviated selection with scan-grounded source paragraphs and editable MOS/topology diagrams; selected formula and topology review, not full literal/diagram/layout acceptance.",
+      "native_content_level": "source-paragraph-reflow-with-editable-topology"
     },
     {
       "pdf_page": 217,
@@ -2793,7 +2797,7 @@
       "source_file": "web/194-page-217.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass4-scan-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.8291,
       "source_scan_landmarks_checked": true,
@@ -2802,7 +2806,8 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "Replaced abbreviated selection with scan-grounded source paragraphs and editable MOS/topology diagrams; selected formula and topology review, not full literal/diagram/layout acceptance.",
+      "native_content_level": "source-paragraph-reflow-with-editable-topology"
     },
     {
       "pdf_page": 218,
@@ -2810,7 +2815,7 @@
       "source_file": "web/195-page-218.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass4-scan-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.6782,
       "source_scan_landmarks_checked": true,
@@ -2819,7 +2824,8 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "Replaced abbreviated selection with scan-grounded source paragraphs and editable MOS/topology diagrams; selected formula and topology review, not full literal/diagram/layout acceptance.",
+      "native_content_level": "source-paragraph-reflow-with-editable-topology"
     },
     {
       "pdf_page": 219,
@@ -2827,7 +2833,7 @@
       "source_file": "web/196-page-219.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass4-scan-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.834,
       "source_scan_landmarks_checked": true,
@@ -2836,7 +2842,8 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "Replaced abbreviated selection with scan-grounded source paragraphs and editable MOS/topology diagrams; selected formula and topology review, not full literal/diagram/layout acceptance.",
+      "native_content_level": "source-paragraph-reflow-with-editable-topology"
     },
     {
       "pdf_page": 220,
@@ -2844,7 +2851,7 @@
       "source_file": "web/197-page-220.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass2",
+      "proofread_round": "2026-11-07-pass4-scan-image",
       "second_pass_ocr": true,
       "second_pass_ocr_similarity": 0.8686,
       "source_scan_landmarks_checked": true,
@@ -2853,39 +2860,144 @@
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
-      "notes": "2nd OCR pass and source-image landmark check only; complete text, exact circuit topology, captions, footnotes and page geometry still require 1:1 acceptance"
+      "notes": "Replaced abbreviated selection with scan-grounded source paragraphs and editable MOS/topology diagrams; selected formula and topology review, not full literal/diagram/layout acceptance.",
+      "native_content_level": "source-paragraph-reflow-with-editable-topology"
     },
     {
       "pdf_page": 221,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "web/198-page-221.typ",
+      "editorial_typst_draft": true,
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
+      "source_scan_landmarks_checked": true,
+      "second_pass_ocr": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.8894
     },
     {
       "pdf_page": 222,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "web/199-page-222.typ",
+      "editorial_typst_draft": true,
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
+      "source_scan_landmarks_checked": true,
+      "second_pass_ocr": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.9105
     },
     {
       "pdf_page": 223,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "web/200-page-223.typ",
+      "editorial_typst_draft": true,
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
+      "source_scan_landmarks_checked": true,
+      "second_pass_ocr": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.9374
     },
     {
       "pdf_page": 224,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "web/201-page-224.typ",
+      "editorial_typst_draft": true,
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
+      "source_scan_landmarks_checked": true,
+      "second_pass_ocr": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.6388
     },
     {
       "pdf_page": 225,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "web/202-page-225.typ",
+      "editorial_typst_draft": true,
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
+      "source_scan_landmarks_checked": true,
+      "second_pass_ocr": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.2968
     },
     {
       "pdf_page": 226,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "web/203-page-226.typ",
+      "editorial_typst_draft": true,
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
+      "source_scan_landmarks_checked": true,
+      "second_pass_ocr": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.77
     },
     {
       "pdf_page": 227,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "web/204-page-227.typ",
+      "editorial_typst_draft": true,
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
+      "source_scan_landmarks_checked": true,
+      "second_pass_ocr": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.7089
     },
     {
       "pdf_page": 228,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "source_file": "web/205-page-228.typ",
+      "editorial_typst_draft": true,
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
+      "source_scan_landmarks_checked": true,
+      "second_pass_ocr": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.7292
     },
     {
       "pdf_page": 229,

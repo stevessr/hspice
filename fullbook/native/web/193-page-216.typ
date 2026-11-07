@@ -1,20 +1,32 @@
-// SOURCE PDF PAGE 216 / printed 197; gate capacitance and 6.3.2.
-#set document(title:"第6章 · 输入电容与自身电容 · PDF216")
-#set text(lang:"zh")
-= 第6章 · 印刷第197页
+// SOURCE PDF PAGE 216; original image landmark for selection validation.
+// ORIGINAL PDF216 / PRINTED197 · fig6.8 gate capacitances and source section6.3.2
+#import "../figures/ch6-pass4-native.typ": cap-inverter-panel
+#set document(title:"第6章·输入电容计算与自身电容·PDF216")
+#align(center)[#text(size:8pt,weight:"bold")[第6章　高速 CMOS 逻辑设计　　　　　　　　　　　　197]]
+#line(length:100%,stroke:.55pt)
+#cap-inverter-panel()
+#align(center)[*图6.8　输入电容的计算*]
 
-== 图6.8　输入电容的计算
+对于一个反相器，
 
-NMOS和PMOS共同接受输入 $V_("in")$ 时，两管栅电容与栅—漏重叠电容均影响反相器的输入电容。若以单位宽度 $C_g$ 近似：
+#align(center)[$C_G = C_g W = 2 " fF/μm" times W_n + 2 " fF/μm" times W_p$]
 
-$ C_G = C_g (W_n + W_p) $
+#align(center)[$= 2 " fF/μm" (W_n + W_p)$]
 
-其中 $C_g$ 对应前页（6.9）约 $2 " fF/μm"$ 的工艺估值。对多个相同后级门，扇出电容按个数与各门的器件宽度求和；不同门宽时须分别累加。
+如果要驱动 $n$ 个相同的门，且每个门都有一个相同的电容 $C_G$，那么总的扇出电容是：
+
+#align(center)[$C_("fanout") = sum C_G = n times C_G = n times sum C_g W$]
+
+如果有 $n$ 个不同的反相器，只须按如下方式将它们加起来：
+
+#align(center)[$sum C_G = 2 " fF/μm" times (W_("p1") + W_("n1") + W_("p2") + W_("n2") + dots)$]
+
+对于与非门、或非门，或者其他复杂门，可以利用被驱动晶体管的适当宽度简单地使用上面的公式：
+
+#align(center)[$sum C_G = 2 " fF/μm" times (W_("p1") + W_("n1") + W_("p2") + W_("n2") + dots)$]
 
 == 6.3.2　自身电容计算
 
-自身电容指连接在本门输出端、由该门自身MOS器件造成的寄生电容。教材图6.9标出PMOS/NMOS器件的栅源、栅漏、漏体、源体寄生元件。
+自身电容是连接到输出 $V_("out")$ 的所有电容的和。我们通过考虑图6.9中的反相器来确定自身电容中包含的重要参数项。
 
-需要特别区分：源体/漏体结电容所在节点不同，不能把MOS模型里的所有寄生电容一概当作输出电容。共享源漏扩散的版图，还会改变实际计数。
-
-_图6.8和图6.9是多电容端点的晶体管级结构，当前以可编辑公式和原生文字分解呈现，仍未逐节点达到1:1。_
+对于每个晶体管有4个主要的电容：$C_("GS")$、$C_("GD")$、$C_("DB")$ 和 $C_("SB")$。可以快速将4个电容 $C_("GSn")$、$C_("GSp")$、$C_("SBn")$ 和 $C_("SBp")$ 排除在考虑之外，因为它们都没有连接到输出。如果现在分析一个任意方向的阶跃输入，则其中一个晶体管总是关闭着的，而另一个处于饱和区。因为对于 $t_("pHL")$ 或 $t_("pLH")$ 的计算包含一个到50%点的转换，所以可以假设晶体管处于关闭或者饱和状态。无论在哪一个区域，栅—漏电容 $C_("GD")$ 都是可以忽略的。将会只留下栅到漏的交叠电容，以及每个器件的一个结电容 $C_("DBn")$ 和 $C_("DBp")$。

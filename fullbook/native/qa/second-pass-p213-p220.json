@@ -1,0 +1,134 @@
+{
+  "schema": "source-scan-pass4-PDF213-220",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scan_render": "PyMuPDF 2x RGB for manual figure/equation inspection",
+  "ocr1": "private source-transcription ZIP chi_sim+eng PSM3",
+  "ocr2": "Tesseract chi_sim+eng PSM6 at 1400px",
+  "meaning": "OCR agreement is a risk signal, not literal accuracy or 1:1 acceptance",
+  "full_page_accepted": 0,
+  "critical_source_verified": [
+    {
+      "page": 214,
+      "rule": "Stacked short-channel device current 20–25% larger; NAND nMOS 1.6W, NOR pMOS 3.2W (Figure 6.6)."
+    },
+    {
+      "page": 215,
+      "rule": "(6.7): load=self+wire+fanout; (6.8): gate caps; (6.9): CoxL 1.6 + 2*Col 0.25 ≈2 fF/μm"
+    },
+    {
+      "page": 217,
+      "rule": "(6.10): Cself=CDBn+CDBp+2COL+2COL=Ceff(Wn+Wp)"
+    },
+    {
+      "page": 219,
+      "rule": "(6.11): CDB1+CDB2+CDB3+CSB3+CDB4 = CDB12+CDB3+CSDB34; shared diffusion explicitly merged"
+    },
+    {
+      "page": 218,
+      "rule": "Example 6.2 first case no areas: delays 40 ps/55 ps, gate caps 1.9/2.2 fF/μm"
+    },
+    {
+      "page": 219,
+      "rule": "Example 6.2 second case area: delays 44 ps/59 ps, Ceff ≈0.8/0.7 fF/μm"
+    }
+  ],
+  "pages": [
+    {
+      "pdf_page": 213,
+      "source_png_sha256": "4e50c6d25835765179eaaaeeaaba8965bea869cf7d6d1adfaeaff51b3a054cb9",
+      "normalized_ocr_agreement": 0.706,
+      "ocr1_characters": 785,
+      "ocr2_characters": 1432,
+      "source_visual_review": "selected equations, symbols, topology checked",
+      "text_fully_verified": false,
+      "figures_fully_verified": false,
+      "typography_fully_verified": false,
+      "strict_page_accepted": false
+    },
+    {
+      "pdf_page": 214,
+      "source_png_sha256": "95e9f6db858ded3979d285ddb6e0c222f497905777ab62c8f9dea0501e0eae6b",
+      "normalized_ocr_agreement": 0.917,
+      "ocr1_characters": 1183,
+      "ocr2_characters": 1428,
+      "source_visual_review": "selected equations, symbols, topology checked",
+      "text_fully_verified": false,
+      "figures_fully_verified": false,
+      "typography_fully_verified": false,
+      "strict_page_accepted": false
+    },
+    {
+      "pdf_page": 215,
+      "source_png_sha256": "b9c600c98c2d0e32d58a4074eaacfcf6e857f513f57cbe98815983e8fffd2f95",
+      "normalized_ocr_agreement": 0.8418,
+      "ocr1_characters": 933,
+      "ocr2_characters": 1003,
+      "source_visual_review": "selected equations, symbols, topology checked",
+      "text_fully_verified": false,
+      "figures_fully_verified": false,
+      "typography_fully_verified": false,
+      "strict_page_accepted": false
+    },
+    {
+      "pdf_page": 216,
+      "source_png_sha256": "23c307fc9503c815d6cf31e6fd52c7bdda48ab0e94e3ad3ee75de3bd4c34627e",
+      "normalized_ocr_agreement": 0.6319,
+      "ocr1_characters": 719,
+      "ocr2_characters": 957,
+      "source_visual_review": "selected equations, symbols, topology checked",
+      "text_fully_verified": false,
+      "figures_fully_verified": false,
+      "typography_fully_verified": false,
+      "strict_page_accepted": false
+    },
+    {
+      "pdf_page": 217,
+      "source_png_sha256": "0de60823453d7b461cddbe0530375bcca95df5605ef985b657f6c5829381c9f0",
+      "normalized_ocr_agreement": 0.8074,
+      "ocr1_characters": 759,
+      "ocr2_characters": 1083,
+      "source_visual_review": "selected equations, symbols, topology checked",
+      "text_fully_verified": false,
+      "figures_fully_verified": false,
+      "typography_fully_verified": false,
+      "strict_page_accepted": false
+    },
+    {
+      "pdf_page": 218,
+      "source_png_sha256": "3d1577eed40eec7aeb969e28637e5aaf37e5b1264ef7eee6dd73287d865a281d",
+      "normalized_ocr_agreement": 0.8139,
+      "ocr1_characters": 1482,
+      "ocr2_characters": 1584,
+      "source_visual_review": "selected equations, symbols, topology checked",
+      "text_fully_verified": false,
+      "figures_fully_verified": false,
+      "typography_fully_verified": false,
+      "strict_page_accepted": false
+    },
+    {
+      "pdf_page": 219,
+      "source_png_sha256": "6fb4724e0a6bf179ad23d74d7de41cf77b65580c8bcbd35d4c6e3aa7e9d630b4",
+      "normalized_ocr_agreement": 0.8975,
+      "ocr1_characters": 1688,
+      "ocr2_characters": 1736,
+      "source_visual_review": "selected equations, symbols, topology checked",
+      "text_fully_verified": false,
+      "figures_fully_verified": false,
+      "typography_fully_verified": false,
+      "strict_page_accepted": false
+    },
+    {
+      "pdf_page": 220,
+      "source_png_sha256": "8441354bc6d521623c0956a8eca8c4aabe0d86222da1d2fd25bf1b83c44c10c1",
+      "normalized_ocr_agreement": 0.8562,
+      "ocr1_characters": 667,
+      "ocr2_characters": 956,
+      "source_visual_review": "selected equations, symbols, topology checked",
+      "text_fully_verified": false,
+      "figures_fully_verified": false,
+      "typography_fully_verified": false,
+      "strict_page_accepted": false
+    }
+  ]
+}

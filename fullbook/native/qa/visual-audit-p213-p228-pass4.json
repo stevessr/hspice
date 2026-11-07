@@ -1,0 +1,243 @@
+{
+  "schema": "ch6-source-scan-versus-typst-svg-pass4-v1",
+  "source_pages": 445,
+  "scope": [
+    213,
+    228
+  ],
+  "baseline_actions_run": 42354778519,
+  "typography_actions_run": 42355155422,
+  "targeted_figure_actions_run": 42355513974,
+  "threshold": 190,
+  "tolerance_pixels": 2,
+  "ink_overlap_metric": "F1 from ink precision and recall; diagnosis only",
+  "baseline_mean_f1": 0.1839,
+  "post_refinement_mean_f1": 0.2572,
+  "full_pages_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 213,
+      "pre_typography_visual_f1": 0.1617,
+      "post_refinement_visual_f1": 0.2362,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 214,
+      "pre_typography_visual_f1": 0.2973,
+      "post_refinement_visual_f1": 0.4125,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 215,
+      "pre_typography_visual_f1": 0.1177,
+      "post_refinement_visual_f1": 0.2923,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 216,
+      "pre_typography_visual_f1": 0.1649,
+      "post_refinement_visual_f1": 0.1913,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 217,
+      "pre_typography_visual_f1": 0.2171,
+      "post_refinement_visual_f1": 0.2628,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 218,
+      "pre_typography_visual_f1": 0.21,
+      "post_refinement_visual_f1": 0.2718,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 219,
+      "pre_typography_visual_f1": 0.2122,
+      "post_refinement_visual_f1": 0.2719,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 220,
+      "pre_typography_visual_f1": 0.2655,
+      "post_refinement_visual_f1": 0.3513,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 221,
+      "pre_typography_visual_f1": 0.1134,
+      "post_refinement_visual_f1": 0.2453,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 222,
+      "pre_typography_visual_f1": 0.1722,
+      "post_refinement_visual_f1": 0.2244,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 223,
+      "pre_typography_visual_f1": 0.3063,
+      "post_refinement_visual_f1": 0.3821,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 224,
+      "pre_typography_visual_f1": 0.1372,
+      "post_refinement_visual_f1": 0.2247,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 225,
+      "pre_typography_visual_f1": 0.0786,
+      "post_refinement_visual_f1": 0.1407,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 226,
+      "pre_typography_visual_f1": 0.134,
+      "post_refinement_visual_f1": 0.1999,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 227,
+      "pre_typography_visual_f1": 0.1727,
+      "post_refinement_visual_f1": 0.1921,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    },
+    {
+      "pdf_page": 228,
+      "pre_typography_visual_f1": 0.181,
+      "post_refinement_visual_f1": 0.2158,
+      "human_accepted": false,
+      "layout_accepted": false,
+      "source_text_fully_verified": false,
+      "mos_topology_accepted": false,
+      "remaining": [
+        "source-versus-rendered text line tracking",
+        "exact circuit connectivity and trace geometry",
+        "figure captions/footnotes/mathematical line placement"
+      ]
+    }
+  ]
+}
