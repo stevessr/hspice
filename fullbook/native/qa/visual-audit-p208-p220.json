@@ -1,0 +1,128 @@
+{
+  "schema": "native-source-vs-svg-optical-audit-v1",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "github_run_id": 42345219931,
+  "svg_artifact_name": "typst-native-pages-020-220-svg",
+  "scope": [
+    208,
+    220
+  ],
+  "method": {
+    "scale": 1.25,
+    "grayscale_threshold": 190,
+    "spatial_tolerance_pixels": 2,
+    "ink_precision": "candidate ink within 2px of source ink",
+    "ink_recall": "source ink within 2px of candidate ink",
+    "f1": "2*precision*recall/(precision+recall)"
+  },
+  "pages": [
+    {
+      "pdf_page": 208,
+      "f1": 0,
+      "precision": 0,
+      "recall": 0,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 209,
+      "f1": 0.03089,
+      "precision": 0.0894,
+      "recall": 0.01867,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 210,
+      "f1": 0.09936,
+      "precision": 0.16747,
+      "recall": 0.07063,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 211,
+      "f1": 0.10312,
+      "precision": 0.28524,
+      "recall": 0.06294,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 212,
+      "f1": 0.07709,
+      "precision": 0.13605,
+      "recall": 0.05378,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 213,
+      "f1": 0.15458,
+      "precision": 0.29728,
+      "recall": 0.10444,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 214,
+      "f1": 0.14254,
+      "precision": 0.43561,
+      "recall": 0.08521,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 215,
+      "f1": 0.059,
+      "precision": 0.1257,
+      "recall": 0.03855,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 216,
+      "f1": 0.04255,
+      "precision": 0.10486,
+      "recall": 0.02669,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 217,
+      "f1": 0.06024,
+      "precision": 0.14445,
+      "recall": 0.03806,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 218,
+      "f1": 0.12252,
+      "precision": 0.21383,
+      "recall": 0.08585,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 219,
+      "f1": 0.19511,
+      "precision": 0.50597,
+      "recall": 0.12086,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    },
+    {
+      "pdf_page": 220,
+      "f1": 0.19835,
+      "precision": 0.30644,
+      "recall": 0.14663,
+      "accepted": false,
+      "status": "material visual mismatch; layout and transcript incomplete"
+    }
+  ],
+  "mean_f1": 0.09887,
+  "full_pages_accepted": 0,
+  "note": "The score is a strict visual difference diagnostic affected by font alignment/scan noise, not an automatic fidelity certificate. Human element-by-element acceptance still required. The source images and 3-up visual comparisons remain private to the user."
+}
