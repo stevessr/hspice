@@ -12,7 +12,7 @@ $ "NM_L" = V_("IL")-V_("OL") = 0.38 " V" $
 $ "NM_H" = V_("OH")-V_("IH") = 0.43 " V" $
 以上计算基于饱和区与线性区的近似条件，原书要求检查假设是否满足。
 == 例4.3　SPICE模型与手工分析的比较
-原书使用0.18 μm CMOS工艺：$R_L=30 " kΩ"$，$W=400 " nm"$，$L=200 " nm"$，$k'=270 " μA/V"^2$、$C_("ox")=1 " μF/cm²"$、$V_T=0.5 " V"$、$E_cL=1.2 " V"$、$V_("DD")=1.8 " V"$、$v_("sat")=8 times 10^6 " cm/s"$。
+原书使用0.18 μm CMOS工艺：$R_L=30 " kΩ"$，$W=400 " nm"$，$L=200 " nm"$，$k'=270 " μA/V"^2$、$C_("ox")=1 " μF/cm²"$、$V_T=0.5 " V"$、$E_c L=1.2 " V"$、$V_("DD")=1.8 " V"$、$v_("sat")=8 times 10^6 " cm/s"$。
 源扫描给出的SPICE网表骨架：
 #raw("* Resistive-load inverter example\n.param Supply=1.8\n.include 'bsim3v3.cmosp18.lib'\n.opt scale=0.1u\n.global Vdd Gnd\nVdd Vdd Gnd 'Supply'\nRup Vdd out 30k\nmn out in Gnd Gnd NMOS1 l=2 w=4 ad=0 pd=0 as=0 ps=0\nVin in Gnd 'Supply'\n.dc Vin 0 'Supply' 'Supply'/50\n.plot dc V(out)\n.end",block:true)
 _原书实例的器件尺寸、参数和网表结构已核对；不同SPICE版本的库路径/模型名仍以实际库文件为准。_
