@@ -2247,11 +2247,23 @@
     },
     {
       "pdf_page": 187,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "editorial_typst_draft": true,
+      "native_html_selection_available": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "notes": "2026-11-07 JK logic editorial Typst selection; partial only; full source-page verification pending"
     },
     {
       "pdf_page": 188,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "editorial_typst_draft": true,
+      "native_html_selection_available": true,
+      "layout_verified": false,
+      "figures_verified": false,
+      "human_verified": false,
+      "notes": "2026-11-07 JK logic editorial Typst selection; partial only; full source-page verification pending"
     },
     {
       "pdf_page": 189,
