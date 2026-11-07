@@ -4501,7 +4501,7 @@
     },
     {
       "pdf_page": 208,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4513,13 +4513,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 96.27%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 209,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4531,13 +4536,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 88.57%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 210,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4549,13 +4559,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 68.36%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 211,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4567,13 +4582,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 52.82%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 212,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4585,13 +4605,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 65.04%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 213,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4603,13 +4628,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 73.20%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 214,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4621,13 +4651,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 91.44%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 215,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4639,13 +4674,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 83.81%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 216,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4657,13 +4697,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 65.25%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 217,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4675,13 +4720,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 82.91%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 218,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4693,13 +4743,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 67.82%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 219,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4711,13 +4766,18 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 83.40%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {
       "pdf_page": 220,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4729,8 +4789,13 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "全页文字尚未逐字对照",
+        "公式和全部参数尚未全部验收",
+        "晶体管/RC图形拓扑与线段位置仍非1:1",
+        "图注、页眉脚注和版心尺寸尚未逐元素核对"
+      ],
+      "notes": "原生Typst选段；第二次独立OCR文本一致率 86.86%，仅作风险提示，不作为验收。",
       "page_source_verified": false
     },
     {

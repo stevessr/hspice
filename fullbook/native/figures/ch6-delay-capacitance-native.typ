@@ -68,7 +68,7 @@
   #place(top+left,dx:221pt,dy:52pt,line(length:22pt,stroke:.8pt))
   #place(top+left,dx:243pt,dy:33pt,rect(width:73pt,height:39pt,stroke:.8pt))
   #place(top+left,dx:252pt,dy:45pt,text(size:9pt)[160X]))
-  #place(top+left,dx:12pt,dy:93pt,text(size:8pt)[源书对10X→40X级的测量：无扩散44? 以正文参数为准。]))
+  #place(top+left,dx:12pt,dy:93pt,text(size:8pt)[本图仅说明10X→40X→160X；延迟数据参阅例6.2。]))
 ])
 #let nand3-network() = html.frame(block(width:344pt,height:170pt)[
   #place(top+left,dx:7pt,dy:6pt,text(size:8pt)[例6.3：三输入NAND，PMOS并联 / NMOS串联])
