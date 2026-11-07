@@ -1467,43 +1467,133 @@
     },
     {
       "pdf_page": 127,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/104-page-127.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": true,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "第4章章首12节提要和静态/动态电路对照选段；目录灰底和文字行距待验收。"
     },
     {
       "pdf_page": 128,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/105-page-128.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图4.1与式4.1 VTC微分增益重排；理想转折位置确认。"
     },
     {
       "pdf_page": 129,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/106-page-129.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图4.2/4.3实际VTC与级联输入噪声的概念性编辑示意，非原图逐点曲线。"
     },
     {
       "pdf_page": 130,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/107-page-130.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "4.3/4.3.1 SSNM的定义与噪声级联分析选段，全文文字未逐句终审。"
     },
     {
       "pdf_page": 131,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/108-page-131.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图4.4/4.5 SSNM双行式4.2及六级反相器链路示意；图形位置待精校。"
     },
     {
       "pdf_page": 132,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/109-page-132.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图4.6/4.7和4.3.2多源噪声容限，原扫描曲线的迭代点未数字化。"
     },
     {
       "pdf_page": 133,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/110-page-133.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图4.8单位增益点与式4.3 NM_H/NM_L，曲线仅为趋势编辑候选。"
     },
     {
       "pdf_page": 134,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/111-page-134.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": false,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "例4.1缓冲器同相VTC与4.4节电阻负载设计；正斜率原图待重画。"
     },
     {
       "pdf_page": 135,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/112-page-135.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "图4.9三子图、负载线与式4.4电流相等已转写；原准确IV曲线比例尚未验收。"
     },
     {
       "pdf_page": 136,
-      "status": "not-started"
+      "status": "partially-transcribed",
+      "native_html_selection_available": true,
+      "proofread_round": "2026-11-07-pass1",
+      "source_file": "web/113-page-136.typ",
+      "text_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
+      "native_tables_checked": false,
+      "figures_verified": false,
+      "layout_verified": false,
+      "notes": "式4.5、4.6a-d与4.7解析推导及设计权衡；数学符号可编辑，完整排版待逐页核验。"
     },
     {
       "pdf_page": 137,

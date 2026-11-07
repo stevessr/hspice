@@ -106,3 +106,8 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 ## PDF117—126：第3章SOI、模型参数表与习题
 
 新增`web/94-page-117.typ`至`web/103-page-126.typ`及相应layout，图3.15、3.16可编辑拓扑，表3.1 LEVEL1、表3.2 BSIM3v3、12项参考文献、表P3.1和P3.1—P3.14原书习题。新增`qa/check_ch3_summary.py`验证公式、页界、单元格、题号和典型数值。PDF26—126形成101个连续原生可编辑选段，整页严格1:1验证依旧为0/445；各表单位、图形和版式仍要逐项精校。
+
+
+## PDF127—136：第4章反相器VTC、噪声容限与电阻负载
+
+新增`web/104-page-127.typ`到`web/113-page-136.typ`及配套纸张尺寸layout，`figures/ch4-inverter-native.typ`提供可编辑VTC、级联链路、噪声裕量、NMOS电阻负载和I-V负载线；源书式4.1—4.7与例4.1已按源页顺序放置，QA脚本`qa/check_ch4_inverter.py`。连续可编辑选段26—136共111页，整页1:1验证0/445。
