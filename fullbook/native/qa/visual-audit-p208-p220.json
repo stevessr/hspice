@@ -124,5 +124,44 @@
   ],
   "mean_f1": 0.09887,
   "full_pages_accepted": 0,
-  "note": "The score is a strict visual difference diagnostic affected by font alignment/scan noise, not an automatic fidelity certificate. Human element-by-element acceptance still required. The source images and 3-up visual comparisons remain private to the user."
+  "note": "The score is a strict visual difference diagnostic affected by font alignment/scan noise, not an automatic fidelity certificate. Human element-by-element acceptance still required. The source images and 3-up visual comparisons remain private to the user.",
+  "reference_scope": "Original GitHub Actions artifact from PR #28, before PDF208 full-paragraph reflow.",
+  "pdf208_revisions": [
+    {
+      "label": "brief editorial selection",
+      "f1": 0,
+      "github_run_id": 42345219931,
+      "accepted": false
+    },
+    {
+      "label": "full-paragraph transcription, first layout",
+      "f1": 0.511,
+      "github_run_id": 42345714854,
+      "accepted": false
+    },
+    {
+      "label": "line size/leading round 2",
+      "f1": 0.567,
+      "github_run_id": 42345921325,
+      "accepted": false
+    },
+    {
+      "label": "line pitch/summary round 3",
+      "f1": 0.565,
+      "github_run_id": 42346094254,
+      "accepted": false
+    },
+    {
+      "label": "source-aligned second refinement",
+      "f1": 0.58336,
+      "precision": 0.63098,
+      "recall": 0.54242,
+      "github_run_id": 42346271001,
+      "svg_sha256": "128696e30d95143a195cf9dde87171f5587206f00fa06cf536a2d5cc57017575",
+      "accepted": false
+    }
+  ],
+  "post_edit_pdf208_f1": 0.58336,
+  "mean_f1_after_pdf208_reflow": 0.14375,
+  "revision_caveat": "Only PDF208 was reflowed after baseline audit; every other page remains baseline. All pages retain strict acceptance=false."
 }

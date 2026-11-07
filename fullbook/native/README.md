@@ -167,3 +167,7 @@ python3 validate.py --require-complete  # 未完成 445 页时将失败
 当前原生 Typst *教学选段* 以连续序列覆盖 PDF20—220 共201页，严格逐字逐图完整验收依然 **0/445**。验收矩阵与源码进度一致，所有新页在文字、晶体管器件/结电容节点、原图曲线、图注、脚注、版心等方面仍保持未验收状态。不能把双OCR高一致率、Typst编译成功或草图作为1:1复刻完成证据。
 
 例6.2的两份可编辑原书SPICE网表：[`examples/ch6-example6-2-no-area.sp`](examples/ch6-example6-2-no-area.sp) 与 [`examples/ch6-example6-2-with-area.sp`](examples/ch6-example6-2-with-area.sp)。原扫描中的设备名称、尺寸与几何参数已结构性复核；这些网表引用的工艺模型库需由学习者自行提供，未把没有模型的仿真结果作为已实测结果。
+
+### PDF208 真正的视觉回归迭代
+
+从 GitHub Actions 下载 `typst-native-pages-020-220-svg`，由用户本地原书扫描PDF与单页SVG生成三栏叠图（源扫描、Typst渲染、红/蓝差异图），使用灰度阈值190、2px容差计算像素位置匹配F1。PDF208的最初只含知识选段，F1近0；补录源书章目与正文并按506.8346×729.6pt纸张精调后，在Actions run `42346271001` 中 F1达到**0.58336**。此指标只用于发现布局缺项与偏移，图框灰度纹理、原印刷字体、标点和全文最终人工签收仍有差距，正式整页验收未通过。可在 `qa/visual-audit-p208-p220.json` 查看首轮全部13页与PDF208各次回归记录；私人三栏PNG保留在用户校对包中。
