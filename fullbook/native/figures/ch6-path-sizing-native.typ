@@ -15,8 +15,7 @@
   place(top+left,dx:x + 35pt*scale,dy:y + 12pt*scale,circle(radius:2pt,stroke:.7pt,fill:white))
   if label!="" {place(top+left,dx:x + 6pt,dy:y + 34pt*scale,text(size:7pt)[#label])}
 }
-#let inverters(xs:(18pt,83pt,148pt),width:315pt,height:105pt,labels:("1","f","f²"),load:"C_load")=
-  html.frame(block(width:width,height:height)[
+#let inverters(xs:(18pt,83pt,148pt),width:315pt,height:105pt,labels:("1","f","f²"),load:"C_load")=html.frame(block(width:width,height:height)[
     #for (i,x) in xs.enumerate() [
       #inv(x,17pt,label:labels.at(i))
       #wire(x + 38pt,31pt,x + 64pt,31pt)
