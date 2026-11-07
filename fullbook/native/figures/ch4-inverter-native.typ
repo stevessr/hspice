@@ -83,7 +83,7 @@
     #let rise = 100pt-i*30pt
     #place(top + left,dx:31pt,dy:158pt,
       curve(stroke:1.0pt,curve.move((0pt,0pt)),
-        curve.cubic((37pt,-rise),(98pt,-rise-8pt),(259pt,-rise-6pt))))
+        curve.cubic((37pt,-rise),(98pt,-rise - 8pt),(259pt,-rise - 6pt))))
   ]
   #place(top + left,dx:174pt,dy:96pt,text(size:7pt)[负载线]))
   #place(top + left,dx:137pt,dy:12pt,text(size:7pt)[不同 $V_("GS")$ 的漏电流族])
