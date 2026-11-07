@@ -61,15 +61,21 @@
   #place(top+left,dx:73pt,dy:179pt,text(size:7.5pt)[充电电流]))
   #place(top+left,dx:188pt,dy:179pt,text(size:7.5pt)[放电电流]))
 ])
-#let fig615()=grid(columns:(1fr,1fr),column-gutter:7pt,
-  [#block(width:190pt)[
-    #fig614()
-    #align(center)[*（a）阶跃输入轨迹*]
-  ]],
-  [#block(width:190pt)[
-    #fig614()
-    #align(center)[*（b）斜坡输入轨迹*]
-  ]])
+#let fig615-panel(label:"")=html.frame(block(width:187pt,height:190pt)[
+  #seg(24pt,165pt,171pt,165pt)
+  #seg(24pt,165pt,24pt,19pt)
+  #for off in (0pt,12pt,24pt,36pt,48pt) [
+    #seg(26pt,30pt + off,71pt + off / 2,30pt + off)
+    #seg(71pt + off / 2,30pt + off,78pt + off / 2,115pt + off / 2)
+    #seg(78pt + off / 2,115pt + off / 2,164pt,127pt + off / 2)
+  ]
+  #place(top+left,dx:28pt,dy:5pt,text(size:7pt)[$V_("out")$]))
+  #place(top+left,dx:160pt,dy:169pt,text(size:7pt)[$V_("in")$]))
+  #place(top+left,dx:46pt,dy:177pt,text(size:7pt)[#label]))
+])
+#let fig615()=grid(columns:(1fr,1fr),column-gutter:6pt,
+  [#fig615-panel(label:"（a）阶跃轨迹")],
+  [#fig615-panel(label:"（b）斜坡轨迹")])
 #let fig616()=html.frame(block(width:390pt,height:162pt)[
   #place(top+left,dx:11pt,dy:4pt,text(size:8pt)[斜坡输入下的四级反相器链及累计延迟]))
   #seg(8pt,62pt,35pt,62pt)
