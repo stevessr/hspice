@@ -2869,7 +2869,7 @@
       "source_file": "web/198-page-221.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass4-source-image",
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
       "source_scan_landmarks_checked": true,
       "second_pass_ocr": true,
       "layout_verified": false,
@@ -2877,7 +2877,8 @@
       "human_verified": false,
       "text_checked_against_scan": false,
       "formulas_checked_against_scan": false,
-      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending."
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.8894
     },
     {
       "pdf_page": 222,
@@ -2885,7 +2886,7 @@
       "source_file": "web/199-page-222.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass4-source-image",
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
       "source_scan_landmarks_checked": true,
       "second_pass_ocr": true,
       "layout_verified": false,
@@ -2893,7 +2894,8 @@
       "human_verified": false,
       "text_checked_against_scan": false,
       "formulas_checked_against_scan": false,
-      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending."
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.9105
     },
     {
       "pdf_page": 223,
@@ -2901,7 +2903,7 @@
       "source_file": "web/200-page-223.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass4-source-image",
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
       "source_scan_landmarks_checked": true,
       "second_pass_ocr": true,
       "layout_verified": false,
@@ -2909,7 +2911,8 @@
       "human_verified": false,
       "text_checked_against_scan": false,
       "formulas_checked_against_scan": false,
-      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending."
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.9374
     },
     {
       "pdf_page": 224,
@@ -2917,7 +2920,7 @@
       "source_file": "web/201-page-224.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass4-source-image",
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
       "source_scan_landmarks_checked": true,
       "second_pass_ocr": true,
       "layout_verified": false,
@@ -2925,7 +2928,8 @@
       "human_verified": false,
       "text_checked_against_scan": false,
       "formulas_checked_against_scan": false,
-      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending."
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.6388
     },
     {
       "pdf_page": 225,
@@ -2933,7 +2937,7 @@
       "source_file": "web/202-page-225.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass4-source-image",
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
       "source_scan_landmarks_checked": true,
       "second_pass_ocr": true,
       "layout_verified": false,
@@ -2941,7 +2945,8 @@
       "human_verified": false,
       "text_checked_against_scan": false,
       "formulas_checked_against_scan": false,
-      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending."
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.2968
     },
     {
       "pdf_page": 226,
@@ -2949,7 +2954,7 @@
       "source_file": "web/203-page-226.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass4-source-image",
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
       "source_scan_landmarks_checked": true,
       "second_pass_ocr": true,
       "layout_verified": false,
@@ -2957,7 +2962,8 @@
       "human_verified": false,
       "text_checked_against_scan": false,
       "formulas_checked_against_scan": false,
-      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending."
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.77
     },
     {
       "pdf_page": 227,
@@ -2965,15 +2971,16 @@
       "source_file": "web/204-page-227.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass4-source-image",
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
       "source_scan_landmarks_checked": true,
-      "second_pass_ocr": false,
+      "second_pass_ocr": true,
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
       "text_checked_against_scan": false,
       "formulas_checked_against_scan": false,
-      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending."
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.7089
     },
     {
       "pdf_page": 228,
@@ -2981,15 +2988,16 @@
       "source_file": "web/205-page-228.typ",
       "editorial_typst_draft": true,
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass4-source-image",
+      "proofread_round": "2026-11-07-source-and-independent-ocr",
       "source_scan_landmarks_checked": true,
-      "second_pass_ocr": false,
+      "second_pass_ocr": true,
       "layout_verified": false,
       "figures_verified": false,
       "human_verified": false,
       "text_checked_against_scan": false,
       "formulas_checked_against_scan": false,
-      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending."
+      "notes": "Source scanned per-page and critical equations manually transcribed; remaining letter-by-letter check and native curve geometry pending.",
+      "second_pass_ocr_similarity": 0.7292
     },
     {
       "pdf_page": 229,
