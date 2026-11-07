@@ -26,6 +26,8 @@ jobs:
       - uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.14.2
+      - name: Audit chapter 1 opening editorial sources
+        run: python3 fullbook/native/qa/check_ch1_opening.py
       - name: Verify math and truth-table syntax from latest proofreading round
         run: |
           typst compile fullbook/native/fixtures/proofread-syntax.typ /tmp/proofread-syntax.pdf
