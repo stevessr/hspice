@@ -4795,7 +4795,7 @@
     },
     {
       "pdf_page": 221,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4807,13 +4807,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整文本逐字、公式符号和图注终验未完成",
+        "原图曲线、晶体管节点和版心逐元素还原未完成",
+        "需正式渲染叠图与人工签收"
+      ],
+      "notes": "PDF221: new native page transcription from supplied scan; critical math reviewed, but page 1:1 evidence incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 222,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4825,13 +4829,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整文本逐字、公式符号和图注终验未完成",
+        "原图曲线、晶体管节点和版心逐元素还原未完成",
+        "需正式渲染叠图与人工签收"
+      ],
+      "notes": "PDF222: new native page transcription from supplied scan; critical math reviewed, but page 1:1 evidence incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 223,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4843,13 +4851,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整文本逐字、公式符号和图注终验未完成",
+        "原图曲线、晶体管节点和版心逐元素还原未完成",
+        "需正式渲染叠图与人工签收"
+      ],
+      "notes": "PDF223: new native page transcription from supplied scan; critical math reviewed, but page 1:1 evidence incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 224,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4861,13 +4873,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整文本逐字、公式符号和图注终验未完成",
+        "原图曲线、晶体管节点和版心逐元素还原未完成",
+        "需正式渲染叠图与人工签收"
+      ],
+      "notes": "PDF224: new native page transcription from supplied scan; critical math reviewed, but page 1:1 evidence incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 225,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4879,13 +4895,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整文本逐字、公式符号和图注终验未完成",
+        "原图曲线、晶体管节点和版心逐元素还原未完成",
+        "需正式渲染叠图与人工签收"
+      ],
+      "notes": "PDF225: new native page transcription from supplied scan; critical math reviewed, but page 1:1 evidence incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 226,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4897,13 +4917,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整文本逐字、公式符号和图注终验未完成",
+        "原图曲线、晶体管节点和版心逐元素还原未完成",
+        "需正式渲染叠图与人工签收"
+      ],
+      "notes": "PDF226: new native page transcription from supplied scan; critical math reviewed, but page 1:1 evidence incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 227,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4915,13 +4939,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整文本逐字、公式符号和图注终验未完成",
+        "原图曲线、晶体管节点和版心逐元素还原未完成",
+        "需正式渲染叠图与人工签收"
+      ],
+      "notes": "PDF227: new native page transcription from supplied scan; critical math reviewed, but page 1:1 evidence incomplete.",
       "page_source_verified": false
     },
     {
       "pdf_page": 228,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -4933,8 +4961,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "完整文本逐字、公式符号和图注终验未完成",
+        "原图曲线、晶体管节点和版心逐元素还原未完成",
+        "需正式渲染叠图与人工签收"
+      ],
+      "notes": "PDF228: new native page transcription from supplied scan; critical math reviewed, but page 1:1 evidence incomplete.",
       "page_source_verified": false
     },
     {
