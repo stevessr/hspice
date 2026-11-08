@@ -1,0 +1,91 @@
+{
+  "schema": "scan-backed-ch7-p277-p284-pass11",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    277,
+    284
+  ],
+  "render": "pdftoppm -f 277 -l 284 -scale-to 1200 -png",
+  "pages": [
+    {
+      "pdf_page": 277,
+      "rendered_png_sha256": "91d9d3ca10865e5026f381077d4836cc64c4421e0106129dfb192541f0bb0aad",
+      "landmarks": "图7.27—7.28 多米诺动态门连接",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "second_ocr_cross_check": false
+    },
+    {
+      "pdf_page": 278,
+      "rendered_png_sha256": "e447a3201860b4ca0cf2124ea3697285ca9bb94c85ef490322296f5cca8c81e1",
+      "landmarks": "例7.7 多米诺加法器 XOR",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "second_ocr_cross_check": false
+    },
+    {
+      "pdf_page": 279,
+      "rendered_png_sha256": "68dc912d742b502ad11872fc243c5d25d834d2adb58f1c6bd95eab37b5930113",
+      "landmarks": "图7.29 LE=5/3、2/3和0.8",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "second_ocr_cross_check": false
+    },
+    {
+      "pdf_page": 280,
+      "rendered_png_sha256": "0259a8832cd1760384e2964e42285089f114d733c5fb99b800dcd6b1c5b69cf6",
+      "landmarks": "图7.30 V*=Cout/(Cx+Cout)*VDD",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "second_ocr_cross_check": false
+    },
+    {
+      "pdf_page": 281,
+      "rendered_png_sha256": "c0e5f580be5eee87deee81080bad256d0b1cb78d4ff7de8ba788338effb0c709",
+      "landmarks": "图7.31和例7.8 F=AB+C",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "second_ocr_cross_check": false
+    },
+    {
+      "pdf_page": 282,
+      "rendered_png_sha256": "fd4aac6e4c862b3f63ff143bdf33eccfe4c3c5ecb4e7f2599efc911b6631a8",
+      "landmarks": "例7.8 0.17V、5.42fC、1.08V 图7.32",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "second_ocr_cross_check": false
+    },
+    {
+      "pdf_page": 283,
+      "rendered_png_sha256": "ead685fde569a646bc20e659cdb234f30b33429a46102e356279fb8c9c3f3778",
+      "landmarks": "双轨图7.33、7.34和例7.9",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "second_ocr_cross_check": false
+    },
+    {
+      "pdf_page": 284,
+      "rendered_png_sha256": "32ef243c55a9831d5aef44228606c0ea7681c4ba2fc69a3348f8a86bf482e423",
+      "landmarks": "7.5.4和图7.35自复位",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "second_ocr_cross_check": false
+    }
+  ],
+  "manual_checks": [
+    "静态NOR逻辑强度20/12=5/3",
+    "动态NOR逻辑强度8/12=2/3",
+    "两级几何平均sqrt(2/3)=0.816≈0.8",
+    "ΔVx=0.8*1.2/(0.8+5)≈0.17 V",
+    "Qremain=5*1.2-0.8*0.73=5.416≈5.42 fC",
+    "Vx=Qremain/5≈1.08 V"
+  ],
+  "limitations": [
+    "图7.27–7.35为Typst电路结构编辑草图；MOS管端点、连接极性及晶体管比例未严格逐线验收",
+    "例7.7和7.9晶体管级拓扑尚未按扫描逐管完全还原",
+    "文字标点、等式排版、可见字形、页眉页脚尚未完成1:1逐项复核",
+    "还未产生PDF源扫描与真实SVG的逐页叠图F1数据"
+  ],
+  "strict_full_pages_accepted": 0
+}
