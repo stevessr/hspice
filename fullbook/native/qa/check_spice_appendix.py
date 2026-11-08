@@ -101,7 +101,7 @@ assert all(s in a7 for s in ("17 Meg","1.5 fF","0.7 mH"))
 assert all(s in a8 for s in ("图 A.8","circle(radius:3pt","[1]","[0]","[2]","[3]"))
 assert all(s in a9 for s in ("1k","1μF","10 V","circle(radius:12pt","curve.cubic"))
 assert a9.count("#s(")>=13, "A.9 requires both a resistor and capacitor"
-assert all(s in a10 for s in ("R_1","R_2","V_("source")","V_r","10"))
+assert all(s in a10 for s in ('R_1','R_2','V_("source")','V_r','10'))
 assert a10.count("#s(")>=15 and "#r(" not in a10, "A.10 must show two zigzag resistors"
 s427=(WEB/"404-page-427.typ").read_text(encoding="utf-8")
 for token in ("resistanceval","capacitanceval","inductanceval",
