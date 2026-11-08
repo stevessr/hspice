@@ -55,9 +55,9 @@ for n, a, b in ((44, "P1.1", "P1.7"),
 
 # The historical reference list is split exactly across original scanned pages.
 for n in (1, 2, 3, 4):
-    assert f"\\n{n}. " in pages[43], n
+    assert any(line.startswith(f"{n}. ") for line in pages[43].splitlines()), n
 for n in (5, 6, 7, 8, 9):
-    assert f"\\n{n}. " in pages[44], n
+    assert any(line.startswith(f"{n}. ") for line in pages[44].splitlines()), n
 assert pages[44].count("table.header(") == 1
 assert pages[44].count("overline(") >= 9
 
