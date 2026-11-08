@@ -16,7 +16,7 @@
   "pages": [
     {
       "pdf_page": 1,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -28,8 +28,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF1: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
@@ -51,12 +55,12 @@
         "公式、表格与图注尚待逐元素核验",
         "版面、页眉与脚注尚未完整复刻"
       ],
-      "notes": "原书书名页的书名、作者、译者和出版项已对照扫描；版式尚未最终验收。",
+      "notes": "原书书名页的书名、作者、译者和出版项已对照扫描；版式尚未最终验收。 已附加OCR源码但不取消原有核查信息。",
       "page_source_verified": false
     },
     {
       "pdf_page": 3,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -68,13 +72,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "PDF source page 3 is publication/copyright information, not title page; previous mapping corrected.",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF3: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 4,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -86,13 +94,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF4: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 5,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -104,13 +116,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF5: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 6,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -122,13 +138,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF6: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 7,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -140,13 +160,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF7: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 8,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -158,13 +182,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF8: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 9,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -176,13 +204,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF9: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 10,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -194,13 +226,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF10: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 11,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -212,13 +248,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF11: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 12,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -230,13 +270,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF12: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 13,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -248,13 +292,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF13: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 14,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -266,13 +314,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF14: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 15,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -284,13 +336,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF15: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 16,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -302,13 +358,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF16: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 17,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -320,13 +380,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF17: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 18,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -338,13 +402,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF18: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 19,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -356,8 +424,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF19: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
@@ -6394,7 +6466,7 @@
     },
     {
       "pdf_page": 293,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6406,13 +6478,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF293: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 294,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6424,13 +6500,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF294: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 295,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6442,13 +6522,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF295: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 296,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6460,13 +6544,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF296: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 297,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6478,13 +6566,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF297: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 298,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6496,13 +6588,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF298: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 299,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6514,13 +6610,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF299: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 300,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6532,13 +6632,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF300: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 301,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6550,13 +6654,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF301: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 302,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6568,13 +6676,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF302: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 303,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6586,13 +6698,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF303: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 304,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6604,13 +6720,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF304: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 305,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6622,13 +6742,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF305: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 306,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6640,13 +6764,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF306: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 307,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6658,13 +6786,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF307: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 308,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6676,13 +6808,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF308: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 309,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6694,13 +6830,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF309: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 310,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6712,13 +6852,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF310: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 311,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6730,13 +6874,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF311: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 312,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6748,13 +6896,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF312: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 313,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6766,13 +6918,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF313: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 314,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6784,13 +6940,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF314: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 315,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6802,13 +6962,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF315: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 316,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6820,13 +6984,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF316: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 317,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6838,13 +7006,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF317: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 318,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6856,13 +7028,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF318: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 319,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6874,13 +7050,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF319: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 320,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6892,13 +7072,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF320: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 321,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6910,13 +7094,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF321: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 322,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6928,13 +7116,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF322: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 323,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6946,13 +7138,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF323: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 324,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6964,13 +7160,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "原文逐字逐符号/标点尚未终验",
+        "SRAM的全部MOS端口、互补信号及各图几何并未逐管验收",
+        "扫描SVG叠图、版心、表格和分式下标需校对"
+      ],
+      "notes": "PDF324: source OCR-assisted editorial Typst reflow and native figure selection; 1:1 not accepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 325,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6982,13 +7182,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
+      ],
+      "notes": "PDF325: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 326,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7000,13 +7203,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
+      ],
+      "notes": "PDF326: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 327,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7018,13 +7224,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
+      ],
+      "notes": "PDF327: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 328,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7036,13 +7245,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
+      ],
+      "notes": "PDF328: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 329,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7054,13 +7266,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
+      ],
+      "notes": "PDF329: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 330,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7072,13 +7287,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
+      ],
+      "notes": "PDF330: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 331,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7090,13 +7308,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
+      ],
+      "notes": "PDF331: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 332,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7108,13 +7329,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
+      ],
+      "notes": "PDF332: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 333,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7126,13 +7350,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
+      ],
+      "notes": "PDF333: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 334,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7144,13 +7371,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
+      ],
+      "notes": "PDF334: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 335,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7162,13 +7392,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
+      ],
+      "notes": "PDF335: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 336,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7180,13 +7413,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
+      ],
+      "notes": "PDF336: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 337,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7198,13 +7434,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
+      ],
+      "notes": "PDF337: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 338,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7216,13 +7455,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
+      ],
+      "notes": "PDF338: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 339,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7234,13 +7476,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
+      ],
+      "notes": "PDF339: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 340,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7252,13 +7497,16 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
+      ],
+      "notes": "PDF340: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 341,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7270,13 +7518,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF341: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 342,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7288,13 +7540,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF342: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 343,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7306,13 +7562,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF343: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 344,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7324,13 +7584,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF344: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 345,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7342,13 +7606,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF345: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 346,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7360,13 +7628,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF346: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 347,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7378,13 +7650,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF347: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 348,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7396,13 +7672,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF348: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 349,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7414,13 +7694,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF349: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 350,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7432,13 +7716,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF350: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 351,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7450,13 +7738,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF351: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 352,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7468,13 +7760,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF352: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 353,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7486,13 +7782,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF353: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 354,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7504,13 +7804,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF354: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 355,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7522,13 +7826,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF355: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 356,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7540,13 +7848,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF356: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 357,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7558,13 +7870,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF357: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 358,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7576,13 +7892,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF358: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 359,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7594,13 +7914,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF359: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 360,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7612,13 +7936,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF360: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 361,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7630,13 +7958,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF361: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 362,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7648,13 +7980,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF362: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 363,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7666,13 +8002,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF363: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 364,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7684,13 +8024,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF364: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 365,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7702,13 +8046,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF365: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 366,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7720,13 +8068,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF366: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 367,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7738,13 +8090,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF367: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 368,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7756,13 +8112,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF368: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 369,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7774,13 +8134,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF369: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 370,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7792,13 +8156,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF370: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 371,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7810,13 +8178,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF371: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 372,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7828,13 +8200,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF372: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 373,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7846,13 +8222,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF373: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 374,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7864,13 +8244,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF374: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 375,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7882,13 +8266,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF375: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 376,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7900,13 +8288,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF376: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 377,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7918,13 +8310,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF377: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 378,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7936,13 +8332,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF378: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 379,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7954,13 +8354,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF379: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 380,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7972,13 +8376,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF380: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 381,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7990,13 +8398,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF381: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 382,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8008,13 +8420,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF382: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 383,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8026,13 +8442,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF383: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 384,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8044,13 +8464,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF384: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 385,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8062,13 +8486,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF385: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 386,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8080,13 +8508,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF386: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 387,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8098,13 +8530,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF387: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 388,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8116,13 +8552,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF388: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 389,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8134,13 +8574,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF389: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 390,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8152,13 +8596,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF390: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 391,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8170,13 +8618,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF391: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 392,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8188,13 +8640,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF392: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 393,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8206,13 +8662,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF393: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 394,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8224,13 +8684,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF394: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 395,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8242,13 +8706,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF395: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 396,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8260,13 +8728,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF396: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 397,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8278,13 +8750,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF397: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 398,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8296,13 +8772,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF398: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 399,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8314,13 +8794,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF399: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 400,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8332,13 +8816,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF400: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 401,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8350,13 +8838,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF401: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 402,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8368,13 +8860,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF402: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 403,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8386,13 +8882,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF403: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 404,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8404,13 +8904,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF404: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 405,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8422,13 +8926,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF405: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 406,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8440,13 +8948,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF406: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 407,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8458,13 +8970,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF407: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 408,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8476,13 +8992,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF408: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 409,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8494,13 +9014,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF409: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 410,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8512,13 +9036,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF410: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 411,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8530,13 +9058,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF411: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 412,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8548,13 +9080,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF412: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 413,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8566,13 +9102,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF413: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 414,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8584,13 +9124,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF414: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 415,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8602,13 +9146,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF415: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 416,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8620,13 +9168,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF416: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 417,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8638,13 +9190,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF417: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 418,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8656,13 +9212,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF418: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 419,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8674,13 +9234,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF419: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 420,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8692,13 +9256,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF420: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 421,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8710,13 +9278,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF421: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 422,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8728,13 +9300,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF422: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 423,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8746,13 +9322,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF423: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 424,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8764,13 +9344,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF424: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 425,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8782,13 +9366,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF425: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 426,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8800,13 +9388,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF426: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 427,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8818,13 +9410,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF427: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 428,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8836,13 +9432,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF428: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 429,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8854,13 +9454,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF429: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 430,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8872,13 +9476,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF430: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 431,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8890,13 +9498,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF431: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 432,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8908,13 +9520,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF432: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 433,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8926,13 +9542,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF433: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 434,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8944,13 +9564,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF434: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 435,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8962,13 +9586,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF435: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 436,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8980,13 +9608,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF436: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 437,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8998,13 +9630,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF437: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 438,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -9016,13 +9652,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF438: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 439,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -9034,13 +9674,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF439: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 440,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -9052,13 +9696,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF440: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 441,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -9070,13 +9718,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF441: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 442,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -9088,13 +9740,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF442: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 443,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -9106,13 +9762,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF443: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 444,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -9124,13 +9784,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF444: unverified machine-OCR Typst source",
       "page_source_verified": false
     },
     {
       "pdf_page": 445,
-      "editorial_state": "not-started",
+      "editorial_state": "draft-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -9142,8 +9806,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "OCR正文仍需逐字校对，数学符号和表格需要重建",
+        "原书电路图尚未逐端转换成准确Typst图元",
+        "扫描像素版式与页眉脚注尚未验收"
+      ],
+      "notes": "PDF445: unverified machine-OCR Typst source",
       "page_source_verified": false
     }
   ]
