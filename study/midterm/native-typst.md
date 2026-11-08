@@ -1,432 +1,159 @@
-# 原生 Typst 精修 · 网页预览
+# 数字集成电路教材 · 原生 Typst 逐页预览
 
-这里直接显示 **Typst 源码编译的 HTML**，不依赖 PDF，也不使用整页扫描图充当正文。每节都可以在浏览器中阅读并打开对应的可编辑源文件。以下仍是按原扫描校对的知识选段，不是整本教材的逐字全文重排。
+本页直接打开 Typst 源码构建的可检索 HTML，或切换到对应原纸尺寸的 SVG 预览。每一页都有可下载和修改的 `.typ` 源码。页面转换是可编辑的，但**源码存在不意味着准确复刻原扫描**。
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { withBase } from 'vitepress'
 
-const sections = [
-  { id: '01-gates-noise-delay', title: '第1章 · 逻辑门、噪声容限、延迟与功耗', pages: '扫描第26—32页', summary: '门电路、理想与实际电平、转换时间、式（1.2）—（1.5）' },
-  { id: '02-mos-threshold', title: '第2章 · MOS结构、费米势和阈值', pages: '扫描第48—57页', summary: '四端器件、平带电压、耗尽区、体效应、式（2.1）—（2.12）' },
-  { id: '01-page-20', title: '原书第20页 · 第1章绪论和目录', pages: 'PDF第20页/印刷第1页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
-  { id: '02-page-21', title: '原书第21页 · 集成电路发展', pages: 'PDF第21页/印刷第2页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
-  { id: '03-page-22', title: '原书第22页 · 深亚微米工艺', pages: 'PDF第22页/印刷第3页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
-  { id: '04-page-23', title: '原书第23页 · 技术演进与工艺图', pages: 'PDF第23页/印刷第4页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
-  { id: '05-page-24', title: '原书第24页 · 数字逻辑基本结构', pages: 'PDF第24页/印刷第5页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
-  { id: '06-page-25', title: '原书第25页 · 布尔代数与德摩根律', pages: 'PDF第25页/印刷第6页', summary: '可编辑第1章章节选段，原版全文版式待核验' },
-  { id: '03-page-026', title: '原书第26页 · 门电路与D触发器原生重绘', pages: 'PDF第26页/印刷第7页', summary: '图1.4、图1.5与8行DFF激励表的原生Typst草稿；版式仍需比对' },
-  { id: '04-page-027', title: '原书第27页 · 理想逻辑电路与传输曲线', pages: 'PDF第27页/印刷第8页', summary: '图1.6原生可编辑曲线、五条数字逻辑基本特性；仍需版式对照' },
-  { id: '05-page-028', title: '原书第28页 · 逻辑振幅与噪声容限', pages: 'PDF第28页/印刷第9页', summary: '原生重绘图1.7(a)—(d)，VTC、噪声容限及四个图示' },
-  { id: '06-page-029', title: '原书第29页 · 瞬态转换及延迟', pages: 'PDF第29页/印刷第10页', summary: '原生重绘图1.8(a)波形、10/50/90%阈值、传播延迟' },
-  { id: '07-page-030', title: '原书第30页 · 理想瞬态与功耗统计', pages: 'PDF第30页/印刷第11页', summary: '图1.8(b)原生波形；图1.9历史散点仍待逐点重画' },
-  { id: '08-page-031', title: '原书第31页 · 功耗公式与设计权衡', pages: 'PDF第31页/印刷第12页', summary: '式(1.2)—(1.5)的可编辑 Typst 数学表达和设计概念' },
-  { id: '09-page-032', title: '原书第32页 · NMOS器件结构', pages: 'PDF第32页/印刷第13页', summary: '图1.10原生栅、氧化层、源漏、p型衬底截面' },
-  { id: '10-page-033', title: '原书第33页 · CMOS与NMOS反相器', pages: 'PDF第33页/印刷第14页', summary: '图1.11互补反相器、电路状态及静态功耗' },
-  { id: '11-page-034', title: '原书第34页 · NMOS负载与互连', pages: 'PDF第34页/印刷第15页', summary: '图1.12可编辑电阻负载反相器、深亚微米互连' },
-  { id: '12-page-035', title: '原书第35页 · 互连电阻与耦合', pages: 'PDF第35页/印刷第16页', summary: '图1.13–1.15，RC/IR和耦合原生图' },
-  { id: '13-page-036', title: '原书第36页 · 时钟树与偏斜', pages: 'PDF第36页/印刷第17页', summary: '图1.16时钟树拓扑，原书照片仍待重排' },
-  { id: '14-page-037', title: '原书第37页 · 串扰与分布RLC', pages: 'PDF第37页/印刷第18页', summary: '图1.17–1.19，耦合及分布RLC可编辑' },
-  { id: '15-page-038', title: '原书第38页 · CAD物理设计流程', pages: 'PDF第38页/印刷第19页', summary: '图1.20设计流程拓扑示意' },
-  { id: '16-page-039', title: '原书第39页 · SPICE电路分析', pages: 'PDF第39页/印刷第20页', summary: '1.5.1节SPICE与电路验证概念' },
-  { id: '17-page-040', title: '原书第40页 · ITRS工艺路线图', pages: 'PDF第40页/印刷第21页', summary: '表1.2已逐格核对，共9行6列' },
-  { id: '18-page-041', title: '原书第41页 · 电压、功耗与电流趋势', pages: 'PDF第41页/印刷第22页', summary: '图1.21供电电压与功耗历史趋势' },
-  { id: '19-page-042', title: '原书第42页 · ITRS设计生产力与SoC', pages: 'PDF第42页/印刷第23页', summary: '图1.22设计生产力差距、图1.23 IP复用' },
-  { id: '20-page-043', title: '原书第43页 · SoC实例、章节小结', pages: 'PDF第43页/印刷第24页', summary: '图1.24 SoC功能分区、1.7小结、1.8参考' },
-  { id: '21-page-044', title: '原书第44页 · 习题P1.1—P1.7与半加器', pages: 'PDF第44页/印刷第25页', summary: 'P1.4 半加器真值表、P1.1—P1.7概览' },
-  { id: '22-page-045', title: '原书第45页 · 反相器、RC延迟与开关', pages: 'PDF第45页/印刷第26页', summary: 'P1.7五级反相器和P1.8/P1.9 RC电路' },
-  { id: '23-page-046', title: '原书第46页 · 习题P1.10—P1.12', pages: 'PDF第46页/印刷第27页', summary: '工艺倍增、处理器代际与电容充电题解' },
-  { id: '24-page-047', title: '原书第47页 · MOS晶体管章节提要', pages: 'PDF第47页/印刷第28页', summary: '第2章11节索引与器件模型' },
-  { id: '25-page-048', title: '原书第48页 · MOS器件及四端结构', pages: 'PDF第48页/印刷第29页', summary: '2.1—2.2 MOS四端器件对照' },
-  { id: '26-page-049', title: '原书第49页 · NMOS结构与沟道', pages: 'PDF第49页/印刷第30页', summary: '图2.1 NMOS可编辑横截面' },
-  { id: '27-page-050', title: '原书第50页 · PMOS剖面与阈值', pages: 'PDF第50页/印刷第31页', summary: '图2.2 PMOS器件和阈值极性' },
-  { id: '28-page-051', title: '原书第51页 · CMOS阱与隔离结构', pages: 'PDF第51页/印刷第32页', summary: '图2.3 CMOS阱与STI隔离' },
-  { id: '29-page-052', title: '原书第52页 · 能带与载流子平衡', pages: 'PDF第52页/印刷第33页', summary: '图2.4能带、质量作用定律及费米势' },
-  { id: '30-page-053', title: '原书第53页 · 氧化层电容与反型沟道', pages: 'PDF第53页/印刷第34页', summary: '图2.5反型沟道、氧化层电容' },
-  { id: '31-page-054', title: '原书第54页 · MOS电荷和平带状态', pages: 'PDF第54页/印刷第35页', summary: '图2.6 MOS平带及表面电荷' },
-  { id: '32-page-055', title: '原书第55页 · 耗尽层宽度和电荷', pages: 'PDF第55页/印刷第36页', summary: '图2.7耗尽层、电荷分布、泊松方程' },
-  { id: '33-page-056', title: '原书第56页 · 强反型和体偏置耗尽电荷', pages: 'PDF第56页/印刷第37页', summary: '强反型与源体反偏、例2.1—2.2' },
-  { id: '34-page-057', title: '原书第57页 · 阈值电压与体效应', pages: 'PDF第57页/印刷第38页', summary: '式2.10—2.12、体效应系数、例2.3' },
-  { id: '35-page-058', title: '原书第58页 · 表2.1阈值符号及例2.4', pages: 'PDF第58页/印刷第39页', summary: '参数符号表与+0.08V阈值计算' },
-  { id: '36-page-059', title: '原书第59页 · 阈值注入例2.5与线性区引言', pages: 'PDF第59页/印刷第40页', summary: '离子注入量3.2×10^12 ions/cm²' },
-  { id: '37-page-060', title: '原书第60页 · 沟道电荷与载流子迁移率', pages: 'PDF第60页/印刷第41页', summary: '图2.8；公式2.13—2.16' },
-  { id: '38-page-061', title: '原书第61页 · 线性区方程与夹断', pages: 'PDF第61页/印刷第42页', summary: '图2.9；公式2.17a/b与2.18' },
-  { id: '39-page-062', title: '原书第62页 · 饱和区及沟道长度调制', pages: 'PDF第62页/印刷第43页', summary: '图2.10；公式2.19与2.20' },
-  { id: '40-page-063', title: '原书第63页 · 长短沟道、速度饱和比较', pages: 'PDF第63页/印刷第44页', summary: '2.5节；预测1.3V与图中0.6V对比' },
-  { id: '41-page-064', title: '原书第64页 · 图2.11与高电场对比', pages: 'PDF第64页/印刷第45页', summary: '0.18μm I–V、两组历史电场参数' },
-  { id: '42-page-065', title: '原书第65页 · 迁移率退化和速度饱和', pages: 'PDF第65页/印刷第46页', summary: '式2.21—2.22、图2.12' },
-  { id: '43-page-066', title: '原书第66页 · 临界电场和分段速度模型', pages: 'PDF第66页/印刷第47页', summary: '图2.13、式2.23a/b及2.24' },
-  { id: '44-page-067', title: '原书第67页 · 高场线性和饱和电流方程', pages: 'PDF第67页/印刷第48页', summary: '式2.25—2.29' },
-  { id: '45-page-068', title: '原书第68页 · 长短沟道极限与例2.6', pages: 'PDF第68页/印刷第49页', summary: '图2.14、0.6V/1.0V饱和阈值' },
-  { id: '46-page-069', title: '原书第69页 · 例2.7与驱动电流比', pages: 'PDF第69页/印刷第50页', summary: '585/256 μA/μm，电流比2.3' },
-  { id: '47-page-070', title: '原书第70页 · 例2.8和α功率定律', pages: 'PDF第70页/印刷第51页', summary: '0.34V/0.60V，式2.30a' },
-  { id: '48-page-071', title: '原书第71页 · α功率定律与例2.9', pages: 'PDF第71页/印刷第52页', summary: '式2.30b、2.31、图2.15与α约1.25' },
-  { id: '49-page-072', title: '原书第72页 · 亚阈值传导模型', pages: 'PDF第72页/印刷第53页', summary: '图2.16、式2.32及漏电流' },
-  { id: '50-page-073', title: '原书第73页 · 亚阈值斜率与例2.10', pages: 'PDF第73页/印刷第54页', summary: '式2.33、72mV/decade，MOS电容' },
-  { id: '51-page-074', title: '原书第74页 · 栅电容及图2.17', pages: 'PDF第74页/印刷第55页', summary: '式2.34、历史1.6fF/μm示例' },
-  { id: '52-page-075', title: '原书第75页 · 栅电容分配及例2.11', pages: 'PDF第75页/印刷第56页', summary: '图2.18与0.64fF、0.32fF、0.43fF' },
-  { id: '53-page-076', title: '原书第76页 · pn结电容模型', pages: 'PDF第76页/印刷第57页', summary: '图2.19及式2.36—2.39' },
-  { id: '54-page-077', title: '原书第77页 · 结电容图2.20与式2.40', pages: 'PDF第77页/印刷第58页', summary: '零偏置结电容、扩散区底/侧壁' },
-  { id: '55-page-078', title: '原书第78页 · 侧壁模型式2.41—2.42', pages: 'PDF第78页/印刷第59页', summary: '非线性结电容积分与大信号定义' },
-  { id: '56-page-079', title: '原书第79页 · 式2.43—2.45与例2.12', pages: 'PDF第79页/印刷第60页', summary: '等效系数、零偏置0.22fF' },
-  { id: '57-page-080', title: '原书第80页 · 例2.12续与覆盖电容', pages: 'PDF第80页/印刷第61页', summary: '0.16/0.18fF、图2.21、式2.46/2.47' },
-  { id: '58-page-081', title: '原书第81页 · 例2.13和第2章小结', pages: 'PDF第81页/印刷第62页', summary: '0.25fF/μm及NMOS/PMOS极性表' },
-  { id: '59-page-082', title: '原书第82页 · 第2章模型和电容表', pages: 'PDF第82页/印刷第63页', summary: '速度饱和、亚阈值、栅/结电容矩阵' },
-  { id: '60-page-083', title: '原书第83页 · 参考文献及表P2.1', pages: 'PDF第83页/印刷第64页', summary: '8篇参考、0.13μm参数表' },
-  { id: '61-page-084', title: '原书第84页 · 习题P2.1—P2.5', pages: 'PDF第84页/印刷第65页', summary: '四组MOS工作区与充电电路' },
-  { id: '62-page-085', title: '原书第85页 · 习题P2.6—P2.8', pages: 'PDF第85页/印刷第66页', summary: '版图、传输曲线和四组电流' },
-  { id: '63-page-086', title: '原书第86页 · 习题P2.9—P2.10', pages: 'PDF第86页/印刷第67页', summary: '宽度依赖与α功率拟合' },
-  { id: '64-page-087', title: '原书第87页 · 第3章章首与3.1绪论', pages: 'PDF第87页/印刷第68页', summary: '11节提要、制造/版图/仿真关系' },
-  { id: '65-page-088', title: '原书第88页 · 3.2.1 IC制造工艺概述', pages: 'PDF第88页/印刷第69页', summary: '硅片规格、氧化刻蚀扩散注入CVD' },
-  { id: '66-page-089', title: '原书第89页 · 图3.1与3.2.2光刻工艺', pages: 'PDF第89页/印刷第70页', summary: '版图→掩膜→硅片→工艺→芯片' },
-  { id: '67-page-090', title: '原书第90页 · 光刻步骤2—5与STI', pages: 'PDF第90页/印刷第71页', summary: '曝光、显影、刻蚀、去胶、光学邻近校正' },
-  { id: '68-page-091', title: '原书第91页 · CMOS制造步骤2—5', pages: 'PDF第91页/印刷第72页', summary: '22Å栅氧化、自对准栅、源漏注入' },
-  { id: '69-page-092', title: '原书第92页 · 图3.2深亚微米CMOS结构', pages: 'PDF第92页/印刷第73页', summary: '双阱/STI/栅侧壁/硅化物' },
-  { id: '70-page-093', title: '原书第93页 · 3.2.4制造连线', pages: 'PDF第93页/印刷第74页', summary: '接触孔/金属层1/通孔/金属层2' },
-  { id: '71-page-094', title: '原书第94页 · 图3.3多层金属互连', pages: 'PDF第94页/印刷第75页', summary: 'M1—M6、铜、双镶嵌、CMP' },
-  { id: '72-page-095', title: '原书第95页 · 图3.4/3.5与式3.1', pages: 'PDF第95页/印刷第76页', summary: '平行板电容、金属线寄生几何' },
-  { id: '73-page-096', title: '原书第96页 · 互连电容与方块电阻', pages: 'PDF第96页/印刷第77页', summary: 'R=ρL/(TW)，Rsq=ρ/T（原书未编号）' },
-  { id: '74-page-097', title: '原书第97页 · 互连尺寸与例3.1', pages: 'PDF第97页/印刷第78页', summary: '图3.6、0.2/10/11Ω电阻与版图概述' },
-  { id: '75-page-098', title: '原书第98页 · GDS-II流程与λ规则', pages: 'PDF第98页/印刷第79页', summary: '图3.7、DRC和λ栅长单位' },
-  { id: '76-page-099', title: '原书第99页 · 版图基本设计规则', pages: 'PDF第99页/印刷第80页', summary: '图3.8—3.9最小线宽/间距/触点' },
-  { id: '77-page-100', title: '原书第100页 · SPICE器件模型概述', pages: 'PDF第100页/印刷第81页', summary: '3.4、3.4.1模型族与参数' },
-  { id: '78-page-101', title: '原书第101页 · MOS实例字段与图3.10', pages: 'PDF第101页/印刷第82页', summary: 'D/G/S/B与L/W/AD/PD/AS/PS' },
-  { id: '79-page-102', title: '原书第102页 · 有效沟道与例3.2', pages: 'PDF第102页/印刷第83页', summary: '式（3.2）与两个SPICE实例网表' },
-  { id: '80-page-103', title: '原书第103页 · LEVEL1电流公式', pages: 'PDF第103页/印刷第84页', summary: '式（3.3）—（3.9），VTO/KP/GAMMA' },
-  { id: '81-page-104', title: '原书第104页 · 结电容与参数提取', pages: 'PDF第104页/印刷第85页', summary: '式（3.10）—（3.11）' },
-  { id: '82-page-105', title: '原书第105页 · 图3.11及例3.3', pages: 'PDF第105页/印刷第86页', summary: 'VTO/KP/GAMMA/LAMBDA及模型卡' },
-  { id: '83-page-106', title: '原书第106页 · BSIM3模型与分箱', pages: 'PDF第106页/印刷第87页', summary: '3.6/3.6.1及图3.12' },
-  { id: '84-page-107', title: '原书第107页 · BSIM3短沟道阈值', pages: 'PDF第107页/印刷第88页', summary: '式3.12—3.16 NCH/NSUB、γ1/γ2' },
-  { id: '85-page-108', title: '原书第108页 · 图3.13 SCE与RSCE', pages: 'PDF第108页/印刷第89页', summary: '式3.17、阈值随沟道长度的变化' },
-  { id: '86-page-109', title: '原书第109页 · 图3.14 DIBL及迁移率', pages: 'PDF第109页/印刷第90页', summary: '式3.18—3.20、临界场VSAT' },
-  { id: '87-page-110', title: '原书第110页 · 例3.4 BSIM3直流I–V', pages: 'PDF第110页/印刷第91页', summary: '1.8V/0.18μm SPICE扫描选段' },
-  { id: '88-page-111', title: '原书第111页 · 例3.5及电容模型引言', pages: 'PDF第111页/印刷第92页', summary: '约2.8倍NMOS/PMOS单位宽度驱动' },
-  { id: '89-page-112', title: '原书第112页 · 亚阈值SPICE示例和电容', pages: 'PDF第112页/印刷第93页', summary: '半对数曲线、3.6.6电容模型' },
-  { id: '90-page-113', title: '原书第113页 · 结电容、源漏电阻', pages: 'PDF第113页/印刷第94页', summary: '式3.22、3.23，工艺角' },
-  { id: '91-page-114', title: '原书第114页 · 温度对MOS的影响', pages: 'PDF第114页/印刷第95页', summary: '式3.24/3.25、例3.7' },
-  { id: '92-page-115', title: '原书第115页 · SPICE温度扫描', pages: 'PDF第115页/印刷第96页', summary: '不同栅压下泄漏与导通电流趋势' },
-  { id: '93-page-116', title: '原书第116页 · HCE和CMOS闩锁', pages: 'PDF第116页/印刷第97页', summary: '3.7.4高场极限与3.7.5闩锁' },
-  { id: '94-page-117', title: '原书第117页 · 图3.15 CMOS闩锁', pages: 'PDF第117页/印刷第98页', summary: 'PNPN寄生反馈与防护' },
-  { id: '95-page-118', title: '原书第118页 · 图3.16 SOI器件结构', pages: 'PDF第118页/印刷第99页', summary: 'PD-SOI/FD-SOI及埋氧层' },
-  { id: '96-page-119', title: '原书第119页 · 表3.1 LEVEL1参数', pages: 'PDF第119页/印刷第100页', summary: 'VTO/KP/GAMMA及27行模型参数' },
-  { id: '97-page-120', title: '原书第120页 · 表3.2 BSIM3参数（一）', pages: 'PDF第120页/印刷第101页', summary: '尺寸、工艺及迁移率参数' },
-  { id: '98-page-121', title: '原书第121页 · 表3.2 BSIM3参数（二）', pages: 'PDF第121页/印刷第102页', summary: '迁移率、亚阈值与DIBL' },
-  { id: '99-page-122', title: '原书第122页 · 表3.2 BSIM3参数（三）', pages: 'PDF第122页/印刷第103页', summary: '温度、电容和侧壁参数' },
-  { id: '100-page-123', title: '原书第123页 · 参考文献及P3.1', pages: 'PDF第123页/印刷第104页', summary: '12篇参考、NMOS模型提取电路' },
-  { id: '101-page-124', title: '原书第124页 · 表P3.1及P3.2/3.3', pages: 'PDF第124页/印刷第105页', summary: '四组I–V值与电容充电条件' },
-  { id: '102-page-125', title: '原书第125页 · 习题P3.4—P3.8', pages: 'PDF第125页/印刷第106页', summary: '沟道调制、体效应与SPICE' },
-  { id: '103-page-126', title: '原书第126页 · 第3章习题P3.8—P3.14', pages: 'PDF第126页/印刷第107页', summary: 'PMOS阈值、温度、介质与互连' },
-  { id: '104-page-127', title: '原书第127页 · 第4章章首与4.1绪论', pages: 'PDF第127页/印刷第108页', summary: '12节章节提要、静态/动态电路' },
-  { id: '105-page-128', title: '原书第128页 · 理想VTC和增益式4.1', pages: 'PDF第128页/印刷第109页', summary: '图4.1理想切换与dVout/dVin' },
-  { id: '106-page-129', title: '原书第129页 · 实际VTC与级联噪声', pages: 'PDF第129页/印刷第110页', summary: '图4.2/4.3、实际输出过渡' },
-  { id: '107-page-130', title: '原书第130页 · 4.3噪声容限的定义', pages: 'PDF第130页/印刷第111页', summary: '4.3.1单源噪声容限SSNM' },
-  { id: '108-page-131', title: '原书第131页 · 图4.4/4.5及式4.2', pages: 'PDF第131页/印刷第112页', summary: 'SSNM_H与SSNM_L双行公式' },
-  { id: '109-page-132', title: '原书第132页 · 图4.6/4.7与多源噪声', pages: 'PDF第132页/印刷第113页', summary: 'MSNM以及f(Vin+vn)' },
-  { id: '110-page-133', title: '原书第133页 · 图4.8及式4.3', pages: 'PDF第133页/印刷第114页', summary: '单位增益点VIL/VIH与NM' },
-  { id: '111-page-134', title: '原书第134页 · 例4.1缓冲器、4.4节', pages: 'PDF第134页/印刷第115页', summary: '正斜率VTC与电阻负载结构' },
-  { id: '112-page-135', title: '原书第135页 · 图4.9及式4.4', pages: 'PDF第135页/印刷第116页', summary: '负载线与NMOS电流交点' },
-  { id: '113-page-136', title: '原书第136页 · 式4.5—4.7电阻负载设计', pages: 'PDF第136页/印刷第117页', summary: 'VOH/VOL二次近似与静态功耗' },
-  { id: '114-page-137', title: '原书第137页 · 式4.8a/b低输入单位增益点', pages: 'PDF第137页/印刷第118页', summary: 'VIL = VT + 1/(kRL)' },
-  { id: '115-page-138', title: '原书第138页 · 式4.8c—f、式4.9及例4.2', pages: 'PDF第138页/印刷第119页', summary: 'VIH与切换点VS' },
-  { id: '116-page-139', title: '原书第139页 · 例4.2结果与例4.3 SPICE', pages: 'PDF第139页/印刷第120页', summary: 'VOL≈0.08V、NL=0.38V、NH=0.43V' },
-  { id: '117-page-140', title: '原书第140页 · 例4.3 SPICE VTC验证', pages: 'PDF第140页/印刷第121页', summary: '噪声容限0.473V/0.828V' },
-  { id: '118-page-141', title: '原书第141页 · 4.5 NMOS负载及4.5.1', pages: 'PDF第141页/印刷第122页', summary: '饱和增强型上拉NMOS' },
-  { id: '119-page-142', title: '原书第142页 · 图4.10与式4.10/4.11', pages: 'PDF第142页/印刷第123页', summary: '尺寸比KR及体效应阈值' },
-  { id: '120-page-143', title: '原书第143页 · 式4.12与例4.4', pages: 'PDF第143页/印刷第124页', summary: 'VOH约0.73V' },
-  { id: '121-page-144', title: '原书第144页 · 例4.5负载器件尺寸设计', pages: 'PDF第144页/印刷第125页', summary: '目标VOL=0.1V、工艺参数' },
-  { id: '122-page-145', title: '原书第145页 · 4.5.2、图4.11及式4.13', pages: 'PDF第145页/印刷第126页', summary: '线性增强型NMOS负载' },
-  { id: '123-page-146', title: '原书第146页 · 4.6与4.6.1 CMOS反相器', pages: 'PDF第146页/印刷第127页', summary: 'CMOS互补连接与静态状态' },
-  { id: '124-page-147', title: '原书第147页 · 图4.12 CMOS五工作区', pages: 'PDF第147页/印刷第128页', summary: 'I—V工作区与直流电流关系' },
-  { id: '125-page-148', title: '原书第148页 · 式4.14/4.15 CMOS切换电平', pages: 'PDF第148页/印刷第129页', summary: 'χ比例和VS解析式' },
-  { id: '126-page-149', title: '原书第149页 · 例4.6 CMOS切换点', pages: 'PDF第149页/印刷第130页', summary: '0.60V与0.53V' },
-  { id: '127-page-150', title: '原书第150页 · CMOS输入低门限、式4.16', pages: 'PDF第150页/印刷第131页', summary: 'VIL处PMOS线性区' },
-  { id: '128-page-151', title: '原书第151页 · 式4.17—4.19与例4.7', pages: 'PDF第151页/印刷第132页', summary: 'VIL/VIH和工艺数据' },
-  { id: '129-page-152', title: '原书第152页 · 例4.7 SPICE网表和VTC', pages: 'PDF第152页/印刷第133页', summary: '0.891V、0.626V噪声容限' },
-  { id: '130-page-153', title: '原书第153页 · 例4.7校验与4.6.2版图', pages: 'PDF第153页/印刷第134页', summary: '手算VS约0.83V和工艺层' },
-  { id: '131-page-154', title: '原书第154页 · 图4.13版图与4.7伪NMOS', pages: 'PDF第154页/印刷第135页', summary: 'W/L/AS/AD/PS/PD' },
-  { id: '132-page-155', title: '原书第155页 · 图4.14、式4.20/4.21', pages: 'PDF第155页/印刷第136页', summary: '伪NMOS的高低电平' },
-  { id: '133-page-156', title: '原书第156页 · 例4.8 SPICE与4.8尺寸确定', pages: 'PDF第156页/印刷第137页', summary: 'Wn/Wp约2、VOL 0.065V' },
-  { id: '134-page-157', title: '原书第157页 · 图4.15与式4.22—4.23', pages: 'PDF第157页/印刷第138页', summary: '时序RC模型和MOS方块电阻' },
-  { id: '135-page-158', title: '原书第158页 · 式4.24与例4.9', pages: 'PDF第158页/印刷第139页', summary: 'Wn0.875μm、Wp2.1μm' },
-  { id: '136-page-159', title: '原书第159页 · 例4.9结果与4.9三态', pages: 'PDF第159页/印刷第140页', summary: '伪NMOS Wp0.665μm、图4.16' },
-  { id: '137-page-160', title: '原书第160页 · 4.10小结与4.11参考文献', pages: 'PDF第160页/印刷第141页', summary: '0.18/0.13μm工艺参数表' },
-  { id: '138-page-161', title: '原书第161页 · 4.11文献与P4.1', pages: 'PDF第161页/印刷第142页', summary: '4项参考和四种反相器' },
-  { id: '139-page-162', title: '原书第162页 · 图P4.2与P4.2—P4.6', pages: 'PDF第162页/印刷第143页', summary: 'NMOS负载、切换点和八级链' },
-  { id: '140-page-163', title: '原书第163页 · P4.6—P4.8', pages: 'PDF第163页/印刷第144页', summary: '2%噪声恢复、伪PMOS及异常接线' },
-  { id: '141-page-164', title: '原书第164页 · P4.9—P4.12', pages: 'PDF第164页/印刷第145页', summary: '尺寸比例、VTC与峰值电流' },
-  { id: '142-page-165', title: '原书第165页 · P4.12—P4.15', pages: 'PDF第165页/印刷第146页', summary: '目标输出电平与非典型VTC' },
-  { id: '143-page-166', title: '原书第166页 · P4.15—P4.16', pages: 'PDF第166页/印刷第147页', summary: '三态缓冲器两种堆叠结构' },
-  { id: '144-page-167', title: '原书第167页 · 第5章章首与5.1绪论', pages: 'PDF第167页/印刷第148页', summary: '12节目录，静态MOS组合/时序' },
-  { id: '145-page-168', title: '原书第168页 · 5.2 CMOS门电路', pages: 'PDF第168页/印刷第149页', summary: 'NAND/NOR互补网络' },
-  { id: '146-page-169', title: '原书第169页 · 图5.1与5.2.1尺寸确定', pages: 'PDF第169页/印刷第150页', summary: 'CMOS NAND/NOR最坏导通路径' },
-  { id: '147-page-170', title: '原书第170页 · 图5.2 CMOS门尺寸', pages: 'PDF第170页/印刷第151页', summary: '2W、4W、3W、6W规则' },
-  { id: '148-page-171', title: '原书第171页 · 图5.3/5.4及式5.1/5.2', pages: 'PDF第171页/印刷第152页', summary: '串并联等效宽度Weq' },
-  { id: '149-page-172', title: '原书第172页 · 例5.1、5.2.2与式5.3', pages: 'PDF第172页/印刷第153页', summary: '3输入尺寸与DeMorgan' },
-  { id: '150-page-173', title: '原书第173页 · 图5.5—5.7八输入门', pages: 'PDF第173页/印刷第154页', summary: 'NAND8和逻辑变换' },
-  { id: '151-page-174', title: '原书第174页 · 图5.8/5.9多级门与扇出', pages: 'PDF第174页/印刷第155页', summary: 'NAND4树和FO4' },
-  { id: '152-page-175', title: '原书第175页 · 5.2.3 NAND门VTC', pages: 'PDF第175页/印刷第156页', summary: '图5.10多输入切换' },
-  { id: '153-page-176', title: '原书第176页 · 图5.11 NOR VTC及例5.2', pages: 'PDF第176页/印刷第157页', summary: '0.18μm单输入切换点≈0.77V' },
-  { id: '154-page-177', title: '原书第177页 · 例5.2 NAND HSPICE（三组）', pages: 'PDF第177页/印刷第158页', summary: 'A/B扫描网表与手算VS≈0.9V' },
-  { id: '155-page-178', title: '原书第178页 · 例5.2 SPICE VTC与式5.4', pages: 'PDF第178页/印刷第159页', summary: '0.745/0.721/0.883V、5.3引言' },
-  { id: '156-page-179', title: '原书第179页 · 图5.12及式5.5 AOI21', pages: 'PDF第179页/印刷第160页', summary: '互补复合MOS与DeMorgan' },
-  { id: '157-page-180', title: '原书第180页 · 例5.3图5.13复杂CMOS', pages: 'PDF第180页/印刷第161页', summary: 'AB+CD复合网络及伪NMOS' },
-  { id: '158-page-181', title: '原书第181页 · 图5.14 XOR/XNOR', pages: 'PDF第181页/印刷第162页', summary: '异或同或逻辑及互补网络' },
-  { id: '159-page-182', title: '原书第182页 · 图5.15 MUX和5.6', pages: 'PDF第182页/印刷第163页', summary: '2:1MUX选择函数与时序电路' },
-  { id: '160-page-183', title: '原书第183页 · 图5.16基本双稳态', pages: 'PDF第183页/印刷第164页', summary: '交叉反相器稳定点A/B/C' },
-  { id: '161-page-184', title: '原书第184页 · 图5.17及式5.6 SR锁存器', pages: 'PDF第184页/印刷第165页', summary: 'NOR高有效SR及平均延迟' },
-  { id: '162-page-185', title: '原书第185页 · 例5.4 SR尺寸设计', pages: 'PDF第185页/印刷第166页', summary: '400ps/100fF/Wn440nm/Wp1.76μm' },
-  { id: '163-page-186', title: '原书第186页 · 图5.18及5.6.3 JK触发器', pages: 'PDF第186页/印刷第167页', summary: 'NAND低有效SR与JK行为' },
-  { id: '164-page-187', title: '原书第187页 · JK真值表和主从触发器', pages: 'PDF第187页/印刷第168页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '165-page-188', title: '原书第188页 · 边沿触发JK时序', pages: 'PDF第188页/印刷第169页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '166-page-189', title: '原书第189页 · D锁存器与D触发器', pages: 'PDF第189页/印刷第170页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '167-page-190', title: '原书第190页 · DFF建立和保持时间', pages: 'PDF第190页/印刷第171页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '168-page-191', title: '原书第191页 · 锁存器门级实现', pages: 'PDF第191页/印刷第172页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '169-page-192', title: '原书第192页 · CMOS动态功耗', pages: 'PDF第192页/印刷第173页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '170-page-193', title: '原书第193页 · 行为因子与例5.5', pages: 'PDF第193页/印刷第174页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '171-page-194', title: '原书第194页 · 例5.6反相器手算与SPICE', pages: 'PDF第194页/印刷第175页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '172-page-195', title: '原书第195页 · 短路电流和动态功耗', pages: 'PDF第195页/印刷第176页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '173-page-196', title: '原书第196页 · NOR逻辑毛刺', pages: 'PDF第196页/印刷第177页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '174-page-197', title: '原书第197页 · NOR瞬态仿真', pages: 'PDF第197页/印刷第178页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '175-page-198', title: '原书第198页 · 亚阈值泄漏', pages: 'PDF第198页/印刷第179页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '176-page-199', title: '原书第199页 · 完整功耗模型与例5.8', pages: 'PDF第199页/印刷第180页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '177-page-200', title: '原书第200页 · PDP/EDP折中指标', pages: 'PDF第200页/印刷第181页', summary: '两轮OCR比对、原生公式/图元选段；严格整页验收仍未通过' },
-  { id: '178-page-201', title: '原书第201页 · EDP的最优电源电压', pages: 'PDF第201页/印刷第182页', summary: '双OCR、原生选段；严格完整页验收待完成' },
-  { id: '179-page-202', title: '原书第202页 · 例5.9双设计与小结', pages: 'PDF第202页/印刷第183页', summary: '双OCR、原生选段；严格完整页验收待完成' },
-  { id: '180-page-203', title: '原书第203页 · 八条参考文献与P5.1—P5.5', pages: 'PDF第203页/印刷第184页', summary: '双OCR、原生选段；严格完整页验收待完成' },
-  { id: '181-page-204', title: '原书第204页 · MOS练习图P5.4—P5.6', pages: 'PDF第204页/印刷第185页', summary: '双OCR、原生选段；严格完整页验收待完成' },
-  { id: '182-page-205', title: '原书第205页 · 习题P5.7—P5.11', pages: 'PDF第205页/印刷第186页', summary: '双OCR、原生选段；严格完整页验收待完成' },
-  { id: '183-page-206', title: '原书第206页 · 功耗习题P5.11—P5.14', pages: 'PDF第206页/印刷第187页', summary: '双OCR、原生选段；严格完整页验收待完成' },
-  { id: '184-page-207', title: '原书第207页 · 章末习题P5.14—P5.19', pages: 'PDF第207页/印刷第188页', summary: '双OCR、原生选段；严格完整页验收待完成' },
-  { id: '185-page-208', title: '原书第208页 · 第6章章首与6.1绪论', pages: 'PDF第208页/印刷第189页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '186-page-209', title: '原书第209页 · 图6.1传播延迟定义', pages: 'PDF第209页/印刷第190页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '187-page-210', title: '原书第210页 · 6.2转换时间分析图6.2/6.3', pages: 'PDF第210页/印刷第191页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '188-page-211', title: '原书第211页 · 反相器延迟公式6.1–6.5', pages: 'PDF第211页/印刷第192页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '189-page-212', title: '原书第212页 · 例6.1等效电阻公式6.6', pages: 'PDF第212页/印刷第193页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '190-page-213', title: '原书第213页 · 图6.4/6.5串联管速度饱和', pages: 'PDF第213页/印刷第194页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '191-page-214', title: '原书第214页 · 图6.6尺寸与6.3负载电容', pages: 'PDF第214页/印刷第195页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '192-page-215', title: '原书第215页 · 6.3.1扇出电容公式6.7–6.9', pages: 'PDF第215页/印刷第196页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '193-page-216', title: '原书第216页 · 图6.8与6.3.2自身电容', pages: 'PDF第216页/印刷第197页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '194-page-217', title: '原书第217页 · 图6.9/6.10米勒效应式6.10', pages: 'PDF第217页/印刷第198页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '195-page-218', title: '原书第218页 · 例6.2 HSPICE提取Cg', pages: 'PDF第218页/印刷第199页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '196-page-219', title: '原书第219页 · 例6.2提取Ceff与式6.11', pages: 'PDF第219页/印刷第200页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '197-page-220', title: '原书第220页 · 图6.11扩散与例6.3 NAND3', pages: 'PDF第220页/印刷第201页', summary: '二次扫描和原生选段；晶体管图及全文尚未1:1验收' },
-  { id: '198-page-221', title: '原书第221页 · 例6.3与三管输入到达顺序', pages: 'PDF第221页/印刷第202页', summary: '源扫描公式及正文转写；原图逐线和最终版式仍需验收' },
-  { id: '199-page-222', title: '原书第222页 · 6.3.3连线电容、例6.4与式6.12/6.13', pages: 'PDF第222页/印刷第203页', summary: '源扫描公式及正文转写；原图逐线和最终版式仍需验收' },
-  { id: '200-page-223', title: '原书第223页 · 图6.13/6.14和充放电电流等高线', pages: 'PDF第223页/印刷第204页', summary: '源扫描公式及正文转写；原图逐线和最终版式仍需验收' },
-  { id: '201-page-224', title: '原书第224页 · 图6.15阶跃/斜波轨迹与例6.5', pages: 'PDF第224页/印刷第205页', summary: '源扫描公式及正文转写；原图逐线和最终版式仍需验收' },
-  { id: '202-page-225', title: '原书第225页 · 例6.5斜波延迟积分推导', pages: 'PDF第225页/印刷第206页', summary: '源扫描公式及正文转写；原图逐线和最终版式仍需验收' },
-  { id: '203-page-226', title: '原书第226页 · 式6.14/6.15及四级反相器链', pages: 'PDF第226页/印刷第207页', summary: '源扫描公式及正文转写；原图逐线和最终版式仍需验收' },
-  { id: '204-page-227', title: '原书第227页 · 例6.6 FO4与例6.7 PMOS尺寸', pages: 'PDF第227页/印刷第208页', summary: '源扫描公式及正文转写；原图逐线和最终版式仍需验收' },
-  { id: '205-page-228', title: '原书第228页 · 例6.7最优宽度6.2λ和97.6ps', pages: 'PDF第228页/印刷第209页', summary: '源扫描公式及正文转写；原图逐线和最终版式仍需验收' },
-  { id: '206-page-229', title: '原书第229页 · 6.5 最佳路径延迟与图6.17—6.19', pages: 'PDF第229页/印刷第210页', summary: '已建立原文可编辑选段；严格全文、图线与版心验收待完成' },
-  { id: '207-page-230', title: '原书第230页 · 6.5.2 FO4与式（6.16）—（6.18）', pages: 'PDF第230页/印刷第211页', summary: '已建立原文可编辑选段；严格全文、图线与版心验收待完成' },
-  { id: '208-page-231', title: '原书第231页 · 例6.8本征延迟及图6.21', pages: 'PDF第231页/印刷第212页', summary: '已建立原文可编辑选段；严格全文、图线与版心验收待完成' },
-  { id: '209-page-232', title: '原书第232页 · 几何尺寸优化与式（6.21）—（6.23）', pages: 'PDF第232页/印刷第213页', summary: '已建立原文可编辑选段；严格全文、图线与版心验收待完成' },
-  { id: '210-page-233', title: '原书第233页 · 图6.23/6.24与例6.9', pages: 'PDF第233页/印刷第214页', summary: '已建立原文可编辑选段；严格全文、图线与版心验收待完成' },
-  { id: '211-page-234', title: '原书第234页 · 例6.9四级优化与NAND链', pages: 'PDF第234页/印刷第215页', summary: '已建立原文可编辑选段；严格全文、图线与版心验收待完成' },
-  { id: '212-page-235', title: '原书第235页 · 式（6.24）/（6.25）混合逻辑门优化', pages: 'PDF第235页/印刷第216页', summary: '已建立原文可编辑选段；严格全文、图线与版心验收待完成' },
-  { id: '213-page-236', title: '原书第236页 · 例6.10 NAND—INV—NOR最佳尺寸', pages: 'PDF第236页/印刷第217页', summary: '已建立原文可编辑选段；严格全文、图线与版心验收待完成' },
-  { id: '214-page-237', title: '原书第237页 · 6.6.1逻辑强度LE的导出', pages: 'PDF第237页/印刷第218页', summary: '源扫描驱动的原生转写，整页逐字逐图1:1验收待完成' },
-  { id: '215-page-238', title: '原书第238页 · 图6.27与逻辑强度两种计算', pages: 'PDF第238页/印刷第219页', summary: '源扫描驱动的原生转写，整页逐字逐图1:1验收待完成' },
-  { id: '216-page-239', title: '原书第239页 · 图6.28、表6.1和寄生P', pages: 'PDF第239页/印刷第220页', summary: '源扫描驱动的原生转写，整页逐字逐图1:1验收待完成' },
-  { id: '217-page-240', title: '原书第240页 · 表6.2及例6.11混合门逻辑强度', pages: 'PDF第240页/印刷第221页', summary: '源扫描驱动的原生转写，整页逐字逐图1:1验收待完成' },
-  { id: '218-page-241', title: '原书第241页 · 例6.11逆推电容与图6.29', pages: 'PDF第241页/印刷第222页', summary: '源扫描驱动的原生转写，整页逐字逐图1:1验收待完成' },
-  { id: '219-page-242', title: '原书第242页 · 例6.12偏斜反相器LE', pages: 'PDF第242页/印刷第223页', summary: '源扫描驱动的原生转写，整页逐字逐图1:1验收待完成' },
-  { id: '220-page-243', title: '原书第243页 · 例6.13路径强度与级强度', pages: 'PDF第243页/印刷第224页', summary: '源扫描驱动的原生转写，整页逐字逐图1:1验收待完成' },
-  { id: '221-page-244', title: '原书第244页 · 例6.14八输入与门两种结构', pages: 'PDF第244页/印刷第225页', summary: '源扫描驱动的原生转写，整页逐字逐图1:1验收待完成' },
-  { id: '222-page-245', title: '原书第245页 · 6.6.3分支强度与例6.15', pages: 'PDF第245页/印刷第226页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
-  { id: '223-page-246', title: '原书第246页 · 例6.15/6.16旁路负载与偏导', pages: 'PDF第246页/印刷第227页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
-  { id: '224-page-247', title: '原书第247页 · 旁路负载尺寸与6.7小结', pages: 'PDF第247页/印刷第228页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
-  { id: '225-page-248', title: '原书第248页 · 第6章小结公式及源书差异', pages: 'PDF第248页/印刷第229页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
-  { id: '226-page-249', title: '原书第249页 · 6.8参考文献及P6.1—P6.3', pages: 'PDF第249页/印刷第230页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
-  { id: '227-page-250', title: '原书第250页 · P6.4—P6.5 CMOS拓扑', pages: 'PDF第250页/印刷第231页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
-  { id: '228-page-251', title: '原书第251页 · P6.6—P6.9路径优化与逻辑强度', pages: 'PDF第251页/印刷第232页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
-  { id: '229-page-252', title: '原书第252页 · P6.9—P6.13与复杂逻辑电路', pages: 'PDF第252页/印刷第233页', summary: '可编辑原生转写，仍需逐字逐图与版心严格验收' },
-  { id: '230-page-253', title: '原书PDF第253页 · 第6章末尾P6.14—P6.16与图P6.12/13', pages: 'PDF第253页/印刷第234页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
-  { id: '231-page-254', title: '原书PDF第254页 · 第7章7.1绪论与本章提要', pages: 'PDF第254页/印刷第235页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
-  { id: '232-page-255', title: '原书PDF第255页 · 7.2.1传输管及图7.1', pages: 'PDF第255页/印刷第236页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
-  { id: '233-page-256', title: '原书PDF第256页 · NMOS/PMOS阈值传输与图7.2', pages: 'PDF第256页/印刷第237页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
-  { id: '234-page-257', title: '原书PDF第257页 · 图7.3与7.2.2电容馈通', pages: 'PDF第257页/印刷第238页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
-  { id: '235-page-258', title: '原书PDF第258页 · 图7.5、式7.1—7.3与例7.1', pages: 'PDF第258页/印刷第239页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
-  { id: '236-page-259', title: '原书PDF第259页 · 例7.1计算和7.2.3电荷共享', pages: 'PDF第259页/印刷第240页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
-  { id: '237-page-260', title: '原书PDF第260页 · 式7.4—7.6与例7.2', pages: 'PDF第260页/印刷第241页', summary: '扫描图驱动的原生Typst选段，图元与版面待1:1终验' },
-  { id: '238-page-261', title: 'PDF第261页 · 7.2.4电荷丢失和7.3传输门', pages: 'PDF第261页/印刷第242页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
-  { id: '239-page-262', title: 'PDF第262页 · 图7.8/7.9传输门及多路器', pages: 'PDF第262页/印刷第243页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
-  { id: '240-page-263', title: 'PDF第263页 · 图7.10/7.11 XOR与四选一', pages: 'PDF第263页/印刷第244页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
-  { id: '241-page-264', title: 'PDF第264页 · 图7.12/7.13多路器错误与逻辑', pages: 'PDF第264页/印刷第245页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
-  { id: '242-page-265', title: 'PDF第265页 · 例7.3传输门组合逻辑', pages: 'PDF第265页/印刷第246页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
-  { id: '243-page-266', title: 'PDF第266页 · 图7.14/7.15与传输门RC模型', pages: 'PDF第266页/印刷第247页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
-  { id: '244-page-267', title: 'PDF第267页 · 图7.16导通电阻', pages: 'PDF第267页/印刷第248页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
-  { id: '245-page-268', title: 'PDF第268页 · 式7.7—7.9电阻与电容', pages: 'PDF第268页/印刷第249页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
-  { id: '246-page-269', title: 'PDF第269页 · 式7.10—7.11与图7.18 Elmore延迟', pages: 'PDF第269页/印刷第250页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
-  { id: '247-page-270', title: 'PDF第270页 · 例7.4 两种MUX的RC阶梯', pages: 'PDF第270页/印刷第251页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
-  { id: '248-page-271', title: 'PDF第271页 · 7.3.3 CMOS传输门逻辑强度', pages: 'PDF第271页/印刷第252页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
-  { id: '249-page-272', title: 'PDF第272页 · 例7.5与7.4锁存器起始', pages: 'PDF第272页/印刷第253页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
-  { id: '250-page-273', title: 'PDF第273页 · 图7.22反馈式CMOS锁存器', pages: 'PDF第273页/印刷第254页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
-  { id: '251-page-274', title: 'PDF第274页 · 图7.23/7.24典型锁存器及D触发器', pages: 'PDF第274页/印刷第255页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
-  { id: '252-page-275', title: 'PDF第275页 · 7.5 多米诺逻辑与图7.25', pages: 'PDF第275页/印刷第256页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
-  { id: '253-page-276', title: 'PDF第276页 · 例7.6、图7.26动态门和多米诺级', pages: 'PDF第276页/印刷第257页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' }
-]
-const selected = ref(sections[0].id)
-const active = computed(() => sections.find(x => x.id === selected.value)!)
-const htmlUrl = computed(() => withBase('/native-typst/' + active.value.id + '.html'))
-const sourceUrl = computed(() => active.value.id.includes('-page-') ? 'https://github.com/stevessr/hspice/blob/main/fullbook/native/web/' + active.value.id + '.typ' : withBase('/native-typst/' + active.value.id + '.typ'))
-const visualMode = ref(false)
-const canShowVisual = computed(() => active.value.id.includes('-page-'))
-const layoutUrl = computed(() => withBase('/native-typst/' + active.value.id + '-layout.svg'))
+type Item = {
+  id: string
+  title: string
+  source_pdf_pages: number[]
+  html: string
+  typst: string
+  status: string
+}
+const items = ref<Item[]>([])
+const loading = ref(true)
+const error = ref('')
+const current = ref('')
+const jump = ref(1)
+const search = ref('')
+const view = ref<'html'|'svg'>('html')
+const filter = ref<'all'|'editorial'|'ocr'>('all')
+const selected = computed(() => items.value.find(v => v.id === current.value))
+const page = computed(() => selected.value?.source_pdf_pages?.[0] ?? 1)
+const isPage = computed(() => selected.value?.source_pdf_pages?.length === 1)
+const isOcr = (item: Item) => item.status?.startsWith('machine OCR')
+const statusText = (item: Item) => isOcr(item)
+  ? '机器 OCR · 未逐字、逐公式或逐图校对'
+  : item.source_pdf_pages.length === 1
+  ? '人工辅助编辑选段 · 严格 1:1 未验收'
+  : '跨页学习选段'
+const pageItems = computed(() => items.value.filter(v => v.source_pdf_pages?.length === 1))
+const ocrCount = computed(() => pageItems.value.filter(isOcr).length)
+const editedCount = computed(() => pageItems.value.length - ocrCount.value)
+const matching = computed(() => {
+  const s = search.value.trim().toLowerCase()
+  return items.value.filter(v => {
+    if (filter.value === 'editorial' && isOcr(v)) return false
+    if (filter.value === 'ocr' && !isOcr(v)) return false
+    return !s || v.title.toLowerCase().includes(s)
+      || v.id.toLowerCase().includes(s)
+      || v.source_pdf_pages.some(n => String(n) === s)
+  })
+})
+const canVisual = computed(() => isPage.value && selected.value?.id.includes('-page-'))
+const previewUrl = computed(() => withBase('/native-typst/' + (selected.value?.html ?? '')))
+const layoutUrl = computed(() => withBase('/native-typst/' + (selected.value?.id ?? '') + '-layout.svg'))
+const sourceUrl = computed(() => selected.value
+  ? 'https://github.com/stevessr/hspice/blob/main/fullbook/native/web/' + selected.value.typst
+  : '')
+function choose(item: Item) {
+  current.value = item.id
+  jump.value = item.source_pdf_pages[0]
+  view.value = 'html'
+}
+function go(n: number) {
+  if (!Number.isInteger(n) || n < 1 || n > 445) return
+  const item = pageItems.value.find(v => v.source_pdf_pages[0] === n)
+  if (item) choose(item)
+}
+function adjacent(delta: number) { go(page.value + delta) }
+function chooseId(id: string) { const item = items.value.find(v => v.id === id); if (item) choose(item) }
+watch(filter, () => { if (matching.value.length && !matching.value.some(x => x.id === current.value)) choose(matching.value[0]) })
+onMounted(async () => {
+  try {
+    const response = await fetch(withBase('/native-typst/index.json'), { cache: 'no-store' })
+    if (!response.ok) throw Error('无法读取已生成的 Typst 页码目录')
+    const data = await response.json()
+    if (data.format !== 'native-typst-html' || !Array.isArray(data.items)) throw Error('Typst 目录结构无效')
+    items.value = data.items
+    const pdfPages = new Set(pageItems.value.map(i => i.source_pdf_pages[0]))
+    if (pdfPages.size !== 445 || !Array.from({ length: 445 }, (_, i) => pdfPages.has(i + 1)).every(Boolean))
+      throw Error('目录不包含连续的 445 页原始 PDF 映射')
+    const urlPage = typeof window !== 'undefined'
+      ? Number(new URLSearchParams(window.location.search).get('page')) : 0
+    go(Number.isInteger(urlPage) && urlPage >= 1 && urlPage <= 445 ? urlPage : 293)
+  } catch (e) { error.value = e instanceof Error ? e.message : String(e) }
+  finally { loading.value = false }
+})
 </script>
 
-<div class="native-review">
-  <div class="native-review-nav" role="group" aria-label="选择校对章节">
-    <button v-for="item in sections" :key="item.id" type="button"
-      :class="{ selected: selected === item.id }" :aria-pressed="selected === item.id"
-      @click="selected = item.id">{{ item.title }}</button>
-  </div>
-  <div class="native-review-summary">
-    <strong>{{ active.title }}</strong>
-    <span>{{ active.pages }} · {{ active.summary }}</span>
-    <div class="native-review-links">
-      <a :href="htmlUrl" target="_blank" rel="noopener noreferrer">独立网页阅读</a>
-      <a :href="sourceUrl" target="_blank" rel="noopener noreferrer">查看可编辑 Typst 源码</a>
+<div class="native-all-reader">
+  <div v-if="loading" role="status">正在加载 445 页 Typst 目录……</div>
+  <p v-if="error" class="native-reader-error" role="alert">{{ error }}</p>
+  <template v-if="items.length">
+    <div class="native-reader-stats">
+      <span>原书逐页可编辑源码：<strong>{{ pageItems.length }} / 445</strong></span>
+      <span>人工辅助编辑：<strong>{{ editedCount }}</strong></span>
+      <span>机器 OCR 草稿：<strong>{{ ocrCount }}</strong></span>
+      <span>严格 1:1 验收：<strong>0 / 445</strong></span>
     </div>
-  </div>
-  <div v-if="canShowVisual" class="native-review-nav" role="group" aria-label="预览模式">
-    <button type="button" :aria-pressed="!visualMode" :class="{ selected: !visualMode }"
-      @click="visualMode = false">语义 HTML · 可检索</button>
-    <button type="button" :aria-pressed="visualMode" :class="{ selected: visualMode }"
-      @click="visualMode = true">固定页尺寸 SVG · 视觉比对</button>
-    <a :href="layoutUrl" target="_blank" rel="noopener noreferrer">单独打开整页 SVG</a>
-  </div>
-  <iframe v-if="!visualMode || !canShowVisual" :key="active.id" class="native-review-frame" :src="htmlUrl"
-    :title="'原生 Typst HTML：' + active.title" loading="lazy"></iframe>
-  <div v-else class="native-review-layout">
-    <p>原 PDF 页面尺寸 506.8346 × 729.6 pt。此图由 Typst 源码排版导出，不是原扫描图，也尚未通过 1:1 几何验收。</p>
-    <img :src="layoutUrl" alt="原书该页可编辑 Typst 固定尺寸 SVG 预览，待版式精校" />
-  </div>
+    <div class="native-reader-controls">
+      <label>跳转 PDF 页码 <input type="number" min="1" max="445" v-model.number="jump" @keyup.enter="go(jump)" /></label>
+      <button type="button" @click="go(jump)">打开页码</button>
+      <button type="button" @click="adjacent(-1)" :disabled="page <= 1">上一页</button>
+      <button type="button" @click="adjacent(1)" :disabled="page >= 445">下一页</button>
+      <label>内容搜索 <input v-model="search" type="search" placeholder="页码、章节名称或公式关键词" /></label>
+      <label>来源质量
+        <select v-model="filter"><option value="all">全部</option><option value="editorial">人工编辑选段</option><option value="ocr">机器 OCR 草稿</option></select>
+      </label>
+    </div>
+    <div class="native-reader-index">
+      <label for="native-page-select">目录（{{ matching.length }} 项）</label>
+      <select id="native-page-select" :value="current" @change="chooseId(($event.target as any).value)">
+        <option v-for="item in matching" :key="item.id" :value="item.id">{{ item.source_pdf_pages.length === 1 ? 'PDF '+item.source_pdf_pages[0]+' · ' : '' }}{{ item.title }}{{ isOcr(item) ? ' [OCR未校对]' : '' }}</option>
+      </select>
+    </div>
+    <div v-if="selected" class="native-reader-active">
+      <strong>{{ selected.title }}</strong>
+      <p>{{ statusText(selected) }}</p>
+      <div class="native-reader-links">
+        <a :href="previewUrl" target="_blank" rel="noopener">独立打开 HTML</a>
+        <a :href="sourceUrl" target="_blank" rel="noopener">查看可编辑 Typst 源码</a>
+        <a v-if="canVisual" :href="layoutUrl" target="_blank" rel="noopener">单独打开 SVG</a>
+        <a href="/fidelity">逐页严格验收矩阵</a>
+      </div>
+      <div class="native-reader-tabs" v-if="canVisual">
+        <button type="button" :aria-pressed="view==='html'" @click="view='html'">HTML · 文本可检索</button>
+        <button type="button" :aria-pressed="view==='svg'" @click="view='svg'">SVG · 原纸尺寸</button>
+      </div>
+      <iframe v-if="view==='html' || !canVisual" :key="selected.id" :src="previewUrl" :title="'Typst HTML：'+selected.title" loading="lazy"></iframe>
+      <div v-else class="native-reader-image">
+        <p>SVG尺寸 506.8346 × 729.6 pt。此图来自 Typst 原生文字及图元，不是扫描件。</p>
+        <img :src="layoutUrl" :alt="'原书PDF第'+page+'页的Typst版式草稿'" />
+      </div>
+    </div>
+  </template>
 </div>
 
-此处展示的 **SVG 是版式重排的视觉预览**，公式、文字及图元仍在 Typst 中编辑；与原扫描逐元素比较仍是下一步验收工作。
+<style scoped>
+.native-all-reader { margin: 1.4rem 0; }
+.native-reader-stats { display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;border-bottom:1px solid var(--vp-c-divider);padding:0 0 1rem; }
+.native-reader-stats span {font-size:.88rem;}
+.native-reader-controls { display:flex; flex-wrap:wrap;gap:.8rem;align-items:end;margin:1.4rem 0; }
+.native-reader-controls label,.native-reader-index label {display:flex;flex-direction:column;gap:.3rem;font-size:.82rem;}
+.native-reader-controls input,.native-reader-controls select,.native-reader-index select {border:1px solid var(--vp-c-divider);border-radius:6px;padding:.45rem;min-width:110px;background:var(--vp-c-bg-soft);font:inherit;}
+.native-reader-controls button,.native-reader-tabs button {border:1px solid var(--vp-c-divider);border-radius:6px;padding:.4rem .65rem;}
+.native-reader-controls button:hover,.native-reader-tabs button:hover {border-color:var(--vp-c-brand-1);}
+.native-reader-index {display:grid;gap:.35rem;}
+.native-reader-index select {width:100%;font-size:.88rem;min-width:0;}
+.native-reader-active {margin-top:1.1rem;}
+.native-reader-active > p {font-size:.86rem;color:var(--vp-c-text-2);margin:.3rem 0;}
+.native-reader-links,.native-reader-tabs {display:flex;flex-wrap:wrap;gap:.9rem;align-items:center;margin:.7rem 0;}
+.native-reader-links a {font-size:.85rem;}
+.native-reader-active iframe {width:100%;height:650px;border:1px solid var(--vp-c-divider);border-radius:8px;background:white;}
+.native-reader-image {overflow:auto;border:1px solid var(--vp-c-divider);border-radius:8px;padding:12px;}
+.native-reader-image img {width:100%;max-width:590px;display:block;margin:auto;}
+.native-reader-image p {font-size:.8rem;color:var(--vp-c-text-2);}
+.native-reader-error {color:var(--vp-c-danger-1);}
+@media(max-width:640px) {.native-reader-active iframe{height:520px;}.native-reader-controls{gap:.55rem;}}
+</style>
 
-## 第5章复合门、MUX与锁存器：PDF 第177—186页
+## 校对进度与完成标准
 
-新增例5.2三种SPICE电压传输曲线的原始参考切换点（A变化0.745V、B变化0.721V、共同变化0.883V），与手算0.9V分开记录。式（5.4）—（5.6）、图5.12—5.18、例5.3/5.4、5.4 XOR/XNOR、5.5 MUX、5.6 SR锁存器和JK引言转为可编辑选段。例5.4保留0.13 μm、100 fF、400 ps的尺寸结果WN=440 nm、WP=1.76 μm。晶体管级原图并未精确描摹。
+可编辑源码全书覆盖只是第一层。PDF20–324属于人工辅助编辑选段，PDF1–19、325–445属于OCR机器草稿。每一页还需分别完成文字、数学、图表、MOS电路全部端口、页眉脚注和逐页视觉版式的校对。**严格 1:1 验收进度仍为0/445。**
 
-连续可编辑源页为 **PDF第26—186页，共161页**；445页机器OCR尚需逐字修订，严格整页1:1验收仍为0/445。
-
-## 第5章静态CMOS门：PDF 第167—176页
-
-根据原扫描建立第5章章首12节提要、5.1/5.2/5.2.1—5.2.3、CMOS NAND/NOR尺寸与等效宽度式（5.1）—（5.3）。原生可编辑示意图覆盖图5.1—5.11的核心逻辑关系（并非每个图号所有细节）。例5.1三输入门按最坏导通路径匹配，例5.2的0.18 μm CMOS NAND单输入切换点约0.77 V。
-
-连续可编辑原生源页扩展到 **PDF第26—176页共151页**；全书机器OCR初稿445页。严格完整整页1:1验收继续为0/445，未复核的实验数据和所有原图位置不能以编译成功代替。
-
-## 第4章尺寸确定、三态与章末习题：PDF 第157—166页
-
-源扫描的式（4.22a—c）RC延迟、式（4.23a/b）与式（4.24a/b）等效方块电阻均按原页保留；例4.9在50 fF、50 ps条件下，CMOS尺寸WN=0.875 μm、WP=2.1 μm，伪NMOS上拉WP=0.665 μm。图4.15时序、图4.16三态功能以及第4章P4.1—P4.16题目条件重新制作成可编辑源页选段。P4.1—P4.16的图形几何尚未逐元绘出，不能标记为整页验收通过。
-
-第4章第127—166页已建立40个编辑选段，连续PDF26—166共有 **141个可编辑选段**，严格整页1:1验收仍为0/445。
-
-## 第4章 CMOS 工作区、版图、伪NMOS：PDF 第147—156页
-
-本批以源扫描为依据重排图4.12—4.14对应概念、CMOS五工作区、式（4.14）—（4.21）及例4.6—4.8。保留例4.6两种宽度对应的切换点0.60 V与0.53 V，例4.7的原始SPICE示例噪声容限0.891 V与0.626 V，以及例4.8输出低电平0.065 V。可编辑电路图与VTC为定性示意，图4.13的版图没有逐像素描摹。
-
-连续可编辑**源页选段 PDF第26—156页，共131页**；445页严格整页1:1人工验收仍为0页。
-
-## 第4章 NMOS 负载到 CMOS 反相器：PDF 第137—146页
-
-按扫描逐页整理式（4.8a—f）、式（4.9）—（4.13）、例4.2—4.5的参数与结果。包含图4.10饱和增强型负载的可编辑拓扑、图4.11线性增强型负载的可编辑拓扑，以及4.6节CMOS反相器的双管连接草图。例4.3的原始SPICE I–V曲线未逐点数字化；公式、模拟结果选段不等同于整页重排。
-
-连续源页编辑选段为 **PDF第26—146页，共121页**；严格整页1:1校验仍为0/445。
-
-## 第4章反相器 VTC 与噪声容限：PDF 第127—136页
-
-新增第4章章首目录、4.1—4.4节前段及原生可编辑的理想/实际反相器 VTC、六级反相器噪声传播、单位增益点噪声容限、电阻负载NMOS及负载线。公式（4.1）—（4.7）按扫描页界放置，例4.1缓冲器VTC只完成文本与概念，尚未达到完整原图几何一致。
-
-连续可编辑源页为 **PDF第26—136页共111页**；严格全页1:1验收仍为 **0/445**，该范围是关键内容选段，而非整页原文。
-
-## 第3章小结与习题：PDF 第117—126页
-
-本轮增加图3.15寄生PNPN闩锁、图3.16 SOI结构，以及可编辑的表3.1 LEVEL1参数与表3.2 BSIM3参数。第123页的12项参考文献和P3.1测试电路，第124页表P3.1的四组漏电流值（1000/280/276/741 μA），以及P3.2—P3.14题目条件均按原扫描选段重排。未把练习答案作为原书正文写入。
-
-连续可编辑源页选段现为 **PDF第26—126页，共101页**，目前第3章源页覆盖至章末。整页完整1:1保真验收仍为0/445。
-
-## 第3章BSIM3与附加效应：PDF 第107—116页
-
-新增式（3.12）—（3.25）的BSIM3阈值、体效应、迁移率、DIBL和源漏寄生模型，例3.4—3.7的SPICE扫描选段，图3.13/3.14的可编辑短沟道趋势与温度示意。源书示例中SPICE图的实测点未逐点数字化，不宣称定量复刻。
-
-连续原生可编辑选段扩展为 **PDF第26—116页，共91页**；全书OCR底稿445页已经存在，严格整页1:1人工验收依旧为0/445。
-
-## 第3章版图规则与SPICE建模：PDF 第97—106页
-
-原扫描逐页核对例3.1的三个连线电阻（约0.2、10、11Ω），GDS-II与λ设计规则图3.6—3.10，SPICE MOS四端实例、例3.2双网表，LEVEL1模型式（3.2）—（3.11），例3.3模型卡，以及BSIM3分箱图3.12。特别保留**PDF第96页的无编号方块电阻公式**与**第102页才开始出现的式（3.2）**的区别。图形为原生编辑候选，实验曲线尚非逐点原始数据。
-
-连续源页选段扩展为 **PDF第26—106页，共81页**，严格整页1:1验收仍为0/445。
-
-## 第3章制造与连线模型：PDF 第87—96页
-
-新增第3章章首目录、3.1绪论、3.2.1—3.2.5节的源页编辑选段。图3.1—3.5已转写为原生Typst工艺流程、CMOS剖面、多金属层与寄生电容几何示意；图3.1中的实物设备照片尚未重排为精确编辑图。源书第95页的(3.1)平行板电容公式已核对；第96页的方块电阻与导线电阻关系**原书未印（3.2）/（3.3）编号**，源码保留无编号。
-
-连续可编辑源页现覆盖 **PDF第26—96页，共71页**，严格逐页1:1验收仍为0/445。本轮对每页的章/节/图号和书内数据进行源扫描对照，尚未达到全文逐字转录、原图逐线或原版页面几何验收。
-
-## 第2章结尾与习题：PDF 第77—86页
-
-按原扫描重建了式（2.40）—（2.47）、图2.20/图2.21的可编辑结构，以及例2.12的0.22、0.16、0.18 fF和例2.13每微米0.25 fF的计算。第81—82页包括工作区与MOS电容的教材汇总表，第83—86页涵盖参考文献、表P2.1和习题P2.1—P2.10。第86页后半本来就是留白，本次不补造正文。
-
-至此**连续的可编辑源页选段为PDF第26—86页，共61页**，第一章末尾与第二章末尾相连。对照源页关键公式和例题不等于整页1:1复刻；严格整页验收仍为0/445。
-
-## 第2章亚阈值与电容：PDF 第71—76页
-
-新增式（2.30b）—（2.39）、α功率拟合例2.9、亚阈值斜率例2.10、栅电容例2.11及图2.15—2.19的原生矢量概念图。关键复核数据包括：$\\alpha\\approx1.25$、$S\\approx72$ mV/decade、$C_G=0.64$ fF。在线阅读范围扩展为 **PDF 第26—76页，共51个连续可编辑选段**。原始测量散点尚未量化，且仍无整页通过严格1:1验收。
-
-## 第2章速度饱和与α功率定律：PDF 第64—70页
-
-新增了高场迁移率、临界场、载流子速度饱和及器件电流的手工推导（式2.21—2.30a），并以原生 Typst 向量示意重建图2.11—2.14。按原书扫描核对例2.6（NMOS约0.6V，PMOS约1.0V）、例2.7（585和256 μA/μm）及例2.8（0.34V、0.60V与2.3电流比）。**所有原始实验散点曲线尚未逐点数字化**，因此这些图仅可用于概念和结构检查。
-
-连续原生源页选段已覆盖 **PDF第26—70页，共45页**；严格整页1:1验收依旧为0/445。
-
-## 第2章电流—电压特性：PDF 第58—63页
-
-本轮按原扫描逐项核对表2.1、例2.4（$V_{T0}=+0.08$ V）、例2.5（$N_I=3.2\\times10^{12}$ ions/cm²），将式（2.13）—（2.20）、图2.8、图2.9及图2.10改为可编辑的Typst数学和原生矢量示意。尤其区分**线性区方程不能越过夹断点外推**、长沟道饱和平方律及沟道长度调制。第63页明确原书所述0.18 μm器件的提前速度饱和（长沟道预测约1.3 V、图2.11观察约0.6 V）。
-
-连续原生编辑选段扩展至 **PDF 第26—63页（38页）**，全书整页严格1:1验收仍为0/445。表格数字和公式已按源图检查，版式和每根图线仍需精校。
-
-## 第2章阈值模型续页：PDF 第53—57页
-
-新增公式2.4—2.12相关的 Typst 数学表达与可编辑的图2.5—2.7示意，特别标明了 p 型费米势的负号、耗尽电荷的负号以及体效应表达式。当前连续原生选段扩展为 **PDF第26—57页，共32页**；所有页的整页1:1验收仍为0/445。
-
-## 第2章前六页：PDF 第47—52页
-
-新增原生 MOS 横截面与 CMOS 阱结构，覆盖第2章章节提要、2.1绪论、2.2 MOS结构、2.3阈值电压开头；器件物理公式采用Typst math，图2.1—2.4均有可编辑简化图元。当前连续选段为 **PDF 第26—52页，共27页**，仍不是任何一页的完整1:1验收。
-
-## 第1章末尾：PDF 第42—46页
-
-新增原生可编辑的图1.22、图1.23、SoC功能分区示意、半加器P1.4真值表、五级反相器链和RC充电图。对应的数字实例包括 **12.5 kΩ × 100 fF = 1.25 ns**、**25 fF 电容在30 ps升高0.6 V需要0.5 mA**；题解属于学习补充，原书并未给出对应答案。第1章连续可编辑选段扩展为 PDF 第26—46页，共21页，原纸版式和全部原图仍未完成1:1验收。
-
-## 上轮精修：PDF 第35—41页
-
-新增七个 Typst 原生选段及独立的 HTML、SVG。图1.14—1.16、1.18—1.21具备原生可编辑拓扑或趋势示意；表1.2的历史 ITRS 预测值9行6列已对照源扫描重建。图1.13与1.17是扫描照片及分布图，不以虚构矢量代替原图。仍未完成逐字、逐元素、逐页的 1:1 排版验收。
-
-## 前轮新增第30—34页
-
-新增图1.8(b)的原生瞬态波形、式(1.2)—(1.5)完整数学表达、图1.10 MOS横截面、图1.11 CMOS反相器和图1.12 NMOS电阻负载反相器。**图1.9已从原扫描追踪出126个候选点位，重绘为可编辑 Typst 点阵；类别、坐标、重叠点仍需人工校验，不作为定量数据使用。** 所有新增页均可在网页切换至可编辑文字 HTML 或固定页尺寸 SVG，仍须进行1:1验收。
-
-## 本轮校对记录
-
-| 原书 PDF 页码 | 已核对的核心项目 | 未完成的部分 |
-| --- | --- | --- |
-| 26 | 门电路、MUX、DFF原生Typst曲线与图元、8行激励表已重排 | 图1.4/1.5几何与页面布局仍需逐元素核验 |
-| 28 | 图1.7四幅电平抽象与VTC曲线、噪声容限公式的原生Typst文字和图形 | 坐标比例、图注位置、逐行分页未完成1:1验收 |
-| 29 | 图1.8(a)输入输出瞬态波形和传播延迟定义的原生Typst表达 | 曲线时刻、图1.8(b)续图及版式未完成1:1验收 |
-| 27 | 理想与实际逻辑门、图1.6的可编辑电路和阶跃传输曲线、五条特性已重排 | 图1.6的几何与页面分页仍需逐元素验收 |
-| 28 | 噪声容限 $NMH=V_{OH}-V_{IH}$、$NML=V_{IL}-V_{OL}$ | 图 1.7 曲线的完整图形 |
-| 29—30 | 10%—90% 转换时间与 50% 传播延迟的区别 | 图 1.8 的全部波形标注、图 1.9 散点 |
-| 31—32 | 功耗式（1.2）—（1.5）、MOS 开关基本结构 | 图 1.10 的精确几何及脚注 |
-| 48—53 | NMOS/PMOS 四端、费米势、氧化层电容 | 图 2.1—2.5 的逐线重绘 |
-| 54—57 | 平带电压、耗尽层、阈值与体效应式（2.6）—（2.12） | 例 2.2 全部中间数值、能带图 |
-
-**两个容易被 OCR 改坏的地方：**教材式（1.5）采用转换频率 $f$，原式没有额外写出活动因子 $\alpha$；MOS 阈值的耗尽电荷需先统一 p 型衬底的负电荷符号，再解释阈值关系，不能沿用乱码识别结果。
-
-## 状态边界
-
-本轮已对上述 **17 个源扫描页**的关键公式和术语进行人工复核，精修内容属于选段与释义；这些页面仍未全部完成逐字、逐图、逐脚注验收。**445 页教材的整页最终验收仍为 0 页。**
-
-此网页与现有 [系统复习](/content/00-reading-guide)、[教材精编](/textbook) 和 [原 PDF 资料库](/pdf) 互不覆盖。以后修改对应 Typst 源码，GitHub Actions 会重新生成 HTML 并更新本页，不需要制作 PDF。
+[打开 445 页原扫描与 Typst 的本地校对工作台](/native-workbench) · [查看逐页验收矩阵](/fidelity)
