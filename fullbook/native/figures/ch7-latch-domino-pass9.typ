@@ -4,38 +4,38 @@
 #let w(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,line(end:(x2 - x1,y2 - y1),stroke:.8pt))
 #let txt(x,y,s)=place(top+left,dx:x,dy:y,text(size:7.5pt)[#s])
 #let ground(x,y)={
-  w(x,y,x,y+5pt)
-  w(x-8pt,y+5pt,x+8pt,y+5pt)
-  w(x-5pt,y+8pt,x+5pt,y+8pt)
+  w(x,y,x,y + 5pt)
+  w(x - 8pt,y + 5pt,x + 8pt,y + 5pt)
+  w(x - 5pt,y + 8pt,x + 5pt,y + 8pt)
 }
 #let cap(x,y,s:"")={
-  w(x,y,x+15pt,y)
-  w(x,y+5pt,x+15pt,y+5pt)
-  if s!="" {txt(x+17pt,y-3pt,s)}
+  w(x,y,x + 15pt,y)
+  w(x,y + 5pt,x + 15pt,y + 5pt)
+  if s!="" {txt(x + 17pt,y - 3pt,s)}
 }
 #let resistance(x,y,s:"R")={
-  w(x,y,x+7pt,y-5pt)
-  w(x+7pt,y-5pt,x+14pt,y+5pt)
-  w(x+14pt,y+5pt,x+21pt,y-5pt)
-  w(x+21pt,y-5pt,x+28pt,y)
-  txt(x+6pt,y-19pt,s)
+  w(x,y,x + 7pt,y - 5pt)
+  w(x + 7pt,y - 5pt,x + 14pt,y + 5pt)
+  w(x + 14pt,y + 5pt,x + 21pt,y - 5pt)
+  w(x + 21pt,y - 5pt,x + 28pt,y)
+  txt(x + 6pt,y - 19pt,s)
 }
 #let inv(x,y,s:"")={
-  w(x,y-12pt,x,y+12pt)
-  w(x,y-12pt,x+26pt,y)
-  w(x,y+12pt,x+26pt,y)
-  place(top+left,dx:x+28pt,dy:y-2pt,circle(radius:2pt,stroke:.7pt,fill:white))
-  if s!="" {txt(x+4pt,y+16pt,s)}
+  w(x,y - 12pt,x,y + 12pt)
+  w(x,y - 12pt,x + 26pt,y)
+  w(x,y + 12pt,x + 26pt,y)
+  place(top+left,dx:x + 28pt,dy:y - 2pt,circle(radius:2pt,stroke:.7pt,fill:white))
+  if s!="" {txt(x + 4pt,y + 16pt,s)}
 }
 #let tg(x,y,label:"TG")={
-  place(top+left,dx:x,dy:y-15pt,rect(width:36pt,height:30pt,radius:3pt,stroke:.8pt))
-  txt(x+7pt,y-8pt,label)
-  w(x+17pt,y-15pt,x+17pt,y-28pt)
-  w(x+17pt,y+15pt,x+17pt,y+27pt)
+  place(top+left,dx:x,dy:y - 15pt,rect(width:36pt,height:30pt,radius:3pt,stroke:.8pt))
+  txt(x + 7pt,y - 8pt,label)
+  w(x + 17pt,y - 15pt,x + 17pt,y - 28pt)
+  w(x + 17pt,y + 15pt,x + 17pt,y + 27pt)
 }
 #let nand(x,y)={
-  place(top+left,dx:x,dy:y-14pt,rect(width:42pt,height:28pt,radius:8pt,stroke:.8pt))
-  txt(x+6pt,y-6pt,"NAND")
+  place(top+left,dx:x,dy:y - 14pt,rect(width:42pt,height:28pt,radius:8pt,stroke:.8pt))
+  txt(x + 6pt,y - 6pt,"NAND")
 }
 #let fig718()=block(width:100%)[
   #html.frame(block(width:350pt,height:94pt)[
@@ -57,7 +57,7 @@
     #w(167pt,46pt,294pt,46pt)
     #for x in (104pt,133pt,208pt,270pt) [
       #w(x,46pt,x,64pt)
-      #cap(x-7pt,64pt)
+      #cap(x - 7pt,64pt)
       #ground(x,80pt)
     ]
     #txt(83pt,89pt,"C_inv")
@@ -74,7 +74,7 @@
     #w(169pt,30pt,285pt,30pt)
     #for (x,lbl) in ((126pt,"C_1"),(264pt,"C_2")) [
       #w(x,30pt,x,45pt)
-      #cap(x-7pt,45pt,s:lbl)
+      #cap(x - 7pt,45pt,s:lbl)
       #ground(x,60pt)
     ]
   ])
@@ -94,7 +94,7 @@
   ]
   #for (x,lbl) in ((89pt,"C_1"),(169pt,"C_2"),(303pt,"C_3")) [
     #w(x,52pt,x,72pt)
-    #cap(x-7pt,72pt,s:lbl)
+    #cap(x - 7pt,72pt,s:lbl)
     #ground(x,89pt)
   ]
   #txt(273pt,33pt,"OUT")
