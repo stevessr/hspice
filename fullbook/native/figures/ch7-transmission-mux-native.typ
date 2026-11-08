@@ -146,6 +146,37 @@
     #wire(131pt,56pt,176pt,56pt)
     #place(top+left,dx:13pt,dy:124pt,text(size:7.5pt)[（b）与功能 $F=A B$]))
   ]])
+#let fig-example73(reduced:false)=html.frame(block(width:370pt,height:164pt)[
+  #place(top+left,dx:5pt,dy:2pt,text(size:8pt)[#if reduced [合并支路后的优化电路] else [真值表直接对应电路]]))
+  #if reduced [
+    #pass-symbol(62pt,30pt,size:25pt)
+    #pass-symbol(62pt,93pt,size:25pt)
+    #place(top+left,dx:24pt,dy:37pt,text(size:7pt)[$C$]))
+    #place(top+left,dx:11pt,dy:103pt,text(size:7pt)[$overline(C)$]))
+    #wire(87pt,43pt,167pt,43pt)
+    #wire(87pt,106pt,167pt,106pt)
+  ] else [
+    #for i in (0,1,2,3) [
+      #let yy=18pt+i*34pt
+      #pass-symbol(62pt,yy,size:24pt)
+      #wire(29pt,yy+12pt,48pt,yy+12pt)
+      #wire(86pt,yy+12pt,167pt,yy+12pt)
+    ]
+    #place(top+left,dx:10pt,dy:24pt,text(size:7pt)[$V_("DD")$]))
+    #place(top+left,dx:10pt,dy:57pt,text(size:7pt)[$C$]))
+    #place(top+left,dx:10pt,dy:91pt,text(size:7pt)[$overline(C)$]))
+  ]
+  #pass-symbol(207pt,34pt,size:29pt)
+  #pass-symbol(207pt,95pt,size:29pt)
+  #wire(167pt,43pt,193pt,48pt)
+  #wire(167pt,107pt,193pt,110pt)
+  #wire(236pt,48pt,289pt,48pt)
+  #wire(236pt,110pt,289pt,110pt)
+  #wire(289pt,48pt,289pt,110pt)
+  #wire(289pt,80pt,327pt,80pt)
+  #place(top+left,dx:334pt,dy:72pt,text(size:8pt)[$F$]))
+  #place(top+left,dx:215pt,dy:12pt,text(size:7pt)[$A$]))
+])
 #let fig714()=grid(columns:(1fr,1fr),column-gutter:8pt,
   [#block(height:157pt)[
     #pass-symbol(54pt,38pt)
