@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Non-acceptance checks for scan-backed Chapter 1 PDF20–39."""
+"""Non-acceptance checks for scan-backed Chapter 1 PDF20–40."""
 from pathlib import Path
 import re
 root=Path(__file__).resolve().parents[1]
@@ -44,9 +44,9 @@ assert all(term in p25 for term in (
 assert p25.index("F = A C") < p25.index("F = (A+B)") < p25.index("F = A xor B")
 
 
-# Pages PDF026–039: retain source page mapping and semantic details.
+# Pages PDF026–040: retain source page mapping and semantic details.
 chapter1_sources = {}
-for page in range(26, 40):
+for page in range(26, 41):
     stem = f"{page-23:02d}-page-{page:03d}"
     src = w / f"{stem}.typ"
     layout = w / f"{stem}-layout.typ"
@@ -83,6 +83,8 @@ landmarks = {
   39: ("SPICE", "非线性直流", "1%", "±20%", "±50%",
        "100 ps", "100 ns", "i(t) = v(t) / R",
        "i(t) = C (dif v(t)) / (dif t)", "1.6"),
+  40: ("ITRS", "表 1.2", "0.7", "OPC", "PSM", "10 Å", "高 $k$",
+       "1 B", "4 B", "I_(\"off\")", "I_(\"on\")", "http://public.itrs.net"),
 
 }
 for page, required in landmarks.items():
@@ -99,6 +101,15 @@ assert "电路模" in chapter1_sources[38] and "拟器。" in chapter1_sources[3
 # A synthetic teaching summary table must not masquerade as textbook content.
 assert "#table(" not in chapter1_sources[39]
 assert chapter1_sources[39].index("i(t) = v(t) / R") < chapter1_sources[39].index("i(t) = C")
+# 39->40 continues the original printed sentence across page boundary.
+assert "在未来的几年" in chapter1_sources[39]
+assert "中，工艺技术、设计技术" in chapter1_sources[40]
+# Scan table 1.2 contains precisely nine milestone years and six native columns.
+p40 = chapter1_sources[40]
+for year in (1995, 1997, 1999, 2001, 2004, 2007, 2010, 2013, 2016):
+    assert f"[{year}]" in p40, year
+assert p40.count("table.header(") == 1
+
 
 # Figure 1.5's printed eight-state excitation table must remain fully editable.
 p26 = chapter1_sources[26]
@@ -110,4 +121,4 @@ for page in range(26, 35):
     assert state[page-1].get("human_verified") is not True, page
     assert state[page-1].get("layout_verified") is not True, page
 
-print("PDF20–39 scan-backed native Typst landmarks and cross-page continuity OK; no 1:1 acceptance claimed.")
+print("PDF20–40 scan-backed native Typst landmarks and cross-page continuity OK; no 1:1 acceptance claimed.")
