@@ -37,6 +37,8 @@ for n in (*TOC_PAGES, 1, 2):
         continue
 
     assert "#table(" in s and "原书印刷页码" in s, n
+    assert "stroke:none" in s and "table.header(" not in s, (n, "source TOC has no grid or artificial header")
+    assert ("目　录" in s) == (n == 14), (n, "repeated TOC heading is absent in continuation scans")
     # Extract triple cells without invoking a Typst interpreter.
     rows = []
     for line in s.splitlines():
