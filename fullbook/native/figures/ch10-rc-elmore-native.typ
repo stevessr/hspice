@@ -22,7 +22,7 @@
   #for i in range(5) [
     #let x=45pt+i*63pt
     #let y=110pt-i*17pt
-    #w(x,y,x+57pt,y-13pt)
+    #w(x,y,x+57pt,y - 13pt)
   ]
   #t(145pt,23pt,"一阶/分布RC瞬态近似")
 ])
@@ -120,7 +120,7 @@
   #for k in range(2) [
     #let x=173pt+k*109pt
     #w(x,121pt,x,140pt)
-    #cap(x-8pt,140pt)
+    #cap(x - 8pt,140pt)
   ]
 ])
 #let figure10more(n)={
