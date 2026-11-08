@@ -31,4 +31,13 @@ for n,tokens in marks.items():
 assert math.isclose((a["milestones"]["reference_values"]["vdd_v"]*.1/a["milestones"]["reference_values"]["idd_a"])*1000,1.2)
 fig=(root/"figures/ch10-summary-ch11-power-native.typ").read_text(encoding="utf-8")
 assert all("#let "+s+"()" in fig for s in ("fig1028","figp104","figp105","figp106","figp108","fig111","fig112"))
+# P10.2 and P10.3 source parameters were not interchangeable.
+p381=(root/"web"/"358-page-381.typ").read_text(encoding="utf-8")
+p382=(root/"web"/"359-page-382.typ").read_text(encoding="utf-8")
+p383=(root/"web"/"360-page-383.typ").read_text(encoding="utf-8")
+assert 'W_("min")' in p381 and 'T=0.8 "µm"' in p381
+assert "校对注" in p382
+assert "20 mm" in p383 and "14 mm" in p383
+assert "4 lambda" in p383 and "40 lambda" in p383
+
 print("Pass21: source-based Chapter10 conclusion & Chapter11 PDF381–388 anchors passed; strict 0/445.")

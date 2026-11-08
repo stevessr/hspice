@@ -20,6 +20,8 @@
 
 #align(center)[$t_"roundtrip" = 2 T_0 = 2 l sqrt(L_"int" C_"int") quad (10.24)$]
 
+其中 $T_0=l sqrt(L_("int") C_("int"))$ 是单程飞行时间（time of flight），$2T_0$ 是线路往返传播时间。原书图 10.24 将单调波形的 10%–90% 上升时间与欠阻尼波形的过冲、欠冲和稳定时间 $t_s$ 放在同一张图中比较。
+
 如果输入信号上升时间足够短，传输线的行波和反射就不可忽略。教材给出的条件：
 
 #align(center)[$t_r < 2 l sqrt(L_"int" C_"int") quad (10.25)$]

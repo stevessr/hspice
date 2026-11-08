@@ -36,4 +36,8 @@ assert a["source_text_discrepancy"]["printed"]=="0.0070 fF/μm"
 assert a["source_text_discrepancy"]["downstream_pdf370_uses"]=="0.070 fF/μm"
 f=(root/"figures/ch10-coupling-native.typ").read_text(encoding="utf-8")
 assert all(f"#let fig10{i}()" in f for i in range(11,20))
+# Additional source-checked line-delay segment is not an OCR summary.
+p365 = (root/"web"/"342-page-365.typ").read_text(encoding="utf-8")
+assert 't_"segment"' in p365 and 'C_"int" L/(2N)' in p365
+
 print("Pass19 PDF365–372 source/figure/equation/numeric checks passed. Strict full-page accepted remains 0/445.")
