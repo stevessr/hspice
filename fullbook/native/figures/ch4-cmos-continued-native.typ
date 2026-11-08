@@ -33,24 +33,68 @@
  #place(top + left,dx:217pt,dy:120pt,text(size:7pt)[IV]))
  #place(top + left,dx:300pt,dy:120pt,text(size:7pt)[V]))
 ])
-#let cmos-layout() = html.frame(block(width:350pt,height:234pt)[
- #place(top + left,dx:8pt,dy:6pt,text(size:8pt)[图4.13 CMOS反相器平面版图：层与连接的可编辑示意])
- #place(top + left,dx:26pt,dy:34pt,rect(width:296pt,height:168pt,stroke:.9pt,fill:rgb("f6f6f6")))
- #place(top + left,dx:31pt,dy:41pt,rect(width:130pt,height:154pt,stroke:.7pt,fill:rgb("dddddd")))
- #place(top + left,dx:187pt,dy:41pt,rect(width:128pt,height:154pt,stroke:.7pt,fill:rgb("e8e8e8")))
- #place(top + left,dx:65pt,dy:69pt,rect(width:70pt,height:102pt,stroke:.8pt,fill:rgb("bdbdbd")))
- #place(top + left,dx:213pt,dy:69pt,rect(width:70pt,height:102pt,stroke:.8pt,fill:rgb("c6c6c6")))
- #place(top + left,dx:156pt,dy:54pt,rect(width:35pt,height:144pt,stroke:.7pt,fill:rgb("b5b5b5")))
- #place(top + left,dx:86pt,dy:106pt,rect(width:174pt,height:32pt,stroke:.7pt,fill:rgb("969696")))
- #for x in (77pt,116pt,227pt,265pt) [
-  #place(top + left,dx:x,dy:111pt,rect(width:18pt,height:18pt,stroke:.6pt,fill:rgb("343434")))
- ]
- #place(top + left,dx:39pt,dy:46pt,text(size:8pt)[p阱]))
- #place(top + left,dx:260pt,dy:46pt,text(size:8pt)[n阱]))
- #place(top + left,dx:148pt,dy:25pt,text(size:8pt)[GND]))
- #place(top + left,dx:296pt,dy:25pt,text(size:8pt)[$V_("DD")$]))
- #place(top + left,dx:155pt,dy:206pt,text(size:8pt)[输入：多晶硅]))
- #place(top + left,dx:99pt,dy:215pt,text(size:8pt)[输出：金属层1]))
+#let cmos-layout() = html.frame(block(width:360pt,height:254pt)[
+ // Editable geometry follows source Fig.4.13: side rails, p/n wells,
+ // two central drain contacts, T-shaped metal output and U-shaped poly input.
+ #place(top + left,dx:143pt,dy:4pt,text(size:8.5pt,weight:"bold")[平面视图])
+ #place(top + left,dx:17pt,dy:34pt,rect(width:326pt,height:172pt,
+   stroke:.7pt,fill:rgb("#fafafa")))
+ // p well (left) and n well (right), split at middle.
+ #place(top + left,dx:28pt,dy:42pt,rect(width:148pt,height:156pt,
+   fill:rgb("#e1e1e1"),stroke:.5pt))
+ #place(top + left,dx:182pt,dy:42pt,rect(width:147pt,height:156pt,
+   fill:rgb("#ebebeb"),stroke:.5pt))
+ // Bottom diffusion islands, darker than the wells.
+ #place(top + left,dx:69pt,dy:100pt,rect(width:94pt,height:73pt,
+   fill:rgb("#bdbdbd"),stroke:.6pt))
+ #place(top + left,dx:195pt,dy:100pt,rect(width:93pt,height:73pt,
+   fill:rgb("#c3c3c3"),stroke:.6pt))
+ // Ground rail and supply rail, each with a well tie and source contact.
+ #place(top + left,dx:31pt,dy:40pt,rect(width:30pt,height:160pt,
+   fill:rgb("#a5a5a5"),stroke:.7pt))
+ #place(top + left,dx:296pt,dy:40pt,rect(width:30pt,height:160pt,
+   fill:rgb("#a5a5a5"),stroke:.7pt))
+ #place(top + left,dx:36pt,dy:104pt,rect(width:20pt,height:20pt,
+   fill:rgb("#262626"),stroke:.5pt))
+ #place(top + left,dx:36pt,dy:150pt,rect(width:20pt,height:20pt,
+   fill:rgb("#262626"),stroke:.5pt))
+ #place(top + left,dx:301pt,dy:104pt,rect(width:20pt,height:20pt,
+   fill:rgb("#262626"),stroke:.5pt))
+ #place(top + left,dx:301pt,dy:150pt,rect(width:20pt,height:20pt,
+   fill:rgb("#262626"),stroke:.5pt))
+ // Source's polysilicon U: shared input at bottom, crosses both diffusions.
+ #place(top + left,dx:75pt,dy:107pt,rect(width:16pt,height:74pt,
+   fill:rgb("#999999"),stroke:.65pt))
+ #place(top + left,dx:265pt,dy:107pt,rect(width:16pt,height:74pt,
+   fill:rgb("#999999"),stroke:.65pt))
+ #place(top + left,dx:75pt,dy:170pt,rect(width:206pt,height:15pt,
+   fill:rgb("#999999"),stroke:.65pt))
+ // Central T-metal trunk and branch; source figure has two drain contacts.
+ #place(top + left,dx:164pt,dy:40pt,rect(width:29pt,height:113pt,
+   fill:rgb("#777777"),stroke:.8pt))
+ #place(top + left,dx:132pt,dy:141pt,rect(width:93pt,height:20pt,
+   fill:rgb("#777777"),stroke:.8pt))
+ #place(top + left,dx:123pt,dy:127pt,rect(width:22pt,height:45pt,
+   fill:rgb("#777777"),stroke:.7pt))
+ #place(top + left,dx:212pt,dy:127pt,rect(width:22pt,height:45pt,
+   fill:rgb("#777777"),stroke:.7pt))
+ #place(top + left,dx:125pt,dy:140pt,rect(width:18pt,height:18pt,
+   fill:rgb("#212121"),stroke:.6pt))
+ #place(top + left,dx:214pt,dy:140pt,rect(width:18pt,height:18pt,
+   fill:rgb("#212121"),stroke:.6pt))
+ // Printed labels with left/right well assignment and contact annotations.
+ #place(top + left,dx:24pt,dy:18pt,text(size:8pt)[Gnd]))
+ #place(top + left,dx:296pt,dy:18pt,text(size:8pt)[$V_("DD")$]))
+ #place(top + left,dx:145pt,dy:24pt,text(size:8pt)[输出]))
+ #place(top + left,dx:108pt,dy:80pt,text(size:8pt)[$p$ 阱]))
+ #place(top + left,dx:238pt,dy:80pt,text(size:8pt)[$n$ 阱]))
+ #place(top + left,dx:156pt,dy:210pt,text(size:8pt)[输入]))
+ #place(top + left,dx:45pt,dy:211pt,text(size:7pt)[扩散]))
+ #place(top + left,dx:70pt,dy:229pt,text(size:7pt)[多晶硅]))
+ #place(top + left,dx:174pt,dy:229pt,text(size:7pt)[金属层1]))
+ #place(top + left,dx:274pt,dy:229pt,text(size:7pt)[接触点]))
+ #place(top + left,dx:4pt,dy:91pt,text(size:7pt)[阱塞]))
+ #place(top + left,dx:325pt,dy:91pt,text(size:7pt)[阱塞]))
 ])
 #let pseudo-nmos() = html.frame(block(width:348pt,height:174pt)[
  #place(top + left,dx:12pt,dy:5pt,text(size:8pt)[图4.14(b) 伪NMOS反相器])
