@@ -22,8 +22,8 @@
 
 #align(center)[$C_1=3C_("eff")W+C_g W+2C_("eff")W quad R_("inv")=R$]
 #align(center)[$C_2=C_g W times 2+2C_("eff")W times 3 quad R_("TG")=R$]
-#align(center)[$C_3=2C_("eff")W times 2+C_g W+3fC_g W$]
-#align(center)[$t_1=R(29C_("eff")+8C_g+9fC_g)W$]
+#align(center)[$C_3=2C_("eff")W times 2+C_g W+3f C_g W$]
+#align(center)[$t_1=R(29C_("eff")+8C_g+9f C_g)W$]
 
 *其二：MUX2*
 
@@ -32,7 +32,7 @@
 #align(center)[$t_2=R_("inv") C_4+(R_("inv")+R_("TG"))C_5$]
 
 #align(center)[$C_4=3C_("eff")W+2C_("eff")W+C_g W quad R_("inv")=R$]
-#align(center)[$C_5=2C_("eff")W times 4+C_g W+3fC_g W quad R_("TG")=R$]
-#align(center)[$t_2=R(21C_("eff")+3C_g+6fC_g)W$]
+#align(center)[$C_5=2C_("eff")W times 4+C_g W+3f C_g W quad R_("TG")=R$]
+#align(center)[$t_2=R(21C_("eff")+3C_g+6f C_g)W$]
 
 比较这两种情况，MUX1比MUX2慢。如果我们使用的传输门太多而没有缓冲，延迟会很快增大。另外，我们最终要驱动一个大的负载，而传输门也没有所需的驱动能力。但是，MUX2比MUX1需要更多的布线资源。

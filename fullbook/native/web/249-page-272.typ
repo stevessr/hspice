@@ -10,13 +10,13 @@
 
 对于第一种设计，
 
-#align(center)[$"LE"_A=(4W(2R))/(3WR)=8/3$]
-#align(center)[$"LE"_("sel")=(W(2R))/(3WR)=2/3$]
+#align(center)[$"LE"_A=(4W(2R))/(3W R)=8/3$]
+#align(center)[$"LE"_("sel")=(W(2R))/(3W R)=2/3$]
 
 对于第二种设计，
 
-#align(center)[$"LE"_A=(4W(5R/4))/(3WR)=5/3$]
-#align(center)[$"LE"_("sel")=(4W(5R/4))/(3WR)=5/3$]
+#align(center)[$"LE"_A=(4W(5R/4))/(3W R)=5/3$]
+#align(center)[$"LE"_("sel")=(4W(5R/4))/(3W R)=5/3$]
 
 == 7.4　动态D锁存器和D触发器
 
