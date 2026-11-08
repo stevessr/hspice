@@ -347,14 +347,14 @@ SECTIONS = [
     ("307-page-330", "原书PDF330：图9.8/9.9 3-LUT配置", [330]),
     ("308-page-331", "原书PDF331：例9.2与图9.10连接区", [331]),
     ("309-page-332", "原书PDF332：图9.11 FPGA输入输出", [332]),
-    ("310-page-333", "原书PDF333：书末机器OCR未校对", [333]),
-    ("311-page-334", "原书PDF334：书末机器OCR未校对", [334]),
-    ("312-page-335", "原书PDF335：书末机器OCR未校对", [335]),
-    ("313-page-336", "原书PDF336：书末机器OCR未校对", [336]),
-    ("314-page-337", "原书PDF337：书末机器OCR未校对", [337]),
-    ("315-page-338", "原书PDF338：书末机器OCR未校对", [338]),
-    ("316-page-339", "原书PDF339：书末机器OCR未校对", [339]),
-    ("317-page-340", "原书PDF340：书末机器OCR未校对", [340]),
+    ("310-page-333", "原书PDF333：9.4 DRAM和图9.12", [333]),
+    ("311-page-334", "原书PDF334：图9.13 三管DRAM与9.4.2", [334]),
+    ("312-page-335", "原书PDF335：图9.14/15 1T DRAM与电容", [335]),
+    ("313-page-336", "原书PDF336：图9.16 折半位线及例9.3", [336]),
+    ("314-page-337", "原书PDF337：例9.3 0.55/0.45VDD及图9.17", [337]),
+    ("315-page-338", "原书PDF338：图9.18 64Kb DRAM组织", [338]),
+    ("316-page-339", "原书PDF339：9.5 ROM阵列和图9.19", [339]),
+    ("317-page-340", "原书PDF340：图9.19/20 NOR与NAND ROM", [340]),
     ("318-page-341", "原书PDF341：书末机器OCR未校对", [341]),
     ("319-page-342", "原书PDF342：书末机器OCR未校对", [342]),
     ("320-page-343", "原书PDF343：书末机器OCR未校对", [343]),
@@ -514,7 +514,7 @@ def main():
         shutil.copy2(src,args.output/f"{stem}.typ")
         index.append(dict(id=stem,title=title,source_pdf_pages=pages,
                           html=stem+".html",typst=stem+".typ",
-                          status=("machine OCR only; text, math, diagrams and layout unverified" if pages[0]<20 or pages[0]>=333 else "native editorial selection; full pages not accepted")))
+                          status=("machine OCR only; text, math, diagrams and layout unverified" if pages[0]<20 or pages[0]>=341 else "native editorial selection; full pages not accepted")))
         print(f"HTML OK {stem}: {len(html)} bytes",flush=True)
     (args.output/"index.json").write_text(
         json.dumps(dict(format="native-typst-html",accepted_full_pages=0,

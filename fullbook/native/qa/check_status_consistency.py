@@ -31,6 +31,6 @@ for n in range(1, 446):
     stem = (f"{n:03d}-page-{n:03d}" if n <= 19 else (f"{n-19:02d}-page-{n:03d}" if n <= 25 else f"{n-23:02d}-page-{n:03d}"))
     assert (root / "web" / f"{stem}.typ").is_file(), n
     assert (root / "web" / f"{stem}-layout.typ").is_file(), n
-    assert source["pages"][n-1]["status"] == ("draft-transcribed" if n <= 19 or n >= 333 else "partially-transcribed"), n
+    assert source["pages"][n-1]["status"] == ("draft-transcribed" if n <= 19 or n >= 341 else "partially-transcribed"), n
 assert fidelity["full_pages_accepted"] == 0, "Full-page acceptance must be evidence-backed"
 print("Source progress and fidelity dashboard agree: scanned PDF pages 1–445 have editable native drafts; strict 0/445 accepted.")

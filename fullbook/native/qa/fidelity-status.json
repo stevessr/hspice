@@ -7338,7 +7338,7 @@
     },
     {
       "pdf_page": 333,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7351,16 +7351,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
       ],
-      "notes": "PDF333: unverified machine-OCR Typst source",
+      "notes": "PDF333: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 334,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7373,16 +7372,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
       ],
-      "notes": "PDF334: unverified machine-OCR Typst source",
+      "notes": "PDF334: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 335,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7395,16 +7393,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
       ],
-      "notes": "PDF335: unverified machine-OCR Typst source",
+      "notes": "PDF335: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 336,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7417,16 +7414,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
       ],
-      "notes": "PDF336: unverified machine-OCR Typst source",
+      "notes": "PDF336: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 337,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7439,16 +7435,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
       ],
-      "notes": "PDF337: unverified machine-OCR Typst source",
+      "notes": "PDF337: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 338,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7461,16 +7456,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
       ],
-      "notes": "PDF338: unverified machine-OCR Typst source",
+      "notes": "PDF338: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 339,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7483,16 +7477,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
       ],
-      "notes": "PDF339: unverified machine-OCR Typst source",
+      "notes": "PDF339: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 340,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7505,11 +7498,10 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源书图9.12—9.20逐端MOS连接、器件符号与版面尚未1:1验证",
+        "原始文字、图注、公式的逐字符校对以及页眉、留白和断行仍待核验"
       ],
-      "notes": "PDF340: unverified machine-OCR Typst source",
+      "notes": "PDF340: source-guided native DRAM/ROM selection; full-page fidelity pending",
       "page_source_verified": false
     },
     {
