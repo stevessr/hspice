@@ -60,4 +60,16 @@ for n,anchors in {
 print("PDF357–359 complete source landmarks, Elmore integral and branch-node equations checked.")
 print("PDF 358 source arithmetic mismatch retained and audited; PDF 363 FO4 data matched.")
 
-print("Pass18 RC/Elmore PDF357–364 math, figure and status landmarks passed; strict 0/445.")
+# Extend source-anchored numerical and formula-preservation checks to PDF360–364.
+for n,anchors in {
+  360: ("n(n+1)", "0.38", "10.7", "π 模型", "T 模型", "L 模型", "10.8"),
+  361: ("0.8", "0.4", "0.2", "9.6", "1.2", "4", "14.8", "92.5", "5.4", "3.2", "11.6"),
+  362: ("92.6", "100X", "20 mm", "0.027", "1080", "125", "60", "2", "1.3"),
+  363: ("150", "40", "25", "116", "460", "1035", "2.5", 'L_("crit")', "0.38"),
+  364: ("10.10", 'R_("int")', 'C_("int")', 'R_("eqn")', 'C_("out")', 'C_("in")', "beta", "M"),
+}.items():
+    source=(r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+    compact="".join(source.split())
+    assert all("".join(x.split()) in compact for x in anchors), (n, [x for x in anchors if "".join(x.split()) not in compact])
+print("Pass18 chapter10 PDF357–364 source-scan formula/units and diagram landmarks passed; strict 0/445.")
+
