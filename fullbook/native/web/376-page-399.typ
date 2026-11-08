@@ -1,24 +1,23 @@
-// SOURCE PDF PAGE 399; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第399页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("380       数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 399 printed 380, visually checked; native edit selection only, NOT 1:1.
+#import "../figures/ch11-clock-timing-native.typ": fig1116,fig1117,fig1118,fig1119,fig1120,fig1121,fig1122,fig1123,fig1124,fig1125,fig1126,fig1127,fig1128
+#set document(title:"第11章·时钟、偏斜、抖动、功耗·PDF399")
+#set text(size:7.15pt)
+#show par: set par(leading:2.2pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[380　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("周期间抖动通常比绝对抖动小，因为总是相对于上个时钟边沿进行测量，假如我们测基上王\n个周期的抖动，将得到一个柱状图其分布形式如图 11.18 所示- 这里，时钟边沿的规格化概率\n相对于到达时间绘出，期望的到达时间是在x轴上标注   的那点- 某些边沿将早于这个时间到\n达，而其他将晚于这个时间到达:，x 轴按分布的标准偏差项，即 进行标注，拌动测量通常以峰-\n峰值 (4c ) 或RMS 值 ( 1c ) 提供，如图中所示 “时钟设计的目标是减小拌动,特别是在时钟发\n生器电路里更是这样")
+如果把长期时钟沿误差看成随机变量，可用概率分布描述抖动。原书图11.18展示了钟沿出现时刻的钟形概率分布。
 
-#text("Cor)\n|一二一 paver")
+#fig1118()
+#align(center)[*图11.18　抖动测量的概率分布示意（非原图数据点）*]
 
-#text("aa\n疼 11.18 拉动测量")
+原书说明抖动常用标准差/均方根（RMS, $sigma$）或峰峰值衡量。峰峰值依赖样本量与统计条件，不能在缺少测量窗口时直接从RMS固定换算。
 
-#text("11.3.2 时钟偏余")
+== 11.3.2　时钟偏斜
 
-#text("时钟设计的大量工作集中在减小时钟偏任上，一个时钟偏斜问题的例子如图 11.19 所示， 时\n钟驮动器位于芯片的一角，而目标触发器分散在芯片各处。 时钟到达每个触发器的时间将略微不\n同，彼此相比较会看到一些触发器会较早接收到时钟信号，而其他的将较晚接收到。延迟的不同\n是由于如下差别造成的: 从时钟到触发器的全局连线长度，不同路径上的门延迟，以及偏斜信号\n驱动的讯出等如果分析每个角落的触发器，会发现两个近端的触发器相互比较有一个相对小的\n偏斜( 较早的时钟 ) 而处于与时钟对角的那个触发器将有一个大的偏斜 ( 较晚的时钟 )")
+时钟偏斜可能是芯片中不同触发器时钟线传输距离不同、负载不同、布线长度差异或缓冲器延迟差异导致的。
 
-#text("Asi        has")
+#fig1119()
+#align(center)[*图11.19　时钟偏斜举例（原生时钟源/触发器连线示意）*]
 
-#text("FF   FF")
-
-#text("Fea               7\n图 11.19 ee")
-
-#text("起初看起来偏斜只是个小麻烦，而不是什么严重问题。事实上，偏斜能对整个系统的性能和")
+当捕获寄存器接收到的时钟相对发射寄存器有额外延迟时，对建立时间与保持时间会产生不同影响。最坏情况必须同时检查最长和最短数据传播路径，而不能只对平均时钟延迟做估计。

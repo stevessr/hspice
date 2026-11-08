@@ -8751,11 +8751,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原书图形/波形线形未逐点拟合",
+        "章节正文、脚注及图注尚未逐字独立校订",
+        "原始扫描与源页SVG未通过重叠检查"
       ],
-      "notes": "PDF397: unverified machine-OCR Typst source",
+      "notes": "PDF397: source-scan guided Chapter11 clock illustrations/equations editorial Typst draft, not accepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -8773,11 +8773,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原书图形/波形线形未逐点拟合",
+        "章节正文、脚注及图注尚未逐字独立校订",
+        "原始扫描与源页SVG未通过重叠检查"
       ],
-      "notes": "PDF398: unverified machine-OCR Typst source",
+      "notes": "PDF398: source-scan guided Chapter11 clock illustrations/equations editorial Typst draft, not accepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -8795,11 +8795,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原书图形/波形线形未逐点拟合",
+        "章节正文、脚注及图注尚未逐字独立校订",
+        "原始扫描与源页SVG未通过重叠检查"
       ],
-      "notes": "PDF399: unverified machine-OCR Typst source",
+      "notes": "PDF399: source-scan guided Chapter11 clock illustrations/equations editorial Typst draft, not accepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -8817,11 +8817,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原书图形/波形线形未逐点拟合",
+        "章节正文、脚注及图注尚未逐字独立校订",
+        "原始扫描与源页SVG未通过重叠检查"
       ],
-      "notes": "PDF400: unverified machine-OCR Typst source",
+      "notes": "PDF400: source-scan guided Chapter11 clock illustrations/equations editorial Typst draft, not accepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -8839,11 +8839,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原书图形/波形线形未逐点拟合",
+        "章节正文、脚注及图注尚未逐字独立校订",
+        "原始扫描与源页SVG未通过重叠检查"
       ],
-      "notes": "PDF401: unverified machine-OCR Typst source",
+      "notes": "PDF401: source-scan guided Chapter11 clock illustrations/equations editorial Typst draft, not accepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -8861,11 +8861,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原书图形/波形线形未逐点拟合",
+        "章节正文、脚注及图注尚未逐字独立校订",
+        "原始扫描与源页SVG未通过重叠检查"
       ],
-      "notes": "PDF402: unverified machine-OCR Typst source",
+      "notes": "PDF402: source-scan guided Chapter11 clock illustrations/equations editorial Typst draft, not accepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -8883,11 +8883,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原书图形/波形线形未逐点拟合",
+        "章节正文、脚注及图注尚未逐字独立校订",
+        "原始扫描与源页SVG未通过重叠检查"
       ],
-      "notes": "PDF403: unverified machine-OCR Typst source",
+      "notes": "PDF403: source-scan guided Chapter11 clock illustrations/equations editorial Typst draft, not accepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -8905,11 +8905,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原书图形/波形线形未逐点拟合",
+        "章节正文、脚注及图注尚未逐字独立校订",
+        "原始扫描与源页SVG未通过重叠检查"
       ],
-      "notes": "PDF404: unverified machine-OCR Typst source",
+      "notes": "PDF404: source-scan guided Chapter11 clock illustrations/equations editorial Typst draft, not accepted 1:1.",
       "page_source_verified": false
     },
     {

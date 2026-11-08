@@ -1,22 +1,26 @@
-// SOURCE PDF PAGE 404; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第404页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第 11 章 电源网格和时钟设计               385")
+// SOURCE PDF PAGE 404 printed 385, visually checked; native edit selection only, NOT 1:1.
+#import "../figures/ch11-clock-timing-native.typ": fig1116,fig1117,fig1118,fig1119,fig1120,fig1121,fig1122,fig1123,fig1124,fig1125,fig1126,fig1127,fig1128
+#set document(title:"第11章·时钟、偏斜、抖动、功耗·PDF404")
+#set text(size:7.15pt)
+#show par: set par(leading:2.2pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[385　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("图 11.26 “有传输门延迟的时钟发生器\n另一种简单的方法是用一个 SR 锁存器来产生两相时钟信号 ( 参见图 11.27 ) 这个电路有两")
+#fig1126()
+#align(center)[*图11.26　有传输门延迟的时钟发生器（可编辑逻辑拓扑示意）*]
 
-#text("个缺点，应该进行检查和正确设计。 首先，输入的 CLK 信号在产生多时要经过一个额外的反相\n器进行传输，第二个问题是与第一个问题相关的- 其中的或非门不应该设计成尺寸相同的，而应\n当使输出信号有相同的响应，设计时还应该考虑取决于版图拓扑结构的连线总电容")
+另一种时钟发生方法是用交叉耦合的SR锁存器控制两个互补相位。原书图11.27指出，相关结构在开关特性与信号负载上也存在尺寸与对称性的要求。
 
-#text("i")
+#fig1127()
+#align(center)[*图11.27　基于锁存器的时钟发生器（可编辑示意）*]
 
-#text("图 11.27 基于镇存器的时钟发生器")
+== 11.3.6　高性能设计中的时钟分布
 
-#text("11.3.6 ”高性能设计中的时钟分布")
+一旦产生时钟，就需要把它分发到芯片各个区域。理想的分布网络应让不同位置的逻辑获得尽量相近的等待时间，同时降低偏斜、噪声和功耗。
 
-#text("旦生成了时钟信号，需要将其分发到芯片各处- 由于偏斜、品声和功耗等问题，这成为一\n项复杂的任务，由于时钟信号需要在芯片上的所有区域基本一致,所以希望所有分布的时钟信号有\n一个一致的延迟，理想的分布网络是 H 树和 X 树结构，如图 11.28 所示。 在 H 树结构里，从中心\n到所有分支点的距离相同,因此信号延迟期望相同。 这种结构的局限性是由于布线限制和不一致的\nSH BOR FORRES. 另一种产生等长连线的格局是 X 时钟树。 与 H树相比,X 树有以下问题:")
+原书给出对称的H树和X树：H树提供逐级分裂的对称路径，可较容易实现多个终端等长；X树提供跨区域斜线连接，可以根据芯片几何做集中分配。
 
-#text("1\nae          xe\nta)               to)")
+#fig1128()
+#align(center)[*图11.28　对称时钟树：H树与X树（编辑性概念图）*]
 
-#text("图 11.28 ”对称时钟树")
+不同拓扑受芯片布局、布线资源、总线电阻与电容的影响，不能仅凭几何路径等长就保证时钟完全无偏斜。
