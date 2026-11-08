@@ -23,6 +23,9 @@ jobs:
       - uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.15.0
+        continue-on-error: true
+      - name: Ensure Typst 0.15.1 via official OCI fallback
+        run: bash .github/scripts/ensure-typst.sh 0.15.1
       - name: Install fonts with bounded mirror wait
         timeout-minutes: 4
         run: |
