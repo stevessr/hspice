@@ -1,34 +1,19 @@
-// SOURCE PDF PAGE 363; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第363页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("344       数字集成电路分析与设计一 深亚微米工艺( 第三版)")
+// SOURCE PDF PAGE 363. Source scan-assisted Typst native editorial draft.
+// All circuit diagrams, text positions and equations still require strict 1:1 acceptance.
+#import "../figures/ch10-rc-elmore-native.typ": figure10more,fig-example102,fig-example101
+#set document(title:"第10章·连线RC与艾蒙延迟·PDF363")
+#align(center)[#text(size:8pt,weight:"bold")[344　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("同导线长度的导线延迟图- 作为参考点，对 350 nm 工艺,4 扇出门延迟近似为 150 ps; 对 130 nm\n工艺，4 扇出门延迟缩小到大约 40 ps; 对于 65 nm 工艺，延迟缩小到大约 25 ps。另一方面，对\nL= 1 mm, 连线延迟从 3 ps 分别增加为 27 ps 和 116 ps. 对工= 2 mm, 延迟值分别是 12 ps, 110 ps\n和460 ps. X{L= 3 mm，延迟值分别是 30 ps，240 ps 和 1035 ps。对每个工艺点，导线延迟成倍\n增加，并且按导线长度平方增加-很明显，当单个缓冲器驱动长导线时，随着工艺等比缩减或者\n连线长度的增加，连线延迟将对最终成为 4 出出门的延迟起主导作用-")
+长导线电阻与电容产生的传播延迟显著影响较大规模的芯片。图10.9按不同工艺线宽，给出在多个工艺代际下，连线长度与延迟之间的变化趋势。
 
-#text("12000")
+#figure10more(9)
+#align(center)[*图10.9　不同工艺尺寸下的连线长度与RC延迟趋势（可编辑定性曲线）*]
 
-#text("0.0")
+随着工艺尺寸减小，高层金属之间的线宽、间距和截面积也发生变化。若长线电阻偏大，即使晶体管本身更快，也可能无法改善整个路径的传播延迟。
 
-#text("Kip)")
+== 10.3　超长导线的缓冲器插入
 
-#text("oo)")
+对于过长的信号线，仅提高驱动反相器尺寸可能带来较大的输入电容，不能无限制地缩短延迟。一种有效的方法是在信号路径中插入一组缓冲器，将原来的长线分成较短的几段。
 
-#text("0 350 30 20 0 0 9 6的 4 3 7\nTe (om)")
-
-#text("图109 ，门延迟与连线延迟")
-
-#text("对每种工艺，我们对长线可以定义一个经验法则，即将 4 肩出延迟设置为等于连线延迟。临\n界的导线长度可以从下式得出:")
-
-#text("FO4 = 038RaCom")
-
-#text("os Lee")
-
-#text("0.38Rig")
-
-#text("PA 0.18 1m 工艺中,临界值 Cn可以用这个公式计算,或者从图 10.9 中估算得出大约是25 mm。\n当然，这个值将取决于给定导线的Re和Cn值变化-")
-
-#text("10.3 ”超长导线的缓冲器插入")
-
-#text("对于超长导线，上面描述的平方关系的延迟特性在任何设计中都不能接受。连线延迟将特别\n长以至于超过门延迟。在集成电路里，全局的导线往往会非常长，因为必须分布在整个芯片中的\n各处这些导线与时钟、总线和设计中的其他主要信号线相关  因为长导线的延迟与了是平方的\n关系，所以标准的解决方法是沿着导线间隔地加入中继器 ( repeater ) 或者缓冲器 ( buffer )，这样\n有效地把导线缩短成小股。缓冲器的作用是把二次方关系的延迟变成更线性的延迟。当然，如果\n插人太多的缓冲器，延迟会由于缓冲器本身的延迟而增加。但是太少的缓冲器易于产生二次方的")
+缓冲器增加逻辑级数及门自身寄生延迟，却可以减少每一段的RC延迟。最佳缓冲器数量和尺寸需要联合优化，不能仅通过“缓冲器越多越快”判断。
