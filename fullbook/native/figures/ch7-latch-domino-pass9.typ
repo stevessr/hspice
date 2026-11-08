@@ -121,36 +121,69 @@
   #txt(100pt,12pt,"nMOS 3W; pMOS 3W")
   #txt(131pt,97pt,"A：LE=4/3；sel：LE=4/3")
 ])
-#let fig721()=grid(columns:(1fr,1fr),column-gutter:7pt,row-gutter:9pt,
-  [#html.frame(block(width:175pt,height:94pt)[
-    #w(5pt,32pt,39pt,32pt)
-    #place(top+left,dx:39pt,dy:24pt,rect(width:54pt,height:21pt,stroke:.8pt))
-    #txt(49pt,27pt,"开关")
-    #w(93pt,32pt,133pt,32pt)
-    #cap(117pt,58pt,s:"C_Q")
-    #txt(40pt,3pt,"(a) 抽象锁存器")
-  ])],
-  [#html.frame(block(width:175pt,height:94pt)[
-    #w(5pt,32pt,41pt,32pt)
-    #tg(41pt,32pt,label:"nMOS")
-    #w(77pt,32pt,129pt,32pt)
-    #cap(117pt,58pt,s:"C_Q")
-    #txt(40pt,3pt,"(b) 传输管锁存器")
-  ])],
-  [#html.frame(block(width:175pt,height:95pt)[
-    #w(5pt,32pt,36pt,32pt)
-    #tg(36pt,32pt)
-    #w(72pt,32pt,101pt,32pt)
-    #inv(101pt,32pt)
-    #w(132pt,32pt,159pt,32pt)
-    #txt(8pt,3pt,"(c) 增加反相器输出")
-  ])],
-  [#html.frame(block(width:175pt,height:95pt)[
-    #tg(29pt,34pt,label:"TG")
-    #inv(82pt,34pt)
-    #w(66pt,34pt,82pt,34pt)
-    #txt(35pt,3pt,"高电平透明，低电平保持")
-  ])])
+// PDF272 printed Figure 7.21 contains exactly THREE variants:
+// (a) NMOS pass switch, (b) complementary CMOS TG, (c) TG and inverter.
+#let fig-example75-panel(tgsize:"W")=html.frame(block(width:169pt,height:112pt)[
+  #txt(6pt,6pt,"A")
+  #txt(6pt,56pt,"B")
+  #w(38pt,7pt,38pt,21pt)
+  #w(38pt,21pt,38pt,43pt)
+  #w(32pt,21pt,32pt,43pt)
+  #w(38pt,43pt,38pt,58pt)
+  #w(38pt,58pt,38pt,77pt)
+  #w(32pt,58pt,32pt,77pt)
+  #w(38pt,77pt,38pt,91pt)
+  #w(38pt,49pt,80pt,49pt)
+  #tg(80pt,49pt,label:"TG")
+  #txt(118pt,24pt,"sel")
+  #txt(121pt,54pt,"输出")
+  #txt(65pt,92pt,"TG:"+tgsize)
+])
+#let fig-example75()=grid(columns:(1fr,1fr),column-gutter:7pt,
+  [#fig-example75-panel()],
+  [#fig-example75-panel(tgsize:"4W")])
+#let fig721()=block(width:100%)[
+  #grid(columns:(1fr,1fr),column-gutter:6pt,
+    [#html.frame(block(width:175pt,height:88pt)[
+      #txt(9pt,7pt,"CLK")
+      #w(75pt,12pt,75pt,33pt)
+      #w(5pt,42pt,66pt,42pt)
+      #w(77pt,33pt,77pt,51pt)
+      #w(71pt,33pt,71pt,51pt)
+      #w(78pt,42pt,142pt,42pt)
+      #txt(10pt,30pt,"D")
+      #txt(144pt,29pt,"Q")
+      #w(46pt,42pt,46pt,57pt)
+      #cap(40pt,57pt,s:"C1")
+      #ground(47pt,75pt)
+      #w(135pt,42pt,135pt,57pt)
+      #cap(128pt,57pt,s:"C2")
+      #ground(135pt,75pt)
+      #txt(70pt,79pt,"(a) 单管锁存器")
+    ])],
+    [#html.frame(block(width:175pt,height:88pt)[
+      #txt(70pt,5pt,"CLK")
+      #w(5pt,43pt,45pt,43pt)
+      #tg(45pt,43pt,label:"TG")
+      #w(81pt,43pt,146pt,43pt)
+      #txt(9pt,30pt,"D")
+      #txt(147pt,30pt,"Q")
+      #txt(68pt,81pt,"(b) CMOS传输门")
+    ])])
+  #align(center)[
+    #html.frame(block(width:205pt,height:97pt)[
+      #txt(68pt,4pt,"CLK")
+      #w(9pt,43pt,42pt,43pt)
+      #tg(42pt,43pt,label:"TG")
+      #w(78pt,43pt,120pt,43pt)
+      #inv(120pt,43pt)
+      #w(152pt,43pt,187pt,43pt)
+      #txt(10pt,26pt,"D")
+      #txt(187pt,28pt,"Q̅")
+      #txt(67pt,87pt,"(c) 传输门与反相器")
+    ])
+  ]
+]
 #let fig722()=html.frame(block(width:379pt,height:122pt)[
   #txt(3pt,31pt,"D")
   #w(18pt,42pt,51pt,42pt)
