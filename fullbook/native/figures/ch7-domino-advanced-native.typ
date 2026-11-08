@@ -43,17 +43,34 @@
   txt(x + 2pt,y + 4pt,"CLK")
   if outputs!="" {txt(x + 88pt,y + 15pt,outputs)}
 }
-#let fig727()=grid(columns:(1fr,1fr),column-gutter:6pt,
-  [#html.frame(block(width:187pt,height:148pt)[
-    #dynamic-cell(4pt,4pt)
-    #w(86pt,53pt,126pt,53pt)
-    #txt(96pt,27pt,"错误连接")
-    #txt(4pt,137pt,"(a) 动态门直连")
-  ])],
-  [#html.frame(block(width:187pt,height:148pt)[
-    #dynamic-cell(4pt,4pt,with_inv:true)
-    #txt(6pt,137pt,"(b) 加静态反相器")
-  ])])
+// Figure 7.27: two direct-coupled (unsafe) and two buffered (safe)
+// dynamic CMOS cases, each with a precharge PMOS and evaluate foot NMOS.
+#let fig727-panel(safe:false,second:false)=html.frame(block(width:186pt,height:133pt)[
+  #dynamic-cell(5pt,0pt,with_inv:safe,outputs:if second {"Y2"} else {"Y1"})
+  #w(40pt,50pt,105pt,50pt)
+  #w(105pt,50pt,105pt,26pt)
+  #w(105pt,26pt,122pt,26pt)
+  #w(105pt,50pt,122pt,50pt)
+  #if second [
+    #mos(144pt,23pt,p:true)
+    #w(144pt,48pt,144pt,66pt)
+    #mos(144pt,67pt)
+    #w(144pt,92pt,144pt,112pt)
+    #ground(144pt,112pt)
+    #w(144pt,61pt,173pt,61pt)
+  ] else [
+    #w(122pt,26pt,145pt,26pt)
+    #mos(145pt,28pt,p:true)
+    #w(145pt,53pt,145pt,69pt)
+    #mos(145pt,70pt)
+    #w(145pt,95pt,145pt,110pt)
+    #ground(145pt,110pt)
+  ]
+  #txt(12pt,119pt,if safe {"有反相器：第二级安全"} else {"直接连接：会误求值"})
+])
+#let fig727()=grid(columns:(1fr,1fr),column-gutter:6pt,row-gutter:2pt,
+ [#fig727-panel()], [#fig727-panel(second:true)],
+ [#fig727-panel(safe:true)], [#fig727-panel(safe:true,second:true)])
 #let fig728()=html.frame(block(width:392pt,height:161pt)[
   #for i in range(3) [
     #let x=5pt + i * 128pt
@@ -143,17 +160,64 @@
   #txt(14pt,40pt,"CLK")
   #txt(311pt,41pt,"OUT")
 ])
-#let fig733()=html.frame(block(width:381pt,height:155pt)[
-  #fig732()
-  #txt(10pt,143pt,"与/与非两条互补轨：AND 与 NAND")
+// PDF283 Figures 7.33 and 7.34: A/B branches, both rails, CLK-controlled
+// precharge and evaluate devices; optional cross-coupled weak PMOS keeper.
+#let dualrail-native(keeper:false)=html.frame(block(width:381pt,height:215pt)[
+  #w(65pt,15pt,309pt,15pt)
+  #txt(310pt,5pt,"VDD")
+  #w(18pt,38pt,104pt,38pt)
+  #txt(7pt,27pt,"CLK")
+  #w(104pt,15pt,104pt,33pt)
+  #mos(104pt,33pt,p:true)
+  #w(104pt,58pt,104pt,77pt)
+  #w(270pt,15pt,270pt,33pt)
+  #mos(270pt,33pt,p:true)
+  #w(270pt,58pt,270pt,77pt)
+  #w(24pt,83pt,104pt,83pt)
+  #w(270pt,83pt,346pt,83pt)
+  #inv(24pt,83pt)
+  #inv(318pt,83pt)
+  #txt(11pt,66pt,"ab")
+  #txt(344pt,64pt,"a̅b̅")
+  #txt(109pt,61pt,"F")
+  #txt(246pt,62pt,"F̅")
+  // Left series devices (AND); right parallel rails (NAND)
+  #w(104pt,89pt,104pt,102pt)
+  #mos(104pt,102pt)
+  #txt(60pt,105pt,"a")
+  #w(104pt,127pt,104pt,133pt)
+  #mos(104pt,133pt)
+  #txt(60pt,141pt,"b")
+  #w(104pt,158pt,104pt,173pt)
+  #w(270pt,89pt,270pt,103pt)
+  #w(242pt,103pt,298pt,103pt)
+  #mos(242pt,106pt)
+  #mos(298pt,106pt)
+  #w(242pt,131pt,242pt,161pt)
+  #w(298pt,131pt,298pt,161pt)
+  #w(242pt,161pt,298pt,161pt)
+  #w(270pt,161pt,270pt,173pt)
+  #txt(210pt,113pt,"a̅")
+  #txt(306pt,113pt,"b̅")
+  #w(104pt,173pt,270pt,173pt)
+  #w(187pt,173pt,187pt,183pt)
+  #mos(187pt,183pt)
+  #ground(187pt,208pt)
+  #txt(164pt,184pt,"CLK")
+  #if keeper [
+    #mos(160pt,35pt,p:true)
+    #mos(214pt,35pt,p:true)
+    #w(160pt,15pt,160pt,35pt)
+    #w(214pt,15pt,214pt,35pt)
+    #w(160pt,60pt,160pt,83pt)
+    #w(214pt,60pt,214pt,83pt)
+    #w(160pt,83pt,270pt,83pt)
+    #w(214pt,83pt,104pt,83pt)
+    #txt(130pt,24pt,"交叉保持")
+  ]
 ])
-#let fig734()=html.frame(block(width:381pt,height:164pt)[
-  #fig732()
-  #w(84pt,51pt,192pt,51pt)
-  #w(192pt,51pt,279pt,51pt)
-  #txt(123pt,7pt,"交叉耦合保持器")
-  #txt(8pt,151pt,"双轨动态门增加交叉耦合弱PMOS")
-])
+#let fig733()=dualrail-native()
+#let fig734()=dualrail-native(keeper:true)
 #let fig735()=grid(columns:(1fr,1fr),column-gutter:8pt,
   [#html.frame(block(width:181pt,height:155pt)[
     #dynamic-cell(28pt,5pt)
