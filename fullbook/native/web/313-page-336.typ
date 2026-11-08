@@ -1,28 +1,19 @@
-// SOURCE PDF PAGE 336; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第336页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第9章 ”存储器设计中的其他课题                317")
+// SOURCE PDF PAGE 336 / printed 317; scan-assisted editorial draft.
+// Figures editable, original circuit-level wiring and geometry not strictly verified.
+#import "../figures/ch9-dram-rom-native.typ": figure9later
+#set document(title:"第9章·动态RAM与ROM·PDF336")
+#align(center)[#text(size:8pt,weight:"bold")[317　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("计中节难的一方面")
+检测小幅单端位线电压变化并不容易。图9.16采用位线折半结构（split bitline）：把位线拆成两段，电容尽量相等，每侧连接灵敏放大器的一端。使用与普通单元类似的虚拟单元，令另一侧生成合适的比较参考。
 
-#text("VT DRAM 中读-刷新电路的简化原理图如图 9.16 所示. 内为在单端的结构中检测小的电压变\n化其是困难的，所以存储阵列的位线分成了两半，从而使相等的电容连接在触发器的每一端，这\n叫做位线断并结构“动态触发器的再生变化检测小的数据信号，并恢复其高电平或低信号”如\n了图9.16 所天，在这个阵列中每半列都有一个附加的虚拟单元，它的作用将在下面分析")
+#figure9later(16)
+#align(center)[*图9.16　1T DRAM阵列与位线折半、灵敏放大器及虚拟单元*]
 
-#text(">,  toc | ste loc 5,\nCSE oR\nR Riw Reameny Reumeny2 Rix Rose")
+预充阶段把两侧位线置于 $V_("DD")/2$，同时把虚拟单元也置于相同的电平。读选中正常字线时，灵敏放大器的另一边激活对应虚拟单元，消除或减少时钟馈通和共模噪声引起的误差。
 
-#text("图 9.16 1T DRAM 阵列结构")
+若单元保存“1”，则选中侧位线的电压将略高于预充电平；保存“0”则略低于预充电平。这一微小差分决定再生型灵敏放大器最终稳定到哪一种逻辑值。感测完成后，原单元的内部节点电压也恢复到正确的存储电平。
 
-#text("对一个 1T 阵列的读操作过程是这样的，一个预充信号把所有列线电压设置为 Voo/2 ,并且\n通过开启两条 Raumoy 线将所有虚拟单元的内部电压设置为 Vop/2 .下一步，假设字线 R 上拉到\n商电平，于是左边的第一组单元被选中。在灵敏放大器另 -边的虚拟单元通过使信号 Riunvz 电\n平升高而同时被选中右边连接到被选择的虚拟单元的列电压五保持在 Vpo/2 ，因为内部电压和\n位线电压是相等的，然而,左边 D点的电压值将要么增加要么减少, 这由单元中存储的是 1 还是\n0 决定”电压变化的其可以使用适当的电荷共享公式来计算，同时选择灵敏放大器两边的单元非\n常重要，它们用来平衡由于馈通和其他效应带来的共模噪声，这就是为什么虚拟单元总是在阵列\n的另--边选择的原因")
+*例9.3　DRAM中“1”和“0”的位线电压*
 
-#text("当施加了镇存信号时，最后的阵列两边很小的电压差决定了甬发器的最终状态，例如，如果\n呈比五电平高，那么灵敏放大器将认为这个电压差值是一个存储的1  MWR D Ee D tas, a8\n么灵敏放大器将认为这个电压差值是一个存储的 0。最后的数据通过一个列诺码器电路取出并适\n给最终的放大器和输出缓冲器")
-
-#text("例9.3 DRAM 中“1”和“0”的位线电压")
-
-#text("问题:")
-
-#text("在图 9.16 中，假设列线预充到了Yeo/2，且内部虚拟单元电压也设置为Yoo/2，计算读\n和读“0”时位线上的电压”假设使用升高电压的字线，于是写“1 的时候可以在每个单元中存\nit Yoo 电平”列电容为10C ，单元电容为C，同时计算参考电平并解释为什么需要它")
-
-#text("ME:")
-
-#text("输出电压是由电荷共享确定的”对于存储的“1\"，有:")
+题设：位线预充 $V_("DD")/2$，虚拟单元参考电平同为 $V_("DD")/2$；写入“1”时单元电容电压为 $V_("DD")$；位线电容是单元电容的10倍，即 $C_("column")=10C$、$C_("cell")=C$。求分别读取“1”与“0”时的位线电压，并说明参考电平的作用。

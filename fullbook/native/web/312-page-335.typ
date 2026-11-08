@@ -1,26 +1,20 @@
-// SOURCE PDF PAGE 335; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第335页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("316         数字集成电路分析与设计一 深亚微米工艺 ( 第三版)")
+// SOURCE PDF PAGE 335 / printed 316; scan-assisted editorial draft.
+// Figures editable, original circuit-level wiring and geometry not strictly verified.
+#import "../figures/ch9-dram-rom-native.typ": figure9later
+#set document(title:"第9章·动态RAM与ROM·PDF335")
+#align(center)[#text(size:8pt,weight:"bold")[316　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("图914 IT DRAM 单元")
+#figure9later(14)
+#align(center)[*图9.14　1T DRAM 单元及存储电容（原生图元）*]
 
-#text("读和写的选择是通过用行线打开 Mi 来实现的。数据以高电平或低电平的形式存储在CI上，\n为了得到最小的单元面积，Ci 应该保持相当小。 然而. 随着电压的下降，存储在这个电容上的总\n电荷开始减少因此，我们想要使 C 比较大却不牺牲单元尺寸")
+单个存储电容 $C_("cell")$ 存放高电平或低电平。为增加存储电荷，实际存储器经常提高字线电压，使访问晶体管导通时单元能够写入接近 $V_("DD")$ 的高电平，而不是受阈值电压限制的 $V_("DD")-V_("TN")$。
 
-#text("当单元被选定后，通过把所选择的列设置为高电平或者低电平来把数据写人单元。内部节点\n电压应该尽可能高以便进一步增加存储的电荷-一般会使用自举或者电荷泵电路，将字线电压提\nFOB Vo + Vrw 以上, 这样内部节点电压可以上升到 Vpp ,而不是将内部电压限制到Voo — Vin.\n升压后的字线用来进行读和写，")
+读取时单元电容与位线电容 $C_("column")$ 共享电荷。因为位线电容通常比单元电容大约一个数量级，读出电压变化比较小，必须用灵敏放大器检测。
 
-#text("读取单元的时候，存储在 C, 上的电荷与列线的电容 C; 共享，而C 一般比 Ci 大 10 倍。 如果\n位线电容太大, 电荷共享的结果将不足以检测出在单元中存储的值. 一个较大的C, 值可以减轻这\n个问题。 然而 对于大 Ci 值的要求和为了高密度而对单元尺寸的要求是相互冲突的。对于这个问\n题有两种解决方法，如图 9.15 Brak. 左边是沟模电容的剖面图 其中在衬底上做了一个垂直的切\n口，并在其中填人绝缘体-多晶硅的夹心结构以形成电容。右边是堆乔式电容, 其中两个附加的多\n晶硅层淀积在晶体管上面，并在它们之间夹和绝缘材料。堆屋式电容是现在实现单元电容更常用\n的方法，这两种方法产生的电容值都在 20-30 AF 之间。这意味着为了正确的读操作位线电容应该\n在200-300作 的范围内-")
+电容面积与存储信号幅度相互制约。教材示意两种提高单位面积电容密度的结构：沟槽式电容与堆叠式电容。
 
-#text("svercn ON 难过硅化物")
+#figure9later(15)
+#align(center)[*图9.15　DRAM沟槽电容和堆叠电容（可编辑材料层结构草图）*]
 
-#text("访问和\neit 3")
-
-#text("地绿体                                  mt")
-
-#text("Am Shit?                wre\nmien")
-
-#text("图9.15 DRAM 沟槽电容和堆得式电容")
-
-#text("在读操作期间，单元内部的值会被扰乱。这个读过程称为破坏性的读出，因为单元中的值由\n于电荷共享而改变。其结果是，存储的数据必须在每次读出后进行再生。此外，即使没有读取也\n还要周期性地对其进行刷新。用于对小的列信号进行可靠检测的读放大器的设计是 IT DRAM 设")
+传统工艺中的典型单元电容约20～30 fF，设计位线电容时必须考虑足够的读出差分摆幅。由于读操作本身改变了单元内存储的电荷，因此数据在每次读出后必须由感测电路再生写回，另外还需要周期性刷新。

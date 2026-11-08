@@ -1,24 +1,19 @@
-// SOURCE PDF PAGE 338; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第338页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第9章，存储器设计中的其他课题            319")
+// SOURCE PDF PAGE 338 / printed 319; scan-assisted editorial draft.
+// Figures editable, original circuit-level wiring and geometry not strictly verified.
+#import "../figures/ch9-dram-rom-native.typ": figure9later
+#set document(title:"第9章·动态RAM与ROM·PDF338")
+#align(center)[#text(size:8pt,weight:"bold")[319　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("9.4.3 动态 RAM 的外部特性")
+=== 9.4.3　动态RAM的外部特性
 
-#text("广泛使用的动态 RAM 的内部电路设计和时序图比上面描述的复杂得多，例如包括总共超\n过 20 个用于读、写和刷新功能的内部产生的时钟相位。这些内容超出了本书的讨论范围，为了\n完成对动态 RAM 的研究，我们用使用者的观点来分机     件的终端特性")
+大型DRAM需要比简单读写单元更多的内部时钟和控制相位。原书用64 Kb DRAM展示地址复用、读写以及刷新过程，从外部使用者角度说明器件行为。
 
-#text("个64 Kb 动态 RAM 的框图如图 9.18 Mia. 单个块的容量可以增加到 4 到 16 倍，而不给")
+#figure9later(18)
+#align(center)[*图9.18　64 Kb DRAM的内部总体结构（功能重绘）*]
 
-#text("操作速度带来任何严重的影响，然而，单个芯片上的大存储容量最好通过将这样的块复制很多次\n来实现，虽然内部的处理过程和电路细节有很多差异，但这里给出的块和很多厂家产品中的设计\n是类似的”如前而所述，1T 单元按排在两个半块中")
+图9.18的64 Kb存储器分成两个半阵列，每侧具有128行、256列。地址引脚为8位，先按行地址进行锁存，再按列地址进行锁存；使用同一组外部引脚分时复用能够降低封装引脚数。
 
-#text("RS\nos =       one\naw\nnie\nA,       -|                                    te\n入                  -| 而 re            amen\n的                     aa                        wer\nAa        na A]          aa\noy          ore              T\n*           4               [nian      _\na                                                       [一上-| wwwsai\n^             seme | 256从再明新上于 inate\nrae         poe         oe\nvate                     ED        |           -\nes                ce             seme\n= 86 FLA                            pad\n一一            和                    -一一\nL|          verses")
+读周期开始后，行地址缓冲器产生地址原值与反值，7位地址经译码选择半阵列中的一条字线，剩余一位决定选择上半块还是下半块。所有被选中的单元在对应列产生微小电压变化，列灵敏放大器同时检测并恢复整行256位的数据。
 
-#text("图9.18 64 Kb DRAM 框图")
-
-#text("参考这幅图中的内部设计，一个读周期的过程如下; 首先，用锁存在 8 个行地址缓冲器中的\n8 个行地址位进行行选择这些缓冲器提供了每一个输入位的真值和反相输出值。7 个地址位连\n接到上方或者下方的行译码器，这是由第 8 个行地址位的状态决定的，上方或者下方的译码器从\n128 个信号中选出来 1 个，并将惟一的一行驱动到高电平")
-
-#text("所选择的行线上 256 个单元中存储的高或者低电平传输到列线上，随之发生电荷共享以建立\n-个新的电平，对 256 列中的每列有一个触发器灵敏放大器 用来捕获列电压上相当小的变化，\n并将其青生性侈复为一个完全的 1 或者 0 的电平。对所有选择的单元将恢复其正确的电平，但不\n涉及列地址选择电路的影响")
-
-#text("用于列选择的地址信息也通过用于行地址的 8 个引脚输入进来。这是通过对这些引脚进行分\n时复用实现的，说明如下。在行地址镇存后，断开与地址引脚的连接。对周期的剩余部分，引脚\n上的地址变化不影响行的选择，因此引脚可以用于列的选择 地址复用的目的是减少封装的引肢")
+列地址随后选定输出数据：6位列地址选出若干感测输出的一组，余下2位可以通过4选1多路器确定需要的最终数据位。写周期采用类似的行列选择结构，不过输入数据控制被选中位线和感测放大器的状态。

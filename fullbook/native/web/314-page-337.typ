@@ -1,20 +1,31 @@
-// SOURCE PDF PAGE 337; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第337页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("318        数字集成电路分析与设计一一深亚微米工艺 { 第三版 )")
+// SOURCE PDF PAGE 337 / printed 318; scan-assisted editorial draft.
+// Figures editable, original circuit-level wiring and geometry not strictly verified.
+#import "../figures/ch9-dram-rom-native.typ": figure9later
+#set document(title:"第9章·动态RAM与ROM·PDF337")
+#align(center)[#text(size:8pt,weight:"bold")[318　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("将ct woco =六Coom + Cat)")
+*例9.3（续）：电荷共享的定量解答*
 
-#text("£m + wac。 “22100 + Voce\nve = Bo 8055 Ugg\nTam? Ge           were\nTri, WRITE “0”. DAM A:\nMoen + 0% Can = V\"(Conn + Cus)\n= 045 Vpo")
+存储“1”时，位线起初为 $V_("DD")/2$，单元电容起初为 $V_("DD")$。忽略其他损失，根据电荷守恒：
 
-#text("Coun * Cau TOC HC")
+#align(center)[$(V_("DD")/2) C_("column") + V_("DD") C_("cell") = V^"*" (C_("column")+C_("cell"))$]
 
-#text("参考电厅为05 Voq AF 1.8 V 的电源，相对于参考电平有大约 90~100 mV AEE. RE\n值被和生灵敏放大器转化为一个满摆幅的电压值”虚拟单元用来平衡差分放大器两边的馈通和品\n目的影响")
+因此：
 
-#text("灵丢放大器的设计有些复杂，但是可以看做是一个基于锁存的时钟控制的检测电路，如第 8\n章中所讨论的，这个电路的一种简化形式如图 9.17 所示. 最初, 打开一个平衡管，使触发器两边\nD 和万的电压相等，都为Vop/2 ，检测使能信号保持为低电平，直到通过激活一条正常字线和\n一条虚拟字线使得在这些线上建立了电压差值。下一步 上拉晶体管 Ms 和下拉蝇体管 Me 通过\n施加检测使能信号而开启”然后，触发器用再生特性建立真正的高电平和低电平值，这些值写回\n到单元中去从而完成 DRAM 操作")
+#align(center)[$V^"*" = ((V_("DD")/2) 10 C + V_("DD") C)/(10 C+C) = 0.55 V_("DD")$]
 
-#text("了\nL\nYoo\ncord\nLm\n人       My\nD.                D\nMy       Me\n检测使能 —[ om,")
+存储“0”时，单元电容初始电压为0：
 
-#text("图9.17 触发器类型检测-避新电路的简化图")
+#align(center)[$(V_("DD")/2) C_("column") + 0 times C_("cell") = V^"*" (C_("column")+C_("cell"))$]
+
+对应位线电压：
+
+#align(center)[$V^"*" = ((V_("DD")/2) 10 C)/(10 C+C) = 0.45 V_("DD")$]
+
+理想比较电平是 $0.5V_("DD")$，两个结果分别高出与低于参考电平 $0.05V_("DD")$。当 $V_("DD")=1.8 "V"$ 时，差值约为90 mV，教材记为约90～100 mV。
+
+图9.17展示触发器式检测/刷新电路：预充均衡器件先使两边相等，字线选通形成差分，之后开启上拉与下拉感测使能器件，依靠交叉耦合反相器的再生性使差分转换为全摆幅信号，并把该信号写回DRAM单元。
+
+#figure9later(17)
+#align(center)[*图9.17　触发器类型检测—刷新电路（原生可编辑框图）*]
