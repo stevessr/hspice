@@ -87,6 +87,25 @@ for page_number, names in DRAWINGS.items():
         assert f"#let {name}(" in figure_source, (page_number, name)
         assert f"#{name}()" in page_source, (page_number, name)
 assert len(DRAWINGS) == 9
-print("Appendix A native diagram integration: 9 scanned pages, 11 drawing functions.")
+print("Appendix A native diagram integration: 9 scanned pages, 12 drawing functions.")
+
+
+# Appendix B device/transport/schottky/TTL topology is likewise native.
+B_DRAWINGS = {
+    434: ("b1-npn-section", "b2-minority-carriers"),
+    436: ("b3-schottky-section",),
+    440: ("b6-schottky-clamp",),
+    442: ("b7-ttl-nand",),
+}
+b_source = (ROOT / "figures" / "appendix-b-additional-native.typ").read_text(encoding="utf-8")
+assert "html.frame" in b_source and "#image(" not in b_source
+for number, names in B_DRAWINGS.items():
+    stem = f"{number - 23:02d}-page-{number:03d}"
+    text = (WEB / f"{stem}.typ").read_text(encoding="utf-8")
+    assert '#import "../figures/appendix-b-additional-native.typ": *' in text, number
+    for name in names:
+        assert f"#let {name}(" in b_source
+        assert f"#{name}()" in text
+print("Appendix B native diagrams embedded on PDF 434, 436, 440, 442.")
 
 print(f"Appendix scan-guided editable drafts pass: {START}-{END} ({END-START+1} pages); full-page accepted: 0/445.")
