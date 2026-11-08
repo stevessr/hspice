@@ -1,10 +1,13 @@
 // SOURCE PDF PAGE 443 / printed page 424
+#import "../figures/appendix-b-native.typ": ttl-vtc
 // Source-checked TTL NAND transfer-curve breakpoints.
 #set document(title:"附录B 图B.8 标准TTL门VTC、三个断点 · PDF443")
 = 附录 B · 印刷第424页
 == B.9　电压传输特性（续）
 
 *图 B.8* 是标准 TTL 电路电压传输特性，教材逐个计算三个折点。在原书的近似参数下：
+
+#ttl-vtc()
 
 #table(columns:(1fr,1.5fr,1.5fr,2.3fr),inset:(x:3pt,y:2pt),
 table.header([*点*],[*输入(V)*],[*输出(V)*],[*物理状态*]),
