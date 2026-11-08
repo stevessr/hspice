@@ -1,20 +1,42 @@
-// SOURCE PDF PAGE 426; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第426页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("附录 A_ SPICE 的简要介绍               407")
+// SOURCE PDF PAGE 426 / printed page 407
+// Source-checked PULSE/PWL syntax, parameter order and example values.
+#set document(title:"附录A PULSE与PWL电源 · PDF426")
+= 附录 A · 印刷第407页
+== A.3.3　脉冲源及分段线性源
 
-#text("有时，观察梯形波激励的元件行为是很有用的，在这种情况下可以用 PULSE 选项来说明\n波形参数 ”电帮或电流脉冲的句法是:")
+用 `PULSE` 描述周期性梯形电压/电流，用 `PWL` 按时间—数值对给出分段线性波形：
 
-#text("vxxx one nm PULSE <vl v2 td tr tf pw per>\nbo one     PULSE <vl v2 td tr tf pw per>\nvee          电讨源的用宇\nxx          电流源的名字\nhe           正节点\n            负节点\nPULSE:       PHP ICHEF-AHI voltageval” AREAL. Aen RINNE — NORE\nvw                            2 oe Ft\n以伏特或安培为单位的电压或电流的最终值\ntd         以种为单位的延迟时间，这是从 vt 到 v2 之间第一次变化的开始时间\nu             er FEAT. Roby, JIA v1 变到 v2 花费的时间\n四             屿囊的下降时间、换句话说，是从 v2 变到vi 花费的时间\npw            波形的脉冲宽度，定义为波形保持在 v2 的时间\nper          SHEA")
+#raw("Vxxx n+ n- PULSE <v1 v2 td tr tf pw per>\nIxxx n+ n- PULSE <v1 v2 td tr tf pw per>", block: true)
 
-#text("下面的例子描述了一个名为“Vpulse”的电压源，连接在节点 3 和节点 0之间，电平在-1V\n和 1 V 之间变化 在 2 ns 延迟之后开始上升, 上升时间是 4 ns, 下降时间是 3 ns, 脉冲宽度是 20 ns，\n周期是 50 ns，其波形如图 A.6 所示")
+#table(columns:(.8fr,3.2fr),inset:(x:3pt,y:2pt),
+table.header([*字段*],[*含义*]),
+[`v1`],[初始电压或电流],
+[`v2`],[脉冲顶值],
+[`td`],[第一次跳变开始前的延迟时间],
+[`tr`],[上升时间：从 v1 到 v2],
+[`tf`],[下降时间：从 v2 到 v1],
+[`pw`],[维持 v2 的脉冲宽度],
+[`per`],[波形周期],
+)
 
-#text("Vpulse 3 0 PULSE -1 1 2ns 4ns 3ns 20ns 50ns")
+原书*图 A.6* 将节点3相对地的电压在 −1 V 与 +1 V 之间切换：延迟 2 ns，上升 4 ns，下降 3 ns，脉宽 20 ns，周期 50 ns。
 
-#text("ak\nIs\n1\n5 os\nz 0|\n2\nos\n+\n15 1     rn\na a a a )\n时间 ns)\n图A6 脉冲波形")
+#raw("Vpulse 3 0 PULSE -1 1 2ns 4ns 3ns 20ns 50ns", block: true)
 
-#text("另一种有用的源是分段线性源 ( PWL，piecewise linear source ) 其波形用 ( 时间, 值 ) 对说\n明，对于与图 A.5 同样的图，PWL 将说明如下:")
+可编辑波形时间点为：
+#table(columns:(1fr,1fr,3fr),inset:3pt,
+table.header([*时间（ns）*],[*电压（V）*],[*区段*]),
+[0],[−1],[初始保持],
+[2],[−1],[开始上升],
+[6],[+1],[上升结束],
+[26],[+1],[顶值保持结束],
+[29],[−1],[下降结束],
+[52],[−1],[下一周期上升开始],
+[56],[+1],[下一周期上升结束],
+)
 
-#text("Vpulse 3 0 PWL 0 -1 2ns -1 6ns 1 26ns 129ns -1\n+ 52ns -1 56ns 1")
+相同的第一周期波形可以用 `PWL` 指定原书给出的采样节点：
+
+#raw("Vpulse 3 0 PWL 0 -1 2ns -1 6ns 1 26ns 1 29ns -1\n+ 52ns -1 56ns 1", block: true)
+
+_注意：PWL 是按列出的时间点插值，并不自动代表 PULSE 的无限周期重复。_

@@ -1,30 +1,22 @@
-// SOURCE PDF PAGE 428; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第428页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("MURA SPICE 的简要介绍                      409")
+// SOURCE PDF PAGE 428 / printed page 409
+// Scan-guided transmission-gate and analysis definitions.
+#set document(title:"附录A 传输门网表与瞬态分析 · PDF428")
+= 附录 A · 印刷第409页
 
-#text("1 PMos")
+*图 A.8*：一个互补 MOS 传输门，原书为简化图形未显示衬底端口。两个晶体管的扩散面积均为 $20 lambda^2$，长度 $2 lambda$、宽度 $4 lambda$。
 
-#text("0 Mos")
+#raw("Mp 3 0 2 1 PMOS\n+ L=2 W=4\n+ AS=20 PS=4\n+ AD=20 PD=4\nMn 2 1 3 0 NMOS\n+ L=2 W=4\n+ AS=20 PS=4\n+ AD=20 PD=4", block: true)
 
-#text("图A8 一个传输门( 为简单起见，没有显示衬底节点 )")
+由端口顺序 `M d g s b model` 可知，PMOS 门控端为节点0，NMOS 门控端为节点1，两者在数据节点2与3之间并联导通。
 
-#text("A.3.4 分析声了明")
+== A.3.4　分析声明
 
-#text("为了指示 SPICE 对”个给定的电路完成不同的模拟，SPICE 提供了分析命令我们特别感兴\n趣的两个分析是:")
+原书重点介绍两种分析：*瞬态* 和 *直流*。一个网表可包含多个此类分析请求。
 
-#text("1，瞬态")
+=== 瞬态
 
-#text("2. A")
+瞬态分析观察电压与电流随时间变化的响应；数值方法求解电路微分方程。*图 A.9* 使用 10 V 输入阶跃、1 kΩ 电阻和 1 μF 电容，展示电容节点电压从0 V逐渐接近10 V的过程。
 
-#text("可以在 SPICE 文件里调用多个瞬态和直流分析要求。")
+#raw(".tran tstep tstop", block: true)
 
-#text("me\nBRASH AF OR — RHA ECAR. 例如，可能要观察在一个 RC Ree HEANOR\n输入时电容的电压情况，或当一个 MOS 器件开关时通过的电流。对于这种分析，使用者必须指\n定仿真执行的时间同隔，以及用来绘图的时间步长，。SPICE 内部用数值计算方式解决电路的微分\n方程并且产生非常精确的结果-\n一个RC 电路的瞬态分析的例子如图 A.9 所示\n用                              RC MR some")
-
-#text("时间 (ms )\n图A9 一个RC 电路以及当 Weeee从0Y 到10 V 扫过时的履图")
-
-#text("tran 瞬态分析声明的句法是:")
-
-#text("tran tstep tstop")
+其中 `tstep` 是输出的时间步长，`tstop` 是仿真停止时间。下一扫描页给出对应的 1 ms / 10 ms 示例。

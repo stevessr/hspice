@@ -12,6 +12,11 @@ import shutil
 import subprocess
 
 ROOT = Path(__file__).resolve().parent
+STATUS_PATH = ROOT.parent / "page-status.json"
+STATUS_DATA = json.loads(STATUS_PATH.read_text(encoding="utf-8"))
+STATUS_BY_PAGE = {p["pdf_page"]: p for p in STATUS_DATA["pages"]}
+if len(STATUS_BY_PAGE) != 445 or set(STATUS_BY_PAGE) != set(range(1,446)):
+    raise RuntimeError("Editorial status map must cover every source PDF page exactly once")
 SECTIONS = [
     ("001-page-001", "原书PDF1：前置页机器OCR未校对", [1]),
     ("002-page-002", "原书PDF2：前置页机器OCR未校对", [2]),
@@ -433,33 +438,33 @@ SECTIONS = [
     ("393-page-416", "原书PDF416：书末机器OCR未校对", [416]),
     ("394-page-417", "原书PDF417：书末机器OCR未校对", [417]),
     ("395-page-418", "原书PDF418：书末机器OCR未校对", [418]),
-    ("396-page-419", "原书PDF419：书末机器OCR未校对", [419]),
-    ("397-page-420", "原书PDF420：书末机器OCR未校对", [420]),
-    ("398-page-421", "原书PDF421：书末机器OCR未校对", [421]),
-    ("399-page-422", "原书PDF422：书末机器OCR未校对", [422]),
-    ("400-page-423", "原书PDF423：书末机器OCR未校对", [423]),
-    ("401-page-424", "原书PDF424：书末机器OCR未校对", [424]),
-    ("402-page-425", "原书PDF425：书末机器OCR未校对", [425]),
-    ("403-page-426", "原书PDF426：书末机器OCR未校对", [426]),
-    ("404-page-427", "原书PDF427：书末机器OCR未校对", [427]),
-    ("405-page-428", "原书PDF428：书末机器OCR未校对", [428]),
-    ("406-page-429", "原书PDF429：书末机器OCR未校对", [429]),
-    ("407-page-430", "原书PDF430：书末机器OCR未校对", [430]),
-    ("408-page-431", "原书PDF431：书末机器OCR未校对", [431]),
-    ("409-page-432", "原书PDF432：书末机器OCR未校对", [432]),
-    ("410-page-433", "原书PDF433：书末机器OCR未校对", [433]),
-    ("411-page-434", "原书PDF434：书末机器OCR未校对", [434]),
-    ("412-page-435", "原书PDF435：书末机器OCR未校对", [435]),
-    ("413-page-436", "原书PDF436：书末机器OCR未校对", [436]),
-    ("414-page-437", "原书PDF437：书末机器OCR未校对", [437]),
-    ("415-page-438", "原书PDF438：书末机器OCR未校对", [438]),
-    ("416-page-439", "原书PDF439：书末机器OCR未校对", [439]),
-    ("417-page-440", "原书PDF440：书末机器OCR未校对", [440]),
-    ("418-page-441", "原书PDF441：书末机器OCR未校对", [441]),
-    ("419-page-442", "原书PDF442：书末机器OCR未校对", [442]),
-    ("420-page-443", "原书PDF443：书末机器OCR未校对", [443]),
-    ("421-page-444", "原书PDF444：书末机器OCR未校对", [444]),
-    ("422-page-445", "原书PDF445：书末机器OCR未校对", [445]),
+    ("396-page-419", "原书PDF419：附录A A.1 绪论、A.2 设计流程（编辑选段）", [419]),
+    ("397-page-420", "原书PDF420：附录A A.3 反相器 SPICE 网表与图A.1/A.2（编辑选段）", [420]),
+    ("398-page-421", "原书PDF421：附录A A.3.1 标题与 A.3.2 参数/模型库（编辑选段）", [421]),
+    ("399-page-422", "原书PDF422：附录A A.3.2 .param、.lib 与 .opt scale（编辑选段）", [422]),
+    ("400-page-423", "原书PDF423：附录A A.3.3 表A.1 元件名与节点（编辑选段）", [423]),
+    ("401-page-424", "原书PDF424：附录A 表A.2 SPICE 工程前缀与模型（编辑选段）", [424]),
+    ("402-page-425", "原书PDF425：附录A 器件尺寸、元件续行与 V/I 源（编辑选段）", [425]),
+    ("403-page-426", "原书PDF426：附录A PULSE/PWL 脉冲及参数表（编辑选段）", [426]),
+    ("404-page-427", "原书PDF427：附录A RLC、MOSFET 四端语法（编辑选段）", [427]),
+    ("405-page-428", "原书PDF428：附录A 传输门与 .tran 瞬态分析（编辑选段）", [428]),
+    ("406-page-429", "原书PDF429：附录A 瞬态时间参数及 .dc 双重扫描（编辑选段）", [429]),
+    ("407-page-430", "原书PDF430：附录A 图A.11 双重DC扫描、.plot/.print（编辑选段）", [430]),
+    ("408-page-431", "原书PDF431：A.4 .ic、.end及完整网表示例（编辑选段）", [431]),
+    ("409-page-432", "原书PDF432：A.4 图A.12、A.13与仿真曲线（编辑选段）", [432]),
+    ("410-page-433", "原书PDF433：附录B 章节提要及BJT导论（编辑选段）", [433]),
+    ("411-page-434", "原书PDF434：附录B 图B.1/B.2及npn结构（编辑选段）", [434]),
+    ("412-page-435", "原书PDF435：附录B 式B.1/B.2与肖特基结（编辑选段）", [435]),
+    ("413-page-436", "原书PDF436：附录B 图B.3、式B.3/B.4.1a与SBD（编辑选段）", [436]),
+    ("414-page-437", "原书PDF437：附录B Ebers–Moll电流与结电容模型（编辑选段）", [437]),
+    ("415-page-438", "原书PDF438：附录B 电阻负载BJT反相器与VTC（编辑选段）", [438]),
+    ("416-page-439", "原书PDF439：附录B 图B.5与式B.5.1—B.5.4（编辑选段）", [439]),
+    ("417-page-440", "原书PDF440：附录B 例题门限与肖特基钳位（编辑选段）", [440]),
+    ("418-page-441", "原书PDF441：附录B BJT开关、TTL原理及与非门（编辑选段）", [441]),
+    ("419-page-442", "原书PDF442：附录B 图B.7 TTL门电路与原理图（编辑选段）", [442]),
+    ("420-page-443", "原书PDF443：附录B 图B.8 TTL VTC的三个转折点（编辑选段）", [443]),
+    ("421-page-444", "原书PDF444：附录B 表B.1、TTL延迟与参考文献（编辑选段）", [444]),
+    ("422-page-445", "原书PDF445：封底书目、作者简介与ISBN（编辑选段）", [445]),
 ]
 CSS = """
 <style>
@@ -470,6 +475,8 @@ h2{margin-top:1.7rem;font-size:1.25rem}
 table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;margin:1rem 0}
 th,td{padding:.45rem .75rem;border:1px solid #c9d4dd;text-align:start}
 th{background:#e8f3fa}math{max-width:100%;overflow-x:auto}p{margin:.8rem 0}
+pre{max-width:100%;overflow-x:auto;padding:.75rem;background:#f2f5f8;border-radius:6px;line-height:1.45;font-size:.88rem}
+code{font-family:"DejaVu Sans Mono",monospace;font-size:.95em}
 @media(prefers-color-scheme:dark){
 body{color:#d9e7ee;background:#171c24}h1,h2,h3{color:#8ac6ed}
 th{background:#243c4a}th,td{border-color:#475869}}
@@ -514,7 +521,9 @@ def main():
         shutil.copy2(src,args.output/f"{stem}.typ")
         index.append(dict(id=stem,title=title,source_pdf_pages=pages,
                           html=stem+".html",typst=stem+".typ",
-                          status=("machine OCR only; text, math, diagrams and layout unverified" if pages[0]<20 or pages[0]>=357 else "native editorial selection; full pages not accepted")))
+                          status=("native editorial selection; full pages not accepted"
+                                  if all(STATUS_BY_PAGE[n].get("editorial_typst_draft", False) for n in pages)
+                                  else "machine OCR only; text, math, diagrams and layout unverified")))
         print(f"HTML OK {stem}: {len(html)} bytes",flush=True)
     (args.output/"index.json").write_text(
         json.dumps(dict(format="native-typst-html",accepted_full_pages=0,

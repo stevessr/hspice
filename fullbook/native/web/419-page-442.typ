@@ -1,14 +1,34 @@
-// SOURCE PDF PAGE 442; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第442页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("HRB 双极型晶体管和电路               423")
+// SOURCE PDF PAGE 442 / printed page 423
+// Editable 74-series TTL elements and chapter B.9 VTC introduction.
+#set document(title:"附录B 图B.7 TTL与非门电路及B.9特性 · PDF442")
+= 附录 B · 印刷第423页
+== B.8　双极数字门电路（续）
 
-#text("局\n100")
+*图 B.7(a)*：标准的两输入 TTL 与非门。原图的节点结构包括从5 V电源到多发射极输入管 $Q_1$ 的 $R_1$，电平转换器 $Q_2$，图腾柱上拉管 $Q_4$、下拉管 $Q_3$ 和钳位二极管 $D_1$。输出标注为 F，输入标注为 A 和 B。
 
-#text("Dy")
+#table(columns:(1fr,1fr,2.5fr),inset:(x:3pt,y:2pt),
+table.header([*元件/参数*],[*原图值*],[*功能*]),
+[$V_("CC")$],[5 V],[TTL工作电源],
+[$R_1$],[4 kΩ],[多发射极输入管偏置],
+[$R_2$],[1 kΩ],[相位分裂及下拉通路偏置],
+[$R_3$],[1.6 kΩ],[上拉控制偏置],
+[上拉支路电阻],[130 Ω],[上拉供电通路],
+[$Q_1$],[多发射极],[A/B输入与非逻辑],
+[$Q_2$],[相位分裂],[分别驱动Q3和Q4],
+[$Q_3$ / $Q_4$],[图腾柱],[推挽式输出驱动],
+[$D_1$],[二极管],[输出支路钳位],
+)
 
-#text("《e) 双4输入与非站版图\n图B7 一个TTL 的电路原理图和IC 版图")
+*图 B.7(b)*：四输入 TTL 与非门 IC 版图，原版图含四个输入引脚及独立的金属连线、器件扩散区与过孔结构。该原始版图尚未完整原生化。
 
-#text("Bo 电压传输特性\n标准 TTL 与非站的电压传输特性如图 B8 所示。在描述特性时假设使用通常的典型值，即:")
+== B.9　电压传输特性
+
+原书图 B.8 给出标准 TTL 与非门的近似 VTC。计算使用典型晶体管电压参数：
+
+$ V_("BE")("on")=0.7 " V" $
+
+$ V_("BE")("sat")=0.8 " V" $
+
+$ V_("CE")("sat")=0.1 " V" $
+
+下一页逐个分析 VTC 的转折点。

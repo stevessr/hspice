@@ -1,20 +1,41 @@
-// SOURCE PDF PAGE 443; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第443页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("424         数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 443 / printed page 424
+#import "../figures/appendix-b-native.typ": ttl-vtc
+// Source-checked TTL NAND transfer-curve breakpoints.
+#set document(title:"附录B 图B.8 标准TTL门VTC、三个断点 · PDF443")
+= 附录 B · 印刷第424页
+== B.9　电压传输特性（续）
 
-#text("1\nYn\nB.S 标准 TTL 电路的电压传输特性")
+*图 B.8* 是标准 TTL 电路电压传输特性，教材逐个计算三个折点。在原书的近似参数下：
 
-#text("首先注意，当任一输入(A 或B ) 为低电平时 { 也就是We = 0.1V ) 晶体管Q工作在也和状\n态，这是因为当基极-发射极结正偏时，Q的基极电流大约是 ! mA但是Qi的集电极电流限制到\n通过Qu晶体管的集电极-基极结的反向电流或泄漏电流，旦这个值通常为大约 1 nA ”由于\nTo Be ly, 蝇体管Q 必然是饱和的-作为结果，Vcp = Versa = 0.1 V, 所以Vi =0.2V 但是\nVea = Vins 因此两个晶体管Q和Q,必须截止。 因此，无论哪一个输入为低电压,输出都将为高\n现在即使给输出节点提供泄渚电流; 晶体管Q,也必须开启。 所以, 由于Vaguen = Voom = 07V，\n我们得出Von = Voc — 2Vsaom = 36V-。")
+#ttl-vtc()
 
-#text("特性曲线的第一个断点发生在晶体管@开启时。也就是说，Vc = Vaz= 0.7V、并且\nVB=0V，Vae =07 V, 但是Vae =0V。 给Qu的基极电流由QQ的正向偏置的基极-集电极结提\n供。回想在他和状态时，晶体管的两个结都是正偏的。 因此由于Va = 0.7 VIEEL Vora = 0.1,\n=06V- 这样在第一个断点，Vx= 06V并且Vor= 3.6V。\n第二个断点发生在晶体管 Q, 开启时.但是Vaa = Ven BDL Ten = ValR 从而对于\n07VY，心刁=07V/IkD = 07 mA. 在Q@集电极的电压是Va = Vcc - JR =\nOV. 注意到由于Vcp = Va - We=39 一07= 32V，Q工作在正向活性模式\n这个门的输出电压是比Va低 2Vago, 所以Vou = 2.5V。为了确定输入电压,晶体管QI仍然处于\n饱和状态，并且Vc = Vae + Vey: 也就是2Vaaou = LAV. 因此，Va = 13V 第 2 断点的坐标\nBEV = 1.3 VEIVog = 2.5V")
+#table(columns:(1fr,1.5fr,1.5fr,2.3fr),inset:(x:3pt,y:2pt),
+table.header([*点*],[*输入(V)*],[*输出(V)*],[*物理状态*]),
+[BP1],[0.6],[3.6],[电路开始从高输出切换],
+[BP2],[1.3],[2.5],[下拉晶体管开始导通],
+[BP3],[1.5],[0.1],[下拉支路进入饱和],
+)
 
-#text("BRAMLEY HH FRE Verran = 0.1 V，由于晶体\nFQ CHA, 所以Va = 2Vaguo = 1.6V-。 晶体管QI仍然是伯和的, 所以Vs= 1.6 - 01= 15V\n这个断点的坐标似乎是Vn = 1.5V和Von = 01V。")
+=== 高输出电压
 
-#text("B.10 ”传输延迟时间")
+任一输入 A 或 B 为低电平（原书取 $V_("in")=0.1 " V"$），多发射极输入管 $Q_1$ 导通，$Q_2$ 和 $Q_3$ 截止；上拉晶体管 $Q_4$ 接通输出支路：
 
-#text("在 TTL 电路的输入端使用一个晶体管改善了传输延迟时间, 特别是 rm时间, 参阅图B7(a )\n为了使输出变高，需要关断给晶体管 Q,的基极电流。所以，我们必须快速关断晶体管Q。 在变")
+$ V_("OH") = V_("CC") - 2 V_("BE")("on") = 5 - 2 times 0.7 = 3.6 " V" $
 
-#text("Mu")
+=== 折点 BP1
+
+当 $V_("in")=0.6 " V"$，输入晶体管的集电结节点达到足够的偏压，$Q_2$ 开始导通，原书给出 $V_("out")=3.6 " V"$。
+
+=== 折点 BP2
+
+当 $V_("in") approx 1.3 " V"$，输出电压降至约 $2.5 " V"$。书中利用 $Q_2$ 的发射极电位和 $Q_3$ 的基极—发射极导通电压建立该近似结果。
+
+=== 折点 BP3
+
+下拉管 $Q_3$ 饱和时，$V_("out")=V_("CE")("sat")=0.1 " V"$，原书计算输入阈值为 $1.5 " V"$。
+
+== B.10　传输延迟时间
+
+TTL 的上升和下降传输延迟由多个 BJT 的电荷存储、驱动电流与负载共同决定。原书特别指出，下拉管 $Q_3$ 关断会影响输出从低电平上升的延迟 $t_("PLH")$。
+
+_图 B.8 断点与数值来自本页扫描，曲线的原始比例尺仍待绘制与校验。_
