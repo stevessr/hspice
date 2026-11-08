@@ -2050,27 +2050,33 @@
       "pdf_page": 151,
       "status": "partially-transcribed",
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass1",
+      "proofread_round": "2026-11-08-cmos-device-equation-source-recheck",
       "source_file": "web/128-page-151.typ",
       "text_checked_against_scan": false,
       "formulas_checked_against_scan": true,
       "native_tables_checked": false,
       "figures_verified": false,
       "layout_verified": false,
-      "notes": "PDF151式(4.17-4.19)VIL/VIH求解、例4.7题设；单位增益点条件保留。"
+      "notes": "PDF151：根据445页原件重建式(4.17)–(4.19)的简化前电流平衡式、约化式和对Vin微分的中间式；仍需逐行版式/公式字距验收。",
+      "editorial_typst_draft": true,
+      "source_scan_landmarks_checked": true,
+      "human_verified": false
     },
     {
       "pdf_page": 152,
       "status": "partially-transcribed",
       "native_html_selection_available": true,
-      "proofread_round": "2026-11-07-pass1",
+      "proofread_round": "2026-11-08-cmos-device-equation-source-recheck",
       "source_file": "web/129-page-152.typ",
       "text_checked_against_scan": false,
-      "formulas_checked_against_scan": false,
+      "formulas_checked_against_scan": true,
       "native_tables_checked": true,
       "figures_verified": false,
       "layout_verified": false,
-      "notes": "PDF152例4.7 CMOS网表及SPICE读数VIL=.626, VIH=.909, NMH=.891, NML=.626；图仅趋势。"
+      "notes": "PDF152：以源扫描VTC中VIL=0.626V、VS=0.8V、VIH=0.909V及VOH/VOL为地标重画可编辑曲线；曲线为插值，非SPICE原始数据。",
+      "editorial_typst_draft": true,
+      "source_scan_landmarks_checked": true,
+      "human_verified": false
     },
     {
       "pdf_page": 153,
