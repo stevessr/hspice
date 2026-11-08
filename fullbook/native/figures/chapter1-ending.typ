@@ -114,3 +114,37 @@
   #place(top + left,dx: 21pt,dy: 78pt,text(size:8pt)[$Delta V = 0.6 " V"$]))
   #place(top + left,dx: 21pt,dy: 108pt,text(size:8pt)[$Delta t = 30 " ps"$]))
 ])
+
+
+// Figure P1.9 (PDF045): source-accurate component values and SPDT switch topology.
+// All primitives remain editable, unlike a raster snapshot of the circuit.
+#let switch-capacitor() = html.frame(block(width: 340pt, height: 165pt)[
+  #place(top + left,dx:115pt,dy:9pt,line(length:45pt,stroke:.8pt))
+  #place(top + left,dx:138pt,dy:9pt,line(end:(0pt,20pt),stroke:.8pt))
+  #place(top + left,dx:138pt,dy:29pt,rect(width:10pt,height:29pt,stroke:.8pt,fill:white))
+  #place(top + left,dx:150pt,dy:31pt,text(size:8pt)[$R_1=30 " k" Omega$]))
+  #place(top + left,dx:138pt,dy:58pt,line(end:(0pt,8pt),stroke:.8pt))
+  #place(top + left,dx:138pt,dy:66pt,circle(radius:2.8pt,stroke:.8pt,fill:white))
+  #place(top + left,dx:138pt,dy:111pt,circle(radius:2.8pt,stroke:.8pt,fill:white))
+  #place(top + left,dx:138pt,dy:114pt,line(end:(0pt,8pt),stroke:.8pt))
+  #place(top + left,dx:138pt,dy:122pt,rect(width:10pt,height:27pt,stroke:.8pt,fill:white))
+  #place(top + left,dx:151pt,dy:127pt,text(size:8pt)[$R_2=12.5 " k" Omega$]))
+  #place(top + left,dx:138pt,dy:149pt,line(end:(0pt,8pt),stroke:.8pt))
+  #place(top + left,dx:130pt,dy:157pt,line(length:16pt,stroke:.8pt))
+  #place(top + left,dx:134pt,dy:161pt,line(length:8pt,stroke:.8pt))
+  // Common switch contact and two selectable R1/R2 throws.
+  #place(top + left,dx:189pt,dy:87pt,circle(radius:3pt,stroke:.8pt,fill:white))
+  #place(top + left,dx:190pt,dy:87pt,line(end:(-40pt,-17pt),stroke:.9pt))
+  #place(top + left,dx:193pt,dy:78pt,text(size:8pt)[开关]))
+  #place(top + left,dx:195pt,dy:87pt,line(length:87pt,stroke:.8pt))
+  #place(top + left,dx:282pt,dy:87pt,line(end:(0pt,18pt),stroke:.8pt))
+  #place(top + left,dx:272pt,dy:105pt,line(length:20pt,stroke:.9pt))
+  #place(top + left,dx:272pt,dy:111pt,line(length:20pt,stroke:.9pt))
+  #place(top + left,dx:282pt,dy:111pt,line(end:(0pt,33pt),stroke:.8pt))
+  #place(top + left,dx:274pt,dy:144pt,line(length:16pt,stroke:.8pt))
+  #place(top + left,dx:278pt,dy:149pt,line(length:8pt,stroke:.8pt))
+  #place(top + left,dx:296pt,dy:106pt,text(size:8pt)[$C_("load")$]))
+  #place(top + left,dx:296pt,dy:119pt,text(size:8pt)[$1 " μF"$]))
+  #place(top + left,dx:12pt,dy:7pt,text(size:8pt)[$V_("DD")=1.2 " V"$]))
+  #place(top + left,dx:291pt,dy:90pt,text(size:8pt)[$+$]))
+])
