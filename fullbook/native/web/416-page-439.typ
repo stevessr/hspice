@@ -1,10 +1,13 @@
 // SOURCE PDF PAGE 439 / printed page 420
+#import "../figures/appendix-b-native.typ": bjt-vtc
 // BJT inverter VTC: source-checked B.5.1–B.5.4 equations.
 #set document(title:"附录B BJT反相器四个逻辑电平与式B.5.1—5.4 · PDF439")
 = 附录 B · 印刷第420页
 == B.5　电压传输特性（续）
 
 图 B.5 的电压传输曲线保留了原书的三个工作区：截止、正向活性、饱和。对于上一页 $V_("CC")=5 " V"$ 的电阻负载 BJT 反相器：
+
+#bjt-vtc()
 
 + 截止区对应高输出电平：$V_("OH")=V_("CC")=5 " V"$。
 + 饱和区对应低输出电平：$V_("OL")=V_("CE")("sat")=0.1 " V"$。
