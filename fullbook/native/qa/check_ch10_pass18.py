@@ -71,5 +71,14 @@ for n,anchors in {
     source=(r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
     compact="".join(source.split())
     assert all("".join(x.split()) in compact for x in anchors), (n, [x for x in anchors if "".join(x.split()) not in compact])
+f=(r/"figures/ch10-rc-elmore-native.typ").read_text(encoding="utf-8")
+# Structural guard: L, π, T, waveform, physical process axis and full buffered segment.
+for anchor in ("#let shunt(", "k==0", "k==1", "C/2", "R/2", "Cwire",
+               "(a) 集总 RC 波形", "(b) 分布式 RC 波形",
+               "工艺尺寸（从大到小）", "(3,27,116)", "(12,110,460)",
+               "(30,240,1035)", "(150,40,25)",
+               "(a) 长为 L", "(b) 缓冲器", "(c) 单段 π 模型", "Reqn/M", "Rint L/N"):
+    assert anchor in f, ("native RC figure missing",anchor)
+print("Native Fig10.5/10.8/10.9/10.10 waveform/topology/technology axes landmarks passed.")
 print("Pass18 chapter10 PDF357–364 source-scan formula/units and diagram landmarks passed; strict 0/445.")
 
