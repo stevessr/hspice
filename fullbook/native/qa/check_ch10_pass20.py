@@ -21,7 +21,7 @@ marks={
 for n,words in marks.items():
  text=(root/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
  assert f"SOURCE PDF PAGE {n}" in text[:95] and "MACHINE-OCR DRAFT ONLY" not in text
- assert not re.search(r'#image\\([^)]*page-\\d+\\.(?:png|jpg)',text,re.I)
+ assert "#image(" not in text
  assert all(k in text for k in words),(n,[k for k in words if k not in text])
  a=status[n-1];b=fidelity[n-1]
  assert a["editorial_typst_draft"] and a["source_scan_landmarks_checked"]
