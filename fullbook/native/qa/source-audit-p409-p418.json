@@ -1,0 +1,100 @@
+{
+  "source_pdf_pages": 445,
+  "scope": [
+    409,
+    418
+  ],
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "rendering": "pdftoppm -r 125 -png",
+  "pages": [
+    {
+      "pdf_page": 409,
+      "printed_page": 390,
+      "source_render_sha256": "39d394c48837c75004c7b76ce4b62ab65af190c67234a6cd0bfba82713d6ade2",
+      "figures": [
+        "11.35"
+      ]
+    },
+    {
+      "pdf_page": 410,
+      "printed_page": 391,
+      "source_render_sha256": "b5dbdcd43cb8992cea687a7ec90cd6822b98c2e1e8789a680fa1e0b77552a7c2",
+      "figures": [
+        "11.36",
+        "11.37"
+      ]
+    },
+    {
+      "pdf_page": 411,
+      "printed_page": 392,
+      "source_render_sha256": "d2a47b725d2df36825faed877274678fb2a1fa72ce0c6f7d65e14fba31c82541",
+      "figures": [
+        "11.38",
+        "11.39"
+      ]
+    },
+    {
+      "pdf_page": 412,
+      "printed_page": 393,
+      "source_render_sha256": "a5e68fe327914cef6c1c1c523ddd8df3b756e0b12fdf97d56708d9f3fb4a3991",
+      "figures": [
+        "11.40"
+      ]
+    },
+    {
+      "pdf_page": 413,
+      "printed_page": 394,
+      "source_render_sha256": "74e39957fe2d688156c6e7cf66c17cd53a02aa8ff3d2ad2566ba538b8a89dc8a",
+      "figures": [
+        "11.41"
+      ]
+    },
+    {
+      "pdf_page": 414,
+      "printed_page": 395,
+      "source_render_sha256": "c6d91fab8771cdb46ce4529302d4226c039584f7153202f16f0086acc883708e",
+      "figures": [
+        "11.42"
+      ]
+    },
+    {
+      "pdf_page": 415,
+      "printed_page": 396,
+      "source_render_sha256": "cec315acb8f6104ae8fb675518602a12a184b27fd6b4c28cc453f3b3ce76785c",
+      "figures": [
+        "11.43",
+        "11.44"
+      ]
+    },
+    {
+      "pdf_page": 416,
+      "printed_page": 397,
+      "source_render_sha256": "0c57b102e94c7503b83beb8578d6c574a0a75d9775abd52391ca70b5cebdd73d",
+      "figures": [
+        "P11.2",
+        "P11.3"
+      ]
+    },
+    {
+      "pdf_page": 417,
+      "printed_page": 398,
+      "source_render_sha256": "685cec87211427d8f4e5f94747f0411b3ac38c9f2d8fd5e971afa268840dad94",
+      "figures": [
+        "P11.4",
+        "P11.6"
+      ]
+    },
+    {
+      "pdf_page": 418,
+      "printed_page": 399,
+      "source_render_sha256": "0efab4010919c0e30835186723e33518803958de1bea8b04e189d9c87abc1cb3",
+      "figures": [
+        "P11.7"
+      ]
+    }
+  ],
+  "chapter": "11",
+  "edit_scope": "PLL/PFD/charge pump/loop stability/VCO/DLL/clock summary/Chapter11 problems",
+  "strict_full_pages_accepted": 0,
+  "note": "Source scan content and figure IDs checked. Editable topology is approximate. Full page text/math/layout remains open to independent comparison."
+}
