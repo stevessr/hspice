@@ -86,11 +86,11 @@
   #inv(5pt,50pt,s:"1X")
   #w(36pt,50pt,53pt,50pt)
   #for k in range(4) [
-    #let yy=22pt+k*29pt
-    #w(5pt,yy+7pt,40pt,yy+7pt)
-    #tg(40pt,yy+7pt,label:"TG")
-    #w(76pt,yy+7pt,91pt,yy+7pt)
-    #txt(81pt,yy-7pt,if k%2==0 {"ON"} else {"OFF"})
+    #let yy=22pt+k * 29pt
+    #w(5pt,yy + 7pt,40pt,yy + 7pt)
+    #tg(40pt,yy + 7pt,label:"TG")
+    #w(76pt,yy + 7pt,91pt,yy + 7pt)
+    #txt(81pt,yy - 7pt,if k % 2==0 {"ON"} else {"OFF"})
   ]
   #if name=="MUX1" [
     #tg(106pt,51pt,label:"TG")
@@ -128,7 +128,7 @@
   ]
   #for x in (55pt,101pt,161pt) [
     #w(x,43pt,x,68pt)
-    #cap(x-8pt,68pt)
+    #cap(x - 8pt,68pt)
     #ground(x,87pt)
   ]
   #txt(42pt,103pt,if third {"C1      C2       C3"} else {"C4      C5"})
