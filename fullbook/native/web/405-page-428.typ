@@ -1,5 +1,6 @@
 // SOURCE PDF PAGE 428 / printed page 409
 // Scan-guided transmission-gate and analysis definitions.
+#import "../figures/appendix-a-native.typ": *
 #set document(title:"附录A 传输门网表与瞬态分析 · PDF428")
 = 附录 A · 印刷第409页
 
@@ -8,6 +9,8 @@
 #raw("Mp 3 0 2 1 PMOS\n+ L=2 W=4\n+ AS=20 PS=4\n+ AD=20 PD=4\nMn 2 1 3 0 NMOS\n+ L=2 W=4\n+ AS=20 PS=4\n+ AD=20 PD=4", block: true)
 
 由端口顺序 `M d g s b model` 可知，PMOS 门控端为节点0，NMOS 门控端为节点1，两者在数据节点2与3之间并联导通。
+
+#align(center)[#a8-pass-gate()]
 
 == A.3.4　分析声明
 
@@ -18,5 +21,7 @@
 瞬态分析观察电压与电流随时间变化的响应；数值方法求解电路微分方程。*图 A.9* 使用 10 V 输入阶跃、1 kΩ 电阻和 1 μF 电容，展示电容节点电压从0 V逐渐接近10 V的过程。
 
 #raw(".tran tstep tstop", block: true)
+
+#align(center)[#a9-rc-step()]
 
 其中 `tstep` 是输出的时间步长，`tstop` 是仿真停止时间。下一扫描页给出对应的 1 ms / 10 ms 示例。

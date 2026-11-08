@@ -1,5 +1,6 @@
 // SOURCE PDF PAGE 424 / printed page 405
 // Scan-guided reconstruction of table A.2; physical figures are editorial placeholders.
+#import "../figures/appendix-a-native.typ": *
 #set document(title:"附录A SPICE元件值、工程前缀与模型 · PDF424")
 = 附录 A · 印刷第405页
 == A.3.3　源和器件列表（续）
@@ -7,6 +8,8 @@
 *图 A.3* 以电阻 `R5` 连接节点5与地，电阻值为 $10 " kΩ"$：
 
 #raw("R5 5 0 10k", block: true)
+
+#align(center)[#a3-resistor()]
 
 === 值与工程前缀
 
@@ -28,4 +31,6 @@ SPICE 可由器件类型判断基本单位；原书强调为改善可读性可�
 
 === 模型
 
-对于二极管、晶体管等主动器件，端口后面一般需要指定模型名称，并可跟随几何参数。*图 A.4* 展示一个引用 `nmos` 模型的 MOSFET，具体参数在下一扫描页继续。
+对于二极管、晶体管等主动器件，端口后面一般需要指定模型名称，并可跟随几何参数。#align(center)[#a4-mos()]
+
+*图 A.4* 展示一个引用 `nmos` 模型的 MOSFET，具体参数在下一扫描页继续。

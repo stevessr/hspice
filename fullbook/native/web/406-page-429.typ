@@ -1,5 +1,6 @@
 // SOURCE PDF PAGE 429 / printed page 410
 // Scan-checked transient and DC analysis syntax with native explanation.
+#import "../figures/appendix-a-native.typ": *
 #set document(title:"附录A .tran .dc仿真命令 · PDF429")
 = 附录 A · 印刷第410页
 == A.3.4　分析声明（续）
@@ -19,6 +20,8 @@ table.header([*字段*],[*定义*]),
 === 直流分析
 
 直流分析通过扫描一个独立源的值观察其他变量，如反相器电压传输特性或 MOS 的 $I$–$V$ 曲线。*图 A.10* 中的电路由1 kΩ + 1 kΩ 电阻分压，电压源从0 V扫到10 V时，中点电压从0 V线性升至5 V。
+
+#align(center)[#a10-divider()]
 
 可选第二组扫描参数用于产生多条曲线。教材列出的形式：
 

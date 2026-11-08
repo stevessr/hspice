@@ -1,5 +1,6 @@
 // SOURCE PDF PAGE 425 / printed page 406
 // Editable device syntax and netlist reconstruction; diagrams still await exact fidelity proof.
+#import "../figures/appendix-a-native.typ": *
 #set document(title:"附录A MOSFET参数及V/I源 · PDF425")
 = 附录 A · 印刷第406页
 == A.3.3　器件名称与参数（续）
@@ -31,5 +32,7 @@ table.header([*字段*],[*意义*]),
 *图 A.5 示例：* 电压源 `Vsupply` 在节点5与地之间提供15 V，电流源 `Isupply` 从节点2到节点3，数值由参数 `Icc` 指定。
 
 #raw("Vsupply 5 0 15\nIsupply 2 3 'Icc'", block: true)
+
+#align(center)[#a5-sources()]
 
 _图 A.5 的图形符号尚需按照扫描件重画。_

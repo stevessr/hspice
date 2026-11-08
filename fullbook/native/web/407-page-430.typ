@@ -1,5 +1,6 @@
 // SOURCE PDF PAGE 430 / printed page 411
 // Source-checked two-dimensional DC sweeps and analysis output statements.
+#import "../figures/appendix-a-native.typ": *
 #set document(title:"附录A 双重DC扫描与绘图打印 · PDF430")
 = 附录 A · 印刷第411页
 == A.3.4　直流扫描（续）
@@ -15,6 +16,8 @@
 #raw(".dc Vdrain 0 'Supply' 'Supply/20' Vgate 0 'Supply' 'Supply/4'", block: true)
 
 第一组从0到 `Supply`，步长为 `Supply/20`；第二组从0到 `Supply`，步长为 `Supply/4`。每个栅压值对应一条 $I_("DS")$–$V_("DS")$ 曲线。
+
+#align(center)[#a11-nmos-curves()]
 
 === 绘图与打印声明
 
