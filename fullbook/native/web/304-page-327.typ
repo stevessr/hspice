@@ -1,34 +1,31 @@
-// SOURCE PDF PAGE 327; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第327页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("308         数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 327 / printed 308. Source-guided editable editorial draft.
+// No full-page 1:1 acceptance; all transistor-level artwork remains provisional.
+#import "../figures/ch8-sram-cam-native.typ": figure9
+#set document(title:"第9章·PDF327·CAM与FPGA")
+#align(center)[#text(size:8pt,weight:"bold")[308　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("wh                      ea\n有")
+#figure9(5)
+#align(center)[*图9.5　为加速匹配操作而重新排列的CAM单元（可编辑结构示意）*]
 
-#text("nad")
+*例9.1　匹配操作的延迟*
 
-#text("图95 Ari ae CN FT LAO")
+*问题：* 使用0.18 μm工艺参数，估算图9.4所示CAM阵列的最坏不匹配延迟。每一行有33个CAM单元（包括有效位），每一列有128个CAM单元。标签线总电容450 fF，匹配线总电容200 fF，标签线输入驱动器电容3 fF。
 
-#text("例9.1 匹配操作的延迟")
+*解答：* 标签线经过驱动器传播，然后匹配线根据最坏的不匹配位放电。因此总时间可分为两部分：
 
-#text("iam:\n使用 0.18 um 工艺参数,计算对于图 9.4 所示的 CAM 阵列, 不匹配操作的最坏情况延")
+#align(center)[$t_("total")=t_("tag")+t_("matchline")$]
 
-#text("PLA AY CAM 单元如下所示。 阵列每一行有 33 个 CAM 单元，每一列有 128 个单元 画出一列\n和一行的 CAM 单元:由于这些单元，使标签线有 450 作 的电容,匹配线有 200 fF 的电容.标签\n线的输入驱动器有 3 人 的输入电容")
+标签线可以使用第6章的逻辑强度分析。以FO4为经验级强度，路径的电气强度为：
 
-#text("标签线                          ree\n工              工")
+#align(center)[$H= C_("tag")/C_("in")=(450 "fF")/(3 "fF")=150$]
 
-#text("CAM 行和列的夯法应该与图 9.2 类似。根据这幅图，标签线和匹配线的总延迟是:")
+驱动器级数近似：
 
-#text("WL")
+#align(center)[$N approx log_4(150) approx 3.6$]
 
-#text("ML")
+因此选择4级驱动器，最佳的平均级强度约为：
 
-#text("Treat = Tag + Tine")
+#align(center)[$"SE"=root(4,150) approx 3.5$]
 
-#text("标签线上的延迟可以用逻辑强度获得。 驱动器的级数可以用 FO4 规则确定:")
-
-#text("N= ton,(S2) = oo( 22) = log,(150) = 36 ~ 4级")
-
-#text("对于四级来说最佳的级数强度 (SE, stage effort ) 是:\nSE* = 7150 = 35")
+实际布线的寄生、上拉及下拉速度仍需结合后续每级寄生延迟计算。

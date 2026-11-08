@@ -1,24 +1,25 @@
-// SOURCE PDF PAGE 331; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第331页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("312      数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 331 / printed 312. Source-guided editable editorial draft.
+// No full-page 1:1 acceptance; all transistor-level artwork remains provisional.
+#import "../figures/ch8-sram-cam-native.typ": figure9
+#set document(title:"第9章·PDF331·CAM与FPGA")
+#align(center)[#text(size:8pt,weight:"bold")[312　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("疼的布边是决定 PLB 是时序还是组合的元件.为多路器而设置的 SRAM 位决定了输出是直\n接从传输管树得到还是从 D 触发器的输出 Q 得到- 选择传输管树输出产生了一个组合电路,而选\n择 D 触发器输出产生了一个时序电路。触发器是边沿触发的，并且申输入到 PLB 的一个附加的\nCLK 信号近制 注意在 FPGA 中, 时钟必须对称连到所有的 PLB. 因为所有的触发器都需要时钟\n当然现代的 FPGA 有许多附加的时钟必须连接到其他类型的块中")
+PLB输出的配置多路器决定其逻辑类型。选择查找表组合结果时，PLB实现组合逻辑；选择D触发器输出时，PLB实现时序逻辑。触发器由额外CLK信号控制，时钟需要按布局连接到各个PLB。实际FPGA常包含多种时钟资源，但源书的简化结构只给出基本DFF连接。
 
-#text("例9.2 FPGA BMS")
+*例9.2　FPGA逻辑块*
 
-#text("问题:")
+*问题：* 图9.9的3-LUT实现什么逻辑功能？该逻辑是组合还是时序？
 
-#text("1679.9 中，PLB 实现的功能是什么”这个函数是组合的还是时序的?")
+*解答：* 根据图中的8个SRAM配置位建立三输入真值表，再使用卡诺图化简：
 
-#text("RE:")
+#align(center)[$"Out"= B + A C$]
 
-#text("使用卡诺图,得到Out = 8 + AC. 这是一个组合功能，由于 SRAM 位设置为\n触发器的输出没有被选通通过多路器，")
+本例选择的是直接的查找表输出，而不是触发器输出，所以属于组合逻辑。
 
-#text("，所以 D")
+PLB之间使用预制布线轨迹。连接区里的每一条可编程连接都由SRAM位控制相应的传输管。当配置位为1时，对应传输管允许信号通过；为0时连接断开。
 
-#text("逻辑块间的连接使用预制的布线轨迹来实现。这些布线轨迹通过传输管彼此间相互连接，并\n连接到逻辑块上，每一个传输管都被一个 SRAM 位控制。图 9.10 对此进行了说明")
+#figure9(10)
+#align(center)[*图9.10　FPGA可编程的连接区和交换区（可编辑布线草图）*]
 
-#text("图9.10 可编程的连接")
+布线资源是否充足、传输门串联数量与扇出，以及连接区和交换矩阵的几何规划共同决定FPGA的实际容量和速度。

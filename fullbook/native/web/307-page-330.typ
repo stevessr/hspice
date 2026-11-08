@@ -1,14 +1,20 @@
-// SOURCE PDF PAGE 330; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第330页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第9章，存储器设计中的其他课题            311")
+// SOURCE PDF PAGE 330 / printed 311. Source-guided editable editorial draft.
+// No full-page 1:1 acceptance; all transistor-level artwork remains provisional.
+#import "../figures/ch8-sram-cam-native.typ": figure9
+#set document(title:"第9章·PDF330·CAM与FPGA")
+#align(center)[#text(size:8pt,weight:"bold")[311　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("编程3LUT ( 查询表 )")
+#figure9(8)
+#align(center)[*图9.8　SRAM编程的3-LUT与可选寄存输出逻辑块（可编辑结构图）*]
 
-#text("一旦这些值存储进 LUT，就可以通过输入 4，和C来访问，输入的设置会激活通过传输管\n树的惟一一条路径”在图 99 中，这棵树可以看做一个 8 到 1 的多路器，输入作为选择变量、例\nMh A= 8= C = 1 时第一个存储的值被访问、当4 = 0, B= C= 1时第二个值送往输出，当\n4=           0 时第八个值被访问，这些都是，沟道传输管的事实意味着有一个 Vrw 的下降，从")
+查找表中的8位分别由8个SRAM单元保存。输入 $A$、$B$、$C$ 及其互补信号通过三级传输管多路器树，选出唯一的一条路径，输出对应的真值表位。
 
-#text("电平就没有减少了")
+如果把3-LUT看成8输入多路选择器，则 $A$、$B$、$C$ 是选择变量，8个SRAM单元保存需要实现的逻辑函数。通过对这些SRAM配置位赋予0或1，可以实现任意三输入布尔函数。
 
-#text("图99 3-LUT 的编程")
+#figure9(9)
+#align(center)[*图9.9　3-LUT的编程示例（可编辑结构草图）*]
+
+使用NMOS传输管实现的选择树存在高电平传输损失，这是由于NMOS阈值电压的限制。因此在LUT输出端通常增加恢复逻辑，防止信号下降影响后续门电路。
+
+输出可以直接送往PLB的输出缓冲器，也可以先送入D触发器，以实现组合逻辑或时序逻辑模式。最终选择由另一个SRAM配置位控制多路器完成。
