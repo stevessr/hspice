@@ -1,8 +1,32 @@
-// SOURCE PDF PAGE 383; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第383页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("364         数字集成电路分析与设计一-深亚微米工艺 (FSH)\n10.9 习题\nPI0.1 比较0.18 pm 工艺中一条20 mm 长的第 5 层导线和0.13Um 工艺中一条 20 mm长的\n第8 层导线 ( 没有等比例缩小的金属线 ) 的电阻。用总结部分给出的条件,假设有理\n想的源点，导线电容Cu = 0.1 Fm, HER ERATE\nPI02 对比 20 mm长的第 5 层导线电限, 0.18Hm 工艺和 14 mm 第 8 层导线, 0.13Mm 工艺\n{ 有等比例缩小的金属线 ) - 用总结部分的已知条件，计算每条导线的延迟，假设导\n线电容Cn = 0.1 (Fm\nP103 0.18 nm 工艺中两条相邻的第 5 层金属导线的间距从 4和到 40 和按增基为 4和间隔开，\n假设这些连线上下是屏蔽的，画图表示这些连线单位长度电容值与间距的函数关系\n计算中使用导线的最小宽度\nPI0.4 用 SPICE 模拟分布式 RC 线路，分别作为1级.3级 ( 如图 P10.4所示) 和20级 RC\n阶梯电路。你可以自己选择尺寸,但要保证在 3 种情况下的总电阻和总电容一样 当\n有阶跃信号施加到源输入时，测量 3 种情况的传输延迟\n推导一个如下形式的延迟公式:\nT= AR Cire\n并且计算 3 种情况的e值对结果进行评价\nRy\n可                               et\no\n图P10.4\nP10.5 重复习题 P10.4 的同样试验，但是这次分别使用图 P10.5 所示的 3 种模型来代符 RC\n阶梯 哪种模型可以得出准确结果?\nRare Bae\ni                Rin              7 了\n=   cow LO Tee            I.\niu ol             i”\nLam               nw                  Tae\n图Pl05\nP10.6 用SPICE 模拟图 P10.6 中的 RC 电路。 BL R)=Rr=Ry, Cy= C= Cy. 比较艾蒙延迟和")
+// SOURCE PDF PAGE 383. Native Typst source-scan editorial selection, not 1:1 complete.
+// Printed page 364; line-by-line transcription and source geometry remain unverified.
+#import "../figures/ch10-summary-ch11-power-native.typ": fig1028,figp104,figp105,figp106,figp108,fig111,fig112
+#set document(title:"第10章章末与第11章电源分布·源PDF383")
+#set text(size:7.15pt)
+#show par: set par(leading:2.3pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[364　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("用 SPICE 得出的延迟。对每个节点使用艾壹延迟的结果有多准确? 解释为什么特定\n结果不准确")
+== 10.9　习题（P10.1—P10.6）
+
+*P10.1*　对比0.18 μm工艺中20 mm长的第5层金属线与0.13 μm工艺中20 mm长的第8层金属线（没有等比例缩小的金属线）的电阻与延迟。以理想激励源为条件，假设单位长度电容 $C_"int"=0.1 "fF/μm"$。
+
+*P10.2*　对比20 mm长的第5层金属线与第8层金属线的电阻，用总端部分的已知条件计算延迟，仍取 $C_"int"=0.1 "fF/μm"$。
+
+*P10.3*　同层第5层金属导线的间距从4λ到40λ增至10倍；假设连线长度不变，绘制单位长度电容随间距的变化并求单位长度电容的最大值。
+
+*P10.4*　用SPICE模拟三种具有相同总电阻和总电容的RC阶梯网络：1级、3级和20级。比较输入阶跃情况下的节点延迟，整理延迟表达式：
+
+#align(center)[$tau = alpha R_"wire" C_"wire"$]
+
+分别求三种模型的 $alpha$ 并评价准确性。
+
+#figp104()
+#align(center)[*图P10.4　三节点RC阶梯电路（可编辑概念示意）*]
+
+*P10.5*　沿用P10.4，在三种等效模型 L、π、T 中代换每一条RC段，判断哪种模型更接近分布式延迟。
+
+#figp105()
+#align(center)[*图P10.5　L型、π型、T型 RC 模型（可编辑示意）*]
+
+*P10.6*　用 SPICE 模拟图P10.6：$R_1=R_2=R_3$，$C_1=C_2=C_3$。比较所有节点的艾蒙延迟计算结果与SPICE结果，分析为何某些节点的近似较差。
