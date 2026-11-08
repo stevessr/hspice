@@ -17,7 +17,7 @@ EXPECTED = {
     422: (".param Supply=1.8", ".opt scale=0.1um", "Mn 3 2 0 0 nmos"),
     423: ("Vxxx", "Ixxx", "Rxxx", "Cxxx", "Lxxx", "Mxxx", "Dxxx"),
     424: ("10^9", "10^6", "10^(-3)", "10^(-15)", "Meg"),
-    425: ("M n", "nmos", "Vsupply 5 0 15"),
+    425: ("Mn 2 3 0 0 nmos", "Vsupply 5 0 15"),
     426: ("PULSE", "PWL", "2ns 4ns 3ns 20ns 50ns"),
     427: ("R7", "17Megohms", "Cin", "Lbig", "MOSFET"),
     428: (".tran tstep tstop", "PMOS", "NMOS"),
