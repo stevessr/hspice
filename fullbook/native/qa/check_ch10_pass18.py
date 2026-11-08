@@ -25,4 +25,28 @@ assert math.isclose(0.027*(20000/0.5),y["wire_ohm"])
 assert math.isclose(0.1*20000/1000,y["wire_pF"])
 assert math.isclose(0.125*1+(0.125+1.08)*1,y["elmore_ns"],abs_tol=0.05)
 assert "#let figure10more(" in (r/"figures/ch10-rc-elmore-native.typ").read_text(encoding="utf-8")
+
+# Numerical landmarks from the primary source PDF, printed pp. 338–345.
+for n, tokens in {
+    357: ("2.7", "1.7", "54", "27", "42", "21"),
+    358: ("125", "135", "17.5", "10"),
+    360: ("π 型", "T 型", "L 型"),
+    361: ("3.2", "11.6", "14.8"),
+    363: ("FO4", "2.5", "1035", "460", "116"),
+    364: ('R_("int")', 'C_("int")'),
+}.items():
+    native = (r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+    assert all(token in native for token in tokens), (n, tokens)
+example = a["numerical_reference"]["chapter10_f04_interconnect"]
+assert example["technology_nm"] == [350, 130, 65]
+assert example["length_mm"] == [1, 2, 3]
+assert example["delay_ps_by_nm"]["65"] == [116, 460, 1035]
+assert example["fo4_ps"] == [150, 40, 25]
+discrepancy, = a["source_discrepancies"]
+assert discrepancy["pdf_page"] == 358
+assert math.isclose(0.054 * 1000 / 0.4, discrepancy["arithmetic_ohms"])
+assert discrepancy["arithmetic_ohms"] != discrepancy["source_printed_ohms"]
+assert discrepancy["source_printed_ohms"] == 125
+print("PDF 358 source arithmetic mismatch retained and audited; PDF 363 FO4 data matched.")
+
 print("Pass18 RC/Elmore PDF357–364 math, figure and status landmarks passed; strict 0/445.")
