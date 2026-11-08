@@ -1,15 +1,15 @@
 // SOURCE PDF PAGE 253 / printed 234: final page of Chapter 6 exercises.
 // Native reflow with editable logic networks. Original line geometry not yet certified.
-#import "../figures/ch7-pass-transistor-native.typ": fig-p612, fig-p613
+#import "../figures/ch6-final-exercises-native.typ": figure-p612, figure-p613
 #set document(title:"第6章习题 P6.12—P6.16 · 原书PDF253页")
 #align(center)[#text(size:8pt,weight:"bold")[234　数字集成电路分析与设计——深亚微米工艺（第三版）]]
 #line(length:100%,stroke:.6pt)
 #v(8pt)
 
-#fig-p612()
+#figure-p612()
 #align(center)[*图 P6.12*]
 
-#fig-p613()
+#figure-p613()
 #align(center)[*图 P6.13*]
 
 *P6.14*　从例6.2中可以看出，低电平转换到高电平时的 $C_g$ 平均值要比高电平转换到低电平时的大。解释为什么这种情况总是正确的。
@@ -22,4 +22,3 @@
 
 其中，这个常数的单位为 ps/μm，$L$ 是最小沟道长度。基于0.18 μm工艺和0.13 μm工艺计算这个常数。设 $L=90 " nm"$、$45 " nm"$ 和 $22 " nm"$，分别用这个公式估计FO4的延迟。
 
-_原生校对状态：图 P6.12/P6.13 的逻辑扇出与电容标记可编辑；完整门输入数量、每条支路连接位置需和扫描原图逐线终验。_
