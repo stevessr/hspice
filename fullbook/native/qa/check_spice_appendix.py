@@ -87,6 +87,20 @@ for page_number, names in DRAWINGS.items():
         assert f"#let {name}(" in figure_source, (page_number, name)
         assert f"#{name}()" in page_source, (page_number, name)
 assert len(DRAWINGS) == 9
+# Original source PDF430/432 uses *five* gate-bias DC values but *three*
+# visible conducting curves; the remaining two traces are near zero current.
+a11=figure_source.split("#let a11-nmos-curves()",1)[1].split("#let a13-transient()",1)[0]
+a13=figure_source.split("#let a13-transient()",1)[1]
+assert a11.count("curve.move((0pt,0pt))")==3, "A.11/A.12: three conducting curves"
+assert all(tok in a11 for tok in ("0.9","1.35","1.8",'V_("gate")','V_("drain")',
+                                  "circle(radius:11pt","NMOS"))
+assert all(tok in a13 for tok in ("Mp","Mn","10 fF",'V_("out")',"curve.cubic",
+                                  "CMOS",'V_("in")'))
+assert a13.count("curve.cubic(")>=5
+for number in (430,432):
+    src=(WEB/f"{number-23}-page-{number:03d}.typ").read_text(encoding="utf-8")
+    assert all(x in src for x in ("0.45","0.90","1.35","1.80")),number
+assert "三条非零" in (WEB/"409-page-432.typ").read_text(encoding="utf-8")
 # Fig A.7-A.10 visual topologies are traceable to the scan (PDF427-429).
 # These are structural tests only; successful tests do not accept a full page.
 for name in ("a7-rlc","a8-pass-gate","a9-rc-step","a10-divider"):

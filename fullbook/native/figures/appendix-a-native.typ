@@ -305,32 +305,141 @@
   #t(286pt,107pt,[10])
   #t(221pt,10pt,[$R_1$ 两端的电压])
 ])
-#let a11-nmos-curves() = html.frame(block(width: 338pt, height: 125pt)[
-  #t(5pt, 3pt, [图 A.11 / A.12　NMOS 的 $I_("DS")$–$V_("DS")$ 输出特性])
-  #s(37pt, 103pt, 284pt, 0pt)
-  #s(37pt, 103pt, 0pt, -82pt)
-  #t(1pt, 12pt, [$I_("DS")$])
-  #t(259pt, 109pt, [$V_("DS")$ (V)])
-  #for i in range(5) [
-    #let lift = (i + 1)*14pt
-    #place(top + left,dx:38pt,dy:102pt,
-      curve(stroke: .9pt, curve.move((0pt,0pt)),
-        curve.cubic((35pt,-lift),(75pt,-lift - 2pt),(277pt,-lift - 3pt))))
-  ]
-  #t(223pt, 20pt, [$V_("GS")$ 越大，$I_("DS")$ 越大])
+// PDF430 Fig A.11 and PDF432 Fig A.12: 2-source NMOS testbench PLUS
+// three visibly conducting I-V output characteristics. The five DC gate
+// sweep values also include two cutoff traces coinciding with the x-axis.
+#let a11-nmos-curves() = html.frame(block(width:338pt,height:173pt)[
+  #t(5pt,2pt,[图 A.11 / A.12　NMOS 的 $I_("DS")$–$V_("drain")$ 特性])
+  // Left: Vgate drives G, Vdrain drives D; S and B use ground 0.
+  #t(12pt,15pt,[测试电路])
+  #s(83pt,36pt,0pt,24pt)
+  #s(83pt,60pt,0pt,26pt,w:1.15pt)
+  #s(75pt,60pt,0pt,26pt,w:1.2pt)
+  #s(49pt,74pt,26pt,0pt)
+  #s(83pt,86pt,0pt,22pt)
+  #s(73pt,109pt,20pt,0pt)
+  #s(77pt,114pt,12pt,0pt)
+  #s(81pt,119pt,4pt,0pt)
+  #t(88pt,104pt,[0])
+  // The gate source and its ground reference.
+  #place(top + left,dx:34pt,dy:109pt,circle(radius:11pt,stroke:.8pt,fill:white))
+  #t(30pt,102pt,[V])
+  #t(43pt,89pt,[$+$])
+  #s(34pt,98pt,0pt,-24pt)
+  #s(34pt,74pt,15pt,0pt)
+  #s(34pt,120pt,0pt,12pt)
+  #s(25pt,132pt,18pt,0pt)
+  #s(29pt,136pt,10pt,0pt)
+  #t(7pt,147pt,[$V_("gate")$])
+  // Drain source from positive node 2 to ground 0.
+  #s(83pt,36pt,33pt,0pt)
+  #s(116pt,36pt,0pt,35pt)
+  #place(top + left,dx:116pt,dy:82pt,circle(radius:11pt,stroke:.8pt,fill:white))
+  #t(112pt,75pt,[V])
+  #t(125pt,70pt,[$+$])
+  #s(116pt,93pt,0pt,39pt)
+  #s(107pt,132pt,18pt,0pt)
+  #s(111pt,136pt,10pt,0pt)
+  #t(95pt,145pt,[$V_("drain")$])
+  #t(90pt,23pt,[2])
+  #t(64pt,66pt,[1])
+  // Right chart: axes 0..1.8 V / 0..270 uA.
+  #s(151pt,144pt,182pt,0pt)
+  #s(151pt,144pt,0pt,-116pt)
+  #t(139pt,15pt,[$I_("DS")$])
+  #t(148pt,146pt,[0])
+  #t(187pt,147pt,[0.5])
+  #t(240pt,147pt,[1.0])
+  #t(294pt,147pt,[1.5])
+  #t(313pt,157pt,[$V_("DS")$ (V)])
+  #t(123pt,26pt,[270])
+  #t(128pt,51pt,[210])
+  #t(128pt,91pt,[120])
+  #t(132pt,118pt,[60])
+  #place(top + left,dx:152pt,dy:144pt,
+    curve(stroke:1.25pt,curve.move((0pt,0pt)),
+       curve.cubic((15pt,-67pt),(33pt,-96pt),(80pt,-104pt)),
+       curve.cubic((105pt,-107pt),(143pt,-108pt),(175pt,-109pt))))
+  #place(top + left,dx:152pt,dy:144pt,
+    curve(stroke:1.1pt,curve.move((0pt,0pt)),
+       curve.cubic((14pt,-40pt),(36pt,-65pt),(77pt,-68pt)),
+       curve.cubic((106pt,-70pt),(142pt,-71pt),(175pt,-71pt))))
+  #place(top + left,dx:152pt,dy:144pt,
+    curve(stroke:1pt,curve.move((0pt,0pt)),
+       curve.cubic((16pt,-26pt),(33pt,-30pt),(78pt,-32pt)),
+       curve.cubic((110pt,-32pt),(149pt,-33pt),(175pt,-34pt))))
+  #t(275pt,26pt,[$V_("GS")=1.8" V"$])
+  #t(272pt,70pt,[$1.35" V"$])
+  #t(285pt,113pt,[$0.9" V"$])
 ])
-
-#let a13-transient() = html.frame(block(width: 338pt, height: 125pt)[
-  #t(6pt, 3pt, [图 A.13　CMOS 反相器的瞬态响应])
-  #s(38pt, 104pt, 288pt, 0pt)
-  #s(38pt, 104pt, 0pt, -83pt)
-  #t(10pt, 23pt, [1.8])
-  #t(10pt, 100pt, [0])
-  #t(274pt, 109pt, [$t$ (ns)])
-  #s(39pt, 29pt, 52pt, 0pt, w: 1.3pt)
-  #s(91pt, 29pt, 4pt, 72pt, w: 1.3pt)
-  #s(95pt, 101pt, 94pt, 0pt, w: 1.3pt)
-  #s(189pt, 101pt, 5pt, -72pt, w: 1.3pt)
-  #s(194pt, 29pt, 97pt, 0pt, w: 1.3pt)
-  #t(108pt, 12pt, [输出与输入逻辑反相])
+// PDF432 Fig A.13: pulse-driven CMOS inverter with 10fF output loading.
+// Vout is high (0-1ns), low (about 1-3ns) and high again (3-5ns).
+#let a13-transient() = html.frame(block(width:338pt,height:184pt)[
+  #t(5pt,2pt,[图 A.13　一个反相器的脉冲响应])
+  #t(7pt,15pt,[CMOS反相器电路])
+  // PMOS from supply node 1 to output node 3.
+  #s(90pt,20pt,0pt,23pt)
+  #t(98pt,20pt,[$V_("DD")$])
+  #t(83pt,17pt,[1])
+  #s(90pt,43pt,0pt,22pt,w:1.15pt)
+  #s(82pt,43pt,0pt,22pt,w:1.2pt)
+  #place(top + left,dx:75pt,dy:54pt,circle(radius:3pt,stroke:.8pt,fill:white))
+  #s(90pt,65pt,0pt,23pt)
+  #t(98pt,48pt,[Mp])
+  #p(90pt,87pt)
+  // NMOS from output to GND.
+  #s(90pt,88pt,0pt,22pt)
+  #s(82pt,110pt,0pt,22pt,w:1.2pt)
+  #s(90pt,110pt,0pt,22pt,w:1.15pt)
+  #s(90pt,132pt,0pt,18pt)
+  #s(80pt,150pt,20pt,0pt)
+  #s(84pt,154pt,12pt,0pt)
+  #s(88pt,158pt,4pt,0pt)
+  #t(98pt,119pt,[Mn])
+  #t(96pt,149pt,[0])
+  // One input signal drives both gates.
+  #s(46pt,55pt,29pt,0pt)
+  #s(46pt,55pt,0pt,67pt)
+  #s(46pt,121pt,36pt,0pt)
+  #s(30pt,94pt,16pt,0pt)
+  #place(top + left,dx:26pt,dy:94pt,circle(radius:10pt,stroke:.8pt,fill:white))
+  #t(22pt,86pt,[V])
+  #s(26pt,104pt,0pt,28pt)
+  #s(16pt,133pt,20pt,0pt)
+  #s(20pt,137pt,12pt,0pt)
+  #t(5pt,109pt,[$V_("in")$])
+  #t(53pt,47pt,[2])
+  // Output and capacitor to ground.
+  #s(90pt,87pt,48pt,0pt)
+  #t(95pt,77pt,[3])
+  #s(130pt,87pt,0pt,31pt)
+  #s(120pt,118pt,20pt,0pt,w:1.1pt)
+  #s(120pt,126pt,20pt,0pt,w:1.1pt)
+  #s(130pt,126pt,0pt,23pt)
+  #s(120pt,149pt,20pt,0pt)
+  #s(124pt,153pt,12pt,0pt)
+  #s(128pt,157pt,4pt,0pt)
+  #t(132pt,98pt,[$C_("load")$])
+  #t(137pt,110pt,[10 fF])
+  #t(98pt,67pt,[$V_("out")$])
+  // Measured-style qualitative Vout vs t waveform.
+  #s(167pt,154pt,164pt,0pt)
+  #s(167pt,154pt,0pt,-122pt)
+  #t(155pt,25pt,[1.8])
+  #t(156pt,150pt,[0])
+  #t(169pt,157pt,[0])
+  #t(197pt,157pt,[1])
+  #t(229pt,157pt,[2])
+  #t(261pt,157pt,[3])
+  #t(293pt,157pt,[4])
+  #t(324pt,157pt,[5])
+  #t(299pt,170pt,[$t$ (ns)])
+  #t(161pt,8pt,[$V_("out")$ (V)])
+  #place(top + left,dx:169pt,dy:47pt,
+    curve(stroke:1.45pt,curve.move((0pt,0pt)),
+      curve.cubic((18pt,0pt),(27pt,0pt),(30pt,2pt)),
+      curve.cubic((37pt,5pt),(32pt,92pt),(44pt,98pt)),
+      curve.cubic((54pt,100pt),(84pt,100pt),(91pt,98pt)),
+      curve.cubic((103pt,91pt),(94pt,3pt),(109pt,2pt)),
+      curve.cubic((123pt,0pt),(141pt,0pt),(157pt,0pt))))
 ])
