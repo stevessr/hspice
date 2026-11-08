@@ -74,8 +74,7 @@
   #cap(9pt,120pt,label:"Cinv")
   #place(top+left,dx:3pt,dy:36pt,text(size:8pt)[输入]))
 ])
-#let pass-panel(kind:"n",state:"on",vin:"0 V",vout:"0 V")=
-  html.frame(block(width:187pt,height:97pt)[
+#let pass-panel(kind:"n",state:"on",vin:"0 V",vout:"0 V")=html.frame(block(width:187pt,height:97pt)[
     #pass(41pt,45pt,p:kind=="p")
     #wire(96pt,45pt,124pt,45pt)
     #cap(113pt,65pt,label:"CL")
@@ -91,8 +90,7 @@
   [#pass-panel(kind:"p",vin:"0 V",vout:"|VTp|")],
   [#pass-panel(kind:"n",state:"off",vin:"VDD",vout:"高阻")],
   [#pass-panel(kind:"p",state:"off",vin:"0 V",vout:"高阻")])
-#let series-panel(p:false,count:1,descending:false)=
-  html.frame(block(width:121pt,height:99pt)[
+#let series-panel(p:false,count:1,descending:false)=html.frame(block(width:121pt,height:99pt)[
     #for i in range(count) [
       #pass(3pt+i*24pt,49pt,p:p)
       #wire(31pt+i*24pt,27pt+i*5pt,31pt+i*24pt,34pt+i*5pt)
