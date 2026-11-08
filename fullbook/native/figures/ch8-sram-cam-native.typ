@@ -81,9 +81,9 @@
     #let y=15pt+k*31pt
     #t(5pt,y+5pt,("地址","WL","BL","输出").at(k))
     #w(77pt,y+12pt,125pt,y+12pt)
-    #w(125pt,y+12pt,151pt,y-3pt)
-    #w(151pt,y-3pt,273pt,y-3pt)
-    #w(273pt,y-3pt,306pt,y+12pt)
+    #w(125pt,y+12pt,151pt,y - 3pt)
+    #w(151pt,y - 3pt,273pt,y - 3pt)
+    #w(273pt,y - 3pt,306pt,y+12pt)
     #w(306pt,y+12pt,373pt,y+12pt)
   ]
 ])
