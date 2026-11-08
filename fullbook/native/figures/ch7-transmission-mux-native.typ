@@ -126,7 +126,61 @@
     #wire(87pt,31pt,93pt,31pt)
     #place(top+left,dx:13pt,dy:103pt,text(size:7pt)[（b）AND / AB]))
   ]])
-#let fig714()=fig713()
+#let fig-example73(reduced:false)=html.frame(block(width:374pt,height:174pt)[
+  // Example 7.3: A/B control a set of C, Cbar, and VDD data paths.
+  #place(top+left,dx:6pt,dy:8pt,text(size:7pt)[#if reduced [优化结构] else [真值表直接实现]]))
+  #if reduced [
+    #pass-symbol(84pt,35pt,size:26pt)
+    #pass-symbol(84pt,94pt,size:26pt)
+    #place(top+left,dx:30pt,dy:47pt,text(size:7pt)[$C$]))
+    #place(top+left,dx:22pt,dy:105pt,text(size:7pt)[$overline(C)$]))
+    #wire(110pt,48pt,172pt,48pt)
+    #wire(110pt,107pt,172pt,107pt)
+  ] else [
+    #for i in (0,1,2,3) [
+      #let yy=22pt+i*34pt
+      #pass-symbol(84pt,yy,size:25pt)
+      #wire(51pt,yy+12pt,70pt,yy+12pt)
+      #wire(109pt,yy+12pt,167pt,yy+12pt)
+    ]
+    #place(top+left,dx:18pt,dy:30pt,text(size:7pt)[$V_("DD")$]))
+    #place(top+left,dx:18pt,dy:64pt,text(size:7pt)[$C$]))
+    #place(top+left,dx:18pt,dy:98pt,text(size:7pt)[$overline(C)$]))
+    #place(top+left,dx:18pt,dy:132pt,text(size:7pt)[$overline(C)$]))
+  ]
+  #pass-symbol(225pt,50pt,size:29pt)
+  #pass-symbol(225pt,105pt,size:29pt)
+  #wire(167pt,77pt,211pt,64pt)
+  #wire(167pt,116pt,211pt,119pt)
+  #wire(254pt,64pt,289pt,64pt)
+  #wire(254pt,119pt,289pt,119pt)
+  #wire(289pt,64pt,289pt,119pt)
+  #wire(289pt,91pt,328pt,91pt)
+  #place(top+left,dx:337pt,dy:81pt,text(size:8pt)[$F$]))
+  #place(top+left,dx:231pt,dy:25pt,text(size:7pt)[$A$]))
+  #place(top+left,dx:229pt,dy:143pt,text(size:7pt)[$overline(A)$]))
+])
+#let fig714()=grid(columns:(1fr,1fr),column-gutter:8pt,
+  [#block(height:157pt)[
+    #pass-symbol(54pt,38pt)
+    #wire(16pt,52pt,40pt,52pt)
+    #wire(82pt,52pt,135pt,52pt)
+    #place(top+left,dx:11pt,dy:18pt,text(size:7pt)[$A$]))
+    #place(top+left,dx:59pt,dy:17pt,text(size:7pt)[$B$]))
+    #place(top+left,dx:111pt,dy:42pt,text(size:7pt)[$F$]))
+    #place(top+left,dx:13pt,dy:130pt,text(size:7pt)[（a）传输门与CMOS反相器组合]))
+  ]],
+  [#block(height:157pt)[
+    #pass-symbol(18pt,30pt)
+    #pass-symbol(18pt,92pt)
+    #wire(46pt,44pt,100pt,44pt)
+    #wire(46pt,106pt,100pt,106pt)
+    #wire(100pt,44pt,100pt,106pt)
+    #place(top+left,dx:118pt,dy:58pt,rect(width:57pt,height:29pt,radius:8pt,stroke:.8pt))
+    #place(top+left,dx:128pt,dy:67pt,text(size:7pt)[NAND]))
+    #place(top+left,dx:9pt,dy:130pt,text(size:7pt)[（b）传输门与标准CMOS门组合]))
+  ]])
+
 #let fig715()=html.frame(block(width:373pt,height:128pt)[
   #pass-symbol(22pt,20pt)
   #wire(64pt,34pt,123pt,34pt)

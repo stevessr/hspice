@@ -12,7 +12,7 @@ markers={
 262:("7.3.1","图 7.8","图 7.9","fig78","fig79","F=AS"),
 263:("图 7.10","图 7.11","fig710","fig711","四选一"),
 264:("图 7.12","图 7.13","fig712","fig713","错误"),
-265:("例 7.3","fig714","overline(C)","真值表"),
+265:("例 7.3","fig-example73","overline(C)","真值表"),
 266:("7.3.2","图 7.14","图 7.15","fig715","R_(\"on\")"),
 267:("图 7.16","fig716","R_N","R_P","I_(\"Dlin,p\")"),
 268:("(7.7)","(7.8)","(7.9)","fig717","0.83","1.1")
@@ -31,7 +31,7 @@ for n,tokens in markers.items():
  assert not all(q[n-1]["checks"].values())
  assert a["pages"][n-261]["strictly_accepted"] is False
 fig=(r/"figures/ch7-transmission-mux-native.typ").read_text(encoding="utf-8")
-for f in ["fig77","fig78","fig79","fig710","fig711","fig712","fig713","fig714","fig715","fig716","fig717"]:
+for f in ["fig77","fig78","fig79","fig710","fig711","fig712","fig713","fig714","fig-example73","fig715","fig716","fig717"]:
  assert "#let "+f+"(" in fig
 assert math.isclose(25*30/(25+30),13.636363636,rel_tol=1e-6)
 assert math.isclose((1*4.8)/(1+4.8),.827586,rel_tol=1e-5)
