@@ -1,40 +1,164 @@
-// Chapter5 PDF177–186; all diagrams native/editable, geometry not exact scan tracing.
-#let aoi21() = html.frame(block(width:346pt,height:143pt)[
- #place(top+left,dx:10pt,dy:4pt,text(size:8pt)[图5.12 AOI21：$F=overline((A+B)C)$])
- #place(top+left,dx:27pt,dy:29pt,rect(width:115pt,height:89pt,stroke:.8pt,fill:rgb("f1f1f1")))
- #place(top+left,dx:204pt,dy:29pt,rect(width:115pt,height:89pt,stroke:.8pt,fill:rgb("e5e5e5")))
- #place(top+left,dx:38pt,dy:40pt,text(size:8pt)[PUN：上拉]))
- #place(top+left,dx:38pt,dy:60pt,text(size:8pt)[$bar(A) bar(B)+bar(C)$]))
- #place(top+left,dx:216pt,dy:40pt,text(size:8pt)[PDN：下拉]))
- #place(top+left,dx:216pt,dy:60pt,text(size:8pt)[$(A+B)C$]))
- #place(top+left,dx:145pt,dy:66pt,line(length:58pt,stroke:.8pt))
- #place(top+left,dx:160pt,dy:55pt,text(size:7pt)[$F$]))
- #place(top+left,dx:32pt,dy:125pt,text(size:7pt)[PUN采用与PDN对偶的串并联结构，输出互补])
+// Source scan p179–181: editable device-level CMOS paths, no PUN/PDN
+// placeholder text rectangles. Topology follows the textbook AOI21, AOI22,
+// XOR and XNOR; absolute MOS symbols/spacing remain non-1:1 visual drafts.
+#let wire(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,
+  line(end:(x2 - x1,y2 - y1),stroke:0.9pt))
+#let node(x,y)=place(top+left,dx:x,dy:y,circle(radius:1.5pt,fill:black))
+#let ground(x,y)={
+  wire(x,y,x,y+6pt)
+  place(top+left,dx:x - 8pt,dy:y+6pt,line(length:16pt,stroke:.8pt))
+  place(top+left,dx:x - 5pt,dy:y+9pt,line(length:10pt,stroke:.8pt))
+  place(top+left,dx:x - 2pt,dy:y+12pt,line(length:4pt,stroke:.8pt))
+}
+#let vmos(x,y,label,p:false)={
+  // Top and bottom channel terminals of a vertical MOS transistor.
+  wire(x,y,x,y+6pt)
+  place(top+left,dx:x,dy:y+6pt,line(end:(0pt,16pt),stroke:1.4pt))
+  wire(x,y+22pt,x,y+28pt)
+  place(top+left,dx:x - 6pt,dy:y+6pt,line(end:(0pt,16pt),stroke:.85pt))
+  wire(x - 26pt,y+14pt,x - (if p { 11pt } else { 7pt }),y+14pt)
+  if p {
+    place(top+left,dx:x - 9pt,dy:y+14pt,
+      circle(radius:2pt,stroke:.8pt,fill:white))
+  }
+  place(top+left,dx:x - 44pt,dy:y+6pt,text(size:7pt)[#label])
+}
+#let aoi21()=html.frame(block(width:370pt,height:236pt)[
+  #place(top+left,dx:158pt,dy:1pt,text(size:7.5pt)[$V_("DD")$]))
+  #wire(180pt,15pt,180pt,24pt)
+  #wire(110pt,24pt,275pt,24pt)
+  // PUN: A-B in series, in parallel with C.
+  #wire(110pt,24pt,110pt,32pt)
+  #vmos(110pt,32pt,[A],p:true)
+  #wire(110pt,60pt,110pt,67pt)
+  #vmos(110pt,67pt,[B],p:true)
+  #wire(110pt,95pt,110pt,116pt)
+  #wire(275pt,24pt,275pt,55pt)
+  #vmos(275pt,55pt,[C],p:true)
+  #wire(275pt,83pt,275pt,116pt)
+  #wire(110pt,116pt,275pt,116pt)
+  #node(180pt,116pt)
+  #wire(275pt,116pt,326pt,116pt)
+  #place(top+left,dx:332pt,dy:109pt,text(size:8pt)[$F$]))
+  // PDN: C in series with the parallel A/B branches.
+  #wire(180pt,116pt,180pt,131pt)
+  #vmos(180pt,131pt,[C])
+  #wire(180pt,159pt,180pt,166pt)
+  #wire(125pt,166pt,250pt,166pt)
+  #wire(125pt,166pt,125pt,171pt)
+  #wire(250pt,166pt,250pt,171pt)
+  #vmos(125pt,171pt,[A])
+  #vmos(250pt,171pt,[B])
+  #wire(125pt,199pt,125pt,210pt)
+  #wire(250pt,199pt,250pt,210pt)
+  #wire(125pt,210pt,250pt,210pt)
+  #ground(180pt,210pt)
+  #place(top+left,dx:16pt,dy:218pt,text(size:7pt)[上拉：$A B$ 串联 $parallel C$；下拉：$(A parallel B)$ 串联 $C$])
 ])
-#let complex-dual() = html.frame(block(width:348pt,height:160pt)[
- #place(top+left,dx:7pt,dy:6pt,text(size:8pt)[图5.13 复杂静态CMOS通用双网络])
- #place(top+left,dx:121pt,dy:24pt,text(size:7pt)[$V_("DD")$]))
- #place(top+left,dx:99pt,dy:42pt,rect(width:144pt,height:39pt,stroke:.8pt,fill:rgb("ededed")))
- #place(top+left,dx:117pt,dy:55pt,text(size:8pt)[p型上拉复合网络]))
- #place(top+left,dx:171pt,dy:80pt,line(end:(0pt,20pt),stroke:.8pt))
- #place(top+left,dx:175pt,dy:90pt,line(length:51pt,stroke:.8pt))
- #place(top+left,dx:230pt,dy:84pt,text(size:8pt)[$F$]))
- #place(top+left,dx:99pt,dy:101pt,rect(width:144pt,height:39pt,stroke:.8pt,fill:rgb("dfdfdf")))
- #place(top+left,dx:117pt,dy:113pt,text(size:8pt)[n型下拉复合网络]))
- #place(top+left,dx:124pt,dy:147pt,text(size:7pt)[GND]))
- #place(top+left,dx:12pt,dy:80pt,text(size:7pt)[输入A、B、C、…]))
+// Fig5.13 depicts the abstract dual network as two boxes in the SOURCE scan.
+#let complex-dual()=html.frame(block(width:354pt,height:164pt)[
+  #place(top+left,dx:164pt,dy:2pt,text(size:8pt)[$V_("DD")$]))
+  #wire(185pt,15pt,185pt,28pt)
+  #place(top+left,dx:115pt,dy:28pt,rect(width:140pt,height:50pt,stroke:.9pt,fill:white))
+  #place(top+left,dx:135pt,dy:44pt,text(size:8pt)[p 型器件的复合结构]))
+  #for i in range(3) [
+    #wire(74pt,36pt+i*17pt,115pt,36pt+i*17pt)
+    #place(top+left,dx:60pt,dy:29pt+i*17pt,text(size:7pt)[("A","B","C").at(i)])
+  ]
+  #wire(185pt,78pt,185pt,85pt)
+  #node(185pt,85pt)
+  #wire(185pt,85pt,273pt,85pt)
+  #place(top+left,dx:278pt,dy:78pt,text(size:8pt)[$F$]))
+  #place(top+left,dx:115pt,dy:95pt,rect(width:140pt,height:50pt,stroke:.9pt,fill:white))
+  #place(top+left,dx:135pt,dy:110pt,text(size:8pt)[n 型器件的复合结构]))
+  #for i in range(3) [
+    #wire(74pt,103pt+i*17pt,115pt,103pt+i*17pt)
+    #place(top+left,dx:60pt,dy:96pt+i*17pt,text(size:7pt)[("A","B","C").at(i)])
+  ]
+  #wire(185pt,85pt,185pt,95pt)
+  #ground(185pt,145pt)
 ])
-#let xor-xnor() = html.frame(block(width:348pt,height:144pt)[
- #place(top+left,dx:9pt,dy:5pt,text(size:8pt)[图5.14 XOR/XNOR逻辑与两种互补导通条件])
- #place(top+left,dx:16pt,dy:32pt,rect(width:142pt,height:91pt,stroke:.75pt))
- #place(top+left,dx:189pt,dy:32pt,rect(width:144pt,height:91pt,stroke:.75pt))
- #place(top+left,dx:30pt,dy:40pt,text(size:8pt)[XOR：输入不相等为1]))
- #place(top+left,dx:29pt,dy:64pt,text(size:8pt)[$bar(a)b+a bar(b)$]))
- #place(top+left,dx:29pt,dy:90pt,text(size:7pt)[a≠b  ⇒  f=1]))
- #place(top+left,dx:204pt,dy:40pt,text(size:8pt)[XNOR：输入相等为1]))
- #place(top+left,dx:203pt,dy:64pt,text(size:8pt)[$bar(a)bar(b)+a b$]))
- #place(top+left,dx:203pt,dy:90pt,text(size:7pt)[a=b  ⇒  f=1]))
+// Example 5.3 AOI22 transistor paths. Two p-parallel groups in series;
+// the pull-down is the parallel of two n-series groups AB and CD.
+#let example53()=html.frame(block(width:370pt,height:214pt)[
+  #place(top+left,dx:158pt,dy:0pt,text(size:7.5pt)[$V_("DD")$]))
+  #wire(180pt,12pt,180pt,18pt)
+  #wire(105pt,18pt,245pt,18pt)
+  #wire(105pt,18pt,105pt,26pt)
+  #wire(245pt,18pt,245pt,26pt)
+  #vmos(105pt,26pt,[A],p:true)
+  #vmos(245pt,26pt,[B],p:true)
+  #wire(105pt,54pt,105pt,60pt)
+  #wire(245pt,54pt,245pt,60pt)
+  #wire(105pt,60pt,245pt,60pt)
+  #wire(105pt,60pt,105pt,66pt)
+  #wire(245pt,60pt,245pt,66pt)
+  #vmos(105pt,66pt,[C],p:true)
+  #vmos(245pt,66pt,[D],p:true)
+  #wire(105pt,94pt,105pt,101pt)
+  #wire(245pt,94pt,245pt,101pt)
+  #wire(105pt,101pt,245pt,101pt)
+  #wire(245pt,101pt,325pt,101pt)
+  #place(top+left,dx:330pt,dy:95pt,text(size:8pt)[$F$]))
+  // Lower network top nodes share F, branch AB || CD.
+  #wire(105pt,101pt,105pt,110pt)
+  #wire(245pt,101pt,245pt,110pt)
+  #vmos(105pt,110pt,[A])
+  #vmos(245pt,110pt,[C])
+  #wire(105pt,138pt,105pt,144pt)
+  #wire(245pt,138pt,245pt,144pt)
+  #vmos(105pt,144pt,[B])
+  #vmos(245pt,144pt,[D])
+  #wire(105pt,172pt,105pt,180pt)
+  #wire(245pt,172pt,245pt,180pt)
+  #wire(105pt,180pt,245pt,180pt)
+  #ground(175pt,180pt)
+  #place(top+left,dx:22pt,dy:200pt,text(size:7pt)[静态 AOI22：$F=overline(A B+C D)$（每一条导通路径均可编辑）])
 ])
+#let xor-panel(x,is-xnor:false)={
+  let pleft=if is-xnor {([a],[b])} else {([a],[$bar(b)$])}
+  let pright=if is-xnor {([$bar(b)$],[$bar(a)$])} else {([b],[$bar(a)$])}
+  let nleft=if is-xnor {([a],[$bar(b)$])} else {([a],[b])}
+  let nright=if is-xnor {([$bar(a)$],[b])} else {([$bar(a)$],[$bar(b)$])}
+  wire(x+90pt,12pt,x+90pt,20pt)
+  wire(x+50pt,20pt,x+130pt,20pt)
+  wire(x+50pt,20pt,x+50pt,30pt)
+  wire(x+130pt,20pt,x+130pt,30pt)
+  vmos(x+50pt,30pt,pleft.at(0),p:true)
+  vmos(x+130pt,30pt,pright.at(0),p:true)
+  wire(x+50pt,58pt,x+50pt,62pt)
+  wire(x+130pt,58pt,x+130pt,62pt)
+  vmos(x+50pt,62pt,pleft.at(1),p:true)
+  vmos(x+130pt,62pt,pright.at(1),p:true)
+  wire(x+50pt,90pt,x+50pt,100pt)
+  wire(x+130pt,90pt,x+130pt,100pt)
+  wire(x+50pt,100pt,x+130pt,100pt)
+  node(x+90pt,100pt)
+  wire(x+130pt,100pt,x+163pt,100pt)
+  place(top+left,dx:x+165pt,dy:94pt,text(size:7pt)[$f$])
+  wire(x+50pt,100pt,x+50pt,110pt)
+  wire(x+130pt,100pt,x+130pt,110pt)
+  vmos(x+50pt,110pt,nleft.at(0))
+  vmos(x+130pt,110pt,nright.at(0))
+  wire(x+50pt,138pt,x+50pt,142pt)
+  wire(x+130pt,138pt,x+130pt,142pt)
+  vmos(x+50pt,142pt,nleft.at(1))
+  vmos(x+130pt,142pt,nright.at(1))
+  wire(x+50pt,170pt,x+50pt,178pt)
+  wire(x+130pt,170pt,x+130pt,178pt)
+  wire(x+50pt,178pt,x+130pt,178pt)
+  ground(x+90pt,178pt)
+  place(top+left,dx:x+74pt,dy:0pt,text(size:7.5pt)[$V_("DD")$])
+  place(top+left,dx:x+12pt,dy:193pt,
+    text(size:8pt)[#if is-xnor [XNOR：$a b+bar(a)bar(b)$] else [XOR：$bar(a)b+a bar(b)$]])
+}
+#let xor-xnor()=html.frame(block(width:386pt,height:222pt)[
+  #xor-panel(0pt)
+  #xor-panel(190pt,is-xnor:true)
+  #place(top+left,dx:37pt,dy:209pt,text(size:7pt)[(a) 异或静态实现]))
+  #place(top+left,dx:224pt,dy:209pt,text(size:7pt)[(b) 同或静态实现]))
+])
+
 #let mux2() = html.frame(block(width:346pt,height:139pt)[
  #place(top+left,dx:10pt,dy:7pt,text(size:8pt)[图5.15 两选一MUX]))
  #place(top+left,dx:110pt,dy:35pt,polygon((0pt,0pt),(67pt,20pt),(0pt,49pt),stroke:.9pt,fill:rgb("eeeeee")))

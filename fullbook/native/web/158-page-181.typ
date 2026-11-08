@@ -1,13 +1,28 @@
-// SOURCE PDF PAGE 181 / printed 162
+// SOURCE PDF PAGE 181 / printed 162. Source figure 5.14 reconstructed
+// as editable complementary MOS transistor branches (not text-only boxes).
+// Original redundant pMOS cross-connections and per-wire scale unverified.
 #import "../figures/ch5-complex-sequential-native.typ": xor-xnor
-#set document(title:"第5章 · 异或与同或门图5.14 · PDF181")
-= 第5章 · 印刷第162页
+#set document(title:"第5章 · 图5.14 XOR/XNOR晶体管导通网络 · PDF181")
+#set text(lang:"zh",size:7.35pt)
+#set par(justify:true,leading:2.1pt,spacing:4pt)
+#align(center)[#text(size:8pt,weight:"bold")[162　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
+
+对于伪 NMOS 门，导通下拉网络可按上页例 5.3 的 $AB+CD$ 构造，只需一个固定栅接地的 PMOS 上拉器件。这里给出原书跨页的下拉电路连接关系。它比全 CMOS 版本少用器件，但会在拉低输出时消耗静态功率。
+
 == 5.4　异或门和同或门
-数字集成电路中重要的异或XOR与同或XNOR逻辑函数：
-$ f_("XOR")=bar(a) b+a bar(b) $
-$ f_("XNOR")=bar(a) bar(b)+a b $
-XOR当两输入不同输出1，XNOR当两输入相同输出1。
+
+数字集成电路中两种重要的逻辑功能是“异或”（XOR）和“同或”（XNOR）功能：
+
+$ f_("XOR") = bar(a) b + a bar(b) = "(XOR)" $
+
+$ f_("XNOR") = bar(a) bar(b) + a b = "(XNOR)" $
+
+这些功能可以通过多种方法实现。这里将介绍这些门的多种静态实现，而基于 CMOS 传输门的实现在随后的各章中进行介绍。
+
+一种简单的实现是假设已经有 $a$、$bar(a)$、$b$ 和 $bar(b)$。在这种情况下，功能的实现简单地基于上一节的材料。相应的电路如图 5.14 所示。对于异或门，首先将 $f_("XOR")$ 功能取反，并用来建立下拉功能。因此需要两条支路，一条用于实现 $a b$，另一条用于实现 $bar(a) bar(b)$。晶体管的配置可以解释如下：如果 $a$ 和 $b$ 都为高，或者 $bar(a)$ 和 $bar(b)$ 都为低，则输出就为低；否则，输出为高。
+
 #xor-xnor()
-*图5.14*　(a)异或门、(b)同或门的静态实现；原图以各类晶体管的串并联结构体现两条导通路径。
-静态CMOS实现通常需要同时提供a、b及其互补信号。在某些实现中，附加PMOS连线是冗余的，设计可以在不改变逻辑功能的条件下优化布局；但必须进一步确认器件尺寸、导通路径和寄生电容。
-本页的布尔逻辑及功能可编辑，晶体管级原图连线仍需重绘与源页核对。
+#align(center)[*图5.14　(a) 异或门和 (b) 同或门的静态实现（可编辑 MOS 器件串并联网络）*]
+
+上拉支路直接实现 $f_("XOR")$ 的功能，但是每一项都用其反码代替；结果如图 5.14(a) 所示。由于 PMOS 导通条件取决于门端低电平，上拉网络与下拉网络对偶。实际源图中还绘有一些附加的 PMOS 内部连线；这些连线可能用于改善转换过程，需要进一步从原始晶体管连接逐支核对。当前图保留功能所必需的支路拓扑，仍不能声明已逐线 1:1 复刻。
