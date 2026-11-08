@@ -1,36 +1,39 @@
-// Source PDF page 045 / printed page 26; exercise diagrams are editable.
-#import "../figures/chapter1-ending.typ": inverter-chain, rc-step
-#set document(title: "原书第45页 · 五级反相器、RC与开关负载")
+// SOURCE PDF PAGE 045 / printed page 26
+// Scan-backed problem statements P1.7–P1.9, with source component values.
+// Answers are intentionally absent: original textbook page contains questions only.
+#import "../figures/chapter1-ending.typ": inverter-chain, rc-step, switch-capacitor
+#set document(title: "第1章 · 原书习题P1.7–P1.9电路图与完整题设 · PDF045")
 #set text(lang: "zh")
 
-= 第1章 · 第26页
-
-== P1.7　反相器链与环振
+= 第1章 · 印刷第26页
+== 1.9　习题（续）
 
 #inverter-chain()
 
-*图P1.7　五级反相器串接和闭合反馈结构（原生拓扑示意）。*
+*图 P1.7*　（a）五级反相器串联；（b）把输出 $b$ 反馈至输入 $a$，形成奇数级反相器环。
 
-若每个反相器的传播延迟约为 $t_p=2 " ns"$，五级串联的传播延迟为
+*P1.7（b）*　如果将 $a$ 和 $b$ 连接起来，图 P1.7（b）所示，$a$ 点的电压将像时钟一样振荡。
 
-$ t_("path") = 5 t_p = 10 " ns" $
+（i）振荡周期是多少？
 
-当五个反相器闭合成奇数级环形振荡器，理想延迟模型的振荡周期为 $T approx 2 dot 5 t_p = 20 " ns"$，因此 $f approx 50 " MHz"$。
+（ii）振荡频率是多少？
 
-== P1.8　RC 阶跃充电
+*P1.8*　一个从 0 V 到 1.2 V 的跳变施加在如图 P1.8 所示的 RC 电路上。计算电容器上的电压达到如下值所需要的时间：（a）达到 0.6 V；（b）达到 1.2 V；（c）从 1.2 V 的 10% 上升到 90%。
 
 #rc-step()
 
-原题使用 $R=12.5 " k" Omega$、$C=100 " fF"$，0 V 到 1.2 V 的阶跃输入。对于电容最初未充电的理想一阶 RC 网络：
+*图 P1.8*　输入阶跃、$12.5 " k" Omega$ 电阻与 $100 " fF"$ 电容。
 
-$ V_C(t) = 1.2 (1 - exp(-t/(R C))) $
+*P1.9*　一个开关用于控制一个电容器通过一个电阻器到 $V_("DD")$ 或者到 Gnd 的连接，如图 P1.9 所示。连接到 $V_("DD")$ 的电阻器的阻值是 30 kΩ，而连接到 Gnd 的电阻器的阻值是 12.5 kΩ。
 
-$ t(V) = - R C ln(1 - V/1.2) $
+（a）如果开关连接到 $R_2$ 的时间足够长，以至于电容器的电压是 0 V，然后开关在 $t=0$ 时转换到 $R_1$，计算电容器的电压达到 0.6 V（$V_("DD")/2$）时所需要的时间。
 
-因此达到0.6 V的时间为 $t_(50%)=R C ln 2$。精确达到最终稳态的 1.2 V 需要无限长时间；10% 到90%上升时间约为 $2.2 R C$。
+（b）如果开关连接到 $R_1$ 的时间足够长，以至于电容器的电压是 1.2 V，然后开关在 $t=0$ 时转换到 $R_2$，计算电容器的电压达到 0.6 V（$V_("DD")/2$）时所需要的时间。
 
-== P1.9　开关电阻与电容负载
+（c）计算（a）和（b）延迟之间的比值。
 
-原图P1.9将电容经开关连接至上拉 $R_1=30 " k" Omega$ 或下拉 $R_2=12.5 " k" Omega$，$V_("DD")=1.2 " V"$，$C_("load")=1 " mu F"$。对充放电分别使用对应电阻与目标电平，即可推导达到0.6 V的时间及其比值。
+#switch-capacitor()
 
-_题解属于配套学习说明，不是原书习题答案；图P1.9开关符号及全部标注尚未完整重绘。_
+*图 P1.9*　$V_("DD")=1.2 " V"$，$R_1=30 " k" Omega$，$R_2=12.5 " k" Omega$，$C_("load")=1 " μF"$ 的切换充放电电路，图元可分别编辑。
+
+#text(size: 7pt, fill: gray)[本页保留原始题设和问题，删除了此前插入教材正文的 10 ns、50 MHz、RC 时间等参考答案；参考答案应单独位于习题解答材料。两幅电路为可编辑重绘，尚未通过原图逐线1:1验收。]
