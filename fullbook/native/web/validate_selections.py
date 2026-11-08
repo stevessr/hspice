@@ -8,7 +8,7 @@ for src in root.glob("*-page-???.typ"):
     match=re.fullmatch(r"(\d{2,3})-page-(\d{3})\.typ", src.name)
     assert match, src
     ordinal,page=map(int,match.groups())
-    assert page == (ordinal+19 if 20<=page<=25 else ordinal+23),src.name
+    assert page == (ordinal if page<=19 else ordinal+19 if page<=25 else ordinal+23),src.name
     assert page not in pages,src.name
     assert re.search(rf"\b{page:03d}\b", src.read_text(encoding="utf-8")[:240]),src
     layout=src.with_name(src.stem+"-layout.typ")
@@ -17,5 +17,5 @@ for src in root.glob("*-page-???.typ"):
     assert '#include "'+src.name+'"' in content,layout
     assert "506.8346pt" in content and "729.6pt" in content,layout
     pages[page]=src
-assert sorted(pages)==list(range(20,325)),sorted(pages)
-print("Native partial selections cover source pages 20..324, 305 pages; full-page acceptance 0")
+assert sorted(pages)==list(range(1,446)),sorted(pages)
+print("Native partial selections cover source pages 1..445, 445 pages; full-page acceptance 0")

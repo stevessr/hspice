@@ -43,7 +43,7 @@ jobs:
        github.event.workflow_run.head_branch == 'main' &&
        github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -156,7 +156,7 @@ jobs:
       - name: Export reviewed native Typst sections to semantic HTML
         run: python3 fullbook/native/web/build_html.py --output study/midterm/public/native-typst
 
-      - name: Export all 305 source-sized Typst page SVG previews
+      - name: Export all 445 source-sized Typst page SVG previews
         shell: bash
         run: |
           set -euo pipefail
@@ -192,7 +192,7 @@ jobs:
           data=json.loads((root/'index.json').read_text(encoding='utf-8'))
           assert data['format']=='native-typst-html'
           assert data['accepted_full_pages']==0
-          assert len(data['items'])==307
+          assert len(data['items'])==447
           ids=set()
           for item in data['items']:
               assert item['id'] not in ids,item
@@ -202,7 +202,7 @@ jobs:
               assert (root/item['typst']).is_file(),item
               if '-page-' in item['id']:
                   assert (root/(item['id']+'-layout.svg')).is_file(),item
-          print(f'Validated {len(ids)} Typst HTML selections and 305 editable page SVGs')
+          print(f'Validated {len(ids)} Typst HTML selections and 445 editable page SVGs')
           PY
       - name: Publish strict 1-to-1 fidelity status (metadata only)
         run: |
