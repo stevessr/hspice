@@ -1,32 +1,37 @@
-// SOURCE PDF PAGE 430; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第430页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("MRA SPICE 的简要介绍                   411")
+// SOURCE PDF PAGE 430 / printed page 411
+// Source-checked two-dimensional DC sweeps and analysis output statements.
+#set document(title:"附录A 双重DC扫描与绘图打印 · PDF430")
+= 附录 A · 印刷第411页
+== A.3.4　直流扫描（续）
 
-#text("NMOS的/与Waso关系")
+*图 A.11* 以 NMOS 为例：漏极电压 $V_("drain")$ 从0到1.8 V，栅极电压 $V_("gate")$ 取多组值，显示一族漏极电流曲线。原书示例的三条曲线对应 $V_("GS")=0.9 " V",1.35 " V",1.8 " V"$。
 
-#text("mere CA")
+图 A.10 的电阻分压器可使用：
 
-#text("ol\n00            四            10            is\nMan ov")
+#raw(".dc V1 0 10 1", block: true)
 
-#text("PIAL 对二变化的 Wee。1os 与 Vs的关系\n对上而第“个电压除法器的例子、该命令的句法如下:")
+针对图 A.11 的嵌套 DC 扫描，原书使用：
 
-#text("ac vl 0 10 1\nAPR MELE. BRAM :")
+#raw(".dc Vdrain 0 'Supply' 'Supply/20' Vgate 0 'Supply' 'Supply/4'", block: true)
 
-#text(".dc Vdrain 0 ‘Supply’ ‘Supply/20’ Vgate 0 ‘Supply’ ‘Supply/4’")
+第一组从0到 `Supply`，步长为 `Supply/20`；第二组从0到 `Supply`，步长为 `Supply/4`。每个栅压值对应一条 $I_("DS")$–$V_("DS")$ 曲线。
 
-#text("这将从0 Supply’ Fil Vdrain，增地为'Supply/20' ，并且从0 到'Supply'扫描 Veate，增\nWE’ Supply/4 对这两种扫描变基的情况.曲线的数量由第二个变量的扫撒参数决定")
+=== 绘图与打印声明
 
-#text("绘图与打印声明")
+`.plot` 以图形形式输出结果，`.print` 以表格形式列出值。两者都接受分析类型和输出变量，后面的输出变量是可选的：
 
-#text("绘图与打印声明使你可以观察历态或直流分析的结果 plot 声明以图形的方式显示结果\n而.print 以表格的方式显示结果“基本的句法如下:")
+#raw(".plot analysis_type ov1 <ov2 ... ov32>\n.print analysis_type ov1 <ov2 ... ov32>", block: true)
 
-#text(".ploc   analysis_type ovl <ov2 ..， ov32>\n-print 。 analysis_type ov   <ov2 ... ov32>\n其中，< >里的任何内容都是可选的\nplot      BA AFR RULE A\nsprint      所有的打印声明必须以此开头\nanalysis_rype — 所区显示的分析类型可以基胆态或直流\nov           ees age bE ht Alt — TW 8 Rae — 4h A")
+#table(columns:(1fr,3fr),inset:3pt,
+table.header([*字段*],[*含义*]),
+[`analysis_type`],[`dc` 或 `tran` 等分析类型],
+[`ov1`],[输出的节点电压或元件电流],
+)
 
-#text("下面的第一个例子是对于在节点 5 的电压和经过电感 Lsetf 的电流的直流绘图要求。第二个\n例子是对同样的电压和电流的朋态分析打印要求")
+原书给出节点5的电压和电感 `Lself` 的电流作为输出：
 
-#text(".plot    ac     VI5) I(Lself)\n-print tran v(5)_—‘I(Lsel£)\n注释")
+#raw(".plot dc V(5) I(Lself)\n.print tran V(5) I(Lself)", block: true)
 
-#text("与所有其他的编程语言一样, 注释对读者是非常有用的, 用来阐明文件中每一行的作者意图。\n在SPICE 里，注释的开始用一个星号 (* ) 表示”注释本身可以占一行，或者与 SPICE 的可执行\n声明其机-人")
+=== 注释
+
+注释帮助解释每条指令的用途。在教材示例中，整行以星号 `*` 开始表示注释；原书随后还继续解释同一行的注释写法。
