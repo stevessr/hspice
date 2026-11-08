@@ -1,30 +1,52 @@
-// SOURCE PDF PAGE 017; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第17页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("64\n65")
+// SOURCE PDF PAGE 017 / printed contents page 16
+// Scan-checked original textbook contents entries; not yet 1:1 page layout or dotted leaders.
+#set document(title:"数字集成电路分析与设计：目录 第4页 · PDF17")
+#set text(size:7.4pt)
+= 目录（4 / 6）
 
-#text("66")
+#table(
+ columns:(.82fr,3.5fr,.45fr), inset:(x:2pt,y:1.15pt),
+ stroke:.4pt,
+ table.header([*章节*],[*原书标题*],[*页码*]),
+ [#text("第6章")],[#text("高速CMOS逻辑设计")],[#text("189")],
+ [#text("6.1")],[#text("绪论")],[#text("189")],
+ [#text("6.2")],[#text("转变时间分析")],[#text("191")],
+ [#text("6.2.1")],[#text("再次讨论门的尺寸——速度饱和效应")],[#text("193")],
+ [#text("6.3")],[#text("负载电容的详细计算")],[#text("195")],
+ [#text("6.3.1")],[#text("门扇出电容")],[#text("196")],
+ [#text("6.3.2")],[#text("自身电容计算")],[#text("197")],
+ [#text("6.3.3")],[#text("连线电容")],[#text("203")],
+ [#text("6.4")],[#text("斜坡输入情况下改善延迟计算")],[#text("203")],
+ [#text("6.5")],[#text("针对最佳路径延迟确定门的尺寸")],[#text("210")],
+ [#text("6.5.1")],[#text("最佳延迟问题")],[#text("210")],
+ [#text("6.5.2")],[#text("反相器链延迟最优化——FO4延迟")],[#text("211")],
+ [#text("6.5.3")],[#text("包含与非门和或非门的路径优化")],[#text("215")],
+ [#text("6.6")],[#text("用逻辑强度优化路径")],[#text("218")],
+ [#text("6.6.1")],[#text("逻辑强度的导出")],[#text("218")],
+ [#text("6.6.2")],[#text("理解逻辑强度")],[#text("222")],
+ [#text("6.6.3")],[#text("分支强度和旁路负载")],[#text("226")],
+ [#text("6.7")],[#text("小结")],[#text("228")],
+ [#text("6.8")],[#text("参考文献")],[#text("230")],
+ [#text("6.9")],[#text("习题")],[#text("230")],
+ [#text("第7章")],[#text("传输门和动态逻辑设计")],[#text("235")],
+ [#text("7.1")],[#text("绪论")],[#text("235")],
+ [#text("7.2")],[#text("基本概念")],[#text("236")],
+ [#text("7.2.1")],[#text("传输管")],[#text("236")],
+ [#text("7.2.2")],[#text("电容馈通")],[#text("238")],
+ [#text("7.2.3")],[#text("电荷共享")],[#text("240")],
+ [#text("7.2.4")],[#text("电荷丢失的其他途径")],[#text("241")],
+ [#text("7.3")],[#text("CMOS传输门逻辑")],[#text("242")],
+ [#text("7.3.1")],[#text("使用CMOS传输门的多路器")],[#text("243")],
+ [#text("7.3.2")],[#text("CMOS传输门延迟")],[#text("247")],
+ [#text("7.3.3")],[#text("CMOS传输门的逻辑强度")],[#text("252")],
+ [#text("7.4")],[#text("动态D锁存器和D触发器")],[#text("253")],
+ [#text("7.5")],[#text("多米诺逻辑")],[#text("255")],
+ [#text("7.5.1")],[#text("多米诺门的逻辑强度")],[#text("260")],
+ [#text("7.5.2")],[#text("多米诺逻辑的局限性")],[#text("260")],
+ [#text("7.5.3")],[#text("双轨（差分）多米诺逻辑")],[#text("263")],
+ [#text("7.5.4")],[#text("自复位电路")],[#text("265")],
+ [#text("7.6")],[#text("小结")],[#text("266")],
+ [#text("7.7")],[#text("参考文献")],[#text("266")],
+)
 
-#text("67\n68\n69")
-
-#text("第7章\nAl\n12")
-
-#text("13")
-
-#text("1a\n15")
-
-#text("16")
-
-#text("“16+")
-
-#text("转变时间分析-      全\n62.1 再次讨论门的尺寸一一速度伯和效应;\n负载电容的详细计算\n63.1 门扇出电容\n6.3.2 自身电容计算………'\n63.3 连线电容…\n余波输入情况下改善延迟计算-\n针对入佳路径延迟确定门的尺寸…\n6.5.1 最佳延迟问题一")
-
-#text("6.5.2 ”反相器链延迟最优化一 FO4 延迟\n6.5.3 包含与非门和或非门的路径优化，\n用逻辑强度优化路径\n6.6.1 脖辑强度的导出-\n6.6.2 FEE MRIS ~~\n66.3 ”分支强度和旁路负载\nIN\n参考文献\n习题-")
-
-#text("传输门和动态逻辑设计-")
-
-#text("传输管\n7.2.2 电容馈通…\n7.2.3 电荷共享…\n7.2.4 电荷委失的其他途径\nCMOS 传输门逐辑…\n7.3.1 使用CMOS 传输门的多路器-\n7.3.2 CMOS 传输门延迟\n7.3.3 CMOS 传输门的逻辑强度，\n动态D锁存六和触发器")
-
-#text(".5.2 多米诺逻辑的局限性\n7.5.3 双轨 ( 差分 ) 多米诺逻辑\n75.4 自复位电路")
+_上表数字均为原书印刷页码，并非扫描PDF文件的页序；正文印刷页1对应 PDF 第20页。_
