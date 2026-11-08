@@ -1,26 +1,24 @@
-// SOURCE PDF PAGE 345; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第345页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("326         数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 345. Scan-guided original Typst excerpt and editable schematics.
+// Not full-page 1:1 accepted; transistor topology and page geometry provisional.
+#import "../figures/ch9-nonvolatile-ch10-interconnect-native.typ": figure9late
+#set document(title:"第9章·非易失存储器·PDF345")
+#align(center)[#text(size:8pt,weight:"bold")[326　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("ME:")
+*例9.4（续）：阈值变化计算*
 
-#text("由电容分压公式,相对于桥 2 的 W 为 2 V。编程之后，当外部电压返回 0 V 时.内部电压将\n下降到-3 V”当外加 5 V 电压时，内部电压将达到-0.5 Y，这意味着器件是关闭的.为了使内部\n节点电压达到 1 V. 外部节点电压将不得不升到8 V，央此,相对于权 2 的新闻值电压是8 V. 参")
+两电容相等使耦合系数为1/2。编程前栅1阈值为1 V，则对栅2的外部阈值为2 V。把栅2升高到10 V时，浮栅电压升至5 V；热载流子注入后其电压降到2 V。
 
-#text("照图923，wn= 2V, AV, =8V")
+当外部栅2电压恢复0时，浮栅被耦合降低5 V，成为-3 V；正常栅2加5 V，浮栅回升到-0.5 V，仍低于1 V的导通阈值。为了使浮栅达到1 V，外部栅2至少需要8 V，所以编程后的外部阈值电压提高到8 V。
 
-#text("电可氛除 PROM ( EEPROM 或 EPROM ) 的写和控除采用了一种稍微不同的结构和机制-\nE?PROM 单元的双管 ( 2T ) 结构如图 9.25 所示、央为每一个单元需要两个晶体管，所以位密度就\n比常规的 ROM 或 EPROM 低一些，在 EPROM 单元中，一个晶体管用来储存单元的内容而另一\n个用来进行单元的选择选择管有正常的栅氧化层厚度，储存管看起来像 EPROM 单元但是有\n两个氧化层厚度 WNP 9.25 所示, 绝缘体的一部分把栅 1 与主体分开, 是漏极的厚度减少到 10 nm\n或更小，这叫做浮栅道氧化物 ( FLOTOX floating gate tunneling oxide ) 结构")
+== EEPROM与FLOTOX
 
-#text("fain\n7")
+电可擦除可编程ROM（EEPROM或E²PROM）采用略有不同的单元结构。图9.25中，每位数据使用两个晶体管：一个浮栅存储管和一个选择管。浮栅绝缘层包含局部薄氧化层（约10 nm），便于电子通过Fowler–Nordheim（FN）隧穿。
 
-#text("o [\nL            wee\nma                                         a\nCo")
+#figure9late(25)
+#align(center)[*图9.25　E²PROM的双管FLOTOX单元（可编辑剖面草图）*]
 
-#text("corre              om")
+在约 $10^7 "V/cm"$ 的高电场下，薄氧化层能够产生FN隧穿电流。施加的电压极性决定浮栅电子是注入还是移出，因而既可编程也可擦除。
 
-#text("图925 E'PROM 2T结构")
-
-#text("当这个薄绝缘体的两边施加的电压大约为 10 V 的时候， 电子通过一种叫做 Fowler-Nordheim\nCEN ) 隧道效应的导电机制流人/流出权 1 ”也就是说，当氧化物中的电场超过 10 Viem 时，可\n能通过叶道效应产生流过氧化物的电流。叶道效应引起的电流随着所加的电压而线形增加，如\n疼 9.26 所示，而且这个机制是可逆的。因此，通过简单反转所加的电压就可以进行擦除. 把电子\n注人到浮栅中的影响和以前的一样,即有效阔值电压增加。 因此, 施加在 FLOTOX 器件桥上的正\n常电平在编程后将不能使之导通。如果在相反的过程中电子从泽帮中去除、有效赣值电压就会降\n低 在典型的高的栅电平下，器件将导通")
-
-#text("图926 10 nm 氧化层的 Fowler Nordheim 隧道效应特性")
+#figure9late(26)
+#align(center)[*图9.26　10 nm氧化层的Fowler–Nordheim隧穿曲线（定性示意）*]

@@ -1,18 +1,20 @@
-// SOURCE PDF PAGE 347; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第347页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("328         数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 347. Scan-guided original Typst excerpt and editable schematics.
+// Not full-page 1:1 accepted; transistor topology and page geometry provisional.
+#import "../figures/ch9-nonvolatile-ch10-interconnect-native.typ": figure9late
+#set document(title:"第9章·非易失存储器·PDF347")
+#align(center)[#text(size:8pt,weight:"bold")[328　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("BL, 0 Bly")
+== 9.7　Flash存储器
 
-#text("99.28 E?PROM 读操作")
+Flash通过浮栅电荷保存信息，也属于非易失性存储器。与传统EEPROM常按字节或更小单位进行擦除不同，Flash通常按存储块组织擦除，以降低单元面积和周边电路复杂度。
 
-#text("*9.7 Flash 存储器")
+不同Flash结构包括并行NOR和串行NAND组织。NOR Flash单元通常具有可独立连接到位线的访问路径，读出较直接；NAND Flash通过若干浮栅单元串联形成单元串，有利于高密度存储，但读取和编程所需控制更加复杂。
 
-#text("最近、在嵌人式应用中，E?PROM 遇到了来自另一种叫做 Flash 存储器的非易失性存储器的\n不断加剧的竞争，Flash 存储器使用的 IT 单元比 2T E?PROM 更受欢迎，因为它有更好的密度。\n一个或非门 Fash 存储器的结构如图 9.29 所示- 这个阵列中的所有单元晶体管都有薄氧化层，而\n且 EPROM 的选择管在这种存储器中不再出现- 这就提供了更高的密度, 但是不允许对阵列进行\n逐位的修改，这种或非门结构的写/稼除的机制是热电子注和人和 Fowler-Nordheim 隧道效应，写、\n控除或读操作的不同决定了对源开关的调整-\nabe")
+#figure9late(29)
+#align(center)[*图9.29　Flash单元结构：浮栅与隧穿氧化层（可编辑框图）*]
 
-#text("图929 或非门 Fash 存储器结构")
+图9.30以多个浮栅管与字线/位线连接的阵列说明两类Flash的区别。编程和擦除可以利用高电压下的FN隧穿或热载流子机制，具体与工艺及器件结构有关。
 
-#text("FA 9.30 说明了写/掠除的操作。在写过程期间，源电压连接到地，如图 930 (a) 所示。然后，\n个高电压值 va 施加在选择的位线上 , 而一个高电压值 ww 施加于字线上 这产生了沟道热坟流")
+#figure9late(30)
+#align(center)[*图9.30　Flash阵列结构（可编辑概念图）*]
