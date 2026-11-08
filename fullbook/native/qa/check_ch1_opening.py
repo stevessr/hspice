@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Non-acceptance checks for scan-backed Chapter 1 PDF20–34."""
+"""Non-acceptance checks for scan-backed Chapter 1 PDF20–36."""
 from pathlib import Path
 import re
 root=Path(__file__).resolve().parents[1]
@@ -44,9 +44,9 @@ assert all(term in p25 for term in (
 assert p25.index("F = A C") < p25.index("F = (A+B)") < p25.index("F = A xor B")
 
 
-# Pages PDF026–034: retain source page mapping and semantic details.
+# Pages PDF026–036: retain source page mapping and semantic details.
 chapter1_sources = {}
-for page in range(26, 35):
+for page in range(26, 37):
     stem = f"{page-23:02d}-page-{page:03d}"
     src = w / f"{stem}.typ"
     layout = w / f"{stem}-layout.typ"
@@ -72,6 +72,10 @@ landmarks = {
        "R_L", "cmos-inverter"),
   34: ("图 1.12", "1.4.3", "深亚微米互连", "8 层", "0.35 μm",
        "图 1.13", "图 1.14", "resistor-inverter"),
+  35: ("图 1.13", "图 1.14", "图 1.15", "RC", "IR 下降",
+       "C_(\"small\")", "C_(\"large\")", "平方成正比", "wire-coupling", "rc-ir"),
+  36: ("图 1.16", "图 1.17", "图 1.18", "时钟偏差", "clock skew",
+       "10%", "0.25 μm", "0.18 μm", "低 $k$", "clock-tree"),
 }
 for page, required in landmarks.items():
     missing = [item for item in required if item not in chapter1_sources[page]]
@@ -92,4 +96,4 @@ for page in range(26, 35):
     assert state[page-1].get("human_verified") is not True, page
     assert state[page-1].get("layout_verified") is not True, page
 
-print("PDF20–34 scan-backed native Typst landmarks and cross-page continuity OK; no 1:1 acceptance claimed.")
+print("PDF20–36 scan-backed native Typst landmarks and cross-page continuity OK; no 1:1 acceptance claimed.")
