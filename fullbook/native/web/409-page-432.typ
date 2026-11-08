@@ -1,5 +1,6 @@
 // SOURCE PDF PAGE 432 / printed page 413
 // Graphs and circuit figures are described but not yet pixel-matched to source.
+#import "../figures/appendix-a-native.typ": *
 #set document(title:"附录A 图A.12/A.13 NMOS IV和反相器响应 · PDF432")
 = 附录 A · 印刷第413页
 == A.4　完整 SPICE 示例（续）
@@ -20,6 +21,8 @@ table.header([*观察量*],[*原图设定*]),
 [次扫描],[`Vgate 0 'Supply' 'Supply/4'`],
 )
 
+#align(center)[#a11-nmos-curves()]
+
 === 图 A.13　一个反相器的脉冲响应
 
 图 A.13 由 CMOS 反相器、10 fF 输出负载和 `PULSE` 输入产生。输出波形在输入为低电平时约为1.8 V，在输入为高电平时接近0 V。
@@ -32,5 +35,7 @@ table.header([*观察量*],[*原图设定*]),
 [负载电容],[`Cload 3 0 10fF`],
 [瞬态分析],[`.tran 50ps 5ns`],
 )
+
+#align(center)[#a13-transient()]
 
 _本页是对原扫描图 A.12 / A.13 的可编辑技术说明与数据结构重排；图中曲线形状与实验采样值仍待数值模拟和图形几何复核。_

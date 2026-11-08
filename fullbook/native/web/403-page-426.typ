@@ -1,5 +1,6 @@
 // SOURCE PDF PAGE 426 / printed page 407
 // Source-checked PULSE/PWL syntax, parameter order and example values.
+#import "../figures/appendix-a-native.typ": *
 #set document(title:"附录A PULSE与PWL电源 · PDF426")
 = 附录 A · 印刷第407页
 == A.3.3　脉冲源及分段线性源
@@ -34,6 +35,8 @@ table.header([*时间（ns）*],[*电压（V）*],[*区段*]),
 [52],[−1],[下一周期上升开始],
 [56],[+1],[下一周期上升结束],
 )
+
+#align(center)[#a6-pulse()]
 
 相同的第一周期波形可以用 `PWL` 指定原书给出的采样节点：
 

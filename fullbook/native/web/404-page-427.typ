@@ -1,5 +1,6 @@
 // SOURCE PDF PAGE 427 / printed page 408
 // Source-checked passive RLC and MOSFET connection syntax.
+#import "../figures/appendix-a-native.typ": *
 #set document(title:"附录A RLC与MOSFET元件语法 · PDF427")
 = 附录 A · 印刷第408页
 == A.3.3　电阻、电容和电感
@@ -16,6 +17,8 @@ table.header([*器件*],[*两端节点*],[*参数*]),
 [电容 Cin],[2—3],[1.5 fF],
 [电感 Lbig],[3—4],[0.7 mH],
 )
+
+#align(center)[#a7-rlc()]
 
 === MOSFET
 
