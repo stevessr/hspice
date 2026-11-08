@@ -42,8 +42,8 @@
     #for i in range(14) [
       #let x1=xx+17pt+i*11pt
       #let x2=xx+17pt+(i+1)*11pt
-      #let y1=58pt+(1.0-voltages.at(i))*84pt
-      #let y2=58pt+(1.0-voltages.at(i+1))*84pt
+      #let y1=58pt+(1.0 - voltages.at(i))*84pt
+      #let y2=58pt+(1.0 - voltages.at(i+1))*84pt
       #w(x1,y1,x2,y2)
     ]
     #t(xx+41pt,161pt,if k==0 {"(a) 集总 RC 波形"} else {"(b) 分布式 RC 波形"})
@@ -96,7 +96,7 @@
 // T two half-resistors and a middle shunt. The old version drew 3 identical R+C.
 #let shunt(x,top-y,tag)={
   w(x,top-y,x,top-y+18pt)
-  cap(x-7pt,top-y+18pt)
+  cap(x - 7pt,top-y+18pt)
   w(x,top-y+23pt,x,top-y+29pt)
   gnd(x,top-y+29pt)
   t(x+7pt,top-y+14pt,tag)
@@ -142,7 +142,7 @@
 // FO4=150/40/25ps and L=1/2/3mm wire values from the text. Interpolating
 // connected strokes convey trend; the chart is not a digitized data plot.
 #let length-trends()=html.frame(block(width:388pt,height:176pt)[
-  #let y(v)=144pt-v*0.094pt
+  #let y(v)=144pt - v * 0.094pt
   #let x350=120pt
   #let x130=235pt
   #let x65=307pt
@@ -173,9 +173,9 @@
     #let v350=item.at(0)
     #let v130=item.at(1)
     #let v65=item.at(2)
-    #place(top+left,dx:x350-2pt,dy:y(v350)-2pt,circle(radius:2pt,fill:black))
-    #place(top+left,dx:x130-2pt,dy:y(v130)-2pt,circle(radius:2pt,fill:black))
-    #place(top+left,dx:x65-2pt,dy:y(v65)-2pt,circle(radius:2pt,fill:black))
+    #place(top+left,dx:x350 - 2pt,dy:y(v350) - 2pt,circle(radius:2pt,fill:black))
+    #place(top+left,dx:x130 - 2pt,dy:y(v130) - 2pt,circle(radius:2pt,fill:black))
+    #place(top+left,dx:x65 - 2pt,dy:y(v65) - 2pt,circle(radius:2pt,fill:black))
   ]
   #t(310pt,y(1035)-10pt,"3 mm")
   #t(310pt,y(460)-10pt,"2 mm")
