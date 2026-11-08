@@ -4,7 +4,7 @@
 #align(center)[#text(size:8pt,weight:"bold")[第7章　传输门和动态逻辑设计　　　　　　　　　　　247]]
 #line(length:100%,stroke:.55pt)
 
-况下，两个输入所做的是与非操作。一个输入是 $overline(A)overline(C)$，另一个输入是 $AB+A overline(B)C$。其结果功能 $F$ 是这两项的与非，如图中所示。
+况下，两个输入所做的是与非操作。一个输入是 $overline(A)overline(C)$，另一个输入是 $A B+A overline(B)C$。其结果功能 $F$ 是这两项的与非，如图中所示。
 
 #fig714()
 #align(center)[*图 7.14　传输门和标准门的组合*]

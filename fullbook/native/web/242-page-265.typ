@@ -5,7 +5,7 @@
 #align(center)[#text(size:8pt,weight:"bold")[246　　数字集成电路分析与设计——深亚微米工艺（第三版）]]
 #line(length:100%,stroke:.55pt)
 
-*例 7.3　用传输门实现功能 $F=AB+A overline(B)C+overline(A)overline(C)$*
+*例 7.3　用传输门实现功能 $F=A B+A overline(B)C+overline(A)overline(C)$*
 
 *解答：* 指定 $A$ 和 $B$ 为控制信号并建立真值表。
 

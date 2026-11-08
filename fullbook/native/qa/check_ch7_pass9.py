@@ -9,7 +9,7 @@ q=json.loads((r/"qa/fidelity-status.json").read_text(encoding="utf-8"))["pages"]
 assert a["scope"]==[261,268] and len(a["pages"])==8 and a["strict_accepted_pages"]==0
 markers={
 261:("7.3","图 7.7","fig77","电荷泄漏"),
-262:("7.3.1","图 7.8","图 7.9","fig78","fig79","F=AS"),
+262:("7.3.1","图 7.8","图 7.9","fig78","fig79","F=A S"),
 263:("图 7.10","图 7.11","fig710","fig711","四选一"),
 264:("图 7.12","图 7.13","fig712","fig713","错误"),
 265:("例 7.3","fig-example73","overline(C)","真值表"),
