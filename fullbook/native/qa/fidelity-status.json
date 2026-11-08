@@ -8575,11 +8575,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全文、公式、参考文献及脚注未逐字签收",
+        "真实芯片照片及IR/EM数值热图未进行原像素复原",
+        "电路节点和版面仍需人工叠图校验"
       ],
-      "notes": "PDF389: unverified machine-OCR Typst source",
+      "notes": "PDF389: scan-guided native editable editorial excerpts only; not a full-page accepted proof.",
       "page_source_verified": false
     },
     {
@@ -8597,11 +8597,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全文、公式、参考文献及脚注未逐字签收",
+        "真实芯片照片及IR/EM数值热图未进行原像素复原",
+        "电路节点和版面仍需人工叠图校验"
       ],
-      "notes": "PDF390: unverified machine-OCR Typst source",
+      "notes": "PDF390: scan-guided native editable editorial excerpts only; not a full-page accepted proof.",
       "page_source_verified": false
     },
     {
@@ -8619,11 +8619,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全文、公式、参考文献及脚注未逐字签收",
+        "真实芯片照片及IR/EM数值热图未进行原像素复原",
+        "电路节点和版面仍需人工叠图校验"
       ],
-      "notes": "PDF391: unverified machine-OCR Typst source",
+      "notes": "PDF391: scan-guided native editable editorial excerpts only; not a full-page accepted proof.",
       "page_source_verified": false
     },
     {
@@ -8641,11 +8641,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全文、公式、参考文献及脚注未逐字签收",
+        "真实芯片照片及IR/EM数值热图未进行原像素复原",
+        "电路节点和版面仍需人工叠图校验"
       ],
-      "notes": "PDF392: unverified machine-OCR Typst source",
+      "notes": "PDF392: scan-guided native editable editorial excerpts only; not a full-page accepted proof.",
       "page_source_verified": false
     },
     {
@@ -8663,11 +8663,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全文、公式、参考文献及脚注未逐字签收",
+        "真实芯片照片及IR/EM数值热图未进行原像素复原",
+        "电路节点和版面仍需人工叠图校验"
       ],
-      "notes": "PDF393: unverified machine-OCR Typst source",
+      "notes": "PDF393: scan-guided native editable editorial excerpts only; not a full-page accepted proof.",
       "page_source_verified": false
     },
     {
@@ -8685,11 +8685,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全文、公式、参考文献及脚注未逐字签收",
+        "真实芯片照片及IR/EM数值热图未进行原像素复原",
+        "电路节点和版面仍需人工叠图校验"
       ],
-      "notes": "PDF394: unverified machine-OCR Typst source",
+      "notes": "PDF394: scan-guided native editable editorial excerpts only; not a full-page accepted proof.",
       "page_source_verified": false
     },
     {
@@ -8707,11 +8707,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全文、公式、参考文献及脚注未逐字签收",
+        "真实芯片照片及IR/EM数值热图未进行原像素复原",
+        "电路节点和版面仍需人工叠图校验"
       ],
-      "notes": "PDF395: unverified machine-OCR Typst source",
+      "notes": "PDF395: scan-guided native editable editorial excerpts only; not a full-page accepted proof.",
       "page_source_verified": false
     },
     {
@@ -8729,11 +8729,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全文、公式、参考文献及脚注未逐字签收",
+        "真实芯片照片及IR/EM数值热图未进行原像素复原",
+        "电路节点和版面仍需人工叠图校验"
       ],
-      "notes": "PDF396: unverified machine-OCR Typst source",
+      "notes": "PDF396: scan-guided native editable editorial excerpts only; not a full-page accepted proof.",
       "page_source_verified": false
     },
     {
