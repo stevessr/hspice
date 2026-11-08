@@ -371,14 +371,14 @@ SECTIONS = [
     ("331-page-354", "原书PDF354：第10章连线设计章首与10.1", [354]),
     ("332-page-355", "原书PDF355：图10.1/10.2多金属互连与几何", [355]),
     ("333-page-356", "原书PDF356：10.2 RC延迟、式10.1/10.2及图10.3", [356]),
-    ("334-page-357", "原书PDF357：书末机器OCR未校对", [357]),
-    ("335-page-358", "原书PDF358：书末机器OCR未校对", [358]),
-    ("336-page-359", "原书PDF359：书末机器OCR未校对", [359]),
-    ("337-page-360", "原书PDF360：书末机器OCR未校对", [360]),
-    ("338-page-361", "原书PDF361：书末机器OCR未校对", [361]),
-    ("339-page-362", "原书PDF362：书末机器OCR未校对", [362]),
-    ("340-page-363", "原书PDF363：书末机器OCR未校对", [363]),
-    ("341-page-364", "原书PDF364：书末机器OCR未校对", [364]),
+    ("334-page-357", "原书PDF357：导线方块电阻式10.3–10.5与图10.4", [357]),
+    ("335-page-358", "原书PDF358：图10.5分布RC及10.2.2 Elmore", [358]),
+    ("336-page-359", "原书PDF359：图10.6、式10.6与例10.1 RC树", [359]),
+    ("337-page-360", "原书PDF360：10.2.3长线RC、式10.7及图10.7/8", [360]),
+    ("338-page-361", "原书PDF361：例10.2短导线负载与92.5ps", [361]),
+    ("339-page-362", "原书PDF362：例10.2续、例10.3长线1.3ns", [362]),
+    ("340-page-363", "原书PDF363：图10.9长度延迟与10.3缓冲器插入", [363]),
+    ("341-page-364", "原书PDF364：图10.10插入优化与RC链", [364]),
     ("342-page-365", "原书PDF365：书末机器OCR未校对", [365]),
     ("343-page-366", "原书PDF366：书末机器OCR未校对", [366]),
     ("344-page-367", "原书PDF367：书末机器OCR未校对", [367]),
@@ -514,7 +514,7 @@ def main():
         shutil.copy2(src,args.output/f"{stem}.typ")
         index.append(dict(id=stem,title=title,source_pdf_pages=pages,
                           html=stem+".html",typst=stem+".typ",
-                          status=("machine OCR only; text, math, diagrams and layout unverified" if pages[0]<20 or pages[0]>=357 else "native editorial selection; full pages not accepted")))
+                          status=("machine OCR only; text, math, diagrams and layout unverified" if pages[0]<20 or pages[0]>=365 else "native editorial selection; full pages not accepted")))
         print(f"HTML OK {stem}: {len(html)} bytes",flush=True)
     (args.output/"index.json").write_text(
         json.dumps(dict(format="native-typst-html",accepted_full_pages=0,

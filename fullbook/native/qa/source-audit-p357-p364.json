@@ -1,0 +1,92 @@
+{
+  "schema": "ch10-rc-elmore-source-pass18",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    357,
+    364
+  ],
+  "source_render": "PyMuPDF 2.0x RGB PNG",
+  "strict_full_pages_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 357,
+      "source_render_sha256": "972cc804321f602b6a7c5429f45e66d77450eb0c5c57d99dfd6cef6e17ccf14c",
+      "machine_ocr_sha256": "17d78afe012290f8012009928a59900ed6e2a61f6b5eb0237dcad620f5729c0b",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 358,
+      "source_render_sha256": "1419043b2d989987a777db1558319cfbe9cbd2a191c1ac55eaedcfc9517da206",
+      "machine_ocr_sha256": "301ea9cfe1bba820d12875a7435e0a66b765ab21e4c905f6fb4c704255c5b98f",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 359,
+      "source_render_sha256": "bb01a6d6bec44af3621dab059744e6461f6d0f69363ab4ea4453c2b09150e95c",
+      "machine_ocr_sha256": "7748373b5c8f6d0e5fef50b236ed791b1a41306079470880869021b14413cd7e",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 360,
+      "source_render_sha256": "ce0cb14c41a5f88fba808fd189c409d37689629e54f0baa029d4030c836e3286",
+      "machine_ocr_sha256": "c844594736df72f16ca4bcd007560ed450ae51709a5599fb080cc8bc92b628ce",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 361,
+      "source_render_sha256": "2de7eae740bd8742c16e915d5d974593218c04072ad2dd5ec5b0591bd7b9a427",
+      "machine_ocr_sha256": "fd11c3cd7cf2532e1ad6584eb0b922a7ac4180028c2c44d4365760e370860a23",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 362,
+      "source_render_sha256": "3d4852ac3f42bc9cc8390bf5b6d8e347122e9470f38a1e8fd23301e64b1468fa",
+      "machine_ocr_sha256": "8efa55d557b8ddc416e32564e8e77fa25131d62ebdcd0177e0cfedd658206381",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 363,
+      "source_render_sha256": "b62c8274d030d3e6d9da041fe2ca0a5d6100cabe7323f97789e1a6c7f4ac2f62",
+      "machine_ocr_sha256": "c2bde0f1770a3d264f552727cdb23554a48f5f76a32578d9d683f8f956b1aa28",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 364,
+      "source_render_sha256": "c4b7d66d384cd5c7d09395d96c4c1a84a723b02e4453848b6bb5bf080e0f49ee",
+      "machine_ocr_sha256": "acb939d0885e8b5af10cb28f89a7f0cc4168fedf1dc6a201333b634802c46724",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    }
+  ],
+  "numerical_reference": {
+    "example102": {
+      "load_fF": 14.8,
+      "fanout_fF": 9.6,
+      "self_fF": 1.2,
+      "wire_fF": 4,
+      "wire_ohm": 5.4,
+      "without_R_ps": 92.5,
+      "with_R_ps": 92.6
+    },
+    "example103": {
+      "length_mm": 20,
+      "wire_ohm": 1080,
+      "wire_pF": 2,
+      "driver_ohm": 125,
+      "elmore_ns": 1.3
+    }
+  },
+  "limitations": [
+    "Original page literal paragraphs and topology not fully 1:1",
+    "Circuit figure10.4–10.10 fully editable functional drawings not original terminal-by-terminal geometries",
+    "Source scan/Typst SVG optical overlay not run on these pages"
+  ]
+}
