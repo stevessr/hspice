@@ -53,7 +53,7 @@ for page in range(26, 35):
     assert src.is_file() and layout.is_file(), page
     source = src.read_text(encoding="utf-8")
     wrapper = layout.read_text(encoding="utf-8")
-    assert "Typst" in source or "typst" in source, page
+    assert "#set document(" in source, page
     assert "#image(" not in source, page
     assert f'#include "{stem}.typ"' in wrapper, page
     assert "506.8346pt" in wrapper and "729.6pt" in wrapper, page
