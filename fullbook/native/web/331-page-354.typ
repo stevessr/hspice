@@ -1,12 +1,40 @@
-// SOURCE PDF PAGE 354; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第354页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第10章 连线设计")
+// SOURCE PDF PAGE 354. Editable source-guided editorial selection, strict page 1:1 not accepted.
+#import "../figures/ch9-nonvolatile-ch10-interconnect-native.typ": figure9late,figure10,fig-summary
+#set document(title:"数字集成电路第10章·PDF354")
+#align(center)[#text(size:8pt,weight:"bold")[335　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("10.1 绪论")
+#set document(title:"第10章　连线设计")
+#align(center)[#text(font:"Noto Sans CJK SC",size:18pt,weight:"bold")[第10章　连线设计]]
 
-#text("本章将专门研究深亚微米工艺中 IC 设计者将面对的连线问题。在深亚微米工艺中，怎样强\n调连线的重要性都不过分。实际上，在本书中应该更早讨论连线的问题以突出其重要性，但因为\n目前已经完成了关于晶体管级电路设计的讨论，所以在这里讨论连线问题是最合适的。连线问题\n最早在第 1 章和第 3 章里进行了讨论。 本章详细讨论与连线的 RLC 特性相关的问题。 我们将首先\n回顾用艾蒙延迟 ( Elmore delay ) 计算 RC 延迟，并讨论在长导线中的缓冲器插人问题。然后研究\n与三维连线相关的电容问题。这个问题相当复杂，但我们将提供一个简化的处理办法来描述其中\n最重要的概念。由此，将引出关于逻辑电路中而合电容在延迟和品声注人方面作用的讨论。本章\n将继续讨论电感效应，并以对天线效应的简要讨论作为结束。")
+#block(fill:luma(239),inset:10pt)[
+  *本章提要*
 
-#text("从 20 世纪 90 年代中期开始,“连线是一切”经常用来描述连线在深亚微米工艺中的重\n要性。随着各代工艺中器件尺十的不断缩小，在硅表面的多层金属结构变得越来越高并且很快成\n为集成电路加工工艺的主导特征。这可以用图 10.1 中的 0.18 yom 名工艺和 0.13 yom 铜工艺的截面\n图说明。 金属层的数目从 20 世纪 80 年代的几层增加到 20 世纪 90 年代的 4 层或 5 层，至今已达\n8 层或更多。这些上层结构的制造需要有集成电路工艺的重大改进，但对于设计的影响则是更为\n显著的。连线迅速控制了时序 、等比功耗、品声、设计的可使用性和可靠性。虽然 ( 埋藏在多层\n导线和孔结构下的 )器件确定了实际的逻辑功能, 但连线控制了芯片上所有这些重要的电气特性。\n现在，连线仍然左右着先进工艺的设计过程，而且在可预见的未来这种情况仍将继续。")
+  10.1　绪论
+
+  10.2　连线的RC延迟
+
+  10.3　基本电阻和电容模型
+
+  10.4　最优的缓冲器尺寸及插入
+
+  10.5　连线的电感和耦合
+
+  10.6　连线的串扰
+
+  10.7　天线效应
+
+  10.8　小结
+
+  10.9　参考文献
+
+  10.10　习题
+]
+
+== 10.1　绪论
+
+随着工艺尺寸降低，芯片中连接不同逻辑器件的互连线不再能够视为理想导线。互连电阻、电容、耦合与自感成为决定延迟、噪声、能耗和可靠性的关键因素。
+
+器件工艺微缩通常可以提高晶体管速度与集成密度，但导线宽度和间距也同时缩小，单位长度电阻、电容及相邻导线耦合可能使长连线成为主要性能限制。
+
+本章把连线视为有分布电阻和电容的物理对象，并通过导体电阻、寄生电容和等效RC网络分析互连延迟。

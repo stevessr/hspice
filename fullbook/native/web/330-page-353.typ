@@ -1,24 +1,18 @@
-// SOURCE PDF PAGE 353; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第353页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("334       数字集成电路分析与设计一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 353. Editable source-guided editorial selection, strict page 1:1 not accepted.
+#import "../figures/ch9-nonvolatile-ch10-interconnect-native.typ": figure9late,figure10,fig-summary
+#set document(title:"数字集成电路第9章·PDF353")
+#align(center)[#text(size:8pt,weight:"bold")[334　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("POLL 解释为什么在 EPROM 单元中需要选择管? EPROM 单元是如何避免对这个额外晶体")
+*P9.11*　解释为什么EPROM单元中的浮栅阈值会因热载流子注入而增加；对比紫外擦除和FN隧穿擦除两种机制。
 
-#text("管的需求的?")
+*P9.12*　图P9.12包含一个具有寄生电容的动态CMOS电路。根据输入时钟及节点初始电平分析瞬态输出，结合题设设备模型计算或仿真。原图MOS端口连接尚未逐管复刻。
 
-#text("P9.12 ”考虑图 P9.12 中所示的电荷泵电路 它用来为存储器的应用产生一条抬高的字线- 候\n设 CLK 初始为高电平日反相器的输出为 0.义假设节点 4 的电平为Von — Vp. 节\n点妃的电平为0 画出 CLK 从高电平到低电平来同变化时节点 A 和节点 瑟的波形图\n用 SPICE 检查所得出的结果")
+*P9.13*　图P9.13展示三管DRAM单元，要求按题目给定的预充与访问时序分析内部电容的存储电压和读列线响应。
 
-#text("ux                             Ys")
+*P9.14*　使用Fowler–Nordheim隧穿公式与图9.26的数据解释提高氧化层电场会如何影响擦写电流，并讨论薄氧化层的可靠性限制。
 
-#text("PA P9.12")
+#figure9late(13)
+#align(center)[*图P9.13　三管动态RAM单元结构（编辑草图）*]
 
-#text("P9.13 图 P9.13 中的 3T DRAM 单元使用最小尺寸的管子，假设一个 64 K DRAM 由一个\n256x256 的阵列结构组成 计算读“0”时以及读“1”时单元电流是多大?画出读和\n写操作时字线 ，位线和连接到Ci 的内部节点的信号波形")
-
-#text("Du                       Dy")
-
-#text("图P9.13")
-
-#text("P9.14 说明 Fowler-Nordheim 隧道效应和热载流子注入的区别、哪一种机制给氧化层带来更\n多的损害，并内此限制了非易失性存储器编程/擦除周期的次数?")
+扫描原书的第9章结束于本页，下一页正式进入第10章“连线设计”。此页仍是源扫描辅助的习题选段而非完整的原题逐字排版。
