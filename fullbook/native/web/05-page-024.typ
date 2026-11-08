@@ -8,7 +8,7 @@
 #align(center)[#text(size:8pt,weight:"bold")[第 1 章　深亚微米数字集成电路设计　　　　　　　　　5]]
 #line(length:100%,stroke:.55pt)
 
-#align(center)[*表 1.1　主要的 DSM 器件问题和互连问题的简要列表*]
+#align(center)[*表1.1　主要的 DSM 器件问题和互连问题的简要列表*]
 #table(
   columns:(1fr,1fr),
   stroke:(top:.5pt,bottom:.5pt),
@@ -29,7 +29,7 @@
 
 === 1.3.1　基本的逻辑函数
 
-在我们开始数字集成电路的设计的时候，首先复习设计过程中将会用到的基本逻辑原理，并详细描述本书中将要用到的某些逻辑符号。数字逻辑门实现的是布尔函数，例如反相器（INV，inverter）、与非门（NAND）和或非门（NOR）等。任何逻辑功能都可以由这些基本的逻辑门构成。这些组合门及其相应的真值表如图 1.3 所示。
+在我们开始数字集成电路的设计的时候，首先复习设计过程中将会用到的基本逻辑原理，并详细描述本书中将要用到的某些逻辑符号。数字逻辑门实现的是布尔函数，例如反相器（INV，inverter）、与非门（NAND）和或非门（NOR）等。任何逻辑功能都可以由这些基本的逻辑门构成。这些组合门及其相应的真值表如图1.3 所示。
 
 // Typst grids are ignored on HTML export. A semantic three-column table
 // retains all gates and truth tables in the actual VitePress HTML version.
@@ -37,7 +37,7 @@
   columns:(1fr,1fr,1fr),stroke:none,inset:(x:2pt,y:3pt),
   [
     #align(center)[*反相器（INV）*]
-    #gate-symbol(kind:"inverter")
+    #gate-symbol(kind: "inverter")
     #table(columns:(1fr,1fr),inset:2pt,
       table.header([A],[F]),
       [0],[1],
@@ -46,7 +46,7 @@
   ],
   [
     #align(center)[*NAND*]
-    #gate-symbol(kind:"nand")
+    #gate-symbol(kind: "nand")
     #table(columns:(1fr,1fr,1fr),inset:2pt,
       table.header([A],[B],[F]),
       [0],[0],[1],
@@ -57,7 +57,7 @@
   ],
   [
     #align(center)[*NOR*]
-    #gate-symbol(kind:"nor")
+    #gate-symbol(kind: "nor")
     #table(columns:(1fr,1fr,1fr),inset:2pt,
       table.header([A],[B],[F]),
       [0],[0],[1],
