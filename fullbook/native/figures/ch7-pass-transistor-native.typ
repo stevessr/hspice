@@ -6,31 +6,31 @@
 #let dot(x,y) = place(top+left, dx:x,dy:y,circle(radius:1.4pt,fill:black))
 #let cap(x,y,label:"") = {
   place(top+left,dx:x,dy:y,line(length:13pt,stroke:.7pt))
-  place(top+left,dx:x,dy:y+5pt,line(length:13pt,stroke:.7pt))
-  if label!="" {place(top+left,dx:x+16pt,dy:y-5pt,text(size:7pt)[#label])}
+  place(top+left,dx:x,dy:y + 5pt,line(length:13pt,stroke:.7pt))
+  if label!="" {place(top+left,dx:x + 16pt,dy:y - 5pt,text(size:7pt)[#label])}
 }
 #let gnd(x,y) = {
-  wire(x,y,x,y+5pt)
-  place(top+left,dx:x-9pt,dy:y+5pt,line(length:18pt,stroke:.7pt))
-  place(top+left,dx:x-6pt,dy:y+8pt,line(length:12pt,stroke:.7pt))
-  place(top+left,dx:x-3pt,dy:y+11pt,line(length:6pt,stroke:.7pt))
+  wire(x,y,x,y + 5pt)
+  place(top+left,dx:x - 9pt,dy:y + 5pt,line(length:18pt,stroke:.7pt))
+  place(top+left,dx:x - 6pt,dy:y + 8pt,line(length:12pt,stroke:.7pt))
+  place(top+left,dx:x - 3pt,dy:y + 11pt,line(length:6pt,stroke:.7pt))
 }
 #let pass(x,y,p:false) = {
-  wire(x,y,x+17pt,y)
-  wire(x+38pt,y,x+55pt,y)
-  place(top+left,dx:x+17pt,dy:y-3pt,rect(width:21pt,height:6pt,stroke:.8pt))
-  wire(x+27pt,y-21pt,x+27pt,y-6pt)
-  if p {place(top+left,dx:x+27pt,dy:y-8pt,circle(radius:2pt,fill:white,stroke:.7pt))}
+  wire(x,y,x + 17pt,y)
+  wire(x + 38pt,y,x + 55pt,y)
+  place(top+left,dx:x + 17pt,dy:y - 3pt,rect(width:21pt,height:6pt,stroke:.8pt))
+  wire(x + 27pt,y - 21pt,x + 27pt,y - 6pt)
+  if p {place(top+left,dx:x + 27pt,dy:y - 8pt,circle(radius:2pt,fill:white,stroke:.7pt))}
 }
 #let gate(x,y,name:"NOR",width:44pt) = {
-  place(top+left,dx:x,dy:y-13pt,rect(width:width,height:27pt,radius:9pt,stroke:.75pt))
-  place(top+left,dx:x+5pt,dy:y-5pt,text(size:7pt)[#name])
+  place(top+left,dx:x,dy:y - 13pt,rect(width:width,height:27pt,radius:9pt,stroke:.75pt))
+  place(top+left,dx:x + 5pt,dy:y - 5pt,text(size:7pt)[#name])
 }
 #let inv(x,y) = {
-  wire(x,y-12pt,x,y+12pt)
-  wire(x,y-12pt,x+25pt,y)
-  wire(x,y+12pt,x+25pt,y)
-  place(top+left,dx:x+27pt,dy:y-2pt,circle(radius:2pt,stroke:.75pt,fill:white))
+  wire(x,y - 12pt,x,y + 12pt)
+  wire(x,y - 12pt,x + 25pt,y)
+  wire(x,y + 12pt,x + 25pt,y)
+  place(top+left,dx:x + 27pt,dy:y - 2pt,circle(radius:2pt,stroke:.75pt,fill:white))
 }
 #let fig-p612()=html.frame(block(width:390pt,height:178pt)[
   #wire(6pt,52pt,36pt,52pt)
@@ -92,8 +92,8 @@
   [#pass-panel(kind:"p",state:"off",vin:"0 V",vout:"高阻")])
 #let series-panel(p:false,count:1,descending:false)=html.frame(block(width:121pt,height:99pt)[
     #for i in range(count) [
-      #pass(3pt+i*24pt,49pt,p:p)
-      #wire(31pt+i*24pt,27pt+i*5pt,31pt+i*24pt,34pt+i*5pt)
+      #pass(3pt+i * 24pt,49pt,p:p)
+      #wire(31pt+i * 24pt,27pt+i * 5pt,31pt+i * 24pt,34pt+i * 5pt)
     ]
     #place(top+left,dx:5pt,dy:5pt,text(size:7pt)[#if p [$V_("out")=abs(V_("TP"))$] else [$V_("out")=V_("DD")-V_("TN")$]]))
     #cap(75pt,69pt,label:"CL")
