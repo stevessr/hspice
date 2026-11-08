@@ -28,7 +28,7 @@ for n,tokens in marks.items():
  assert x["proofread_round"]=="2026-11-08-source-scan-ch10end-ch11power-pass21"
  assert not x["human_verified"] and not x["layout_verified"] and not all(y["checks"].values())
  assert len(a["pages"][n-381]["source_render_sha256"])==64
-assert math.isclose((a["reference_values"]["vdd_v"]*.1/a["reference_values"]["idd_a"])*1000,1.2)
+assert math.isclose((a["milestones"]["reference_values"]["vdd_v"]*.1/a["milestones"]["reference_values"]["idd_a"])*1000,1.2)
 fig=(root/"figures/ch10-summary-ch11-power-native.typ").read_text(encoding="utf-8")
 assert all("#let "+s+"()" in fig for s in ("fig1028","figp104","figp105","figp106","figp108","fig111","fig112"))
 print("Pass21: source-based Chapter10 conclusion & Chapter11 PDF381–388 anchors passed; strict 0/445.")
