@@ -5,8 +5,7 @@
   line(end:(dx,dy),stroke:width))
 #let note(x, y, label, sz:7pt) = place(top + left,dx:x,dy:y,
   text(size:sz,label))
-#let region(x, y, w, h, shade:rgb("#eeeeee")) =
-  place(top + left,dx:x,dy:y,
+#let region(x, y, w, h, shade:rgb("#eeeeee")) = place(top + left,dx:x,dy:y,
     rect(width:w,height:h,fill:shade,stroke:.8pt))
 
 #let b1-npn-section() = html.frame(block(width:342pt,height:139pt)[
