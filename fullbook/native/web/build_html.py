@@ -339,14 +339,14 @@ SECTIONS = [
     ("299-page-322", "原书第322页：第9章开篇及9.1绪论", [322]),
     ("300-page-323", "原书第323页：9.2 CAM与图9.1", [323]),
     ("301-page-324", "原书第324页：图9.2 CAM标签匹配", [324]),
-    ("302-page-325", "原书PDF325：书末机器OCR未校对", [325]),
-    ("303-page-326", "原书PDF326：书末机器OCR未校对", [326]),
-    ("304-page-327", "原书PDF327：书末机器OCR未校对", [327]),
-    ("305-page-328", "原书PDF328：书末机器OCR未校对", [328]),
-    ("306-page-329", "原书PDF329：书末机器OCR未校对", [329]),
-    ("307-page-330", "原书PDF330：书末机器OCR未校对", [330]),
-    ("308-page-331", "原书PDF331：书末机器OCR未校对", [331]),
-    ("309-page-332", "原书PDF332：书末机器OCR未校对", [332]),
+    ("302-page-325", "原书PDF325：图9.3 CAM单元与练习9.1", [325]),
+    ("303-page-326", "原书PDF326：图9.4 CAM与SRAM阵列", [326]),
+    ("304-page-327", "原书PDF327：图9.5及例9.1 CAM延迟", [327]),
+    ("305-page-328", "原书PDF328：例9.1延迟计算与9.3 FPGA", [328]),
+    ("306-page-329", "原书PDF329：图9.6/9.7 FPGA结构", [329]),
+    ("307-page-330", "原书PDF330：图9.8/9.9 3-LUT配置", [330]),
+    ("308-page-331", "原书PDF331：例9.2与图9.10连接区", [331]),
+    ("309-page-332", "原书PDF332：图9.11 FPGA输入输出", [332]),
     ("310-page-333", "原书PDF333：书末机器OCR未校对", [333]),
     ("311-page-334", "原书PDF334：书末机器OCR未校对", [334]),
     ("312-page-335", "原书PDF335：书末机器OCR未校对", [335]),
@@ -514,7 +514,7 @@ def main():
         shutil.copy2(src,args.output/f"{stem}.typ")
         index.append(dict(id=stem,title=title,source_pdf_pages=pages,
                           html=stem+".html",typst=stem+".typ",
-                          status=("machine OCR only; text, math, diagrams and layout unverified" if pages[0]<20 or pages[0]>=325 else "native editorial selection; full pages not accepted")))
+                          status=("machine OCR only; text, math, diagrams and layout unverified" if pages[0]<20 or pages[0]>=333 else "native editorial selection; full pages not accepted")))
         print(f"HTML OK {stem}: {len(html)} bytes",flush=True)
     (args.output/"index.json").write_text(
         json.dumps(dict(format="native-typst-html",accepted_full_pages=0,
