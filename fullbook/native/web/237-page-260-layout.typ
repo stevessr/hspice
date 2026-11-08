@@ -1,6 +1,7 @@
-// Source PDF260. Native editor source; original geometry not certified.
-#set page(width:506.8346pt,height:729.6pt,margin:(top:33pt,bottom:24pt,left:43pt,right:43pt))
-#set text(font:("Noto Serif CJK SC","DejaVu Serif"),size:9.3pt,lang:"zh")
-#set par(justify:true,first-line-indent:1.6em,leading:4.5pt,spacing:4.3pt)
-#show heading.where(level:3):set text(font:"Noto Sans CJK SC",size:10pt,weight:"bold")
+// Original PDF 260, print 241. Editable source-paper Typst page.
+// Strict per-character, figure-geometry and alignment acceptance still pending.
+#set page(width:506.8346pt,height:729.6pt,margin:(top:32pt,bottom:24pt,left:43pt,right:43pt))
+#set text(font:("Noto Serif CJK SC","DejaVu Serif"),size:8.6pt,lang:"zh")
+#set par(justify:true,first-line-indent:1.6em,leading:4.3pt,spacing:4.8pt)
+#show heading.where(level:2):set text(font:"Noto Sans CJK SC",size:11pt,weight:"bold")
 #include "237-page-260.typ"
