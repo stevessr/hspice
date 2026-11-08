@@ -1,0 +1,114 @@
+{
+  "schema": "ch10-coupling-source-pass19",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    365,
+    372
+  ],
+  "source_render": "pdftoppm -f 365 -l 372 -scale-to 1400 -png; SHA256 of each PNG",
+  "strict_full_pages_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 365,
+      "source_render_sha256": "84de4dd942d74c6fe46020829e8cb0b788d7f567ed55f7819191fda61883d1a8",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 366,
+      "source_render_sha256": "50e609d29436716ec4a878af060e3a123915375ba8cb5581c8db199c1491a398",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 367,
+      "source_render_sha256": "194d31532e2962de6d070cdb7f224ea7118fcb9b5e5b2e3f7a744dbf2fc86bc0",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 368,
+      "source_render_sha256": "83cf5cfb5580b739a6b6e6c98beb47312f3d1ca45fd4ebcb563387f1e9d642f4",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 369,
+      "source_render_sha256": "a585417a2e5b1b31bbe22b4f49dd2961c4794bac4a72829b115b8d82b2c81f08",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 370,
+      "source_render_sha256": "09151ce95df20b8b122180a21c113c714891cbf8807b752837d7e1078191c3fb",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 371,
+      "source_render_sha256": "990bf7ef2b2c1e1fe28c357292ef3cb7bb37d875ea61d3e5a46075a56918c582",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 372,
+      "source_render_sha256": "e3b1561dcfcb54e083d09d73f716e4c4d07dd3401a5caa74f41d0fa0f8c875a8",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    }
+  ],
+  "equation_numbers": [
+    "10.8",
+    "10.9",
+    "10.10",
+    "10.11",
+    "10.12",
+    "10.13",
+    "10.14",
+    "10.15",
+    "10.16"
+  ],
+  "figure_numbers": [
+    "10.11",
+    "10.12",
+    "10.13",
+    "10.14",
+    "10.15",
+    "10.16",
+    "10.17",
+    "10.18",
+    "10.19"
+  ],
+  "example104": {
+    "wire_length_mm": 20,
+    "segment_count": 7,
+    "size_multiplier": 140,
+    "buffer_ohm": 90,
+    "buffer_self_fF": 84,
+    "buffer_input_fF": 168,
+    "per_segment_wire_ohm": 154,
+    "per_segment_shunt_fF": 143,
+    "elmore_ns": 0.67
+  },
+  "capacitance": {
+    "eps_ox_coeff": 0.035,
+    "upper_near_fF_per_um": 0.2,
+    "upper_far_fF_per_um": 0.1,
+    "lower_near_fF_per_um": 0.1,
+    "lower_far_fF_per_um": 0.08
+  },
+  "source_text_discrepancy": {
+    "pdf_page": 369,
+    "printed": "0.0070 fF/μm",
+    "arithmetic_from_printed_T_0_8_S_0_4": "0.070 fF/μm",
+    "confirmed_with_source_crop": true,
+    "downstream_pdf370_uses": "0.070 fF/μm",
+    "handling": "Preserve source print and add explicit editorial note; do not silently correct"
+  },
+  "limitations": [
+    "Source OCR passages were replaced with scan-guided selections, not full-page transcription",
+    "Native figure topology is schematic and not page-faithful",
+    "All 8 scanned pages still need literal proofread and visual overlay acceptance"
+  ]
+}
