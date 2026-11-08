@@ -52,7 +52,7 @@
   #gnd(20pt,88pt)
   #place(top+left,dx:7pt,dy:11pt,text(size:8pt)[输入])
 ])
-#let fig-p613()=html.frame(block(width:390pt,height:199pt)[
+#let fig-p613()=html.frame(block(width:390pt,height:150pt)[
   #wire(4pt,94pt,35pt,94pt)
   #inv(35pt,94pt)
   #wire(65pt,94pt,83pt,94pt)
@@ -98,10 +98,32 @@
     #place(top+left,dx:5pt,dy:5pt,text(size:7pt)[#if p [$V_("out")=abs(V_("TP"))$] else [$V_("out")=V_("DD")-V_("TN")$]])
     #cap(75pt,69pt,label:"CL")
   ])
-#let fig72()=grid(columns:(1fr,1fr,1fr),column-gutter:8pt,
-  [#series-panel(count:1)], [#series-panel(count:3)], [#series-panel(count:3,descending:true)])
-#let fig73()=grid(columns:(1fr,1fr,1fr),column-gutter:8pt,
-  [#series-panel(p:true,count:1)], [#series-panel(p:true,count:3)], [#series-panel(p:true,count:3,descending:true)])
+#let stepped-panel(p:false)=html.frame(block(width:280pt,height:135pt)[
+  // Source Fig7.2(c)/7.3(c): successive gate signals decrease in level.
+  #for i in range(3) [
+    #let x=16pt+i*72pt
+    #let y=18pt+i*40pt
+    #pass(x,y,p:p)
+    #wire(x+55pt,y,x+72pt,y+36pt)
+    #place(top+left,dx:x+8pt,dy:y+19pt,text(size:7pt)[#str(i+1)]))
+  ]
+  #place(top+left,dx:185pt,dy:99pt,text(size:8pt)[#if p [$3 abs(V_("TP"))$] else [$V_("DD")-3V_("TN")$]]))
+  #cap(237pt,116pt,label:"CL")
+])
+#let fig72()=block(width:100%)[
+  #grid(columns:(1fr,1fr),column-gutter:8pt,
+    [#align(center)[#series-panel(count:1)]],
+    [#align(center)[#series-panel(count:3)]])
+  #v(5pt)
+  #align(center)[#stepped-panel()]
+]
+#let fig73()=block(width:100%)[
+  #grid(columns:(1fr,1fr),column-gutter:8pt,
+    [#align(center)[#series-panel(p:true,count:1)]],
+    [#align(center)[#series-panel(p:true,count:3)]])
+  #v(5pt)
+  #align(center)[#stepped-panel(p:true)]
+]
 #let feedthrough-panel()=html.frame(block(width:365pt,height:151pt)[
   #pass(95pt,72pt)
   #wire(150pt,72pt,193pt,72pt)
