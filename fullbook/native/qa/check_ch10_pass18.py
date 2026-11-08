@@ -11,7 +11,8 @@ assert a["strict_full_pages_accepted"]==0
 marks={357:("10.2.2","10.3","10.4","10.5"),358:("图10.5","艾蒙"),359:("图10.6","例10.1","10.6"),360:("10.2.3","10.7","图10.7","图10.8"),361:("例10.2","14.8","92.5"),362:("例10.3","1080","1.3"),363:("图10.9","10.3"),364:("图10.10",'R_("eqn")')}
 for n,words in marks.items():
  p=(r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
- assert all(x in p for x in words),(n,[x for x in words if x not in p])
+ compact = ''.join(p.split())
+ assert all(''.join(x.split()) in compact for x in words),(n,[x for x in words if ''.join(x.split()) not in compact])
  assert s[n-1]["status"]==q[n-1]["editorial_state"]=="draft-transcribed"
  assert s[n-1]["editorial_typst_draft"] is True and s[n-1]["source_scan_landmarks_checked"] is True
  assert not s[n-1]["human_verified"] and not all(q[n-1]["checks"].values())
@@ -47,6 +48,28 @@ assert discrepancy["pdf_page"] == 358
 assert math.isclose(0.054 * 1000 / 0.4, discrepancy["arithmetic_ohms"])
 assert discrepancy["arithmetic_ohms"] != discrepancy["source_printed_ohms"]
 assert discrepancy["source_printed_ohms"] == 125
+# Require the first-moment integral and source-faithful metal stack values,
+# not just a summarized statement that an Elmore model exists.
+for n,anchors in {
+    357: ("2.7", "1.7", "0.5", "1.0", "0.4", "0.8", "54", "27", "42", "21", 'R_("wire")', 'C_("wire")'),
+    358: ("3～4λ", "30～40λ", "0.054", "125", "135", "17.5", "10", "integral_0^oo", 'R_("wire") C_("wire")', "tau"),
+    359: ("C_1=C_2=0", "R_2=R_3=0", "sum_k", 'R_(i k)', "tau_1", "tau_2", "tau_3"),
+}.items():
+    source=(r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+    assert all(x in source for x in anchors),(n,[x for x in anchors if x not in source])
+print("PDF357–359 complete source landmarks, Elmore integral and branch-node equations checked.")
 print("PDF 358 source arithmetic mismatch retained and audited; PDF 363 FO4 data matched.")
 
-print("Pass18 RC/Elmore PDF357–364 math, figure and status landmarks passed; strict 0/445.")
+# Extend source-anchored numerical and formula-preservation checks to PDF360–364.
+for n,anchors in {
+  360: ("n(n+1)", "0.38", "10.7", "π 模型", "T 模型", "L 模型", "10.8"),
+  361: ("0.8", "0.4", "0.2", "9.6", "1.2", "4", "14.8", "92.5", "5.4", "3.2", "11.6"),
+  362: ("92.6", "100X", "20 mm", "0.027", "1080", "125", "60", "2", "1.3"),
+  363: ("150", "40", "25", "116", "460", "1035", "2.5", 'L_("crit")', "0.38"),
+  364: ("10.10", 'R_("int")', 'C_("int")', 'R_("eqn")', 'C_("out")', 'C_("in")', "beta", "M"),
+}.items():
+    source=(r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+    compact="".join(source.split())
+    assert all("".join(x.split()) in compact for x in anchors), (n, [x for x in anchors if "".join(x.split()) not in compact])
+print("Pass18 chapter10 PDF357–364 source-scan formula/units and diagram landmarks passed; strict 0/445.")
+
