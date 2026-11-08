@@ -118,7 +118,7 @@
  #for i in range(5) [
   #let x=26pt+i*65pt
   #inv(x,55pt)
-  #if i<4 {w(x+26pt,55pt,x+65pt,55pt)}
+  #if i < 4 { w(x+26pt,55pt,x+65pt,55pt) }
  ]
  #w(25pt,55pt,25pt,99pt)
  #w(25pt,99pt,312pt,99pt)
