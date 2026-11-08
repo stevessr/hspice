@@ -222,7 +222,7 @@
   #for j in range(4) [
    #let x=43pt+j*101pt
    #w(x,59pt,x,81pt)
-   #b(x-17pt,81pt,38pt,22pt,"GCLK")
+   #b(x - 17pt,81pt,38pt,22pt,"GCLK")
    #w(x,103pt,x,130pt)
   ]
   #w(43pt,130pt,346pt,130pt)
