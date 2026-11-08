@@ -21,7 +21,7 @@
 #align(center)[$t_1=R_("inv") C_1+(R_("inv")+R_("TG"))C_2+(R_("inv")+2R_("TG"))C_3$]
 
 #align(center)[$C_1=3C_("eff")W+C_g W+2C_("eff")W quad R_("inv")=R$]
-#align(center)[$C_2=2C_g W times 2+2C_("eff")W times 3 quad R_("TG")=R$]
+#align(center)[$C_2=C_g W times 2+2C_("eff")W times 3 quad R_("TG")=R$]
 #align(center)[$C_3=2C_("eff")W times 2+C_g W+3fC_g W$]
 #align(center)[$t_1=R(29C_("eff")+8C_g+9fC_g)W$]
 
