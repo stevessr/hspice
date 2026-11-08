@@ -257,7 +257,15 @@ const sections = [
   { id: '242-page-265', title: 'PDF第265页 · 例7.3传输门组合逻辑', pages: 'PDF第265页/印刷第246页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
   { id: '243-page-266', title: 'PDF第266页 · 图7.14/7.15与传输门RC模型', pages: 'PDF第266页/印刷第247页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
   { id: '244-page-267', title: 'PDF第267页 · 图7.16导通电阻', pages: 'PDF第267页/印刷第248页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
-  { id: '245-page-268', title: 'PDF第268页 · 式7.7—7.9电阻与电容', pages: 'PDF第268页/印刷第249页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' }
+  { id: '245-page-268', title: 'PDF第268页 · 式7.7—7.9电阻与电容', pages: 'PDF第268页/印刷第249页', summary: '扫描图核对的可编辑初稿，仍待严格逐字符和全图端口验收' },
+  { id: '246-page-269', title: 'PDF第269页 · 式7.10—7.11与图7.18 Elmore延迟', pages: 'PDF第269页/印刷第250页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
+  { id: '247-page-270', title: 'PDF第270页 · 例7.4 两种MUX的RC阶梯', pages: 'PDF第270页/印刷第251页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
+  { id: '248-page-271', title: 'PDF第271页 · 7.3.3 CMOS传输门逻辑强度', pages: 'PDF第271页/印刷第252页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
+  { id: '249-page-272', title: 'PDF第272页 · 例7.5与7.4锁存器起始', pages: 'PDF第272页/印刷第253页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
+  { id: '250-page-273', title: 'PDF第273页 · 图7.22反馈式CMOS锁存器', pages: 'PDF第273页/印刷第254页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
+  { id: '251-page-274', title: 'PDF第274页 · 图7.23/7.24典型锁存器及D触发器', pages: 'PDF第274页/印刷第255页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
+  { id: '252-page-275', title: 'PDF第275页 · 7.5 多米诺逻辑与图7.25', pages: 'PDF第275页/印刷第256页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' },
+  { id: '253-page-276', title: 'PDF第276页 · 例7.6、图7.26动态门和多米诺级', pages: 'PDF第276页/印刷第257页', summary: '原扫描驱动的原生Typst编辑初稿；严格全文、电路和版心验收待完成' }
 ]
 const selected = ref(sections[0].id)
 const active = computed(() => sections.find(x => x.id === selected.value)!)

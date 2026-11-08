@@ -5866,7 +5866,7 @@
     },
     {
       "pdf_page": 269,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5878,13 +5878,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "文字、公式符号与图注尚未逐字/逐图最终验收",
+        "电容与传输门的所有节点、晶体管极性及尺寸图元须逐线复核",
+        "源书像素位置、版心、字体及脚注仍存在布局差异"
+      ],
+      "notes": "PDF269: editable native transcribed body and schematics; source image reviewed for major formulas but strict page 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 270,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5896,13 +5900,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "文字、公式符号与图注尚未逐字/逐图最终验收",
+        "电容与传输门的所有节点、晶体管极性及尺寸图元须逐线复核",
+        "源书像素位置、版心、字体及脚注仍存在布局差异"
+      ],
+      "notes": "PDF270: editable native transcribed body and schematics; source image reviewed for major formulas but strict page 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 271,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5914,13 +5922,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "文字、公式符号与图注尚未逐字/逐图最终验收",
+        "电容与传输门的所有节点、晶体管极性及尺寸图元须逐线复核",
+        "源书像素位置、版心、字体及脚注仍存在布局差异"
+      ],
+      "notes": "PDF271: editable native transcribed body and schematics; source image reviewed for major formulas but strict page 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 272,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5932,13 +5944,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "文字、公式符号与图注尚未逐字/逐图最终验收",
+        "电容与传输门的所有节点、晶体管极性及尺寸图元须逐线复核",
+        "源书像素位置、版心、字体及脚注仍存在布局差异"
+      ],
+      "notes": "PDF272: editable native transcribed body and schematics; source image reviewed for major formulas but strict page 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 273,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5950,13 +5966,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "文字、公式符号与图注尚未逐字/逐图最终验收",
+        "电容与传输门的所有节点、晶体管极性及尺寸图元须逐线复核",
+        "源书像素位置、版心、字体及脚注仍存在布局差异"
+      ],
+      "notes": "PDF273: editable native transcribed body and schematics; source image reviewed for major formulas but strict page 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 274,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5968,13 +5988,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "文字、公式符号与图注尚未逐字/逐图最终验收",
+        "电容与传输门的所有节点、晶体管极性及尺寸图元须逐线复核",
+        "源书像素位置、版心、字体及脚注仍存在布局差异"
+      ],
+      "notes": "PDF274: editable native transcribed body and schematics; source image reviewed for major formulas but strict page 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 275,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -5986,13 +6010,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "文字、公式符号与图注尚未逐字/逐图最终验收",
+        "电容与传输门的所有节点、晶体管极性及尺寸图元须逐线复核",
+        "源书像素位置、版心、字体及脚注仍存在布局差异"
+      ],
+      "notes": "PDF275: editable native transcribed body and schematics; source image reviewed for major formulas but strict page 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 276,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6004,8 +6032,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "文字、公式符号与图注尚未逐字/逐图最终验收",
+        "电容与传输门的所有节点、晶体管极性及尺寸图元须逐线复核",
+        "源书像素位置、版心、字体及脚注仍存在布局差异"
+      ],
+      "notes": "PDF276: editable native transcribed body and schematics; source image reviewed for major formulas but strict page 1:1 unaccepted",
       "page_source_verified": false
     },
     {
