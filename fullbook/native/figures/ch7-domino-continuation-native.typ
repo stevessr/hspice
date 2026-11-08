@@ -7,25 +7,25 @@
 #let r(x,y,ww,hh)=place(top+left,dx:x,dy:y,rect(width:ww,height:hh,stroke:.8pt))
 #let b(x,y,ww,hh,s)={
   r(x,y,ww,hh)
-  t(x+5pt,y+hh/2-5pt,s)
+  t(x+5pt,y+hh/2 - 5pt,s)
 }
 #let inv(x,y)={
-  w(x,y-11pt,x,y+11pt)
-  w(x,y-11pt,x+21pt,y)
+  w(x,y - 11pt,x,y+11pt)
+  w(x,y - 11pt,x+21pt,y)
   w(x,y+11pt,x+21pt,y)
-  place(top+left,dx:x+23pt,dy:y-2pt,circle(radius:2pt,stroke:.8pt,fill:white))
+  place(top+left,dx:x+23pt,dy:y - 2pt,circle(radius:2pt,stroke:.8pt,fill:white))
 }
 #let gnd(x,y)={
   w(x,y,x,y+6pt)
-  w(x-9pt,y+6pt,x+9pt,y+6pt)
-  w(x-6pt,y+9pt,x+6pt,y+9pt)
+  w(x - 9pt,y+6pt,x+9pt,y+6pt)
+  w(x - 6pt,y+9pt,x+6pt,y+9pt)
 }
 #let cap(x,y)={
   w(x,y,x+14pt,y)
   w(x,y+5pt,x+14pt,y+5pt)
 }
 #let dynamic(x,y,lab:"NMOS",width:"",with-inv:true)={
-  t(x+15pt,y-12pt,"VDD")
+  t(x+15pt,y - 12pt,"VDD")
   w(x+35pt,y,x+35pt,y+13pt)
   b(x+24pt,y+13pt,22pt,19pt,"P")
   w(x+35pt,y+32pt,x+35pt,y+47pt)
@@ -33,9 +33,9 @@
   w(x+35pt,y+82pt,x+35pt,y+94pt)
   b(x+24pt,y+94pt,22pt,18pt,"N")
   gnd(x+35pt,y+113pt)
-  w(x-14pt,y+24pt,x+24pt,y+24pt)
-  w(x-14pt,y+103pt,x+24pt,y+103pt)
-  t(x-12pt,y+8pt,"CLK")
+  w(x - 14pt,y+24pt,x+24pt,y+24pt)
+  w(x - 14pt,y+103pt,x+24pt,y+103pt)
+  t(x - 12pt,y+8pt,"CLK")
   if with-inv {
     w(x+35pt,y+39pt,x+80pt,y+39pt)
     inv(x+80pt,y+39pt)
