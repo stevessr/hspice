@@ -66,7 +66,7 @@
     #inv(x+85pt,58pt)
     #t(x+83pt,12pt,"Y"+str(k+1))
     #t(x+109pt,48pt,"F"+str(k+1))
-    #if k<2 {w(x+110pt,58pt,x+141pt,58pt)}
+    #if (k < 2) {w(x+110pt,58pt,x+141pt,58pt)}
   ]
   #t(12pt,119pt,"多米诺级从左至右逐级求值")
 ])
