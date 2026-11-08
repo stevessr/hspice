@@ -39,11 +39,11 @@
 }
 #let fig718()=block(width:100%)[
   #html.frame(block(width:350pt,height:94pt)[
-    #inv(17pt,39pt,"驱动")
+    #inv(17pt,39pt,s:"驱动")
     #w(48pt,39pt,84pt,39pt)
     #tg(84pt,39pt)
     #w(120pt,39pt,161pt,39pt)
-    #inv(161pt,39pt,"负载")
+    #inv(161pt,39pt,s:"负载")
     #w(192pt,39pt,241pt,39pt)
     #txt(102pt,2pt,"CLK")
     #txt(96pt,77pt,"CLK̅")
@@ -51,9 +51,9 @@
   ])
   #html.frame(block(width:350pt,height:100pt)[
     #w(8pt,46pt,37pt,46pt)
-    #resistance(37pt,46pt,"R_inv")
+    #resistance(37pt,46pt,s:"R_inv")
     #w(65pt,46pt,139pt,46pt)
-    #resistance(139pt,46pt,"R_TG")
+    #resistance(139pt,46pt,s:"R_TG")
     #w(167pt,46pt,294pt,46pt)
     #for x in (104pt,133pt,208pt,270pt) [
       #w(x,46pt,x,64pt)
@@ -68,9 +68,9 @@
   ])
   #html.frame(block(width:350pt,height:76pt)[
     #w(12pt,30pt,41pt,30pt)
-    #resistance(41pt,30pt,"R_1")
+    #resistance(41pt,30pt,s:"R_1")
     #w(69pt,30pt,141pt,30pt)
-    #resistance(141pt,30pt,"R_2")
+    #resistance(141pt,30pt,s:"R_2")
     #w(169pt,30pt,285pt,30pt)
     #for (x,lbl) in ((126pt,"C_1"),(264pt,"C_2")) [
       #w(x,30pt,x,45pt)
@@ -82,12 +82,12 @@
 #let mux-rc(name:"MUX1",third:true)=html.frame(block(width:370pt,height:130pt)[
   #txt(2pt,3pt,name)
   #w(4pt,52pt,35pt,52pt)
-  #resistance(35pt,52pt,"R_inv")
+  #resistance(35pt,52pt,s:"R_inv")
   #w(63pt,52pt,105pt,52pt)
-  #resistance(105pt,52pt,"R_TG")
+  #resistance(105pt,52pt,s:"R_TG")
   #w(133pt,52pt,185pt,52pt)
   #if third [
-    #resistance(185pt,52pt,"R_TG")
+    #resistance(185pt,52pt,s:"R_TG")
     #w(213pt,52pt,328pt,52pt)
   ] else [
     #w(185pt,52pt,328pt,52pt)
@@ -106,7 +106,7 @@
   #w(137pt,48pt,206pt,48pt)
   #cap(201pt,69pt,s:"C_load")
   #ground(208pt,85pt)
-  #inv(56pt,86pt,"sel")
+  #inv(56pt,86pt,s:"sel")
   #txt(100pt,12pt,"nMOS W; pMOS W")
   #txt(140pt,97pt,"输入 A：LE=2；输入 sel：LE=2/3")
 ])
@@ -117,7 +117,7 @@
   #w(137pt,48pt,206pt,48pt)
   #cap(201pt,69pt,s:"C_load")
   #ground(208pt,85pt)
-  #inv(56pt,86pt,"sel")
+  #inv(56pt,86pt,s:"sel")
   #txt(100pt,12pt,"nMOS 3W; pMOS 3W")
   #txt(131pt,97pt,"A：LE=4/3；sel：LE=4/3")
 ])
@@ -156,9 +156,9 @@
   #w(18pt,42pt,51pt,42pt)
   #tg(51pt,42pt,label:"TG1")
   #w(87pt,42pt,135pt,42pt)
-  #inv(135pt,42pt,"INV1")
+  #inv(135pt,42pt,s:"INV1")
   #w(166pt,42pt,205pt,42pt)
-  #inv(205pt,42pt,"INV2")
+  #inv(205pt,42pt,s:"INV2")
   #w(236pt,42pt,325pt,42pt)
   #txt(329pt,33pt,"Q")
   #w(294pt,42pt,294pt,101pt)
