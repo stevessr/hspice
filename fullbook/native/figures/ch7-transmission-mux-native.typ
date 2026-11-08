@@ -2,27 +2,27 @@
 // Reconstructed editable CMOS transmission-gate/switch-level circuit diagrams.
 // Electrical connections and transistor body/well contacts are pending strict
 // source-by-source schematic verification; never auto-certify them as 1:1.
-#let wire(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,line(end:(x2-x1,y2-y1),stroke:.8pt))
+#let wire(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,line(end:(x2 - x1,y2 - y1),stroke:.8pt))
 #let dot(x,y)=place(top+left,dx:x,dy:y,circle(radius:1.5pt,fill:black))
 #let mos(x,y,p:false)={
-  wire(x,y,x,y+23pt)
-  wire(x-4pt,y,x-4pt,y+23pt)
-  wire(x-25pt,y+11pt,x-4pt,y+11pt)
-  if p {place(top+left,dx:x-7pt,dy:y+9pt,circle(radius:2pt,stroke:.6pt,fill:white))}
+  wire(x,y,x,y + 23pt)
+  wire(x - 4pt,y,x - 4pt,y + 23pt)
+  wire(x - 25pt,y + 11pt,x - 4pt,y + 11pt)
+  if p {place(top+left,dx:x - 7pt,dy:y + 9pt,circle(radius:2pt,stroke:.6pt,fill:white))}
 }
 #let pass-symbol(x,y,size:28pt)={
   place(top+left,dx:x,dy:y,rect(width:size,height:size,stroke:.75pt))
-  wire(x,y,x+size,y+size)
-  wire(x,y+size,x+size,y)
-  wire(x-14pt,y+size/2,x,y+size/2)
-  wire(x+size,y+size/2,x+size+14pt,y+size/2)
+  wire(x,y,x + size,y + size)
+  wire(x,y + size,x + size,y)
+  wire(x - 14pt,y + size / 2,x,y + size / 2)
+  wire(x + size,y + size / 2,x + size + 14pt,y + size / 2)
 }
 #let cap(x,y,mark:"")={
-  wire(x,y,x,y+7pt)
-  place(top+left,dx:x-6pt,dy:y+7pt,line(length:12pt,stroke:.75pt))
-  place(top+left,dx:x-6pt,dy:y+12pt,line(length:12pt,stroke:.75pt))
-  wire(x,y+12pt,x,y+28pt)
-  if mark!="" {place(top+left,dx:x+8pt,dy:y+11pt,text(size:7pt)[#mark])}
+  wire(x,y,x,y + 7pt)
+  place(top+left,dx:x - 6pt,dy:y + 7pt,line(length:12pt,stroke:.75pt))
+  place(top+left,dx:x - 6pt,dy:y + 12pt,line(length:12pt,stroke:.75pt))
+  wire(x,y + 12pt,x,y + 28pt)
+  if mark!="" {place(top+left,dx:x + 8pt,dy:y + 11pt,text(size:7pt)[#mark])}
 }
 #let fig77()=html.frame(block(width:355pt,height:95pt)[
   #pass-symbol(86pt,29pt)
@@ -82,17 +82,17 @@
 #let fig711()=grid(columns:(1fr,1fr),column-gutter:4pt,
   [#block(height:175pt)[
     #for i in (0,1,2,3) [
-      #let yy=9pt+i*38pt
+      #let yy=9pt+i * 38pt
       #pass-symbol(57pt,yy,size:23pt)
-      #wire(80pt,yy+11pt,127pt,yy+11pt)
+      #wire(80pt,yy + 11pt,127pt,yy + 11pt)
     ]
     #place(top+left,dx:10pt,dy:164pt,text(size:7pt)[（a）两级 4:1 多路器]))
   ]],
   [#block(height:175pt)[
     #for i in (0,1,2,3) [
-      #let yy=9pt+i*38pt
+      #let yy=9pt+i * 38pt
       #pass-symbol(57pt,yy,size:23pt)
-      #wire(80pt,yy+11pt,127pt,yy+11pt)
+      #wire(80pt,yy + 11pt,127pt,yy + 11pt)
     ]
     #place(top+left,dx:10pt,dy:164pt,text(size:7pt)[（b）单级 4:1 多路器]))
   ]])
@@ -138,14 +138,14 @@
 ])
 #let fig716()=html.frame(block(width:379pt,height:146pt)[
   #for k in (0,1) [
-    #let dx=5pt+k*192pt
-    #wire(dx+30pt,125pt,dx+174pt,125pt)
-    #wire(dx+30pt,125pt,dx+30pt,14pt)
-    #wire(dx+38pt,110pt,dx+84pt,65pt)
-    #wire(dx+84pt,65pt,dx+154pt,77pt)
-    #wire(dx+38pt,39pt,dx+84pt,64pt)
-    #wire(dx+84pt,64pt,dx+154pt,100pt)
-    #place(top+left,dx:dx+45pt,dy:130pt,text(size:7pt)[#if k==0 [$V_("out")$: 0→VDD] else [$V_("out")$: VDD→0]]))
+    #let dx=5pt+k * 192pt
+    #wire(dx + 30pt,125pt,dx + 174pt,125pt)
+    #wire(dx + 30pt,125pt,dx + 30pt,14pt)
+    #wire(dx + 38pt,110pt,dx + 84pt,65pt)
+    #wire(dx + 84pt,65pt,dx + 154pt,77pt)
+    #wire(dx + 38pt,39pt,dx + 84pt,64pt)
+    #wire(dx + 84pt,64pt,dx + 154pt,100pt)
+    #place(top+left,dx:dx + 45pt,dy:130pt,text(size:7pt)[#if k==0 [$V_("out")$: 0→VDD] else [$V_("out")$: VDD→0]]))
   ]
 ])
 #let fig717()=grid(columns:(1fr,1fr),column-gutter:5pt,
