@@ -108,4 +108,35 @@ for number, names in B_DRAWINGS.items():
         assert f"#{name}()" in text
 print("Appendix B native diagrams embedded on PDF 434, 436, 440, 442.")
 
+
+# Back-cover PDF 445 ISBN is source-checked, and its native bar geometry
+# must encode the *actual* EAN-13 value, not a decorative approximation.
+back = (WEB / "422-page-445.typ").read_text(encoding="utf-8")
+assert "SOURCE PDF PAGE 445" in back[:100] and "9787121016660" in back
+assert "48.00 元" in back and "Resve A. Saleh" in back
+assert "#let isbn-bars()" in back and "html.frame" in back
+assert "#image(" not in back
+match = re.search(r"#for \(pos, count\) in \((.*?)\)\s*\[", back, re.S)
+assert match, "editable EAN bar runs not found"
+runs = [(int(x), int(y)) for x, y in re.findall(r"\((\d+),\s*(\d+)\)", match.group(1))]
+assert len(runs) == 30, len(runs)
+bars = ["0"] * 95
+for offset, length in runs:
+    assert 0 <= offset < 95 and length > 0 and offset + length <= 95
+    assert not any(bit == "1" for bit in bars[offset:offset+length]), offset
+    bars[offset:offset+length] = ["1"] * length
+ean = "9787121016660"
+assert (10 - (sum(int(ean[i]) * (1 if i % 2 == 0 else 3) for i in range(12)) % 10)) % 10 == int(ean[-1])
+L = ("0001101", "0011001", "0010011", "0111101", "0100011", "0110001",
+     "0101111", "0111011", "0110111", "0001011")
+G = ("0100111", "0110011", "0011011", "0100001", "0011101", "0111001",
+     "0000101", "0010001", "0001001", "0010111")
+R = ("1110010", "1100110", "1101100", "1000010", "1011100", "1001110",
+     "1010000", "1000100", "1001000", "1110100")
+parity9 = "LGGLGL"
+encoded = "101" + "".join((L if p == "L" else G)[int(d)] for p, d in zip(parity9, ean[1:7]))
+encoded += "01010" + "".join(R[int(d)] for d in ean[7:]) + "101"
+assert "".join(bars) == encoded, "EAN-13 native bars do not match ISBN"
+print("Source PDF 445: editable EAN-13 geometry, check digit, and back-cover metadata verified.")
+
 print(f"Appendix scan-guided editable drafts pass: {START}-{END} ({END-START+1} pages); full-page accepted: 0/445.")
