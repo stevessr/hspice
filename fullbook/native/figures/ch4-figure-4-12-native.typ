@@ -45,6 +45,7 @@
   #place(top + left,dx:30pt,dy:144pt,line(length:188pt,stroke:.8pt))
   #place(top + left,dx:30pt,dy:144pt,line(end:(0pt,-119pt),stroke:.8pt))
   // 原图：左端Vout=0、右端Vout=VDD，电流相等的交点依输入变化形成拱形。
+  // PDF147 图4.12(b)：左下 NMOS Vin=0、右下 PMOS Vin=VDD；左右上边界条件另注。
   #place(top + left,dx:30pt,dy:144pt,curve(stroke:1.25pt,
      curve.move((0pt,0pt)),
      curve.cubic((20pt,-62pt),(49pt,-97pt),(97pt,-99pt)),
@@ -54,13 +55,15 @@
   #place(top + left,dx:195pt,dy:151pt,text(size:7pt)[$V_("out")$]))
   #place(top + left,dx:25pt,dy:148pt,text(size:6pt)[0]))
   #place(top + left,dx:197pt,dy:148pt,text(size:6pt)[$V_("DD")$]))
+  #place(top + left,dx:28pt,dy:48pt,text(size:5.8pt)[NMOS: $V_("in")=V_("DD")$]))
+  #place(top + left,dx:152pt,dy:45pt,text(size:5.8pt)[PMOS: $V_("in")=0$]))
   #place(top + left,dx:111pt,dy:31pt,text(size:7pt)[III]))
   #place(top + left,dx:67pt,dy:61pt,text(size:7pt)[IV]))
   #place(top + left,dx:151pt,dy:61pt,text(size:7pt)[II]))
   #place(top + left,dx:36pt,dy:129pt,text(size:7pt)[V]))
   #place(top + left,dx:196pt,dy:129pt,text(size:7pt)[I]))
   #place(top + left,dx:38pt,dy:156pt,text(size:6.3pt)[NMOS: $V_("in")=0$]))
-  #place(top + left,dx:132pt,dy:156pt,text(size:6.3pt)[PMOS: $V_("in")=0$]))
+  #place(top + left,dx:132pt,dy:156pt,text(size:6.3pt)[PMOS: $V_("in")=V_("DD")$]))
 ])
 #let fig412-vtc() = html.frame(block(width:224pt,height:175pt)[
   #place(top + left,dx:8pt,dy:3pt,text(size:7.5pt)[(c) 电压传输特性])
