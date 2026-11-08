@@ -3,17 +3,17 @@
 #import "ch7-latch-domino-pass9.typ": w, txt, tg, inv, nand, cap, ground
 #let blockgate(x,y,name:"NMOS逻辑")={
   place(top+left,dx:x,dy:y,rect(width:56pt,height:43pt,radius:3pt,stroke:.8pt))
-  txt(x+4pt,y+13pt,name)
+  txt(x + 4pt,y + 13pt,name)
 }
 #let domino(x,y,label:"Y")={
-  tg(x+10pt,y+7pt,label:"预充")
-  w(x+28pt,y+23pt,x+28pt,y+43pt)
-  blockgate(x,y+43pt)
-  w(x+28pt,y+86pt,x+28pt,y+101pt)
-  tg(x+10pt,y+116pt,label:"求值")
-  w(x+28pt,y+41pt,x+65pt,y+41pt)
-  inv(x+66pt,y+41pt)
-  txt(x+103pt,y+32pt,label)
+  tg(x + 10pt,y + 7pt,label:"预充")
+  w(x + 28pt,y + 23pt,x + 28pt,y + 43pt)
+  blockgate(x,y + 43pt)
+  w(x + 28pt,y + 86pt,x + 28pt,y + 101pt)
+  tg(x + 10pt,y + 116pt,label:"求值")
+  w(x + 28pt,y + 41pt,x + 65pt,y + 41pt)
+  inv(x + 66pt,y + 41pt)
+  txt(x + 103pt,y + 32pt,label)
 }
 #let fig727()=grid(columns:(1fr,1fr),column-gutter:10pt,
   [#html.frame(block(width:188pt,height:168pt)[
@@ -28,9 +28,9 @@
   ])])
 #let fig728()=html.frame(block(width:387pt,height:167pt)[
   #for i in (0,1,2) [
-    #let x=11pt+i*122pt
-    #domino(x,0pt,label:"Y"+str(i+1))
-    #if i<2 [#w(x+108pt,41pt,x+122pt,41pt)]
+    #let x=11pt+i * 122pt
+    #domino(x,0pt,label:"Y"+str(i + 1))
+    #if i<2 [#w(x + 108pt,41pt,x + 122pt,41pt)]
   ]
   #txt(21pt,146pt,"CLK=0：Y1、Y2、Y3预充为高；CLK=1：求值沿链传播")
 ])
@@ -84,13 +84,13 @@
   [#keeper-panel()], [#keeper-panel(double:true)])
 #let fig732()=html.frame(block(width:381pt,height:162pt)[
   #for i in (0,1) [
-    #let x=49pt+i*176pt
-    #tg(x+12pt,17pt,label:"CLK")
-    #w(x+30pt,32pt,x+30pt,65pt)
+    #let x=49pt+i * 176pt
+    #tg(x + 12pt,17pt,label:"CLK")
+    #w(x + 30pt,32pt,x + 30pt,65pt)
     #blockgate(x,65pt,name:if i==0 {"F逻辑块"} else {"F̅逻辑块"})
-    #w(x+30pt,108pt,x+30pt,133pt)
-    #w(x+30pt,63pt,x+94pt,63pt)
-    #inv(x+98pt,63pt)
+    #w(x + 30pt,108pt,x + 30pt,133pt)
+    #w(x + 30pt,63pt,x + 94pt,63pt)
+    #inv(x + 98pt,63pt)
   ]
   #txt(10pt,137pt,"互补输出 OUT / OUT̅")
 ])
