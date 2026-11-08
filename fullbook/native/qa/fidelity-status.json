@@ -7506,7 +7506,7 @@
     },
     {
       "pdf_page": 341,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7519,16 +7519,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF341: unverified machine-OCR Typst source",
+      "notes": "PDF341: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 342,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7541,16 +7541,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF342: unverified machine-OCR Typst source",
+      "notes": "PDF342: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 343,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7563,16 +7563,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF343: unverified machine-OCR Typst source",
+      "notes": "PDF343: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 344,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7585,16 +7585,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF344: unverified machine-OCR Typst source",
+      "notes": "PDF344: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 345,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7607,16 +7607,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF345: unverified machine-OCR Typst source",
+      "notes": "PDF345: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 346,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7629,16 +7629,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF346: unverified machine-OCR Typst source",
+      "notes": "PDF346: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 347,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7651,16 +7651,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF347: unverified machine-OCR Typst source",
+      "notes": "PDF347: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 348,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7673,16 +7673,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF348: unverified machine-OCR Typst source",
+      "notes": "PDF348: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 349,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7695,16 +7695,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF349: unverified machine-OCR Typst source",
+      "notes": "PDF349: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 350,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7717,16 +7717,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF350: unverified machine-OCR Typst source",
+      "notes": "PDF350: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 351,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7739,16 +7739,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF351: unverified machine-OCR Typst source",
+      "notes": "PDF351: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 352,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7761,16 +7761,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF352: unverified machine-OCR Typst source",
+      "notes": "PDF352: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 353,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7783,16 +7783,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF353: unverified machine-OCR Typst source",
+      "notes": "PDF353: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 354,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7805,16 +7805,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF354: unverified machine-OCR Typst source",
+      "notes": "PDF354: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 355,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7827,16 +7827,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF355: unverified machine-OCR Typst source",
+      "notes": "PDF355: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 356,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7849,11 +7849,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "源扫描原文与图注尚未逐字验收",
+        "可编辑器件和布线功能图未做原书逐管/逐层几何比较",
+        "页眉页脚、留白、表格逐格和分页尚未完成1:1验收"
       ],
-      "notes": "PDF356: unverified machine-OCR Typst source",
+      "notes": "PDF356: scan-guided native EPROM/Flash/FRAM and interconnect excerpt; strict 1:1 pending",
       "page_source_verified": false
     },
     {

@@ -2,23 +2,23 @@
   "schema": "fullbook-machine-ocr-native-draft-v1",
   "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
   "source_pdf_pages": 445,
-  "machine_draft_pages": 124,
+  "machine_draft_pages": 108,
   "machine_draft_ranges": [
     [
       1,
       19
     ],
     [
-      341,
+      357,
       445
     ]
   ],
   "editorial_partial_range": [
     20,
-    340
+    356
   ],
   "all_pages_have_editable_typst_source": true,
-  "ocr_characters": 118061,
+  "ocr_characters": 103389,
   "strict_full_pages_accepted": 0,
   "pages": [
     {
@@ -152,118 +152,6 @@
       "source_file": "web/019-page-019.typ",
       "machine_ocr_characters": 550,
       "machine_ocr_sha256": "5b7c36b8c2c6aa4e9b4d8f0c1acaa1c1a3d4a6b775e6aa4521cc86199ae40948",
-      "accepted": false
-    },
-    {
-      "pdf_page": 341,
-      "source_file": "web/318-page-341.typ",
-      "machine_ocr_characters": 906,
-      "machine_ocr_sha256": "7332f5e376804594edfd8aae868bb1d1774208b6ec2ff5f853bdb41e57b0088f",
-      "accepted": false
-    },
-    {
-      "pdf_page": 342,
-      "source_file": "web/319-page-342.typ",
-      "machine_ocr_characters": 1078,
-      "machine_ocr_sha256": "99d493bb4fd4c9cdde71a42b485461d0af031f3054efea3fadc6827d8bc569ea",
-      "accepted": false
-    },
-    {
-      "pdf_page": 343,
-      "source_file": "web/320-page-343.typ",
-      "machine_ocr_characters": 1099,
-      "machine_ocr_sha256": "b438c708a1e022a319e6afa3840d9e752f2ab60ea43fe535b8e1736530637635",
-      "accepted": false
-    },
-    {
-      "pdf_page": 344,
-      "source_file": "web/321-page-344.typ",
-      "machine_ocr_characters": 1148,
-      "machine_ocr_sha256": "5dc8f70c1dc3e1ddc61a0541bce1bd0e3aac911a3982d069f27e83d2d56a01b1",
-      "accepted": false
-    },
-    {
-      "pdf_page": 345,
-      "source_file": "web/322-page-345.typ",
-      "machine_ocr_characters": 1006,
-      "machine_ocr_sha256": "08e3841fe8800d9c373989783b1aeceffc244505c149795f86929e098dd4ff1e",
-      "accepted": false
-    },
-    {
-      "pdf_page": 346,
-      "source_file": "web/323-page-346.typ",
-      "machine_ocr_characters": 1207,
-      "machine_ocr_sha256": "7e6bdb4b3c87c047cc256810f32b6875d11cc5dba28b2aced48798b000a805c4",
-      "accepted": false
-    },
-    {
-      "pdf_page": 347,
-      "source_file": "web/324-page-347.typ",
-      "machine_ocr_characters": 489,
-      "machine_ocr_sha256": "71c195f2a38a51ed75ca1950f59d1dceaeacfe6ac6c222ddf3675f253b439445",
-      "accepted": false
-    },
-    {
-      "pdf_page": 348,
-      "source_file": "web/325-page-348.typ",
-      "machine_ocr_characters": 500,
-      "machine_ocr_sha256": "c82b3a204b212e1ee8b82ff55f7c9c161eaed386d96daf4c17d444e438e85e29",
-      "accepted": false
-    },
-    {
-      "pdf_page": 349,
-      "source_file": "web/326-page-349.typ",
-      "machine_ocr_characters": 1032,
-      "machine_ocr_sha256": "2455837a4ce3d9b6f3db4f7afe87e652bce5d2d06c5f8c2305c00e42e57cdd5e",
-      "accepted": false
-    },
-    {
-      "pdf_page": 350,
-      "source_file": "web/327-page-350.typ",
-      "machine_ocr_characters": 994,
-      "machine_ocr_sha256": "54615edf797ed2405c19de3ff18b132ebe8cec2454fc74b25cab2bb4e7a05586",
-      "accepted": false
-    },
-    {
-      "pdf_page": 351,
-      "source_file": "web/328-page-351.typ",
-      "machine_ocr_characters": 1025,
-      "machine_ocr_sha256": "cdcd1292367c37312a5dc7ef965025aafe2f3d96e09afa2c7c64061ae9094fd5",
-      "accepted": false
-    },
-    {
-      "pdf_page": 352,
-      "source_file": "web/329-page-352.typ",
-      "machine_ocr_characters": 1045,
-      "machine_ocr_sha256": "38c1c24e6417f893ba1ffba93944302d7a63cae78ee66d51236b01461cfd8a39",
-      "accepted": false
-    },
-    {
-      "pdf_page": 353,
-      "source_file": "web/330-page-353.typ",
-      "machine_ocr_characters": 547,
-      "machine_ocr_sha256": "c9e74751395e3a59378958aaa3f1bc839463b82dfffbc7d86dfcddf55a9330ae",
-      "accepted": false
-    },
-    {
-      "pdf_page": 354,
-      "source_file": "web/331-page-354.typ",
-      "machine_ocr_characters": 751,
-      "machine_ocr_sha256": "2c1cfb1a4e698777bfc9c3619bcbdd10d6d716924a4e739933530131660893aa",
-      "accepted": false
-    },
-    {
-      "pdf_page": 355,
-      "source_file": "web/332-page-355.typ",
-      "machine_ocr_characters": 862,
-      "machine_ocr_sha256": "af4cc23022fa7773c42475a4961d32dcc49b82423dc20558a0f132eb938fdf10",
-      "accepted": false
-    },
-    {
-      "pdf_page": 356,
-      "source_file": "web/333-page-356.typ",
-      "machine_ocr_characters": 983,
-      "machine_ocr_sha256": "b4c932e2d3b79ff5ea38ad570c0c531b02a56b95ddcebd4c30ead10b1de06e84",
       "accepted": false
     },
     {
@@ -891,5 +779,6 @@
     }
   ],
   "warning": "Machine OCR not an exact scan transcription; formulas, MOS circuit figures, tables and layout unverified.",
-  "notes": "PDF333–340 promoted to source guided edited native Typst; original OCR hashes preserved in pass16 evidence."
+  "notes": "PDF333–340 promoted to source guided edited native Typst; original OCR hashes preserved in pass16 evidence.",
+  "note": "PDF341–356 promoted to scan-guided editorial Typst; original OCR hashes archived in pass17 audit."
 }
