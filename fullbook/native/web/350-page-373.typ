@@ -1,24 +1,31 @@
-// SOURCE PDF PAGE 373; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第373页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("354        数字集成电路分析与设计一一深亚微米工艺 { 第三版 )")
+// SOURCE PDF PAGE 373. Scan-guided native Typst selection, not a 1:1 accepted page.
+// Printed textbook page 354; topology/plot curves remain editorial abstractions.
+#import "../figures/ch10-inductance-antenna-native.typ": fig1020,fig1021,fig1022,fig1023,fig1024,fig1025,fig1026,fig1027,fig1028
+#set document(title:"第10章·串扰、RLC和天线效应·源PDF373")
+#set text(size:7.1pt)
+#show par: set par(leading:2.25pt,spacing:3.3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[354　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("活动调整它的值 这个上因子通常在 0-2 之间")
+== 10.4.3 前的耦合活动系数
 
-#text("为了处理粳合效应时序验证者在考虑了 央子之后将所有的确合电容接地”虽然这是一个\n过分简化的解决方法，但对于耦合分析来说这是更实际的分析方法之“图 10.20 给出了对一对\n相邻线网的这一处理过程”线网 2 的负载电容根据线网 ! 的变化用人 因子进行调节”一个复杂的\n因素是由于相关的邻近线网的变化状况，k 内子可能随着时间变化”幸运的是设计者主要对最\n坏情况的人因子值感兴趣，内为将产生最坏情况的延迟值，这也大大简化了分析，内为对不同情\n况的大 央子进行穷举分析是不切实际的，例如，对触发器的时序验证来说，建立时间和保持时间\n的检查非常重要”检查建立时间时，设计者在信号线网上用最大的上 因子，在时钟线网上用最小\n的大因子”在保持时间的验证上采用相反的设置")
+上一页式（10.14）—（10.16）分别给出了侵略者静止、同向开关、反向开关时的三个有效负载。为了把相邻线网活动引入 RC 时延计算，定义耦合因子 $k$：
 
-#text("《=0 向同一方向上化\n1 RRR EH,\n人= 2 向相反方向变化")
+#align(center)[$C_"eff" = C_"gnd" + k C_c$]
 
-#text("图 1020 使用因子处理粳全")
+#table(columns:3,stroke:.4pt,inset:3pt,
+ [*邻线活动*],[*k*],[*线网2的等效负载*],
+ [同方向转变],[0],[$C_"gnd"$],
+ [侵略者不变],[1],[$C_"gnd" + C_c$],
+ [反方向转变],[2],[$C_"gnd" + 2 C_c$],
+)
 
-#text("如果这还不够复杂，那么考虑侵略者和受害者信号的准确时序也在观察到延迟时起作用\n图 10.21 用 SPICE 瞬态分析说明信号时序在出现导线耦合时的影响图中给出了无烟合时的受害\n者(线网 2 ) 和侵略者 ! 线网 1 ) 的信号波形，以及有很多侵略者进行相反变化时的受害者信和\n波形，内为侵覆者的时间早，耦合实际导致在正确的传输开始前的电容反向馈通，在本例中，传\n输延迟的结果与没有任何信和号耦合情况相比增加了一倍，由于馈通的作用，k 因子可以在 0-2 的\n范轩之外馈通。 对设计者来讲，只要可能就使用结构布局避免耘合，以及使用 因子进行仔细\n的时序验证是对付这种信号完整性问题的两种主要方法")
+#fig1020()
+#align(center)[*图10.20　使用活动系数的耦合电容等效模型（可编辑示意）*]
 
-#text("ara)")
+原书进一步说明，实际线网中开关时刻、斜率、幅值不完全一致，因此有效耦合系数可能偏离上述理想的三个整数；静态时序分析往往采用最坏情形或活动模式范围。
 
-#text("Rane\nLs\n12\n= 96\n2\noo\n        sem hu\n-06L he     poi   1   14\n0          250          300\nfal ps)")
+#fig1021()
+#align(center)[*图10.21　不同邻线活动情况下的暂态延迟趋势（定性重绘，非原测量点）*]
 
-#text("FA 10.21 HRA ASSP")
-
-#text("1 当考起政通时因子实际处于-1-3 的范用内")
+耦合影响与受害者、侵略者的相对到达时间有关；这一现象也是需要进行版图寄生参数提取和串扰时序分析的重要原因。
