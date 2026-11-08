@@ -8971,11 +8971,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原书工业芯片版图未逐层取得可编辑几何",
+        "数学排版、脚注、文字完整性尚未独立双重核对",
+        "原稿与扫描像素对应关系和页眉页脚尚未终审"
       ],
-      "notes": "PDF407: unverified machine-OCR Typst source",
+      "notes": "PDF407: source-checked editable clock EM and PLL/DLL section, conceptual figures, 0 full-page acceptance",
       "page_source_verified": false
     },
     {
@@ -8993,11 +8993,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原书工业芯片版图未逐层取得可编辑几何",
+        "数学排版、脚注、文字完整性尚未独立双重核对",
+        "原稿与扫描像素对应关系和页眉页脚尚未终审"
       ],
-      "notes": "PDF408: unverified machine-OCR Typst source",
+      "notes": "PDF408: source-checked editable clock EM and PLL/DLL section, conceptual figures, 0 full-page acceptance",
       "page_source_verified": false
     },
     {
