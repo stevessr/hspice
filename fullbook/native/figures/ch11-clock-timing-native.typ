@@ -95,8 +95,8 @@
   #b(309pt,y,58pt,22pt,"Clk")
   #w(74pt,y+11pt,309pt,y+11pt)
   #if j==1 {
-   w(74pt,y-10pt,309pt,y-10pt)
-   t(157pt,y-23pt,"VDD/GND屏蔽线")
+   w(74pt,y - 10pt,309pt,y - 10pt)
+   t(157pt,y - 23pt,"VDD/GND屏蔽线")
   }
  ]
 ])
