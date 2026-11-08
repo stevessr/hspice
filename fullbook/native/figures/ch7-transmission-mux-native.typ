@@ -96,70 +96,56 @@
     ]
     #place(top+left,dx:10pt,dy:164pt,text(size:7pt)[（b）单级 4:1 多路器]))
   ]])
-#let fig712()=grid(columns:(1fr,1fr,1fr),column-gutter:5pt,
-  [#block(height:160pt)[
-    #pass-symbol(40pt,26pt)
-    #pass-symbol(40pt,79pt)
-    #place(top+left,dx:12pt,dy:132pt,text(size:7pt)[（a）输出冲突]))
-  ]],
-  [#block(height:160pt)[
-    #pass-symbol(40pt,26pt)
-    #pass-symbol(40pt,79pt)
-    #place(top+left,dx:12pt,dy:132pt,text(size:7pt)[（b）高阻态]))
-  ]],
-  [#block(height:160pt)[
-    #pass-symbol(40pt,26pt)
-    #pass-symbol(40pt,79pt)
-    #place(top+left,dx:12pt,dy:132pt,text(size:7pt)[（c）电荷共享]))
-  ]])
-#let fig713()=grid(columns:(1fr,1fr),column-gutter:6pt,
-  [#block(height:118pt)[
-    #pass-symbol(45pt,17pt)
-    #pass-symbol(45pt,69pt)
-    #wire(87pt,31pt,149pt,31pt)
-    #wire(87pt,83pt,149pt,83pt)
-    #place(top+left,dx:13pt,dy:103pt,text(size:7pt)[（a）OR / A+B]))
-  ]],
-  [#block(height:118pt)[
-    #pass-symbol(45pt,17pt)
-    #pass-symbol(107pt,17pt)
-    #wire(87pt,31pt,93pt,31pt)
-    #place(top+left,dx:13pt,dy:103pt,text(size:7pt)[（b）AND / AB]))
-  ]])
-#let fig-example73(reduced:false)=html.frame(block(width:374pt,height:174pt)[
-  // Example 7.3: A/B control a set of C, Cbar, and VDD data paths.
-  #place(top+left,dx:6pt,dy:8pt,text(size:7pt)[#if reduced [优化结构] else [真值表直接实现]]))
-  #if reduced [
-    #pass-symbol(84pt,35pt,size:26pt)
-    #pass-symbol(84pt,94pt,size:26pt)
-    #place(top+left,dx:30pt,dy:47pt,text(size:7pt)[$C$]))
-    #place(top+left,dx:22pt,dy:105pt,text(size:7pt)[$overline(C)$]))
-    #wire(110pt,48pt,172pt,48pt)
-    #wire(110pt,107pt,172pt,107pt)
-  ] else [
-    #for i in (0,1,2,3) [
-      #let yy=22pt+i*34pt
-      #pass-symbol(84pt,yy,size:25pt)
-      #wire(51pt,yy+12pt,70pt,yy+12pt)
-      #wire(109pt,yy+12pt,167pt,yy+12pt)
-    ]
-    #place(top+left,dx:18pt,dy:30pt,text(size:7pt)[$V_("DD")$]))
-    #place(top+left,dx:18pt,dy:64pt,text(size:7pt)[$C$]))
-    #place(top+left,dx:18pt,dy:98pt,text(size:7pt)[$overline(C)$]))
-    #place(top+left,dx:18pt,dy:132pt,text(size:7pt)[$overline(C)$]))
+#let fig712-panel(kind:"conflict")=html.frame(block(width:188pt,height:147pt)[
+  // Four selectable data inputs, with two convergent switch paths.
+  #for i in (0,1,2,3) [
+    #let yy=7pt+i*30pt
+    #pass-symbol(45pt,yy,size:22pt)
+    #wire(18pt,yy+11pt,31pt,yy+11pt)
+    #place(top+left,dx:6pt,dy:yy+5pt,text(size:7pt)[#("ABCD".at(i))]))
   ]
-  #pass-symbol(225pt,50pt,size:29pt)
-  #pass-symbol(225pt,105pt,size:29pt)
-  #wire(167pt,77pt,211pt,64pt)
-  #wire(167pt,116pt,211pt,119pt)
-  #wire(254pt,64pt,289pt,64pt)
-  #wire(254pt,119pt,289pt,119pt)
-  #wire(289pt,64pt,289pt,119pt)
-  #wire(289pt,91pt,328pt,91pt)
-  #place(top+left,dx:337pt,dy:81pt,text(size:8pt)[$F$]))
-  #place(top+left,dx:231pt,dy:25pt,text(size:7pt)[$A$]))
-  #place(top+left,dx:229pt,dy:143pt,text(size:7pt)[$overline(A)$]))
+  #wire(67pt,18pt,100pt,37pt)
+  #wire(67pt,48pt,100pt,37pt)
+  #wire(67pt,78pt,100pt,102pt)
+  #wire(67pt,108pt,100pt,102pt)
+  #pass-symbol(105pt,26pt,size:25pt)
+  #pass-symbol(105pt,92pt,size:25pt)
+  #wire(130pt,38pt,157pt,38pt)
+  #wire(130pt,104pt,157pt,104pt)
+  #wire(157pt,38pt,157pt,104pt)
+  #place(top+left,dx:10pt,dy:134pt,text(size:7.3pt)[
+    #if kind=="conflict" [（a）输出冲突]
+    else if kind=="hiz" [（b）高阻态]
+    else [（c）电荷共享]
+  ]))
+  #place(top+left,dx:143pt,dy:113pt,text(size:7pt)[#if kind=="hiz" [OFF] else [ON]]))
 ])
+#let fig712()=block(width:390pt)[
+  #grid(columns:(1fr,1fr),column-gutter:5pt,
+    [#fig712-panel(kind:"conflict")],
+    [#fig712-panel(kind:"hiz")])
+  #align(center)[#fig712-panel(kind:"share")]
+]
+#let fig713()=grid(columns:(1fr,1fr),column-gutter:8pt,
+  [#block(height:148pt)[
+    #pass-symbol(60pt,13pt,size:29pt)
+    #pass-symbol(60pt,72pt,size:29pt)
+    #wire(24pt,27pt,46pt,27pt)
+    #wire(24pt,86pt,46pt,86pt)
+    #wire(89pt,27pt,138pt,27pt)
+    #wire(89pt,86pt,138pt,86pt)
+    #wire(138pt,27pt,138pt,86pt)
+    #wire(138pt,57pt,174pt,57pt)
+    #place(top+left,dx:13pt,dy:124pt,text(size:7.5pt)[（a）或功能 $F=A+B$]))
+  ]],
+  [#block(height:148pt)[
+    #pass-symbol(25pt,42pt,size:29pt)
+    #pass-symbol(102pt,42pt,size:29pt)
+    #wire(5pt,56pt,11pt,56pt)
+    #wire(54pt,56pt,88pt,56pt)
+    #wire(131pt,56pt,176pt,56pt)
+    #place(top+left,dx:13pt,dy:124pt,text(size:7.5pt)[（b）与功能 $F=A B$]))
+  ]])
 #let fig714()=grid(columns:(1fr,1fr),column-gutter:8pt,
   [#block(height:157pt)[
     #pass-symbol(54pt,38pt)
