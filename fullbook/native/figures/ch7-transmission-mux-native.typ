@@ -102,7 +102,7 @@
     #let yy=7pt+i*30pt
     #pass-symbol(45pt,yy,size:22pt)
     #wire(18pt,yy+11pt,31pt,yy+11pt)
-    #place(top+left,dx:6pt,dy:yy+5pt,text(size:7pt)[#("ABCD".at(i))]))
+    #place(top+left,dx:6pt,dy:yy+5pt,text(size:7pt)[#(("A","B","C","D").at(i))]))
   ]
   #wire(67pt,18pt,100pt,37pt)
   #wire(67pt,48pt,100pt,37pt)
