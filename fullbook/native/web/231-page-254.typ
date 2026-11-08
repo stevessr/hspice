@@ -1,11 +1,11 @@
 // SOURCE PDF PAGE 254 / Chapter 7 opener, printed page 235.
 // Text transcribed against the uploaded scan, not strict 1:1 certified.
 #set document(title:"第7章 传输门和动态逻辑设计 · PDF254")
-#v(64pt)
+#v(80pt)
 #align(center)[#text(font:"Noto Sans CJK SC",size:21pt,weight:"bold")[第 7 章　传输门和动态逻辑设计]]
-#v(26pt)
+#v(31pt)
 
-#block(fill:luma(223),inset:(x:13pt,y:10pt),width:100%)[
+#block(fill:luma(185),inset:(x:13pt,y:14pt),width:100%)[
   *本章提要*
 
   7.1　绪论
