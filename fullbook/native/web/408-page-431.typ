@@ -1,66 +1,31 @@
-// SOURCE PDF PAGE 431; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第431页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("412        数字集成电路分析与设计一“深亚微米工艺 ( 第三版)")
+// SOURCE PDF PAGE 431 / printed page 412
+// Scan-checked code examples; original graphs continue on PDF 432.
+#set document(title:"附录A .ic、.end 与完整SPICE网表 · PDF431")
+= 附录 A · 印刷第412页
+== A.3　注释与初始条件
 
-#text("* This is a comment **")
+注释可以单独占一行，也可以跟在器件行后，用星号解释作者意图。原书示例：
 
-#text("R52 0 10k * This is also a comment.")
+#raw("* This is a comment **\nR5 2 0 10k  * This is also a comment.",block:true)
 
-#text("ic 声明")
+=== `.ic` 声明
 
-#text("在有些情况下, 为了进行有意义的模拟, 在时间# = 0时一个电路节点的初始条件必须加以说\n明。为了达到这个日的，可以用ic 声明     须在.tran 命令行中用一个“uic”指令来标记，以\n便在模拟期间可以使用初始条件、例如，如果初始时节点 5 必须设置为 18 V，并且节点 7 要设\n车为0V，则应使用如下两行表示:")
+初始条件可以明确指定某些节点在 $t=0$ 时的电压。若要在瞬态计算中强制使用这些初始条件，教材使用 `uic` 标志：
 
-#text(".ic V(5)=1.8  V(7)=0")
+#raw(".ic V(5)=1.8 V(7)=0\n.tran 50ps 5ns uic",block:true)
 
-#text(".tran 50ps 5ns uic")
+=== `.end` 声明
 
-#text(":end 声明")
+`.end` 指定网表结束，SPICE 忽略其后的输入行。
 
-#text("为了结束卡片组，需要使用.end 声明来告诉 SPICE 这是文件的结束,任何在.end 之后输入的\n行都被忽略")
+== A.4　完整的 SPICE 示例
 
-#text("A.4 完整的SPICE 示例")
+原书图 A.12 对 NMOS 器件的 $I$–$V$ 曲线进行 DC 双重扫描：
 
-#text("FS A.12 给出了对一个 NMOS 的 VY特性的直流分析, 是在 Vgate 的 5 个不同的值从0到18 V\nFi Vdrain 得到的:")
+#raw("IV Characteristic of NMOS\n.param Supply=1.8\n.lib 'bsim3v3.cmos.18um'\n.opt scale=0.1u\n* Voltage sources\nVdrain 2 0 'Supply'\nVgate 1 0 'Supply'\n* A minimum width NMOS transistor\nMn 2 1 0 0 nmos L=2 W=4 as=20 ps=4 ad=20 pd=4\n* DC analysis request by sweeping the drain and gate voltage.\n.dc Vdrain 0 'Supply' 'Supply/20' Vgate 0 'Supply' 'Supply/4'\n* Plotting requests\n.plot dc I(Mn)\n.end",block:true)
 
-#text("IV Characteristic of NMOS")
+图 A.13 使用脉冲输入观察 CMOS 反相器瞬态：
 
-#text("<param Supply=1.8      * Set value of vaa")
+#raw("Transient Response of an Inverter\n.param Supply=1.8\n.lib 'bsim3v3.cmos.18um'\n.opt scale=0.1u\nVdd 1 0 'Supply'\nVin 2 0 pulse 0 'Supply' 1n 0n 0n 2n 4n\nMp 3 2 1 1 pmos L=2 W=8 as=40 ps=4 ad=40 pd=8\nMn 3 2 0 0 nmos L=2 W=4 as=20 ps=4 ad=20 pd=4\nCload 3 0 10fF\n* Transient analysis\n.tran 50ps 5ns",block:true)
 
-#text("-lib ‘bsim3v3.cmos.18um’ * Set 0.18um library")
-
-#text(".opt scale=0.1u       * Set lambda (here lambda=0.10)")
-
-#text("* Voltage sources\nvarain 2 0 ‘Supply’")
-
-#text("vgate 1 0 ‘Supply’")
-
-#text("* A minimum width NMOS transistor")
-
-#text("Mn 2 1 0 0 nmos 1=2 w=4 as=20 ps=4 ad=20 pd=4")
-
-#text("* DC analysis request by sweeping the drain and gate voltage.\nde Vdrain 0 ‘Supply’ ‘Supply/20’ vgate 0 ‘Supply’ ‘Supply/4’\n* Plotting requests")
-
-#text(".plot dc I(Mn)")
-
-#text("vend")
-
-#text("图 A.13 RUT TARO TER. Att Cee A itn — 7 ee ROE\n到的\nTransient Response of an Inverter")
-
-#text(".param Supply=1.8       * Set value of vdd")
-
-#text("-lib ‘bsim3v3.cmos.18um’ * Set 0.18um library")
-
-#text("-opt scale=0.1u       * Set lambda (here lambda=0.10)")
-
-#text("Vad 1 0 ‘Supply’")
-
-#text("Vin 2 0               ‘Supply’ in On on 2n 4n\nMp 3 2 1 1 pmos        0 ps=4 ad=40 pa=8")
-
-#text("Mn 3 2 0 0 nmos          0 ps=4 ad=20 pd=4")
-
-#text("Cload    3 0 10EF")
-
-#text("* Transient analysis\n«tran 50ps 5ns")
+该网表的绘图和结束行在 PDF 第432页继续，尚不可省略。
