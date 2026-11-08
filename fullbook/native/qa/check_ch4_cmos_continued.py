@@ -84,4 +84,37 @@ assert all(t in geo for t in ("Gnd", 'V_(\"DD\")', "输入", "输出", "阱塞",
 assert m["pages"][152]["text_checked_against_scan"] is True
 assert m["pages"][153]["text_checked_against_scan"] is True
 assert not m["pages"][153]["figures_verified"]
+
+# PDF147–150: scan-backed semantic regression checks (2026-11-08).
+# Reproduction remains editorial, not full-page 1:1 acceptance.
+s148=(w/"125-page-148.typ").read_text(encoding="utf-8")
+s149=(w/"126-page-149.typ").read_text(encoding="utf-8")
+s150=(w/"127-page-150.typ").read_text(encoding="utf-8")
+# PDF147 states PMOS I_DS is taken positive when defined flowing OUT of drain.
+assert "因此有一个正值" in s147 and "各电压取绝对值" in s147
+assert "因而有负号" not in s147 and "电压级换为负值" not in s147
+# PDF148 full region III equation appears before its E_c L approximation.
+assert "完整电流平衡式" in s148 and "V_(\\\"in\\\")=V_S" in s148
+assert s148.index("完整电流平衡式") < s148.index("忽略这两项")
+assert all(t in s148 for t in (
+    'E_("cN") L_N', 'E_("cP") L_P', 'V_S - V_("TN")',
+    'V_("DD") - V_S - abs(V_("TP"))',
+))
+# PDF149: original region IV is n-lin,p-sat; require explicit denominator
+# and both quadratic NMOS linear and PMOS velocity-saturated terms.
+assert all(t in s149 for t in (
+    "完整电流表达式", '1 + V_("out") / (E_("cN") L_N)',
+    'V_("out")^2 / 2', 'v_("sat") C_("ox")',
+    'E_("cP") L_P', 'V_("DD") - V_("in") - abs(V_("TP"))',
+))
+# PDF150: both complete and simplified current balances must precede (4.16).
+assert all(t in s150 for t in (
+    "完整电流关系", "近似忽略两项", 'v_("sat")=mu_n E_("cN")/2',
+    'V_("in") - V_("TN")', '(4.16)', 'dif V_("out")',
+))
+assert s150.index("完整电流关系") < s150.index("近似忽略两项") < s150.index('"(4.16)"')
+for n in range(147,151):
+    state=m["pages"][n-1]
+    assert not state["human_verified"] and not state["layout_verified"]
+
 print("Chapter 4 scan-backed PDF147–156: equations4.14–4.21, examples4.6–4.8 OK")
