@@ -7170,7 +7170,7 @@
     },
     {
       "pdf_page": 325,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7183,16 +7183,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
       ],
-      "notes": "PDF325: unverified machine-OCR Typst source",
+      "notes": "PDF325: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 326,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7205,16 +7204,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
       ],
-      "notes": "PDF326: unverified machine-OCR Typst source",
+      "notes": "PDF326: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 327,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7227,16 +7225,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
       ],
-      "notes": "PDF327: unverified machine-OCR Typst source",
+      "notes": "PDF327: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 328,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7249,16 +7246,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
       ],
-      "notes": "PDF328: unverified machine-OCR Typst source",
+      "notes": "PDF328: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 329,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7271,16 +7267,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
       ],
-      "notes": "PDF329: unverified machine-OCR Typst source",
+      "notes": "PDF329: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 330,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7293,16 +7288,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
       ],
-      "notes": "PDF330: unverified machine-OCR Typst source",
+      "notes": "PDF330: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 331,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7315,16 +7309,15 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
       ],
-      "notes": "PDF331: unverified machine-OCR Typst source",
+      "notes": "PDF331: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
       "pdf_page": 332,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7337,11 +7330,10 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "图9.3—9.11的MOS管端口与布线图元尚未逐线验收",
+        "中文原文、表格、图注和排版位置尚未按扫描逐字逐像素验收"
       ],
-      "notes": "PDF332: unverified machine-OCR Typst source",
+      "notes": "PDF332: native edited CAM/FPGA selection, strict 1:1 pending",
       "page_source_verified": false
     },
     {
