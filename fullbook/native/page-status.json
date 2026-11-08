@@ -6550,15 +6550,15 @@
       "native_html_selection_available": true,
       "machine_ocr_transcribed": true,
       "machine_ocr_characters": 959,
-      "proofread_round": "2026-11-08-appendix-a-scan-guided-editorial",
+      "proofread_round": "2026-11-08-appendix-spice-source-syntax-recheck",
       "source_scan_landmarks_checked": true,
       "second_pass_ocr": false,
       "human_verified": false,
       "layout_verified": false,
       "figures_verified": false,
-      "text_checked_against_scan": false,
+      "text_checked_against_scan": true,
       "formulas_checked_against_scan": false,
-      "notes": "SPICE附录A关键命令、参数、器件语法、编号或表格已对照扫描页进行编辑重排；仍非逐字完整转录，图形与原版式尚未经过1:1验收。"
+      "notes": "PDF421：原书SPICE附录A源扫描对照转写；完整保留逐条网表声明、实例和语法说明，原生可编辑；图文像素对齐、完整逐字细校和字体字距待严格验收。"
     },
     {
       "pdf_page": 422,
@@ -6568,15 +6568,15 @@
       "native_html_selection_available": true,
       "machine_ocr_transcribed": true,
       "machine_ocr_characters": 1219,
-      "proofread_round": "2026-11-08-appendix-a-scan-guided-editorial",
+      "proofread_round": "2026-11-08-appendix-spice-source-syntax-recheck",
       "source_scan_landmarks_checked": true,
       "second_pass_ocr": false,
       "human_verified": false,
       "layout_verified": false,
       "figures_verified": false,
-      "text_checked_against_scan": false,
+      "text_checked_against_scan": true,
       "formulas_checked_against_scan": false,
-      "notes": "SPICE附录A关键命令、参数、器件语法、编号或表格已对照扫描页进行编辑重排；仍非逐字完整转录，图形与原版式尚未经过1:1验收。"
+      "notes": "PDF422：原书SPICE附录A源扫描对照转写；完整保留逐条网表声明、实例和语法说明，原生可编辑；图文像素对齐、完整逐字细校和字体字距待严格验收。"
     },
     {
       "pdf_page": 423,
@@ -6586,15 +6586,15 @@
       "native_html_selection_available": true,
       "machine_ocr_transcribed": true,
       "machine_ocr_characters": 1472,
-      "proofread_round": "2026-11-08-appendix-a-scan-guided-editorial",
+      "proofread_round": "2026-11-08-appendix-spice-source-syntax-recheck",
       "source_scan_landmarks_checked": true,
       "second_pass_ocr": false,
       "human_verified": false,
       "layout_verified": false,
       "figures_verified": false,
-      "text_checked_against_scan": false,
+      "text_checked_against_scan": true,
       "formulas_checked_against_scan": false,
-      "notes": "SPICE附录A关键命令、参数、器件语法、编号或表格已对照扫描页进行编辑重排；仍非逐字完整转录，图形与原版式尚未经过1:1验收。"
+      "notes": "PDF423：原书SPICE附录A源扫描对照转写；完整保留逐条网表声明、实例和语法说明，原生可编辑；图文像素对齐、完整逐字细校和字体字距待严格验收。"
     },
     {
       "pdf_page": 424,
