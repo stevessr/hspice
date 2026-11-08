@@ -87,6 +87,26 @@ for page_number, names in DRAWINGS.items():
         assert f"#let {name}(" in figure_source, (page_number, name)
         assert f"#{name}()" in page_source, (page_number, name)
 assert len(DRAWINGS) == 9
+# Fig A.7-A.10 visual topologies are traceable to the scan (PDF427-429).
+# These are structural tests only; successful tests do not accept a full page.
+for name in ("a7-rlc","a8-pass-gate","a9-rc-step","a10-divider"):
+    assert "#let "+name+"()" in figure_source
+a7=figure_source.split("#let a7-rlc()",1)[1].split("#let a8-pass-gate()",1)[0]
+a8=figure_source.split("#let a8-pass-gate()",1)[1].split("#let a9-rc-step()",1)[0]
+a9=figure_source.split("#let a9-rc-step()",1)[1].split("#let a10-divider()",1)[0]
+a10=figure_source.split("#let a10-divider()",1)[1].split("#let a11-nmos-curves()",1)[0]
+assert a7.count("curve.cubic(")>=4, "A.7 must have four editable coil loops"
+assert a7.count("#s(")>=11 and "#r(" not in a7, "A.7 must use a zigzag resistor"
+assert all(s in a7 for s in ("17 Meg","1.5 fF","0.7 mH"))
+assert all(s in a8 for s in ("图 A.8","circle(radius:3pt","[1]","[0]","[2]","[3]"))
+assert all(s in a9 for s in ("1k","1μF","10 V","circle(radius:12pt","curve.cubic"))
+assert a9.count("#s(")>=13, "A.9 requires both a resistor and capacitor"
+assert all(s in a10 for s in ('R_1','R_2','V_("source")','V_r','10'))
+assert a10.count("#s(")>=15 and "#r(" not in a10, "A.10 must show two zigzag resistors"
+s427=(WEB/"404-page-427.typ").read_text(encoding="utf-8")
+for token in ("resistanceval","capacitanceval","inductanceval",
+              "Rxxx","Cxxx","Lxxx","R7   1 2 17Megohms","Cin  2 3 1.5fF","Lbig 3 4 .7mH"):
+    assert token in s427, ("PDF427",token)
 # PDF424 Table A.2 must retain both printed forms (unit and E-notation),
 # and source figures A.3–A.5 must be circuits, not unrelated placeholder boxes.
 table_a2=(WEB/"401-page-424.typ").read_text(encoding="utf-8")

@@ -152,91 +152,159 @@
   ]
 ])
 
-#let a7-rlc() = html.frame(block(width: 338pt, height: 84pt)[
-  #t(7pt, 2pt, [图 A.7　串联 RLC 电路])
-  #s(35pt, 43pt, 38pt, 0pt)
-  #r(73pt, 34pt, 46pt, 18pt)
-  #t(75pt, 21pt, [R7 / 17 Meg])
-  #s(119pt, 43pt, 22pt, 0pt)
-  #s(141pt, 31pt, 0pt, 25pt)
-  #s(151pt, 31pt, 0pt, 25pt)
-  #t(135pt, 21pt, [Cin / 1.5 fF])
-  #s(151pt, 43pt, 31pt, 0pt)
-  #for x in (185pt,202pt,219pt) [
-    #place(top + left, dx:x,dy:43pt,circle(radius:9pt,stroke:.8pt,fill:white))
-  ]
-  #s(228pt, 43pt, 35pt, 0pt)
-  #t(191pt, 21pt, [Lbig / 0.7 mH])
-  #for (x, lab) in ((32pt,[1]),(133pt,[2]),(174pt,[3]),(266pt,[4])) [
-    #t(x, 57pt, lab)
-  ]
+// PDF427 / printed page 408: Figure A.7 is a SERIES RLC with a zigzag R,
+ // two-plate C, and a WOUND L; four consecutive nodes 1-2-3-4.
+#let a7-rlc() = html.frame(block(width:338pt,height:90pt)[
+  #t(8pt,2pt,[图 A.7　一个 RLC 电路])
+  // Node 1 to R7.
+  #s(53pt,54pt,36pt,0pt)
+  // R7: source uses a zigzag, not the previous rectangle placeholder.
+  #s(89pt,54pt,5pt,-8pt,w:1pt)
+  #s(94pt,46pt,8pt,16pt,w:1pt)
+  #s(102pt,62pt,8pt,-16pt,w:1pt)
+  #s(110pt,46pt,8pt,16pt,w:1pt)
+  #s(118pt,62pt,6pt,-8pt,w:1pt)
+  #s(124pt,54pt,21pt,0pt)
+  // C_in two electrically separated plates.
+  #s(145pt,38pt,0pt,32pt,w:1.2pt)
+  #s(153pt,38pt,0pt,32pt,w:1.2pt)
+  #s(153pt,54pt,35pt,0pt)
+  // L_big : four continuous coil humps followed by node 4 wire.
+  #place(top + left,dx:188pt,dy:54pt,
+    curve(stroke:1pt,curve.move((0pt,0pt)),
+      curve.cubic((2pt,-13pt),(12pt,-13pt),(14pt,0pt)),
+      curve.cubic((16pt,-13pt),(26pt,-13pt),(28pt,0pt)),
+      curve.cubic((30pt,-13pt),(40pt,-13pt),(42pt,0pt)),
+      curve.cubic((44pt,-13pt),(54pt,-13pt),(56pt,0pt))))
+  #s(244pt,54pt,28pt,0pt)
+  #t(91pt,17pt,[R7])
+  #t(88pt,29pt,[17 Meg])
+  #t(136pt,17pt,[$C_("in")$])
+  #t(135pt,29pt,[1.5 fF])
+  #t(208pt,17pt,[$L_("big")$])
+  #t(205pt,29pt,[0.7 mH])
+  #t(50pt,58pt,[1])
+  #t(132pt,58pt,[2])
+  #t(176pt,58pt,[3])
+  #t(268pt,58pt,[4])
 ])
-
-#let a8-pass-gate() = html.frame(block(width: 338pt, height: 107pt)[
-  #t(8pt, 3pt, [图 A.8　互补 CMOS 传输门（简化符号）])
-  #s(72pt, 54pt, 48pt, 0pt)
-  #s(120pt, 54pt, 0pt, -22pt)
-  #s(120pt, 54pt, 0pt, 25pt)
-  #r(120pt, 22pt, 90pt, 23pt)
-  #r(120pt, 70pt, 90pt, 23pt)
-  #t(138pt, 24pt, [PMOS / Mp])
-  #t(138pt, 72pt, [NMOS / Mn])
-  #s(210pt, 32pt, 0pt, 22pt)
-  #s(210pt, 54pt, 0pt, 25pt)
-  #s(210pt, 54pt, 55pt, 0pt)
-  #t(64pt, 57pt, [2])
-  #t(270pt, 57pt, [3])
-  #t(172pt, 7pt, [栅极0])
-  #t(173pt, 94pt, [栅极1])
+// PDF428 / printed page 409: Figure A.8 uses one combined source symbol,
+// with data nodes 2,3, NMOS gate=1 at top, PMOS gate=0 at bottom (bubble).
+#let a8-pass-gate() = html.frame(block(width:338pt,height:115pt)[
+  #t(7pt,2pt,[图 A.8　一个传输门])
+  #t(161pt,12pt,[1])
+  #s(169pt,22pt,0pt,20pt)
+  #s(155pt,42pt,28pt,0pt)
+  #s(169pt,42pt,0pt,13pt)
+  // The original represents parallel nMOS and pMOS channels in a compact gate.
+  #place(top + left,dx:136pt,dy:55pt,
+    rect(width:66pt,height:37pt,stroke:.9pt,fill:white))
+  #s(136pt,73pt,-38pt,0pt)
+  #s(202pt,73pt,38pt,0pt)
+  #s(137pt,63pt,12pt,0pt)
+  #s(149pt,63pt,0pt,19pt,w:1.1pt)
+  #s(161pt,63pt,0pt,19pt,w:1.1pt)
+  #s(161pt,73pt,16pt,0pt)
+  #s(177pt,63pt,0pt,19pt,w:1.1pt)
+  #s(190pt,63pt,0pt,19pt,w:1.1pt)
+  #s(190pt,73pt,12pt,0pt)
+  #s(169pt,92pt,0pt,3pt)
+  #place(top + left,dx:169pt,dy:98pt,
+    circle(radius:3pt,stroke:.75pt,fill:white))
+  #s(169pt,101pt,0pt,6pt)
+  #t(166pt,107pt,[0])
+  #t(86pt,65pt,[2])
+  #t(247pt,65pt,[3])
 ])
-
-#let a9-rc-step() = html.frame(block(width: 338pt, height: 141pt)[
-  #t(4pt, 2pt, [图 A.9　RC 阶跃输入与电容充电])
-  #t(3pt, 29pt, [10 V])
-  #t(10pt, 81pt, [电压源])
-  #s(26pt, 46pt, 19pt, 0pt)
-  #r(45pt, 40pt, 36pt, 13pt)
-  #t(49pt, 28pt, [1 kΩ])
-  #s(81pt, 46pt, 30pt, 0pt)
-  #s(110pt, 46pt, 0pt, 12pt)
-  #s(102pt, 58pt, 17pt, 0pt)
-  #s(102pt, 64pt, 17pt, 0pt)
-  #s(110pt, 64pt, 0pt, 18pt)
-  #t(118pt, 55pt, [1 μF])
-  #s(110pt, 82pt, -84pt, 0pt)
-  #s(26pt, 82pt, 0pt, -36pt)
-  #s(173pt, 112pt, 154pt, 0pt)
-  #s(173pt, 112pt, 0pt, -88pt)
-  #t(158pt, 15pt, [$V_C$])
-  #t(288pt, 116pt, [$t$ (ms)])
-  #s(173pt, 31pt, 154pt, 0pt, w: .55pt)
-  #t(147pt, 27pt, [10])
-  #place(top + left, dx:173pt,dy:112pt,
-    curve(stroke:1.3pt, curve.move((0pt,0pt)),
-      curve.cubic((12pt,-78pt),(30pt,-81pt),(152pt,-81pt))))
-  #t(235pt, 4pt, [$tau=R C=1 " ms"$])
+// PDF428, Fig A.9: voltage source, 1k zigzag R and 1uF C,
+// plus source-like first-order RC exponential, not a decorative generic curve.
+#let a9-rc-step() = html.frame(block(width:338pt,height:144pt)[
+  #t(6pt,2pt,[图 A.9　一个 RC 电路与电容端电压的阶跃响应])
+  // V_source source circle / +/- and closed return to capacitor.
+  #place(top + left,dx:34pt,dy:76pt,circle(radius:12pt,stroke:.85pt,fill:white))
+  #t(31pt,61pt,[$+$])
+  #t(31pt,82pt,[$-$])
+  #t(15pt,54pt,[10 V])
+  #s(34pt,64pt,0pt,-18pt)
+  #s(34pt,46pt,25pt,0pt)
+  // R1=1k zigzag above the node Vc.
+  #s(59pt,46pt,5pt,-7pt)
+  #s(64pt,39pt,8pt,14pt)
+  #s(72pt,53pt,8pt,-14pt)
+  #s(80pt,39pt,8pt,14pt)
+  #s(88pt,53pt,5pt,-7pt)
+  #s(93pt,46pt,22pt,0pt)
+  #p(115pt,46pt)
+  #t(66pt,24pt,[$R_1$])
+  #t(67pt,31pt,[1k])
+  #t(117pt,29pt,[$V_C$])
+  // Capacitor C=1uF to return and source bottom.
+  #s(115pt,46pt,0pt,34pt)
+  #s(105pt,80pt,20pt,0pt,w:1.1pt)
+  #s(105pt,88pt,20pt,0pt,w:1.1pt)
+  #s(115pt,88pt,0pt,24pt)
+  #s(115pt,112pt,-81pt,0pt)
+  #s(34pt,112pt,0pt,-24pt)
+  #t(120pt,78pt,[$C$])
+  #t(122pt,90pt,[1μF])
+  // Plot axes x=175..326, t=0..12ms, y=18..117, Vc=0..10V.
+  #s(173pt,116pt,158pt,0pt)
+  #s(173pt,116pt,0pt,-97pt)
+  #s(173pt,26pt,155pt,0pt,w:.4pt)
+  #t(148pt,18pt,[10])
+  #t(162pt,110pt,[0])
+  #t(281pt,122pt,[时间 t (ms)])
+  #t(147pt,49pt,[$V_C$ (V)])
+  #place(top + left,dx:173pt,dy:116pt,
+    curve(stroke:1.3pt,curve.move((0pt,0pt)),
+      curve.cubic((10pt,-53pt),(27pt,-76pt),(43pt,-84pt)),
+      curve.cubic((66pt,-91pt),(97pt,-91pt),(153pt,-91pt))))
+  #t(219pt,9pt,[RC 电路的阶跃响应])
 ])
-
-#let a10-divider() = html.frame(block(width: 338pt, height: 112pt)[
-  #t(7pt, 3pt, [图 A.10　1 kΩ / 1 kΩ 分压与 DC 扫描])
-  #t(8pt, 31pt, [$V_1$])
-  #s(34pt, 44pt, 35pt, 0pt)
-  #r(69pt, 36pt, 28pt, 16pt)
-  #s(97pt, 44pt, 27pt, 0pt)
-  #p(124pt, 44pt)
-  #t(126pt, 24pt, [$V_("out")$])
-  #r(116pt, 57pt, 16pt, 30pt)
-  #s(124pt, 44pt, 0pt, 13pt)
-  #s(124pt, 87pt, 0pt, 13pt)
-  #t(70pt, 22pt, [1 kΩ])
-  #t(131pt, 66pt, [1 kΩ])
-  #s(166pt, 95pt, 155pt, 0pt)
-  #s(166pt, 95pt, 0pt, -76pt)
-  #s(166pt, 95pt, 142pt, -67pt, w: 1.4pt)
-  #t(166pt, 5pt, [$V_("out")$ (0–5 V)])
-  #t(264pt, 99pt, [$V_1$ (0–10 V)])
+// PDF429 Fig A.10: R2 is series/top branch and R1 is vertical to return.
+// Source Vm from 0 to 10V gives node Vr from 0 to 5V.
+#let a10-divider() = html.frame(block(width:338pt,height:139pt)[
+  #t(6pt,2pt,[图 A.10　电压除法器和直流扫描])
+  // The independent voltage source is at left.
+  #place(top + left,dx:36pt,dy:66pt,circle(radius:12pt,stroke:.85pt,fill:white))
+  #t(30pt,59pt,[$V_1$])
+  #t(46pt,57pt,[$V_("source")$])
+  #s(36pt,54pt,0pt,-17pt)
+  #s(36pt,37pt,31pt,0pt)
+  // Upper series resistor R2=1k in original.
+  #s(67pt,37pt,5pt,-7pt)
+  #s(72pt,30pt,7pt,14pt)
+  #s(79pt,44pt,7pt,-14pt)
+  #s(86pt,30pt,7pt,14pt)
+  #s(93pt,44pt,5pt,-7pt)
+  #s(98pt,37pt,19pt,0pt)
+  #p(117pt,37pt)
+  #t(71pt,12pt,[$R_2$])
+  #t(73pt,20pt,[1k])
+  #t(119pt,21pt,[$V_r$])
+  #s(117pt,37pt,0pt,19pt)
+  // Vertical resistor R1 from Vr to source negative.
+  #s(117pt,56pt,-6pt,5pt)
+  #s(111pt,61pt,12pt,7pt)
+  #s(123pt,68pt,-12pt,7pt)
+  #s(111pt,75pt,12pt,7pt)
+  #s(123pt,82pt,-6pt,5pt)
+  #s(117pt,87pt,0pt,16pt)
+  #s(117pt,103pt,-81pt,0pt)
+  #s(36pt,103pt,0pt,-25pt)
+  #t(124pt,62pt,[$R_1$])
+  #t(125pt,75pt,[1k])
+  // The graph is linear: 0..10 Vsource maps to 0..5 Vr.
+  #s(169pt,111pt,162pt,0pt)
+  #s(169pt,111pt,0pt,-85pt)
+  #s(169pt,111pt,133pt,-70pt,w:1.35pt)
+  #t(158pt,12pt,[$V_r$ (V)])
+  #t(158pt,105pt,[0])
+  #t(151pt,39pt,[5])
+  #t(287pt,116pt,[$V_("source")$ (V)])
+  #t(286pt,107pt,[10])
+  #t(221pt,10pt,[$R_1$ 两端的电压])
 ])
-
 #let a11-nmos-curves() = html.frame(block(width: 338pt, height: 125pt)[
   #t(5pt, 3pt, [图 A.11 / A.12　NMOS 的 $I_("DS")$–$V_("DS")$ 输出特性])
   #s(37pt, 103pt, 284pt, 0pt)
