@@ -1,28 +1,43 @@
 // SOURCE PDF PAGE 025 / printed page 6
-// Editable editorial excerpt with independently inspectable mathematical syntax.
-#set document(title:"第1章：布尔代数、XOR与MUX")
+// Scan-guided full argument sequence and mathematical expressions, 2026-11-08.
+// Exact line wraps, glyph shapes and page layout are not yet 1:1 verified.
+#set document(title:"第1章 · 布尔公式、异或、多路选择器及德摩根定律 · PDF025")
 = 第1章 · 印刷第6页
-== 1.3.1 基本的逻辑函数（续）
-原书以和项之积、积项之和说明等价布尔表达式。对变量 $A,B,C,D$，教材给出的示例包含：
+== 1.3.1　基本的逻辑函数（续）
+
+逻辑函数通常使用两种规范形式中的一种来表示：积之和形式以及和之积形式。例如，一个积之和表达式为：
 
 $ F = A C + B C + A D + B D $
+
+通过布尔代数分配律，可改写为和之积形式：
+
 $ F = (A+B)(C+D) $
 
-异或函数仅在两个输入取值不同时输出逻辑 1：
+和函数使用加号“+”，积函数可用“·”或“乘号”表示，也可省去乘号。两种表示都有用，教材后续主要采用积之和形式。
 
-$ F = A xor B = overline(A) B + A overline(B) $
+其他常见的组合门包括异或（XOR）、同或（XNOR）和多路选择器（MUX）。例如异或门：
 
-二选一选择器根据选择信号 $S$ 决定输出。当 $S=0$ 时选择 $B$，当 $S=1$ 时选择 $A$：
+$ F = A xor B = A overline(B) + overline(A) B $
+
+这里，输入 $A$、$B$ 仅在不同值时使 $F=1$。该函数既可借助与非门、或非门、反相器的组合实现，也可设计为专用门。
+
+多路选择器根据选择输入 $S$ 的取值，在输入 $A$ 和 $B$ 之间选取输出：
 
 $ F = A S + B overline(S) $
 
-=== 德摩根定律（原书式1.1）
-$ overline(A+B) = overline(A) dot overline(B) $
-$ overline(A dot B) = overline(A) + overline(B) $
+因此，$S=1$ 时 $F=A$；$S=0$ 时 $F=B$。
 
-这两个式子说明，适当变更门级反相逻辑后，可以通过 NAND、NOR 网络实现多种组合函数。
+缓冲器的输出与输入相同。两级反相器串联可以实现这一逻辑功能；原书图 1.4 还介绍了为缓冲器加入符号表示的形式。简单地把反相器串接在一起，会让后续的电路图阅读产生歧义，所以明确的图形符号十分有用。
 
-=== 后续图示
-原扫描在图 1.4 与图 1.5 中继续介绍缓冲器、三输入 NAND/NOR、异或/同或符号、二选一多路选择器以及上升沿触发 D 触发器。
+=== 德摩根定律
 
-_此页为公式与主题的原生 Typst 校对稿；未宣称原书整页文字和图形已复刻完成。_
+依据反相小圆圈在输入端和输出端的不同位置，与非门和或非门也可采用两种等价表示。教材式（1.1）给出：
+
+$ overline(a+b) = overline(a) dot overline(b) $
+$ overline(a dot b) = overline(a) + overline(b) quad "(1.1)" $
+
+德摩根定律的含义是：将所有输入变量和操作取反，再把 AND 与 OR 运算互换，即可得到原逻辑的反函数。这样一来，带输入反相圆圈的与门与一个或非门等价，带输入反相圆圈的或门与一个与非门等价（参见原书图1.4）。
+
+选择哪种表示，取决于电路所要实现的功能与逻辑图的可读性。若功能表达式以 AND 运算为主，应使图形表示清楚反相发生在输入端还是输出端；若以 OR 运算为主，也要避免混淆与非门和或非门。原书以此说明门符号使用一致性的必要性。
+
+_本页公式和主题次序对照源扫描；原页全段落逐字、页脚和排版留待人工复核。_
