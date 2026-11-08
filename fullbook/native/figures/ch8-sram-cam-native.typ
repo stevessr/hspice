@@ -177,7 +177,7 @@
   #for k in range(7) [
     #let x=98pt+k*37pt
     #b(x,48pt,30pt,27pt,"MUX")
-    #if (k<6) { w(x+30pt,61pt,x+37pt,61pt) }
+    #if (k < 6) { w(x+30pt,61pt,x+37pt,61pt) }
   ]
   #b(303pt,111pt,63pt,34pt,"D FF")
   #w(291pt,61pt,335pt,61pt)
