@@ -13,7 +13,7 @@
   #for i in range(4) [
    #let x=151pt+i*65pt
    #w(x,63pt,x,88pt)
-   #b(x-18pt,88pt,39pt,24pt,"INV")
+   #b(x - 18pt,88pt,39pt,24pt,"INV")
    #w(x,112pt,x,129pt)
    #gnd(x,129pt)
   ]
@@ -24,12 +24,12 @@
   #w(16pt,48pt,368pt,48pt)
   #for i in range(4) [
    #let x=43pt+i*93pt
-   #b(x-19pt,58pt,43pt,22pt,"驱动")
+   #b(x - 19pt,58pt,43pt,22pt,"驱动")
    #w(x,48pt,x,58pt)
    #w(x,80pt,x,98pt)
-   #b(x-17pt,98pt,35pt,17pt,"10nH")
+   #b(x - 17pt,98pt,35pt,17pt,"10nH")
    #w(x,115pt,x,123pt)
-   #cap(x-7pt,123pt)
+   #cap(x - 7pt,123pt)
   ]
   #t(12pt,132pt,"C_L=50 pF，VDD=1.8 V，放电时间1.8 ns")
 ])
