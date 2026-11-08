@@ -90,7 +90,7 @@
     #w(5pt,yy + 7pt,40pt,yy + 7pt)
     #tg(40pt,yy + 7pt,label:"TG")
     #w(76pt,yy + 7pt,91pt,yy + 7pt)
-    #txt(81pt,yy - 7pt,if k % 2==0 {"ON"} else {"OFF"})
+    #txt(81pt,yy - 7pt,if (k == 0 or k == 2) {"ON"} else {"OFF"})
   ]
   #if name=="MUX1" [
     #tg(106pt,51pt,label:"TG")
