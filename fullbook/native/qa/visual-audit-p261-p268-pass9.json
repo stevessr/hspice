@@ -1,0 +1,125 @@
+{
+  "schema": "source-svg-visual-p261-p268-pass9-v1",
+  "source_pdf_pages": 445,
+  "scope": [
+    261,
+    268
+  ],
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "baseline_actions_run": 42428451313,
+  "final_actions_run": 42429136506,
+  "grayscale_threshold": 190,
+  "tolerance_px": 2,
+  "scale": 1.25,
+  "metric": "foreground F1 with 2px tolerance, diagnostic only",
+  "baseline_mean_f1": 0.25075,
+  "final_mean_f1": 0.26663,
+  "strict_full_page_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 261,
+      "baseline_f1": 0.45054,
+      "final_f1": 0.45021,
+      "accepted": false,
+      "unresolved": [
+        "full text literal/punctuation reconciliation",
+        "MOS pass-switch terminal polarity and body wiring",
+        "figure line thickness and source-accurate gate wiring",
+        "page composition and all captions/footnotes",
+        "human 1:1 signoff"
+      ]
+    },
+    {
+      "pdf_page": 262,
+      "baseline_f1": 0.28929,
+      "final_f1": 0.28836,
+      "accepted": false,
+      "unresolved": [
+        "full text literal/punctuation reconciliation",
+        "MOS pass-switch terminal polarity and body wiring",
+        "figure line thickness and source-accurate gate wiring",
+        "page composition and all captions/footnotes",
+        "human 1:1 signoff"
+      ]
+    },
+    {
+      "pdf_page": 263,
+      "baseline_f1": 0.26384,
+      "final_f1": 0.26338,
+      "accepted": false,
+      "unresolved": [
+        "full text literal/punctuation reconciliation",
+        "MOS pass-switch terminal polarity and body wiring",
+        "figure line thickness and source-accurate gate wiring",
+        "page composition and all captions/footnotes",
+        "human 1:1 signoff"
+      ]
+    },
+    {
+      "pdf_page": 264,
+      "baseline_f1": 0.06502,
+      "final_f1": 0.20525,
+      "accepted": false,
+      "unresolved": [
+        "full text literal/punctuation reconciliation",
+        "MOS pass-switch terminal polarity and body wiring",
+        "figure line thickness and source-accurate gate wiring",
+        "page composition and all captions/footnotes",
+        "human 1:1 signoff"
+      ]
+    },
+    {
+      "pdf_page": 265,
+      "baseline_f1": 0.1954,
+      "final_f1": 0.18529,
+      "accepted": false,
+      "unresolved": [
+        "full text literal/punctuation reconciliation",
+        "MOS pass-switch terminal polarity and body wiring",
+        "figure line thickness and source-accurate gate wiring",
+        "page composition and all captions/footnotes",
+        "human 1:1 signoff"
+      ]
+    },
+    {
+      "pdf_page": 266,
+      "baseline_f1": 0.1811,
+      "final_f1": 0.17969,
+      "accepted": false,
+      "unresolved": [
+        "full text literal/punctuation reconciliation",
+        "MOS pass-switch terminal polarity and body wiring",
+        "figure line thickness and source-accurate gate wiring",
+        "page composition and all captions/footnotes",
+        "human 1:1 signoff"
+      ]
+    },
+    {
+      "pdf_page": 267,
+      "baseline_f1": 0.22083,
+      "final_f1": 0.22084,
+      "accepted": false,
+      "unresolved": [
+        "full text literal/punctuation reconciliation",
+        "MOS pass-switch terminal polarity and body wiring",
+        "figure line thickness and source-accurate gate wiring",
+        "page composition and all captions/footnotes",
+        "human 1:1 signoff"
+      ]
+    },
+    {
+      "pdf_page": 268,
+      "baseline_f1": 0.33996,
+      "final_f1": 0.34003,
+      "accepted": false,
+      "unresolved": [
+        "full text literal/punctuation reconciliation",
+        "MOS pass-switch terminal polarity and body wiring",
+        "figure line thickness and source-accurate gate wiring",
+        "page composition and all captions/footnotes",
+        "human 1:1 signoff"
+      ]
+    }
+  ],
+  "notes": "PDF264 F1 .06502→.20525 after 2-over-1 figure reflow. Render audit exposed 41 stray closing parentheses and raw conditional markup in native vectors; corrected. PDF265 F1 regressed .19540→.18529; needs targeted reflow. Other pages remain far from 1:1."
+}
