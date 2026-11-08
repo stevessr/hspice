@@ -54,4 +54,17 @@ assert 'cmos-example-vtc' in s152 and '#cmos-example-vtc()' in s152
 assert '#let cmos-example-vtc()' in figure and 'html.frame' in figure
 assert all(t in figure for t in ('0.626', '0.8', '0.909', '1.8', 'V_(\"OH\")', 'V_(\"OL\")'))
 assert not m["pages"][151]["layout_verified"]
+# PDF153–154: source figure 4.13 mask layers / contacts must survive editing.
+s153=(w/"130-page-153.typ").read_text(encoding="utf-8")
+s154=(w/"131-page-154.typ").read_text(encoding="utf-8")
+geo=(root/"figures/ch4-cmos-continued-native.typ").read_text(encoding="utf-8")
+assert all(t in s153 for t in ("4.6.2", "金属层 1", "多晶硅", "接触层",
+     "扩散层", "阱塞", "例4.7", "0.83", "15%"))
+assert all(t in s154 for t in ("4.7", "伪 NMOS", "四个晶体管接触点", "有比", "#cmos-layout()"))
+assert "#let cmos-layout()" in geo and "#image(" not in geo
+assert all(t in geo for t in ("Gnd", 'V_(\"DD\")', "输入", "输出", "阱塞",
+    "多晶硅", "金属层1", "接触点"))
+assert m["pages"][152]["text_checked_against_scan"] is True
+assert m["pages"][153]["text_checked_against_scan"] is True
+assert not m["pages"][153]["figures_verified"]
 print("Chapter 4 scan-backed PDF147–156: equations4.14–4.21, examples4.6–4.8 OK")
