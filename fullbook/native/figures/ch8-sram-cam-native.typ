@@ -125,4 +125,85 @@
   else if n==25 or n==26 or n==27 {partition()}
   else {memory-array()}
 }
-#let figure9(n)=cam()
+#let cam-cell()=html.frame(block(width:388pt,height:148pt)[
+  #t(13pt,7pt,"WL")
+  #w(34pt,20pt,355pt,20pt)
+  #b(65pt,35pt,90pt,50pt,"SRAM 标签位")
+  #b(221pt,35pt,90pt,50pt,"反相标签位")
+  #w(155pt,59pt,221pt,59pt)
+  #b(84pt,94pt,61pt,27pt,"XOR支路1")
+  #b(231pt,94pt,61pt,27pt,"XOR支路2")
+  #w(111pt,85pt,111pt,94pt)
+  #w(262pt,85pt,262pt,94pt)
+  #w(22pt,131pt,362pt,131pt)
+  #w(114pt,121pt,114pt,131pt)
+  #w(262pt,121pt,262pt,131pt)
+  #t(284pt,137pt,"ML 匹配线")
+])
+#let cam-bank()=html.frame(block(width:388pt,height:154pt)[
+  #b(7pt,22pt,73pt,89pt,"CAM标签阵列")
+  #b(138pt,22pt,193pt,89pt,"SRAM数据阵列")
+  #w(80pt,65pt,138pt,65pt)
+  #b(86pt,41pt,47pt,37pt,"匹配使能")
+  #b(95pt,119pt,227pt,29pt,"CAM行地址 / SRAM列选择")
+  #t(8pt,6pt,"标签输入")
+  #t(336pt,62pt,"数据输出")
+])
+#let fpga-grid()=html.frame(block(width:388pt,height:176pt)[
+  #for k in range(5) [
+    #for m in range(8) [
+      #let x=19pt+m*42pt
+      #let y=14pt+k*29pt
+      #b(x,y,25pt,21pt,"PLB")
+    ]
+  ]
+  #t(6pt,162pt,"二维可编程逻辑块阵列 / 外围I/O")
+])
+#let routing()=html.frame(block(width:388pt,height:157pt)[
+  #for k in range(4) [
+    #let x=26pt+k*91pt
+    #b(x,14pt,53pt,40pt,"PLB")
+    #b(x,102pt,53pt,40pt,"PLB")
+    #w(x+28pt,54pt,x+28pt,102pt)
+  ]
+  #for k in range(3) [
+    #let y=65pt+k*13pt
+    #w(8pt,y,380pt,y)
+  ]
+  #t(17pt,150pt,"连接区 / 交换矩阵 / 纵横布线轨")
+])
+#let lut3()=html.frame(block(width:388pt,height:168pt)[
+  #b(11pt,12pt,83pt,139pt,"8位SRAM真值表")
+  #for k in range(7) [
+    #let x=98pt+k*37pt
+    #b(x,48pt,30pt,27pt,"MUX")
+    #if (k<6) { w(x+30pt,61pt,x+37pt,61pt) }
+  ]
+  #b(303pt,111pt,63pt,34pt,"D FF")
+  #w(291pt,61pt,335pt,61pt)
+  #w(335pt,61pt,335pt,111pt)
+  #t(107pt,13pt,"A/B/C")
+  #t(306pt,151pt,"OUT / CLK")
+])
+#let fpga-io()=html.frame(block(width:388pt,height:156pt)[
+  #t(8pt,30pt,"片内输入")
+  #b(94pt,18pt,67pt,34pt,"输入缓冲")
+  #b(184pt,18pt,67pt,34pt,"D触发器")
+  #b(271pt,18pt,81pt,34pt,"MUX")
+  #w(161pt,35pt,184pt,35pt)
+  #w(251pt,35pt,271pt,35pt)
+  #t(8pt,104pt,"片内输出")
+  #b(94pt,89pt,102pt,34pt,"三态输出缓冲")
+  #w(196pt,105pt,343pt,105pt)
+  #t(346pt,98pt,"引脚")
+  #t(108pt,137pt,"OE控制高阻态")
+])
+#let figure9(n)={
+  if n==3 or n==5 {cam-cell()}
+  else if n==4 {cam-bank()}
+  else if n==6 {fpga-grid()}
+  else if n==7 or n==10 {routing()}
+  else if n==8 or n==9 {lut3()}
+  else if n==11 {fpga-io()}
+  else {cam()}
+}
