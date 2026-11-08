@@ -509,7 +509,7 @@ def main():
         if not re.search(r"<body(?:\\s|>)", html, re.I) or len(html) < 600:
             raise RuntimeError(f"Export missing its source content: {dest}")
         if stem == "05-page-024":
-            missing = [word for word in ("图 1.3", "NAND", "NOR", "反相器") if word not in html]
+            missing = [word for word in ("图1.3", "NAND", "NOR", "反相器") if word not in html]
             if missing or html.lower().count("<table") < 4 or "<svg" not in html.lower():
                 raise RuntimeError(f"Source PDF24 gate figures lost in semantic HTML: missing={missing}; tables={html.lower().count('<table')}; svg={'<svg' in html.lower()}")
         if stem == "03-page-026":
