@@ -1,28 +1,32 @@
-// SOURCE PDF PAGE 439; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第439页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("420         数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 439 / printed page 420
+// BJT inverter VTC: source-checked B.5.1–B.5.4 equations.
+#set document(title:"附录B BJT反相器四个逻辑电平与式B.5.1—5.4 · PDF439")
+= 附录 B · 印刷第420页
+== B.5　电压传输特性（续）
 
-#text("图 B.5 电压传输特性\n1.，当晶体管在截止区的边缘时 Von等效于Vce ，也就是Vcc。对于给出的例子Vcc是 SV.\n因此，\nVou = Voc")
+图 B.5 的电压传输曲线保留了原书的三个工作区：截止、正向活性、饱和。对于上一页 $V_("CC")=5 " V"$ 的电阻负载 BJT 反相器：
 
-#text("然而，Von通常用Van = Vor 进行测量。\n2.，当晶体管在伯和区的边缘时Vor等效于Vcs ,也就是Verten。 在本例中Vor是 01 V。因此，\nVou = Vetta)")
++ 截止区对应高输出电平：$V_("OH")=V_("CC")=5 " V"$。
++ 饱和区对应低输出电平：$V_("OL")=V_("CE")("sat")=0.1 " V"$。
++ 刚导通时的输入低阈值：$V_("IL")=V_("BE")("on")=0.7 " V"$。
++ 刚进入饱和时的输入高阈值 $V_("IH")$ 可由基极与集电极电流联立求得。
 
-#text("通常用W = Voy i FIM\n3. Wu是刚好使昌体管开启的输入电压，在本例中Vr 是Vasos、给定的值为07V，因此、")
+饱和边缘的集电极电流：
 
-#text("Vir = Vation\n4 Vip AB RUE RA A AE AA SA HE Ce ER RAT, 1 = Jeos ，\n其中:\nVeo ~ Vee(a)")
+$ I_C("EOS") = (V_("CC")-V_("CE")("sat")) / R_C quad "(B.5.1)" $
 
-#text("nr                        (B51)")
+利用活性边缘的 $I_C=beta_F I_B$：
 
-#text("但是由于部体管也处于正向活性区的边缘，因此，\nTceos = Beleos)                            (B52)")
+$ I_C("EOS") = beta_F I_B("EOS") quad "(B.5.2)" $
 
-#text("其中，当输入在Vn时，\nV,")
+并且：
 
-#text("Tacos) = Vin 一  ra                      (B53)")
+$ I_B("EOS") = (V_("IH")-V_("BE")("sat")) / R_B quad "(B.5.3)" $
 
-#text("所以，通过式 ( B.5.2 ) 和式 ( B.5.1 ) 得出 Www的解是，")
+因此得到：
 
-#text("Ry Voc ~ VCaam\nVin = Vain) + 2      “\nRo Br")
+$ V_("IH") = V_("BE")("sat") + (R_B / R_C) (V_("CC") - V_("CE")("sat")) / beta_F quad "(B.5.4)" $
 
-#text("(B54)")
+从上式可见，增大 $R_B/R_C$ 会提高达到饱和所需的输入电压；$beta_F$ 越高，饱和所需输入越低。
+
+_本页保留了原书的四个关系式和数值定义；VTC曲线的斜率和断点几何仍待定量对照。_
