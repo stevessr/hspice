@@ -80,7 +80,7 @@
     #w(10pt,y,375pt,y)
     #for j in range(5) [
       #let x=31pt+j*64pt
-      #b(x,y-8pt,27pt,18pt,"M")
+      #b(x,y - 8pt,27pt,18pt,"M")
       #w(x+13pt,16pt,x+13pt,141pt)
     ]
   ]
@@ -93,7 +93,7 @@
     #w(x,19pt,x,152pt)
     #for j in range(4) [
       #let y=27pt+j*28pt
-      #b(x-13pt,y,30pt,20pt,"FG")
+      #b(x - 13pt,y,30pt,20pt,"FG")
     ]
   ]
   #t(15pt,163pt,"选通管、浮栅单元与行译码")
