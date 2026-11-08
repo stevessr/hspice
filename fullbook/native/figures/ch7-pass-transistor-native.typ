@@ -50,7 +50,7 @@
   #cap(352pt,84pt,label:"1000 Cinv")
   #cap(15pt,79pt,label:"Cinv")
   #gnd(20pt,88pt)
-  #place(top+left,dx:7pt,dy:11pt,text(size:8pt)[输入]))
+  #place(top+left,dx:7pt,dy:11pt,text(size:8pt)[输入])
 ])
 #let fig-p613()=html.frame(block(width:390pt,height:199pt)[
   #wire(4pt,94pt,35pt,94pt)
@@ -72,16 +72,16 @@
   #cap(364pt,118pt,label:"8000 Cinv")
   #cap(207pt,114pt,label:"500 Cinv")
   #cap(9pt,120pt,label:"Cinv")
-  #place(top+left,dx:3pt,dy:36pt,text(size:8pt)[输入]))
+  #place(top+left,dx:3pt,dy:36pt,text(size:8pt)[输入])
 ])
 #let pass-panel(kind:"n",state:"on",vin:"0 V",vout:"0 V")=html.frame(block(width:187pt,height:97pt)[
     #pass(41pt,45pt,p:kind=="p")
     #wire(96pt,45pt,124pt,45pt)
     #cap(113pt,65pt,label:"CL")
     #gnd(119pt,78pt)
-    #place(top+left,dx:5pt,dy:31pt,text(size:7pt)[#vin]))
-    #place(top+left,dx:121pt,dy:29pt,text(size:7pt)[#vout]))
-    #place(top+left,dx:52pt,dy:4pt,text(size:7pt)[#if state=="off" [截止，高阻] else [#if kind=="p" [$G=0$] else [$G=V_("DD")$]]]))
+    #place(top+left,dx:5pt,dy:31pt,text(size:7pt)[#vin])
+    #place(top+left,dx:121pt,dy:29pt,text(size:7pt)[#vout])
+    #place(top+left,dx:52pt,dy:4pt,text(size:7pt)[#if state=="off" [截止，高阻] else [#if kind=="p" [$G=0$] else [$G=V_("DD")$]]])
   ])
 #let fig71()=grid(columns:(1fr,1fr),column-gutter:8pt,row-gutter:5pt,
   [#pass-panel(kind:"n",vin:"0 V",vout:"0 V")],
@@ -95,7 +95,7 @@
       #pass(3pt+i * 24pt,49pt,p:p)
       #wire(31pt+i * 24pt,27pt+i * 5pt,31pt+i * 24pt,34pt+i * 5pt)
     ]
-    #place(top+left,dx:5pt,dy:5pt,text(size:7pt)[#if p [$V_("out")=abs(V_("TP"))$] else [$V_("out")=V_("DD")-V_("TN")$]]))
+    #place(top+left,dx:5pt,dy:5pt,text(size:7pt)[#if p [$V_("out")=abs(V_("TP"))$] else [$V_("out")=V_("DD")-V_("TN")$]])
     #cap(75pt,69pt,label:"CL")
   ])
 #let fig72()=grid(columns:(1fr,1fr,1fr),column-gutter:8pt,
@@ -111,9 +111,9 @@
   #cap(135pt,39pt,label:"Cf")
   #wire(135pt,44pt,185pt,44pt)
   #wire(185pt,44pt,185pt,72pt)
-  #place(top+left,dx:10pt,dy:61pt,text(size:8pt)[$V_("in")$]))
-  #place(top+left,dx:203pt,dy:62pt,text(size:8pt)[$V_("out")$]))
-  #place(top+left,dx:94pt,dy:9pt,text(size:8pt)[G: VDD → 0]))
+  #place(top+left,dx:10pt,dy:61pt,text(size:8pt)[$V_("in")$])
+  #place(top+left,dx:203pt,dy:62pt,text(size:8pt)[$V_("out")$])
+  #place(top+left,dx:94pt,dy:9pt,text(size:8pt)[G: VDD → 0])
 ])
 #let divider-panel(sign:"+")=html.frame(block(width:181pt,height:120pt)[
   #wire(53pt,13pt,53pt,27pt)
@@ -123,9 +123,9 @@
   #cap(47pt,68pt,label:"Cgnd")
   #wire(53pt,74pt,53pt,91pt)
   #gnd(53pt,91pt)
-  #place(top+left,dx:64pt,dy:10pt,text(size:7pt)[$V_1$]))
-  #place(top+left,dx:64pt,dy:48pt,text(size:7pt)[$V_2$]))
-  #place(top+left,dx:90pt,dy:77pt,text(size:7pt)[#if sign=="+" [正馈通] else [负馈通]]))
+  #place(top+left,dx:64pt,dy:10pt,text(size:7pt)[$V_1$])
+  #place(top+left,dx:64pt,dy:48pt,text(size:7pt)[$V_2$])
+  #place(top+left,dx:90pt,dy:77pt,text(size:7pt)[#if sign=="+" [正馈通] else [负馈通]])
 ])
 #let fig75()=grid(columns:(1fr,1fr),column-gutter:7pt,
   [#divider-panel(sign:"+")],[#divider-panel(sign:"-")])
@@ -137,9 +137,9 @@
   #cap(129pt,71pt,label:"C2")
   #gnd(18pt,84pt)
   #gnd(135pt,84pt)
-  #place(top+left,dx:19pt,dy:13pt,text(size:8pt)[#if after [$V^*$] else [$V_1$]]))
-  #place(top+left,dx:123pt,dy:13pt,text(size:8pt)[#if after [$V^*$] else [$V_2$]]))
-  #place(top+left,dx:47pt,dy:101pt,text(size:7pt)[#if after [（b）接通后] else [（a）接通前]]))
+  #place(top+left,dx:19pt,dy:13pt,text(size:8pt)[#if after [$V^*$] else [$V_1$]])
+  #place(top+left,dx:123pt,dy:13pt,text(size:8pt)[#if after [$V^*$] else [$V_2$]])
+  #place(top+left,dx:47pt,dy:101pt,text(size:7pt)[#if after [（b）接通后] else [（a）接通前]])
 ])
 #let fig76()=grid(columns:(1fr,1fr),column-gutter:6pt,
   [#charge-panel()], [#charge-panel(after:true)])
