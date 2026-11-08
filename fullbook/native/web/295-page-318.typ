@@ -5,11 +5,11 @@
 #align(center)[#text(size:8pt,weight:"bold")[299　数字集成电路分析与设计 · 第8章]]
 #line(length:100%,stroke:.55pt)
 
-## 8.6　小结
+== 8.6　小结
 
 第8章应用前面逻辑门、传输管、延迟、功耗与噪声容限知识，讨论SRAM存储器设计。主要内容包括行列译码、6T存储单元、读写晶体管尺寸、字线和位线电容、列预充、写驱动、灵敏放大器、复制时序和阵列分块。规则阵列使存储器适合用CAD工具自动生成，称为存储器编译器。
 
-## 8.7　参考文献
+== 8.7　参考文献
 
 1. B. Prince, *Emerging Memories: Technologies and Trends*, Kluwer, 2002.
 2. K. Itoh, *VLSI Memory Chip Design*, Springer-Verlag, 2001.
@@ -19,7 +19,7 @@
 6. J. P. Uyemura, *CMOS Logic Circuit Design*, Kluwer, 1999.
 7. B. Razavi, *Design of Analog CMOS Integrated Circuits*, McGraw-Hill, 2001.
 
-## 8.8　习题
+== 8.8　习题
 
 *P8.1*　比较ROM、SRAM、DRAM、EPROM、EEPROM和Flash的存储结构与适用应用。
 
