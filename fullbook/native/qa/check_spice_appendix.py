@@ -87,6 +87,26 @@ for page_number, names in DRAWINGS.items():
         assert f"#let {name}(" in figure_source, (page_number, name)
         assert f"#{name}()" in page_source, (page_number, name)
 assert len(DRAWINGS) == 9
+# PDF424 Table A.2 must retain both printed forms (unit and E-notation),
+# and source figures A.3–A.5 must be circuits, not unrelated placeholder boxes.
+table_a2=(WEB/"401-page-424.typ").read_text(encoding="utf-8")
+for token in ("4.2 GHz", "4.2E9", ".2 Meg", ".2 E6", "27 kohms",
+              "273 mA", ".02 us", "4 ns", "95 pF", "3 fF", "2E-16P"):
+    assert token in table_a2, ("A.2", token)
+for factor, suffix in (("10^9","G"),("10^6","Meg"),("10^3","K"),
+                       ("10^(-3)","M"),("10^(-6)","U"),("10^(-9)","N"),
+                       ("10^(-12)","P"),("10^(-15)","F")):
+    assert factor in table_a2 and suffix in table_a2
+resistor=figure_source.split("#let a3-resistor()",1)[1].split("#let a4-mos()",1)[0]
+mos=figure_source.split("#let a4-mos()",1)[1].split("#let a5-sources()",1)[0]
+sources=figure_source.split("#let a5-sources()",1)[1].split("#let a6-pulse()",1)[0]
+assert resistor.count("#s(")>=7 and "#r(" not in resistor, "A.3 zigzag, not rectangle"
+assert "0/S" not in mos and "0/B" not in mos, "A.4 source/body must use distinct ground symbols"
+assert mos.count("#s(")>=10 and "3" in mos and "2" in mos
+assert "15 V" in sources and "12 A" in sources and "polygon" in sources
+s425=(WEB/"402-page-425.typ").read_text(encoding="utf-8")
+for token in ("0.2", "0.4", "Icc", "源区与漏区", "12 A"):
+    assert token in s425, ("PDF425", token)
 print("Appendix A native diagram integration: 9 scanned pages, 12 drawing functions.")
 
 

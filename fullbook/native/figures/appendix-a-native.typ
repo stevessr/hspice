@@ -67,49 +67,71 @@
   #s(232pt, 132pt, 12pt, 0pt)
 ])
 
-#let a3-resistor() = html.frame(block(width: 338pt, height: 66pt)[
-  #t(8pt, 2pt, [图 A.3　电阻元件：R5 5 0 10k])
-  #s(70pt, 39pt, 35pt, 0pt)
-  #r(105pt, 30pt, 53pt, 18pt)
-  #t(112pt, 32pt, [R5 10 kΩ])
-  #s(158pt, 39pt, 42pt, 0pt)
-  #t(62pt, 43pt, [5])
-  #t(201pt, 43pt, [0])
+// Source PDF424 Figure A.3: the printed resistor is a zigzag (not a box).
+#let a3-resistor() = html.frame(block(width:338pt,height:69pt)[
+  #t(7pt, 3pt, [图 A.3　一个电阻被动元件])
+  #s(61pt, 40pt, 51pt, 0pt)
+  #s(112pt, 40pt, 7pt, -8pt, w:1.1pt)
+  #s(119pt, 32pt, 12pt, 16pt, w:1.1pt)
+  #s(131pt, 48pt, 12pt, -16pt, w:1.1pt)
+  #s(143pt, 32pt, 12pt, 16pt, w:1.1pt)
+  #s(155pt, 48pt, 12pt, -16pt, w:1.1pt)
+  #s(167pt, 32pt, 12pt, 8pt, w:1.1pt)
+  #s(179pt, 40pt, 49pt, 0pt)
+  #t(47pt, 33pt, [5])
+  #t(233pt, 33pt, [0])
+  #t(139pt, 17pt, [R5])
+  #t(138pt, 26pt, [10k])
 ])
 
-#let a4-mos() = html.frame(block(width: 338pt, height: 89pt)[
-  #t(7pt, 2pt, [图 A.4　MOSFET 的四端与栅极控制])
-  #s(136pt, 14pt, 0pt, 21pt)
-  #s(136pt, 35pt, 0pt, 36pt, w: 1.2pt)
-  #s(136pt, 71pt, 0pt, 11pt)
-  #s(125pt, 36pt, 0pt, 33pt, w: 1.5pt)
-  #s(85pt, 53pt, 40pt, 0pt)
-  #s(136pt, 53pt, 43pt, 0pt)
-  #t(132pt, 9pt, [2/D])
-  #t(132pt, 78pt, [0/S])
-  #t(72pt, 43pt, [3/G])
-  #t(186pt, 43pt, [0/B])
+// Source PDF424 Figure A.4: 3=gate, 2=drain, 0=source, 0=body.
+// Both body and source are separately tied to ground in the original drawing.
+#let a4-mos() = html.frame(block(width:338pt,height:110pt)[
+  #t(7pt, 3pt, [图 A.4　一个MOS晶体管])
+  #s(133pt, 13pt, 0pt, 24pt)
+  #t(127pt, 6pt, [2])
+  #s(133pt, 37pt, 0pt, 43pt, w:1.2pt)
+  #s(125pt, 37pt, 0pt, 43pt, w:1.1pt)
+  #s(83pt, 59pt, 42pt, 0pt)
+  #t(74pt, 54pt, [3])
+  #s(133pt, 80pt, 0pt, 12pt)
+  #s(121pt, 92pt, 24pt, 0pt)
+  #s(126pt, 96pt, 14pt, 0pt)
+  #s(131pt, 100pt, 4pt, 0pt)
+  #t(145pt, 91pt, [0])
+  // Body contact and its own grounded connection.
+  #s(133pt, 59pt, 54pt, 0pt)
+  #s(187pt, 59pt, 0pt, 33pt)
+  #s(175pt, 92pt, 24pt, 0pt)
+  #s(180pt, 96pt, 14pt, 0pt)
+  #s(185pt, 100pt, 4pt, 0pt)
+  #t(199pt, 91pt, [0])
 ])
-
-#let a5-sources() = html.frame(block(width: 338pt, height: 103pt)[
-  #t(8pt, 2pt, [图 A.5　独立电压源和电流源])
-  #for x in (90pt, 235pt) [
-    #s(x, 18pt, 0pt, 23pt)
-    #place(top + left, dx:x,dy:55pt,circle(radius:13pt,stroke:1pt,fill:white))
-    #s(x, 68pt, 0pt, 19pt)
+// Source PDF425 Figure A.5: independent voltage and current source symbols,
+// with separate terminal numbers and polarity/direction labels.
+#let a5-sources() = html.frame(block(width:338pt,height:110pt)[
+  #t(9pt, 3pt, [图 A.5　电压源和电流源])
+  #for x in (85pt, 225pt) [
+    #s(x, 18pt, 0pt, 25pt)
+    #place(top + left, dx:x,dy:56pt,circle(radius:13pt,stroke:1pt,fill:white))
+    #s(x, 69pt, 0pt, 22pt)
   ]
-  #t(85pt, 12pt, [5])
-  #t(229pt, 12pt, [2])
-  #t(85pt, 89pt, [0])
-  #t(229pt, 89pt, [3])
-  #t(86pt, 47pt, [V])
-  #s(235pt, 60pt, 0pt, -11pt)
-  #place(top + left,dx:232pt,dy:48pt,
-    polygon((0pt, 4pt),(3pt, 0pt),(6pt,4pt),fill:black))
-  #t(105pt, 44pt, [$15 " V"$])
-  #t(251pt, 44pt, [$I_("cc")$])
+  #t(80pt, 11pt, [5])
+  #t(220pt, 11pt, [2])
+  #t(80pt, 93pt, [0])
+  #t(220pt, 93pt, [3])
+  #t(81pt, 48pt, [V])
+  #t(101pt, 40pt, [$+$])
+  #t(101pt, 61pt, [$-$])
+  #t(108pt, 46pt, [$V_("supply")$])
+  #t(108pt, 62pt, [15 V])
+  // Upward arrow matches the source drawing, independent of parameter Icc.
+  #s(225pt, 65pt, 0pt, -20pt)
+  #place(top + left,dx:222pt,dy:44pt,
+    polygon((0pt,5pt),(3pt,0pt),(6pt,5pt),fill:black))
+  #t(248pt, 46pt, [$I_("supply")$])
+  #t(248pt, 61pt, [12 A])
 ])
-
 #let a6-pulse() = html.frame(block(width: 338pt, height: 137pt)[
   #t(6pt, 2pt, [图 A.6　PULSE 与 PWL 的一周期波形])
   #s(36pt, 112pt, 291pt, 0pt)
