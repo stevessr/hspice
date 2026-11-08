@@ -45,7 +45,9 @@ def main() -> None:
     args.out.mkdir(parents=True, exist_ok=True)
     pdfhash = hashlib.sha256(args.pdf.read_bytes()).hexdigest()
     rows = []
+    source_page_count = 0
     with fitz.open(args.pdf) as doc, zipfile.ZipFile(args.svg_zip) as archive:
+        source_page_count = len(doc)
         if args.end > len(doc):
             ap.error(f"Source PDF has only {len(doc)} pages")
         names = archive.namelist()
@@ -93,7 +95,7 @@ def main() -> None:
                              strict_page_accepted=False))
     result = {
         "source_pdf_sha256": pdfhash,
-        "source_page_count": len(doc),
+        "source_page_count": source_page_count,
         "scope": [args.start, args.end],
         "scale": args.scale,
         "ink_threshold": args.ink_threshold,
