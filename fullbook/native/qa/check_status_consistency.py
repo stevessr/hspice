@@ -27,10 +27,10 @@ for i, (a, b) in enumerate(zip(source["pages"], fidelity["pages"]), 1):
         assert a["status"] == "verified", i
     else:
         assert a["status"] != "verified", i
-for n in range(20, 261):
+for n in range(20, 269):
     stem = f"{n-23:02d}-page-{n:03d}" if n >= 26 else f"{n-19:02d}-page-{n:03d}"
     assert (root / "web" / f"{stem}.typ").is_file(), n
     assert (root / "web" / f"{stem}-layout.typ").is_file(), n
     assert source["pages"][n-1]["status"] == "partially-transcribed", n
 assert fidelity["full_pages_accepted"] == 0, "Full-page acceptance must be evidence-backed"
-print("Source progress and fidelity dashboard agree: scanned PDF pages 20–260 edited; strict 0/445 accepted.")
+print("Source progress and fidelity dashboard agree: scanned PDF pages 20–268 edited; strict 0/445 accepted.")
