@@ -7858,7 +7858,7 @@
     },
     {
       "pdf_page": 357,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7871,16 +7871,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全部原书文字、数学、图注未进行独立逐字复核",
+        "图10.4—10.10的可编辑RC几何、源图坐标、网络分支连接待精确比对",
+        "排版页眉、页脚和视觉几何叠图对照未完成"
       ],
-      "notes": "PDF357: unverified machine-OCR Typst source",
+      "notes": "PDF357: Elmore RC source-checked partial native Typst, strict 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 358,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7893,16 +7893,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全部原书文字、数学、图注未进行独立逐字复核",
+        "图10.4—10.10的可编辑RC几何、源图坐标、网络分支连接待精确比对",
+        "排版页眉、页脚和视觉几何叠图对照未完成"
       ],
-      "notes": "PDF358: unverified machine-OCR Typst source",
+      "notes": "PDF358: Elmore RC source-checked partial native Typst, strict 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 359,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7915,16 +7915,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全部原书文字、数学、图注未进行独立逐字复核",
+        "图10.4—10.10的可编辑RC几何、源图坐标、网络分支连接待精确比对",
+        "排版页眉、页脚和视觉几何叠图对照未完成"
       ],
-      "notes": "PDF359: unverified machine-OCR Typst source",
+      "notes": "PDF359: Elmore RC source-checked partial native Typst, strict 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 360,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7937,16 +7937,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全部原书文字、数学、图注未进行独立逐字复核",
+        "图10.4—10.10的可编辑RC几何、源图坐标、网络分支连接待精确比对",
+        "排版页眉、页脚和视觉几何叠图对照未完成"
       ],
-      "notes": "PDF360: unverified machine-OCR Typst source",
+      "notes": "PDF360: Elmore RC source-checked partial native Typst, strict 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 361,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7959,16 +7959,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全部原书文字、数学、图注未进行独立逐字复核",
+        "图10.4—10.10的可编辑RC几何、源图坐标、网络分支连接待精确比对",
+        "排版页眉、页脚和视觉几何叠图对照未完成"
       ],
-      "notes": "PDF361: unverified machine-OCR Typst source",
+      "notes": "PDF361: Elmore RC source-checked partial native Typst, strict 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 362,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -7981,16 +7981,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全部原书文字、数学、图注未进行独立逐字复核",
+        "图10.4—10.10的可编辑RC几何、源图坐标、网络分支连接待精确比对",
+        "排版页眉、页脚和视觉几何叠图对照未完成"
       ],
-      "notes": "PDF362: unverified machine-OCR Typst source",
+      "notes": "PDF362: Elmore RC source-checked partial native Typst, strict 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 363,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8003,16 +8003,16 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全部原书文字、数学、图注未进行独立逐字复核",
+        "图10.4—10.10的可编辑RC几何、源图坐标、网络分支连接待精确比对",
+        "排版页眉、页脚和视觉几何叠图对照未完成"
       ],
-      "notes": "PDF363: unverified machine-OCR Typst source",
+      "notes": "PDF363: Elmore RC source-checked partial native Typst, strict 1:1 unaccepted",
       "page_source_verified": false
     },
     {
       "pdf_page": 364,
-      "editorial_state": "draft-transcribed",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -8025,11 +8025,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "全部原书文字、数学、图注未进行独立逐字复核",
+        "图10.4—10.10的可编辑RC几何、源图坐标、网络分支连接待精确比对",
+        "排版页眉、页脚和视觉几何叠图对照未完成"
       ],
-      "notes": "PDF364: unverified machine-OCR Typst source",
+      "notes": "PDF364: Elmore RC source-checked partial native Typst, strict 1:1 unaccepted",
       "page_source_verified": false
     },
     {

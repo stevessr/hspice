@@ -1,30 +1,31 @@
-// SOURCE PDF PAGE 364; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第364页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第10章 连线设计         345")
+// SOURCE PDF PAGE 364. Source scan-assisted Typst native editorial draft.
+// All circuit diagrams, text positions and equations still require strict 1:1 acceptance.
+#import "../figures/ch10-rc-elmore-native.typ": figure10more,fig-example102,fig-example101
+#set document(title:"第10章·连线RC与艾蒙延迟·PDF364")
+#align(center)[#text(size:8pt,weight:"bold")[345　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("效果。找出使整体延迟最小化的最优化等尺寸缓冲器数目的问题称为缓冲器插入问题\n考虑一条没有任何缓冲器驱动的长度为了上的导线，其延迟是不可接受的。 如果每单元长度电\n阻和电容是Re和Cs，导线的总电阻和总电容为:")
+== 10.3　超长导线的缓冲器插入（续）
 
-#text("pL   L\napt l pt iggy\nRae = py ~ Rasy = Ro")
+考虑没有缓冲器、长度为 $L$ 的均匀导线，单位长度电阻与电容分别为 $R_("int")$ 和 $C_("int")$：
 
-#text("Co二 CoL\n为了减小延迟 ,我们党试插入一定数量的缓冲器来产生最小的延迟。设 N 为这种缓冲器的数目( 包\n括第一个缓冲器 )，L/N 为缓冲器之间相应的导线长度，如图 10.10 (a) 所示- 每-一段由一个驱动\n导线阻抗和下游门负载的缓冲器组成 如图 10.10 Cb) 所示， nm模型可以用于每段连线")
+#align(center)[$R_("wire") = R_("int") L = R_("sq") L/W$]
+#align(center)[$C_("wire") = C_("int") L$]
 
-#text("上    LN        LN       LN")
+为了减少延迟，可以插入 $N$ 级缓冲器，把导线均匀划分为长度约为 $L/N$ 的若干段。
 
-#text("i")
+#figure10more(10)
+#align(center)[*图10.10　超长导线的缓冲器插入与单段等效RC模型*]
 
-#text("(2) NOS LAT Nana")
+假设单位尺寸1X反相器的输出和输入电容与晶体管宽度成正比。令PMOS/NMOS的尺寸比为 $beta$，输出与输入电容分别定义为：
 
-#text("Pgh\nat “Gold,\n六 WITS\n(aot")
+#align(center)[$C_("out")=C_f(1+beta)$]
+#align(center)[$C_("in")=C_g(1+beta)$]
 
-#text("a  Rabin")
+对于尺寸放大 $M$ 倍的缓冲器，导通电阻约变为 $R_("eqn")/M$，输入与输出电容放大为原来的 $M$ 倍：
 
-#text("CyMi1 +B) Gok Gk  Co MO +B)")
+#align(center)[$R_("eff")=R_("eqn")/M$]
+#align(center)[$C_("out")=C_f(1+beta) M$]
+#align(center)[$C_("in")=C_g(1+beta) M$]
 
-#text("MOOT IS Wit  ,\nCe Race")
-
-#text("图 10.10 超长导线的缓冲器搬人\n假设最小缓冲器的尺十是 1X，相应的输入/输出电容如下;\nCou CdqWI+有)= C1 + B) (单位为人)\nCn = C(I + B) = Coll + B) (iL HF)\n其中,有是 PMOS 45 NMOS 器件的尺寸之比.Gy的值是Cyr x W,其中 WR IX 反相器中的 NMOS\n器件尺寸。类似地，Cc是Cr x W。\nBSE M 为在缓冲加插入问题中优化的缓冲器尺寸- 由此,对一个比 1X 缓冲器大 M 借的缓\n冲器有:\nReq = Rey/ Mt\nCoun = CgW(1 + B)M = C1 + B)M\nGo = GWO + B)M = Call + B)M")
-
-#text("在图 10.10 (e ) 中，图解说明了在计算延迟时用于每级的 RC 模型。 使用艾壹延迟，每段的延迟\n给出如下")
+图10.10(c)的π型模型将一段导线电容按两端各半分配，同时包括缓冲器输入电容和自电容。使用艾蒙延迟可推导每级延迟，并进一步优化缓冲器级数与尺寸。
