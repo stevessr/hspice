@@ -60,8 +60,8 @@
   #for i in range(2) [
     #let y=32pt+i*69pt
     #w(8pt,y,380pt,y)
-    #t(9pt,y-16pt,("D1","D2").at(i))
-    #b(160pt,y-16pt,70pt,34pt,"灵敏放大器")
+    #t(9pt,y - 16pt,("D1","D2").at(i))
+    #b(160pt,y - 16pt,70pt,34pt,"灵敏放大器")
     #for k in range(2) [
       #let x=40pt+k*75pt
       #b(x,y+14pt,43pt,21pt,"1T")
@@ -121,7 +121,7 @@
       #w(x+5pt,y,x+177pt,y)
       #for j in range(3) [
         #let xx=x+35pt+j*54pt
-        #b(xx,y-9pt,27pt,19pt,"M")
+        #b(xx,y - 9pt,27pt,19pt,"M")
       ]
     ]
     #t(x+38pt,141pt,"WL / 位线阵列")
