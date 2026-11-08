@@ -76,6 +76,7 @@ jobs:
           python3 fullbook/native/qa/check_ch7_pass10.py
           python3 fullbook/native/qa/check_ch7_pass11.py
           python3 fullbook/native/qa/check_ch7_pass12.py
+          python3 fullbook/native/qa/check_ch8_pass13.py
           python3 fullbook/native/qa/check_ch7_visual_pass10.py
           for source in fullbook/native/web/*-page-*-layout.typ; do
             stem="$(basename "${source%-layout.typ}")"
@@ -84,11 +85,11 @@ jobs:
             test -s "$dest"
             grep -q 'viewBox="0 0 506.8346 729.6"' "$dest"
           done
-          test "$(find /tmp/source-pages -type f -name '*.svg' | wc -l)" -eq 273
+          test "$(find /tmp/source-pages -type f -name '*.svg' | wc -l)" -eq 305
 
       - name: Publish visual audit artifact
         uses: actions/upload-artifact@v4
         with:
-          name: typst-native-pages-020-292-svg
+          name: typst-native-pages-020-324-svg
           path: /tmp/source-pages/
           if-no-files-found: error
