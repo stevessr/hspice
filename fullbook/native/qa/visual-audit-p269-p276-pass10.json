@@ -1,0 +1,156 @@
+{
+  "schema": "native-typst-source-vs-svg-visual-audit-pass10",
+  "source_pdf_pages": 445,
+  "scope": [
+    269,
+    276
+  ],
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "svg_baseline_run_id": 42436823770,
+  "svg_refined_run_id": 42437319381,
+  "comparison": {
+    "scale": 1.25,
+    "grayscale_threshold": 190,
+    "position_tolerance_pixels": 2,
+    "metric": "symmetric ink F1 from precision/recall; not semantic or electrical topology certification"
+  },
+  "baseline_mean_f1": 0.24151,
+  "refined_mean_f1": 0.27377,
+  "strict_full_page_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 269,
+      "baseline_f1": 0.2052,
+      "refined_f1": 0.22209,
+      "delta_f1": 0.01689,
+      "accepted": false,
+      "full_text_verified": false,
+      "all_equations_verified": false,
+      "all_electrical_nodes_verified": false,
+      "layout_verified": false,
+      "unresolved": [
+        "scan-by-scan punctuation and formulas signoff",
+        "native MOS/TG signal topology and clock polarity compared to original",
+        "all source text block placement/captions/footnotes and exact font geometry"
+      ]
+    },
+    {
+      "pdf_page": 270,
+      "baseline_f1": 0.20681,
+      "refined_f1": 0.24005,
+      "delta_f1": 0.03324,
+      "accepted": false,
+      "full_text_verified": false,
+      "all_equations_verified": false,
+      "all_electrical_nodes_verified": false,
+      "layout_verified": false,
+      "unresolved": [
+        "scan-by-scan punctuation and formulas signoff",
+        "native MOS/TG signal topology and clock polarity compared to original",
+        "all source text block placement/captions/footnotes and exact font geometry"
+      ]
+    },
+    {
+      "pdf_page": 271,
+      "baseline_f1": 0.25371,
+      "refined_f1": 0.25371,
+      "delta_f1": 0,
+      "accepted": false,
+      "full_text_verified": false,
+      "all_equations_verified": false,
+      "all_electrical_nodes_verified": false,
+      "layout_verified": false,
+      "unresolved": [
+        "scan-by-scan punctuation and formulas signoff",
+        "native MOS/TG signal topology and clock polarity compared to original",
+        "all source text block placement/captions/footnotes and exact font geometry"
+      ]
+    },
+    {
+      "pdf_page": 272,
+      "baseline_f1": 0.17726,
+      "refined_f1": 0.38515,
+      "delta_f1": 0.20789,
+      "accepted": false,
+      "full_text_verified": false,
+      "all_equations_verified": false,
+      "all_electrical_nodes_verified": false,
+      "layout_verified": false,
+      "unresolved": [
+        "scan-by-scan punctuation and formulas signoff",
+        "native MOS/TG signal topology and clock polarity compared to original",
+        "all source text block placement/captions/footnotes and exact font geometry"
+      ]
+    },
+    {
+      "pdf_page": 273,
+      "baseline_f1": 0.25635,
+      "refined_f1": 0.25635,
+      "delta_f1": 0,
+      "accepted": false,
+      "full_text_verified": false,
+      "all_equations_verified": false,
+      "all_electrical_nodes_verified": false,
+      "layout_verified": false,
+      "unresolved": [
+        "scan-by-scan punctuation and formulas signoff",
+        "native MOS/TG signal topology and clock polarity compared to original",
+        "all source text block placement/captions/footnotes and exact font geometry"
+      ]
+    },
+    {
+      "pdf_page": 274,
+      "baseline_f1": 0.184,
+      "refined_f1": 0.184,
+      "delta_f1": 0,
+      "accepted": false,
+      "full_text_verified": false,
+      "all_equations_verified": false,
+      "all_electrical_nodes_verified": false,
+      "layout_verified": false,
+      "unresolved": [
+        "scan-by-scan punctuation and formulas signoff",
+        "native MOS/TG signal topology and clock polarity compared to original",
+        "all source text block placement/captions/footnotes and exact font geometry"
+      ]
+    },
+    {
+      "pdf_page": 275,
+      "baseline_f1": 0.37883,
+      "refined_f1": 0.37883,
+      "delta_f1": 0,
+      "accepted": false,
+      "full_text_verified": false,
+      "all_equations_verified": false,
+      "all_electrical_nodes_verified": false,
+      "layout_verified": false,
+      "unresolved": [
+        "scan-by-scan punctuation and formulas signoff",
+        "native MOS/TG signal topology and clock polarity compared to original",
+        "all source text block placement/captions/footnotes and exact font geometry"
+      ]
+    },
+    {
+      "pdf_page": 276,
+      "baseline_f1": 0.26995,
+      "refined_f1": 0.26995,
+      "delta_f1": 0,
+      "accepted": false,
+      "full_text_verified": false,
+      "all_equations_verified": false,
+      "all_electrical_nodes_verified": false,
+      "layout_verified": false,
+      "unresolved": [
+        "scan-by-scan punctuation and formulas signoff",
+        "native MOS/TG signal topology and clock polarity compared to original",
+        "all source text block placement/captions/footnotes and exact font geometry"
+      ]
+    }
+  ],
+  "observations": [
+    "PDF269 leading and figure position moved toward source scan",
+    "PDF270 MUX1/MUX2 native transmission-gate branches added alongside Elmore RC ladder",
+    "PDF272 two distinct Example7.5 transistor networks restored; Figure7.21 restored to source's three subfigures",
+    "The optical metric diagnoses missing ink and alignment; cannot establish correct charge-flow topology or word-level fidelity"
+  ]
+}
