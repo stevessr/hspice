@@ -8927,11 +8927,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "电路分支/反相端与原书图线尚未逐点匹配",
+        "原书正文及脚注尚需双人逐字校对",
+        "原始扫描与SVG未完成重叠版式验收"
       ],
-      "notes": "PDF405: unverified machine-OCR Typst source",
+      "notes": "PDF405: scan-guided native editable Chapter11 clock distribution; no 1:1 source-page acceptance",
       "page_source_verified": false
     },
     {
@@ -8949,11 +8949,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "电路分支/反相端与原书图线尚未逐点匹配",
+        "原书正文及脚注尚需双人逐字校对",
+        "原始扫描与SVG未完成重叠版式验收"
       ],
-      "notes": "PDF406: unverified machine-OCR Typst source",
+      "notes": "PDF406: scan-guided native editable Chapter11 clock distribution; no 1:1 source-page acceptance",
       "page_source_verified": false
     },
     {
