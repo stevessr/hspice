@@ -12,7 +12,7 @@ for n in range(20,26):
     assert "#image(" not in source
     assert f'#include "{name}.typ"' in wrapper
     assert "506.8346pt" in wrapper and "729.6pt" in wrapper
-assert "overline(A+B)" in (w/"06-page-025.typ").read_text(encoding="utf-8")
+assert "overline(a+b)" in (w/"06-page-025.typ").read_text(encoding="utf-8")
 assert "NAND" in (w/"05-page-024.typ").read_text(encoding="utf-8")
 builder=(w/"build_html.py").read_text(encoding="utf-8")
 for n in range(20,26):
