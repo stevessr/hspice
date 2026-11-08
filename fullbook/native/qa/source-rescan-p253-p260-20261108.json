@@ -1,0 +1,165 @@
+{
+  "schema": "source-scan-pass10-textual-reflow-v1",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    253,
+    260
+  ],
+  "raster_scale": 1.65,
+  "rasterization": "PyMuPDF original PDF 1.65x RGB; source text manually compared against visible original scans with historical OCR as a cross-check",
+  "repository_scope_after_reflow": "PDF20–268, 249 native source pages",
+  "strict_accepted_full_pages": 0,
+  "pages": [
+    {
+      "pdf_page": 253,
+      "source_render_sha256": "59a430c0a5fd3e08e458e8dc44dad61353aa23e8cea2519368eaf2a8f1e57efd",
+      "source_semantic_landmarks_checked": true,
+      "source_full_character_check": false,
+      "all_figure_wires_verified": false,
+      "geometry_1_to_1_verified": false,
+      "human_signature": false,
+      "accepted": false,
+      "unresolved": [
+        "P6.12/P6.13门输入与旁路扇出尚未逐线校准",
+        "P6.16源排版与字号差异"
+      ]
+    },
+    {
+      "pdf_page": 254,
+      "source_render_sha256": "20c66e176c12ce01cf76f8a7eba22b9b1498e56ab55855f291372d4a94ddf47b",
+      "source_semantic_landmarks_checked": true,
+      "source_full_character_check": false,
+      "all_figure_wires_verified": false,
+      "geometry_1_to_1_verified": false,
+      "human_signature": false,
+      "accepted": false,
+      "unresolved": [
+        "本章提要的灰底纹理与原文排印细节不同",
+        "章节标题及正文逐行断点未验收"
+      ]
+    },
+    {
+      "pdf_page": 255,
+      "source_render_sha256": "906b8fa78040f9ec5590b23726c7b5866956461b514ee8db2d1736155fa855ab",
+      "source_semantic_landmarks_checked": true,
+      "source_full_character_check": false,
+      "all_figure_wires_verified": false,
+      "geometry_1_to_1_verified": false,
+      "human_signature": false,
+      "accepted": false,
+      "unresolved": [
+        "图7.1六个NMOS/PMOS传输情况的控制极性及S/D画法须逐图复核",
+        "原图字高与公式下标未校准"
+      ]
+    },
+    {
+      "pdf_page": 256,
+      "source_render_sha256": "7657e7621cb268b79d24f17914609b93cd4b5116cb27041633c6f15d2f3c26e1",
+      "source_semantic_landmarks_checked": true,
+      "source_full_character_check": false,
+      "all_figure_wires_verified": false,
+      "geometry_1_to_1_verified": false,
+      "human_signature": false,
+      "accepted": false,
+      "unresolved": [
+        "图7.2级联栅控连接需要逐线复刻",
+        "源页体效应引起的阈值表达式符号检查待完成"
+      ]
+    },
+    {
+      "pdf_page": 257,
+      "source_render_sha256": "80b7ba05d4a0faba5c42a24d2b4808cf3f7870a29a05fd742eace9fd50825196",
+      "source_semantic_landmarks_checked": true,
+      "source_full_character_check": false,
+      "all_figure_wires_verified": false,
+      "geometry_1_to_1_verified": false,
+      "human_signature": false,
+      "accepted": false,
+      "unresolved": [
+        "图7.3 PMOS传输管极性及图7.4馈通电容节点精确位置待复核"
+      ]
+    },
+    {
+      "pdf_page": 258,
+      "source_render_sha256": "33deddd207026d6b36763d305119530351b7a6f94baddaae23665783f3ff2413",
+      "source_semantic_landmarks_checked": true,
+      "source_full_character_check": false,
+      "all_figure_wires_verified": false,
+      "geometry_1_to_1_verified": false,
+      "human_signature": false,
+      "accepted": false,
+      "unresolved": [
+        "图7.5两组电容波形与例7.1两种输入图未完全复刻",
+        "标量公式已补齐但版式未精校"
+      ]
+    },
+    {
+      "pdf_page": 259,
+      "source_render_sha256": "99df3a77358a483c3e76c02e7d679332b7afbe1be74478e69ea637901ec8de32",
+      "source_semantic_landmarks_checked": true,
+      "source_full_character_check": false,
+      "all_figure_wires_verified": false,
+      "geometry_1_to_1_verified": false,
+      "human_signature": false,
+      "accepted": false,
+      "unresolved": [
+        "例7.1栅源与覆叠电容数值复核已做",
+        "图7.6源/漏电路和电容画法待精校"
+      ]
+    },
+    {
+      "pdf_page": 260,
+      "source_render_sha256": "a50041e7baa48b73cd169a28a3a53b9ca611680f9ff3a37f1f2ba1fa79a0053c",
+      "source_semantic_landmarks_checked": true,
+      "source_full_character_check": false,
+      "all_figure_wires_verified": false,
+      "geometry_1_to_1_verified": false,
+      "human_signature": false,
+      "accepted": false,
+      "unresolved": [
+        "例7.2(c)电荷守恒结果1.04V需完整人工终验",
+        "公式与换行布局差异尚存"
+      ]
+    }
+  ],
+  "key_equations": [
+    {
+      "page": 258,
+      "id": "7.1",
+      "formula": "Cf(V1−V2)=Cgnd V2"
+    },
+    {
+      "page": 258,
+      "id": "7.2",
+      "formula": "V2=Cf V1/(Cf+Cgnd)"
+    },
+    {
+      "page": 258,
+      "id": "7.3",
+      "formula": "ΔV2=Cf ΔV1/(Cf+Cgnd)"
+    },
+    {
+      "page": 260,
+      "id": "7.4",
+      "formula": "Qtotal=C1 V1+C2 V2"
+    },
+    {
+      "page": 260,
+      "id": "7.5",
+      "formula": "Qtotal=(C1+C2)V*"
+    },
+    {
+      "page": 260,
+      "id": "7.6",
+      "formula": "V*=(C1V1+C2V2)/(C1+C2)"
+    }
+  ],
+  "example_7_2": {
+    "ideal_c": "1.0 V",
+    "threshold_clamped_v1": "0.8 V",
+    "conserved_total_charge_fC": 120,
+    "remaining_charge_fC": 104,
+    "remaining_v2": "1.04 V"
+  }
+}
