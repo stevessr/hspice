@@ -79,26 +79,63 @@
     ]
   ])
 ]
-#let mux-rc(name:"MUX1",third:true)=html.frame(block(width:370pt,height:130pt)[
-  #txt(2pt,3pt,name)
-  #w(4pt,52pt,35pt,52pt)
-  #resistance(35pt,52pt,s:"R_inv")
-  #w(63pt,52pt,105pt,52pt)
-  #resistance(105pt,52pt,s:"R_TG")
-  #w(133pt,52pt,185pt,52pt)
-  #if third [
-    #resistance(185pt,52pt,s:"R_TG")
-    #w(213pt,52pt,328pt,52pt)
+// Original Fig 7.11 networks reproduced as editable TG stages
+// beside the printed equivalent Elmore RC ladder.
+#let mux-network(name:"MUX1")=html.frame(block(width:181pt,height:142pt)[
+  #txt(4pt,5pt,name)
+  #inv(5pt,50pt,s:"1X")
+  #w(36pt,50pt,53pt,50pt)
+  #for k in range(4) [
+    #let yy=22pt+k*29pt
+    #w(5pt,yy+7pt,40pt,yy+7pt)
+    #tg(40pt,yy+7pt,label:"TG")
+    #w(76pt,yy+7pt,91pt,yy+7pt)
+    #txt(81pt,yy-7pt,if k%2==0 {"ON"} else {"OFF"})
+  ]
+  #if name=="MUX1" [
+    #tg(106pt,51pt,label:"TG")
+    #tg(106pt,100pt,label:"TG")
+    #w(91pt,29pt,91pt,77pt)
+    #w(91pt,77pt,106pt,51pt)
+    #w(91pt,116pt,106pt,100pt)
+    #w(142pt,51pt,151pt,51pt)
+    #w(142pt,100pt,151pt,100pt)
+    #w(151pt,51pt,151pt,100pt)
+    #txt(153pt,52pt,"OUT")
   ] else [
-    #w(185pt,52pt,328pt,52pt)
+    #w(91pt,29pt,115pt,29pt)
+    #w(91pt,58pt,115pt,58pt)
+    #w(91pt,87pt,115pt,87pt)
+    #w(91pt,116pt,115pt,116pt)
+    #w(115pt,29pt,115pt,116pt)
+    #inv(121pt,73pt,s:"f")
+    #w(115pt,73pt,121pt,73pt)
+    #txt(152pt,66pt,"OUT")
   ]
-  #for (x,lbl) in ((89pt,"C_1"),(169pt,"C_2"),(303pt,"C_3")) [
-    #w(x,52pt,x,72pt)
-    #cap(x - 7pt,72pt,s:lbl)
-    #ground(x,89pt)
-  ]
-  #txt(273pt,33pt,"OUT")
+  #txt(10pt,134pt,"S0 / S1 互补选通信号")
 ])
+#let mux-ladder(third:true)=html.frame(block(width:182pt,height:142pt)[
+  #w(3pt,43pt,16pt,43pt)
+  #resistance(16pt,43pt,s:"Rinv")
+  #w(44pt,43pt,59pt,43pt)
+  #resistance(59pt,43pt,s:"RTG")
+  #w(87pt,43pt,103pt,43pt)
+  #if third [
+    #resistance(103pt,43pt,s:"RTG")
+    #w(131pt,43pt,175pt,43pt)
+  ] else [
+    #w(103pt,43pt,175pt,43pt)
+  ]
+  #for x in (55pt,101pt,161pt) [
+    #w(x,43pt,x,68pt)
+    #cap(x-8pt,68pt)
+    #ground(x,87pt)
+  ]
+  #txt(42pt,103pt,if third {"C1      C2       C3"} else {"C4      C5"})
+  #txt(137pt,26pt,"OUT")
+])
+#let mux-rc(name:"MUX1",third:true)=grid(columns:(1fr,1fr),column-gutter:6pt,
+  [#mux-network(name:name)], [#mux-ladder(third:third)])
 #let fig719()=html.frame(block(width:340pt,height:116pt)[
   #txt(3pt,4pt,"输入 A")
   #w(38pt,48pt,101pt,48pt)
