@@ -95,6 +95,7 @@ jobs:
           python3 fullbook/native/qa/check_frontmatter_toc.py
           python3 fullbook/native/qa/check_frontmatter_source_review.py
           python3 fullbook/native/qa/check_frontmatter_p003_p006.py
+          python3 fullbook/native/qa/check_ch1_original_p020_p023.py
           python3 fullbook/native/qa/check_ch10_pass18.py
           python3 fullbook/native/qa/check_ch10_pass19.py
           python3 fullbook/native/qa/check_ch10_pass20.py
