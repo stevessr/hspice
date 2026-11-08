@@ -83,6 +83,7 @@ jobs:
           python3 fullbook/native/qa/check_ch9_pass17.py
           python3 fullbook/native/qa/check_spice_appendix.py
           python3 fullbook/native/qa/check_frontmatter_toc.py
+          python3 fullbook/native/qa/check_ch10_pass18.py
           python3 fullbook/native/qa/check_ch7_visual_pass10.py
           for source in fullbook/native/web/*-page-*-layout.typ; do
             stem="$(basename "${source%-layout.typ}")"

@@ -1,32 +1,35 @@
-// SOURCE PDF PAGE 361; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第361页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("342         KFRA RBIS RIt—REMALE ( 第三版 )")
+// SOURCE PDF PAGE 361. Source scan-assisted Typst native editorial draft.
+// All circuit diagrams, text positions and equations still require strict 1:1 acceptance.
+#import "../figures/ch10-rc-elmore-native.typ": figure10more,fig-example102,fig-example101
+#set document(title:"第10章·连线RC与艾蒙延迟·PDF361")
+#align(center)[#text(size:8pt,weight:"bold")[342　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("WA RC 连线模型是最常用的集总模型。")
+*例10.2　对短导线具有和没有电阻影响时的延迟*
 
-#text("例 10.2 ”对短导线具有和没有电阻影响的延迟")
+问题：图中的输入反相器驱动四个相同尺寸的反相器，四个负载通过20 μm导线连接，导线宽度为0.2 μm，采用0.18 μm工艺。已知：
 
-#text("问题:")
+#align(center)[$C_("eff")=1 "fF/µm" quad C_("int")=0.2 "fF/µm" quad C_g=2 "fF/µm"$]
 
-#text("下图中忽略导线电阻时经过第一个反相器的传输延迟是多少?假设所有反相器的大小相等。\n要包括所有电容并且使用 0.18 um 工艺参数. 考虑连线电阻重新计算延迟。 假设爹属是 Al 并且导")
+#fig-example102()
+#align(center)[*例10.2　20 μm导线驱动四个反相器（编辑逻辑图）*]
 
-#text("线的宽度是 0.2 um. 导线的电阻重要吗?\nBR: Coq = 1作/um,Cn = 02作/nm Gy = 2 FF/um,")
+驱动反相器宽度为 $W_N=0.8 "µm"$、$W_P=0.4 "µm"$；四个负载尺寸相同。相应的输入扇出、驱动器自电容以及导线电容为：
 
-#text("解答:\n扇出电容，反相器驱动 4 个相同的反相器。")
+#align(center)[$C_("fanout")=4(2)(0.8+0.4) "fF"=9.6 "fF"$]
+#align(center)[$C_("self")=(1)(0.8+0.4) "fF"=1.2 "fF"$]
+#align(center)[$C_("wire")=(0.2)(20) "fF"=4 "fF"$]
 
-#text("Canoat = 4% Cy(Wy + Wo) = 4(2作/nm)j(08pm + 0.4 wm) = 96作\nASE:\nGat = Ca(W + We) = (1F/4um) (0.8 um + 04 wm) = 1.24F\n导线电容:")
+总负载：
 
-#text("Ce = Cntlwr = (0.2作/hm)(20 km) = 4作")
+#align(center)[$C_("load")=9.6+1.2+4=14.8 "fF"$]
 
-#text("总电容:\nCo = Caou + Coot + Cue = 96 + 12 +4= 148作\n基于这个总电容，假设输入为斜波，延迟为:")
+忽略导线电阻，采用教材的 $R_("eq")=12.5 "kΩ"$ 模型及对应尺寸，驱动电阻约6.25 kΩ，得到：
 
-#text("Tans = RetCont =  so人 志)ossm")
+#align(center)[$tau_("driver")=(6.25 "kΩ")(14.8 "fF")=92.5 "ps"$]
 
-#text("= (12sh)(2) (148 F) = 625k(148F) = 925 ps\n为了能包含导线电阻我们首先计算20 /hm导线的电阻为:\nRee = (4) = 54m0/ x (32) =540")
+计算20 μm金属导线的电阻，若方块电阻为54 mΩ/□：
 
-#text("其次，对该导线使用rn 模型:\n625k         540")
+#align(center)[$R_("wire")=(54 "mΩ")(20/0.2) approx 5.4 "Ω"$]
 
-#text("12 =r    2")
+再使用π型或阶梯RC模型计入导线电阻，可获得更精确的结果。
