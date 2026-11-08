@@ -1,5 +1,5 @@
 // SOURCE PDF PAGE 152 / printed 133
-#import "../figures/ch4-cmos-continued-native.typ": five-regions
+#import "../figures/ch4-cmos-continued-native.typ": cmos-example-vtc
 #set document(title:"第4章 · 例4.7 CMOS SPICE网表与噪声容限 · PDF152")
 = 第4章 · 印刷第133页
 
@@ -20,8 +20,8 @@
 
 #raw("*CMOS Inverter Example\n*Set supply and library\n.param Supply=1.8\n.include 'bsim3v3.cmosp18.lib'\n.opt scale=0.1u\n.global Vdd Gnd\nVdd Vdd Gnd 'Supply'\n*Top level simulation netlist\nmp out in Vdd Vdd PMOS1 l=2 w=8 ad=0 pd=0 as=0 ps=0\nmn out in Gnd Gnd NMOS1 l=2 w=4 ad=0 pd=0 as=0 ps=0\nVin in Gnd 'Supply'\n*Simulation\n.dc Vin 0 'Supply' 'Supply/50'\n.plot dc V(out)\n.end",block:true)
 
-#five-regions()
-*例4.7 SPICE输出为斜率明显变化的CMOS VTC，本图是可编辑趋势图，不代表原始采样点。*
+#cmos-example-vtc()
+*例4.7 CMOS VTC*：原图标注 $V_("IL")=0.626 " V"$、$V_S=0.8 " V"$、$V_("IH")=0.909 " V"$；黑色曲线为依据原图交点和趋势绘制的原生编辑曲线，不代表原始 SPICE 数据点。
 
 书中根据SPICE曲线读取：
 

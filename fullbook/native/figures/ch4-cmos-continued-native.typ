@@ -73,3 +73,35 @@
  #place(top + left,dx:204pt,dy:55pt,text(size:8pt)[PMOS：常导通上拉]))
  #place(top + left,dx:204pt,dy:123pt,text(size:8pt)[NMOS：输入控制下拉]))
 ])
+
+// Figure for PDF152 / printed 133, based on the source example's labeled VTC landmarks.
+// Native geometric curve is an editorial interpolation, not raw SPICE measurement data.
+#let cmos-example-vtc() = html.frame(block(width:360pt,height:211pt)[
+ #place(top + left,dx:114pt,dy:4pt,text(size:8pt,weight:"bold")[CMOS VTC])
+ #place(top + left,dx:34pt,dy:159pt,line(length:282pt,stroke:.9pt))
+ #place(top + left,dx:34pt,dy:159pt,line(end:(0pt,-135pt),stroke:.9pt))
+ // Example VTC: V_OH=1.8, V_OL=0, V_S=0.8; steep source-like transition.
+ #place(top + left,dx:36pt,dy:34pt,
+  curve(stroke:1.6pt,curve.move((0pt,0pt)),
+   curve.cubic((70pt,0pt),(93pt,1pt),(106pt,10pt)),
+   curve.cubic((116pt,22pt),(116pt,109pt),(137pt,120pt)),
+   curve.cubic((163pt,126pt),(236pt,125pt),(280pt,125pt))))
+ // Dashed reference y = x (mapped to the same voltage scale).
+ #place(top + left,dx:35pt,dy:159pt,line(end:(252pt,-126pt),stroke:(dash:"dashed",thickness:.6pt)))
+ // Three measured vertical guides at V_IL=0.626, V_S=0.8 and V_IH=0.909 V.
+ #place(top + left,dx:123.6pt,dy:43pt,line(end:(0pt,117pt),stroke:(dash:"dashed",thickness:.6pt)))
+ #place(top + left,dx:148pt,dy:93pt,line(end:(0pt,67pt),stroke:(dash:"dashed",thickness:.6pt)))
+ #place(top + left,dx:161.3pt,dy:45pt,line(end:(0pt,115pt),stroke:(dash:"dashed",thickness:.6pt)))
+ #place(top + left,dx:10pt,dy:24pt,text(size:7pt)[$V_("out")$]))
+ #place(top + left,dx:315pt,dy:165pt,text(size:7pt)[$V_("in")$]))
+ #place(top + left,dx:11pt,dy:31pt,text(size:7pt)[1.8]))
+ #place(top + left,dx:22pt,dy:155pt,text(size:7pt)[0]))
+ #place(top + left,dx:32pt,dy:166pt,text(size:7pt)[0]))
+ #place(top + left,dx:272pt,dy:166pt,text(size:7pt)[1.8]))
+ #place(top + left,dx:309pt,dy:166pt,text(size:7pt)[2.0]))
+ #place(top + left,dx:64pt,dy:187pt,text(size:7pt)[$V_("IL")=0.626 " V"$]))
+ #place(top + left,dx:148pt,dy:199pt,text(size:7pt)[$V_S=0.8 " V"$]))
+ #place(top + left,dx:207pt,dy:187pt,text(size:7pt)[$V_("IH")=0.909 " V"$]))
+ #place(top + left,dx:45pt,dy:28pt,text(size:7pt)[$V_("OH")=1.8 " V"$]))
+ #place(top + left,dx:210pt,dy:146pt,text(size:7pt)[$V_("OL")=0 " V"$]))
+])
