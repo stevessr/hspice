@@ -117,7 +117,7 @@ assert p26.count("[0→1]") == 2 and p26.count("[1→0]") == 2
 # No claimed full-page acceptance without visual evidence.
 import json
 state = json.loads((root/"page-status.json").read_text(encoding="utf-8"))["pages"]
-for page in range(26, 35):
+for page in range(26, 41):
     assert state[page-1].get("human_verified") is not True, page
     assert state[page-1].get("layout_verified") is not True, page
 
