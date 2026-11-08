@@ -16,6 +16,6 @@ for n,landmarks in checks.items():
   assert all(word in s for word in landmarks),(n,[word for word in landmarks if word not in s])
   assert "#image(" not in s
   print(f"PDF {n}: {len(landmarks)} original-scan landmarks retained in editable source.")
-assert "not pixel" in (r/"01-page-020.typ").read_text(encoding="utf-8")
+assert "unverified" in (r/"01-page-020.typ").read_text(encoding="utf-8")
 assert "incomplete" in (r/"04-page-023.typ").read_text(encoding="utf-8")
 print("No page given 1:1 acceptance; source micrograph image bytes absent.")
