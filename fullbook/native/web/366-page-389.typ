@@ -1,36 +1,28 @@
-// SOURCE PDF PAGE 389; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第389页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("370       数字集成电路分析与设计一一深亚徽米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 389 / printed 370; scan-guided editable Typst excerpt only.
+// Literal paragraphs, layouts, photographed micrographs and electrical nets not fully verified.
+#import "../figures/ch11-power-grid-em-native.typ": fig113,fig114,fig115,fig116,fig117,fig118,fig119,fig1110,fig1111,fig1112,fig1113,fig1114,fig1115
+#set document(title:"第11章·电源完整性、电迁移与去耦电容·PDF389")
+#set text(size:7.15pt)
+#show par: set par(leading:2.3pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[370　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("EIN 11.3 所示的选择 BGA 封装时的 Laildr 的例子. 这里，供电电源驱动几个大反相器，\n并假设连线的电阴是零”所关注的电感是由于焊块和连接焊块与封装管壳 ( 提供干净的电源 ) 的\n连线所引起的”Vpp提供一个 25 mA 的电流，经过 100 ps 的时间间隔流人电路、同时，某些缓冲\n器在同样的时间周期内以大致相同的电流水平通过Vss 放电 假如焊块和通孔产生 0.2 nH 的电感\n那么在两条线上由电感导致的总电压降是:")
+== 11.2.1　IR压降和 $L dif i/dif t$（续）
 
-#text("考虑到电源电压只是 1.2 V、这是一个很显著的压降，此外.这只是要考虑的压降之一如果包\n括了电涛系统的电感，除了通孔本身的电感之外,我们将看到电源网格自己产生的 Leif 效应-\n我们还忽略了电源网格的电阻，以及其他很多缓冲器可能会同时转变的情况.")
+原书图11.3采用BGA封装例子估算供电噪声：在同一时钟边沿内，电源驱动多个大型反相器。假设接地与供电端的焊球/通孔寄生电感各为0.2 nH，电流在100 ps内改变25 mA，则两个供电支路产生的电压降约为：
 
-#text("SH ReReAR Ante")
+#align(center)[$V_L = 2 L (dif i)/(dif t) = 2 (0.2 "nH") (25 "mA") / (100 "ps") = 100 "mV"$]
 
-#text("Wo\nOD nH\nMs\n2\n图113 ”芯片外电感的影响")
+#fig113()
+#align(center)[*图11.3　芯片外电感对供电的影响（可编辑等效示意）*]
 
-#text("IR Fi Ldidr 都是动态现象, 由其共同引起的总压降需要采用图 11.4 所示的建模方法- 封装电\n感. 电源网格电感和电源网格电阻都必须用一个 RLC 连线模型共同考虑. 需要特别关注的是引起\n同步变化噪声 (SSN. simultaneous switching noise ) 的情形，这时有很多缓冲器一起变化而产生\nEAC TR 压降和地线反跳")
+在1.2 V供电系统中，这已是相当显著的瞬态变化。实际情况下，供电路径与芯片电源网格还存在寄生电阻、电感，并且更多驱动器可能同时切换。
 
-#text("Yoo")
+#fig114()
+#align(center)[*图11.4　电源与地分布网络的分布RLC组合效应（编辑示意）*]
 
-#text("图 11.4 电源/地系统的电阻与电感组合效应")
+为此，需要把电源轨的 IR 压降、地线反跳和封装/板级电感视为同一供电完整性问题的一部分。原书把同时切换引发的供电噪声称为*SSN（simultaneous switching noise）*。
 
-#text("11.2.2 BEB")
+== 11.2.2　电迁移
 
-#text("HCE AY ACH SPL EAS (EM, electromigration ) 效应，这是在芯片工作期间金")
-
-#text("属线开始迁移并且最后断裂的情况这个过程所涉及的是由大电流密度引起的金属分子的迁移，")
-
-#text("以及导致金属线短路或开路的较窗线宽。一旦发生这种现象，芯片可能无法完成预期的功能，或")
-
-#text("不再满足时序规范，金属线上存在的裂纹或其他更疯特别容易引起这一问题，因为在电源系统里")
-
-#text("的连接已经很不牢固了。由 EM 导致的失效可以是灾难性的，因为会发生在芯片已经在系统里并\n时在客户手上的时候")
-
-#text("-个电迁移失效的例子如图 11.5 所示- 过去，往往电流密度较低，金属线路较宽.结合特别")
-
-#text("的工艺，并且减少了 EM 的可能性。当超过 100 MHz 的速度，并且到达 0.8 pm 以下的几何尺寸")
+电迁移（EM）是大电流密度导致金属原子沿电流方向缓慢迁移的可靠性问题，会在芯片运行期间造成金属线断裂、通孔失效或其他连线故障。高电流密度、温度、导体材料和几何尺寸共同影响发生的可能性。

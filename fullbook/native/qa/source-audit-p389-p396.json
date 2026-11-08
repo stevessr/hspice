@@ -1,0 +1,102 @@
+{
+  "schema": "ch11-power-em-source-pass22",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    389,
+    396
+  ],
+  "strict_full_pages_accepted": 0,
+  "source_render": "pdftoppm -r 105 PNG; separately viewed PDF389–396",
+  "pages": [
+    {
+      "pdf_page": 389,
+      "source_render_sha256": "6db7b25abcf32f692237a442e2743a2b3bf0de771742e0a035d640e972faa57b",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 390,
+      "source_render_sha256": "d3ca42aa83ec3f6dce5e6587e34c969b1e49298e0698e0dc90225f4f41253b58",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 391,
+      "source_render_sha256": "f5d3470bb7d7c0a9e2c5be8e9bdbf6e8c44684694a1c881414df3d0ab4595765",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 392,
+      "source_render_sha256": "3c116c57632367ec074e53ec6a829b90b81ef566972e9f29fc6f42bc9ebdf4a4",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 393,
+      "source_render_sha256": "9949de951772a92c5afb38324fe14232a4f3477e2e67cba4c6c82784346d4d23",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 394,
+      "source_render_sha256": "595bf6e7ce21efe30316af4bda92025cbc3c76d4150c155d08d6fe184087c5d1",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 395,
+      "source_render_sha256": "3db5ee9629624353555ae6231aac81c9094a3f48b3dd70df64fa6fb639c00a4c",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 396,
+      "source_render_sha256": "7f886d75f8a873876e4133811557eea09f86d6eec49b394e7171d56634a77735",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    }
+  ],
+  "source_points": {
+    "example_BGA": {
+      "inductance_nH": 0.2,
+      "current_mA": 25,
+      "change_ps": 100,
+      "rails": 2,
+      "noise_mV": 100
+    },
+    "black_example": {
+      "activation_eV": 0.85,
+      "temperature_C": 125,
+      "design_life_years": 10,
+      "safety_factor": 10,
+      "jmax_A_cm2": 895000
+    },
+    "equations": [
+      "11.3",
+      "11.4",
+      "11.5"
+    ],
+    "figures": [
+      "11.3",
+      "11.4",
+      "11.5",
+      "11.6",
+      "11.7",
+      "11.8",
+      "11.9",
+      "11.10",
+      "11.11",
+      "11.12",
+      "11.13",
+      "11.14",
+      "11.15"
+    ]
+  },
+  "limitations": [
+    "Photographic source and IR/EM case data are not 1:1 rebuilt",
+    "Editorial figures abstract topology",
+    "Full pages not certified"
+  ]
+}

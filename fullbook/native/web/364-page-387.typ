@@ -1,26 +1,30 @@
-// SOURCE PDF PAGE 387; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第387页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("368        数字集成电路分析与设计一一深亚徽米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 387. Native Typst source-scan editorial selection, not 1:1 complete.
+// Printed page 368; line-by-line transcription and source geometry remain unverified.
+#import "../figures/ch10-summary-ch11-power-native.typ": fig1028,figp104,figp105,figp106,figp108,fig111,fig112
+#set document(title:"第10章章末与第11章电源分布·源PDF387")
+#set text(size:7.15pt)
+#show par: set par(leading:2.3pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[368　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("了1 GHz，而功率超过了 100 W，电流达到了 100 A 的水平、同时，为了减少功耗而降低供电电\n压使Yo值达到 1.2 V 或更低， 在这个水平上的电压波动会导致时序变化，并且最终使设计失败\n作为经验规则，人允许的供电电压唉声预算是十10% x (Vp, — Gnd).\n为了控制波动，从Vpp压焊点到门的连接所遇到的总阻抗必须根据电流需求进行控制从压\n焊点看到的电源网格的阻抗目标值给出如下:\nze Vow * CABS HRFS HIST)\nIho                              a)")
+当芯片功耗达到100 W，供电电压可能降至1.2 V甚至更低时，供电电流可达100 A量级。为了让噪声维持在可接受范围内，供电路径的目标阻抗必须很小。
 
-#text("对于电源电压为 Vop = 1.2 V ，供电电流 Inn = 100 A的情况，Z = 1.2 V X (10%)/100A\n一 12 mD， fe TIARA ( GHz ) 的频率范围内要达到这是一个小数值是令人难以置信的，这使电\n源分布设计非常具有挑战性。")
+原书给出供电噪声容限决定电源网格目标阻抗的计算：
 
-#text("电源嗓声主要由 IR 压降和 Ldidr 产生, 这将在后面解释,在这一阶段,认识到由于沿着电流\n路径的电阻和电感会引起电源网格上的压降就已经足够了。 这些电压降影响时钟侠斜，门的性能\n和时钟与镇相环的时序拌动")
+#align(center)[$Z = (V_"DD" times "允许的噪声百分比")/I_"DD" quad (11.1)$]
 
-#text("电源网格的电迁移也是影响长期可靠性的问题大电流的腐蚀效应会使金属迁移并且最终断\nae 最后,电源系统设计会限制系统性能并且可能导致现场失效，所以，必须仔细设计以避免洒\n在的问题这些总称为电源完整性问题。")
+当 $V_"DD"=1.2 "V"$、$I_"DD"=100 "A"$，允许噪声为10%时：
 
-#text("过去使用的一种方法是对系统进行超标准设计以避免各种法在的失效。当设计风险是通过使\n用远超出所需要的安全措施和建议的方法来解决的时候，设计者经常会使用超标准设计\n(overdesign ) 这一术语。 这种情况的一个例子是使用芯片上的去而电容来控制 1R 和 Laide JokS.\n对于超标准设计的情况，绝大部分可用的面积将用于去耦电容。而不是器件，然而超标准设计\n有很大的面积损失 ( 而对安全性不足的设计来讲损失更大一芯片不工作! ) 所以尽可能了解关\n键问题和做出正确的折中是很重要的。通过这个简短的概括,我们现在可以描述电源系统设计的\n主要问题，然后分析电源分布系统中的几种基本结构")
+#align(center)[$Z = (1.2 "V" times 0.10)/(100 "A") = 1.2 "mΩ"$]
 
-#text("11.2.1 IR EEREFA Lei/de")
+这一数量级要求电源网格的电阻、电感和封装路径都受到严格约束。
 
-#text("SH RY A RSE ME AE PE ATS SM FR OL A EMER I. Vo RE\n电阻引起的 ZR 压降 CIR drop) 会影响整个时序和功能。由于高速设计中电流变化的速度增加，\n在管脚上出现了 Ldildr 电压的变化，这使得上述影响变得更精。上述因素合在一起，在电源网格\n里任何一点的总电压降给出如下:")
+== 11.2.1　IR 压降和 $L dif i/dif t$
 
-#text("di\nVemR+Le                (2)\na")
+电源网络中同时存在导线电阻与寄生电感。导线电阻在电流通过时造成静态或缓慢变化的 IR 压降，而快速切换的电流还会引入瞬态的电感电压：
 
-#text("我们从 IR 压降开始分别讨论这些影响，1R 压降的基本概念如图 11.1 所示，描述了连接在")
+#align(center)[$V = I R + L (dif i)/(dif t) quad (11.2)$]
 
-#text("个有阻抗的电源上的两个大缓冲器。最初，所有电源网格中的电平处于Vpp 。当大驱动器inv2 开\n始变化时，对电流的需求降低了电源网格的电压。特别是导线电阻产生的电压降会随着电流从外\n部电源向 inv2 的流动而增加。 在芯片外围的Ypp连接点附近的电压保持相当高的水平，在连接到\ninv2 时有AV 的压降。实际上，/R 压降是由于时钟缓冲器 、总线驱动器、 存储只译码驱动器等的\n同时变化引起的这些同时变化事件可以在芯片上的任何地方发生，因此，所有区域都可能受到\n尺压降问题的影响。当输出电平变到低时地线网格也会受同样类型问题的影响，只是这时的电压\n值会增加，这有时称为地线反跳 (ground bounce )")
+原书强调，IR 压降会降低驱动器看到的有效供电电压，使逻辑门变慢，并产生与邻近门同时切换相关的动态供电扰动。对于同步设计，这会进一步影响关键路径延迟、时钟偏斜和可预测性。
+
+同时切换时，地电位也可能相对系统参考地抬升，形成*地线反跳（ground bounce）*。

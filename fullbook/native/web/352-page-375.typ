@@ -1,18 +1,31 @@
-// SOURCE PDF PAGE 375; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第375页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("356        数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 375. Scan-guided native Typst selection, not a 1:1 accepted page.
+// Printed textbook page 356; topology/plot curves remain editorial abstractions.
+#import "../figures/ch10-inductance-antenna-native.typ": fig1020,fig1021,fig1022,fig1023,fig1024,fig1025,fig1026,fig1027,fig1028
+#set document(title:"第10章·串扰、RLC和天线效应·源PDF375")
+#set text(size:7.1pt)
+#show par: set par(leading:2.25pt,spacing:3.3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[356　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("*#10.5 ERB")
+== 10.5　连线的电感
 
-#text("随着工艺尺寸的缩小和时钟频率的提高，电感这个相当新并且更复杂的问题逐渐显露出来\n站估的是，如果不从设计的角度进行妥善处理，将很快变成一个问题“注意，我们遇到的深亚微\n米连线问题的顺序是很有趣的 首先,我们届到电限增大的问题; 然后是相合电容; 现在是电感\n这种出现的顺序是十分幸运的，因为每个都比前一个更难理解、提取或分析-，连线电阻容易理解\n并且限制在流过电流的金属导线上，合电容是一个在感兴趣的导线周围局部区域中导线间的静\n电现象，对它的分析明显比对电限更复杂，但仍是可驾驭的问题。而在另一方面，电感是一个电\n们现象，并且其作用不一定限制在局部区域、理解它更加复杂并且几乎不可能进行提取和分析\n除非是对小部分，然而，必须理解其作用和探究吕锡其影响的不同方法")
+前述互连模型以电阻和电容为主。随着工作速度提高和导线加长，电流变化还会产生磁通与感应电压，必须考虑导线电感。对于简化的自感模型：
 
-#text("第一步是从电磁学的观点考虑电感。当电流流经一个导体时，在其周图建立一个电磁场具\n有存储能莉的磁通基，这个磁通量与电流线性相关，关系如下:")
+#align(center)[$Phi = L i quad (10.18)$]
 
-#text("bali                                (10.18)")
+电感两端的电压与电流变化率成正比：
 
-#text("TPAC AR LA) CH). 随着电流的变化，磁通量作用于导线本身并且导致一\n个电压降，对于线性电感可以通过对式 (10.18) 按时间求导得出:\navait                                        (10.19)\na\nMASUR AT EL BL EMRE AL, IRL PRR OT LM BERS\n片所需电流的增加，与电感相关的电压降也增加。在高速设计中，关于时间的电流变化速率正迅\n速增加”因此，电感效应在封装管肢和电源分布系统中特别重要。我们将在第 11 章中更详细地\n研究这个问题\n信号线也开始显示不断增长的电感的影响。 认识到连线实际上是-个分布式的 RLC 线路, 而\n不是简单的分布式 RC 线路是非常重要的。 同样，在某些特定环境下它的表现像一条传输线。 我\n们现在详细阐述这些环境并且描述电感效应会如何修改延迟方程. 我们将用Raw，CGa和Li分别代\n表单位长度的电阻.电容和电感.从一个众所周知的电磁学理论关系式中可以获得单位长度电感\n的估计值:\nCanLin = Eoxbor                              (10.20)")
+#align(center)[$Delta V = L (dif i)/(dif t) quad (10.19)$]
 
-#text("SOP MRED EBLE UID, SHIR, SE ELREAH MSS EHF BHT,\n介质完全包关的导线，而对获得一阶电感值是很有用的.假设Cu = 0.1 fam，ea = (4)(8.85 X\n10°\" Flem) 3 Fi Mag = 12.6 X 10°? Wb/amp,那么Hu = 0.45 PH/nm 这是一个非常粗路的估计，\n但是提供了电感的正确数量级-\n图 1023 中给出了一个 RLC 线路的集总模型- 在着手分布式线路前我们能通过分析这个简单\n电路来建立基些直觉的认识。首先，考虑与信号线的电图和电感相关的复杂阴抗:\nZu = R+ jol                         (10.21)\n这里w = 2xf SIR, AIEEE. 如果有 >> joL，那么式 (10.21 ) 表明电感是不重要的-\n如果R< jL、那么将在信号线路上看到电感效应、过去电阻比电抗性元件起的作用大，所以\nRC 效应起主导作用，最近几年，在超高速设计中的增加非常显著，到了电抗项很重要的地步-")
+在理想均匀介质中，单位长度互连电容和电感的乘积满足电磁场关系：
+
+#align(center)[$C_"int" L_"int" = epsilon_"ox" mu_"ox" quad (10.20)$]
+
+原书取单位长度电容约 $0.1 "fF/μm"$，估算单位长度互连电感约 $0.45 "pH/μm"$。这两者均是教材参数化示例，实际线宽、回流路径和屏蔽结构会改变结果。
+
+导线的串联阻抗可写作：
+
+#align(center)[$Z_"RL" = R + j omega L quad (10.21)$]
+#align(center)[$omega = 2 pi f$]
+
+在较低频率下 $R$ 分量占优；频率升高时，$omega L$ 的贡献增大。长线应检查电感是否会引起过冲、振铃或耦合噪声。

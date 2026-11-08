@@ -23,6 +23,9 @@ jobs:
       - uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.15.0
+        continue-on-error: true
+      - name: Ensure Typst 0.15.1 via official OCI fallback
+        run: bash .github/scripts/ensure-typst.sh 0.15.1
       - name: Install fonts with bounded mirror wait
         timeout-minutes: 4
         run: |
@@ -84,6 +87,11 @@ jobs:
           python3 fullbook/native/qa/check_spice_appendix.py
           python3 fullbook/native/qa/check_frontmatter_toc.py
           python3 fullbook/native/qa/check_ch10_pass18.py
+          python3 fullbook/native/qa/check_ch10_pass19.py
+          python3 fullbook/native/qa/check_ch10_pass20.py
+          python3 fullbook/native/qa/check_ch10_pass21.py
+          python3 fullbook/native/qa/check_ch11_pass22.py
+          python3 fullbook/native/qa/check_ch11_pass23.py
           python3 fullbook/native/qa/check_ch7_visual_pass10.py
           for source in fullbook/native/web/*-page-*-layout.typ; do
             stem="$(basename "${source%-layout.typ}")"

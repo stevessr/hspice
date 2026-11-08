@@ -1,24 +1,25 @@
-// SOURCE PDF PAGE 380; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第380页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第10章 连线设计         361")
+// SOURCE PDF PAGE 380. Scan-guided native Typst selection, not a 1:1 accepted page.
+// Printed textbook page 361; topology/plot curves remain editorial abstractions.
+#import "../figures/ch10-inductance-antenna-native.typ": fig1020,fig1021,fig1022,fig1023,fig1024,fig1025,fig1026,fig1027,fig1028
+#set document(title:"第10章·串扰、RLC和天线效应·源PDF380")
+#set text(size:7.1pt)
+#show par: set par(leading:2.25pt,spacing:3.3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[361　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("属连线必须保持较短，否则必须在曲体管附近放置二极管。然而，在所有晶体管的栅输入端附近\n放医二极管或者在单元库中财人天线二极管从面积上考虑花费太大，所以只应当在绝对必要时使\n用 这窑涉到对整个版图进行一个完全的 DRC 验证来确定适当的位置、第二个问题是定义二极\n管的面积，这取决于所支持的金属段的面积，如果使用不必要的大二极管，将使面积受损失")
+#fig1026()
+#align(center)[*图10.26　保护二极管消除天线充电风险的示意（可编辑图元）*]
 
-#text("an")
+通过保护二极管为金属积累电荷提供泄放通路，是教材给出的典型天线效应解决办法。不过，二极管必须与受保护栅极处于工艺允许的保护连接位置。保护结构还会增加结电容及布局面积。
 
-#text("四")
+#fig1027()
+#align(center)[*图10.27　天线保护二极管的正确放置思路（可编辑示意）*]
 
-#text("om\n图 1026 FF RB ot eR — BE")
+如果二极管离栅极太远，且在某一步制造过程中二者尚未连通，保护就可能无法生效。这就是为什么天线违例不能简单地在版图任意位置接入保护器件。
 
-#text("3                   ee\nSermeae")
+原书同时介绍以缓冲器分段的策略：长导线被多个缓冲器分开后，每一个栅极所连接的金属面积有机会降低，从而使天线比小于设计规则规定的上限。
 
-#text("A\nema — rane are\nRe MMT            一六")
+#fig1028()
+#align(center)[*图10.28　跨层桥接 / 分段缩短连续天线面积（概念补充图）*]
 
-#text("图 1027 天线二极管的正确放置")
-
-#text("第二个方法是通过插入缓冲器打断长导线。 这将减小总的电荷积累有效面积，并且增大晶体\n管栖的面积，从而减少了每条金属线上的总电荷。当然，这个过程已经作为降低 RO 延迟的一部\n分进行了实现, 而我们获得了减少天线效应的附加益处- 仍然必须验证没有哪个线段会产生问题,\n但是在插入缓冲器后无疑会减少违例的数量")
-
-#text("第 “种方法是从一层金属到另一层金属之间建立跨接来打破徘近远端的金属连线，如\n图 10.28 所示”在这种情况下，我们给出了违反天线比率的一条第一层金属线  在晶体管构附近\n引入了一个看起来不必要的到第二层的凸出，以消除第一层金属的总电荷 回忆当加工过程中引\n人通孔时, 第一层金属的电荷被释放所以， 该晶体管将仅受到第二层金属段的少量电荷的影响。\n通孔和第二层金属段的附加电阻与电容通常可忽略")
+*编辑说明：* 图10.28的完整原版位于后续源页，本页为便于衔接加入可编辑结构示意，不将该图声称为 PDF380 的原图1:1转写。

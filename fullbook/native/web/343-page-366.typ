@@ -1,38 +1,44 @@
-// SOURCE PDF PAGE 366; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第366页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第10章 连线设计            347")
+// SOURCE PDF PAGE 366. Scan-guided editable Typst selection; NOT full 1:1 acceptance.
+// Original source scan: printed page 347; images/figures are editable abstractions.
+#set document(title:"第10章·连线设计·源扫描PDF366")
+#set text(size:7.2pt)
+#show par: set par(leading:2.3pt,spacing:3.4pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[347　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("例 10.4 缓冲器插入举例")
+=== 例10.4　缓冲器插入举例
 
-#text("问题:\n对例 103. 再次考虑 20 mm 长的第 5 层金属铅导线, 但此时要使用最优的缓冲器插人来减小")
+问题：沿用例10.3中长20 mm的第5层金属导线，用最优的缓冲器插入减小时延，计算新的总延迟。
 
-#text("延迟 缓冲回搬入后经过导线的新延迟是什么”")
+#table(columns:2,stroke:.4pt,inset:3pt,
+ [*源扫描给定参数*],[*数值*],
+ [$R_"int"$],[54 mΩ/μm],
+ [$C_"int"$],[0.1 fF/μm],
+ [$L$],[20,000 μm],
+ [$R_"eqn"$],[12.5 kΩ/□],
+ [$C_G$],[2 fF/μm],
+ [$C_"eff"$],[1 fF/μm],
+ [$W$],[0.2 μm],
+ [$beta$],[2],
+)
 
-#text("mE:\n使用以下的值:")
+由式（10.9）和（10.10）求得：
 
-#text("Rye = 54mfyum Cn = 01作/nm L= 20,000 um")
+#align(center)[$N = sqrt((R_"int" C_"int" L^2)/(2 R_"eqn" (C_G+C_J) (1+beta))) approx 6.9 approx 7$]
+#align(center)[$M = sqrt((R_"eqn" C_"int")/(C_G (1+beta) R_"int")) approx 140$]
 
-#text("Regn = 125kD/D G=2fFnm Cr=1fFlnm W=02um B=2\n导线段的数目是:")
+缓冲器等效电阻、输出自身电容和下级输入电容分别为：
 
-#text("iil 2\nVials +6) +8) 9 ~?")
+#align(center)[$R_"eff" = (12.5 "kΩ")/140 approx 90 "Ω"$]
+#align(center)[$C_"self" = C_"eff" (2W+W) 140 = 84 "fF"$]
+#align(center)[$C_"fanout" = C_G (2W+W) 140 = 168 "fF"$]
 
-#text("假设所有反相器相等，缓冲器尺寸是:")
+在教材绘出的单段RC模型中，导线等效电阻为154 Ω，两组导线电容均为143 fF：
 
-#text("= [Bees — = 149\n“VG By\n则缓冲器电阻是:\n= BED con")
+#align(center)[$tau_"Elmore" = 7 ((90 "Ω") (84 "fF" + 143 "fF") + (90 "Ω" + 154 "Ω") (143 "fF" + 168 "fF")) approx 0.67 "ns"$]
 
-#text("缓冲器输出电容是:")
+由此教材结论：*插入缓冲器后总延迟约减小一半*。以上为原书例题数值，不代表使用另一个工艺模型重新仿真。
 
-#text("Ca = Ce(2W + W)140 = (UFJIamjlo6um)140 = 84\n缓冲器输入电容是:")
+== 10.4　连线的耦合电容
 
-#text("Camas = GGW + W)140 = (24F/um)(0.6 um) 40 = 168 F\nEBLE LRA RC 延迟模型")
-
-#text("soa             isn\need dior Mow\nAAO AEB\nras = 7 X [(90.1)(841F + 143作) + (9000 + 1540)(143作 + 168作)]\n= 067 ns")
-
-#text("使用缓冲器搬入，总延迟削减了一半-")
-
-#text("10.4 连线的耦合电容")
-
-#text("本节将讨论关于耦合电容的问题.目标是理解导线电容的不同构成并且建立手工计算公式。\n实际上，像第 ! 章图 1.1 和图 1.2 所示的那样IC 连线结构本质上是二维的， 然而对于手工计算，\n我们能建立实际中工作良好的简单公式。到目前为止，我们一直使用 0.2 fum 作为导线电容，")
+本节将单位长度导线电容拆分为对地、区域、侧向与边缘部分，建立手算的一阶电容模型。原书此前采用的0.2 fF/μm典型值，需要解释其物理来源及适用条件。

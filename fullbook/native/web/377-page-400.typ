@@ -1,34 +1,24 @@
-// SOURCE PDF PAGE 400; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第400页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("HUE 电源网格和时钟设计                381")
+// SOURCE PDF PAGE 400 printed 381, visually checked; native edit selection only, NOT 1:1.
+#import "../figures/ch11-clock-timing-native.typ": fig1116,fig1117,fig1118,fig1119,fig1120,fig1121,fig1122,fig1123,fig1124,fig1125,fig1126,fig1127,fig1128
+#set document(title:"第11章·时钟、偏斜、抖动、功耗·PDF400")
+#set text(size:7.15pt)
+#show par: set par(leading:2.2pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[381　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("功能的正确性产生很大的影响，为了进行说明，考虑图 11.20 所示的情况、图的上面一部分给出\n三-个时序系统,包含了在两端的正边沿触发的触发器，以及触发器之间一个代表逻辑门的组合\n云块，经过辑云块有多种路径，可以用两个参数撒述: 最差情况路径延迟 Tiwx和最好情况路")
+图11.20给出两个相邻触发器之间的组合逻辑路径，以最长路径延迟 $T_"DMAX"$、时钟到Q延迟 $T_"clk-q"$ 和捕获端建立时间 $T_"setup"$ 描述一个周期中的数据传播。
 
-#text("径延迟Taww")
+#fig1120()
+#align(center)[*图11.20　偏斜对时钟周期时间的影响（可编辑概念示意）*]
 
-#text("Tne                                  hou")
+原书给出建立时间约束：
 
-#text("a oceal y")
+#align(center)[$T_"cycle" = T_"clk-q" + T_"DMAX" + T_"setup" + T_"skew" quad (11.6)$]
 
-#text("较量的时名                                  较量的时名\nRD)                        《下-个周期)")
+*时钟偏斜增加时，可能减少允许的组合逻辑预算。* 图示还说明了时钟偏斜符号的选择必须和发射/捕获两端的定义保持一致。
 
-#text("Tay")
+不仅要满足建立时间，还要满足保持时间约束。对于短数据路径，捕获寄存器如果太晚看到数据的旧值，就可能捕获到尚不该出现的新值。原书给出的必要条件：
 
-#text("Ts Tes")
+#align(center)[$T_"skew" + T_"hold" < T_"clk-q" + T_"DMIN" quad (11.7)$]
 
-#text("ror")
-
-#text("smote")
-
-#text("办时的时名")
-
-#text("Te\nPR 11.20 人篇斜对时钟周期时间的影响")
-
-#text("现在考虑信人对周期时间的影响在图 11.20 +, (RR AASB RE am\n船发器较晚 当时钟到达近端角发器时,在经过Tu AER ZH RRR IRAN I Ze 也\nPRUE), SP Tak是触发器的一个属性，在第 5 章中讨论过  随后是一个经过尿辑\n的最大延迟 Taux ，在到达远端触发器时，必须满足触发器的建立时间 Te 这三个部分,，\nTax gt Tux+ Tug、在正常情况下构成周期时间 Toye\n然而、如果由于偏斜使时钟到达远端骨发器较早，可能出现图 11.20 所示的波形问题 下一\n周期的较早的时钙将到达并且从当前周期针存数据，但依照建立时间这个数据还不稳定。 这将导\n至电路中的一个功能错误。当电路不满足周期时间要求时，通常称为建立时间违例，即使是由信\n旬造成的“针对这个问题有一个简单的解决办法如果将时钟周期增加 Tu。 ，就能保证电路总是\n正常下作 “然而，其代价是周期时间比原先长了偏斜值、新的周期时间给出如下;\nTe Ta + Tax + Te + Ta               (16)")
-
-#text("下面考虑图 11.21 Bp sa Ae BB A TS HZ. XV 195\nHUGE “HRT — eee Nt, BALE A Zk, 最快的信号路径到达第\n-个触发器的时间是 Tong + Tiwx ”如果这个时间太快. 会产生一个问题 当较晚的时钟在同一周\n期中到达第二个般发器时，将锁存输入信号 而不考虑它们是否是正确的信和号。 并且，可能不注\n意地捕获了新的 ( 不正确 ) 数据。偏斜会阻碍锁存正确的数据，为什么? 因为如果满足新数据在\n前一数据的建立时间满足之前到来 第二个触发器会错误地采样新数据而不是正确的数据。这称\n为保持时间违例，如图 11.21 Ba. 注意， 这个问题不能通过放慢时钟来解决。能够正确操作的\n准则是:")
-
-#text("Te + Thott < Ta + Taran                   (17)")
+右侧中的 $T_"DMIN"$ 是数据最短组合路径延迟。无论增加缓冲器还是调整时钟树，均需重新验证建立与保持约束。

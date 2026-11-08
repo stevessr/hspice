@@ -1,18 +1,21 @@
-// SOURCE PDF PAGE 395; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第395页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("376      数字集成电路分析与设计一 深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 395 / printed 376; scan-guided editable Typst excerpt only.
+// Literal paragraphs, layouts, photographed micrographs and electrical nets not fully verified.
+#import "../figures/ch11-power-grid-em-native.typ": fig113,fig114,fig115,fig116,fig117,fig118,fig119,fig1110,fig1111,fig1112,fig1113,fig1114,fig1115
+#set document(title:"第11章·电源完整性、电迁移与去耦电容·PDF395")
+#set text(size:7.15pt)
+#show par: set par(leading:2.3pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[376　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("显。 设计中间靠下部分的存储器块有高密度的网格，这是存储器电路的密度所需要的。 这个芯片\n的例子将在本章中使用多次")
+== 11.2.5　电源分布设计举例（续）
 
-#text("图 11.13 “一个芯片的电源分布系统举例")
+源书图11.13是一幅芯片电源分布系统的实际照片。芯片由多个大功能模块组成，不同模块对电流密度和供电网格的需求不同。以下仅用可编辑区域块表示位置关系，*不是原照片的复制*。
 
-#text("为了说明一个可能的 尺压降和电迁移之间的折中，我们首先给制该芯片 UR 压降的轮廓图，\n如图 11.14 所示。这两幅图用不同的阴影级别显示了电源网格的计降，来指示压降的严重性  这\n种类型的图的产生方法是， 提取物理电源网格里的所有电阻，并组合成一个大的电阻网络  这\n样，逻输电路和存储器块可以用理想电流源表示，并且将其连接到电阻网格 每个电流源取相\n应门的平均电流值。网格里的每一点都通过模拟来计算电压降，这个电压被赋 予灰度值并绘制在\n图中，")
+#fig1113()
+#align(center)[*图11.13　一个芯片的电源分布系统举例（照片内容的编辑式结构摘要）*]
 
-#text("考虑图 11.14 左边的 UR 压降图。靠近芯片中心较大的柚贺形区域是 TR 压降过多的区域。事\n实上，它违反了分配给电源网格的 10%的吧声预算  导致违反的原因是网格下面的部分没有与网\n格上面的部分连接。这是由于琉忽引起的，因为芯片 在进行组台时只是简单地把分别设计的块连\n在一起。 遗起的是,上部的网格需要的电流必须来自 6 个或 7 个围绕着蕊 和顶部边沿的Vpp管脚\n为了补救这个问题，设计者简单地用许多电源连线 ( 也就是金属连接 )   SF BS EAB PEELE")
+原书先通过提取电源网格所有寄生电阻、合并片上电路/存储模块的平均电流需求，再使用网络方法求每个节点的IR压降。过高的压降会使某些局部区域的逻辑门看到的供电电压偏低，影响关键延迟。
 
-#text("起。这样做产生的 UR 压降如图 11.14 右边的图所示  电源网格现在可以满足吧声预算")
+如果电源网格的不同功能块被分配到较少的通孔或高电阻连接，也可能出现本地过载。排查问题时必须从最差节点、最差电流路径与模块布局一起考虑。
 
-#text("对电源网格进行改变所产生的其他效应如图 11.15 所示。这里， 电迁移失效在电源网格上绘\n制成点。每个失效是由给定的金属部分是否满足由式 (11.5 ) 得出的电迁移准则决定的。该式中\n需要计算电流密度Pa 要得到这个值需要用金属线中的直流电流除以金属线的横蕉面积。计算")
+在图11.14和图11.15的原版分析中，设计者通过增加跨层电源连接改善IR与EM。要取得平衡，不可无限制使用高层金属，否则会挤占信号路由资源。

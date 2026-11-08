@@ -1,28 +1,31 @@
-// SOURCE PDF PAGE 377; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第377页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("358         数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 377. Scan-guided native Typst selection, not a 1:1 accepted page.
+// Printed textbook page 358; topology/plot curves remain editorial abstractions.
+#import "../figures/ch10-inductance-antenna-native.typ": fig1020,fig1021,fig1022,fig1023,fig1024,fig1025,fig1026,fig1027,fig1028
+#set document(title:"第10章·串扰、RLC和天线效应·源PDF377")
+#set text(size:7.1pt)
+#show par: set par(leading:2.25pt,spacing:3.3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[358　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("(10.23)")
+继续讨论图10.24中两种阶跃响应：阻性终端较大时波形单调，阻性终端小于线路特征阻抗时可出现反射振铃。
 
-#text("Ring")
+#fig1024()
+#align(center)[*图10.24　RC 单调响应与 RLC 振铃的概念曲线（非原图实测数据）*]
 
-#text("ASE PACT. GOS URAL ALT LE SH A EY KI\n%")
+对于给定工艺参数，教材将电感效应显著的导线长度条件整理成上界：
 
-#text("Vout")
+#align(center)[$l_"max" < (2 / R_"int") sqrt(L_"int" / C_"int") quad (10.23)$]
 
-#text("Ry>>2y")
+信号沿长度为 $l$ 的导线往返传播时间为：
 
-#text("图1024 REC 连线的响应")
+#align(center)[$t_"roundtrip" = 2 T_0 = 2 l sqrt(L_"int" C_"int") quad (10.24)$]
 
-#text("缓冲器输出端的信号变化时间也控制着传输线路的效果，如果与上升时间相比，信号沿线路\n传递和返回缓冲器来的循环路程很短，则不会有一个显著的传输线效应，循环一周的时间由下式,\n给出:")
+如果输入信号上升时间足够短，传输线的行波和反射就不可忽略。教材给出的条件：
 
-#text("omdup = 2了0 = 21VTCan                       (10.24)")
+#align(center)[$t_r < 2 l sqrt(L_"int" C_"int") quad (10.25)$]
 
-#text("和To称为飞行时间 ( time-of-flight )。如果上升时间 ( 或下降时间 ) 比飞行时间的两倍还短，我们\n将观察到传输线效应- 所以，要求:\n8, SUV Lg Cin                          (10.25)")
+将其改写为线长下界：
 
-#text("上式可以得出/的最小长度，\nt")
+#align(center)[$l_"min" > t_r / (2 sqrt(L_"int" C_"int")) quad (10.26)$]
 
-#text("o> Ee\n‘s   2V Lim Cine                   (10.26)")
+这说明边沿时间和互连线传播时延必须一起考虑。仅凭导线总电阻和总电容，不能保证解释所有高速瞬态现象。

@@ -1,26 +1,24 @@
-// SOURCE PDF PAGE 388; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第388页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第11章 电源网格和时钟设计                 369")
+// SOURCE PDF PAGE 388. Native Typst source-scan editorial selection, not 1:1 complete.
+// Printed page 369; line-by-line transcription and source geometry remain unverified.
+#import "../figures/ch10-summary-ch11-power-native.typ": fig1028,figp104,figp105,figp106,figp108,fig111,fig112
+#set document(title:"第10章章末与第11章电源分布·源PDF388")
+#set text(size:7.15pt)
+#show par: set par(leading:2.3pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[369　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("Yoo")
+#fig111()
+#align(center)[*图11.1　电源分布系统的 IR 压降（原生可编辑简化电路图）*]
 
-#text("图 11.1 电源分布系统的 UR FB")
+IR 压降主要影响门的时序。在高速设计中，时钟和关键逻辑门可能对供电波动格外敏感。应在典型活动情况下计算压降，也要检查较强同时切换条件下的瞬态压降和噪声。
 
-#text("电源网格的电压降主要影响时序。硫 压降对性能的影响可以很显著,会减小门的驱动能力并\n且增加总延迟。典型情况下 5%的电源压降能对延迟产生 10%-~15%或更多的影响。要把时钟偏斜\n控制在 100 ps 范围内时这种延迟的增加变得很严重- 在前一章介绍过,由于连线问题路径延迟变得\n不可预测。 这个问题由于 灰 压降而更加恶化了。 理想情况下时序计算应该考虑最坏情况下的 礁压\n降以保证正确的设计。这种分析可以用第 3 章所描述的工艺边界模拟来进行")
+当供电噪声预算下降时，增加电源网格金属面积、降低路径阻抗、使用片上去耦电容与合理布局负载都可能改善结果，但会付出面积、功耗和布线拥塞代价。
 
-#text("咪压降也损害了逻辑门的嗓声容限, 这不仅是因为电源网格的电压降低，而且也因为地线网\n格的电压升高。一旦噪声容限降到预算值 (典型值为 10% ) 之下，设计就不保证能正确工作了-\n近年来，电源电压一直在降低，以避免晶体管的穿通条件 、热电子效应和器件击穿。 更近来的情\n况是，Vpo的降低主要是由于要减少功耗，而不是其他的问题。 无论哪种情况都导致了越来越小\n的嗓声容限。由于有 OR 压降, 唉声容限更进一步降低, 使得在百万晶体管级的设计中处理连线粒\n合噪声效应变得更加困难。")
+芯片封装的电感是 $L dif i/dif t$ 压降的重要来源。原书指出：较长引脚封装的电感可能约1—2 nH，快速电流变化会形成大幅的动态供电噪声。
 
-#text("现在考虑式 (11.2) 中的 Ldildr 项。这是在电源供电方面电压降低的另一个来源，是由典型\n值为 1-2 nH 左右的管脚电感引起的。电感是由用来连接从芯片输入/输出压点到传统双列直插式\n封装 ( DIP，dual-inline package ) 的焊接框架的压焊线所引起的，如图 11.2 (a) 所示。虽然电感\n工近年来没有显著的变化, 但 dildr 的值持续增加并且电源电压从5 V 降低到33 V, 25V,，1.8 V，\n最近的 1.2 V 以及更低。这些趋势已经使 Ldixdr 压降对电源网格的整个压降的影响达到了很显著\n的程度，特别是在需求峰值的情况下更是如此")
+#fig112()
+#align(center)[*图11.2　芯片封装的不同选择：DIP与BGA（可编辑概念示意）*]
 
-#text("现在，由于有大量的芯片 MO 和电源与地需要连接，很多公司转向采用陶瓷球栅阵列 (BGA，\nball-grid array ) 封装。在这种封装技术中, 焊球或焊块 ( bamp ) 代替了双列直插的管脚,如图 11.2 (b)\n所示。焊块可以放置在芯片里的任何地方，并且多许有 300 到 500 个 VO 连接。这是一种更昂贵的\n解决方案，但是当 VO 数超过以前封装技术的能力时必须采用。每个焊块的电感在 0.1 nH 数量级。")
+双列直插式（DIP）引线较长，封装寄生电感较大；球栅阵列（BGA）通过大量焊球连接，在供电回路方面可降低部分封装寄生电感，但也会增加封装和制造成本。
 
-#text("se")
-
-#text("oe")
-
-#text("or                         ae\neens")
-
-#text("Ca) RUSK                                    (b) Sem\nPL 芯片封装的不同选择")
+本页原扫描还讨论了地电位抬升与供电可靠性之间的关系；需要在后续编校中逐句恢复。
