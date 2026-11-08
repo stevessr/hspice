@@ -6,7 +6,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / "web"
-START, END = 419, 435
+START, END = 419, 445
 DATA = json.loads((ROOT / "page-status.json").read_text(encoding="utf-8"))
 assert DATA["source_pdf_pages"] == len(DATA["pages"]) == 445
 
@@ -28,6 +28,16 @@ EXPECTED = {
     433: ("B.1", "B.12", "双极结型晶体管"),
     434: ("图 B.1", "图 B.2", "beta_F"),
     435: ("(B.1)", "(B.2)", "tau_F"),
+    436: ("(B.3)", "(B.4.1a)", "肖特基"),
+    437: ("(B.4.1b)", "(B.4.5)", "integral"),
+    438: ("B.5", "V_(\"CC\")", "V_(\"CE\")"),
+    439: ("(B.5.1)", "(B.5.4)", "beta_F"),
+    440: ("(B.5.5)", "肖特基", "0.4"),
+    441: ("B.7", "B.8", "TTL"),
+    442: ("图 B.7", "B.9", "1.6 kΩ"),
+    443: ("BP1", "BP2", "BP3", "B.10"),
+    444: ("B.11", "B.12", "54/74 TTL", "10 ns"),
+    445: ("ISBN", "7-121-01666-4", "本书特点"),
 }
 # Correct spelling should not relapse to obvious machine-OCR confusions.
 BAD_TOKENS = ("MACHINE-OCR DRAFT ONLY", "pnos ", "W-0.4u", ".Eran ", "Vgatee ")
