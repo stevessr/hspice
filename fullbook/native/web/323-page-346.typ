@@ -1,22 +1,20 @@
-// SOURCE PDF PAGE 346; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第346页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第9章 ”存储器设计中的其他课题                 327")
+// SOURCE PDF PAGE 346. Scan-guided original Typst excerpt and editable schematics.
+// Not full-page 1:1 accepted; transistor topology and page geometry provisional.
+#import "../figures/ch9-nonvolatile-ch10-interconnect-native.typ": figure9late
+#set document(title:"第9章·非易失存储器·PDF346")
+#align(center)[#text(size:8pt,weight:"bold")[327　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("遗址的是,隧道效应机制不像 HCI 一样可以自限制，如果在控除期间太多的电荷被迁移， 则\n会产生一个问题”好可能低于0V，从而有效地产生一个即使邦上施加 0 V 电压也不会关闭的器\n件 使用选择器件的原因是阔值电压很难精确地控制，因为这取决于生产过程中的一些变化和主\n极二初始储存的电荷”如果由于初始储存的电荷使得不能可靠地达到希望的内部电压，那么存储\n器单元将不能正确工作”为了避免这个问题, 与 FLOTOX 品体管串联了一个选择管. 并连接到了\n字线和位线 选择管使用正常的字线电平, 而 FLOTOX 遇体管有一个位于两个可能阔值之间的合\n适的见电压，如图 9.23 所示 ”用这种方式，在制造后可以通过选择合适的栅电压来保证可靠的\n操作")
+E²PROM可以通过FN隧穿实现电擦除，但薄氧化层与额外选择器件使其位面积大于单管EPROM。尽管FLOTOX单元可以承受多次擦写，仍要考虑氧化层应力、寿命和擦写时间。
 
-#text("图9.27 显示了在一个阵列中安排8个 EiPROM 单元的排列.并且使用了图9.25 中的 2T单元\n字线驱动选择管而使用一个单独的控制作用于存储管的栅”考虑在图 927 (a) 中 EPROM 单元\n的写操作“当一条字线被选中时，位线电压为了编程上升到 12~15 V、而顶极保持0 V，上月源极\ni     SARL PATIOS IE SECA ATT CE 1 上产生净余的正电荷，这样的效\n果二降低钞存管的国值电压”通过在存储管的机上施加一个大的电压而同时把位线设置为 0 并使\n源极浮空来实现氛除，如图 9.27 ( b ) 所示，此时,电子经过济氧化层流向权 1，擦除当闭值电压\n增加到一个高于 Vn 的值时停止 ”一般写和控除操作是针对字节执行的，虽然逐位的存取在\nEPROM 中也是可能的.")
+图9.27给出了典型FLOTOX EEPROM阵列的编程与擦除偏置方案。写入时，在选中控制栅与源漏之间建立足够的电场；未选中的字线与位线应使用适当偏压，避免产生意外隧穿。
 
-#text("rom gt ety")
+#figure9late(27)
+#align(center)[*图9.27　E²PROM存储阵列及编程/擦除偏置（编辑示意）*]
 
-#text("add")
+图9.28给出EPROM阵列结构。由于EPROM各浮栅存储晶体管必须在行列交叉点被寻址，可将普通的行译码器、列多路器及读出器与浮栅单元组成阵列。和SRAM相比，浮栅上不需要持续供电才能保存状态。
 
-#text("Bly aa 上     Bly BL, Bly BL")
+#figure9late(28)
+#align(center)[*图9.28　EPROM阵列（原生可编辑拓扑草图）*]
 
-#text("(2) ODP FLOTOX FV)          《7 近除 (增加用中的 FLOTOX FEF EY Ve)\n图927 SAME HY EPROM 阵列结构")
-
-#text("如果 EPROM 频繁地被编程和控除，就会产生一个问题图 923 中的两个赣值电压开始向\n彼此相互移动，事实上.在一百万或者更多次写/擦周期之后， 这两个周值电压间的差别会太小以\n至于对于这种应用没有了价值EPROM 需要图 9.23 中那样明显区分开的阔值因此，  在可靠性\n成为问题之前，这些器件只适于进行10-108次的写/控周期")
-
-#text("从这个阵列该取时 ,用于选择管的字线电压升高而驱动 FLOTOX 管的权保持在一个恒定的电\n压，如图 9.28 fas. 这里我们假设 FLOTOX 栅的驱动是 Voo 虽然并非必须是这个值，读操作\n期间源极连接到地“如果 FLOTOX 器件导通，位线将放电; 如果是关闭的，位线将保持高电平\n读操作过程和 EPROM 的方式类似，  不过是通过激活选择管而非储存管执行的")
+在器件编程期间，未选择器件可能承受非期望的部分电压；可靠性设计需要检查阈值分布、漏电、隧穿电场和误编程风险。

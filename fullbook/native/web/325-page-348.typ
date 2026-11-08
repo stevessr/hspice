@@ -1,36 +1,18 @@
-// SOURCE PDF PAGE 348; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第348页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("ROE ”存储器设计中的其他课题            329")
+// SOURCE PDF PAGE 348. Scan-guided original Typst excerpt and editable schematics.
+// Not full-page 1:1 accepted; transistor topology and page geometry provisional.
+#import "../figures/ch9-nonvolatile-ch10-interconnect-native.typ": figure9late
+#set document(title:"第9章·非易失存储器·PDF348")
+#align(center)[#text(size:8pt,weight:"bold")[329　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("FEE SUC IE RR DE TTA TTR. 现在，这个管子即使当字线被激活的\n时候也将保持关闭 写操作可以逐位进行 .擦除操作需要栅节点接地而源节点接一个高电压值 Y")
+图9.30比较了两种Flash阵列结构。NOR型通过位线并联访问存储单元，而NAND型把多个浮栅器件串联。电路读出时必须用适当的选通电压，使未被读取的串联器件形成低电阻通路，目标单元的状态才能决定整个串联支路是否导通。
 
-#text("控除机制是穿过萍氧化层的 FN 隧道效应，\n部被控除.因此使用 Flash 这个术语- 这样，Flash 存储器中的氛除操作总是以块的模式进行的")
+#figure9late(30)
+#align(center)[*图9.30（续）两类Flash阵列*]
 
-#text("如图 930 (b ) 所示，连接到源节点的其他属体管同时")
+为对单元编程，选中控制栅与相应源、漏端施加规定的高低电平；未选单元偏置必须抑制扰动和误编程。图9.31展示Flash阵列的可编程偏置和读出方案，其设计与普通NOR ROM不同：同一组晶体管既用于读取，又必须承受较高的写/擦电压。
 
-#text("weeps!")
+#figure9late(31)
+#align(center)[*图9.31　Flash阵列编程与读取结构（原生编辑草图）*]
 
-#text("eRe\n(a) Bit")
-
-#text("FN Re\nCo) eM 【 仅对块进行")
-
-#text("图 930 或非门 Flash 存储器的写/控除操作")
-
-#text("读操作是通过把源节点接地. 把位线预充到Vi ， 并用电压Vs 使能字线来实现的, 如图931\n所示。V 的正确值必须选择在该器件的两个阔值电压之间。如果存在一个漏极电流，那么位线")
-
-#text("放电且视做存储“0\n也在图 9.31 中给出")
-
-#text("否则，位线保持高电平并代表“1\"。 这种存储器所需要的一个灵敏放大器")
-
-#text("Gnd")
-
-#text("Gna")
-
-#text("Grd Vy Gnd")
-
-#text("Gnd")
-
-#text("图931 或非门 Flash 存储只的读操作")
+Flash的读、编程和擦除需要不同的供电和时序控制。读出电路通常要判别阈值分布，且要兼顾擦写寿命、数据保持、相邻单元干扰及工艺变化。原书各器件端口、符号及电压标注尚需逐线复核。

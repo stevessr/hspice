@@ -6,9 +6,9 @@ r=Path(__file__).resolve().parents[1]
 a=json.loads((r/"qa/ocr-draft-coverage.json").read_text(encoding="utf-8"))
 s=json.loads((r/"page-status.json").read_text(encoding="utf-8"))["pages"]
 q=json.loads((r/"qa/fidelity-status.json").read_text(encoding="utf-8"))["pages"]
-assert a["source_pdf_pages"]==445 and a["machine_draft_pages"]==124
-assert a["ocr_characters"]==118061 and a["strict_full_pages_accepted"]==0
-assert [p["pdf_page"] for p in a["pages"]]==[*range(1,20),*range(341,446)]
+assert a["source_pdf_pages"]==445 and a["machine_draft_pages"]==108
+assert a["ocr_characters"]==103389 and a["strict_full_pages_accepted"]==0
+assert [p["pdf_page"] for p in a["pages"]]==[*range(1,20),*range(357,446)]
 for p in a["pages"]:
  n=p["pdf_page"]
  src=r/p["source_file"]
@@ -18,6 +18,6 @@ for p in a["pages"]:
  assert s[n-1]["machine_ocr_characters"]==p["machine_ocr_characters"]
  assert s[n-1]["status"]==q[n-1]["editorial_state"]=="draft-transcribed"
  assert not s[n-1].get("human_verified",False) and not all(q[n-1]["checks"].values())
-for n in range(20,341):assert s[n-1]["status"]=="partially-transcribed",n
+for n in range(20,357):assert s[n-1]["status"]=="partially-transcribed",n
 assert all(x["status"]!="not-started" for x in s)
-print("Editable Typst page sources: 445/445; editorial selection 321 + machine OCR 124, strict 1:1 0/445.")
+print("Editable Typst page sources: 445/445; editorial selection 337 + machine OCR 108, strict 1:1 0/445.")

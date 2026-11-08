@@ -1,40 +1,36 @@
-// SOURCE PDF PAGE 350; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第350页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("ROE 存储器设计中的其他课题            331")
+// SOURCE PDF PAGE 350. Editable source-guided editorial selection, strict page 1:1 not accepted.
+#import "../figures/ch9-nonvolatile-ch10-interconnect-native.typ": figure9late,figure10,fig-summary
+#set document(title:"数字集成电路第9章·PDF350")
+#align(center)[#text(size:8pt,weight:"bold")[331　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("优越然而，在大多数应用中半导体存储器比铁电存储器更受欢迎，因为它们在成本、拘人速度\n和物理人尺寸方面占有优势")
+图9.33给出FRAM的存储单元和铁电材料的电滞回线。电滞回线上的两种剩余极化状态在去除外电场后仍不同，这是非易失性的物理基础。
 
-#text("Wek")
+#figure9late(33)
+#align(center)[*图9.33　FRAM单元和铁电滞回特性（可编辑示意）*]
 
-#text("FF\n|       # ww")
+== 9.9　小结
 
-#text("ee 0%")
+本章把第8章的静态SRAM扩展到CAM、FPGA、DRAM、掩膜ROM、EPROM、EEPROM、Flash及FRAM。CAM将数据匹配转化为并行比较；FPGA使用配置位控制逻辑函数和布线；DRAM以电容电荷换取高密度，需要刷新；ROM和浮栅器件提供非易失性；FRAM以铁电材料的极化状态保存信息。
 
-#text("(799.33 FRAM 单元和极化特性\n9.9 小结\n第8 竟和第 9 章中讨论的各种不同类型半导体存储器的概要如下所")
+#figure9late(34)
+#align(center)[*图9.9节　半导体存储器类别汇总（编辑结构图）*]
 
-#text("sete (ria")
+*表9.1　存储器技术比较*
 
-#text("读/丰铺路                            Usb rete as")
+#table(
+  columns: (1.1fr,1.2fr,1.0fr,1.1fr,1.2fr),
+  inset:4pt,
+  [类型],[信息保存],[易失性],[改写手段],[主要代价],
+  [SRAM],[双稳态],[易失],[电写入],[单元面积],
+  [DRAM],[电容电荷],[易失],[电写/刷新],[刷新与感测],
+  [EPROM],[浮栅电荷],[非易失],[电编程/UV擦除],[擦除方式],
+  [EEPROM],[浮栅电荷],[非易失],[电擦写],[单元与耐久],
+  [Flash],[浮栅电荷],[非易失],[块擦除],[编程控制],
+  [FRAM],[剩余极化],[非易失],[极化翻转],[材料集成]
+)
+#text(size:8pt)[此表为可编辑的技术概念重排，原书表9.1的定量栏位尚未完成逐格核对，暂不伪造精确数据。]
 
-#text("}       f      于      于     U")
+== 9.10　参考文献
 
-#text("[eas] [ser] [oer] [an [Ba [En [mom")
-
-#text("表9.1 给出了可编程非易失性存储器的一个摘要\n表 9.1 可编程非易失性存储器摘要")
-
-#text("存傅关         es MS kd         周期           单元尺寸 速度            功耗")
-
-#text("EPROM       HCI            uv            整个存储器        10°            小              te             商")
-
-#text("EPROM FN              FN              位/字节              10°             大                te               低")
-
-#text("Flash            HCUFN         FN             R                     10°             小                快              低")
-
-#text("FRAM     极化      极化      位           10-10\" 小        th       低\n9.10 参考文献")
-
-#text("1. B. Prince, Emerging Memories: Technologies and Trends, Kluwer Academic Publishers,\nBoston, MA, 2002.")
-
-#text("2. K. Itoh, VLSI Memory Chip Design, Springer-Verlag, Heidelberg, 2001.")
+本页原书列有关于半导体存储器与VLSI设计的参考文献，包括 B. Prince《Emerging Memories》，K. Itoh《VLSI Memory Chip Design》等；完整出版项仍待逐条复核。

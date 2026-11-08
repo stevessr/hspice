@@ -1,26 +1,18 @@
-// SOURCE PDF PAGE 349; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第349页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("330         数字集成电路分析与设计一一深亚微米工艺 ( 第三版 }")
+// SOURCE PDF PAGE 349. Editable source-guided editorial selection, strict page 1:1 not accepted.
+#import "../figures/ch9-nonvolatile-ch10-interconnect-native.typ": figure9late,figure10,fig-summary
+#set document(title:"数字集成电路第9章·PDF349")
+#align(center)[#text(size:8pt,weight:"bold")[330　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("如果使用与非门阵列，则可以实现一个更小且更密集的 Flash 存储器，如网 9.32 所示。 这种\n类型的存储器使用 FN 赚道效应进行写和扩除, 这大大增加了读/护周期的次数, 达到 10*次以上\n这是央为使用 HCI 进行器件编程比使用 FN 隧道效应进行器件编程损坏器件的速度更快，与非门\nlash 存储器的操作类似于本章前面描述的与非门 ROM 的情况、字线通常为高电平. 但是当译码\n器激活时将有一条字线的电压变低 编程是通过使用 FN 隧道效应把 设置为一个高电平来实现\n的”使用这种结构开发出来了 2 Gb 存储容量的存储器，并且已经应用在了大容其存储器 、MP3\n播放器和数字昭相机等方面")
+图9.32给出了典型的Flash阵列。编程/读出时，通过行译码选定一条字线，通过列选择决定相应位线；源极选择和位线选择器件使串行存储单元串与外部读取电路连接。实际单元的阈值决定读出电流，感测放大器需要将电流或电压差转换为满摆幅逻辑。
 
-#text("\"SE HE-HIE- HE,\naura")
+#figure9late(32)
+#align(center)[*图9.32　Flash存储器内部阵列（原生可编辑逻辑草图）*]
 
-#text("wn HE   四")
+== 9.8　FRAM
 
-#text("“eae Le")
+铁电存储器（FRAM，ferroelectric RAM）利用铁电材料的剩余极化保存信息。与依靠泄漏电荷维持的DRAM不同，极化状态在撤去外电场后仍能保持，因此FRAM可具有非易失性。
 
-#text("图932 与非门 ash 阵列")
+铁电电容的正反两种剩余极化状态对应存储“0”和“1”。读出时通过电场变化判断极化翻转是否发生；部分铁电存储器的读出属于破坏性读取，之后需要再写回。和Flash的隧穿或热载流子编程不同，FRAM的写入通常主要依赖铁电极化反转。
 
-#text("*9.8 FRAM")
-
-#text("还有另一种受欢迎的基于铁电材料的非易失性存储器,叫做 PRAM. 近来,证实 FRAM 在\n诸如智能卡等特定的应用场合中是很有用的，而且由于具有极高的存储密度，在将来可能会更\nAMES] PAL 9.33 所示的 FRAM 单元与具有一个晶体管和一个电容的 DRAM 单元很相似。然\n而，这个电容是由钙詹矿易体材料构成的，能够在一个方向或另一个方向上被极化，从而存储\n所需要的值")
-
-#text("在一个方向或另一个方向上施加电场时，品体会被极化，并且即使在电源移走以后也保持那\n种;      于是形成了一个非易失性存储器 _极化特性 PROMS, 如图 933 中的曲线所示，\n这使得电容器可以保持极化方向，在写操作期间，电压施加在一个方向上 ( — Voc) 来存储“0\"，\n施加在另一个极性上 ( Vcc ) 存储“1”")
-
-#text("读取时，位线保持高电平且字线被使能“与单元相关的电流水平由储存的极化方向已快定。\n如果由于所加的电场而转变了偶极状态，灵敏触发器将检测到一个大电流。否则，电流水平比较\n低 遵仓的是，在读过程期间单元存储的值被扰乱，也就是说, 同样破坏性地读出 FRAM_ FL,\n保存的值必须被读出并写回原来的单元，这类似于 DRAM 单元的情况")
-
-#text("FRAM 只需要很少的功耗并提供很高的密度_FRAM 的另一个显著特点是在可靠性成为问题\n之前能够经受数千亿次的读/写周期在这方面, FRAM 比本章讨论的其他所有非易失性存储器都")
+FRAM单元可以使用一个访问晶体管与铁电电容。字线控制访问，位线负责写入与读取；外部灵敏放大器根据极化翻转时的电荷差异判定状态。

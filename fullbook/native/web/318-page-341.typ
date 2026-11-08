@@ -1,28 +1,19 @@
-// SOURCE PDF PAGE 341; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第341页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("322         数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 341. Scan-guided original Typst excerpt and editable schematics.
+// Not full-page 1:1 accepted; transistor topology and page geometry provisional.
+#import "../figures/ch9-nonvolatile-ch10-interconnect-native.typ": figure9late
+#set document(title:"第9章·非易失存储器·PDF341")
+#align(center)[#text(size:8pt,weight:"bold")[322　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("所有串联位的地方都提供一条连接到地的通路时列输出才降到低电平- 在 NAND ROM 中，在备\n用状态时所有的字线通常都保持在 Vop。选中的行线降到低电平，且所有栅连接到那条线的晶体\n管将关闭“在顶部得到数据输出”在正逻辑中，存储的    定义为存在一个晶体管，而存储的\nO° 用在晶体管的位置上的直接连接 ( 也就是短路 ) 来实现.阵列由每一个交叉处的晶体管形")
+9.5.1　MOS ROM单元阵列（续）
 
-#text("成，但是处于需要“0”的位置的晶体管的源-漏通路被注人或者扩散因而短路”列选择品体管与\nCCEA RL i RE")
+在NAND ROM中，若某一串联路径上的晶体管在选中后全部导通，列输出就会放电；未选中的字线应通过适当电平保持串联路径导通。图9.20(b)展示这种以串联器件构成的密集阵列。NOR和NAND ROM都可以通过版图掩膜中是否连接晶体管或阈值注入来设定存储位。
 
-#text("或非门阵列通常有较快的存取时间，还有一个优点就是存储的位图形可以通过定义到晶体管\n接触孔或金属互连层的掩膜来确定因此，当大部分制造过程都完成的时候这些 ROM 可以保存\n在库存中，然后通过准备和使用一个模板使得只在 0 位所在位置的晶体管进行连接来完成快速的\n定制过程")
+从速度角度看，NOR ROM的读通路不一定需要串联大量晶体管，通常较快；NAND ROM的晶体管复用和单元面积优势则有利于密度，但读取时可能带来更大的串联电阻。掩膜ROM还需要行译码、列多路选择以及输出缓冲器。
 
-#text("某于与非门的 ROM 有较长的存取时间, 量必须在生产过程的开始阶段进行定制( 在存储“0”\n的地方通常使用一个掩膜的 ”型注人在源和漏之间形成电连接 ) 它们每单位面积的位密度比使\n用相同工艺和设计规则的或非门结构的 ROM 要高得多，这就是与非门阵列的关键优势")
+图9.21使用一种电流模式读出结构：先由电流源与电路节点确定列电压，输入条件改变后，通过感测元件和输出反相器将列电流变化转换为逻辑输出。它与直接检测大幅位线电压的方法相比，可以减少部分位线摆幅。
 
-#text("ROM 的存取时间被行与列线的电阻与电容还有可用来驱动那些线的电流所限制，对于每一\n位成本比较低的大 ROM 来说，重点是高的电路版图密度，这需要单元和译码器有小的 WAL\n并胆会带来相对较小的驱动电流”出于对功耗和器件面积的考虑，限制了译码器的驱动电流")
+#figure9late(21)
+#align(center)[*图9.21　电流灵敏放大器（原生可编辑功能框图）*]
 
-#text("对于“0”的探测由于位线的大电容而需要使用一个灵敏电路，因为在有效时间内电压不会\n有可以检测得到的下降，所以在存在噪声的情况下一般需要一个电流灵敏放大器来可靠地检测")
-
-#text("“0” 同忆在 SRAM 中使用了差分的位线, 央为这样一来电压灵敏放大器可用来有效地抑制共模")
-
-#text("嗓声，这里，单端的电流灵敏放大器可以用来再生满幅的逻辑电平，如图 9.21 所示")
-
-#text("Cy ROR")
-
-#text("rows | row |\nwt      oi")
-
-#text("图921 LER MK AS")
+后续可编程非易失存储器保留了相似的字线/位线阵列组织，但存储状态由晶体管阈值而非有无器件决定。
