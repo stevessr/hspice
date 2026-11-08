@@ -1,42 +1,38 @@
-// SOURCE PDF PAGE 429; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第429页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("410        数字集成电路分析与设计一 深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 429 / printed page 410
+// Scan-checked transient and DC analysis syntax with native explanation.
+#set document(title:"附录A .tran .dc仿真命令 · PDF429")
+= 附录 A · 印刷第410页
+== A.3.4　分析声明（续）
+=== 瞬态分析的参数
 
-#text("tran   BARAT RULE HS IE\nMIL AeARDLAY SPICE 计算增生”如果这个仁是 | 秒，那么 SPICE 将从1= 0 开始每秒一\n次计算电路的变相值 ( 电压，电注\n如果增单们特别大或特别小、可以使用前织 { 例如、1 训秒基 1ms、200 纳秒直 200 ns )\ntstop 这个佳表示朋态分析停止的时间 “如果 step = 并且 stop = 10, 那么 SPICE 将从1= 0 9F8\n到4= 10 每秒一次计算电路的变硬值 ! 电化、电流 )\n如果增量单位特别大或特别小，可以使用前名 ( 例如，1 毫秒是 L ms. 200 纳秒是 200 ns")
+#table(columns:(1fr,3fr),inset:3pt,
+table.header([*字段*],[*定义*]),
+[`.tran`],[瞬态分析命令],
+[`tstep`],[建议的时间增量（原书以此说明输出观察尺度）],
+[`tstop`],[停止分析的时间],
+)
 
-#text("对于上面 RC 电路的例子，命令的句法如下:")
+*图 A.9* 的 RC 阶跃响应示例对应原书命令：
 
-#text(".Eran Im 10m")
+#raw(".tran 1m 10m", block: true)
 
-#text("直流")
+=== 直流分析
 
-#text("直流分析用于观察当另一个变量变化或从一个值扫描到另一个值时某一个变量的值，生成一\n个反相器的电压传输特性曲线, 或绘制 MOS 晶体管的 /LVY特性曲线时这是非常有用的“在这种类\n型的分析里，使用者说明要绘制的输出变量和扫描变量的开始值和结束值,以及一个给定的步长\n大小，SPICE 内部在开始值和结束值之间的每个中间点完成直流分析并且显示结果")
+直流分析通过扫描一个独立源的值观察其他变量，如反相器电压传输特性或 MOS 的 $I$–$V$ 曲线。*图 A.10* 中的电路由1 kΩ + 1 kΩ 电阻分压，电压源从0 V扫到10 V时，中点电压从0 V线性升至5 V。
 
-#text("例如，在疼 A.10 的电压除法器电路中，当电压源 Wowe从 0 V 扫到 10 V 时，可以观察到 RL")
+可选第二组扫描参数用于产生多条曲线。教材列出的形式：
 
-#text("tstep")
+#raw(".dc var1 start stop step <var2 start2 stop2 step2>", block: true)
 
-#text("和 R2 Ziad LEV,\nke                             IONE\nin         \\,\n5\n‘4\nzs\n2\n1\na a\nmer")
+#table(columns:(.95fr,3fr),inset:(x:3pt,y:2pt),
+table.header([*字段*],[*说明*]),
+[`var1`],[第一个扫描变量，例如 Vsource],
+[`start`],[扫描起点],
+[`stop`],[扫描终点],
+[`step`],[步长],
+[`var2`],[可选的第二扫描变量],
+[`start2` / `stop2`],[第二扫描范围],
+[`step2`],[第二扫描步长，决定输出曲线的组数],
+)
 
-#text("PE A1O %% Venue OV 扫到10V时V:的曲线")
-
-#text("在SPICE 里, 可以在对两个其他值进行扫描时观察一个值. 这将在同一幅图中产生多条曲线。\n在图 A.11 中, 是当漏极电压 Vani从 0 扫到 1.8 V 并且栅电压Vare从0 扫到 1.8 V 时观察漏极电流\n的情况， 直流分析声明的句法是:")
-
-#text(".dc varl start stop step <var2 start2 stop2 step2>")
-
-#text("BE, <> HLA FE LA AN BE BAB Ye,")
-
-#text("Lac         所有直流声明必须以此开头")
-
-#text("vari         要扫撒的变量名 ( 例如，Vsource )")
-
-#text("start      扫撒的起始值 (例如，0 )")
-
-#text("stop         TROP LICL COHN 10)")
-
-#text("step       es CO CT\nvara (可选) 要扣撒的第二个变量名称 { 例如，R2 )")
-
-#text("start2 (可选) ”第二个扫描的起始值 (例如，1 )\nsrop2 (可选) 。 第二个扫描的终止值( 例如，3 )\nStep2 (uli) 。 用于扫描第二个变贡的增量大小{ 例如，1 ) ，值起小，分析起精确但越大费时间")
+扫描第2变量不是瞬态随时间的变化；每一个扫描点都求解静态工作点。具体的 `.dc` 网表及图 A.11 见下一扫描页。
