@@ -1,5 +1,6 @@
 // SOURCE PDF PAGE 353. Editable source-guided editorial selection, strict page 1:1 not accepted.
 #import "../figures/ch9-nonvolatile-ch10-interconnect-native.typ": figure9late,figure10,fig-summary
+#import "../figures/ch9-dram-rom-native.typ": figure9later
 #set document(title:"数字集成电路第9章·PDF353")
 #align(center)[#text(size:8pt,weight:"bold")[334　数字集成电路分析与设计——深亚微米工艺（第三版）]]
 #line(length:100%,stroke:.55pt)
