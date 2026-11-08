@@ -3,7 +3,7 @@
 #import "ch7-domino-continuation-native.typ": w, t, b, inv, cap, gnd
 #let tg(x,y,label:"TG")={
   b(x,y,30pt,23pt,label)
-  w(x+15pt,y,x+15pt,y-11pt)
+  w(x+15pt,y,x+15pt,y - 11pt)
   w(x+15pt,y+23pt,x+15pt,y+34pt)
 }
 #let chain(n:3)=html.frame(block(width:372pt,height:118pt)[
