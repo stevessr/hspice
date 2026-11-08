@@ -1,0 +1,158 @@
+{
+  "schema": "ch7-domino-pass11-source-review",
+  "source_pdf_pages": 445,
+  "scope": [
+    277,
+    284
+  ],
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "basis": "445-page source PDF scan and archived draft OCR, source visual review of equations and illustration landmarks",
+  "second_independent_ocr": "not_completed",
+  "strict_full_page_accepted": 0,
+  "known_source_arithmetic_discrepancy": [
+    {
+      "pdf_page": 282,
+      "term": "C_gnd",
+      "printed_terms": "(1 fF/um)(40)(0.05 um)+(2 fF/um)(12)(0.05 um)",
+      "printed_result": "5 fF",
+      "direct_arithmetic": "3.2 fF",
+      "treatment": "reproduce printed 5 fF and flag discrepancy; no silent correction",
+      "downstream_printed_values": [
+        "C_f=0.8 fF",
+        "clock feedthrough=0.17 V",
+        "V*=1.0 V",
+        "V_X=1.08 V"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "pdf_page": 277,
+      "source_scan_sha256": "88594ed96b0735b99074188c3df883f5e8bef94c5df90f61f75e882c44067c23",
+      "archived_ocr_characters": 595,
+      "editable_native_typst": true,
+      "full_text_character_verified": false,
+      "all_equations_verified": false,
+      "electrical_nodes_verified": false,
+      "source_geometry_verified": false,
+      "strictly_accepted": false,
+      "open_issues": [
+        "compare each source line and punctuation",
+        "verify transistor source/drain/bulk and CLK polarity, all gate connections",
+        "match captions, figure labels, font metrics, source page placement"
+      ]
+    },
+    {
+      "pdf_page": 278,
+      "source_scan_sha256": "a37d9957267c623ca6b27b9a369cac0da9bb07a6720edc8753be6bbddfcda7f6",
+      "archived_ocr_characters": 1341,
+      "editable_native_typst": true,
+      "full_text_character_verified": false,
+      "all_equations_verified": false,
+      "electrical_nodes_verified": false,
+      "source_geometry_verified": false,
+      "strictly_accepted": false,
+      "open_issues": [
+        "compare each source line and punctuation",
+        "verify transistor source/drain/bulk and CLK polarity, all gate connections",
+        "match captions, figure labels, font metrics, source page placement"
+      ]
+    },
+    {
+      "pdf_page": 279,
+      "source_scan_sha256": "3bb334c48fe0380b73cbc0ddd88d97a2959e6e35fb5a778a7f960d14b5c5e9ab",
+      "archived_ocr_characters": 1103,
+      "editable_native_typst": true,
+      "full_text_character_verified": false,
+      "all_equations_verified": false,
+      "electrical_nodes_verified": false,
+      "source_geometry_verified": false,
+      "strictly_accepted": false,
+      "open_issues": [
+        "compare each source line and punctuation",
+        "verify transistor source/drain/bulk and CLK polarity, all gate connections",
+        "match captions, figure labels, font metrics, source page placement"
+      ]
+    },
+    {
+      "pdf_page": 280,
+      "source_scan_sha256": "19bdcc58066b65344eae7d3671b9260c9788ebd0f94e597240689b633d385f39",
+      "archived_ocr_characters": 1277,
+      "editable_native_typst": true,
+      "full_text_character_verified": false,
+      "all_equations_verified": false,
+      "electrical_nodes_verified": false,
+      "source_geometry_verified": false,
+      "strictly_accepted": false,
+      "open_issues": [
+        "compare each source line and punctuation",
+        "verify transistor source/drain/bulk and CLK polarity, all gate connections",
+        "match captions, figure labels, font metrics, source page placement"
+      ]
+    },
+    {
+      "pdf_page": 281,
+      "source_scan_sha256": "3b08d41854a4beb0e76e0f2e863f5c2ef47da55b69d5f89c3e20440faf18cdcd",
+      "archived_ocr_characters": 657,
+      "editable_native_typst": true,
+      "full_text_character_verified": false,
+      "all_equations_verified": false,
+      "electrical_nodes_verified": false,
+      "source_geometry_verified": false,
+      "strictly_accepted": false,
+      "open_issues": [
+        "compare each source line and punctuation",
+        "verify transistor source/drain/bulk and CLK polarity, all gate connections",
+        "match captions, figure labels, font metrics, source page placement"
+      ]
+    },
+    {
+      "pdf_page": 282,
+      "source_scan_sha256": "9005d6fcdd9a8d214a409779ef38ccb42822ce853c234a2fdefda4725fd34e56",
+      "archived_ocr_characters": 1028,
+      "editable_native_typst": true,
+      "full_text_character_verified": false,
+      "all_equations_verified": false,
+      "electrical_nodes_verified": false,
+      "source_geometry_verified": false,
+      "strictly_accepted": false,
+      "open_issues": [
+        "compare each source line and punctuation",
+        "verify transistor source/drain/bulk and CLK polarity, all gate connections",
+        "match captions, figure labels, font metrics, source page placement"
+      ]
+    },
+    {
+      "pdf_page": 283,
+      "source_scan_sha256": "b765acf3eb685a9a97e1459896759808ad0a7778b1715005d57855a3c5e8180e",
+      "archived_ocr_characters": 535,
+      "editable_native_typst": true,
+      "full_text_character_verified": false,
+      "all_equations_verified": false,
+      "electrical_nodes_verified": false,
+      "source_geometry_verified": false,
+      "strictly_accepted": false,
+      "open_issues": [
+        "compare each source line and punctuation",
+        "verify transistor source/drain/bulk and CLK polarity, all gate connections",
+        "match captions, figure labels, font metrics, source page placement"
+      ]
+    },
+    {
+      "pdf_page": 284,
+      "source_scan_sha256": "565edd98c20b63126a6fc64033c2e680ca76b37c3d13484e1279de0f727c739c",
+      "archived_ocr_characters": 738,
+      "editable_native_typst": true,
+      "full_text_character_verified": false,
+      "all_equations_verified": false,
+      "electrical_nodes_verified": false,
+      "source_geometry_verified": false,
+      "strictly_accepted": false,
+      "open_issues": [
+        "compare each source line and punctuation",
+        "verify transistor source/drain/bulk and CLK polarity, all gate connections",
+        "match captions, figure labels, font metrics, source page placement"
+      ]
+    }
+  ]
+}

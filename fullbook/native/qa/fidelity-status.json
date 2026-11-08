@@ -6042,7 +6042,7 @@
     },
     {
       "pdf_page": 277,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6054,13 +6054,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字和全部标点、方程脚注尚未完整验收",
+        "晶体管源/漏/体端、时钟信号极性及图形线路尚未逐线终审",
+        "原版版心字形与图注位置需要SVG叠图检验"
+      ],
+      "notes": "PDF277: native text and source-driven editable diagrams, full text, all transistor polarities and 1:1 print geometry still pending.",
       "page_source_verified": false
     },
     {
       "pdf_page": 278,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6072,13 +6076,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字和全部标点、方程脚注尚未完整验收",
+        "晶体管源/漏/体端、时钟信号极性及图形线路尚未逐线终审",
+        "原版版心字形与图注位置需要SVG叠图检验"
+      ],
+      "notes": "PDF278: native text and source-driven editable diagrams, full text, all transistor polarities and 1:1 print geometry still pending.",
       "page_source_verified": false
     },
     {
       "pdf_page": 279,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6090,13 +6098,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字和全部标点、方程脚注尚未完整验收",
+        "晶体管源/漏/体端、时钟信号极性及图形线路尚未逐线终审",
+        "原版版心字形与图注位置需要SVG叠图检验"
+      ],
+      "notes": "PDF279: native text and source-driven editable diagrams, full text, all transistor polarities and 1:1 print geometry still pending.",
       "page_source_verified": false
     },
     {
       "pdf_page": 280,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6108,13 +6120,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字和全部标点、方程脚注尚未完整验收",
+        "晶体管源/漏/体端、时钟信号极性及图形线路尚未逐线终审",
+        "原版版心字形与图注位置需要SVG叠图检验"
+      ],
+      "notes": "PDF280: native text and source-driven editable diagrams, full text, all transistor polarities and 1:1 print geometry still pending.",
       "page_source_verified": false
     },
     {
       "pdf_page": 281,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6126,13 +6142,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字和全部标点、方程脚注尚未完整验收",
+        "晶体管源/漏/体端、时钟信号极性及图形线路尚未逐线终审",
+        "原版版心字形与图注位置需要SVG叠图检验"
+      ],
+      "notes": "PDF281: native text and source-driven editable diagrams, full text, all transistor polarities and 1:1 print geometry still pending.",
       "page_source_verified": false
     },
     {
       "pdf_page": 282,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6144,13 +6164,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字和全部标点、方程脚注尚未完整验收",
+        "晶体管源/漏/体端、时钟信号极性及图形线路尚未逐线终审",
+        "原版版心字形与图注位置需要SVG叠图检验"
+      ],
+      "notes": "PDF282: native text and source-driven editable diagrams, full text, all transistor polarities and 1:1 print geometry still pending.",
       "page_source_verified": false
     },
     {
       "pdf_page": 283,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6162,13 +6186,17 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字和全部标点、方程脚注尚未完整验收",
+        "晶体管源/漏/体端、时钟信号极性及图形线路尚未逐线终审",
+        "原版版心字形与图注位置需要SVG叠图检验"
+      ],
+      "notes": "PDF283: native text and source-driven editable diagrams, full text, all transistor polarities and 1:1 print geometry still pending.",
       "page_source_verified": false
     },
     {
       "pdf_page": 284,
-      "editorial_state": "not-started",
+      "editorial_state": "partially-transcribed",
       "checks": {
         "text_complete": false,
         "math_complete": false,
@@ -6180,8 +6208,12 @@
         "typst_html_compiled": false
       },
       "evidence": {},
-      "unresolved": [],
-      "notes": "尚未完成全文逐页、逐元素对照",
+      "unresolved": [
+        "逐字和全部标点、方程脚注尚未完整验收",
+        "晶体管源/漏/体端、时钟信号极性及图形线路尚未逐线终审",
+        "原版版心字形与图注位置需要SVG叠图检验"
+      ],
+      "notes": "PDF284: native text and source-driven editable diagrams, full text, all transistor polarities and 1:1 print geometry still pending.",
       "page_source_verified": false
     },
     {
