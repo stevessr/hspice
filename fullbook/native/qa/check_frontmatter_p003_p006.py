@@ -34,6 +34,6 @@ for n, path in pages.items():
     missing = [item for item in anchors[n] if item not in src]
     assert not missing, f"PDF {n}: missing scan-verified anchors {missing}"
     if n == 6:
-        assert '#grid(' in src and src.count("[], [") >= 18
+        assert '#table(' in src and src.count("[], [") >= 18
     print(f"PDF {n}: {len(anchors[n])} text anchors present, native editable source")
 print("This QA does NOT confer 1:1 page acceptance.")

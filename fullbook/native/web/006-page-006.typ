@@ -7,10 +7,12 @@
 #align(center)[#text(size: 13pt, weight: "bold")[教材出版委员会]]
 #v(23pt)
 
-#grid(
+#table(
   columns: (39pt, 55pt, 1fr),
   column-gutter: 5pt,
   row-gutter: 5.2pt,
+  inset: (x: 0pt, y: 0pt),
+  stroke: none,
   [主　任], [吴佑寿], [中国工程院院士，清华大学教授],
   [副主任], [林金桐], [北京邮电大学校长、教授、博士生导师],
   [], [杨千里], [总参通信部副部长，中国电子学会会士、副理事长；中国通信学会常务理事],
