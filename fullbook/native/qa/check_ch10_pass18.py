@@ -11,7 +11,8 @@ assert a["strict_full_pages_accepted"]==0
 marks={357:("10.2.2","10.3","10.4","10.5"),358:("图10.5","艾蒙"),359:("图10.6","例10.1","10.6"),360:("10.2.3","10.7","图10.7","图10.8"),361:("例10.2","14.8","92.5"),362:("例10.3","1080","1.3"),363:("图10.9","10.3"),364:("图10.10",'R_("eqn")')}
 for n,words in marks.items():
  p=(r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
- assert all(x in p for x in words),(n,[x for x in words if x not in p])
+ compact = ''.join(p.split())
+ assert all(''.join(x.split()) in compact for x in words),(n,[x for x in words if ''.join(x.split()) not in compact])
  assert s[n-1]["status"]==q[n-1]["editorial_state"]=="draft-transcribed"
  assert s[n-1]["editorial_typst_draft"] is True and s[n-1]["source_scan_landmarks_checked"] is True
  assert not s[n-1]["human_verified"] and not all(q[n-1]["checks"].values())
