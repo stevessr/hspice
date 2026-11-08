@@ -94,7 +94,7 @@ s150=(w/"127-page-150.typ").read_text(encoding="utf-8")
 assert "因此有一个正值" in s147 and "各电压取绝对值" in s147
 assert "因而有负号" not in s147 and "电压级换为负值" not in s147
 # PDF148 full region III equation appears before its E_c L approximation.
-assert "完整电流平衡式" in s148 and "V_(\\\"in\\\")=V_S" in s148
+assert "完整电流平衡式" in s148 and 'V_("in")=V_("out")=V_S' in s148
 assert s148.index("完整电流平衡式") < s148.index("忽略这两项")
 assert all(t in s148 for t in (
     'E_("cN") L_N', 'E_("cP") L_P', 'V_S - V_("TN")',
