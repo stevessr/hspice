@@ -12,6 +12,11 @@
 #align(center)[$R_("wire") = R_("int") L = R_("sq") L/W$]
 #align(center)[$C_("wire") = C_("int") L$]
 
+教材本页以单位长度电阻 $R_("int")$ 和电容 $C_("int")$ 表示没有缓冲器的均匀连线：
+
+$ R_("wire") = (rho/T)(L/W) = R_("sq") L/W = R_("int") L $
+$ C_("wire") = C_("int") L $
+
 为了减少延迟，可以插入 $N$ 级缓冲器，把导线均匀划分为长度约为 $L/N$ 的若干段。
 
 #figure10more(10)
