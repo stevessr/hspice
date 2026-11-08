@@ -5528,11 +5528,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "尚未完成全部字符/符号/公式原样的逐行核对",
-        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
-        "页眉/页脚/断行/图注视觉叠图差异未验收"
+        "P6.12/P6.13门输入与旁路扇出尚未逐线校准",
+        "P6.16源排版与字号差异",
+        "全部字形、标点、图注与原始印刷版心逐元素验收尚未完成"
       ],
-      "notes": "PDF253: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
+      "notes": "Second scan/source reflow PDF253; evidence in qa/source-rescan-p253-p260-20261108.json. Still unaccepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -5550,11 +5550,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "尚未完成全部字符/符号/公式原样的逐行核对",
-        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
-        "页眉/页脚/断行/图注视觉叠图差异未验收"
+        "本章提要的灰底纹理与原文排印细节不同",
+        "章节标题及正文逐行断点未验收",
+        "全部字形、标点、图注与原始印刷版心逐元素验收尚未完成"
       ],
-      "notes": "PDF254: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
+      "notes": "Second scan/source reflow PDF254; evidence in qa/source-rescan-p253-p260-20261108.json. Still unaccepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -5572,11 +5572,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "尚未完成全部字符/符号/公式原样的逐行核对",
-        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
-        "页眉/页脚/断行/图注视觉叠图差异未验收"
+        "图7.1六个NMOS/PMOS传输情况的控制极性及S/D画法须逐图复核",
+        "原图字高与公式下标未校准",
+        "全部字形、标点、图注与原始印刷版心逐元素验收尚未完成"
       ],
-      "notes": "PDF255: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
+      "notes": "Second scan/source reflow PDF255; evidence in qa/source-rescan-p253-p260-20261108.json. Still unaccepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -5594,11 +5594,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "尚未完成全部字符/符号/公式原样的逐行核对",
-        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
-        "页眉/页脚/断行/图注视觉叠图差异未验收"
+        "图7.2级联栅控连接需要逐线复刻",
+        "源页体效应引起的阈值表达式符号检查待完成",
+        "全部字形、标点、图注与原始印刷版心逐元素验收尚未完成"
       ],
-      "notes": "PDF256: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
+      "notes": "Second scan/source reflow PDF256; evidence in qa/source-rescan-p253-p260-20261108.json. Still unaccepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -5616,11 +5616,10 @@
       },
       "evidence": {},
       "unresolved": [
-        "尚未完成全部字符/符号/公式原样的逐行核对",
-        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
-        "页眉/页脚/断行/图注视觉叠图差异未验收"
+        "图7.3 PMOS传输管极性及图7.4馈通电容节点精确位置待复核",
+        "全部字形、标点、图注与原始印刷版心逐元素验收尚未完成"
       ],
-      "notes": "PDF257: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
+      "notes": "Second scan/source reflow PDF257; evidence in qa/source-rescan-p253-p260-20261108.json. Still unaccepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -5638,11 +5637,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "尚未完成全部字符/符号/公式原样的逐行核对",
-        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
-        "页眉/页脚/断行/图注视觉叠图差异未验收"
+        "图7.5两组电容波形与例7.1两种输入图未完全复刻",
+        "标量公式已补齐但版式未精校",
+        "全部字形、标点、图注与原始印刷版心逐元素验收尚未完成"
       ],
-      "notes": "PDF258: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
+      "notes": "Second scan/source reflow PDF258; evidence in qa/source-rescan-p253-p260-20261108.json. Still unaccepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -5660,11 +5659,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "尚未完成全部字符/符号/公式原样的逐行核对",
-        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
-        "页眉/页脚/断行/图注视觉叠图差异未验收"
+        "例7.1栅源与覆叠电容数值复核已做",
+        "图7.6源/漏电路和电容画法待精校",
+        "全部字形、标点、图注与原始印刷版心逐元素验收尚未完成"
       ],
-      "notes": "PDF259: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
+      "notes": "Second scan/source reflow PDF259; evidence in qa/source-rescan-p253-p260-20261108.json. Still unaccepted 1:1.",
       "page_source_verified": false
     },
     {
@@ -5682,11 +5681,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "尚未完成全部字符/符号/公式原样的逐行核对",
-        "原始晶体管端口、栅驱动节点、输出电容和图线待逐线对照",
-        "页眉/页脚/断行/图注视觉叠图差异未验收"
+        "例7.2(c)电荷守恒结果1.04V需完整人工终验",
+        "公式与换行布局差异尚存",
+        "全部字形、标点、图注与原始印刷版心逐元素验收尚未完成"
       ],
-      "notes": "PDF260: native chapter transition/clock feedthrough/charge share transcription, strict 1:1 still pending",
+      "notes": "Second scan/source reflow PDF260; evidence in qa/source-rescan-p253-p260-20261108.json. Still unaccepted 1:1.",
       "page_source_verified": false
     },
     {

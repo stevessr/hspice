@@ -11,9 +11,9 @@ assert len(audit["pages"])==8 and audit["strict_full_pages_accepted"]==0
 tokens={
  253:("P6.14","P6.15","P6.16","90","45","22","FO4"),
  254:("第7章","7.1","7.2","7.3","绪论","动态"),
- 255:("7.2.1","图7.1","fig71","V_(\"DD\")-V_(\"Tn\")"),
- 256:("图7.2","fig72","V_(\"Tn\")","PMOS"),
- 257:("7.2.2","图7.3","图7.4","fig73","fig74"),
+ 255:("7.2.1","图7.1","fig71","V_(\"DD\")-V_(\"TN\")"),
+ 256:("图7.2","fig72","V_(\"TN\")","PMOS"),
+ 257:("7.2.2","图7.3","图7.4","fig73","feedthrough-panel"),
  258:("图7.5","(7.1)","(7.2)","(7.3)","例7.1","fig75"),
  259:("7.2.3","图7.6","0.73","0.05","0.2","-0.67","fig76"),
  260:("(7.4)","(7.5)","(7.6)","例7.2","0.2","0.6","1.0")
@@ -31,8 +31,8 @@ for n,expected in tokens.items():
  assert not a["human_verified"] and not a["layout_verified"]
  assert not b["page_source_verified"] and not all(b["checks"].values())
  assert not audit["pages"][n-253]["accepted"]
-fig=(root/"figures/ch7-pass8-native.typ").read_text(encoding="utf-8")
-for fn in ("fig71","fig72","fig73","fig74","fig75","fig76"):
+fig=(root/"figures/ch7-pass-transistor-native.typ").read_text(encoding="utf-8")
+for fn in ("fig71","fig72","fig73","feedthrough-panel","fig75","fig76","fig-p612","fig-p613"):
  assert "#let "+fn+"(" in fig
 assert math.isclose(.05*1.2/(.05+.2),.24)
 assert math.isclose(.25*1.2/(.25+.2),2/3)
