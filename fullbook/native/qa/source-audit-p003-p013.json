@@ -1,0 +1,79 @@
+{
+  "source_pdf_pages": 445,
+  "scope": [
+    3,
+    13
+  ],
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "rendering": "pdftoppm -f 3 -l 13 -r 150 -png",
+  "pages": [
+    {
+      "pdf_page": 3,
+      "printed_page": null,
+      "source_render_sha256": "d04cfef7000b698333c50f3f1fa3529da1f5d534abacb02b98871ffcecf326c4",
+      "section": "出版说明与CIP"
+    },
+    {
+      "pdf_page": 4,
+      "printed_page": 3,
+      "source_render_sha256": "51f2fa0d254895d6bfe151b7d33806a1db040e65229048793a1b809230a4f9be",
+      "section": "序"
+    },
+    {
+      "pdf_page": 5,
+      "printed_page": 4,
+      "source_render_sha256": "7f2ca69b058aed219067dc872e9a2807d24bb4399993d34cc1b1b0bedda6463c",
+      "section": "出版说明"
+    },
+    {
+      "pdf_page": 6,
+      "printed_page": 5,
+      "source_render_sha256": "d215870876da00d8963ef6b26d2851cf1bbd01aecd78f3f3b70e272473b59c4c",
+      "section": "教材出版委员会"
+    },
+    {
+      "pdf_page": 7,
+      "printed_page": 6,
+      "source_render_sha256": "6708f6faf8ec05c2908ed6f8dae9665bc138fc2d14ea614a6e7c1315fdf2d89c",
+      "section": "译者序"
+    },
+    {
+      "pdf_page": 8,
+      "printed_page": 7,
+      "source_render_sha256": "a96a8e80f83173e7ae443e49aac661afe99799c8c22f8b56f7c28852885d43ee",
+      "section": "关于作者"
+    },
+    {
+      "pdf_page": 9,
+      "printed_page": 8,
+      "source_render_sha256": "6aed53bf034f04b3703790cbee9fba275113a079c30b322a13b5043fece32adc",
+      "section": "第三版前言"
+    },
+    {
+      "pdf_page": 10,
+      "printed_page": 9,
+      "source_render_sha256": "56006b75f1f4c2bc6bad4722911e6f1b54a3d0865013ece66461804c133816b2",
+      "section": "前言课程建议"
+    },
+    {
+      "pdf_page": 11,
+      "printed_page": 10,
+      "source_render_sha256": "be49fc4a1c114fbb02c502e2e3ffec585a1a5f236d8e867168a2da2ddbb67594",
+      "section": "章节导读1–6"
+    },
+    {
+      "pdf_page": 12,
+      "printed_page": 11,
+      "source_render_sha256": "0d83dc04312e3d1033ecc59fdc4c8bafeff85d158c7f0b7cc8aeef424586bf2e",
+      "section": "章节导读7–11"
+    },
+    {
+      "pdf_page": 13,
+      "printed_page": 12,
+      "source_render_sha256": "248a4d54c412dc43daf422f1e576f6db7f31e17ae89bac008ebbcbfeb4328bf3",
+      "section": "致谢"
+    }
+  ],
+  "strict_full_pages_accepted": 0,
+  "note": "Source scan read at 150dpi and available machine OCR compared, 11 initial frontmatter pages retyped. No scan-overlay acceptance, trademarks/signature not editable."
+}

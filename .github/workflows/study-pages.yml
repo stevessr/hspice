@@ -182,6 +182,7 @@ jobs:
           python3 fullbook/native/qa/check_ch11_pass24.py
           python3 fullbook/native/qa/check_ch11_pass25.py
           python3 fullbook/native/qa/check_ch11_pass26.py
+          python3 fullbook/native/qa/check_frontmatter_pass27.py
           for source in fullbook/native/web/*-page-*-layout.typ; do
             stem="$(basename "${source%-layout.typ}")"
             target="study/midterm/public/native-typst/${stem}-layout.svg"

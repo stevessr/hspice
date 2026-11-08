@@ -73,11 +73,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF3: unverified machine-OCR Typst source",
+      "notes": "PDF3: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
@@ -95,11 +95,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF4: unverified machine-OCR Typst source",
+      "notes": "PDF4: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
@@ -117,11 +117,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF5: unverified machine-OCR Typst source",
+      "notes": "PDF5: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
@@ -139,11 +139,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF6: unverified machine-OCR Typst source",
+      "notes": "PDF6: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
@@ -161,11 +161,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF7: unverified machine-OCR Typst source",
+      "notes": "PDF7: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
@@ -183,11 +183,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF8: unverified machine-OCR Typst source",
+      "notes": "PDF8: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
@@ -205,11 +205,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF9: unverified machine-OCR Typst source",
+      "notes": "PDF9: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
@@ -227,11 +227,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF10: unverified machine-OCR Typst source",
+      "notes": "PDF10: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
@@ -249,11 +249,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF11: unverified machine-OCR Typst source",
+      "notes": "PDF11: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
@@ -271,11 +271,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF12: unverified machine-OCR Typst source",
+      "notes": "PDF12: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
@@ -293,11 +293,11 @@
       },
       "evidence": {},
       "unresolved": [
-        "OCR正文仍需逐字校对，数学符号和表格需要重建",
-        "原书电路图尚未逐端转换成准确Typst图元",
-        "扫描像素版式与页眉脚注尚未验收"
+        "原扫描与排版渲染文字逐字及字符间距尚未独立二次验收",
+        "签名、封底防伪和原始出版工艺图像未重建为可编辑图元",
+        "逐页扫描与SVG渲染叠加比对尚未通过"
       ],
-      "notes": "PDF13: unverified machine-OCR Typst source",
+      "notes": "PDF13: source-scan guided foreword, author/title, bilingual publishing details native Typst; not independently 1:1 certified.",
       "page_source_verified": false
     },
     {
