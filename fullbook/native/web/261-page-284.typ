@@ -9,7 +9,7 @@
 *解答：* 双轨异或和同或的两个输出分别对应：
 
 #align(center)[$"XOR"=a overline(b)+overline(a)b$]
-#align(center)[$"XNOR"=ab+overline(a)overline(b)$]
+#align(center)[$"XNOR"=a b+overline(a)overline(b)$]
 
 两个互补逻辑块使用公共的预充时钟与求值通路。源图的晶体管网络应在下一轮逐管核对；这里给出了可编辑的双轨功能结构。
 

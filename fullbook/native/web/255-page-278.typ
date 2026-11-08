@@ -19,7 +19,7 @@
 *解答：* 需要用多米诺门产生 $a$ 与 $b$ 的异或和同或逻辑，并把它们加入第三个异或门。为了实现这些功能，需要 $X$ 的正值及其反值。
 
 #align(center)[$X=a overline(b)+overline(a)b$]
-#align(center)[$overline(X)=ab+overline(a)overline(b)$]
+#align(center)[$overline(X)=a b+overline(a)overline(b)$]
 #align(center)[$"sum"=c overline(X)+overline(c) X$]
 
 #fig-example77()
