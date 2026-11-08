@@ -6,7 +6,7 @@ root=Path(__file__).resolve().parents[1];w=root/"web"
 m=json.loads((root/"page-status.json").read_text(encoding="utf-8"))
 assert m["source_pdf_pages"]==445 and len(m["pages"])==445
 terms={
-147:["图4.12","five-regions","through-current","III","PMOS"],
+147:["图4.12","fig412-circuit","fig412-loadline","fig412-vtc","fig412-current","PMOS","n-off","n-sat"],
 148:['"(4.14)"','"(4.15)"',"chi","mu_n","mu_p"],
 149:["例4.6","0.6","0.53","100","400","n-lin"],
 150:['"(4.16)"',"V_(\"IL\")","I_(\"DN\")"],
@@ -30,6 +30,23 @@ for n,words in terms.items():
  wrapper=lay.read_text(encoding="utf-8")
  assert "506.8346pt" in wrapper and "729.6pt" in wrapper,n
  assert '#include "'+path.name+'"' in wrapper,n
+# Figure 4.12 PDF147 is four panels, not two generic graphs.
+fig412=(root/"figures/ch4-figure-4-12-native.typ").read_text(encoding="utf-8")
+s147=(w/"124-page-147.typ").read_text(encoding="utf-8")
+for name in ("circuit","loadline","vtc","current"):
+    assert f"#let fig412-{name}()" in fig412
+    assert f"fig412-{name}()" in s147
+assert "#image(" not in fig412
+for landmark in ('V_("DD")', 'V_("out")', 'V_("in")', 'I_("DN")', 'I_("DP")',
+                 'V_("TN")', 'V_("IL")', 'V_("IH")', 'V_("TP")',
+                 "n-off", "n-sat"):
+    assert landmark in fig412 or landmark in s147, landmark
+assert "负载线" in fig412 and "电压传输特性" in fig412
+# Source panel topology: a complementary series pair, an arch-shaped
+# I-V load line, a falling VTC, and a peaked CMOS through-current.
+assert all(token in fig412 for token in (
+    "PMOS", "NMOS", "curve.cubic", "curve.move", "curve.cubic((84pt,-99pt)"
+))
 # Compare printed examples with independent arithmetic.
 for wp,chi_expected,v_expected in ((.4,1,.6),(.1,2,.533333333)):
  chi=math.sqrt(.1*24/(wp*6))
