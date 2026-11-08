@@ -1,26 +1,31 @@
-// SOURCE PDF PAGE 424; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第424页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("HERA SPICE 的简要介绍                      405")
+// SOURCE PDF PAGE 424 / printed page 405
+// Scan-guided reconstruction of table A.2; physical figures are editorial placeholders.
+#set document(title:"附录A SPICE元件值、工程前缀与模型 · PDF424")
+= 附录 A · 印刷第405页
+== A.3.3　源和器件列表（续）
 
-#text("图 A.3 显示了一个名称为 R5 的 10 km的电阻，连接在节点\"5\"和地之间")
+*图 A.3* 以电阻 `R5` 连接节点5与地，电阻值为 $10 " kΩ"$：
 
-#text("RS        5       0       10k\nRs\n10x\n5一Mr一0\nMAS “一个电阻被动元件")
+#raw("R5 5 0 10k", block: true)
 
-#text("值")
+=== 值与工程前缀
 
-#text("元件值用浮点数说明.特别大或特别小的值( 例如 > 1000 或 < 0.001 ) 可以用指数形式或用\n工程学前缕说明。表 A.2 给出了乘数因子和与其相关的 10 次宕的后缀字母 、公制前级和指数形\n式- 最后一列显示了用工程形式和指数形式表示的两个相等的值.")
+原书表 A.2 的指数与前缀重排如下。尤其注意 SPICE 的 `M` 表示毫（milli），而百万需要用 `Meg`。
 
-#text("FAQ SPICE 的前统和指数")
+#table(columns:(.65fr,1fr,1fr,.7fr,1.25fr),inset:(x:2pt,y:2pt),
+table.header([*数量级*],[*公制前缀*],[*SPICE后缀*],[*指数*],[*示例*]),
+[$10^9$],[Giga],[`G`、`g`],[`E9`],[`4.2G` = `4.2E9`],
+[$10^6$],[Mega],[`Meg`、`meg`],[`E6`],[`.2Meg` = `.2E6`],
+[$10^3$],[Kilo],[`K`、`k`],[`E3`],[`27k` = `27E3`],
+[$10^(-3)$],[Milli],[`M`、`m`],[`E-3`],[`273m` = `273E-3`],
+[$10^(-6)$],[Micro],[`U`、`u`],[`E-6`],[`.02u` = `.02E-6`],
+[$10^(-9)$],[Nano],[`N`、`n`],[`E-9`],[`4n` = `4E-9`],
+[$10^(-12)$],[Pico],[`P`、`p`],[`E-12`],[`95p` = `95E-12`],
+[$10^(-15)$],[Femto],[`F`、`f`],[`E-15`],[`3f` = `3E-15`],
+)
 
-#text("RMAF       aane       ORR EM     指数         SPICE 距离\nwo\"            Giga           Ge           89             42GHz\n42E9\n10°            Mega           Meg. meg        E6             2 Meg\n2E6\n            Kilo            Kk           ES             27 kohms\n2783\n10°            Milli            Mm          B3            273 mA\n273B.3\n10*        Micro       wu       6        O2us\n02E-6\n10”                Nano               Now               B9                Ans\n49\n10”               Pico                Pop               E-12               95 pF\n95E-12\n10           Femo           BE           BAS            3下\nSEIS")
+SPICE 可由器件类型判断基本单位；原书强调为改善可读性可以说明单位，但不能把工程前缀和指数形式任意混合，例如 `2E-16P`。
 
-#text("注意，不要求使用单位 ( 欧姆法拉或伏特 )，因为 SPICE 将基于元件的类型 ( 电阻、电容\n或电压源 ) 推断出单位。但是，为了改善可读性应该尽可能说明单位。 前缀和指数形式不能混用\n【例如，2E-16P )")
+=== 模型
 
-#text("模型")
-
-#text("对请如二极管和晶体管的主动元件, 采用说明一个模型而不\n是说明单个值 ( 如电阻或电容那样 ) 的方式进行说明. 模型加在\n节点说明之后，随后提供器件尺寸的列表，")
-
-#text("图A4给出了一个使用“nmos”模型的 MOS 晶体管         图A4 一个MOS 局体管")
+对于二极管、晶体管等主动器件，端口后面一般需要指定模型名称，并可跟随几何参数。*图 A.4* 展示一个引用 `nmos` 模型的 MOSFET，具体参数在下一扫描页继续。
