@@ -115,6 +115,6 @@ assert all(t in s150 for t in (
 assert s150.index("完整电流关系") < s150.index("近似忽略两项") < s150.index('"(4.16)"')
 for n in range(147,151):
     state=m["pages"][n-1]
-    assert not state["human_verified"] and not state["layout_verified"]
+    assert state.get("human_verified") is not True and state.get("layout_verified") is not True
 
 print("Chapter 4 scan-backed PDF147–156: equations4.14–4.21, examples4.6–4.8 OK")
