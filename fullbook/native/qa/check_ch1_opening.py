@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Non-acceptance checks for scan-backed Chapter 1 PDF20–36."""
+"""Non-acceptance checks for scan-backed Chapter 1 PDF20–39."""
 from pathlib import Path
 import re
 root=Path(__file__).resolve().parents[1]
@@ -44,9 +44,9 @@ assert all(term in p25 for term in (
 assert p25.index("F = A C") < p25.index("F = (A+B)") < p25.index("F = A xor B")
 
 
-# Pages PDF026–036: retain source page mapping and semantic details.
+# Pages PDF026–039: retain source page mapping and semantic details.
 chapter1_sources = {}
-for page in range(26, 37):
+for page in range(26, 40):
     stem = f"{page-23:02d}-page-{page:03d}"
     src = w / f"{stem}.typ"
     layout = w / f"{stem}-layout.typ"
@@ -76,6 +76,14 @@ landmarks = {
        "C_(\"small\")", "C_(\"large\")", "平方成正比", "wire-coupling", "rc-ir"),
   36: ("图 1.16", "图 1.17", "图 1.18", "时钟偏差", "clock skew",
        "10%", "0.25 μm", "0.18 μm", "低 $k$", "clock-tree"),
+  37: ("图 1.17", "图 1.18", "图 1.19", "L dif i / dif t",
+       "自感应", "互感应", "adjacent-buses", "rlcladder"),
+  38: ("1.5", "ASIC", "GDS-II", "CAD", "RTL", "图 1.20",
+       "定制 IC", "电路模", "design-cycle"),
+  39: ("SPICE", "非线性直流", "1%", "±20%", "±50%",
+       "100 ps", "100 ns", "i(t) = v(t) / R",
+       "i(t) = C (dif v(t)) / (dif t)", "1.6"),
+
 }
 for page, required in landmarks.items():
     missing = [item for item in required if item not in chapter1_sources[page]]
@@ -86,6 +94,12 @@ p30 = chapter1_sources[30]
 p31 = chapter1_sources[31]
 assert "同时，逻辑门、" in p30 and "存储器、时钟、模拟电路" in p31
 assert p30.index("1.3.5") < p30.index("图 1.9") < p30.index("同时，逻辑门、")
+# CAD/SPICE printed page break must preserve the interrupted Chinese word.
+assert "电路模" in chapter1_sources[38] and "拟器。" in chapter1_sources[39]
+# A synthetic teaching summary table must not masquerade as textbook content.
+assert "#table(" not in chapter1_sources[39]
+assert chapter1_sources[39].index("i(t) = v(t) / R") < chapter1_sources[39].index("i(t) = C")
+
 # Figure 1.5's printed eight-state excitation table must remain fully editable.
 p26 = chapter1_sources[26]
 assert p26.count("[0→1]") == 2 and p26.count("[1→0]") == 2
@@ -96,4 +110,4 @@ for page in range(26, 35):
     assert state[page-1].get("human_verified") is not True, page
     assert state[page-1].get("layout_verified") is not True, page
 
-print("PDF20–36 scan-backed native Typst landmarks and cross-page continuity OK; no 1:1 acceptance claimed.")
+print("PDF20–39 scan-backed native Typst landmarks and cross-page continuity OK; no 1:1 acceptance claimed.")
