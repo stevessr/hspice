@@ -1,13 +1,12 @@
 // SOURCE PDF PAGE 014 / printed contents page 13
-// Scan-checked original textbook contents entries; not yet 1:1 page layout or dotted leaders.
+// Scan-checked editorial transcription; borderless native layout follows the source TOC, dotted leaders/spacing still under comparison.
 #set document(title:"数字集成电路分析与设计：目录 第1页 · PDF14")
 #set text(size:7.4pt)
-= 目录（1 / 6）
+#align(center)[#text(size:13pt,weight:"bold")[目　录]]
 
 #table(
  columns:(.82fr,3.5fr,.45fr), inset:(x:2pt,y:1.15pt),
- stroke:.4pt,
- table.header([*章节*],[*原书标题*],[*页码*]),
+ stroke:none,
  [#text("第1章")],[#text("深亚微米数字集成电路设计")],[#text("1")],
  [#text("1.1")],[#text("绪论")],[#text("1")],
  [#text("1.2")],[#text("集成电路产业的简要历史")],[#text("2")],
