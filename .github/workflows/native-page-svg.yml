@@ -5,11 +5,13 @@ on:
     paths:
       - 'fullbook/native/web/**'
       - 'fullbook/native/figures/**'
+      - 'fullbook/native/qa/check_ch1_opening.py'
       - '.github/workflows/native-page-svg.yml'
   pull_request:
     paths:
       - 'fullbook/native/web/**'
       - 'fullbook/native/figures/**'
+      - 'fullbook/native/qa/check_ch1_opening.py'
       - '.github/workflows/native-page-svg.yml'
   workflow_dispatch:
 permissions:
@@ -39,6 +41,7 @@ jobs:
           set -euo pipefail
           mkdir -p /tmp/source-pages
           python3 fullbook/native/web/validate_selections.py
+          python3 fullbook/native/qa/check_ch1_opening.py
           python3 fullbook/native/qa/check_mos_iv.py
           python3 fullbook/native/qa/check_velocity_sat.py
           python3 fullbook/native/qa/check_subthreshold_cap.py
