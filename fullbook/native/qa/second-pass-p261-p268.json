@@ -1,0 +1,153 @@
+{
+  "schema": "chapter7-pdf261-pdf268-source-scan-pass9",
+  "scope": [
+    261,
+    268
+  ],
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scan_render": "PyMuPDF 1.65x; manual image review plus archived OCR baseline",
+  "strict_accepted_pages": 0,
+  "source_numeric_landmarks": [
+    "PDF260 Example7.2 NMOS threshold-limited 104fC/100fF=1.04V",
+    "Fig7.7-7.8 n/p TG complement and strong rails",
+    "Fig7.9 S chooses A vs B, output F=AS+B Sbar",
+    "Fig7.10 XOR/XNOR; Fig7.11 two-/single-stage 4:1 MUX",
+    "Fig7.12 output contention/high impedance/charge sharing",
+    "Fig7.15 switch RC network",
+    "Fig7.16 voltage-dependent RN and RP curves",
+    "Eq7.7 R_TG=R_eqn*(L/W)",
+    "Eq7.8 C_in=C_out=C_eff(Wn+Wp)",
+    "Eq7.9 C_in=C_out=2C_effW"
+  ],
+  "pages": [
+    {
+      "pdf_page": 261,
+      "printed_page": 242,
+      "source_png_sha256": "0ac90e1751132e4b4a598327849fff9f60b37c8309986ba8f4a6be7b24bf094d",
+      "native_editable_source": true,
+      "source_text_full_literal_verified": false,
+      "schematic_topology_verified": false,
+      "rendered_layout_1to1_verified": false,
+      "strictly_accepted": false,
+      "remaining": [
+        "full character/punctuation review",
+        "MOS gate/source/drain and body-contact polarity",
+        "original diagram coordinates, line weights and all figure captions",
+        "HTML/SVG render comparison and human signoff"
+      ]
+    },
+    {
+      "pdf_page": 262,
+      "printed_page": 243,
+      "source_png_sha256": "25e76e601caf3888b49e0f3d1c9a148194cc297c3f23b428bc378ee764d25916",
+      "native_editable_source": true,
+      "source_text_full_literal_verified": false,
+      "schematic_topology_verified": false,
+      "rendered_layout_1to1_verified": false,
+      "strictly_accepted": false,
+      "remaining": [
+        "full character/punctuation review",
+        "MOS gate/source/drain and body-contact polarity",
+        "original diagram coordinates, line weights and all figure captions",
+        "HTML/SVG render comparison and human signoff"
+      ]
+    },
+    {
+      "pdf_page": 263,
+      "printed_page": 244,
+      "source_png_sha256": "4ac0ce779efaf276bf21d23c5b52d4f3a2d577aef250f0ac9ebd0256b7a15800",
+      "native_editable_source": true,
+      "source_text_full_literal_verified": false,
+      "schematic_topology_verified": false,
+      "rendered_layout_1to1_verified": false,
+      "strictly_accepted": false,
+      "remaining": [
+        "full character/punctuation review",
+        "MOS gate/source/drain and body-contact polarity",
+        "original diagram coordinates, line weights and all figure captions",
+        "HTML/SVG render comparison and human signoff"
+      ]
+    },
+    {
+      "pdf_page": 264,
+      "printed_page": 245,
+      "source_png_sha256": "062626e8c1c346872ef1995995b927115fc21c1ecd1b527713f13e3118c89dbc",
+      "native_editable_source": true,
+      "source_text_full_literal_verified": false,
+      "schematic_topology_verified": false,
+      "rendered_layout_1to1_verified": false,
+      "strictly_accepted": false,
+      "remaining": [
+        "full character/punctuation review",
+        "MOS gate/source/drain and body-contact polarity",
+        "original diagram coordinates, line weights and all figure captions",
+        "HTML/SVG render comparison and human signoff"
+      ]
+    },
+    {
+      "pdf_page": 265,
+      "printed_page": 246,
+      "source_png_sha256": "778b2d4c850f638b3244af09346a04d2c88e3db5f25724bd06fbe1212ed74748",
+      "native_editable_source": true,
+      "source_text_full_literal_verified": false,
+      "schematic_topology_verified": false,
+      "rendered_layout_1to1_verified": false,
+      "strictly_accepted": false,
+      "remaining": [
+        "full character/punctuation review",
+        "MOS gate/source/drain and body-contact polarity",
+        "original diagram coordinates, line weights and all figure captions",
+        "HTML/SVG render comparison and human signoff"
+      ]
+    },
+    {
+      "pdf_page": 266,
+      "printed_page": 247,
+      "source_png_sha256": "7338a3ede3fe4bc8f7fe751e462c418a55af21e46f6da611a3ede7d7c284c681",
+      "native_editable_source": true,
+      "source_text_full_literal_verified": false,
+      "schematic_topology_verified": false,
+      "rendered_layout_1to1_verified": false,
+      "strictly_accepted": false,
+      "remaining": [
+        "full character/punctuation review",
+        "MOS gate/source/drain and body-contact polarity",
+        "original diagram coordinates, line weights and all figure captions",
+        "HTML/SVG render comparison and human signoff"
+      ]
+    },
+    {
+      "pdf_page": 267,
+      "printed_page": 248,
+      "source_png_sha256": "7d6c515cd3decc29a931d2c833089a0e47c7a1adff3ee427aa7a13451c936036",
+      "native_editable_source": true,
+      "source_text_full_literal_verified": false,
+      "schematic_topology_verified": false,
+      "rendered_layout_1to1_verified": false,
+      "strictly_accepted": false,
+      "remaining": [
+        "full character/punctuation review",
+        "MOS gate/source/drain and body-contact polarity",
+        "original diagram coordinates, line weights and all figure captions",
+        "HTML/SVG render comparison and human signoff"
+      ]
+    },
+    {
+      "pdf_page": 268,
+      "printed_page": 249,
+      "source_png_sha256": "31e5ca28e95ff10186e1b1c7109604564f7aa478c1f05198cfcc1e9c62e93205",
+      "native_editable_source": true,
+      "source_text_full_literal_verified": false,
+      "schematic_topology_verified": false,
+      "rendered_layout_1to1_verified": false,
+      "strictly_accepted": false,
+      "remaining": [
+        "full character/punctuation review",
+        "MOS gate/source/drain and body-contact polarity",
+        "original diagram coordinates, line weights and all figure captions",
+        "HTML/SVG render comparison and human signoff"
+      ]
+    }
+  ]
+}
