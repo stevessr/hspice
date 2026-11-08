@@ -1,10 +1,11 @@
 // SOURCE PDF PAGE 272 / PRINTED253. Example7.5 and beginning of D-latch section.
-#import "../figures/ch7-latch-domino-pass9.typ": fig721
+#import "../figures/ch7-latch-domino-pass9.typ": fig721, fig-example75
 #set document(title:"第7章·例7.5传输门输入强度和7.4锁存器·PDF272")
 #align(center)[#text(size:8pt,weight:"bold")[第7章　传输门和动态逻辑设计　　　　　　　　　　　　253]]
 #line(length:100%,stroke:.55pt)
 
-#align(center)[*例7.5　两个传输门设计中A和sel控制路径的逻辑强度*]
+#fig-example75()
+#v(6pt)
 
 *解答：*
 
