@@ -1,10 +1,13 @@
 // SOURCE PDF PAGE 438 / printed page 419
+#import "../figures/appendix-b-native.typ": bjt-inverter
 // Native editable BJT resistor-loaded inverter parameter table.
 #set document(title:"附录B BJT反相器图B.4与电压传输特性 · PDF438")
 = 附录 B · 印刷第419页
 == B.4　双极晶体管反相器
 
 图 B.4(a) 中，集电极电阻 $R_C$ 接到 $V_("CC")$，基极通过输入电阻 $R_B$ 连接 $V_("in")$，发射极接地，输出电压 $V_("out")$ 取自集电极。
+
+#bjt-inverter()
 
 #table(columns:(1.15fr,1.2fr,2.25fr),inset:(x:3pt,y:2pt),
 table.header([*参数*],[*原书示例*],[*含义*]),
