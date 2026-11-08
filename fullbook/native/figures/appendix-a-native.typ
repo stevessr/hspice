@@ -107,25 +107,31 @@
   #s(185pt, 100pt, 4pt, 0pt)
   #t(199pt, 91pt, [0])
 ])
-#let a5-sources() = html.frame(block(width: 338pt, height: 103pt)[
-  #t(8pt, 2pt, [图 A.5　独立电压源和电流源])
-  #for x in (90pt, 235pt) [
-    #s(x, 18pt, 0pt, 23pt)
-    #place(top + left, dx:x,dy:55pt,circle(radius:13pt,stroke:1pt,fill:white))
-    #s(x, 68pt, 0pt, 19pt)
+// Source PDF425 Figure A.5: independent voltage and current source symbols,
+// with separate terminal numbers and polarity/direction labels.
+#let a5-sources() = html.frame(block(width:338pt,height:110pt)[
+  #t(9pt, 3pt, [图 A.5　电压源和电流源])
+  #for x in (85pt, 225pt) [
+    #s(x, 18pt, 0pt, 25pt)
+    #place(top + left, dx:x,dy:56pt,circle(radius:13pt,stroke:1pt,fill:white))
+    #s(x, 69pt, 0pt, 22pt)
   ]
-  #t(85pt, 12pt, [5])
-  #t(229pt, 12pt, [2])
-  #t(85pt, 89pt, [0])
-  #t(229pt, 89pt, [3])
-  #t(86pt, 47pt, [V])
-  #s(235pt, 60pt, 0pt, -11pt)
-  #place(top + left,dx:232pt,dy:48pt,
-    polygon((0pt, 4pt),(3pt, 0pt),(6pt,4pt),fill:black))
-  #t(105pt, 44pt, [$15 " V"$])
-  #t(251pt, 44pt, [$I_("cc")$])
+  #t(80pt, 11pt, [5])
+  #t(220pt, 11pt, [2])
+  #t(80pt, 93pt, [0])
+  #t(220pt, 93pt, [3])
+  #t(81pt, 48pt, [V])
+  #t(101pt, 40pt, [$+$])
+  #t(101pt, 61pt, [$-$])
+  #t(108pt, 46pt, [$V_("supply")$])
+  #t(108pt, 62pt, [15 V])
+  // Upward arrow matches the source drawing, independent of parameter Icc.
+  #s(225pt, 65pt, 0pt, -20pt)
+  #place(top + left,dx:222pt,dy:44pt,
+    polygon((0pt,5pt),(3pt,0pt),(6pt,5pt),fill:black))
+  #t(248pt, 46pt, [$I_("supply")$])
+  #t(248pt, 61pt, [12 A])
 ])
-
 #let a6-pulse() = html.frame(block(width: 338pt, height: 137pt)[
   #t(6pt, 2pt, [图 A.6　PULSE 与 PWL 的一周期波形])
   #s(36pt, 112pt, 291pt, 0pt)
