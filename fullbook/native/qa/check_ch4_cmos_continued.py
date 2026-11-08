@@ -42,4 +42,16 @@ assert abs(chi-1.41421356)<1e-6 and abs(vs-.83137)<.001
 assert abs(1.8-.909-.891)<1e-10
 assert abs(.626-0-.626)<1e-10
 assert abs(800/400-2)<1e-12
+# PDF151: retain the original intermediate velocity-saturation equations, not only final results.
+s151=(w/"128-page-151.typ").read_text(encoding="utf-8")
+assert all(t in s151 for t in ("完整速度饱和模型", "mu_p E_(\"cP\")/2",
+    "(4.17)", "(4.18)", "(4.19)", "dif V_(\"out\")", "例4.7"))
+assert m["pages"][150]["formulas_checked_against_scan"] is True
+# PDF152: plot the actual labeled example instead of reusing figure 4.12's generic five-region sketch.
+s152=(w/"129-page-152.typ").read_text(encoding="utf-8")
+figure=(root/"figures/ch4-cmos-continued-native.typ").read_text(encoding="utf-8")
+assert 'cmos-example-vtc' in s152 and '#cmos-example-vtc()' in s152
+assert '#let cmos-example-vtc()' in figure and 'html.frame' in figure
+assert all(t in figure for t in ('0.626', '0.8', '0.909', '1.8', 'V_(\"OH\")', 'V_(\"OL\")'))
+assert not m["pages"][151]["layout_verified"]
 print("Chapter 4 scan-backed PDF147–156: equations4.14–4.21, examples4.6–4.8 OK")
