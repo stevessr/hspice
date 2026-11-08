@@ -1,16 +1,52 @@
-// SOURCE PDF PAGE 019; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第19页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第10 章 连线设计\n10.4 绪论…\n10.2 eR MY RC 延迟")
+// SOURCE PDF PAGE 019 / printed contents page 18
+// Scan-checked original textbook contents entries; not yet 1:1 page layout or dotted leaders.
+#set document(title:"数字集成电路分析与设计：目录 第6页 · PDF19")
+#set text(size:7.4pt)
+= 目录（6 / 6）
 
-#text("10.2.1 导线电阻\n10.2.2 艾蒙延迟的计算\n10.2.3 ”长导线的 RC HED\n10.3 超长导线的缓冲器插人\n10.4 ”连线的耦合电容一\n10.4.1 硝合电容的构成…\n10.4.2 ”耦合对延迟的影响\n10.43 电容只声或串扰\n+10.5 BRAY BB\n10.6 天线效应-\n107\n108\n109")
+#table(
+ columns:(.82fr,3.5fr,.45fr), inset:(x:2pt,y:1.15pt),
+ stroke:.4pt,
+ table.header([*章节*],[*原书标题*],[*页码*]),
+ [#text("第10章")],[#text("连线设计")],[#text("335")],
+ [#text("10.1")],[#text("绪论")],[#text("335")],
+ [#text("10.2")],[#text("连线的RC延迟")],[#text("337")],
+ [#text("10.2.1")],[#text("导线电阻")],[#text("337")],
+ [#text("10.2.2")],[#text("艾蒙延迟的计算")],[#text("338")],
+ [#text("10.2.3")],[#text("长导线的RC延迟")],[#text("341")],
+ [#text("10.3")],[#text("超长导线的缓冲器插入")],[#text("344")],
+ [#text("10.4")],[#text("连线的耦合电容")],[#text("347")],
+ [#text("10.4.1")],[#text("耦合电容的构成")],[#text("348")],
+ [#text("10.4.2")],[#text("耦合对延迟的影响")],[#text("352")],
+ [#text("10.4.3")],[#text("电容噪声或串扰")],[#text("355")],
+ [#text("*10.5")],[#text("连线的电感")],[#text("356")],
+ [#text("*10.6")],[#text("天线效应")],[#text("359")],
+ [#text("10.7")],[#text("小结")],[#text("362")],
+ [#text("10.8")],[#text("参考文献")],[#text("363")],
+ [#text("10.9")],[#text("习题")],[#text("364")],
+ [#text("第11章")],[#text("电源网格和时钟设计")],[#text("367")],
+ [#text("11.1")],[#text("绪论")],[#text("367")],
+ [#text("11.2")],[#text("电源分布设计")],[#text("367")],
+ [#text("11.2.1")],[#text("IR压降和Ldi/dt")],[#text("368")],
+ [#text("11.2.2")],[#text("电迁移")],[#text("370")],
+ [#text("11.2.3")],[#text("电源布线要考虑的问题")],[#text("372")],
+ [#text("11.2.4")],[#text("去耦电容设计")],[#text("374")],
+ [#text("11.2.5")],[#text("电源分布设计举例")],[#text("375")],
+ [#text("11.3")],[#text("时钟和时序问题")],[#text("378")],
+ [#text("11.3.1")],[#text("时钟定义和量度")],[#text("378")],
+ [#text("11.3.2")],[#text("时钟偏斜")],[#text("380")],
+ [#text("11.3.3")],[#text("噪声对时钟和触发器的影响")],[#text("382")],
+ [#text("11.3.4")],[#text("时钟的功耗")],[#text("383")],
+ [#text("11.3.5")],[#text("时钟发生器")],[#text("384")],
+ [#text("11.3.6")],[#text("高性能设计中的时钟分布")],[#text("385")],
+ [#text("11.3.7")],[#text("时钟分布网络举例")],[#text("387")],
+ [#text("*11.4")],[#text("锁相环/锁延迟环")],[#text("389")],
+ [#text("11.4.1")],[#text("PLL设计考虑")],[#text("390")],
+ [#text("11.4.2")],[#text("时钟分布总结")],[#text("395")],
+ [#text("11.5")],[#text("参考文献")],[#text("396")],
+ [#text("11.6")],[#text("习题")],[#text("397")],
+ [#text("附录A")],[#text("SPICE的简要介绍")],[#text("400")],
+ [#text("附录B")],[#text("双极型晶体管和电路")],[#text("414")],
+)
 
-#text("第11 章 电源网格和时钟设计\n1 ea\n11.2 电源分布设计，")
-
-#text("11.2.1 伏压降和Ladidr\n11.2.2 ite\n112.3 LUA BERS 1B 0 ol ~\n124 Jame BIT\n112.5 电源分布设计举例\n143 eR AIRE\n11.3.1 “时钟定义和量度\n11.3.2 ”时钟偏斜\n11.3.3，”唤声对时钟和触发器的影响\n11.3.4 “时钟的功耗…\n11.3.5 时钟发生器…\n11.3.6 高性能设计中的时钟分布……\n11.3.7 时钟分布网络举例………\n114 锁相环/锁延迟环|\n11.4.1 PLL 设计考虑\n11.4.2 时钟分布总结\n11.5 参考文献\n11.6 习题")
-
-#text("PARA SPICE 的简要介绍\n附录 B”双极型晶体管和电路")
-
-#text("sige")
+_上表数字均为原书印刷页码，并非扫描PDF文件的页序；正文印刷页1对应 PDF 第20页。_
