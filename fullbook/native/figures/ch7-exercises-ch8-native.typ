@@ -11,7 +11,7 @@
     #t(4pt,15pt + row*34pt,("1.2V","0V","VDD").at(row))
     #for k in range(n) [
       #tg(59pt + k*62pt,6pt + row*34pt)
-      #if k<n-1 {w(89pt+k*62pt,18pt+row*34pt,121pt+k*62pt,18pt+row*34pt)}
+      #if (k < n - 1) {w(89pt+k*62pt,18pt+row*34pt,121pt+k*62pt,18pt+row*34pt)}
     ]
     #t(266pt,17pt + row*34pt,"Q"+str(row))
   ]
