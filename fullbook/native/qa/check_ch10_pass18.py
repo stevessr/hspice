@@ -47,6 +47,16 @@ assert discrepancy["pdf_page"] == 358
 assert math.isclose(0.054 * 1000 / 0.4, discrepancy["arithmetic_ohms"])
 assert discrepancy["arithmetic_ohms"] != discrepancy["source_printed_ohms"]
 assert discrepancy["source_printed_ohms"] == 125
+# Require the first-moment integral and source-faithful metal stack values,
+# not just a summarized statement that an Elmore model exists.
+for n,anchors in {
+    357: ("2.7", "1.7", "0.5", "1.0", "0.4", "0.8", "54", "27", "42", "21", 'R_("wire")', 'C_("wire")'),
+    358: ("3～4λ", "30～40λ", "0.054", "125", "135", "17.5", "10", "integral_0^oo", 'R_("wire") C_("wire")', "tau"),
+    359: ("C_1=C_2=0", "R_2=R_3=0", "sum_k", 'R_(i k)', "tau_1", "tau_2", "tau_3"),
+}.items():
+    source=(r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+    assert all(x in source for x in anchors),(n,[x for x in anchors if x not in source])
+print("PDF357–359 complete source landmarks, Elmore integral and branch-node equations checked.")
 print("PDF 358 source arithmetic mismatch retained and audited; PDF 363 FO4 data matched.")
 
 print("Pass18 RC/Elmore PDF357–364 math, figure and status landmarks passed; strict 0/445.")
