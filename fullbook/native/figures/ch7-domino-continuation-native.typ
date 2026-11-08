@@ -2,7 +2,7 @@
 // All figures are constructed from editable Typst primitives.
 // Topological schematic drafts: exact geometry and all MOS connectivity
 // still require manual scan overlay before full-page acceptance.
-#let w(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,line(end:(x2-x1,y2-y1),stroke:.8pt))
+#let w(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,line(end:(x2 - x1,y2 - y1),stroke:.8pt))
 #let t(x,y,s)=place(top+left,dx:x,dy:y,text(size:7.5pt)[#s])
 #let r(x,y,ww,hh)=place(top+left,dx:x,dy:y,rect(width:ww,height:hh,stroke:.8pt))
 #let b(x,y,ww,hh,s)={
