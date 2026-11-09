@@ -26,7 +26,7 @@ for key, path in pages.items():
     if key not in ('figures', 'formula-finder'):
         assert '|' in text[key], f'expected tables: {path}'
     for target in re.findall(r'\]\((/reference/[^)#]*)(?:#[^)]*)?\)', text[key]):
-        rel = target[len('/reference/'):].strip('/')
+        rel = target.split('?', 1)[0][len('/reference/'):].strip('/')
         page = base / (rel + '.md') if rel else base / 'index.md'
         assert page.exists(), f'broken /reference link: {path}: {target}'
 def count_glossary(key):
