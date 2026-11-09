@@ -70,6 +70,11 @@ jobs:
           python3 study/midterm/scripts/test_figure_index.py
           python3 study/midterm/scripts/build_figure_index.py
 
+      - name: Generate and test unified formula revision index
+        run: |
+          python3 study/midterm/scripts/test_revision_formulas.py
+          python3 study/midterm/scripts/build_revision_formulas.py
+
       - name: Validate textbook glossary and data sheets
         run: python3 study/midterm/scripts/check_reference.py
 
@@ -83,6 +88,9 @@ jobs:
         if: steps.node-cache.outputs.cache-hit != 'true'
         working-directory: study/midterm
         run: npm install --no-audit --no-fund --prefer-offline
+
+      - name: Render formula cards as MathJax SVG (offline)
+        run: node study/midterm/scripts/render_revision_formulas.mjs
 
       - name: Copy original experiment PDFs
         shell: bash
