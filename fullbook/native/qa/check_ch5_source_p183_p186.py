@@ -44,23 +44,11 @@ assert "#wire(218pt,125pt,316pt,125pt)" not in size
 assert "#wire(53pt,125pt,131pt,125pt)" not in size
 assert "#wire(53pt,194pt,385pt,194pt)" in size
 assert "#sr-nor-sizes()" in pages[185]
-for token in ('$W_p
-status=json.loads((root/"page-status.json").read_text(encoding="utf-8"))
-for n in range(183,187):
-    s=status["pages"][n-1]
-    assert not s["layout_verified"] and not s["figures_verified"],n
-print("Source PDF183–186: editable dual VTC, NOR/NAND feedback and 400ps sizing/JK timing anchors passed; strict 1:1 still not accepted.")
-, '$W_n
-status=json.loads((root/"page-status.json").read_text(encoding="utf-8"))
-for n in range(183,187):
-    s=status["pages"][n-1]
-    assert not s["layout_verified"] and not s["figures_verified"],n
-print("Source PDF183–186: editable dual VTC, NOR/NAND feedback and 400ps sizing/JK timing anchors passed; strict 1:1 still not accepted.")
-, '440" nm"', '1.76" μm"'):
-    assert token in size,token
+for token in ('$W_p$', '$W_n$', '440" nm"', '1.76" μm"'):
+    assert token in size, token
 
-status=json.loads((root/"page-status.json").read_text(encoding="utf-8"))
-for n in range(183,187):
-    s=status["pages"][n-1]
-    assert not s["layout_verified"] and not s["figures_verified"],n
-print("Source PDF183–186: editable dual VTC, NOR/NAND feedback and 400ps sizing/JK timing anchors passed; strict 1:1 still not accepted.")
+status=json.loads((root/'page-status.json').read_text(encoding='utf-8'))
+for n in range(183, 187):
+    s=status['pages'][n-1]
+    assert not s['layout_verified'] and not s['figures_verified'], n
+print('Source PDF183–186: native bistable, SR feedback, 400ps sizing and JK timing anchors verified; 0/445 accepted.')
