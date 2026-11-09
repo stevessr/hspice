@@ -126,6 +126,9 @@ $$C_j(V_R)=\frac{C_{j0}}{\big(1+V_R/\phi_0\big)^m},$$
 - **源极漂移：** 在传输高电平时，随着源极电压提高，$V_{GS}$ 变小、$V_{SB}$ 可能变大，导通条件逐渐丧失。
 - **不能只看 $V_G$ 判导通：** 必须看 $V_G-V_S$（NMOS）或 $V_S-V_G$（PMOS）。
 
+
+**本章专用拓展：** [交互训练20题](/review-1to4/interactive-02) · [进阶题与解析](/review-1to4/advanced-02-exercises) · [教材原例题索引](/review-1to4/textbook-examples) · [计算方法专项](/review-1to4/calculation-methods) · [工艺流程与表格](/review-1to4/technology-tables) · [在线实验](/review-1to4/online-lab)
+
 ---
 
 [本章练习](/review-1to4/02-exercises) · [答案解析](/review-1to4/02-answers) · [目录](/review-1to4/)

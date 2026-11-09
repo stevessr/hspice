@@ -160,6 +160,9 @@ $$t_{pHL}\approx110.4\,ps,\quad t_{pLH}\approx165.6\,ps,\quad t_p\approx138\,ps.
 4. 能从 $\beta_n/\beta_p$ 反推 $W_p/W_n$，并解释尺寸对延迟和输入负载的双重影响。
 5. 会从VTC求开关点，并从瞬态波形识别上升/下降传播延迟。
 
+
+**本章专用拓展：** [交互训练20题](/review-1to4/interactive-04) · [进阶题与解析](/review-1to4/advanced-04-exercises) · [教材原例题索引](/review-1to4/textbook-examples) · [计算方法专项](/review-1to4/calculation-methods) · [在线实验](/review-1to4/online-lab)
+
 ---
 
 [本章练习](/review-1to4/04-exercises) · [答案解析](/review-1to4/04-answers) · [目录](/review-1to4/)

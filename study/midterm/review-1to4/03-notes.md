@@ -120,6 +120,9 @@ M1 d g 0 0 NTEST L=1u W=5u
 4. 会完整解释MOS网表中D-G-S-B节点顺序。
 5. 知道LEVEL 1、BSIM3和PVT分析解决的不是同一个问题。
 
+
+**本章专用拓展：** [交互训练20题](/review-1to4/interactive-03) · [进阶题与解析](/review-1to4/advanced-03-exercises) · [教材原例题索引](/review-1to4/textbook-examples) · [计算方法专项](/review-1to4/calculation-methods) · [工艺流程与表格](/review-1to4/technology-tables) · [在线实验](/review-1to4/online-lab)
+
 ---
 
 [本章练习](/review-1to4/03-exercises) · [答案解析](/review-1to4/03-answers) · [目录](/review-1to4/)

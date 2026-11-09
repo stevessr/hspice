@@ -101,6 +101,9 @@ $$P_{leak}=I_{leak}V_{DD}.$$
 4. 见到门级功耗能区分动态、短路与泄漏贡献。
 5. 能解释扇出、栅电容、互连寄生为什么增加延迟。
 
+
+**本章专用拓展：** [交互训练20题](/review-1to4/interactive-01) · [进阶题与解析](/review-1to4/advanced-01-exercises) · [教材原例题索引](/review-1to4/textbook-examples) · [计算方法专项](/review-1to4/calculation-methods) · [在线实验](/review-1to4/online-lab)
+
 ---
 
 [本章练习](/review-1to4/01-exercises) · [答案解析](/review-1to4/01-answers) · [目录](/review-1to4/)

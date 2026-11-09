@@ -41,8 +41,38 @@ for chapter in range(1, 5):
     expected = [f'S{chapter}-{number:02d}' for number in range(1, 13)]
     assert question_ids == expected, f'Bad question IDs: {chapter}: {question_ids}'
     assert answer_ids == expected, f'Bad answer IDs: {chapter}: {answer_ids}'
-interactive = (review / 'interactive.md').read_text(encoding='utf-8')
-assert len(re.findall(r'^### S[1-4]-\d{2}$', interactive, re.M)) == 48
+# Four chapter-specific interactive pages: original 48 + 32 advanced.
+extra = ['advanced.md', 'textbook-examples.md', 'calculation-methods.md',
+         'technology-tables.md', 'online-lab.md']
+for name in extra:
+    assert (review / name).is_file(), f'Missing review subject: {name}'
+for name in ('ReviewLab.vue', 'lab-core.mjs'):
+    assert (review / name).is_file(), f'Missing experiment source: {name}'
+for chapter in range(1, 5):
+    n = f'{chapter:02d}'
+    q = review / f'advanced-{n}-exercises.md'
+    a = review / f'advanced-{n}-answers.md'
+    t = review / f'interactive-{n}.md'
+    for doc in (q, a, t):
+        assert doc.is_file(), f'Missing advanced page: {doc}'
+        assert doc.read_text(encoding='utf-8').startswith('# ')
+    expected_extra = [f'A{chapter}-{j:02d}' for j in range(1, 9)]
+    qids = re.findall(r'^## (A[1-4]-\d{2})', q.read_text(encoding='utf-8'), re.M)
+    aids = re.findall(r'^## (A[1-4]-\d{2})', a.read_text(encoding='utf-8'), re.M)
+    assert qids == expected_extra, f'Advanced questions wrong: {chapter}: {qids}'
+    assert aids == expected_extra, f'Advanced answers wrong: {chapter}: {aids}'
+    live = t.read_text(encoding='utf-8')
+    originals = re.findall(r'^### (S[1-4]-\d{2})$', live, re.M)
+    additions = re.findall(r'^### (A[1-4]-\d{2})$', live, re.M)
+    assert originals == [f'S{chapter}-{j:02d}' for j in range(1, 13)], originals
+    assert additions == expected_extra, additions
+    assert 'localStorage' in live and 'resetChapter' in live
+source_index = (review / 'textbook-examples.md').read_text(encoding='utf-8')
+for chapter, count in ((2, 13), (3, 7), (4, 9)):
+    for number in range(1, count + 1):
+        assert f'| 例{chapter}.{number} |' in source_index
+assert 'online-lab' in (review / 'index.md').read_text(encoding='utf-8')
+
 
 from check_review_spice import validate_review_decks
 validate_review_decks(root)

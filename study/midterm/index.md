@@ -9,7 +9,7 @@ hero:
       text: 开始系统复习
       link: /content/00-reading-guide
     - theme: alt
-      text: 第1—4章专项复习（48题）
+      text: 第1—4章复习与在线实验（80题）
       link: /review-1to4/
     - theme: alt
       text: 进入实践题库
@@ -33,6 +33,9 @@ hero:
       text: 公式与电路图解
       link: /figures
 features:
+  - title: 前四章在线实验与教材原例题
+    details: RC、NMOS和CMOS参数曲线可互动；29个原书编号例题索引，制造工艺表格和独立计算专题。
+    link: /review-1to4/online-lab
   - title: 第1—4章专项复习与48题训练
     details: 四章精讲、每章12题、逐题解析，支持交互式答题记录与公式速查。
     link: /review-1to4/
