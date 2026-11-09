@@ -422,7 +422,7 @@
   #node(218pt,101pt)
   #wire(218pt,71pt,218pt,126pt)
   #wire(218pt,71pt,279pt,71pt)
-  #wire(218pt,126pt,241pt,126pt)
+  #wire(218pt,126pt,316pt,125pt)
   #place(top+left,dx:170pt,dy:92pt,text(size:7pt)[$bar(Q)$]))
   // Output Q returns through the lower feedback route to left NOR gates.
   #wire(305pt,101pt,394pt,101pt)
