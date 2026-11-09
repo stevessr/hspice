@@ -11,7 +11,7 @@ for anchor in ("#let vmos(","#let aoi21()=", "#let example53()=", "#let xor-pane
 assert src.count("#vmos(")>=20 or src.count("vmos(")>20,"schematics lost transistor symbols"
 for page,terms in {
   179:('" (5.5)"',"图5.12","对偶","NMOS","PMOS"),
-  180:("例5.3","图5.13","example53","AB+CD","伪 NMOS"),
+  180:("例5.3","图5.13","example53","A B+C D","伪 NMOS"),
   181:("图5.14","5.4",'f_("XOR")','f_("XNOR")',"xor-xnor"),
 }.items():
     s=(r/"web"/f"{page-23}-page-{page}.typ").read_text(encoding="utf-8")
