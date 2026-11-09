@@ -34,6 +34,28 @@ for n,required in {
     assert "#image(" not in pages[n],n
 assert pages[184].rstrip().endswith('$bar(Q)$')
 assert pages[185].lstrip().startswith("// SOURCE PDF PAGE 185")
+size=fig.split("#let sr-nor-sizes() =",1)[1]
+assert size.count("#vmos(") == 8, "two NOR gates require 8 native transistor symbols"
+assert size.count("p:true") == 4
+assert "#wire(120pt,101pt,218pt,101pt)" in size
+assert "#wire(218pt,125pt,316pt,125pt)" in size
+assert "#wire(53pt,194pt,385pt,194pt)" in size
+assert "#sr-nor-sizes()" in pages[185]
+for token in ('$W_p
+status=json.loads((root/"page-status.json").read_text(encoding="utf-8"))
+for n in range(183,187):
+    s=status["pages"][n-1]
+    assert not s["layout_verified"] and not s["figures_verified"],n
+print("Source PDF183–186: editable dual VTC, NOR/NAND feedback and 400ps sizing/JK timing anchors passed; strict 1:1 still not accepted.")
+, '$W_n
+status=json.loads((root/"page-status.json").read_text(encoding="utf-8"))
+for n in range(183,187):
+    s=status["pages"][n-1]
+    assert not s["layout_verified"] and not s["figures_verified"],n
+print("Source PDF183–186: editable dual VTC, NOR/NAND feedback and 400ps sizing/JK timing anchors passed; strict 1:1 still not accepted.")
+, '440" nm"', '1.76" μm"'):
+    assert token in size,token
+
 status=json.loads((root/"page-status.json").read_text(encoding="utf-8"))
 for n in range(183,187):
     s=status["pages"][n-1]
