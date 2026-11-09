@@ -83,7 +83,6 @@ def main():
     check_gate("04-gate-networks.svg", "nor", "nor", 3)
     check_gate("08-nand-nor-networks.svg", "nand", "nand", 2)
     check_gate("08-nand-nor-networks.svg", "nor", "nor", 2)
-    check_gate("07-cmos-inverter.svg", "pmos", "inv", 1) if False else None
     inverter = ET.parse(FIGURES / "07-cmos-inverter.svg").getroot()
     inv = []
     for node in inverter.iter(SVG + "g"):
