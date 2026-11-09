@@ -50,15 +50,29 @@ VTC 可用于识别输入高低电平、转换区以及噪声容限。
 
 ### 静态逻辑网络与功能门
 
-**两输入 NAND2 / NOR2：**
+**两输入 NOR2 / NAND2（教材图 5.1，印刷第 150 页）：**
 
-![两输入 NAND2 与 NOR2 的完整 CMOS 晶体管级上拉与下拉网络](./assets/figures/08-nand-nor-networks.svg)
+![两输入 NOR2 与 NAND2 的完整 CMOS 晶体管级上拉与下拉网络](./assets/figures/08-nand-nor-networks.svg)
 
-**三输入 NAND3 / NOR3：**
+### 三输入 CMOS 网络
+
+**NAND3 / NOR3（教材练习 5.1 扩展）：**
 
 ![三输入 NAND3 与 NOR3 的完整 CMOS 晶体管级上拉与下拉网络](./assets/figures/04-gate-networks.svg)
 
 NAND 的 PMOS **并联**、NMOS **串联**；NOR 的 PMOS **串联**、NMOS **并联**，器件数量分别对应 2/3 个输入。每只器件绘有独立栅极，并由 A、B、C 标注相应控制输入，不再以文字矩形框代替实际电路。同名栅极标签代表共用输入网络；为了减少视觉杂乱，这两张逻辑网络图仅省略体端引线，PMOS 的 B 接 VDD、NMOS 的 B 接 GND。
+
+### CMOS 门的晶体管尺寸（教材图 5.2）
+
+![教材图5.2：反相器、NAND2、NOR2的晶体管级宽度尺寸2W、4W、W及负载电容CL](./assets/figures/14-cmos-gate-sizing.svg)
+
+按教材印刷第 151 页图 5.2 重绘，以 **CMOS 反相器 PMOS=2W、NMOS=W** 作为归一化尺寸参考：NAND2 的两只并联 PMOS 各为 2W、两只串联 NMOS 各为 2W；NOR2 的两只串联 PMOS 各为 4W、两只并联 NMOS 各为 W。图中保留各晶体管与尺寸的对应关系、输入端、输出节点和接地负载电容 $C_L$。该比例用于教材中的一阶等效电阻设计，不是工艺模型下的唯一最佳尺寸。
+
+### 三只串联 NMOS 的等效沟道（教材图 5.4）
+
+![教材图5.4：三只3Wn宽度NMOS串联对应一只3Wn宽、3Ln长的等效器件版图](./assets/figures/15-nmos-series-equivalent.svg)
+
+教材印刷第 152 页图 5.4 是**多晶硅栅与扩散区的版图比较**，不是 NMOS 串联/并联电路的文字框。三只沟道宽度均为 $3W_n$、沟道长度均为 $L_n$ 的串联管，对应一只沟道宽度 $3W_n$、长度 $3L_n$ 的一阶等效器件；因此 $W_{eq}=W_n$。
 
 ### XOR 与 2:1 选择器
 

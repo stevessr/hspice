@@ -26,13 +26,13 @@
   <path d="M430 400 V435 H540 V344 H500"/>
   <path d="M407 435 H453 M414 445 H446 M422 455 H438"/>
 </g>
-<g id="pmos-device" data-device="pmos4">
+<g id="pmos-device" data-device="pmos4" data-gate="Vin" data-source="VDD" data-drain="Y" data-body="VDD">
   <use href="#pmos4" xlink:href="#pmos4" x="430" y="150"/>
   <text class="label" x="566" y="152">PMOS</text>
   <text class="caption" x="566" y="176">B → VDD</text><text class="caption" x="566" y="197">Wₚ / Lₚ</text>
   <text class="label" x="405" y="87">S</text><text class="label" x="405" y="221">D</text>
 </g>
-<g id="nmos-device" data-device="nmos4">
+<g id="nmos-device" data-device="nmos4" data-gate="Vin" data-source="GND" data-drain="Y" data-body="GND">
   <use href="#nmos4" xlink:href="#nmos4" x="430" y="344"/>
   <text class="label" x="566" y="343">NMOS</text>
   <text class="caption" x="566" y="368">B → GND</text><text class="caption" x="566" y="389">Wₙ / Lₙ</text>
