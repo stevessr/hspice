@@ -21,6 +21,22 @@ class FormulaCatalogTests(unittest.TestCase):
             self.assertTrue(item["source_route"].startswith("/reference/"))
             self.assertTrue(item["original_label"])
 
+    def test_formula_identifiers_stable_across_row_reordering(self):
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "source.md"
+            header = "## 第 2 章：MOS 阈值\n"
+            a = "| **体效应**<br>源体偏置 | $V_T=V_{T0}+\\gamma$ | 式 (2.11) | 38 | [57](/native-workbench?page=57) |"
+            b = "| **阈值参考**<br>零体偏 | $V_{T0}=V_{FB}$ | 式 (2.10) | 38 | [57](/native-workbench?page=57) |"
+            path.write_text(header + a + "\n" + b + "\n", encoding="utf-8")
+            original = parse_table(path, "/reference/example")
+            path.write_text(header + b + "\n" + a + "\n", encoding="utf-8")
+            reordered = parse_table(path, "/reference/example")
+            self.assertEqual(
+                {r["name"]: r["id"] for r in original},
+                {r["name"]: r["id"] for r in reordered}
+            )
+            self.assertTrue(all(len(r["id"]) == 22 for r in original))
+
     def test_single_source_row_and_metadata(self):
         with tempfile.TemporaryDirectory() as td:
             path = Path(td) / "source.md"

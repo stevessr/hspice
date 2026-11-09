@@ -6,6 +6,7 @@ The original markdown is canonical; this script never generates new equations.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 from collections import Counter
@@ -52,7 +53,7 @@ def parse_table(path: Path, route: str) -> list[dict]:
         if not name.strip():
             raise ValueError(f"{path}:{lineno}: empty formula title")
         records.append({
-            "id": f"f-{len(records)+1}-{path.stem}",
+            "id": "f-" + hashlib.sha256(("\\0".join((route, str(chapter), str(printed_page), name, latex))).encode("utf-8")).hexdigest()[:20],
             "name": name,
             "note": note,
             "latex": latex,
@@ -76,6 +77,8 @@ def generate(source_root: Path) -> dict:
         entries.extend(parse_table(source, route))
     if len(entries) != 145:
         raise ValueError(f"Expected 145 source-derived formula entries, got {len(entries)}")
+    if len({e["id"] for e in entries}) != len(entries):
+        raise ValueError("Duplicate source-derived formula identifier")
     if {e["chapter"] for e in entries} != set(range(1, 12)):
         raise ValueError("Formula table should cover all eleven textbook chapters")
     if any(not 1 <= e["printed_page"] <= 399 for e in entries):
