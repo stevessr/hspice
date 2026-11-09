@@ -420,18 +420,18 @@
   // Output Qbar feeds the opposite gate of right-hand NOR.
   #wire(120pt,101pt,218pt,101pt)
   #node(218pt,101pt)
-  #wire(218pt,71pt,218pt,125pt)
+  // Qbar net is named on both second-device gates; one branch is drawn.
+  #wire(218pt,71pt,218pt,101pt)
   #wire(218pt,71pt,279pt,71pt)
-  #wire(218pt,125pt,316pt,125pt)
   #place(top+left,dx:170pt,dy:92pt,text(size:7pt)[$bar(Q)$]))
   // Output Q returns through the lower feedback route to left NOR gates.
   #wire(305pt,101pt,394pt,101pt)
   #node(385pt,101pt)
   #wire(385pt,101pt,385pt,194pt)
   #wire(53pt,194pt,385pt,194pt)
+  // Q net is named at the remaining nMOS gate, avoiding a false S/Q short.
   #wire(53pt,71pt,53pt,194pt)
   #wire(53pt,71pt,94pt,71pt)
-  #wire(53pt,125pt,131pt,125pt)
   #place(top+left,dx:359pt,dy:90pt,text(size:7pt)[$Q$]))
   #place(top+left,dx:117pt,dy:211pt,text(size:7pt)[S/R 有效高 · $W_n=440" nm"$，$W_p=1.76" μm"$])
 ])
