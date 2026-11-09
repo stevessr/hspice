@@ -203,6 +203,7 @@ jobs:
           python3 fullbook/native/qa/check_ch4_end.py
           python3 fullbook/native/qa/check_ch5_gates.py
           python3 fullbook/native/qa/check_ch5_complex_sequential.py
+          python3 fullbook/native/qa/check_ch5_source_p179_p182.py
           python3 fullbook/native/qa/check_ch11_pass24.py
           python3 fullbook/native/qa/check_ch11_pass25.py
           python3 fullbook/native/qa/check_ch11_pass26.py
