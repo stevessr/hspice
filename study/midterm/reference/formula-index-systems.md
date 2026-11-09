@@ -35,7 +35,7 @@
 |---|---|---|---:|---|
 | **位线读出电流**<br>位线小电压差与读出时间 | $I_{cell}=\frac{C_{bit}\Delta V}{\Delta t}$ | §8.3 / 例 8.2 | 284 | [303](/native-workbench?page=303) |
 | **位线充放电时间**<br>平均单元电流近似 | $\Delta t=\frac{C_{bit}\Delta V}{I_{cell}}$ | §8.3 / 例 8.2 | 284 | [303](/native-workbench?page=303) |
-| **SRAM 例 8.2 驱动宽度比例**<br>仅针对教材题设，不可用作通用 PDK | $\frac{W_1}{W_3}\approx1.7$ | 例 8.2 | 284 | [303](/native-workbench?page=303) |
+| **SRAM 读单元尺寸经验比**<br>原书明确指出是面积折中下的经验值 | $\frac{W_1}{W_3}\approx1.5$ | 式 (8.3) | 285 | [304](/native-workbench?page=304) |
 | **SRAM 写入尺寸比经验值**<br>经验比例，需仿真验证 | $\frac{W_4}{W_6}\approx1.5$ | 式 (8.4) | 286 | [305](/native-workbench?page=305) |
 | **灵敏放大器电压斜率**<br>电流源与输出电容模型 | $\lvert\frac{dV_{out}}{dt}\rvert\approx\frac{I_{SS}}{C_{out}}$ | §8.4 / 推导 | 294 | [313](/native-workbench?page=313) |
 | **灵敏放大器响应时间**<br>平均电流近似 | $t_{sense}\approx\frac{C_{out}\Delta V_{out}}{I_{SS}}$ | §8.4 / 推导 | 294 | [313](/native-workbench?page=313) |
@@ -47,7 +47,7 @@
 
 | 公式名称 | 对应公式 | 原书式号／图例 | 印刷页 | PDF 页序 · 校对页 |
 |---|---|---|---:|---|
-| **ROM / PLA 逻辑映射示例**<br>原书该页的组合逻辑示例，不是普适的器件方程 | $Out=B+AC$ | §9.5 相关逻辑例图 | 312 | [331](/native-workbench?page=331) |
+| **FPGA 的 3-LUT 逻辑例题**<br>原书例 9.2 的逻辑函数，不是普适的器件方程 | $Out=B+AC$ | 例 9.2 / 图 9.9 | 312 | [331](/native-workbench?page=331) |
 
 ## 第 10 章：互连、RC 延迟、串扰与电感
 
