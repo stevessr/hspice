@@ -111,7 +111,7 @@
     #wire(77pt,yy,77pt,yy+12pt)
     #wire(56pt,yy+6pt,77pt,yy+6pt)
     #place(top+left,dx:43pt,dy:yy+2pt,text(size:6pt)[("A","B","C","D","E","F","G","H").at(i)])
-    #if i<7 [#wire(82pt,yy+12pt,82pt,yy+16pt)]
+    #if i < 7 [#wire(82pt,yy+12pt,82pt,yy+16pt)]
   ]
   #ground(82pt,156pt)
   #place(top+left,dx:235pt,dy:25pt,text(size:7pt)[$V_("DD")$])
