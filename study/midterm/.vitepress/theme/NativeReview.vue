@@ -56,6 +56,8 @@ const scanUrl = ref('')
 const scans = shallowRef<Record<string, Uint8Array>>({})
 const archiveName = ref('')
 const archiveError = ref('')
+const zipOcr = ref('')
+const zipTypst = ref('')
 const search = ref('')
 const scanInput = ref<HTMLInputElement | null>(null)
 let currentRequest = 0
@@ -101,8 +103,17 @@ function updateDraft() {
 function setScan(n: number) {
   if (scanUrl.value) URL.revokeObjectURL(scanUrl.value)
   scanUrl.value = ''
-  const match = Object.keys(scans.value).find(k => k.endsWith('/preview_scans/page-' + String(n).padStart(3, '0') + '.jpg'))
+  const target = 'preview_scans/page-' + String(n).padStart(3, '0') + '.jpg'
+  const match = Object.keys(scans.value).find(k => k === target || k.endsWith('/' + target))
   if (match) scanUrl.value = URL.createObjectURL(new Blob([scans.value[match] as BlobPart], { type: 'image/jpeg' }))
+  const textDecoder = new TextDecoder('utf-8')
+  const locate = (dir: string, ext: string) => {
+    const name = dir + '/page-' + String(n).padStart(3, '0') + '.' + ext
+    const found = Object.keys(scans.value).find(k => k === name || k.endsWith('/' + name))
+    return found ? textDecoder.decode(scans.value[found]) : ''
+  }
+  zipOcr.value = locate('raw_text', 'txt')
+  zipTypst.value = locate('editable_pages', 'typ')
 }
 async function selectPage(n: number, writeHistory = true) {
   if (!Number.isInteger(n) || n < 1 || n > total) return
@@ -152,6 +163,11 @@ function exportPatch() {
 }
 function resetCurrent() {
   source.value = original.value
+  updateDraft()
+}
+function useZipSource() {
+  if (!zipTypst.value) return
+  source.value = zipTypst.value
   updateDraft()
 }
 async function importZip(event: Event) {
@@ -362,9 +378,14 @@ onBeforeUnmount(() => {
             <a :href="publishedSvg" target="_blank" rel="noopener">独立打开 SVG</a>
           </section>
         </div>
-        <details v-if="scanUrl" class="review-scan" open>
+        <details v-if="scanUrl || zipOcr || zipTypst" class="review-scan" open>
           <summary>本地扫描参考图（不上传服务器）</summary>
-          <img :src="scanUrl" :alt="'原扫描 PDF 第 '+page+' 页'" />
+          <img v-if="scanUrl" :src="scanUrl" :alt="'原扫描 PDF 第 '+page+' 页'" />
+          <details v-if="zipOcr"><summary>校对原始机器 OCR 文本</summary><pre>{{ zipOcr }}</pre></details>
+          <details v-if="zipTypst"><summary>查看 ZIP 内的原始 Typst 草稿</summary>
+            <button type="button" @click="useZipSource">复制此草稿到当前编辑器</button>
+            <pre>{{ zipTypst }}</pre>
+          </details>
         </details>
         <p v-else>如需扫描对照，可选导入本地 ZIP 中的 <code>preview_scans/page-NNN.jpg</code>；仅查看和编辑公开 Typst 结果无需 ZIP。</p>
       </div>
@@ -408,6 +429,7 @@ onBeforeUnmount(() => {
 .review-svg,.review-live{background:white;border:1px solid var(--vp-c-divider);border-radius:8px;height:600px;overflow:auto;padding:12px;color:black}
 .review-svg img,.review-live :deep(svg){width:100%;height:auto;max-height:none}
 .review-scan img{display:block;max-width:660px;width:100%;margin:1rem auto}
+.review-scan pre{max-height:300px;overflow:auto;white-space:pre-wrap;background:var(--vp-c-bg-soft);padding:.75rem;border-radius:8px;font-size:.78rem}
 .review-scan{margin-top:1rem}
 .review-error{color:var(--vp-c-danger-1)!important}
 @media(max-width:940px){.review-columns,.review-matrix{grid-template-columns:1fr}.review-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.review-code textarea{height:380px}.review-preview iframe,.review-svg,.review-live{height:470px}}
