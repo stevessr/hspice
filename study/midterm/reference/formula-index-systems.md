@@ -2,7 +2,7 @@
 
 > 本页按《数字集成电路分析与设计——深亚微米工艺（第三版）》后五章整理。保留**印刷页码**和 PDF 物理页序，链接打开对应页的**在线 Typst 校对版**（不是原扫描影像）。原书带编号的式子与图示、例题、推导式分别标注。
 
-[公式第 1—6 章](/reference/formula-index) · [返回总目录](/reference/) · [完整符号与模型](/reference/formulas-models)
+[公式检索与默写](/reference/formula-finder) · [按题型考前速查](/reference/exam-sheet) · [公式第 1—6 章](/reference/formula-index) · [返回总目录](/reference/) · [完整符号与模型](/reference/formulas-models)
 
 **换算**：印刷页 $n$ 对应用户上传扫描 PDF 页序 $n+19$。例如：印刷第 250 页对应 PDF 第 269 页。
 
