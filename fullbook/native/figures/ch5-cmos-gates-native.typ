@@ -3,25 +3,25 @@
 // rails (PMOS -> VDD, NMOS -> GND), with body leads omitted for readability.
 // Schematics are conceptual native Typst drawings, not source-scan facsimiles.
 #let wire(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,
-  line(end:(x2-x1,y2-y1),stroke:.8pt))
+  line(end:(x2 - x1,y2 - y1),stroke:.8pt))
 #let junction(x,y)=place(top+left,dx:x,dy:y,circle(radius:1.4pt,fill:black))
 #let ground(x,y)={
-  wire(x,y,x,y+3pt)
-  place(top+left,dx:x-8pt,dy:y+3pt,line(length:16pt,stroke:.8pt))
-  place(top+left,dx:x-5pt,dy:y+7pt,line(length:10pt,stroke:.8pt))
-  place(top+left,dx:x-2pt,dy:y+11pt,line(length:4pt,stroke:.8pt))
+  wire(x,y,x,y + 3pt)
+  place(top+left,dx:x - 8pt,dy:y + 3pt,line(length:16pt,stroke:.8pt))
+  place(top+left,dx:x - 5pt,dy:y + 7pt,line(length:10pt,stroke:.8pt))
+  place(top+left,dx:x - 2pt,dy:y + 11pt,line(length:4pt,stroke:.8pt))
 }
 #let mos(x,y,p:false,gate:"")={
-  // Terminal endpoints: (x,y) and (x,y+17pt); gate enters from the left.
-  wire(x,y,x,y+17pt)
-  wire(x-6pt,y,x-6pt,y+17pt)
-  wire(x-24pt,y+8.5pt,x-(if p {12pt} else {6pt}),y+8.5pt)
+  // Terminal endpoints: (x,y) and (x,y + 17pt); gate enters from the left.
+  wire(x,y,x,y + 17pt)
+  wire(x - 6pt,y,x - 6pt,y + 17pt)
+  wire(x - 24pt,y + 8.5pt,x - (if p {12pt} else {6pt}),y + 8.5pt)
   if p {
-    place(top+left,dx:x-9pt,dy:y+8.5pt,
+    place(top+left,dx:x - 9pt,dy:y + 8.5pt,
       circle(radius:3pt,fill:white,stroke:.8pt))
   }
   if gate != "" {
-    place(top+left,dx:x-37pt,dy:y+3pt,text(size:7pt)[#gate])
+    place(top+left,dx:x - 37pt,dy:y + 3pt,text(size:7pt)[#gate])
   }
 }
 #let nand-nor-2()=html.frame(block(width:348pt,height:191pt)[
@@ -85,14 +85,14 @@
   #place(top+left,dx:255pt,dy:19pt,text(size:7.5pt,weight:"bold")[并联])
   #wire(77pt,25pt,77pt,31pt)
   #for i in range(3) [
-    #mos(77pt,31pt+i*28pt,gate:("A","B","C").at(i))
-    #if i < 2 [#wire(77pt,48pt+i*28pt,77pt,59pt+i*28pt)]
+    #mos(77pt,31pt + i * 28pt,gate:("A","B","C").at(i))
+    #if i < 2 [#wire(77pt,48pt + i * 28pt,77pt,59pt + i * 28pt)]
   ]
   #ground(77pt,104pt)
   #wire(194pt,41pt,316pt,41pt)
   #wire(194pt,100pt,316pt,100pt)
   #for i in range(3) [
-    #let xx=207pt+i*48pt
+    #let xx=207pt + i * 48pt
     #wire(xx,41pt,xx,61pt)
     #mos(xx,61pt,gate:("A","B","C").at(i))
     #wire(xx,78pt,xx,100pt)
@@ -106,26 +106,26 @@
   // Compact MOS symbols still expose every A-H controlled gate.
   #place(top+left,dx:36pt,dy:24pt,text(size:7pt)[$Y$])
   #for i in range(8) [
-    #let yy=32pt+i*16pt
-    #wire(82pt,yy,82pt,yy+12pt)
-    #wire(77pt,yy,77pt,yy+12pt)
-    #wire(56pt,yy+6pt,77pt,yy+6pt)
-    #place(top+left,dx:43pt,dy:yy+2pt,text(size:6pt)[("A","B","C","D","E","F","G","H").at(i)])
-    #if i < 7 [#wire(82pt,yy+12pt,82pt,yy+16pt)]
+    #let yy=32pt + i * 16pt
+    #wire(82pt,yy,82pt,yy + 12pt)
+    #wire(77pt,yy,77pt,yy + 12pt)
+    #wire(56pt,yy + 6pt,77pt,yy + 6pt)
+    #place(top+left,dx:43pt,dy:yy + 2pt,text(size:6pt)[("A","B","C","D","E","F","G","H").at(i)])
+    #if i < 7 [#wire(82pt,yy + 12pt,82pt,yy + 16pt)]
   ]
   #ground(82pt,156pt)
   #place(top+left,dx:235pt,dy:25pt,text(size:7pt)[$V_("DD")$])
   #wire(163pt,43pt,318pt,43pt)
   #wire(163pt,92pt,318pt,92pt)
   #for i in range(8) [
-    #let xx=167pt+i*21pt
+    #let xx=167pt + i * 21pt
     #wire(xx,43pt,xx,59pt)
     #wire(xx,59pt,xx,75pt)
-    #wire(xx-4pt,59pt,xx-4pt,75pt)
-    #wire(xx-15pt,67pt,xx-10pt,67pt)
-    #place(top+left,dx:xx-7pt,dy:67pt,circle(radius:2pt,stroke:.7pt,fill:white))
+    #wire(xx - 4pt,59pt,xx - 4pt,75pt)
+    #wire(xx - 15pt,67pt,xx - 10pt,67pt)
+    #place(top+left,dx:xx - 7pt,dy:67pt,circle(radius:2pt,stroke:.7pt,fill:white))
     #wire(xx,75pt,xx,92pt)
-    #place(top+left,dx:xx-14pt,dy:97pt,text(size:6pt)[("A","B","C","D","E","F","G","H").at(i)])
+    #place(top+left,dx:xx - 14pt,dy:97pt,text(size:6pt)[("A","B","C","D","E","F","G","H").at(i)])
   ]
   #place(top+left,dx:165pt,dy:124pt,text(size:7pt)[并联上拉 PUN：8×PMOS])
   #place(top+left,dx:162pt,dy:143pt,text(size:7pt)[串联下拉 PDN：8×NMOS])
