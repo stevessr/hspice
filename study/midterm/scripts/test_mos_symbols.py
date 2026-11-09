@@ -95,10 +95,21 @@ def run():
                 assert device.get("data-input") == pin.upper()
         assert node(logic, gate + "-output").get("data-net")
 
+    layout = load("15-nmos-series-equivalent.svg")
+    layout_text = "".join((e.text or "") for e in layout.iter(NS + "text"))
+    for label in ("A", "B", "C", "3Lₙ", "3Wₙ"):
+        assert label in layout_text, ("Fig 5.4 missing", label)
+    # The layout's three polysilicon strips and single equivalent strip
+    # should remain editable rectangles, not a pasted screenshot.
+    strips = [e for e in layout.iter(NS + "rect")
+              if e.get("fill") == "#aaa"]
+    assert len(strips) == 4, len(strips)
+
     gallery = (BASE / "figures.md").read_text(encoding="utf-8")
     for asset in ("04-gate-networks.svg", "06-mos-terminals.svg",
                   "07-cmos-inverter.svg", "08-nand-nor-networks.svg",
-                  "13-nmos-resistor-inverter.svg", "14-cmos-gate-sizing.svg"):
+                  "13-nmos-resistor-inverter.svg", "14-cmos-gate-sizing.svg",
+                  "15-nmos-series-equivalent.svg"):
         assert asset in gallery, asset
     assert "非标准晶体管图符" not in gallery
     assert "三输入 NAND3" in gallery and "电阻负载 NMOS 反相器" in gallery
@@ -110,6 +121,10 @@ def run():
     sizing = ch5.split("#let gate-widths()", 1)[1].split("#let equivalent-width()", 1)[0]
     assert "table(" not in sizing, "Fig 5.2 must be transistor sketches, not a width table"
     assert sizing.count("#mos(") == 10, "Fig 5.2 must contain 10 MOS instances"
+    layout_fig = ch5.split("#let equivalent-width()", 1)[1].split("#let wide-nand()", 1)[0]
+    assert "三只串联 NMOS 的版图" in layout_fig
+    assert "三只 NMOS 串联与并联" not in layout_fig
+    assert "3L_n" in layout_fig and "3W_n" in layout_fig
     wide = ch5.split("#let wide-nand()", 1)[1].split("#let nand-vtc()", 1)[0]
     assert "NAND8 + 反相器" in wide and "curve.close" in wide
     ch6 = (native / "ch6-delay-capacitance-native.typ").read_text(encoding="utf-8")
