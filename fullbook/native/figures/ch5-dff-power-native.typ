@@ -4,17 +4,17 @@
 #let power-wire(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,
   line(end:(x2 - x1,y2 - y1),stroke:.85pt))
 #let power-mos(x,y,p:false)={
-  power-wire(x,y,x,y+17pt)
-  power-wire(x - 6pt,y,x - 6pt,y+17pt)
-  power-wire(x - 25pt,y+8.5pt,x - (if p { 12pt } else { 6pt }),y+8.5pt)
-  if p {place(top+left,dx:x - 9pt,dy:y+8.5pt,
+  power-wire(x,y,x,y + 17pt)
+  power-wire(x - 6pt,y,x - 6pt,y + 17pt)
+  power-wire(x - 25pt,y + 8.5pt,x - (if p { 12pt } else { 6pt }),y + 8.5pt)
+  if p {place(top+left,dx:x - 9pt,dy:y + 8.5pt,
     circle(radius:3pt,fill:white,stroke:.8pt))}
 }
 #let power-ground(x,y)={
-  power-wire(x,y,x,y+4pt)
-  place(top+left,dx:x-9pt,dy:y+4pt,line(length:18pt,stroke:.8pt))
-  place(top+left,dx:x-6pt,dy:y+8pt,line(length:12pt,stroke:.8pt))
-  place(top+left,dx:x-3pt,dy:y+12pt,line(length:6pt,stroke:.8pt))
+  power-wire(x,y,x,y + 4pt)
+  place(top+left,dx:x - 9pt,dy:y + 4pt,line(length:18pt,stroke:.8pt))
+  place(top+left,dx:x - 6pt,dy:y + 8pt,line(length:12pt,stroke:.8pt))
+  place(top+left,dx:x - 3pt,dy:y + 12pt,line(length:6pt,stroke:.8pt))
 }
 #let d-symbol(edge:false) = html.frame(block(width:258pt,height:105pt)[
   #place(top+left,dx:47pt,dy:17pt,rect(width:105pt,height:69pt,stroke:.9pt))
