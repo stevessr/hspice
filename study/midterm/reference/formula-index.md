@@ -39,10 +39,10 @@
 | **质量作用定律**<br>热平衡半导体 | $np=n_i^2$ | 式 (2.1) 附近 | 33 | [52](/native-workbench?page=52) |
 | **p 型费米势**<br>p 型掺杂，采用原书符号约定 | $\phi_{Fp}=\frac{kT}{q}\ln\frac{n_i}{N_A}$ | 式 (2.4) | 34 | [53](/native-workbench?page=53) |
 | **栅氧单位面积电容**<br>平板氧化层近似 | $C_{ox}=\frac{\varepsilon_{ox}}{t_{ox}}$ | 式 (2.5) | 34 | [53](/native-workbench?page=53) |
-| **平带电压**<br>表面固定电荷/功函数关系，采用概括写法 | $V_{FB}=\phi_{MS}-\frac{Q_{ox}}{C_{ox}}$ | 式 (2.6) 附近 | 36 | [55](/native-workbench?page=55) |
-| **耗尽层宽度**<br>均匀掺杂耗尽近似 | $X_d=\sqrt{\frac{2\varepsilon_{si}\lvert\phi_s-\phi_b\rvert}{qN_A}}$ | 式 (2.7) | 36 | [55](/native-workbench?page=55) |
-| **耗尽层电荷**<br>NMOS p 衬底，单位面积电荷 | $Q_B=-\sqrt{2q\varepsilon_{si}N_A\lvert\phi_s-\phi_b\rvert}$ | 式 (2.8) 附近 | 36 | [55](/native-workbench?page=55) |
-| **零体偏阈值**<br>NMOS，使用阈值时的耗尽电荷 | $V_{T0}=V_{FB}+2\lvert\phi_{Fp}\rvert+\frac{\lvert Q_{B0}\rvert}{C_{ox}}$ | 式 (2.10) | 38 | [57](/native-workbench?page=57) |
+| **平带电压**<br>表面固定电荷/功函数关系，采用概括写法 | $V_{FB}=\phi_{GC}-\frac{Q_{ox}}{C_{ox}}$ | 式 (2.6) 附近 | 36 | [55](/native-workbench?page=55) |
+| **耗尽层宽度**<br>均匀掺杂耗尽近似 | $X_d=\sqrt{\frac{2\varepsilon_{si}\lvert\phi_s-\phi_F\rvert}{qN_A}}$ | 式 (2.7) | 36 | [55](/native-workbench?page=55) |
+| **耗尽层电荷**<br>NMOS p 衬底，单位面积电荷 | $Q_B=-\sqrt{2q\varepsilon_{si}N_A\lvert\phi_s-\phi_F\rvert}$ | 式 (2.8) 附近 | 36 | [55](/native-workbench?page=55) |
+| **零体偏阈值**<br>NMOS，使用阈值时的耗尽电荷 | $V_T=V_{FB}-2\phi_F-\frac{Q_B}{C_{ox}}$ | 式 (2.10) | 38 | [57](/native-workbench?page=57) |
 | **体效应阈值**<br>NMOS，反向体偏置 | $V_T=V_{T0}+\gamma[\sqrt{2\lvert\phi_{Fp}\rvert+V_{SB}}-\sqrt{2\lvert\phi_{Fp}\rvert}]$ | 式 (2.11) | 38 | [57](/native-workbench?page=57) |
 | **体效应系数**<br>均匀掺杂近似 | $\gamma=\frac{\sqrt{2q\varepsilon_{si}N_A}}{C_{ox}}$ | 式 (2.12) | 38 | [57](/native-workbench?page=57) |
 
@@ -62,7 +62,7 @@
 | **沟道长度调制修正**<br>长沟道饱和区近似 | $I_{DS}=\frac{k}{2}(V_{GS}-V_T)^2(1+\lambda V_{DS})$ | 式 (2.20) | 43 | [62](/native-workbench?page=62) |
 | **迁移率退化**<br>高垂直电场经验模型 | $\mu_e=\frac{\mu_0}{1+[(V_{GS}-V_T)/(\theta t_{ox})]^\eta}$ | 式 (2.21) | 46 | [65](/native-workbench?page=65) |
 | **电子／空穴临界场**<br>教材所用历史器件估值 | $E_{cn}=6\times10^4,\quad E_{cp}=24\times10^4\ \mathrm{V/cm}$ | 式 (2.22) | 46 | [65](/native-workbench?page=65) |
-| **速度饱和漂移速度**<br>教材简化高场近似 | $v=\frac{\mu_e E}{1+E/E_c}$ | 式 (2.23) 附近 | 47 | [66](/native-workbench?page=66) |
+| **速度饱和漂移速度**<br>教材简化高场近似 | $v=\begin{cases}\mu_e E_y/(1+E_y/E_c),& E_y<E_c\\v_{sat},&E_y\ge E_c\end{cases}$ | 式 (2.23a,b) | 47 | [66](/native-workbench?page=66) |
 | **短沟道饱和漏压**<br>速度饱和模型，非长沟道边界 | $V_{Dsat}=\frac{(V_{GS}-V_T)E_cL}{V_{GS}-V_T+E_cL}$ | 式 (2.28) | 48 | [67](/native-workbench?page=67) |
 | **短沟道饱和电流**<br>教材高场近似，导电方向采用 NMOS | $I_{Dsat}=Wv_{sat}C_{ox}\frac{(V_{GS}-V_T)^2}{V_{GS}-V_T+E_cL}$ | 式 (2.29) | 48 | [67](/native-workbench?page=67) |
 | **α 幂律饱和电流**<br>参数 $K_s,\alpha$ 需经拟合 | $I_{Dsat}=K_s\frac WL(V_{GS}-V_T)^\alpha$ | 式 (2.30a) | 51 | [70](/native-workbench?page=70) |
