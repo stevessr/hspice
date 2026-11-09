@@ -17,18 +17,18 @@
 
 | 章节 | 原书印刷页 | 快速入口 |
 |---|---:|---|
-| 1 深亚微米数字集成电路设计 | 1—27 | [数字逻辑与性能术语](/reference/terms-device-process#第一章-数字集成电路及性能指标) |
-| 2 MOS 晶体管 | 28—67 | [器件和工作区](/reference/terms-device-process#第二章-mos-结构-偏置与电流模型) · [数值例题](/reference/data-tables#表-c-原书例-2-7-2-8-高场模型数值) |
-| 3 制造、版图和模拟 | 68—107 | [工艺与模型术语](/reference/terms-device-process#第三章-制造工艺与版图) · [SPICE 参数](/reference/data-tables#表-d-原书表-3-1-spice-level-1-参数节选) |
-| 4 MOS 反相器电路 | 108—147 | [反相器和噪声](/reference/terms-device-process#第四章-mos-反相器与噪声) |
-| 5 静态 MOS 门电路 | 148—188 | [门电路与时序元件](/reference/terms-circuits-systems#第五章-静态-mos-门电路) |
-| 6 高速 CMOS 逻辑设计 | 189—234 | [延迟与尺寸优化](/reference/terms-circuits-systems#第六章-高速-cmos-逻辑设计) |
-| 7 传输门和动态逻辑设计 | 235—272 | [预充电与动态逻辑](/reference/terms-circuits-systems#第七章-传输门和动态逻辑设计) |
-| 8 半导体存储器的设计 | 273—302 | [SRAM 和存储阵列](/reference/terms-circuits-systems#第八章-半导体存储器的设计) |
-| 9 存储器设计中的其他课题 | 303—334 | [ROM、Flash、CAM](/reference/terms-circuits-systems#第九章-存储器设计中的其他课题) |
-| 10 互连设计 | 335—366 | [寄生、串扰、RC](/reference/terms-circuits-systems#第十章-互连设计) |
-| 11 电源网络和时钟设计 | 367—399 | [IR Drop、skew、PLL](/reference/terms-circuits-systems#第十一章-电源网络和时钟设计) |
-| 附录 A / B | 400 起 | [SPICE 网表术语](/reference/terms-circuits-systems#附录-spice-hspice-与网表表达) |
+| 1 深亚微米数字集成电路设计 | 1—27 | [数字逻辑与性能术语](/reference/terms-device-process) |
+| 2 MOS 晶体管 | 28—67 | [器件和工作区](/reference/terms-device-process) · [数值例题](/reference/data-tables) |
+| 3 制造、版图和模拟 | 68—107 | [工艺与模型术语](/reference/terms-device-process) · [SPICE 参数](/reference/data-tables) |
+| 4 MOS 反相器电路 | 108—147 | [反相器和噪声](/reference/terms-device-process) |
+| 5 静态 MOS 门电路 | 148—188 | [门电路与时序元件](/reference/terms-circuits-systems) |
+| 6 高速 CMOS 逻辑设计 | 189—234 | [延迟与尺寸优化](/reference/terms-circuits-systems) |
+| 7 传输门和动态逻辑设计 | 235—272 | [预充电与动态逻辑](/reference/terms-circuits-systems) |
+| 8 半导体存储器的设计 | 273—302 | [SRAM 和存储阵列](/reference/terms-circuits-systems) |
+| 9 存储器设计中的其他课题 | 303—334 | [ROM、Flash、CAM](/reference/terms-circuits-systems) |
+| 10 互连设计 | 335—366 | [寄生、串扰、RC](/reference/terms-circuits-systems) |
+| 11 电源网络和时钟设计 | 367—399 | [IR Drop、skew、PLL](/reference/terms-circuits-systems) |
+| 附录 A / B | 400 起 | [SPICE 网表术语](/reference/terms-circuits-systems) |
 
 ## 如何查
 
