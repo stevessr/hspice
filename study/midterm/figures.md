@@ -14,7 +14,7 @@
 
 ![MOS 的 D G S B 节点](./assets/figures/06-mos-terminals.svg)
 
-**注意：**此图为四端连接与命名示意，非标准晶体管图符。HSPICE 的独立四端 MOS 实例端口通常按 D、G、S、B 排列；实际子电路接口按 `.subckt` 定义。
+**教材对照：**图 2.1（印刷第 30 页）的 NMOS 无栅极反相圆圈，D 在上、S 在下；图 2.2（印刷第 31 页）的 PMOS 栅极有圆圈，S 在上、D 在下。两种器件均标出右侧体端 B。HSPICE 独立四端 MOS 实例按 D、G、S、B 排列；子电路接口顺序以 `.subckt` 定义为准。
 
 ### NMOS 输出特性族
 
@@ -34,7 +34,7 @@
 
 ![CMOS 反相器的节点拓扑](./assets/figures/07-cmos-inverter.svg)
 
-上拉 PMOS 与下拉 NMOS 连接至同一输出节点，两个栅端接同一输入。
+依据教材图 1.11（印刷第 14 页）和图 4.12（印刷第 128 页）重绘：上方 PMOS 的 S、B 接 VDD，下方 NMOS 的 S、B 接 GND；两管栅极共同接 Vin，两管漏极共同接 Vout，输出并联负载电容。PMOS 栅极反相圆圈不可省略。
 
 ### CMOS 电压传输曲线
 
@@ -48,7 +48,7 @@ VTC 可用于识别输入高低电平、转换区以及噪声容限。
 
 ![二输入 NAND 与 NOR 网络](./assets/figures/08-nand-nor-networks.svg)
 
-NAND2 的 NMOS 串联、PMOS 并联；NOR2 的 NMOS 并联、PMOS 串联。图中的 P(A)、N(A) 等方框表示由输入 A 控制的器件通路，而不是标准电路图符。
+NAND2 的 NMOS 串联、PMOS 并联；NOR2 的 NMOS 并联、PMOS 串联。现已改用教材式晶体管电路图符，而非 P(A)、N(A) 功能方框。同名 A、B 栅端代表相同输入信号；逻辑网络图省略了体端连线，PMOS 体端接 VDD、NMOS 体端接 GND。
 
 ### XOR 与 2:1 选择器
 

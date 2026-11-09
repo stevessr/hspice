@@ -1,1 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 390" width="960" height="390" role="img" aria-label="NMOS 与 PMOS 的四个端口"><title>NMOS 与 PMOS 的四个端口</title><style>text{font:17px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#26374a}.title{font-size:24px;font-weight:700;fill:#185c83}.note{font-size:14px;fill:#516477}.w{stroke:#304355;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}.d{fill:#e8f3fa;stroke:#25739c;stroke-width:2.5}.dot{fill:#304355}</style><rect x="1" y="1" width="958" height="388" rx="14" fill="#fff" stroke="#cdd9e3"/><text x="480" y="38" text-anchor="middle" class="title">NMOS 与 PMOS 的四个端口</text><rect class="d" x="155" y="107" width="210" height="116" rx="8"/><text x="260" y="171" text-anchor="middle">NMOS（N 沟道）</text><rect class="d" x="590" y="107" width="210" height="116" rx="8"/><text x="695" y="171" text-anchor="middle">PMOS（P 沟道）</text><path class="w" d="M260 72 L260 107"/><path class="w" d="M260 223 L260 260"/><path class="w" d="M105 165 L155 165"/><path class="w" d="M365 165 L428 165"/><text x="260" y="63" text-anchor="middle">D</text><text x="260" y="280" text-anchor="middle">S</text><text x="81" y="170" >G</text><text x="436" y="170" >B</text><path class="w" d="M695 72 L695 107"/><path class="w" d="M695 223 L695 260"/><path class="w" d="M540 165 L590 165"/><path class="w" d="M800 165 L863 165"/><text x="695" y="63" text-anchor="middle">D</text><text x="695" y="280" text-anchor="middle">S</text><text x="516" y="170" >G</text><text x="871" y="170" >B</text><text x="480" y="335" class="note" text-anchor="middle">端口连接方框示意（非标准晶体管图符）；HSPICE 四端 MOS 顺序为 D、G、S、B。</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 960 410" width="960" height="410" role="img" aria-labelledby="ttl desc">
+<title id="ttl">NMOS 与 PMOS 四端电路符号（教材图 2.1、图 2.2）</title>
+<desc id="desc">NMOS 漏极 D 在上、源极 S 在下、栅极 G 在左且没有圆圈、体端 B 在右；PMOS 源极 S 在上、漏极 D 在下、栅极 G 有圆圈、体端 B 在右。</desc>
+<style>
+  .wire{fill:none;stroke:#171717;stroke-width:2.8;stroke-linecap:square;stroke-linejoin:miter}
+  .node{fill:#171717}
+  .label{fill:#171717;font:19px Georgia,"Noto Serif CJK SC",serif}
+  .head{fill:#171717;font:bold 23px "Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+  .caption{fill:#333;font:16px "Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+</style>
+<rect width="960" height="410" fill="white"/>
+<defs>
+  <g id="nmos4" class="wire">
+    <path d="M0 -26 V26 M-25 -26 V26 M-70 0 H-25 M0 -56 V-26 M0 26 V56 M0 0 H70"/>
+  </g>
+  <g id="pmos4" class="wire">
+    <path d="M0 -26 V26 M-25 -26 V26 M-70 0 H-39 M0 -56 V-26 M0 26 V56 M0 0 H70"/>
+    <circle cx="-32" cy="0" r="7" fill="white"/>
+  </g>
+</defs>
+<text x="480" y="43" text-anchor="middle" class="head">MOS 晶体管的四端电路符号</text>
+<g id="nmos" data-device="nmos4">
+  <text x="252" y="102" text-anchor="middle" class="head">NMOS</text>
+  <use xlink:href="#nmos4" href="#nmos4" x="252" y="209"/>
+  <circle class="node" cx="252" cy="153" r="4"/><circle class="node" cx="252" cy="265" r="4"/>
+  <circle class="node" cx="182" cy="209" r="4"/><circle class="node" cx="322" cy="209" r="4"/>
+  <text x="252" y="141" text-anchor="middle" class="label">D</text>
+  <text x="252" y="296" text-anchor="middle" class="label">S</text>
+  <text x="164" y="216" text-anchor="end" class="label">G</text>
+  <text x="340" y="216" class="label">B</text>
+  <text x="252" y="332" text-anchor="middle" class="caption">n 沟道 · 栅极无反相圆圈</text>
+</g>
+<g id="pmos" data-device="pmos4">
+  <text x="701" y="102" text-anchor="middle" class="head">PMOS</text>
+  <use xlink:href="#pmos4" href="#pmos4" x="701" y="209"/>
+  <circle class="node" cx="701" cy="153" r="4"/><circle class="node" cx="701" cy="265" r="4"/>
+  <circle class="node" cx="631" cy="209" r="4"/><circle class="node" cx="771" cy="209" r="4"/>
+  <text x="701" y="141" text-anchor="middle" class="label">S</text>
+  <text x="701" y="296" text-anchor="middle" class="label">D</text>
+  <text x="613" y="216" text-anchor="end" class="label">G</text>
+  <text x="789" y="216" class="label">B</text>
+  <text x="701" y="332" text-anchor="middle" class="caption">p 沟道 · 栅极有反相圆圈</text>
+</g>
+<text x="480" y="376" text-anchor="middle" class="caption">按教材图 2.1、图 2.2 重绘。G：栅极；D：漏极；S：源极；B：体端 / 衬底。</text>
+</svg>
