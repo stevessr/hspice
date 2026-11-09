@@ -65,6 +65,9 @@ jobs:
       - name: Test online Typst editor validation and dependency graph
         run: node --test study/midterm/scripts/native-review.test.mjs
 
+      - name: Validate textbook glossary and data sheets
+        run: python3 study/midterm/scripts/check_reference.py
+
       - name: Validate Markdown and image references
         run: python3 study/midterm/scripts/validate.py
 

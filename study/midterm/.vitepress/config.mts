@@ -17,6 +17,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '系统复习', link: '/content/00-reading-guide' },
+      { text: '专业术语与数据', link: '/reference/' },
       { text: '第1–4章专项', link: '/review-1to4/' },
       { text: '实践题库', link: '/content/practice/' },
       { text: '电路图解', link: '/figures' },
@@ -28,6 +29,15 @@ export default defineConfig({
       { text: 'GitHub 仓库', link: 'https://github.com/stevessr/hspice' }
     ],
     sidebar: {
+      '/reference/': [
+        { text: '教材专业术语与数据', items: [
+          { text: '速查总览', link: '/reference/' },
+          { text: '术语 I：基础、器件与工艺（193条）', link: '/reference/terms-device-process' },
+          { text: '术语 II：门电路与系统（186条）', link: '/reference/terms-circuits-systems' },
+          { text: '教材原书数据与参数表', link: '/reference/data-tables' },
+          { text: '公式与 HSPICE 参数对照', link: '/reference/formulas-models' }
+        ] }
+      ],
       '/review-1to4/': [
         { text: '前四章专项', items: [
           { text: '复习总览', link: '/review-1to4/' },
