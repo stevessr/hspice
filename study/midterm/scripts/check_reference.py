@@ -64,7 +64,7 @@ for key, expected in formula_sources.items():
         assert 1 <= printed <= 399, f'page outside textbook body: {printed}'
     formula_seen += len(lines)
 assert formula_seen == 145
-assert len(re.findall(r'^## 第 \d+ 章：', text['formula-index'] + text['formula-index-systems'], re.M)) == 11
+assert set(re.findall(r'^## 第 (\d+) 章：', text['formula-index'] + text['formula-index-systems'], re.M)) == {str(i) for i in range(1, 12)}
 assert "'/reference/formula-index'" in config
 assert "'/reference/formula-index-systems'" in config
 print('Formula index OK: 145 formulas, 11 chapters, print-to-PDF offset +19, and deep links')
