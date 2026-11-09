@@ -400,15 +400,15 @@
   #place(top+left,dx:171pt,dy:141pt,text(size:7pt)[$W_n$]))
   // Right NOR: R and Qbar inputs, output Q.
   #wire(305pt,13pt,305pt,23pt)
-  #vmos(305pt,23pt,[R],p:true)
+  #vmos(305pt,23pt,[$bar(Q)$],p:true)
   #wire(305pt,51pt,305pt,57pt)
-  #vmos(305pt,57pt,[$bar(Q)$],p:true)
+  #vmos(305pt,57pt,[R],p:true)
   #wire(305pt,85pt,305pt,101pt)
   #wire(267pt,101pt,342pt,101pt)
   #wire(267pt,101pt,267pt,111pt)
   #wire(342pt,101pt,342pt,111pt)
-  #vmos(267pt,111pt,[R])
-  #vmos(342pt,111pt,[$bar(Q)$])
+  #vmos(267pt,111pt,[$bar(Q)$])
+  #vmos(342pt,111pt,[R])
   #wire(267pt,139pt,267pt,157pt)
   #wire(342pt,139pt,342pt,157pt)
   #wire(267pt,157pt,342pt,157pt)
@@ -420,9 +420,10 @@
   // Output Qbar feeds the opposite gate of right-hand NOR.
   #wire(120pt,101pt,218pt,101pt)
   #node(218pt,101pt)
-  // Qbar net is named on both second-device gates; one branch is drawn.
-  #wire(218pt,71pt,218pt,101pt)
-  #wire(218pt,71pt,279pt,71pt)
+  // Qbar net: source PDF185 feeds the *upper* right PMOS and left right-side NMOS.
+  #wire(218pt,37pt,218pt,125pt)
+  #wire(218pt,37pt,279pt,37pt)
+  #wire(218pt,125pt,241pt,125pt)
   #place(top+left,dx:170pt,dy:92pt,text(size:7pt)[$bar(Q)$]))
   // Output Q returns through the lower feedback route to left NOR gates.
   #wire(305pt,101pt,394pt,101pt)
