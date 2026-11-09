@@ -62,6 +62,9 @@ jobs:
             study/midterm/node_modules
           key: vitepress-node22-${{ runner.os }}-${{ hashFiles('study/midterm/package.json') }}
 
+      - name: Test online Typst editor validation and dependency graph
+        run: node --test study/midterm/scripts/native-review.test.mjs
+
       - name: Validate Markdown and image references
         run: python3 study/midterm/scripts/validate.py
 
