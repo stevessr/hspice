@@ -48,6 +48,7 @@ def run():
     check_fig("06-mos-terminals.svg", 1, 1, has_body=True)
     check_fig("07-cmos-inverter.svg", 1, 1, has_body=True)
     check_fig("08-nand-nor-networks.svg", 4, 4, has_body=False)
+    check_fig("14-cmos-gate-sizing.svg", 5, 5, has_body=False)
 
     resistor = load("13-nmos-resistor-inverter.svg")
     assert len([e for e in resistor.iter() if e.get("data-device") == "nmos4"]) == 1
@@ -85,6 +86,8 @@ def run():
     ), "PMOS/NMOS drains should join at Vout"
 
     logic = load("08-nand-nor-networks.svg")
+    assert node(logic, "nor2-panel").get("data-source-figure") == "5.1a"
+    assert node(logic, "nand2-panel").get("data-source-figure") == "5.1b"
     for gate in ("nand", "nor"):
         for kind in ("pmos", "nmos"):
             for pin in ("a", "b"):
@@ -95,7 +98,7 @@ def run():
     gallery = (BASE / "figures.md").read_text(encoding="utf-8")
     for asset in ("04-gate-networks.svg", "06-mos-terminals.svg",
                   "07-cmos-inverter.svg", "08-nand-nor-networks.svg",
-                  "13-nmos-resistor-inverter.svg"):
+                  "13-nmos-resistor-inverter.svg", "14-cmos-gate-sizing.svg"):
         assert asset in gallery, asset
     assert "非标准晶体管图符" not in gallery
     assert "三输入 NAND3" in gallery and "电阻负载 NMOS 反相器" in gallery
@@ -104,6 +107,11 @@ def run():
     ch5 = (native / "ch5-cmos-gates-native.typ").read_text(encoding="utf-8")
     assert "上拉PUN：PMOS串联" not in ch5, "Chapter 5 still contains text-only NAND"
     assert ch5.count("#mos(") >= 8
+    sizing = ch5.split("#let gate-widths()", 1)[1].split("#let equivalent-width()", 1)[0]
+    assert "table(" not in sizing, "Fig 5.2 must be transistor sketches, not a width table"
+    assert sizing.count("#mos(") == 10, "Fig 5.2 must contain 10 MOS instances"
+    wide = ch5.split("#let wide-nand()", 1)[1].split("#let nand-vtc()", 1)[0]
+    assert "NAND8 + 反相器" in wide and "curve.close" in wide
     ch6 = (native / "ch6-delay-capacitance-native.typ").read_text(encoding="utf-8")
     for name in ("equivalent", "stacking", "nand3-network"):
         assert f"#let {name}()" in ch6
