@@ -3,7 +3,9 @@ import test from 'node:test'
 import {
   DAY_MS, RETRY_MS, STORAGE_FORMAT, decodeProgress, encodeProgress,
   recordAnswer, isDue, reviewStats, matchesStatus, filterFormulaEntries,
-  shuffleEntries, selectSession
+  shuffleEntries, selectSession, selectPrioritizedSession,
+  encodeSession, decodeSession, SESSION_FORMAT, mergeProgressBackup,
+  makeProgressBackup, MAX_BACKUP_BYTES
 } from '../.vitepress/theme/formula-review-core.mjs'
 
 const NOW = Date.UTC(2026, 10, 9)
@@ -100,4 +102,85 @@ test('randomized sessions are finite, deterministic with seeded RNG, and never m
   assert.equal(selectSession(input, 30).length, 3)
   assert.deepEqual(selectSession(input, 2, false).map(x=>x.id), ['f-1','f-2'])
   assert.deepEqual(selectSession([], 10), [])
+})
+
+test('priority order is due weak, due mastered, new, early weak, then early mastered', () => {
+  const dueAgain = recordAnswer(null, 'again', NOW - RETRY_MS - 1)
+  const dueGood = recordAnswer(null, 'good', NOW - DAY_MS - 1)
+  const laterHard = recordAnswer(null, 'hard', NOW)
+  const laterGood = recordAnswer(null, 'good', NOW)
+  const items = ['future-good','new','due-good','future-hard','due-again']
+    .map(id => ({ id }))
+  const progress = {
+    'due-again': dueAgain, 'due-good': dueGood,
+    'future-hard': laterHard, 'future-good': laterGood
+  }
+  const picked = selectPrioritizedSession(items, progress, 4, NOW, () => 0.5)
+  assert.deepEqual(picked.map(x=>x.id), ['due-again','due-good','new','future-hard'])
+  assert.deepEqual(items.map(x=>x.id),
+    ['future-good','new','due-good','future-hard','due-again'])
+  assert.equal(selectPrioritizedSession([], progress, 10, NOW).length, 0)
+})
+
+test('session snapshot restores unfinished round and rejects foreign or altered IDs', () => {
+  const session = { ids:['f-3','f-1','f-2'], cursor:2, revealed:true,
+    ratings:{again:1,hard:0,good:0,skipped:1}, updatedAt:NOW }
+  assert.deepEqual(decodeSession(encodeSession(session), ['f-1','f-2','f-3']), session)
+  assert.equal(decodeSession('not-json',['f-1','f-2','f-3']), null)
+  assert.equal(decodeSession(encodeSession({...session,ids:['f-1','foreign']}),
+    ['f-1','f-2','f-3']), null)
+  assert.equal(decodeSession(encodeSession({...session,ids:['f-1','f-1']}),
+    ['f-1','f-2','f-3']), null)
+  assert.equal(decodeSession(encodeSession({...session,cursor:3}),
+    ['f-1','f-2','f-3']), null)
+  assert.equal(decodeSession(encodeSession({...session,ratings:{
+    again:1,hard:1,good:1,skipped:1 }}), ['f-1','f-2','f-3']), null)
+  assert.equal(decodeSession(JSON.stringify({format:'wrong',session}),
+    ['f-1','f-2','f-3']), null)
+  assert.equal(decodeSession(JSON.stringify({format:SESSION_FORMAT,session:null}),
+    ['f-1','f-2','f-3']), null)
+  // Completed rounds have no session to resume.
+  assert.equal(decodeSession(encodeSession({...session,cursor:3}),
+    ['f-1','f-2','f-3']), null)
+})
+
+test('JSON export/import merges only valid formula cards and prefers newer reviews', () => {
+  const original = {
+    'f-1': recordAnswer(null,'good',NOW),
+    'f-2': recordAnswer(null,'again',NOW - RETRY_MS)
+  }
+  const foreign = {
+    'f-1': recordAnswer(null,'again',NOW - DAY_MS),
+    'f-2': recordAnswer(null,'good',NOW + DAY_MS),
+    'f-3': recordAnswer(null,'hard',NOW),
+    'foreign': recordAnswer(null,'good',NOW)
+  }
+  const json = makeProgressBackup(foreign, NOW)
+  const merged = mergeProgressBackup(json, ['f-1','f-2','f-3'], original)
+  assert.equal(merged.added, 1)
+  assert.equal(merged.newer, 1)
+  assert.equal(merged.kept, 1)
+  assert.equal(merged.ignored, 1)
+  assert.deepEqual(merged.records['f-1'], original['f-1'])
+  assert.deepEqual(merged.records['f-2'], foreign['f-2'])
+  assert.deepEqual(merged.records['f-3'], foreign['f-3'])
+  assert.deepEqual(original['f-2'], recordAnswer(null,'again',NOW - RETRY_MS))
+  assert.throws(() => mergeProgressBackup('nonsense', ['f-1']), /JSON/)
+  assert.throws(() => mergeProgressBackup('x'.repeat(MAX_BACKUP_BYTES+1), ['f-1']), /过大/)
+  assert.throws(() => mergeProgressBackup(JSON.stringify({format:'alien',records:{}}), ['f-1']), /格式/)
+  const invalid = {
+    format:'hspice-formula-review-progress-v1',
+    records:{'f-1': { ...foreign['f-1'], dueAt: 'tomorrow'}}
+  }
+  assert.equal(mergeProgressBackup(JSON.stringify(invalid), ['f-1']).ignored, 1)
+})
+
+test('exported progress is compatible with existing v1 decoder and contains no textbook text', () => {
+  const progress = {'f-1':recordAnswer(null,'good',NOW)}
+  const backup = makeProgressBackup(progress,NOW)
+  assert.deepEqual(decodeProgress(backup,['f-1']), progress)
+  const payload = JSON.parse(backup)
+  assert.equal(payload.exportedAt, NOW)
+  assert.equal(payload.format, STORAGE_FORMAT)
+  assert.equal(Object.keys(payload.records).length, 1)
 })

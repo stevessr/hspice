@@ -122,3 +122,116 @@ export function selectSession(entries, size, shuffle = true, rng = Math.random) 
   const count = Math.min(entries.length, Math.max(1, Number(size) || 10))
   return (shuffle ? shuffleEntries(entries, rng) : [...entries]).slice(0, count)
 }
+
+
+/** The active session is stored separately from per-formula review history. */
+export const SESSION_KEY = 'hspice:formula-session:v1'
+export const SESSION_FORMAT = 'hspice-formula-session-v1'
+export const MAX_BACKUP_BYTES = 250_000
+export const MAX_SESSION_BYTES = 24_000
+
+/**
+ * Prioritise genuinely due reviews, then unstudied material, then optional
+ * early review. Randomness affects only equal-priority cards.
+ * Never mutate the source-index order or the review-record object.
+ */
+export function selectPrioritizedSession(entries, records, size, now = Date.now(), rng = Math.random) {
+  function priority(entry) {
+    const record = records[entry.id]
+    if (record && isDue(record, now) && record.rating !== 'good') return 0
+    if (record && isDue(record, now)) return 1
+    if (!record) return 2
+    if (record.rating !== 'good') return 3
+    return 4
+  }
+  const ordered = shuffleEntries(entries, rng).sort((a, b) => {
+    const difference = priority(a) - priority(b)
+    if (difference) return difference
+    const first = records[a.id], second = records[b.id]
+    // Oldest overdue work first, within either due category.
+    if (first && second && isDue(first, now) && isDue(second, now)) {
+      return first.dueAt - second.dueAt
+    }
+    return 0
+  })
+  return selectSession(ordered, size, false)
+}
+
+/** Persist only the minimum information required to resume a practice round. */
+export function encodeSession(session) {
+  return JSON.stringify({ format: SESSION_FORMAT, session })
+}
+
+/**
+ * A corrupt, stale or foreign session must never expose a formula not in the
+ * current verified index. The caller may show a resume control if non-null.
+ */
+export function decodeSession(raw, validIds) {
+  if (typeof raw !== 'string' || raw.length > MAX_SESSION_BYTES) return null
+  let data
+  try { data = JSON.parse(raw) } catch { return null }
+  if (data?.format !== SESSION_FORMAT || !data.session) return null
+  const session = data.session
+  if (!Array.isArray(session.ids) || session.ids.length < 1 ||
+      session.ids.length > validIds.length ||
+      !session.ids.every(x => typeof x === 'string')) return null
+  const allowed = new Set(validIds)
+  if (session.ids.some(id => !allowed.has(id)) ||
+      new Set(session.ids).size !== session.ids.length) return null
+  const cursor = session.cursor
+  if (!Number.isInteger(cursor) || cursor < 0 || cursor >= session.ids.length ||
+      typeof session.revealed !== 'boolean') return null
+  const ratings = session.ratings
+  if (!ratings || typeof ratings !== 'object') return null
+  const keys = ['again', 'hard', 'good', 'skipped']
+  if (!keys.every(k => Number.isInteger(ratings[k]) &&
+      ratings[k] >= 0 && ratings[k] <= cursor)) return null
+  if (keys.reduce((n, k) => n + ratings[k], 0) !== cursor) return null
+  if (!isFiniteNonNegative(session.updatedAt)) return null
+  return {
+    ids: [...session.ids], cursor, revealed: session.revealed,
+    ratings: Object.fromEntries(keys.map(k => [k, ratings[k]])),
+    updatedAt: session.updatedAt
+  }
+}
+
+/**
+ * Portable JSON backups use the existing review format, not a second source
+ * of formula content. Newer reviewedAt wins; equal timestamps keep local data.
+ */
+export function mergeProgressBackup(raw, validIds, current = {}) {
+  if (typeof raw !== 'string' || raw.length > MAX_BACKUP_BYTES) {
+    throw new Error('文件不是有效的复习记录，或体积过大')
+  }
+  let payload
+  try { payload = JSON.parse(raw) } catch { throw new Error('JSON 文件无法解析') }
+  if (payload?.format !== STORAGE_FORMAT || !payload.records ||
+      typeof payload.records !== 'object' || Array.isArray(payload.records)) {
+    throw new Error('复习记录格式不匹配')
+  }
+  const incoming = decodeProgress(raw, validIds)
+  const merged = { ...current }
+  let added = 0, newer = 0, kept = 0
+  for (const [id, record] of Object.entries(incoming)) {
+    if (!merged[id]) {
+      merged[id] = record
+      added++
+    } else if (record.reviewedAt > merged[id].reviewedAt) {
+      merged[id] = record
+      newer++
+    } else {
+      kept++
+    }
+  }
+  return {
+    records: merged, added, newer, kept,
+    ignored: Object.keys(payload.records).length - Object.keys(incoming).length
+  }
+}
+
+/** Client-side download payload; no network upload or account required. */
+export function makeProgressBackup(records, now = Date.now()) {
+  return JSON.stringify({
+    format: STORAGE_FORMAT, exportedAt: now, records
+  }, null, 2)
+}

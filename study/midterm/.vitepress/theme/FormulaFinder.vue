@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { withBase } from 'vitepress'
 import {
-  STORAGE_KEY, decodeProgress, encodeProgress, recordAnswer, reviewStats,
-  filterFormulaEntries, selectSession, isDue
+  STORAGE_KEY, SESSION_KEY, decodeProgress, encodeProgress, recordAnswer, reviewStats,
+  filterFormulaEntries, selectSession, selectPrioritizedSession, isDue,
+  encodeSession, decodeSession, mergeProgressBackup, makeProgressBackup
 } from './formula-review-core.mjs'
 
 type Formula = {
@@ -38,14 +39,21 @@ const hydrated = ref(false)
 // Filtering, copying, skipping and browsing do not mark a card as mastered.
 const mode = ref<'browse' | 'practice'>('browse')
 const sessionSize = ref(15)
-const sessionOrder = ref('shuffle')
+const sessionOrder = ref('priority')
 const sessionIds = ref<string[]>([])
 const cursor = ref(0)
 const practiceRevealed = ref(false)
 const sessionRatings = ref<Record<Rating | 'skipped', number>>({
   again: 0, hard: 0, good: 0, skipped: 0
 })
+type SavedSession = {
+  ids: string[]; cursor: number; revealed: boolean
+  ratings: Record<Rating | 'skipped', number>; updatedAt: number
+}
+const savedSession = ref<SavedSession | null>(null)
 const practicePanel = ref<HTMLElement | null>(null)
+let clockTimer: ReturnType<typeof setInterval> | undefined
+onUnmounted(() => { if (clockTimer) clearInterval(clockTimer) })
 const chapters = computed(() => [...new Set(entries.value.map(x => x.chapter))].sort((a, b) => a - b))
 const matches = computed(() => filterFormulaEntries(entries.value, progress.value, {
   query: query.value, chapter: chapter.value, kind: kind.value,
@@ -58,7 +66,7 @@ const current = computed(() => {
   const id = sessionIds.value[cursor.value]
   return id ? entries.value.find(x => x.id === id) : undefined
 })
-const practiceDone = computed(() => mode.value === 'practice' && cursor.value >= sessionIds.value.length)
+
 const sourceHref = (x: Formula) => withBase(x.source_route)
 const reviewHref = (x: Formula) => withBase('/native-workbench') + '?page=' + x.pdf_page
 const isShown = (x: Formula) => !hidden.value || revealed.value.has(x.id)
@@ -86,12 +94,14 @@ function ratingLabel(record?: ReviewRecord) {
   return record.rating === 'good' ? '已掌握' :
     record.rating === 'hard' ? '需巩固' : '待重学'
 }
-function saveProgress() {
+function saveProgress(): boolean {
   try {
     localStorage.setItem(STORAGE_KEY, encodeProgress(progress.value))
     storageMessage.value = ''
+    return true
   } catch {
     storageMessage.value = '浏览器禁止本地保存：本次练习仍可继续，刷新后记录可能丢失。'
+    return false
   }
 }
 function answer(id: string, rating: Rating) {
@@ -104,15 +114,59 @@ function answer(id: string, rating: Rating) {
 function focusPractice() {
   nextTick(() => practicePanel.value?.focus())
 }
+function saveSession() {
+  try {
+    if (mode.value !== 'practice' || cursor.value >= sessionIds.value.length) {
+      localStorage.removeItem(SESSION_KEY)
+      savedSession.value = null
+      return
+    }
+    const session: SavedSession = {
+      ids: [...sessionIds.value], cursor: cursor.value,
+      revealed: practiceRevealed.value, ratings: { ...sessionRatings.value },
+      updatedAt: Date.now()
+    }
+    localStorage.setItem(SESSION_KEY, encodeSession(session))
+    savedSession.value = session
+  } catch {
+    storageMessage.value = '当前浏览器无法保存练习断点，本次练习仍可继续。'
+  }
+}
+function revealAnswer() {
+  if (!current.value) return
+  practiceRevealed.value = true
+  saveSession()
+  focusPractice()
+}
 function startSession() {
   if (!matches.value.length) return
-  sessionIds.value = selectSession(matches.value, sessionSize.value, sessionOrder.value === 'shuffle')
-    .map(x => x.id)
+  if (savedSession.value && !window.confirm('已有未完成的练习，开始新的一轮将覆盖当前断点。确定继续？')) return
+  const chosen = sessionOrder.value === 'priority'
+    ? selectPrioritizedSession(matches.value, progress.value, sessionSize.value, Date.now())
+    : selectSession(matches.value, sessionSize.value, sessionOrder.value === 'shuffle')
+  sessionIds.value = chosen.map(x => x.id)
   cursor.value = 0
   practiceRevealed.value = false
   sessionRatings.value = { again: 0, hard: 0, good: 0, skipped: 0 }
   mode.value = 'practice'
+  saveSession()
   focusPractice()
+}
+function resumeSession() {
+  if (!savedSession.value) return
+  const session = savedSession.value
+  sessionIds.value = [...session.ids]
+  cursor.value = session.cursor
+  practiceRevealed.value = session.revealed
+  sessionRatings.value = { ...session.ratings }
+  mode.value = 'practice'
+  focusPractice()
+}
+function discardSession() {
+  if (!savedSession.value ||
+      !window.confirm('放弃未完成的一轮练习？已经完成的单卡复习记录会保留。')) return
+  savedSession.value = null
+  try { localStorage.removeItem(SESSION_KEY) } catch {}
 }
 function advance(rating?: Rating) {
   if (!current.value) return
@@ -125,23 +179,61 @@ function advance(rating?: Rating) {
   }
   practiceRevealed.value = false
   cursor.value += 1
+  saveSession()
   focusPractice()
 }
 function exitSession() {
+  saveSession()
   mode.value = 'browse'
   practiceRevealed.value = false
 }
+function downloadBackup() {
+  try {
+    const text = makeProgressBackup(progress.value)
+    const href = URL.createObjectURL(new Blob([text], { type: 'application/json;charset=utf-8' }))
+    const a = document.createElement('a')
+    a.href = href
+    a.download = 'hspice-formula-review-' + new Date().toISOString().slice(0, 10) + '.json'
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+    setTimeout(() => URL.revokeObjectURL(href), 2000)
+  } catch {
+    storageMessage.value = '导出失败，请检查浏览器的下载权限。'
+  }
+}
+async function importBackup(event: Event) {
+  const input = event.target as HTMLInputElement
+  const file = input.files?.[0]
+  if (!file) return
+  try {
+    if (file.size > 250_000) throw new Error('备份文件过大')
+    const result = mergeProgressBackup(await file.text(), entries.value.map(x => x.id), progress.value)
+    progress.value = result.records
+    clock.value = Date.now()
+    if (saveProgress()) {
+      storageMessage.value = '导入完成：新增 ' + result.added + ' 项，更新 ' +
+        result.newer + ' 项，保留本机 ' + result.kept + ' 项；忽略无效条目 ' + result.ignored + ' 项。'
+    }
+  } catch (error) {
+    storageMessage.value = '导入失败：' + (error instanceof Error ? error.message : String(error))
+  } finally {
+    input.value = ''
+  }
+}
 function onPracticeKeydown(event: KeyboardEvent) {
   const node = event.target as HTMLElement
-  if (node && ['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON', 'A'].includes(node.tagName)) return
   if (event.key === 'Escape') {
     event.preventDefault()
     exitSession()
-  } else if (!current.value) {
+    return
+  }
+  if (node && ['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON', 'A'].includes(node.tagName)) return
+  if (!current.value) {
     return
   } else if (!practiceRevealed.value && event.key === ' ') {
     event.preventDefault()
-    practiceRevealed.value = true
+    revealAnswer()
   } else if (practiceRevealed.value && ['1', '2', '3'].includes(event.key)) {
     event.preventDefault()
     advance(({ '1': 'again', '2': 'hard', '3': 'good' } as const)[event.key as '1' | '2' | '3'])
@@ -162,6 +254,8 @@ function clearProgress() {
   if (!window.confirm('确定清除本机保存的全部公式复习记录？此操作不可撤销。')) return
   progress.value = {}
   clock.value = Date.now()
+  savedSession.value = null
+  try { localStorage.removeItem(SESSION_KEY) } catch {}
   saveProgress()
 }
 
@@ -195,11 +289,18 @@ onMounted(async () => {
     }
     entries.value = data.entries
     clock.value = Date.now()
+    clockTimer = setInterval(() => { clock.value = Date.now() }, 60_000)
     try {
       progress.value = decodeProgress(localStorage.getItem(STORAGE_KEY) || '',
         data.entries.map(x => x.id)) as Record<string, ReviewRecord>
     } catch {
       storageMessage.value = '当前浏览器无法读取本地复习记录，本次复习仍可进行。'
+    }
+    try {
+      savedSession.value = decodeSession(localStorage.getItem(SESSION_KEY) || '',
+        data.entries.map(x => x.id)) as SavedSession | null
+    } catch {
+      savedSession.value = null
     }
     const url = new URLSearchParams(window.location.search)
     const q = url.get('q')
@@ -276,10 +377,19 @@ onMounted(async () => {
           <button type="button" :disabled="!query && chapter === 'all' && kind === 'all' && status === 'all'"
             @click="resetFilters">清空筛选</button>
         </div>
+        <div v-if="savedSession" class="session-resume" role="status">
+          <div>
+            <strong>上次练习尚未完成</strong>
+            <p>已完成 {{ savedSession.cursor }} / {{ savedSession.ids.length }} 张；
+              继续练习不会重新抽卡，已评价的进度已保存。</p>
+          </div>
+          <button class="primary-button" type="button" @click="resumeSession">继续上次练习</button>
+          <button type="button" @click="discardSession">放弃断点</button>
+        </div>
         <div class="session-launch">
           <div>
             <strong>主动回忆练习</strong>
-            <p>先根据名称与适用条件默写，再翻面核对；逐题记录“不会 / 模糊 / 会了”。</p>
+            <p>默认优先安排到期题和未学题。根据名称、公式条件先默写，再翻面给出评价。</p>
           </div>
           <label>练习数量
             <select v-model.number="sessionSize" aria-label="每次练习卡片数量">
@@ -291,6 +401,7 @@ onMounted(async () => {
           </label>
           <label>练习顺序
             <select v-model="sessionOrder" aria-label="练习顺序">
+              <option value="priority">优先到期与新卡</option>
               <option value="shuffle">随机打乱</option>
               <option value="source">教材顺序</option>
             </select>
@@ -334,9 +445,16 @@ onMounted(async () => {
         </div>
         <details class="review-storage">
           <summary>学习记录与隐私</summary>
-          <p>复习评价仅保存在当前浏览器的本地存储，不上传到服务器，也不会随网址分享。清除浏览器数据会清除记录。</p>
+          <p>复习评价和未完成练习只保存在当前浏览器，不上传服务器。可以下载 JSON 备份，跨浏览器导入时按单卡最后复习时间合并，较新的记录优先；无效或不属于本教材的条目会被忽略。</p>
           <p>“不会”10 分钟后重学，“模糊”次日巩固，“会了”按 1 / 3 / 7 / 14 / 30 / 60 天递进安排。</p>
-          <button type="button" :disabled="stats.reviewed === 0" @click="clearProgress">清除本机复习记录</button>
+          <div class="backup-actions">
+            <button type="button" @click="downloadBackup">导出复习记录 JSON</button>
+            <label class="backup-file-label">导入记录并合并
+              <input type="file" accept=".json,application/json" @change="importBackup" aria-label="导入复习记录 JSON" />
+            </label>
+            <button type="button" :disabled="stats.reviewed === 0" @click="clearProgress">清除本机复习记录</button>
+          </div>
+          <p>备份只包含公式卡片 ID、评价和复习日期，不包含原书全文或公式源代码。</p>
         </details>
       </template>
 
@@ -344,7 +462,7 @@ onMounted(async () => {
         aria-label="公式默写练习" @keydown="onPracticeKeydown">
         <div class="practice-topbar">
           <span>默写练习 · {{ Math.min(cursor + 1, sessionIds.length) }} / {{ sessionIds.length }}</span>
-          <button type="button" @click="exitSession">结束练习，返回速查</button>
+          <button type="button" @click="exitSession">返回列表（保留断点）</button>
         </div>
         <progress :value="cursor" :max="sessionIds.length" aria-label="已完成卡片数"></progress>
         <template v-if="current">
@@ -353,7 +471,7 @@ onMounted(async () => {
           <p class="practice-note"><strong>回忆提示：</strong>{{ current.note || current.topic }}</p>
           <div v-if="!practiceRevealed" class="practice-obscured">
             <p>请先写出公式，并说出变量意义与适用条件。</p>
-            <button class="primary-button" type="button" @click="practiceRevealed = true">
+            <button class="primary-button" type="button" @click="revealAnswer">
               显示公式答案
             </button>
             <small>聚焦练习区后按空格也可以揭示答案。</small>
@@ -374,7 +492,7 @@ onMounted(async () => {
             <button type="button" @click="advance()">跳过本张 →</button>
           </div>
           <p v-if="copyStatus" class="finder-status" role="status">{{ copyStatus }}</p>
-          <p class="practice-help">键盘：空格揭示 · 揭示后按 1 / 2 / 3 评价 · → 跳过 · Esc 退出</p>
+          <p class="practice-help">键盘：空格揭示 · 揭示后按 1 / 2 / 3 评价 · → 跳过 · Esc 返回列表并保留断点</p>
         </template>
         <div v-else class="practice-finished">
           <h2>本轮练习完成</h2>
@@ -413,6 +531,14 @@ onMounted(async () => {
 .finder-toolbar { display:flex; flex-wrap:wrap; gap:.7rem; align-items:center; margin-bottom:.85rem; }
 .finder-toolbar p { color:var(--vp-c-text-2); margin:0 auto 0 0; font-size:.85rem; }
 .finder-switch { display:inline-flex; gap:.4rem; align-items:center; font-size:.83rem; }
+.session-resume { display:flex; flex-wrap:wrap; gap:.65rem; align-items:center; padding:.85rem 1rem; margin-bottom:.85rem; border:1px solid var(--vp-c-brand-2); border-radius:12px; }
+.session-resume>div { flex:1 1 220px; }
+.session-resume strong { font-size:.9rem; }
+.session-resume p { margin:.25rem 0; color:var(--vp-c-text-2); font-size:.8rem; line-height:1.6; }
+.backup-actions { display:flex; align-items:center; flex-wrap:wrap; gap:.6rem; margin:1rem 0; }
+.backup-file-label { position:relative; overflow:hidden; cursor:pointer; padding:.5rem .75rem; border:1px solid var(--vp-c-divider); border-radius:8px; background:var(--vp-c-bg-soft); color:var(--vp-c-text-1); font-size:.85rem; }
+.backup-file-label:focus-within { outline:2px solid var(--vp-c-brand-1); outline-offset:2px; }
+.backup-file-label input { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer; }
 .session-launch { display:flex; gap:.65rem; align-items:end; flex-wrap:wrap; padding:1rem; margin-bottom:1.1rem; background:var(--vp-c-bg-soft); border:1px solid var(--vp-c-divider); border-radius:12px; }
 .session-launch>div { flex:1 1 220px; }
 .session-launch strong { font-size:.93rem; }
@@ -469,6 +595,7 @@ onMounted(async () => {
   .finder-search { grid-column:auto; }
   .session-launch label { flex:1 1 120px; }
   .session-launch .primary-button { width:100%; }
+  .session-resume button { flex:1 1 auto; }
   .rating-controls { flex-direction:column; width:100%; }
   .rating-controls button { width:100%; }
   .practice-bottom button:last-child { margin-left:0; }
