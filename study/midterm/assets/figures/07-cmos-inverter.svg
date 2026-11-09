@@ -24,7 +24,7 @@
 </g>
 <g class="wire" id="gnd-net" data-net="GND">
   <path d="M430 400 V435 H540 V344 H500"/>
-  <path d="M407 448 H453 M414 457 H446 M422 466 H438"/>
+  <path d="M407 435 H453 M414 445 H446 M422 455 H438"/>
 </g>
 <g id="pmos-device" data-device="pmos4">
   <use href="#pmos4" xlink:href="#pmos4" x="430" y="150"/>
@@ -53,7 +53,7 @@
 <circle class="node" cx="540" cy="75" r="4"/>
 <circle class="node" cx="430" cy="435" r="4"/>
 <g id="output-load">
-  <path class="wire" d="M645 246 V359 M620 359 H670 M620 374 H670 M645 374 V435 M624 447 H666 M631 456 H659 M638 465 H652"/>
+  <path class="wire" d="M645 246 V359 M620 359 H670 M620 374 H670 M645 374 V435 M624 435 H666 M631 445 H659 M638 455 H652"/>
   <circle class="node" cx="645" cy="246" r="4"/>
   <text class="label" x="677" y="376">C<tspan baseline-shift="sub" font-size="14">L</tspan></text>
 </g>
