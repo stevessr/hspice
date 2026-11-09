@@ -9,6 +9,9 @@ hero:
       text: 开始系统复习
       link: /content/00-reading-guide
     - theme: alt
+      text: 第1—4章专项复习（48题）
+      link: /review-1to4/
+    - theme: alt
       text: 进入实践题库
       link: /content/practice/
     - theme: alt
@@ -30,6 +33,9 @@ hero:
       text: 公式与电路图解
       link: /figures
 features:
+  - title: 第1—4章专项复习与48题训练
+    details: 四章精讲、每章12题、逐题解析，支持交互式答题记录与公式速查。
+    link: /review-1to4/
   - title: 分章 Markdown 阅读
     details: 九章理论讲义与六项附录，支持目录导航、公式渲染、移动端阅读与全文搜索。
     link: /content/chapters/01-knowledge-map
@@ -58,6 +64,10 @@ features:
     details: 14 道概念题，支持即时评分、逐题参考解析与重新作答。
     link: /quiz
 ---
+
+## 教材第1—4章专项
+
+[进入四章复习资料](/review-1to4/) · [交互式48题](/review-1to4/interactive) · [公式速查](/review-1to4/reference)
 
 ## 内容范围
 
