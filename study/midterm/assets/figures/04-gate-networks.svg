@@ -7,7 +7,7 @@
 .heading{font:700 25px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#191919}
 .subhead{font:700 21px Georgia,"Noto Serif CJK SC",serif;fill:#191919}
 .pin{font:19px Georgia,"Noto Serif CJK SC",serif;fill:#191919}
-.note{font:16px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#333}
+.divider{stroke:#aaa;stroke-width:1}.note{font:16px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#333}
 </style>
 <rect width="1200" height="860" fill="#fff"/>
 <defs>
@@ -17,8 +17,8 @@
 <text x="600" y="44" text-anchor="middle" class="heading">三输入静态 CMOS 逻辑网络（晶体管级）</text>
 <text x="280" y="83" text-anchor="middle" class="subhead">NAND3 · Y = ¬(A·B·C)</text>
 <text x="865" y="83" text-anchor="middle" class="subhead">NOR3 · Y = ¬(A+B+C)</text>
-<path class="wire" d="M585 100 V781" stroke="#ccc"/>
-<text x="255" y="119" class="pin" text-anchor="middle">VDD</text>
+<path class="divider" d="M585 100 V781"/>
+<text x="422" y="126" class="pin" text-anchor="start">VDD</text>
 <path class="wire" d="M130 135 V105 H380 V135 M255 105 V135" id="nand-vdd" data-net="VDD"/>
 <g id="nand-pmos-a" data-device="pmos3" data-gate="A" data-source="VDD" data-drain="Y" data-body="VDD" data-input="A"><use href="#pmos3" xlink:href="#pmos3" x="130" y="190"/></g><text x="46" y="196" class="pin">A</text>
 <g id="nand-pmos-b" data-device="pmos3" data-gate="B" data-source="VDD" data-drain="Y" data-body="VDD" data-input="B"><use href="#pmos3" xlink:href="#pmos3" x="255" y="190"/></g><text x="171" y="196" class="pin">B</text>
@@ -31,7 +31,7 @@
 <g id="nand-nmos-c" data-device="nmos3" data-gate="C" data-source="GND" data-drain="N2" data-body="GND" data-input="C"><use href="#nmos3" xlink:href="#nmos3" x="255" y="660"/></g><text x="171" y="666" class="pin">C</text>
 <path class="wire" d="M255 445 V470 M255 580 V605 M255 715 V740 M230 740 H280 M236 750 H274 M244 760 H266" id="nand-gnd" data-net="GND"/>
 <text x="294" y="753" class="note">GND</text>
-<text x="865" y="119" class="pin" text-anchor="middle">VDD</text>
+<text x="895" y="126" class="pin" text-anchor="start">VDD</text>
 <path class="wire" d="M865 105 V135" id="nor-vdd" data-net="VDD"/>
 <g id="nor-pmos-a" data-device="pmos3" data-gate="A" data-source="VDD" data-drain="P1" data-body="VDD" data-input="A"><use href="#pmos3" xlink:href="#pmos3" x="865" y="190"/></g><text x="781" y="196" class="pin">A</text>
 <g id="nor-pmos-b" data-device="pmos3" data-gate="B" data-source="P1" data-drain="P2" data-body="VDD" data-input="B"><use href="#pmos3" xlink:href="#pmos3" x="865" y="300"/></g><text x="781" y="306" class="pin">B</text>
