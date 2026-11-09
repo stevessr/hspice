@@ -1,1 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 382" width="960" height="382" role="img" aria-label="CMOS 反相器连接关系"><title>CMOS 反相器连接关系</title><style>text{font:17px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#26374a}.title{font-size:24px;font-weight:700;fill:#185c83}.note{font-size:14px;fill:#516477}.w{stroke:#304355;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}.d{fill:#e8f3fa;stroke:#25739c;stroke-width:2.5}.dot{fill:#304355}</style><rect x="1" y="1" width="958" height="380" rx="14" fill="#fff" stroke="#cdd9e3"/><text x="480" y="38" text-anchor="middle" class="title">CMOS 反相器连接关系</text><rect class="d" x="355" y="88" width="170" height="62" rx="8"/><text x="440" y="125" text-anchor="middle">PMOS</text><rect class="d" x="355" y="223" width="170" height="62" rx="8"/><text x="440" y="260" text-anchor="middle">NMOS</text><path class="w" d="M440 65 L440 88"/><text x="440" y="56" text-anchor="middle">VDD</text><path class="w" d="M440 150 L440 190"/><circle class="dot" cx="440" cy="190" r="4"/><path class="w" d="M440 190 L440 223"/><path class="w" d="M440 285 L440 311"/><path class="w" d="M411 311 L469 311"/><path class="w" d="M420 322 L460 322"/><path class="w" d="M429 333 L451 333"/><path class="w" d="M204 119 H355 M204 119 V254 H355"/><text x="155" y="188" >Vin</text><path class="w" d="M440 190 L610 190"/><text x="621" y="195" >Vout</text><text x="541" y="119" class="note">体端 → VDD</text><text x="541" y="254" class="note">体端 → GND</text><text x="790" y="119" text-anchor="middle">Vin 低：上拉导通</text><text x="790" y="157" text-anchor="middle">Vin 高：下拉导通</text><text x="480" y="363" class="note" text-anchor="middle">输入共同驱动两个栅端；输出位于互补上拉与下拉路径的连接点。</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 960 550" width="960" height="550" role="img" aria-labelledby="ttl desc">
+<title id="ttl">CMOS 反相器的教材式晶体管原理图</title>
+<desc id="desc">上方 PMOS 源极与体端接 VDD，下方 NMOS 源极与体端接 GND，两栅极共同接 Vin，两漏极接 Vout，输出带接地负载电容 CL。PMOS 栅极有圆圈。</desc>
+<style>
+ .wire{fill:none;stroke:#171717;stroke-width:2.7;stroke-linecap:square;stroke-linejoin:miter}
+ .node{fill:#171717}
+ .label{fill:#171717;font:19px Georgia,"Noto Serif CJK SC",serif}
+ .head{fill:#171717;font:bold 24px "Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+ .caption{fill:#343434;font:16px "Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+</style>
+<rect width="960" height="550" fill="white"/>
+<defs>
+  <g id="nmos4" class="wire">
+    <path d="M0 -26 V26 M-25 -26 V26 M-70 0 H-25 M0 -56 V-26 M0 26 V56 M0 0 H70"/>
+  </g>
+  <g id="pmos4" class="wire">
+    <path d="M0 -26 V26 M-25 -26 V26 M-70 0 H-39 M0 -56 V-26 M0 26 V56 M0 0 H70"/>
+    <circle cx="-32" cy="0" r="7" fill="white"/>
+  </g>
+</defs>
+<text x="480" y="43" text-anchor="middle" class="head">互补 MOS（CMOS）反相器</text>
+<g class="wire" id="vdd-net" data-net="VDD">
+  <path d="M430 94 V75 H540 V150 H500"/>
+</g>
+<g class="wire" id="gnd-net" data-net="GND">
+  <path d="M430 400 V435 H540 V344 H500"/>
+  <path d="M407 448 H453 M414 457 H446 M422 466 H438"/>
+</g>
+<g id="pmos-device" data-device="pmos4">
+  <use href="#pmos4" xlink:href="#pmos4" x="430" y="150"/>
+  <text class="label" x="566" y="152">PMOS</text>
+  <text class="caption" x="566" y="176">B → VDD</text>
+  <text class="label" x="405" y="87">S</text><text class="label" x="405" y="221">D</text>
+</g>
+<g id="nmos-device" data-device="nmos4">
+  <use href="#nmos4" xlink:href="#nmos4" x="430" y="344"/>
+  <text class="label" x="566" y="343">NMOS</text>
+  <text class="caption" x="566" y="368">B → GND</text>
+  <text class="label" x="405" y="281">D</text><text class="label" x="405" y="415">S</text>
+</g>
+<g class="wire" id="vin-net" data-net="Vin">
+  <path d="M205 246 H240 V150 H360 M240 246 V344 H360"/>
+</g>
+<circle class="node" cx="240" cy="246" r="4"/>
+<text class="label" x="182" y="251" text-anchor="end">V<tspan baseline-shift="sub" font-size="14">in</tspan></text>
+<g class="wire" id="vout-net" data-net="Vout">
+  <path d="M430 206 V288 M430 246 H719"/>
+</g>
+<circle class="node" cx="430" cy="246" r="4"/>
+<text class="label" x="730" y="252">V<tspan baseline-shift="sub" font-size="14">out</tspan></text>
+<text class="label" x="430" y="67" text-anchor="middle">V<tspan baseline-shift="sub" font-size="14">DD</tspan></text>
+<circle class="node" cx="430" cy="75" r="4"/>
+<circle class="node" cx="540" cy="75" r="4"/>
+<circle class="node" cx="430" cy="435" r="4"/>
+<g id="output-load">
+  <path class="wire" d="M645 246 V359 M620 359 H670 M620 374 H670 M645 374 V435 M624 447 H666 M631 456 H659 M638 465 H652"/>
+  <circle class="node" cx="645" cy="246" r="4"/>
+  <text class="label" x="677" y="376">C<tspan baseline-shift="sub" font-size="14">L</tspan></text>
+</g>
+<text class="caption" x="480" y="504" text-anchor="middle">依据教材图 1.11、图 4.12：PMOS 上拉，NMOS 下拉；体端分别接电源和参考地。</text>
+<text class="caption" x="480" y="530" text-anchor="middle">V<tspan baseline-shift="sub" font-size="12">in</tspan> = 0 → V<tspan baseline-shift="sub" font-size="12">out</tspan> ≈ V<tspan baseline-shift="sub" font-size="12">DD</tspan>；V<tspan baseline-shift="sub" font-size="12">in</tspan> = V<tspan baseline-shift="sub" font-size="12">DD</tspan> → V<tspan baseline-shift="sub" font-size="12">out</tspan> ≈ 0</text>
+</svg>
