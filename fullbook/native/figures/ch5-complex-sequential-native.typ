@@ -115,6 +115,35 @@
   #ground(175pt,180pt)
   #place(top+left,dx:22pt,dy:200pt,text(size:7pt)[静态 AOI22：$F=overline(A B+C D)$（每一条导通路径均可编辑）])
 ])
+// Source PDF181, printed p.162: pseudo-NMOS continuation of Example 5.3.
+// One always-on pMOS with gate tied to GND; two nMOS series branches AB || CD.
+// All device channels, supply, bias, and net connections are native Typst.
+#let pseudo-nmos-aoi22()=html.frame(block(width:368pt,height:177pt)[
+  #place(top+left,dx:163pt,dy:1pt,text(size:7.4pt)[$V_("DD")$]))
+  #wire(183pt,13pt,183pt,23pt)
+  #vmos(183pt,23pt,[0],p:true)
+  // Explicit PMOS gate-to-ground connection, not merely an always-on label.
+  #wire(157pt,37pt,141pt,37pt)
+  #ground(141pt,37pt)
+  #wire(183pt,51pt,183pt,70pt)
+  #node(183pt,70pt)
+  #wire(183pt,70pt,328pt,70pt)
+  #place(top+left,dx:332pt,dy:64pt,text(size:8pt)[$F$]))
+  #wire(110pt,70pt,252pt,70pt)
+  #wire(110pt,70pt,110pt,77pt)
+  #wire(252pt,70pt,252pt,77pt)
+  #vmos(110pt,77pt,[A])
+  #vmos(252pt,77pt,[C])
+  #wire(110pt,105pt,110pt,111pt)
+  #wire(252pt,105pt,252pt,111pt)
+  #vmos(110pt,111pt,[B])
+  #vmos(252pt,111pt,[D])
+  #wire(110pt,139pt,110pt,150pt)
+  #wire(252pt,139pt,252pt,150pt)
+  #wire(110pt,150pt,252pt,150pt)
+  #ground(183pt,150pt)
+  #place(top+left,dx:21pt,dy:168pt,text(size:7pt)[伪 NMOS：上拉常导通，下拉为 $A B + C D$])
+])
 #let xor-panel(x,is-xnor:false)={
   let pleft=if is-xnor {([a],[b])} else {([a],[$bar(b)$])}
   let pright=if is-xnor {([$bar(b)$],[$bar(a)$])} else {([b],[$bar(a)$])}
@@ -159,18 +188,64 @@
   #place(top+left,dx:224pt,dy:209pt,text(size:7pt)[(b) 同或静态实现]))
 ])
 
-#let mux2() = html.frame(block(width:346pt,height:139pt)[
- #place(top+left,dx:10pt,dy:7pt,text(size:8pt)[图5.15 两选一MUX]))
- #place(top+left,dx:110pt,dy:35pt,polygon((0pt,0pt),(67pt,20pt),(0pt,49pt),stroke:.9pt,fill:rgb("eeeeee")))
- #place(top+left,dx:48pt,dy:41pt,text(size:8pt)[a]))
- #place(top+left,dx:48pt,dy:68pt,text(size:8pt)[b]))
- #place(top+left,dx:62pt,dy:44pt,line(length:49pt,stroke:.85pt))
- #place(top+left,dx:62pt,dy:72pt,line(length:49pt,stroke:.85pt))
- #place(top+left,dx:144pt,dy:86pt,line(end:(0pt,28pt),stroke:.8pt))
- #place(top+left,dx:143pt,dy:116pt,text(size:8pt)[s]))
- #place(top+left,dx:177pt,dy:56pt,line(length:67pt,stroke:.85pt))
- #place(top+left,dx:249pt,dy:52pt,text(size:8pt)[$f=a s+b bar(s)$]))
- #place(top+left,dx:24pt,dy:132pt,text(size:7pt)[选择信号s为1输出a，为0输出b；CMOS网络使用互补开关])
+// Original source PDF182 / printed p.163, Fig.5.15:
+// (a) MUX symbol with selector, and (b) eight-device static CMOS network.
+// PUN: (not a, not s) || (not b, s) as two pMOS series branches.
+// PDN: (not b || s) in series with (not a || not s);
+// intermediate nMOS nodes must share a cross-connection.
+#let mux2() = html.frame(block(width:423pt,height:239pt)[
+  // (a) two-input MUX trapezoid, data 1/0 and selector.
+  #place(top+left,dx:15pt,dy:73pt,text(size:8pt)[a]))
+  #place(top+left,dx:15pt,dy:125pt,text(size:8pt)[b]))
+  #wire(24pt,83pt,54pt,83pt)
+  #wire(24pt,133pt,54pt,133pt)
+  #place(top+left,dx:54pt,dy:68pt,
+    polygon((0pt,0pt),(55pt,23pt),(55pt,74pt),(0pt,94pt),stroke:.9pt,fill:white))
+  #place(top+left,dx:62pt,dy:83pt,text(size:9pt)[1]))
+  #place(top+left,dx:62pt,dy:127pt,text(size:9pt)[0]))
+  #wire(109pt,114pt,149pt,114pt)
+  #place(top+left,dx:154pt,dy:109pt,text(size:8pt)[$f$]))
+  #wire(83pt,162pt,83pt,188pt)
+  #place(top+left,dx:81pt,dy:190pt,text(size:8pt)[$s$]))
+  #place(top+left,dx:45pt,dy:219pt,text(size:7pt)[(a) 逻辑符号])
+  // (b) source circuit: common supply and two parallel pMOS series paths.
+  #place(top+left,dx:277pt,dy:1pt,text(size:7.3pt)[$V_("DD")$]))
+  #wire(296pt,15pt,296pt,24pt)
+  #wire(239pt,24pt,355pt,24pt)
+  #wire(239pt,24pt,239pt,31pt)
+  #wire(355pt,24pt,355pt,31pt)
+  #vmos(239pt,31pt,[$bar(a)$],p:true)
+  #vmos(355pt,31pt,[$bar(b)$],p:true)
+  #wire(239pt,59pt,239pt,66pt)
+  #wire(355pt,59pt,355pt,66pt)
+  #vmos(239pt,66pt,[$bar(s)$],p:true)
+  #vmos(355pt,66pt,[s],p:true)
+  #wire(239pt,94pt,239pt,108pt)
+  #wire(355pt,94pt,355pt,108pt)
+  #wire(239pt,108pt,355pt,108pt)
+  #wire(355pt,108pt,407pt,108pt)
+  #place(top+left,dx:410pt,dy:102pt,text(size:8pt)[$f$]))
+  #node(296pt,108pt)
+  // Parallel upper nMOS pair: not b || s.
+  #wire(239pt,108pt,239pt,115pt)
+  #wire(355pt,108pt,355pt,115pt)
+  #vmos(239pt,115pt,[$bar(b)$])
+  #vmos(355pt,115pt,[s])
+  #wire(239pt,143pt,239pt,150pt)
+  #wire(355pt,143pt,355pt,150pt)
+  // Scan's crucial shared middle bar between the nMOS groups.
+  #wire(239pt,150pt,355pt,150pt)
+  #node(296pt,150pt)
+  // Parallel lower nMOS pair: not a || not s.
+  #wire(239pt,150pt,239pt,157pt)
+  #wire(355pt,150pt,355pt,157pt)
+  #vmos(239pt,157pt,[$bar(a)$])
+  #vmos(355pt,157pt,[$bar(s)$])
+  #wire(239pt,185pt,239pt,198pt)
+  #wire(355pt,185pt,355pt,198pt)
+  #ground(239pt,198pt)
+  #ground(355pt,198pt)
+  #place(top+left,dx:268pt,dy:219pt,text(size:7pt)[(b) CMOS 实现])
 ])
 #let bistable() = html.frame(block(width:346pt,height:182pt)[
  #place(top+left,dx:10pt,dy:4pt,text(size:8pt)[图5.16 两反相器交叉耦合：双稳态])
