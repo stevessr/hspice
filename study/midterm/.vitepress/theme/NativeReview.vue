@@ -202,7 +202,7 @@ async function addDependencies(engine: any, content: string, directory: string, 
     const response = await fetch(withBase('/native-typst/' + path))
     if (!response.ok) throw Error('缺少依赖：' + path)
     const text = await response.text()
-    await engine.addSource(path, text)
+    await engine.addSource('/' + path, text)
     await addDependencies(engine, text, path.substring(0, path.lastIndexOf('/')), visited)
   }
 }
@@ -223,7 +223,8 @@ async function compileCurrent() {
     if (full === wrapper) throw Error('排版包装文件缺少可替换的 #include')
     await engine.resetShadow()
     await addDependencies(engine, full, '', new Set<string>())
-    const result = await engine.svg({ mainContent: full })
+    await engine.addSource('/main.typ', full)
+    const result = await engine.svg({ mainFilePath: '/main.typ' })
     if (typeof result !== 'string' || !result.includes('<svg')) throw Error('Typst 没有返回 SVG')
     liveSvg.value = result
   } catch (e) {
