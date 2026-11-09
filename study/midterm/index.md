@@ -2,78 +2,44 @@
 layout: home
 hero:
   name: 电子信息与集成电路
-  text: 期中复习与 HSPICE 实践
-  tagline: 以课程实验为线索，系统掌握 MOS 器件、电路分析、CMOS 逻辑与仿真方法。
+  text: 系统复习 · 教材速查 · 在线实践
+  tagline: 从 MOS 基础到 CMOS 电路与 HSPICE 实验，把阅读、公式、图例和动手训练串成一条学习路径。
   actions:
     - theme: brand
-      text: 开始系统复习
+      text: 开始学习
       link: /content/00-reading-guide
     - theme: alt
-      text: 第1—4章复习与在线实验（80题）
-      link: /review-1to4/
+      text: 教材速查
+      link: /reference/
     - theme: alt
-      text: 进入实践题库
-      link: /content/practice/
-    - theme: alt
-      text: PDF 分章资料库
-      link: /pdf
-    - theme: alt
-      text: 教材 Typst 精编
-      link: /textbook
-    - theme: alt
-      text: Typst 精修网页
-      link: /native-typst
-    - theme: alt
-      text: 445 页质量验收
-      link: /fidelity
-    - theme: alt
-      text: 445页逐页校对
-      link: /native-workbench
-    - theme: alt
-      text: 公式与电路图解
-      link: /figures
+      text: 打开工具箱
+      link: /tools
 features:
-  - title: 前四章在线实验与教材原例题
-    details: RC、NMOS和CMOS参数曲线可互动；29个原书编号例题索引，制造工艺表格和独立计算专题。
-    link: /review-1to4/online-lab
-  - title: 第1—4章专项复习与48题训练
-    details: 四章精讲、每章12题、逐题解析，支持交互式答题记录与公式速查。
-    link: /review-1to4/
-  - title: 分章 Markdown 阅读
-    details: 九章理论讲义与六项附录，支持目录导航、公式渲染、移动端阅读与全文搜索。
-    link: /content/chapters/01-knowledge-map
-  - title: 五类专题训练
-    details: MOS 器件、反相器、组合逻辑、时序电路与 HSPICE，题目和参考解析分开组织。
+  - title: 课程与章节复习
+    details: 九章课程讲义、教材精编和第 1—4 章专项复习，按知识体系逐步学习。
+    link: /content/00-reading-guide
+  - title: 教材图例、公式和术语
+    details: 386 个图号、145 项公式、379 条术语及原书数据表，附教材印刷页和 PDF 页序。
+    link: /reference/
+  - title: 练习与解析
+    details: MOS、反相器、组合逻辑、时序电路及 HSPICE 五类实践题，另有前四章交互训练。
     link: /content/practice/
-  - title: PDF 分章资料库
-    details: 整册、章节、练习、解答、附录及实验原始 PDF 均可检索与独立预览。
-    link: /pdf
-  - title: 教材九章 Typst 复习精编
-    details: 按教材九章结构重新讲解 MOS、反相器、CMOS 逻辑、时序与存储器等知识。
-    link: /textbook
-  - title: 445页原书逐页核对
-    details: 在浏览器本地打开源扫描和 Typst 全书 OCR 工程，对照修改、查漏并导出补丁，不上传教材。
-    link: /native-workbench
-  - title: 原生 Typst 精修网页
-    details: 直接由可编辑 Typst 编译 HTML；展示源扫描页定位、校对后的公式和表格，无需 PDF。
-    link: /native-typst
-  - title: 445 页 1:1 重排质量验收
-    details: 逐页追踪文字、公式、图表、脚注和版式。OCR 全量覆盖不等于已验收；仅审核全部通过才标记完成。
-    link: /fidelity
-  - title: 电路结构图解
-    details: MOS 端口、反相器、NAND/NOR、SR 锁存器、主从 JK 和等效 RC 结构的 SVG 汇总。
-    link: /figures
-  - title: 在线自测
-    details: 14 道概念题，支持即时评分、逐题参考解析与重新作答。
-    link: /quiz
+  - title: 在线工具与校对
+    details: 自测、电路实验、PDF 阅读、Typst 预览、逐页校对与质量检查统一集中。
+    link: /tools
 ---
 
-## 教材第1—4章专项
+## 按目标快速开始
 
-[进入四章复习资料](/review-1to4/) · [交互式48题](/review-1to4/interactive) · [公式速查](/review-1to4/reference)
+| 你想做什么 | 入口 |
+|---|---|
+| 从基础开始，按章系统复习 | [系统复习导读](/content/00-reading-guide) · [前四章专项](/review-1to4/) |
+| 找到教材中的电路图、公式、参数 | [图例速查](/reference/figures) · [公式速查](/reference/formula-index) · [数据表](/reference/data-tables) |
+| 练习、答题和理解电路响应 | [实践题库](/content/practice/) · [在线工具箱](/tools) |
+| 阅读 PDF 或检查 Typst 重排质量 | [在线工具箱](/tools) · [教材精编](/textbook) |
 
-## 内容范围
+## 学习路线
 
-本网站基于仓库现有实验一至实验九及相应复习资料整理。实践题为教学训练用途的自编题目；计算题的参数和假设均在题目中给出。实验十虽在仓库中提供原始 PDF，但尚未纳入本版理论讲义的考试范围推定。
+[MOS 工作状态](/content/chapters/02-mos-basics) → [器件参数](/content/chapters/03-device-parameters) → [反相器](/content/chapters/04-inverters-noise) → [CMOS 逻辑](/content/chapters/06-combinational-logic) → [时序电路](/content/chapters/07-sequential-logic) → [HSPICE 网表](/content/chapters/08-hspice-netlists)。
 
-**建议复习顺序：**[MOS 工作状态](/content/chapters/02-mos-basics) → [器件参数](/content/chapters/03-device-parameters) → [反相器](/content/chapters/04-inverters-noise) → [CMOS 逻辑](/content/chapters/06-combinational-logic) → [时序电路](/content/chapters/07-sequential-logic) → [HSPICE 网表](/content/chapters/08-hspice-netlists) → [实践题库](/content/practice/)。
+**资料说明：**教材图例与 Typst 页面是以原扫描为参考的可编辑重排稿，部分图仍待逐项校对；实践练习为教学训练题，并非正式试卷。

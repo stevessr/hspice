@@ -43,7 +43,7 @@ for term in ('1995 | 350', '2016 | 22', '585 μA/μm', '256 μA/μm', '2.0E−5'
     assert term in text['data-tables'], f'missing source data sentinel: {term}'
 config = (root / '.vitepress' / 'config.mts').read_text(encoding='utf-8')
 assert "'/reference/':" in config
-assert "{ text: '专业术语与数据', link: '/reference/' }" in config
+assert "{ text: '速查', items: [" in config
 print('Reference handbook OK: 193 + 186 = 379 glossary entries, 9 data tables and 5 pages')
 
 
@@ -96,3 +96,35 @@ catalog = text['figures-catalog']
 for fig in figures:
     assert '图 ' + fig['number'] in catalog, fig['number']
 print(f'Figure index OK: {len(figures)} unique figure captions and {len(chapters)} groups')
+
+
+# Keep the global navigation compact and runtime tools discoverable.
+nav = config.split('    nav: [', 1)[1].split('    sidebar: {', 1)[0]
+top_level_nav = re.findall(r"^      \{ text: '([^']+)'", nav, re.M)
+assert top_level_nav == ['首页', '学习', '速查', '练习', '工具箱'], top_level_nav
+assert 'socialLinks:' in config and 'github.com/stevessr/hspice' in config
+assert 'const toolsSidebar = [' in config
+tool_sidebar = config.split('const toolsSidebar = [', 1)[1].split('export default', 1)[0]
+tool_routes = set(re.findall(r"link: '(/[^']+)'", tool_sidebar))
+expected_tool_routes = {
+    '/tools', '/quiz', '/review-1to4/online-lab',
+    '/review-1to4/simulations', '/pdf', '/native-typst',
+    '/native-workbench', '/fidelity'
+}
+assert expected_tool_routes <= tool_routes, expected_tool_routes - tool_routes
+for route in expected_tool_routes:
+    path = root / (route.strip('/') + '.md')
+    assert path.is_file(), f'Broken tools-hub navigation route: {route}'
+for route in ('/tools', '/quiz', '/native-typst', '/native-workbench', '/pdf', '/fidelity'):
+    assert f"'{route}': toolsSidebar" in config, f'Unshared tool sidebar: {route}'
+home = (root / 'index.md').read_text(encoding='utf-8')
+hero = home.split('hero:', 1)[1].split('features:', 1)[0]
+assert len(re.findall(r'^\s+- theme:', hero, re.M)) == 3, 'Homepage hero actions should stay compact'
+assert '/tools' in home and '/reference/' in home, 'Missing prominent learning destinations'
+hub = (root / 'tools.md').read_text(encoding='utf-8')
+component = root / '.vitepress' / 'theme' / 'ToolsHub.vue'
+assert component.is_file() and '<ToolsHub />' in hub
+for route in expected_tool_routes - {'/tools'}:
+    assert f"href: '{route}'" in component.read_text(encoding='utf-8'), route
+assert "link: '/tools'" in config, 'Tool hub must be accessible from top navigation'
+print('Compact navigation OK: 5 top-level items, 3 hero actions, and 8 unified tool routes')
