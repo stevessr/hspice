@@ -78,6 +78,9 @@ jobs:
       - name: Validate textbook glossary and data sheets
         run: python3 study/midterm/scripts/check_reference.py
 
+      - name: Check textbook MOS / CMOS circuit symbols
+        run: python3 study/midterm/scripts/test_mos_symbols.py
+
       - name: Validate Markdown and image references
         run: python3 study/midterm/scripts/validate.py
 
