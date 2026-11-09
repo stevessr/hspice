@@ -41,6 +41,12 @@ section = fig.split("#let nand-nor-2()", 1)[1].split("#let gate-widths()", 1)[0]
 assert section.count("#mos(") == 8, "NOR2+NAND2 require eight transistor instances"
 assert "rect(" not in section, "schematic must not be a block diagram"
 assert "#let equivalent-width()" in fig and "#let wide-nand()" in fig
+sizing = fig.split("#let gate-widths()",1)[1].split("#let equivalent-width()",1)[0]
+assert "table(" not in sizing and sizing.count("#mos(") == 10
+assert "[2W]" in sizing and "[4W]" in sizing and "[W]" in sizing
+wide = fig.split("#let wide-nand()",1)[1].split("#let nand-vtc()",1)[0]
+assert "8 输入与门" in wide and "NAND8 + 反相器" in wide
+assert "curve.close" in wide and "8×NMOS" not in wide
 # Equivalent W check: 3 identical 3W in series yields W; parallel W+W+W=3W.
 W0=1.;r=1/(1/(3*W0)+1/(3*W0)+1/(3*W0))
 assert abs(r-W0)<1e-12 and abs((W0+W0+W0)-3*W0)<1e-12
