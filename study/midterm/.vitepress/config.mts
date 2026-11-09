@@ -1,5 +1,24 @@
 import { defineConfig } from 'vitepress'
 
+// Keep all interactive readers, experiments and editorial tools in one place.
+// Existing page URLs remain unchanged; only navigation is consolidated.
+const toolsSidebar = [
+  { text: '工具入口', items: [
+    { text: '工具箱总览', link: '/tools' },
+    { text: '在线自测', link: '/quiz' },
+    { text: '交互式电路实验', link: '/review-1to4/online-lab' },
+    { text: 'HSPICE 仿真实践', link: '/review-1to4/simulations' }
+  ] },
+  { text: '阅读与预览', collapsed: true, items: [
+    { text: 'PDF 资料库', link: '/pdf' },
+    { text: 'Typst 网页阅读器', link: '/native-typst' }
+  ] },
+  { text: '排版与校对', collapsed: true, items: [
+    { text: '445 页逐页校对工作台', link: '/native-workbench' },
+    { text: '原书重排质量验收', link: '/fidelity' }
+  ] }
+]
+
 export default defineConfig({
   lang: 'zh-CN',
   title: '电子信息与集成电路 · 复习资料',
@@ -16,43 +35,75 @@ export default defineConfig({
     siteTitle: '集成电路复习',
     nav: [
       { text: '首页', link: '/' },
-      { text: '系统复习', link: '/content/00-reading-guide' },
-      { text: '专业术语与数据', link: '/reference/' },
-      { text: '第1–4章专项', link: '/review-1to4/' },
-      { text: '实践题库', link: '/content/practice/' },
-      { text: '电路图解', link: '/figures' },
-      { text: '在线自测', link: '/quiz' },
-      { text: 'PDF 资料库', link: '/pdf' },
-      { text: '教材 Typst 精编', link: '/textbook' },
-      { text: 'Typst 精修网页', link: '/native-typst' },
-      { text: '在线校对与验收工作台', link: '/native-workbench' },
-      { text: 'GitHub 仓库', link: 'https://github.com/stevessr/hspice' }
+      { text: '学习', items: [
+        { text: '系统复习导读', link: '/content/00-reading-guide' },
+        { text: '第 1—4 章专项', link: '/review-1to4/' },
+        { text: '教材复习精编', link: '/textbook' }
+      ] },
+      { text: '速查', items: [
+        { text: '全部速查资料', link: '/reference/' },
+        { text: '教材图例图库', link: '/reference/figures' },
+        { text: '公式速查表', link: '/reference/formula-index' },
+        { text: '专业术语', link: '/reference/terms-device-process' },
+        { text: '数据与模型参数', link: '/reference/data-tables' },
+        { text: '电路结构图解', link: '/figures' }
+      ] },
+      { text: '练习', items: [
+        { text: '实践题库', link: '/content/practice/' },
+        { text: '前四章交互训练', link: '/review-1to4/interactive' },
+        { text: '进阶习题', link: '/review-1to4/advanced' }
+      ] },
+      { text: '工具箱', items: [
+        { text: '全部在线工具', link: '/tools' },
+        { text: '互动学习', items: [
+          { text: '在线自测', link: '/quiz' },
+          { text: '电路实验', link: '/review-1to4/online-lab' },
+          { text: 'HSPICE 仿真', link: '/review-1to4/simulations' }
+        ] },
+        { text: '阅读与校对', items: [
+          { text: 'PDF 分章阅读', link: '/pdf' },
+          { text: 'Typst 网页阅读器', link: '/native-typst' },
+          { text: '逐页校对工作台', link: '/native-workbench' },
+          { text: '原书重排质量', link: '/fidelity' }
+        ] }
+      ] }
     ],
     sidebar: {
       '/reference/': [
-        { text: '教材专业术语与数据', items: [
-          { text: '速查总览', link: '/reference/' },
-          { text: '术语 I：基础、器件与工艺（193条）', link: '/reference/terms-device-process' },
-          { text: '术语 II：门电路与系统（186条）', link: '/reference/terms-circuits-systems' },
-          { text: '图例速查图库：图号/章节/预览', link: '/reference/figures' },
-          { text: '完整图号与图注表', link: '/reference/figures-catalog' },
-          { text: '教材公式速查 I：第1—6章（97项）', link: '/reference/formula-index' },
-          { text: '教材公式速查 II：第7—11章（48项）', link: '/reference/formula-index-systems' },
-          { text: '教材原书数据与参数表', link: '/reference/data-tables' },
-          { text: '公式与 HSPICE 参数对照', link: '/reference/formulas-models' }
+        { text: '资料总览', items: [
+          { text: '打开速查中心', link: '/reference/' }
+        ] },
+        { text: '图例与数据', items: [
+          { text: '图例速查图库', link: '/reference/figures' },
+          { text: '全书图号与图注', link: '/reference/figures-catalog' },
+          { text: '教材数据与参数表', link: '/reference/data-tables' }
+        ] },
+        { text: '公式速查', collapsed: true, items: [
+          { text: '第 1—6 章（97 项）', link: '/reference/formula-index' },
+          { text: '第 7—11 章（48 项）', link: '/reference/formula-index-systems' },
+          { text: '模型条件与 HSPICE 参数', link: '/reference/formulas-models' }
+        ] },
+        { text: '专业术语', collapsed: true, items: [
+          { text: '器件与工艺（193 条）', link: '/reference/terms-device-process' },
+          { text: '电路与系统（186 条）', link: '/reference/terms-circuits-systems' }
         ] }
       ],
       '/review-1to4/': [
-        { text: '前四章专项', items: [
-          { text: '复习总览', link: '/review-1to4/' },
-          { text: '四章交互训练（80题）', link: '/review-1to4/interactive' },
-          { text: '在线电路实验', link: '/review-1to4/online-lab' },
-          { text: '独立计算方法', link: '/review-1to4/calculation-methods' },
-          { text: '工艺流程与数据表', link: '/review-1to4/technology-tables' },
-          { text: '教材原例题索引', link: '/review-1to4/textbook-examples' },
-          { text: '32道进阶训练总览', link: '/review-1to4/advanced' },
-          { text: '六组 HSPICE 仿真实验', link: '/review-1to4/simulations' },
-          { text: '公式和教材习题索引', link: '/review-1to4/reference' }
+        { text: '复习路线', items: [
+          { text: '专项复习总览', link: '/review-1to4/' },
+          { text: '计算方法', link: '/review-1to4/calculation-methods' },
+          { text: '教材原例题定位', link: '/review-1to4/textbook-examples' },
+          { text: '工艺流程与数据表', link: '/review-1to4/technology-tables' }
+        ] },
+        { text: '练习与解析', collapsed: true, items: [
+          { text: '四章交互练习（80 题）', link: '/review-1to4/interactive' },
+          { text: '32 道进阶题目', link: '/review-1to4/advanced' },
+          { text: '公式与习题索引', link: '/review-1to4/reference' }
+        ] },
+        { text: '互动与仿真', collapsed: true, items: [
+          { text: '电路交互实验', link: '/review-1to4/online-lab' },
+          { text: '六组 HSPICE 仿真', link: '/review-1to4/simulations' },
+          { text: '全部在线工具', link: '/tools' }
         ] },
         { text: '第1章 深亚微米数字集成电路设计', collapsed: true, items: [
           { text: '知识讲义', link: '/review-1to4/01-notes' },
@@ -87,35 +138,11 @@ export default defineConfig({
           { text: '进阶详细解析', link: '/review-1to4/advanced-04-answers' }
         ] },
       ],
-      '/fidelity': [
-        { text: '原书重排质量', items: [
-          { text: '验收与源码校对', link: '/native-workbench' },
-          { text: 'Typst 精修选段', link: '/native-typst' },
-          { text: '九章复习提纲', link: '/textbook' }
-        ] }
-      ],
-      '/native-workbench': [
-        { text: '原书逐页核对', items: [
-          { text: '445页在线校对与验收', link: '/native-workbench' },
-          { text: '精修选段 HTML', link: '/native-typst' },
-          { text: '教材九章索引', link: '/textbook' }
-        ]}
-      ],
-      '/native-typst': [
-        { text: '原生 Typst 校对', items: [
-          { text: '在线验收、编辑与编译', link: '/native-workbench' },
-          { text: 'Typst 精修 HTML 阅读器', link: '/native-typst' },
-          { text: '教材目录精编', link: '/textbook' },
-          { text: 'MOS 系统复习', link: '/content/chapters/02-mos-basics' }
-        ]}
-      ],
-      '/pdf': [
-        { text: 'PDF 在线阅读', items: [
-          { text: '分章资料库', link: '/pdf' },
-          { text: '教材精编索引', link: '/textbook' },
-          { text: '课程 Markdown 讲义', link: '/content/00-reading-guide' }
-        ]}
-      ],
+      '/tools': toolsSidebar,
+      '/fidelity': toolsSidebar,
+      '/native-workbench': toolsSidebar,
+      '/native-typst': toolsSidebar,
+      '/pdf': toolsSidebar,
       '/textbook': [
         { text: 'Typst 教材复习精编', items: [
           { text: '教材九章索引', link: '/textbook' },
@@ -126,19 +153,14 @@ export default defineConfig({
       '/figures': [
         { text: '电路图解', items: [
           { text: '图解总览', link: '/figures' },
+          { text: '教材图例速查图库', link: '/reference/figures' },
           { text: 'MOS 基础', link: '/content/chapters/02-mos-basics' },
           { text: '反相器', link: '/content/chapters/04-inverters-noise' },
           { text: '逻辑门', link: '/content/chapters/06-combinational-logic' },
           { text: '时序电路', link: '/content/chapters/07-sequential-logic' }
         ]}
       ],
-      '/quiz': [
-        { text: '在线自测', items: [
-          { text: '基础概念测验', link: '/quiz' },
-          { text: '专题实践题', link: '/content/practice/' },
-          { text: '公式速查', link: '/content/appendices/a-formula-reference' }
-        ]}
-      ],
+      '/quiz': toolsSidebar,
       '/content/practice/': [
         {
           text: '实践题库',
