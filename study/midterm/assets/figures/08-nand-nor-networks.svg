@@ -32,7 +32,7 @@
 <g id="nand-nmos-a" data-device="nmos3" data-input="A"><use href="#nmos3" xlink:href="#nmos3" x="260" y="408"/></g>
 <g id="nand-nmos-b" data-device="nmos3" data-input="B"><use href="#nmos3" xlink:href="#nmos3" x="260" y="542"/></g>
 <text x="175" y="413" class="label">A</text><text x="175" y="547" class="label">B</text>
-<path class="wire" d="M260 464 V486 M260 598 V617 M237 631 H283 M244 640 H276 M252 649 H268"/>
+<path class="wire" d="M260 464 V486 M260 598 V617 M237 617 H283 M244 627 H276 M252 637 H268"/>
 <text x="305" y="626" class="note">GND</text>
 <!-- NOR: series P pull-up; parallel N pull-down. -->
 <text x="800" y="115" text-anchor="middle" class="label">VDD</text>
@@ -49,7 +49,7 @@
 <g id="nor-nmos-a" data-device="nmos3" data-input="A"><use href="#nmos3" xlink:href="#nmos3" x="720" y="485"/></g>
 <g id="nor-nmos-b" data-device="nmos3" data-input="B"><use href="#nmos3" xlink:href="#nmos3" x="885" y="485"/></g>
 <text x="634" y="490" class="label">A</text><text x="799" y="490" class="label">B</text>
-<path class="wire" d="M720 541 V616 H885 V541 M800 616 V617 M777 631 H823 M784 640 H816 M792 649 H808"/>
+<path class="wire" d="M720 541 V616 H885 V541 M800 616 V617 M777 617 H823 M784 627 H816 M792 637 H808"/>
 <circle class="junction" cx="800" cy="616" r="4"/>
 <text x="837" y="638" class="note">GND</text>
 <text x="550" y="684" text-anchor="middle" class="note">参照教材第 1、5 章晶体管符号；同名 A / B 栅极为同一输入信号。</text>
