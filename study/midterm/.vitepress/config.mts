@@ -17,6 +17,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '系统复习', link: '/content/00-reading-guide' },
+      { text: '第1–4章专项', link: '/review-1to4/' },
       { text: '实践题库', link: '/content/practice/' },
       { text: '电路图解', link: '/figures' },
       { text: '在线自测', link: '/quiz' },
@@ -28,6 +29,33 @@ export default defineConfig({
       { text: 'GitHub 仓库', link: 'https://github.com/stevessr/hspice' }
     ],
     sidebar: {
+      '/review-1to4/': [
+        { text: '前四章专项', items: [
+          { text: '复习总览', link: '/review-1to4/' },
+          { text: '48题互动题库', link: '/review-1to4/interactive' },
+          { text: '公式和教材习题索引', link: '/review-1to4/reference' }
+        ] },
+        { text: '第1章 深亚微米数字集成电路设计', collapsed: true, items: [
+          { text: '知识讲义', link: '/review-1to4/01-notes' },
+          { text: '12道习题', link: '/review-1to4/01-exercises' },
+          { text: '答案解析', link: '/review-1to4/01-answers' }
+        ] },
+        { text: '第2章 MOS 晶体管', collapsed: true, items: [
+          { text: '知识讲义', link: '/review-1to4/02-notes' },
+          { text: '12道习题', link: '/review-1to4/02-exercises' },
+          { text: '答案解析', link: '/review-1to4/02-answers' }
+        ] },
+        { text: '第3章 制造、版图和模拟', collapsed: true, items: [
+          { text: '知识讲义', link: '/review-1to4/03-notes' },
+          { text: '12道习题', link: '/review-1to4/03-exercises' },
+          { text: '答案解析', link: '/review-1to4/03-answers' }
+        ] },
+        { text: '第4章 MOS 反相器电路', collapsed: true, items: [
+          { text: '知识讲义', link: '/review-1to4/04-notes' },
+          { text: '12道习题', link: '/review-1to4/04-exercises' },
+          { text: '答案解析', link: '/review-1to4/04-answers' }
+        ] },
+      ],
       '/fidelity': [
         { text: '原书重排质量', items: [
           { text: '445 页验收矩阵', link: '/fidelity' },
