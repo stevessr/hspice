@@ -44,6 +44,9 @@ assert "#let equivalent-width()" in fig and "#let wide-nand()" in fig
 sizing = fig.split("#let gate-widths()",1)[1].split("#let equivalent-width()",1)[0]
 assert "table(" not in sizing and sizing.count("#mos(") == 10
 assert "[2W]" in sizing and "[4W]" in sizing and "[W]" in sizing
+layout = fig.split("#let equivalent-width()",1)[1].split("#let wide-nand()",1)[0]
+assert "版图及其等效尺寸" in layout and "3L_n" in layout
+assert "并联的等效宽度" not in layout
 wide = fig.split("#let wide-nand()",1)[1].split("#let nand-vtc()",1)[0]
 assert "8 输入与门" in wide and "NAND8 + 反相器" in wide
 assert "curve.close" in wide and "8×NMOS" not in wide
