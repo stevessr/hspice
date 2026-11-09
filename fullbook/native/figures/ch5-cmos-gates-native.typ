@@ -194,6 +194,7 @@
     #place(top+left,dx:43pt,dy:yy,text(size:5.8pt)[#("A","B","C","D","E","F","G","H").at(i)])
     #if i < 7 [#wire(76pt,yy + 8pt,76pt,yy + 10pt)]
   ]
+  #wire(76pt,159pt,76pt,161pt)
   #ground(76pt,161pt)
   #place(top+left,dx:87pt,dy:112pt,text(size:6.8pt)[8W])
   #place(top+left,dx:284pt,dy:32pt,text(size:6.8pt)[2W])
@@ -205,10 +206,10 @@
       curve.line((16pt,9pt)),curve.close(mode:"straight")))
   #place(top+left,dx:335pt,dy:74pt,circle(radius:2.7pt,stroke:.85pt,fill:white))
   #wire(338pt,74pt,347pt,74pt)
-  #place(top+left,dx:335pt,dy:86pt,text(size:6.8pt)[F])
+  #place(top+left,dx:335pt,dy:86pt,text(size:6.8pt)[Y])
   #place(top+left,dx:155pt,dy:112pt,text(size:7pt)[PUN：8×2W 并联])
   #place(top+left,dx:155pt,dy:135pt,text(size:7pt)[PDN：8×8W 串联])
-  #place(top+left,dx:154pt,dy:160pt,text(size:6.9pt)[逻辑 F=A·B·C·D·E·F·G·H])
+  #place(top+left,dx:154pt,dy:160pt,text(size:6.9pt)[逻辑 Y=A·B·C·D·E·F·G·H])
 ])
 #let nand-vtc() = html.frame(block(width:349pt,height:181pt)[
  #place(top + left,dx:30pt,dy:152pt,line(length:302pt,stroke:.8pt))
