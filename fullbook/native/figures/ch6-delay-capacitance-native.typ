@@ -1,21 +1,21 @@
 // Native Typst geometric teaching diagrams for scan pages 208..220.
 // These are NOT exact scans and must never qualify a page for 1:1 acceptance.
 // MOS symbol primitives consistent with textbook figs. 2.1/2.2: PMOS bubble only.
-#let cwire(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,line(end:(x2-x1,y2-y1),stroke:.85pt))
+#let cwire(x1,y1,x2,y2)=place(top+left,dx:x1,dy:y1,line(end:(x2 - x1,y2 - y1),stroke:.85pt))
 #let cnode(x,y)=place(top+left,dx:x,dy:y,circle(radius:1.5pt,fill:black))
 #let cgnd(x,y)={
-  cwire(x,y,x,y+4pt)
-  place(top+left,dx:x-8pt,dy:y+4pt,line(length:16pt,stroke:.8pt))
-  place(top+left,dx:x-5pt,dy:y+8pt,line(length:10pt,stroke:.8pt))
-  place(top+left,dx:x-2pt,dy:y+12pt,line(length:4pt,stroke:.8pt))
+  cwire(x,y,x,y + 4pt)
+  place(top+left,dx:x - 8pt,dy:y + 4pt,line(length:16pt,stroke:.8pt))
+  place(top+left,dx:x - 5pt,dy:y + 8pt,line(length:10pt,stroke:.8pt))
+  place(top+left,dx:x - 2pt,dy:y + 12pt,line(length:4pt,stroke:.8pt))
 }
 #let cmos(x,y,p:false,gate:"")={
-  cwire(x,y,x,y+17pt)
-  cwire(x-6pt,y,x-6pt,y+17pt)
-  cwire(x-23pt,y+8.5pt,x-(if p {12pt} else {6pt}),y+8.5pt)
-  if p {place(top+left,dx:x-9pt,dy:y+8.5pt,
+  cwire(x,y,x,y + 17pt)
+  cwire(x - 6pt,y,x - 6pt,y + 17pt)
+  cwire(x - 23pt,y + 8.5pt,x - (if p {12pt} else {6pt}),y + 8.5pt)
+  if p {place(top+left,dx:x - 9pt,dy:y + 8.5pt,
     circle(radius:3pt,fill:white,stroke:.8pt))}
-  if gate != "" {place(top+left,dx:x-34pt,dy:y+3pt,text(size:7pt)[#gate])}
+  if gate != "" {place(top+left,dx:x - 34pt,dy:y + 3pt,text(size:7pt)[#gate])}
 }
 #let propagation() = html.frame(block(width:346pt,height:137pt)[
   #place(top+left,dx:7pt,dy:5pt,text(size:8pt)[图6.1：门链传播延迟与判定电平])
@@ -112,7 +112,7 @@
   #place(top+left,dx:124pt,dy:22pt,text(size:7pt)[$V_("DD")$])
   #cwire(55pt,32pt,205pt,32pt)
   #for i in range(3) [
-    #let xx=55pt+i*75pt
+    #let xx=55pt + i * 75pt
     #cwire(xx,32pt,xx,39pt)
     #cmos(xx,39pt,p:true,gate:("A","B","C").at(i))
     #cwire(xx,56pt,xx,72pt)
@@ -122,9 +122,9 @@
   #place(top+left,dx:277pt,dy:67pt,text(size:8pt)[$Y$])
   #cwire(190pt,72pt,190pt,83pt)
   #for i in range(3) [
-    #let yy=83pt+i*23pt
+    #let yy=83pt + i * 23pt
     #cmos(190pt,yy,gate:("A","B","C").at(i))
-    #if i < 2 [#cwire(190pt,yy+17pt,190pt,yy+23pt)]
+    #if i < 2 [#cwire(190pt,yy + 17pt,190pt,yy + 23pt)]
   ]
   #cwire(190pt,146pt,190pt,150pt)
   #cgnd(190pt,150pt)
