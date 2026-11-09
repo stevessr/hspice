@@ -1,1 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 406" width="960" height="406" role="img" aria-label="两输入 NAND 与 NOR 的 CMOS 串并联网络"><title>两输入 NAND 与 NOR 的 CMOS 串并联网络</title><style>text{font:17px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#26374a}.title{font-size:24px;font-weight:700;fill:#185c83}.note{font-size:14px;fill:#516477}.w{stroke:#304355;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}.d{fill:#e8f3fa;stroke:#25739c;stroke-width:2.5}.dot{fill:#304355}</style><rect x="1" y="1" width="958" height="404" rx="14" fill="#fff" stroke="#cdd9e3"/><text x="480" y="38" text-anchor="middle" class="title">两输入 NAND 与 NOR 的 CMOS 串并联网络</text><text x="245" y="80" text-anchor="middle">NAND2：P 并联，N 串联</text><text x="735" y="80" text-anchor="middle">NOR2：P 串联，N 并联</text><text x="245" y="106" text-anchor="middle">VDD</text><path class="w" d="M245 110 V130 H166 V143 M245 130 H324 V143"/><rect class="d" x="123" y="143" width="86" height="36" rx="8"/><text x="166" y="167" text-anchor="middle">P(A)</text><rect class="d" x="281" y="143" width="86" height="36" rx="8"/><text x="324" y="167" text-anchor="middle">P(B)</text><path class="w" d="M166 179 V202 H324 V179 M245 202 V222"/><circle class="dot" cx="245" cy="222" r="4"/><path class="w" d="M245 222 L370 222"/><text x="380" y="227" >Y</text><path class="w" d="M245 222 L245 251"/><rect class="d" x="202" y="251" width="86" height="36" rx="8"/><text x="245" y="275" text-anchor="middle">N(A)</text><path class="w" d="M245 287 L245 305"/><rect class="d" x="202" y="305" width="86" height="36" rx="8"/><text x="245" y="329" text-anchor="middle">N(B)</text><path class="w" d="M245 341 L245 354"/><path class="w" d="M224 354 L266 354"/><text x="735" y="106" text-anchor="middle">VDD</text><path class="w" d="M735 110 L735 143"/><rect class="d" x="692" y="143" width="86" height="36" rx="8"/><text x="735" y="167" text-anchor="middle">P(A)</text><path class="w" d="M735 179 L735 197"/><rect class="d" x="692" y="197" width="86" height="36" rx="8"/><text x="735" y="221" text-anchor="middle">P(B)</text><path class="w" d="M735 233 L735 251"/><circle class="dot" cx="735" cy="251" r="4"/><path class="w" d="M735 251 L855 251"/><text x="865" y="256" >Y</text><path class="w" d="M735 251 V269 H665 V282 M735 269 H805 V282"/><rect class="d" x="622" y="282" width="86" height="36" rx="8"/><text x="665" y="306" text-anchor="middle">N(A)</text><rect class="d" x="762" y="282" width="86" height="36" rx="8"/><text x="805" y="306" text-anchor="middle">N(B)</text><path class="w" d="M665 318 V344 H805 V318 M735 344 V354"/><path class="w" d="M714 354 L756 354"/><text x="480" y="389" class="note" text-anchor="middle">P(X)、N(X) 为由输入 X 控制的晶体管导通通路，非实际器件尺寸。</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 720" width="1100" height="720" role="img" aria-labelledby="ttl desc">
+<title id="ttl">教材风格的二输入 CMOS NAND 与 NOR 晶体管网络</title>
+<desc id="desc">左侧 NAND2：两只 PMOS 上拉并联，两只 NMOS 下拉串联；右侧 NOR2：两只 PMOS 上拉串联，两只 NMOS 下拉并联。每只 PMOS 的栅极都有圆圈，NMOS 无圆圈。相同 A 或 B 标签表示同一个输入信号。</desc>
+<style>
+ .wire{fill:none;stroke:#171717;stroke-width:2.5;stroke-linecap:square;stroke-linejoin:miter}
+ .junction{fill:#171717}
+ .head{fill:#171717;font:bold 23px "Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+ .subhead{fill:#171717;font:bold 20px Georgia,"Noto Serif CJK SC",serif}
+ .label{fill:#171717;font:18px Georgia,"Noto Serif CJK SC",serif}
+ .note{fill:#343434;font:15px "Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+</style>
+<rect width="1100" height="720" fill="white"/>
+<defs>
+ <g id="nmos3" class="wire"><path d="M0 -24 V24 M-25 -24 V24 M-70 0 H-25 M0 -56 V-24 M0 24 V56"/></g>
+ <g id="pmos3" class="wire"><path d="M0 -24 V24 M-25 -24 V24 M-70 0 H-39 M0 -56 V-24 M0 24 V56"/><circle cx="-32" cy="0" r="7" fill="white"/></g>
+</defs>
+<text x="550" y="46" text-anchor="middle" class="head">CMOS 两输入 NAND / NOR 晶体管网络</text>
+<path d="M550 85 V639" stroke="#aaa" stroke-width="1"/>
+<text x="270" y="87" text-anchor="middle" class="subhead">NAND2：Y = ¬(A · B)</text>
+<text x="822" y="87" text-anchor="middle" class="subhead">NOR2：Y = ¬(A + B)</text>
+<!-- NAND: parallel P pull-up; series N pull-down. -->
+<g id="nand-vdd" data-net="VDD" class="wire"><path d="M160 149 V125 H365 V149"/></g>
+<text x="263" y="115" text-anchor="middle" class="label">VDD</text>
+<g id="nand-pmos-a" data-device="pmos3" data-input="A"><use href="#pmos3" xlink:href="#pmos3" x="160" y="205"/></g>
+<g id="nand-pmos-b" data-device="pmos3" data-input="B"><use href="#pmos3" xlink:href="#pmos3" x="365" y="205"/></g>
+<text x="75" y="210" class="label">A</text><text x="280" y="210" class="label">B</text>
+<g id="nand-output" data-net="NAND_Y" class="wire">
+ <path d="M160 261 V326 H465 M365 261 V326 M260 326 V352"/>
+</g>
+<circle class="junction" cx="160" cy="326" r="4"/><circle class="junction" cx="260" cy="326" r="4"/><circle class="junction" cx="365" cy="326" r="4"/>
+<text x="479" y="331" class="label">Y</text>
+<g id="nand-nmos-a" data-device="nmos3" data-input="A"><use href="#nmos3" xlink:href="#nmos3" x="260" y="408"/></g>
+<g id="nand-nmos-b" data-device="nmos3" data-input="B"><use href="#nmos3" xlink:href="#nmos3" x="260" y="542"/></g>
+<text x="175" y="413" class="label">A</text><text x="175" y="547" class="label">B</text>
+<path class="wire" d="M260 464 V486 M260 598 V617 M237 631 H283 M244 640 H276 M252 649 H268"/>
+<text x="305" y="626" class="note">GND</text>
+<!-- NOR: series P pull-up; parallel N pull-down. -->
+<text x="800" y="115" text-anchor="middle" class="label">VDD</text>
+<path class="wire" d="M800 125 V132"/>
+<g id="nor-pmos-a" data-device="pmos3" data-input="A"><use href="#pmos3" xlink:href="#pmos3" x="800" y="188"/></g>
+<g id="nor-pmos-b" data-device="pmos3" data-input="B"><use href="#pmos3" xlink:href="#pmos3" x="800" y="304"/></g>
+<text x="716" y="193" class="label">A</text><text x="716" y="309" class="label">B</text>
+<path class="wire" d="M800 244 V248"/>
+<g id="nor-output" data-net="NOR_Y" class="wire">
+ <path d="M800 360 V390 H1030 M720 390 V429 M885 390 V429 M720 390 H885"/>
+</g>
+<circle class="junction" cx="720" cy="390" r="4"/><circle class="junction" cx="800" cy="390" r="4"/><circle class="junction" cx="885" cy="390" r="4"/>
+<text x="1040" y="396" class="label">Y</text>
+<g id="nor-nmos-a" data-device="nmos3" data-input="A"><use href="#nmos3" xlink:href="#nmos3" x="720" y="485"/></g>
+<g id="nor-nmos-b" data-device="nmos3" data-input="B"><use href="#nmos3" xlink:href="#nmos3" x="885" y="485"/></g>
+<text x="634" y="490" class="label">A</text><text x="799" y="490" class="label">B</text>
+<path class="wire" d="M720 541 V616 H885 V541 M800 616 V617 M777 631 H823 M784 640 H816 M792 649 H808"/>
+<circle class="junction" cx="800" cy="616" r="4"/>
+<text x="837" y="638" class="note">GND</text>
+<text x="550" y="684" text-anchor="middle" class="note">参照教材第 1、5 章晶体管符号；同名 A / B 栅极为同一输入信号。</text>
+<text x="550" y="704" text-anchor="middle" class="note">为清晰起见省略体端引线：所有 PMOS 体端接 VDD，所有 NMOS 体端接 GND。</text>
+</svg>
