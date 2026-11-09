@@ -110,7 +110,7 @@
     #wire(82pt,yy,82pt,yy + 12pt)
     #wire(77pt,yy,77pt,yy + 12pt)
     #wire(56pt,yy + 6pt,77pt,yy + 6pt)
-    #place(top+left,dx:43pt,dy:yy + 2pt,text(size:6pt)[("A","B","C","D","E","F","G","H").at(i)])
+    #place(top+left,dx:43pt,dy:yy + 2pt,text(size:6pt)[#("A","B","C","D","E","F","G","H").at(i)])
     #if i < 7 [#wire(82pt,yy + 12pt,82pt,yy + 16pt)]
   ]
   #ground(82pt,156pt)
@@ -125,7 +125,7 @@
     #wire(xx - 15pt,67pt,xx - 10pt,67pt)
     #place(top+left,dx:xx - 7pt,dy:67pt,circle(radius:2pt,stroke:.7pt,fill:white))
     #wire(xx,75pt,xx,92pt)
-    #place(top+left,dx:xx - 14pt,dy:97pt,text(size:6pt)[("A","B","C","D","E","F","G","H").at(i)])
+    #place(top+left,dx:xx - 14pt,dy:97pt,text(size:6pt)[#("A","B","C","D","E","F","G","H").at(i)])
   ]
   #place(top+left,dx:165pt,dy:124pt,text(size:7pt)[并联上拉 PUN：8×PMOS])
   #place(top+left,dx:162pt,dy:143pt,text(size:7pt)[串联下拉 PDN：8×NMOS])
