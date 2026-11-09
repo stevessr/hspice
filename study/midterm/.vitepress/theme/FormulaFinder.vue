@@ -254,6 +254,8 @@ function clearProgress() {
   if (!window.confirm('确定清除本机保存的全部公式复习记录？此操作不可撤销。')) return
   progress.value = {}
   clock.value = Date.now()
+  savedSession.value = null
+  try { localStorage.removeItem(SESSION_KEY) } catch {}
   saveProgress()
 }
 
