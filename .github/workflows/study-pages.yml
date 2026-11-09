@@ -30,7 +30,7 @@ permissions:
   actions: read
 
 concurrency:
-  group: vitepress-pages-${{ github.ref }}
+  group: vitepress-pages-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
