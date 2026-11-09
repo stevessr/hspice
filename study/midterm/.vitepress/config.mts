@@ -42,6 +42,8 @@ export default defineConfig({
       ] },
       { text: '速查', items: [
         { text: '全部速查资料', link: '/reference/' },
+        { text: '按题型考前速查', link: '/reference/exam-sheet' },
+        { text: '145 项公式检索与默写', link: '/reference/formula-finder' },
         { text: '教材图例图库', link: '/reference/figures' },
         { text: '公式速查表', link: '/reference/formula-index' },
         { text: '专业术语', link: '/reference/terms-device-process' },
@@ -79,6 +81,8 @@ export default defineConfig({
           { text: '教材数据与参数表', link: '/reference/data-tables' }
         ] },
         { text: '公式速查', collapsed: true, items: [
+          { text: '按式号检索与默写', link: '/reference/formula-finder' },
+          { text: '按题型考前速查', link: '/reference/exam-sheet' },
           { text: '第 1—6 章（97 项）', link: '/reference/formula-index' },
           { text: '第 7—11 章（48 项）', link: '/reference/formula-index-systems' },
           { text: '模型条件与 HSPICE 参数', link: '/reference/formulas-models' }

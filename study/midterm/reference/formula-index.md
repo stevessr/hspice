@@ -2,7 +2,7 @@
 
 > **使用方法**：以教材《数字集成电路分析与设计——深亚微米工艺（第三版）》的**印刷页码为主**，同列给出扫描 PDF 的物理页序（印刷页 + 19）。点击 PDF 页序，可打开仓库内该页的**Typst 在线校对页**；它是参照扫描件的可编辑页面，不等于原扫描图片。**原书式号**与「附近 / 图示 / 教学归纳」严格区分；本表为公式和符号的简明重排，完整推导请回到教材。部分原书原生转写尚未通过逐页 1:1 验收。
 
-[速查首页](/reference/) · [公式第 7—11 章](/reference/formula-index-systems) · [符号与模型条件](/reference/formulas-models) · [教材数据表](/reference/data-tables)
+[公式检索与默写](/reference/formula-finder) · [按题型考前速查](/reference/exam-sheet) · [速查首页](/reference/) · [公式第 7—11 章](/reference/formula-index-systems) · [符号与模型条件](/reference/formulas-models) · [教材数据表](/reference/data-tables)
 
 ## 教材页码换算
 

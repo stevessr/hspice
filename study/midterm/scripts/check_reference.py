@@ -15,16 +15,18 @@ pages = {
     'formula-index-systems': base / 'formula-index-systems.md',
     'figures': base / 'figures.md',
     'figures-catalog': base / 'figures-catalog.md',
+    'exam-sheet': base / 'exam-sheet.md',
+    'formula-finder': base / 'formula-finder.md',
 }
 text = {}
 for key, path in pages.items():
     assert path.is_file(), f'missing reference page: {path}'
     text[key] = path.read_text(encoding='utf-8')
     assert text[key].startswith('# '), f'missing heading: {path}'
-    if key != 'figures':
+    if key not in ('figures', 'formula-finder'):
         assert '|' in text[key], f'expected tables: {path}'
     for target in re.findall(r'\]\((/reference/[^)#]*)(?:#[^)]*)?\)', text[key]):
-        rel = target[len('/reference/'):].strip('/')
+        rel = target.split('?', 1)[0][len('/reference/'):].strip('/')
         page = base / (rel + '.md') if rel else base / 'index.md'
         assert page.exists(), f'broken /reference link: {path}: {target}'
 def count_glossary(key):
@@ -128,3 +130,27 @@ for route in expected_tool_routes - {'/tools'}:
     assert f"href: '{route}'" in component.read_text(encoding='utf-8'), route
 assert "link: '/tools'" in config, 'Tool hub must be accessible from top navigation'
 print('Compact navigation OK: 5 top-level items, 3 hero actions, and 8 unified tool routes')
+
+
+# Scenario-driven quick sheet and active recall must remain connected to
+# canonical textbook formulas rather than a separately invented set of values.
+import json as _json
+revision = _json.loads((root / 'public' / 'review-formulas.json').read_text(encoding='utf-8'))
+assert revision['format'] == 'hspice-revision-formula-index-v1'
+assert revision['page_offset'] == 19
+assert revision['total'] == len(revision['entries']) == 145
+assert {f['chapter'] for f in revision['entries']} == set(range(1, 12))
+assert len({f['id'] for f in revision['entries']}) == 145
+for entry in revision['entries']:
+    assert entry['pdf_page'] == entry['printed_page'] + 19, entry
+    assert entry['latex'] and entry['name'] and entry['note'] is not None, entry
+    assert entry['source_route'] in ('/reference/formula-index', '/reference/formula-index-systems')
+    assert entry['source_line'] > 0
+    assert (root / 'reference' / (entry['source_route'].split('/')[-1] + '.md')).is_file()
+for item in ('NMOS', 'VTC', 'Elmore', 'SRAM', 'HSPICE'):
+    assert item in text['exam-sheet'], f'missing revision scenario: {item}'
+assert '<FormulaFinder />' in text['formula-finder']
+assert (root / '.vitepress/theme/FormulaFinder.vue').is_file()
+assert "'/reference/formula-finder'" in config
+assert "'/reference/exam-sheet'" in config
+print('Revision materials OK: 145 canonical formula cards, 11 chapters and scenario quick sheet')
