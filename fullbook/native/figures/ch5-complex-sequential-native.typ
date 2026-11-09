@@ -247,19 +247,50 @@
   #ground(355pt,198pt)
   #place(top+left,dx:268pt,dy:219pt,text(size:7pt)[(b) CMOS 实现])
 ])
-#let bistable() = html.frame(block(width:346pt,height:182pt)[
- #place(top+left,dx:10pt,dy:4pt,text(size:8pt)[图5.16 两反相器交叉耦合：双稳态])
- #place(top+left,dx:49pt,dy:53pt,polygon((0pt,0pt),(53pt,27pt),(0pt,54pt),stroke:.8pt))
- #place(top+left,dx:108pt,dy:79pt,circle(radius:3pt,stroke:.7pt,fill:white))
- #place(top+left,dx:215pt,dy:53pt,polygon((0pt,0pt),(53pt,27pt),(0pt,54pt),stroke:.8pt))
- #place(top+left,dx:273pt,dy:79pt,circle(radius:3pt,stroke:.7pt,fill:white))
- #place(top+left,dx:112pt,dy:79pt,line(length:102pt,stroke:.8pt))
- #place(top+left,dx:274pt,dy:79pt,line(end:(0pt,62pt),stroke:.8pt))
- #place(top+left,dx:49pt,dy:141pt,line(length:225pt,stroke:.8pt))
- #place(top+left,dx:49pt,dy:79pt,line(end:(0pt,62pt),stroke:.8pt))
- #place(top+left,dx:118pt,dy:66pt,text(size:7pt)[Q]))
- #place(top+left,dx:118pt,dy:147pt,text(size:7pt)[$bar(Q)$]))
- #place(top+left,dx:18pt,dy:163pt,text(size:7pt)[两个稳定工作点A/B；中间交点C不稳定])
+// Original source Fig5.16: two crossed inverters AND two intersecting
+// voltage-transfer curves (not merely two boxes in a circular connection).
+#let bistable() = html.frame(block(width:404pt,height:185pt)[
+  // (a) Two cross-coupled inverters
+  #place(top+left,dx:59pt,dy:43pt,
+    curve(fill:white,stroke:.9pt,
+      curve.move((40pt,0pt)),curve.line((40pt,33pt)),
+      curve.line((0pt,16pt)),curve.close(mode:"straight")))
+  #place(top+left,dx:56pt,dy:59pt,circle(radius:3pt,stroke:.9pt,fill:white))
+  #place(top+left,dx:59pt,dy:100pt,
+    curve(fill:white,stroke:.9pt,
+      curve.move((0pt,0pt)),curve.line((0pt,33pt)),
+      curve.line((40pt,16pt)),curve.close(mode:"straight")))
+  #place(top+left,dx:102pt,dy:116pt,circle(radius:3pt,stroke:.9pt,fill:white))
+  #wire(40pt,59pt,53pt,59pt)
+  #wire(99pt,59pt,131pt,59pt)
+  #wire(40pt,59pt,40pt,116pt)
+  #wire(40pt,116pt,59pt,116pt)
+  #wire(105pt,116pt,131pt,116pt)
+  #wire(131pt,59pt,131pt,116pt)
+  #place(top+left,dx:10pt,dy:40pt,text(size:7pt)[$V_("out")$]))
+  #place(top+left,dx:126pt,dy:42pt,text(size:7pt)[$V_("in")$]))
+  #place(top+left,dx:70pt,dy:55pt,text(size:8pt)[1]))
+  #place(top+left,dx:70pt,dy:111pt,text(size:8pt)[2]))
+  #place(top+left,dx:71pt,dy:154pt,text(size:8pt)[(a)]))
+  // (b) two inverter VTC curves and three states A, C, B
+  #wire(207pt,150pt,384pt,150pt)
+  #wire(207pt,150pt,207pt,18pt)
+  #place(top+left,dx:188pt,dy:7pt,text(size:7pt)[$V_("out")$]))
+  #place(top+left,dx:376pt,dy:153pt,text(size:7pt)[$V_("in")$]))
+  #place(top+left,dx:207pt,dy:30pt,
+    curve(stroke:1.05pt,curve.move((0pt,0pt)),
+      curve.cubic((42pt,1pt),(30pt,82pt),(89pt,84pt)),
+      curve.cubic((121pt,85pt),(120pt,117pt),(156pt,120pt))))
+  #place(top+left,dx:207pt,dy:30pt,
+    curve(stroke:.85pt,curve.move((0pt,0pt)),
+      curve.cubic((12pt,3pt),(16pt,52pt),(42pt,63pt)),
+      curve.cubic((75pt,84pt),(100pt,110pt),(156pt,120pt))))
+  #place(top+left,dx:242pt,dy:23pt,text(size:8pt)[A]))
+  #place(top+left,dx:299pt,dy:79pt,text(size:8pt)[C]))
+  #place(top+left,dx:370pt,dy:134pt,text(size:8pt)[B]))
+  #place(top+left,dx:207pt,dy:157pt,text(size:7pt)[$V_("OL")$]))
+  #place(top+left,dx:341pt,dy:157pt,text(size:7pt)[$V_("OH")$]))
+  #place(top+left,dx:298pt,dy:170pt,text(size:8pt)[(b)]))
 ])
 #let sr-nor() = html.frame(block(width:347pt,height:181pt)[
  #place(top+left,dx:9pt,dy:5pt,text(size:8pt)[图5.17 交叉耦合 NOR SR 锁存器])
