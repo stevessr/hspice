@@ -11,7 +11,7 @@
 | 第3章 制造、版图和模拟 | [阅读](/review-1to4/03-notes) | [12题](/review-1to4/03-exercises) | [详细解析](/review-1to4/03-answers) |
 | 第4章 MOS 反相器电路 | [阅读](/review-1to4/04-notes) | [12题](/review-1to4/04-exercises) | [详细解析](/review-1to4/04-answers) |
 
-**[48题交互式训练](/review-1to4/interactive)** · **[公式速查与原书习题定位](/review-1to4/reference)**
+**[48题交互式训练](/review-1to4/interactive)** · **[六组 HSPICE 仿真实验](/review-1to4/simulations)** · **[公式速查与原书习题定位](/review-1to4/reference)**
 
 # 使用说明与考点地图
 

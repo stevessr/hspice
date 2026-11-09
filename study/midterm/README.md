@@ -104,3 +104,7 @@ Pages 的部署源需要在 **Settings → Pages → Build and deployment → So
 ## 教材第1—4章专项资源
 
 `review-1to4/` 新增四章可编辑讲义、48道原创训练题、48份解析、考前公式及教材原习题索引。 `scripts/validate.py` 校验四章文件与题号匹配。
+
+## 前四章 HSPICE 教学网表
+
+[六组仿真实验](https://stevessr.github.io/hspice/review-1to4/simulations)：RC延迟、NMOS输出特性、体效应、分布互连、CMOS VTC、CMOS瞬态。源文件保存在 `review-1to4/netlists/*.sp`，不依赖外部课程工艺库。CI 静态检查，HSPICE 数值波形需在本机运行。

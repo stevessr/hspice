@@ -32,6 +32,7 @@ export default defineConfig({
         { text: '前四章专项', items: [
           { text: '复习总览', link: '/review-1to4/' },
           { text: '48题互动题库', link: '/review-1to4/interactive' },
+          { text: '六组 HSPICE 仿真实验', link: '/review-1to4/simulations' },
           { text: '公式和教材习题索引', link: '/review-1to4/reference' }
         ] },
         { text: '第1章 深亚微米数字集成电路设计', collapsed: true, items: [
