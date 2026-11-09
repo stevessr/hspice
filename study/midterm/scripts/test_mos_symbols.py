@@ -87,7 +87,9 @@ def run():
 
     logic = load("08-nand-nor-networks.svg")
     assert node(logic, "nor2-panel").get("data-source-figure") == "5.1a"
+    assert node(logic, "nor2-panel").get("transform") == "translate(-530 0)"
     assert node(logic, "nand2-panel").get("data-source-figure") == "5.1b"
+    assert node(logic, "nand2-panel").get("transform") == "translate(530 0)"
     for gate in ("nand", "nor"):
         for kind in ("pmos", "nmos"):
             for pin in ("a", "b"):
