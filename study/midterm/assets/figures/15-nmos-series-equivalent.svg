@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 510" width="1200" height="510" role="img" aria-labelledby="title desc">
+<title id="title">教材图5.4 三 NMOS 串联版图和等效沟道</title>
+<desc id="desc">左图连续有源扩散区域上交叉三根多晶硅栅 A、B、C，每根栅对应沟道长度 Ln，晶体管沟道宽度为 3Wn；右图是一根等效栅，沟道长度为 3Ln，宽度仍为 3Wn。</desc>
+<style>.head{font:700 24px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#1d1d1d}.title{font:700 20px "Noto Sans CJK SC","Microsoft YaHei",sans-serif}.label{font:19px Georgia,"Noto Serif CJK SC",serif}.caption{font:17px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#444}.note{font:18px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#333}</style>
+<rect width="1200" height="510" fill="white"/>
+<text x="600" y="42" class="head" text-anchor="middle">三只串联 NMOS 的版图与等效沟道（教材图 5.4）</text>
+<text x="300" y="95" class="title" text-anchor="middle">(a) 三管串联：每管 3Wₙ / Lₙ</text>
+<text x="910" y="95" class="title" text-anchor="middle">(b) 一只等效管：3Wₙ / 3Lₙ</text>
+<path d="M600 70 V414" stroke="#aaa" stroke-width="1.5"/>
+<rect x="240" y="145" width="130" height="215" fill="#d8d8d8" stroke="#222" stroke-width="2"/>
+<rect x="205" y="184" width="200" height="25" fill="#aaa" stroke="#222" stroke-width="2"/>
+<rect x="205" y="245" width="200" height="25" fill="#aaa" stroke="#222" stroke-width="2"/>
+<rect x="205" y="306" width="200" height="25" fill="#aaa" stroke="#222" stroke-width="2"/>
+<path d="M170 196 H205" stroke="#111" stroke-width="2.4"/><text x="151" y="202" class="label" text-anchor="end">A</text>
+<path d="M170 257 H205" stroke="#111" stroke-width="2.4"/><text x="151" y="263" class="label" text-anchor="end">B</text>
+<path d="M170 318 H205" stroke="#111" stroke-width="2.4"/><text x="151" y="324" class="label" text-anchor="end">C</text>
+<text x="305" y="137" class="label" text-anchor="middle">3Wₙ</text>
+<text x="417" y="200" class="label" >Lₙ</text>
+<text x="417" y="260" class="label" >Lₙ</text>
+<text x="417" y="321" class="label" >Lₙ</text>
+<path d="M305 145 V114 M305 360 V392 M277 392 H333 M285 403 H325 M294 414 H316" stroke="#111" stroke-width="2.3" fill="none"/>
+<text x="305" y="111" class="label" text-anchor="middle">F</text>
+<rect x="845" y="145" width="130" height="215" fill="#d8d8d8" stroke="#222" stroke-width="2"/>
+<rect x="810" y="224" width="200" height="75" fill="#aaa" stroke="#222" stroke-width="2"/>
+<path d="M775 261 H810 M910 145 V114 M910 360 V392 M882 392 H938 M890 403 H930 M899 414 H921" stroke="#111" stroke-width="2.4" fill="none"/>
+<text x="756" y="268" class="label" text-anchor="end">G</text>
+<text x="910" y="111" class="label" text-anchor="middle">F</text>
+<text x="910" y="137" class="label" text-anchor="middle">3Wₙ</text>
+<text x="1015" y="264" class="label" >3Lₙ</text>
+<text x="305" y="446" class="caption" text-anchor="middle">三段多晶硅栅横跨同一扩散区</text>
+<text x="910" y="446" class="caption" text-anchor="middle">等效沟道长度为三倍，宽度保持不变</text>
+<text x="600" y="482" class="note" text-anchor="middle">归一化一阶近似：Wₑq = 3Wₙ / 3 = Wₙ（同一导通电流条件）</text>
+</svg>
