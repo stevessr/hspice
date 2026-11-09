@@ -44,6 +44,9 @@ for chapter in range(1, 5):
 interactive = (review / 'interactive.md').read_text(encoding='utf-8')
 assert len(re.findall(r'^### S[1-4]-\d{2}$', interactive, re.M)) == 48
 
+from check_review_spice import validate_review_decks
+validate_review_decks(root)
+
 if '--generated' in sys.argv:
     expected = (['reading-guide.typ']
                 + [f'sections/{f.stem}.typ' for f in sorted((content/'chapters').glob('*.md'))]

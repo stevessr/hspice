@@ -3,9 +3,23 @@
 先独立作答，再展开解析；完成后勾选掌握情况。
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 const done = ref<Record<string, boolean>>({})
 const score = computed(() => Object.values(done.value).filter(Boolean).length)
+const progressKey = 'hspice-ch1to4-progress-v1'
+onMounted(() => {
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(progressKey) || '{}')
+    if (saved && typeof saved === 'object' && !Array.isArray(saved)) {
+      done.value = Object.fromEntries(Object.entries(saved).filter(([key, value]) => /^S[1-4]-(0[1-9]|1[0-2])$/.test(key) && value === true))
+    }
+  } catch { /* unavailable storage */ }
+})
+watch(done, (value) => {
+  if (typeof window !== 'undefined') {
+    try { window.localStorage.setItem(progressKey, JSON.stringify(value)) } catch { /* unavailable storage */ }
+  }
+}, { deep: true })
 function clearAll() { done.value = {} }
 </script>
 
@@ -756,4 +770,4 @@ $$t_{path}=50+70+50=\boxed{170\,ps}.$$
 
 [返回前四章复习总览](/review-1to4/) · [查看公式速查](/review-1to4/reference)
 
-> 标记状态仅供当前页面使用，重新加载后不保留。
+> 掌握状态会保存在当前浏览器本地；刷新页面后仍保留，点击“重置”可清空全部标记。
