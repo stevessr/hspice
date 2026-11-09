@@ -34,8 +34,26 @@ for n,required in {
     assert "#image(" not in pages[n],n
 assert pages[184].rstrip().endswith('$bar(Q)$')
 assert pages[185].lstrip().startswith("// SOURCE PDF PAGE 185")
-status=json.loads((root/"page-status.json").read_text(encoding="utf-8"))
-for n in range(183,187):
-    s=status["pages"][n-1]
-    assert not s["layout_verified"] and not s["figures_verified"],n
-print("Source PDF183–186: editable dual VTC, NOR/NAND feedback and 400ps sizing/JK timing anchors passed; strict 1:1 still not accepted.")
+size=fig.split("#let sr-nor-sizes() =",1)[1]
+assert size.count("#vmos(") == 8, "two NOR gates require 8 native transistor symbols"
+assert size.count("p:true") == 4
+assert "#wire(120pt,101pt,218pt,101pt)" in size
+assert "#wire(218pt,37pt,279pt,37pt)" in size
+assert "#wire(218pt,125pt,241pt,125pt)" in size
+assert "#vmos(305pt,23pt,[$bar(Q)$],p:true)" in size
+assert "#vmos(305pt,57pt,[R],p:true)" in size
+assert "#vmos(267pt,111pt,[$bar(Q)$])" in size
+assert "#vmos(342pt,111pt,[R])" in size
+assert "#wire(53pt,71pt,94pt,71pt)" in size
+assert "#wire(218pt,125pt,316pt,125pt)" not in size
+assert "#wire(53pt,125pt,131pt,125pt)" not in size
+assert "#wire(53pt,194pt,385pt,194pt)" in size
+assert "#sr-nor-sizes()" in pages[185]
+for token in ('$W_p$', '$W_n$', '440" nm"', '1.76" μm"'):
+    assert token in size, token
+
+status=json.loads((root/'page-status.json').read_text(encoding='utf-8'))
+for n in range(183, 187):
+    s=status['pages'][n-1]
+    assert not s['layout_verified'] and not s['figures_verified'], n
+print('Source PDF183–186: native bistable, SR feedback, 400ps sizing and JK timing anchors verified; 0/445 accepted.')

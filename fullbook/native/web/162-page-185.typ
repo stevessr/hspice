@@ -1,7 +1,7 @@
 // SOURCE PDF PAGE 185 / printed p.166; scan-based delay, sizing, and SR continuation.
 // The transistor-level Fig5.4 example's full cross-coupled device drawing
 // still needs geometry verification; not certified 1:1.
-#import "../figures/ch5-complex-sequential-native.typ": sr-nor
+#import "../figures/ch5-complex-sequential-native.typ": sr-nor-sizes
 #set document(title:"第5章 · 例5.4 NOR SR锁存器尺寸与NAND SR引言 · PDF185")
 #set text(lang:"zh",size:7.2pt)
 #set par(justify:true,leading:2pt,spacing:3pt)
@@ -16,7 +16,12 @@
 
 *问题：* 在 0.13 μm 的 CMOS 中，用或非门设计一个 SR 锁存器，使从 $S$ 到 $Q$ 的延迟和从 $R$ 到 $bar(Q)$ 的延迟都为 400 ps。假设 $Q$ 和 $bar(Q)$ 驱动的总负载为 100 fF，并且 $L=100 " nm"$。
 
-*解答：* 用下面交叉耦合的或非门结构来实现 SR 锁存器。为获得希望得到的传播延迟，利用关系式 $t_("PHL")=t_("PLH")=0.7 R_("eff") C_L$。这里有两个传播延迟，分别从 $S$ 到 $Q$ 和从 $R$ 到 $bar(Q)$，所以将这两个延迟等分在两个或非门之间。对于 NMOS 器件，已经知道 $R_("eqn")=12.5 " kΩ/□"$，所以有：
+*解答：* 用下面交叉耦合的或非门结构来实现 SR 锁存器。
+
+#sr-nor-sizes()
+#align(center)[*例 5.4　交叉耦合 CMOS 或非门的晶体管级尺寸示意*]
+
+为获得希望得到的传播延迟，利用关系式 $t_("PHL")=t_("PLH")=0.7 R_("eff") C_L$。这里有两个传播延迟，分别从 $S$ 到 $Q$ 和从 $R$ 到 $bar(Q)$，所以将这两个延迟等分在两个或非门之间。对于 NMOS 器件，已经知道 $R_("eqn")=12.5 " kΩ/□"$，所以有：
 
 $ t_("PHL")=0.7 (12.5 " kΩ") L/W (100 " fF")=200 " ps" $
 

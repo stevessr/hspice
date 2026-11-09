@@ -370,3 +370,69 @@
 }
 #let sr-nor() = sr-panel(kind:"nor")
 #let sr-nand() = sr-panel(kind:"nand")
+
+
+// Source PDF185 (printed p.166), Example 5.4 transistor sizing schematic.
+// Two four-device NOR stacks: two series pMOS + two parallel nMOS each.
+// Q and Qbar feedback buses are separately routed; no boxes or raster scans.
+// Geometry and widths are editable, exact 1:1 glyph placement still unverified.
+#let sr-nor-sizes() = html.frame(block(width:414pt,height:224pt)[
+  #place(top+left,dx:100pt,dy:0pt,text(size:8pt)[$V_("DD")$]))
+  #place(top+left,dx:298pt,dy:0pt,text(size:8pt)[$V_("DD")$]))
+  // Left NOR: S and Q inputs, output Qbar.
+  #wire(120pt,13pt,120pt,23pt)
+  #vmos(120pt,23pt,[S],p:true)
+  #wire(120pt,51pt,120pt,57pt)
+  #vmos(120pt,57pt,[$Q$],p:true)
+  #wire(120pt,85pt,120pt,101pt)
+  #wire(82pt,101pt,157pt,101pt)
+  #wire(82pt,101pt,82pt,111pt)
+  #wire(157pt,101pt,157pt,111pt)
+  #vmos(82pt,111pt,[S])
+  #vmos(157pt,111pt,[$Q$])
+  #wire(82pt,139pt,82pt,157pt)
+  #wire(157pt,139pt,157pt,157pt)
+  #wire(82pt,157pt,157pt,157pt)
+  #ground(120pt,157pt)
+  #place(top+left,dx:133pt,dy:30pt,text(size:7pt)[$W_p$]))
+  #place(top+left,dx:133pt,dy:63pt,text(size:7pt)[$W_p$]))
+  #place(top+left,dx:94pt,dy:141pt,text(size:7pt)[$W_n$]))
+  #place(top+left,dx:171pt,dy:141pt,text(size:7pt)[$W_n$]))
+  // Right NOR: R and Qbar inputs, output Q.
+  #wire(305pt,13pt,305pt,23pt)
+  #vmos(305pt,23pt,[$bar(Q)$],p:true)
+  #wire(305pt,51pt,305pt,57pt)
+  #vmos(305pt,57pt,[R],p:true)
+  #wire(305pt,85pt,305pt,101pt)
+  #wire(267pt,101pt,342pt,101pt)
+  #wire(267pt,101pt,267pt,111pt)
+  #wire(342pt,101pt,342pt,111pt)
+  #vmos(267pt,111pt,[$bar(Q)$])
+  #vmos(342pt,111pt,[R])
+  #wire(267pt,139pt,267pt,157pt)
+  #wire(342pt,139pt,342pt,157pt)
+  #wire(267pt,157pt,342pt,157pt)
+  #ground(305pt,157pt)
+  #place(top+left,dx:318pt,dy:30pt,text(size:7pt)[$W_p$]))
+  #place(top+left,dx:318pt,dy:63pt,text(size:7pt)[$W_p$]))
+  #place(top+left,dx:279pt,dy:141pt,text(size:7pt)[$W_n$]))
+  #place(top+left,dx:354pt,dy:141pt,text(size:7pt)[$W_n$]))
+  // Output Qbar feeds the opposite gate of right-hand NOR.
+  #wire(120pt,101pt,218pt,101pt)
+  #node(218pt,101pt)
+  // Qbar net: source PDF185 feeds the *upper* right PMOS and left right-side NMOS.
+  #wire(218pt,37pt,218pt,125pt)
+  #wire(218pt,37pt,279pt,37pt)
+  #wire(218pt,125pt,241pt,125pt)
+  #place(top+left,dx:170pt,dy:92pt,text(size:7pt)[$bar(Q)$]))
+  // Output Q returns through the lower feedback route to left NOR gates.
+  #wire(305pt,101pt,394pt,101pt)
+  #node(385pt,101pt)
+  #wire(385pt,101pt,385pt,194pt)
+  #wire(53pt,194pt,385pt,194pt)
+  // Q net is named at the remaining nMOS gate, avoiding a false S/Q short.
+  #wire(53pt,71pt,53pt,194pt)
+  #wire(53pt,71pt,94pt,71pt)
+  #place(top+left,dx:359pt,dy:90pt,text(size:7pt)[$Q$]))
+  #place(top+left,dx:117pt,dy:211pt,text(size:7pt)[S/R 有效高 · $W_n=440" nm"$，$W_p=1.76" μm"$])
+])
