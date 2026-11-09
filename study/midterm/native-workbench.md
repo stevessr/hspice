@@ -10,8 +10,8 @@ import NativeReview from './.vitepress/theme/NativeReview.vue'
 
 ## 审校与发布方式
 
-工作台使用正式的 native-fidelity.json 八项校验以及原扫描与源码哈希、审校人、时间和对照记录作为验收证据。**机器 OCR、自动编译、浏览器内初检都不能自动提高整页 1:1 验收数。** 页面读取 GitHub Pages 发布的可编辑原生 Typst；本地修改仅保存在当前浏览器，下载 Typst 文件或 JSON 补丁，再经 GitHub PR 审核与 Actions 重新构建发布。
+工作台使用正式的 native-fidelity.json 八项校验以及原扫描与源码哈希、审校人、时间和对照记录作为验收证据。**机器 OCR、自动编译、浏览器内初检都不能自动提高整页 1:1 验收数。** 页面读取 GitHub Pages 发布的可编辑原生 Typst；本地修改仅保存在当前浏览器，下载 Typst 文件或 JSON 补丁；下次访问可用“恢复校对补丁”安全地导入，不会修改主仓库。再经 GitHub PR 审核与 Actions 重新构建发布。
 
-“已发布 HTML/SVG”显示仓库当前编译结果；“编译当前修改并预览”尝试在浏览器加载 Typst WASM，重建当前改动的 SVG。含外部字体、图片或尚未公开依赖的页面可能无法直接 WASM 编译，页面会显示具体错误，已发布的预览不受影响。可选导入本地扫描图 ZIP 做左右校对，**扫描图不会上传到网站**。
+“已发布 HTML/SVG”显示仓库当前编译结果；“编译当前修改并预览”尝试在浏览器加载 Typst WASM，重建当前改动的 SVG。预览在安全的图片容器中展示；页面切换或源码变动会撤销旧预览，避免看错版本。含外部字体、图片或尚未公开依赖的页面可能无法直接 WASM 编译，页面会显示具体错误，已发布的预览不受影响。可选导入本地扫描图 ZIP 做左右校对，**扫描图不会上传到网站**。
 
 [单独打开可检索的全书 Typst HTML 阅读器](/native-typst) · [查看仓库源码](https://github.com/stevessr/hspice/tree/main/fullbook/native)
