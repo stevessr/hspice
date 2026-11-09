@@ -159,6 +159,27 @@ jobs:
       - name: Export reviewed native Typst sections to semantic HTML
         run: python3 fullbook/native/web/build_html.py --output study/midterm/public/native-typst
 
+      - name: Publish layout wrappers and native figure sources for in-browser Typst compilation
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil
+          dest = Path('study/midterm/public/native-typst')
+          wrappers = list(Path('fullbook/native/web').glob('*-page-*-layout.typ'))
+          assert len(wrappers) == 445, len(wrappers)
+          for src in wrappers:
+              shutil.copy2(src, dest / src.name)
+          figures = Path('fullbook/native/figures')
+          count = 0
+          for src in figures.rglob('*.typ'):
+              target = dest / 'figures' / src.relative_to(figures)
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copy2(src, target)
+              count += 1
+          assert count > 0
+          print(f'Published {len(wrappers)} layout wrappers and {count} figure libraries')
+          PY
+
       - name: Export all 445 source-sized Typst page SVG previews
         shell: bash
         run: |
@@ -199,6 +220,8 @@ jobs:
           assert data['format']=='native-typst-html'
           assert data['accepted_full_pages']==0
           assert len(data['items'])==447
+          assert len(list(root.glob('*-page-*-layout.typ'))) == 445
+          assert list((root/'figures').rglob('*.typ'))
           ids=set()
           for item in data['items']:
               assert item['id'] not in ids,item
@@ -241,6 +264,8 @@ jobs:
             exit 1
           fi
           test -s study/midterm/.vitepress/dist/native-workbench.html
+          test -s study/midterm/.vitepress/dist/native-typst/05-page-024-layout.typ
+          test -s study/midterm/.vitepress/dist/native-typst/figures/gate-symbols.typ
           test -s study/midterm/.vitepress/dist/native-fidelity.json
           test -s study/midterm/.vitepress/dist/native-typst.html
           test -s study/midterm/.vitepress/dist/native-typst/01-gates-noise-delay.html
