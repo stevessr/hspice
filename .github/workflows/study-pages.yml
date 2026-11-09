@@ -70,6 +70,9 @@ jobs:
           python3 study/midterm/scripts/test_figure_index.py
           python3 study/midterm/scripts/build_figure_index.py
 
+      - name: Test active recall card scheduling and browsing
+        run: node --test study/midterm/scripts/formula-review-core.test.mjs
+
       - name: Generate and test unified formula revision index
         run: |
           python3 study/midterm/scripts/test_revision_formulas.py
