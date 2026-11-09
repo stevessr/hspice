@@ -13,13 +13,16 @@ pages = {
     'formulas-models': base / 'formulas-models.md',
     'formula-index': base / 'formula-index.md',
     'formula-index-systems': base / 'formula-index-systems.md',
+    'figures': base / 'figures.md',
+    'figures-catalog': base / 'figures-catalog.md',
 }
 text = {}
 for key, path in pages.items():
     assert path.is_file(), f'missing reference page: {path}'
     text[key] = path.read_text(encoding='utf-8')
     assert text[key].startswith('# '), f'missing heading: {path}'
-    assert '|' in text[key], f'expected tables: {path}'
+    if key != 'figures':
+        assert '|' in text[key], f'expected tables: {path}'
     for target in re.findall(r'\]\((/reference/[^)#]*)(?:#[^)]*)?\)', text[key]):
         rel = target[len('/reference/'):].strip('/')
         page = base / (rel + '.md') if rel else base / 'index.md'
@@ -68,3 +71,28 @@ assert set(re.findall(r'^## 第 (\d+) 章：', text['formula-index'] + text['for
 assert "'/reference/formula-index'" in config
 assert "'/reference/formula-index-systems'" in config
 print('Formula index OK: 145 formulas, 11 chapters, print-to-PDF offset +19, and deep links')
+
+
+# Verify the generated visual-index data (built from the 445 native page drafts).
+import json
+figure_data = json.loads((root / 'public' / 'figure-index.json').read_text(encoding='utf-8'))
+assert figure_data['format'] == 'hspice-textbook-figure-index-v1'
+figures = figure_data['entries']
+assert figure_data['total'] == len(figures)
+assert len(figures) >= 30, f'suspiciously few figure captions: {len(figures)}'
+assert len({f['number'] for f in figures}) == len(figures), 'duplicate figure numbers'
+chapters = {str(f['chapter']) for f in figures}
+assert len(chapters & {str(i) for i in range(1, 12)}) >= 8, chapters
+for fig in figures:
+    assert fig['pdf_page'] == fig['printed_page'] + 19, fig
+    assert 20 <= fig['pdf_page'] <= 445, fig
+    assert isinstance(fig['title'], str) and fig['title'], fig
+    assert (root.parent.parent / 'fullbook' / 'native' / 'web' / fig['typst']).is_file(), fig
+    assert fig['preview'] == fig['typst'].removesuffix('.typ') + '-layout.svg', fig
+assert "'/reference/figures'" in config
+assert "'/reference/figures-catalog'" in config
+assert '/reference/figures-catalog' in text['figures']
+catalog = text['figures-catalog']
+for fig in figures:
+    assert '图 ' + fig['number'] in catalog, fig['number']
+print(f'Figure index OK: {len(figures)} unique figure captions and {len(chapters)} groups')
