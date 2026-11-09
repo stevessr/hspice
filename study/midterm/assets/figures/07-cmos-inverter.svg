@@ -29,13 +29,13 @@
 <g id="pmos-device" data-device="pmos4">
   <use href="#pmos4" xlink:href="#pmos4" x="430" y="150"/>
   <text class="label" x="566" y="152">PMOS</text>
-  <text class="caption" x="566" y="176">B → VDD</text>
+  <text class="caption" x="566" y="176">B → VDD</text><text class="caption" x="566" y="197">Wₚ / Lₚ</text>
   <text class="label" x="405" y="87">S</text><text class="label" x="405" y="221">D</text>
 </g>
 <g id="nmos-device" data-device="nmos4">
   <use href="#nmos4" xlink:href="#nmos4" x="430" y="344"/>
   <text class="label" x="566" y="343">NMOS</text>
-  <text class="caption" x="566" y="368">B → GND</text>
+  <text class="caption" x="566" y="368">B → GND</text><text class="caption" x="566" y="389">Wₙ / Lₙ</text>
   <text class="label" x="405" y="281">D</text><text class="label" x="405" y="415">S</text>
 </g>
 <g class="wire" id="vin-net" data-net="Vin">
