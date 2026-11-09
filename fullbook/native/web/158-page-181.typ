@@ -1,14 +1,15 @@
 // SOURCE PDF PAGE 181 / printed 162. Source figure 5.14 reconstructed
 // as editable complementary MOS transistor branches (not text-only boxes).
 // Original redundant pMOS cross-connections and per-wire scale unverified.
-#import "../figures/ch5-complex-sequential-native.typ": xor-xnor
+#import "../figures/ch5-complex-sequential-native.typ": xor-xnor, pseudo-nmos-aoi22
 #set document(title:"第5章 · 图5.14 XOR/XNOR晶体管导通网络 · PDF181")
 #set text(lang:"zh",size:7.35pt)
 #set par(justify:true,leading:2.1pt,spacing:4pt)
 #align(center)[#text(size:8pt,weight:"bold")[162　数字集成电路分析与设计——深亚微米工艺（第三版）]]
 #line(length:100%,stroke:.55pt)
 
-对于伪 NMOS 门，导通下拉网络可按上页例 5.3 的 $A B+C D$ 构造，只需一个固定栅接地的 PMOS 上拉器件。这里给出原书跨页的下拉电路连接关系。它比全 CMOS 版本少用器件，但会在拉低输出时消耗静态功率。
+// 续原书第180页例5.3：伪 NMOS 门电路，上拉 PMOS 栅极接地。
+#pseudo-nmos-aoi22()
 
 == 5.4　异或门和同或门
 
@@ -25,4 +26,4 @@ $ f_("XNOR") = bar(a) bar(b) + a b = "(XNOR)" $
 #xor-xnor()
 #align(center)[*图5.14　(a) 异或门和 (b) 同或门的静态实现（可编辑 MOS 器件串并联网络）*]
 
-上拉支路直接实现 $f_("XOR")$ 的功能，但是每一项都用其反码代替；结果如图 5.14(a) 所示。由于 PMOS 导通条件取决于门端低电平，上拉网络与下拉网络对偶。实际源图中还绘有一些附加的 PMOS 内部连线；这些连线可能用于改善转换过程，需要进一步从原始晶体管连接逐支核对。当前图保留功能所必需的支路拓扑，仍不能声明已逐线 1:1 复刻。
+上拉支路直接实现 $f_("XOR")$ 的功能，但是每一项都用其反码代替，结果如图 5.14(a) 所示。需
