@@ -136,29 +136,34 @@
   #place(top+left,dx:337pt,dy:136pt,text(size:6.5pt)[W])
   #place(top+left,dx:25pt,dy:173pt,text(size:6.8pt)[宽度均对应独立晶体管；MOS 体端按电源/地连接。])
 ])
+// 教材 PDF171／印刷152：图5.4是真实的3管串联版图与等效单管版图。
 #let equivalent-width()=html.frame(block(width:348pt,height:143pt)[
-  #place(top+left,dx:8pt,dy:4pt,text(size:7.9pt)[图5.4 三只 NMOS 串联与并联的等效宽度])
-  #place(top+left,dx:72pt,dy:19pt,text(size:7.5pt,weight:"bold")[串联])
-  #place(top+left,dx:255pt,dy:19pt,text(size:7.5pt,weight:"bold")[并联])
-  #wire(77pt,25pt,77pt,31pt)
-  #for i in range(3) [
-    #mos(77pt,31pt + i * 28pt,gate:("A","B","C").at(i))
-    #if i < 2 [#wire(77pt,48pt + i * 28pt,77pt,59pt + i * 28pt)]
+  #place(top+left,dx:6pt,dy:3pt,text(size:7.8pt)[图5.4：三只串联 NMOS 的版图及其等效尺寸])
+  #place(top+left,dx:26pt,dy:21pt,text(size:7pt)[(a) 三条栅：各 $L_n$])
+  #place(top+left,dx:204pt,dy:21pt,text(size:7pt)[(b) 等效栅长：$3L_n$])
+  // Actual layout: vertical active diffusion, three horizontal polysilicon gates.
+  #place(top+left,dx:70pt,dy:37pt,
+    rect(width:58pt,height:84pt,stroke:.7pt,fill:rgb("#d1d1d1")))
+  #for yy in (48pt,75pt,102pt) [
+    #place(top+left,dx:49pt,dy:yy,
+      rect(width:100pt,height:9pt,stroke:.8pt,fill:rgb("#b9b9b9")))
   ]
-  #ground(77pt,104pt)
-  #wire(194pt,41pt,316pt,41pt)
-  #wire(194pt,100pt,316pt,100pt)
-  #for i in range(3) [
-    #let xx=207pt + i * 48pt
-    #wire(xx,41pt,xx,61pt)
-    #mos(xx,61pt,gate:("A","B","C").at(i))
-    #wire(xx,78pt,xx,100pt)
-  ]
-  #ground(255pt,100pt)
-  #place(top+left,dx:9pt,dy:128pt,text(size:6.7pt)[$1/W_("eq")=1/W_A+1/W_B+1/W_C$]))
-  #place(top+left,dx:199pt,dy:128pt,text(size:6.7pt)[$W_("eq")=W_A+W_B+W_C$]))
+  #place(top+left,dx:28pt,dy:45pt,text(size:7pt)[A])
+  #place(top+left,dx:28pt,dy:72pt,text(size:7pt)[B])
+  #place(top+left,dx:28pt,dy:99pt,text(size:7pt)[C])
+  #place(top+left,dx:85pt,dy:28pt,text(size:7pt)[$3W_n$])
+  #place(top+left,dx:137pt,dy:112pt,text(size:7pt)[$L_n$])
+  #place(top+left,dx:85pt,dy:128pt,text(size:6.5pt)[扩散区])
+  // One equivalent channel has identical width 3Wn and triple channel length 3Ln.
+  #place(top+left,dx:242pt,dy:37pt,
+    rect(width:58pt,height:84pt,stroke:.7pt,fill:rgb("#d1d1d1")))
+  #place(top+left,dx:221pt,dy:67pt,
+    rect(width:100pt,height:27pt,stroke:.8pt,fill:rgb("#b9b9b9")))
+  #place(top+left,dx:255pt,dy:28pt,text(size:7pt)[$3W_n$])
+  #place(top+left,dx:312pt,dy:84pt,text(size:7pt)[$3L_n$])
+  #place(top+left,dx:253pt,dy:128pt,text(size:6.5pt)[扩散区])
+  #place(top+left,dx:159pt,dy:68pt,text(size:13pt)[$arrow$])
 ])
-// 教材 PDF173 / 印刷154 的图5.5是8输入 AND：NAND8 后接反相器。
 #let wide-nand()=html.frame(block(width:350pt,height:185pt)[
   #place(top+left,dx:5pt,dy:3pt,text(size:7.7pt)[图5.5：8 输入与门（NAND8 + 反相器）])
   #place(top+left,dx:114pt,dy:17pt,text(size:7pt)[$V_("DD")$])
