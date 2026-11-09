@@ -32,7 +32,15 @@ for n,words in terms.items():
  assert '#include "'+src.name+'"' in l
 fig=(N/"figures/ch5-cmos-gates-native.typ").read_text(encoding="utf8")
 assert "左为NOR、右为NAND" in (W/"146-page-169.typ").read_text(encoding="utf8")
-assert fig.index("[NOR2]))")<fig.index("[NAND2]))")
+assert "图5.1：NOR2 和 NAND2" in fig
+assert fig.index("[NOR2]") < fig.index("[NAND2]")
+# Device drawings must replace explanatory rectangles; retain gate-bubble geometry.
+assert "上拉PUN：PMOS串联" not in fig
+assert "#let mos(" in fig and "if p {" in fig and "circle(radius:3pt" in fig
+section = fig.split("#let nand-nor-2()", 1)[1].split("#let gate-widths()", 1)[0]
+assert section.count("#mos(") == 8, "NOR2+NAND2 require eight transistor instances"
+assert "rect(" not in section, "schematic must not be a block diagram"
+assert "#let equivalent-width()" in fig and "#let wide-nand()" in fig
 # Equivalent W check: 3 identical 3W in series yields W; parallel W+W+W=3W.
 W0=1.;r=1/(1/(3*W0)+1/(3*W0)+1/(3*W0))
 assert abs(r-W0)<1e-12 and abs((W0+W0+W0)-3*W0)<1e-12
