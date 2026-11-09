@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { withBase } from 'vitepress'
 import {
-  STORAGE_KEY, decodeProgress, encodeProgress, recordAnswer, reviewStats,
-  filterFormulaEntries, selectSession, isDue
+  STORAGE_KEY, SESSION_KEY, decodeProgress, encodeProgress, recordAnswer, reviewStats,
+  filterFormulaEntries, selectSession, selectPrioritizedSession, isDue,
+  encodeSession, decodeSession, mergeProgressBackup, makeProgressBackup
 } from './formula-review-core.mjs'
 
 type Formula = {
@@ -38,14 +39,21 @@ const hydrated = ref(false)
 // Filtering, copying, skipping and browsing do not mark a card as mastered.
 const mode = ref<'browse' | 'practice'>('browse')
 const sessionSize = ref(15)
-const sessionOrder = ref('shuffle')
+const sessionOrder = ref('priority')
 const sessionIds = ref<string[]>([])
 const cursor = ref(0)
 const practiceRevealed = ref(false)
 const sessionRatings = ref<Record<Rating | 'skipped', number>>({
   again: 0, hard: 0, good: 0, skipped: 0
 })
+type SavedSession = {
+  ids: string[]; cursor: number; revealed: boolean
+  ratings: Record<Rating | 'skipped', number>; updatedAt: number
+}
+const savedSession = ref<SavedSession | null>(null)
 const practicePanel = ref<HTMLElement | null>(null)
+let clockTimer: ReturnType<typeof setInterval> | undefined
+onUnmounted(() => { if (clockTimer) clearInterval(clockTimer) })
 const chapters = computed(() => [...new Set(entries.value.map(x => x.chapter))].sort((a, b) => a - b))
 const matches = computed(() => filterFormulaEntries(entries.value, progress.value, {
   query: query.value, chapter: chapter.value, kind: kind.value,
@@ -58,7 +66,7 @@ const current = computed(() => {
   const id = sessionIds.value[cursor.value]
   return id ? entries.value.find(x => x.id === id) : undefined
 })
-const practiceDone = computed(() => mode.value === 'practice' && cursor.value >= sessionIds.value.length)
+
 const sourceHref = (x: Formula) => withBase(x.source_route)
 const reviewHref = (x: Formula) => withBase('/native-workbench') + '?page=' + x.pdf_page
 const isShown = (x: Formula) => !hidden.value || revealed.value.has(x.id)
@@ -86,12 +94,14 @@ function ratingLabel(record?: ReviewRecord) {
   return record.rating === 'good' ? '已掌握' :
     record.rating === 'hard' ? '需巩固' : '待重学'
 }
-function saveProgress() {
+function saveProgress(): boolean {
   try {
     localStorage.setItem(STORAGE_KEY, encodeProgress(progress.value))
     storageMessage.value = ''
+    return true
   } catch {
     storageMessage.value = '浏览器禁止本地保存：本次练习仍可继续，刷新后记录可能丢失。'
+    return false
   }
 }
 function answer(id: string, rating: Rating) {
@@ -104,15 +114,59 @@ function answer(id: string, rating: Rating) {
 function focusPractice() {
   nextTick(() => practicePanel.value?.focus())
 }
+function saveSession() {
+  try {
+    if (mode.value !== 'practice' || cursor.value >= sessionIds.value.length) {
+      localStorage.removeItem(SESSION_KEY)
+      savedSession.value = null
+      return
+    }
+    const session: SavedSession = {
+      ids: [...sessionIds.value], cursor: cursor.value,
+      revealed: practiceRevealed.value, ratings: { ...sessionRatings.value },
+      updatedAt: Date.now()
+    }
+    localStorage.setItem(SESSION_KEY, encodeSession(session))
+    savedSession.value = session
+  } catch {
+    storageMessage.value = '当前浏览器无法保存练习断点，本次练习仍可继续。'
+  }
+}
+function revealAnswer() {
+  if (!current.value) return
+  practiceRevealed.value = true
+  saveSession()
+  focusPractice()
+}
 function startSession() {
   if (!matches.value.length) return
-  sessionIds.value = selectSession(matches.value, sessionSize.value, sessionOrder.value === 'shuffle')
-    .map(x => x.id)
+  if (savedSession.value && !window.confirm('已有未完成的练习，开始新的一轮将覆盖当前断点。确定继续？')) return
+  const chosen = sessionOrder.value === 'priority'
+    ? selectPrioritizedSession(matches.value, progress.value, sessionSize.value, Date.now())
+    : selectSession(matches.value, sessionSize.value, sessionOrder.value === 'shuffle')
+  sessionIds.value = chosen.map(x => x.id)
   cursor.value = 0
   practiceRevealed.value = false
   sessionRatings.value = { again: 0, hard: 0, good: 0, skipped: 0 }
   mode.value = 'practice'
+  saveSession()
   focusPractice()
+}
+function resumeSession() {
+  if (!savedSession.value) return
+  const session = savedSession.value
+  sessionIds.value = [...session.ids]
+  cursor.value = session.cursor
+  practiceRevealed.value = session.revealed
+  sessionRatings.value = { ...session.ratings }
+  mode.value = 'practice'
+  focusPractice()
+}
+function discardSession() {
+  if (!savedSession.value ||
+      !window.confirm('放弃未完成的一轮练习？已经完成的单卡复习记录会保留。')) return
+  savedSession.value = null
+  try { localStorage.removeItem(SESSION_KEY) } catch {}
 }
 function advance(rating?: Rating) {
   if (!current.value) return
@@ -125,23 +179,61 @@ function advance(rating?: Rating) {
   }
   practiceRevealed.value = false
   cursor.value += 1
+  saveSession()
   focusPractice()
 }
 function exitSession() {
+  saveSession()
   mode.value = 'browse'
   practiceRevealed.value = false
 }
+function downloadBackup() {
+  try {
+    const text = makeProgressBackup(progress.value)
+    const href = URL.createObjectURL(new Blob([text], { type: 'application/json;charset=utf-8' }))
+    const a = document.createElement('a')
+    a.href = href
+    a.download = 'hspice-formula-review-' + new Date().toISOString().slice(0, 10) + '.json'
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+    setTimeout(() => URL.revokeObjectURL(href), 2000)
+  } catch {
+    storageMessage.value = '导出失败，请检查浏览器的下载权限。'
+  }
+}
+async function importBackup(event: Event) {
+  const input = event.target as HTMLInputElement
+  const file = input.files?.[0]
+  if (!file) return
+  try {
+    if (file.size > 250_000) throw new Error('备份文件过大')
+    const result = mergeProgressBackup(await file.text(), entries.value.map(x => x.id), progress.value)
+    progress.value = result.records
+    clock.value = Date.now()
+    if (saveProgress()) {
+      storageMessage.value = '导入完成：新增 ' + result.added + ' 项，更新 ' +
+        result.newer + ' 项，保留本机 ' + result.kept + ' 项；忽略无效条目 ' + result.ignored + ' 项。'
+    }
+  } catch (error) {
+    storageMessage.value = '导入失败：' + (error instanceof Error ? error.message : String(error))
+  } finally {
+    input.value = ''
+  }
+}
 function onPracticeKeydown(event: KeyboardEvent) {
   const node = event.target as HTMLElement
-  if (node && ['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON', 'A'].includes(node.tagName)) return
   if (event.key === 'Escape') {
     event.preventDefault()
     exitSession()
-  } else if (!current.value) {
+    return
+  }
+  if (node && ['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON', 'A'].includes(node.tagName)) return
+  if (!current.value) {
     return
   } else if (!practiceRevealed.value && event.key === ' ') {
     event.preventDefault()
-    practiceRevealed.value = true
+    revealAnswer()
   } else if (practiceRevealed.value && ['1', '2', '3'].includes(event.key)) {
     event.preventDefault()
     advance(({ '1': 'again', '2': 'hard', '3': 'good' } as const)[event.key as '1' | '2' | '3'])
@@ -195,11 +287,18 @@ onMounted(async () => {
     }
     entries.value = data.entries
     clock.value = Date.now()
+    clockTimer = setInterval(() => { clock.value = Date.now() }, 60_000)
     try {
       progress.value = decodeProgress(localStorage.getItem(STORAGE_KEY) || '',
         data.entries.map(x => x.id)) as Record<string, ReviewRecord>
     } catch {
       storageMessage.value = '当前浏览器无法读取本地复习记录，本次复习仍可进行。'
+    }
+    try {
+      savedSession.value = decodeSession(localStorage.getItem(SESSION_KEY) || '',
+        data.entries.map(x => x.id)) as SavedSession | null
+    } catch {
+      savedSession.value = null
     }
     const url = new URLSearchParams(window.location.search)
     const q = url.get('q')
