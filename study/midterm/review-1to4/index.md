@@ -4,14 +4,14 @@
 
 ## 四章入口
 
-| 章节 | 知识讲义 | 练习 | 答案 |
-|---|---|---|---|
-| 第1章 深亚微米数字集成电路设计 | [阅读](/review-1to4/01-notes) | [12题](/review-1to4/01-exercises) | [详细解析](/review-1to4/01-answers) |
-| 第2章 MOS 晶体管 | [阅读](/review-1to4/02-notes) | [12题](/review-1to4/02-exercises) | [详细解析](/review-1to4/02-answers) |
-| 第3章 制造、版图和模拟 | [阅读](/review-1to4/03-notes) | [12题](/review-1to4/03-exercises) | [详细解析](/review-1to4/03-answers) |
-| 第4章 MOS 反相器电路 | [阅读](/review-1to4/04-notes) | [12题](/review-1to4/04-exercises) | [详细解析](/review-1to4/04-answers) |
+| 章节 | 知识讲义 | 基础题 | 基础解析 | 本章互动 |
+|---|---|---|---|---|
+| 第1章 深亚微米数字集成电路设计 | [阅读](/review-1to4/01-notes) | [12题](/review-1to4/01-exercises) | [详细解析](/review-1to4/01-answers)  [交互20题](/review-1to4/interactive-01) |
+| 第2章 MOS 晶体管 | [阅读](/review-1to4/02-notes) | [12题](/review-1to4/02-exercises) | [详细解析](/review-1to4/02-answers)  [交互20题](/review-1to4/interactive-02) |
+| 第3章 制造、版图和模拟 | [阅读](/review-1to4/03-notes) | [12题](/review-1to4/03-exercises) | [详细解析](/review-1to4/03-answers)  [交互20题](/review-1to4/interactive-03) |
+| 第4章 MOS 反相器电路 | [阅读](/review-1to4/04-notes) | [12题](/review-1to4/04-exercises) | [详细解析](/review-1to4/04-answers)  [交互20题](/review-1to4/interactive-04) |
 
-**[48题交互式训练](/review-1to4/interactive)** · **[六组 HSPICE 仿真实验](/review-1to4/simulations)** · **[公式速查与原书习题定位](/review-1to4/reference)**
+**[按章交互80题](/review-1to4/interactive)** · **[浏览器在线实验](/review-1to4/online-lab)** · **[六组 HSPICE 仿真实验](/review-1to4/simulations)** · **[公式速查与原书习题定位](/review-1to4/reference)**
 
 # 使用说明与考点地图
 
@@ -27,6 +27,10 @@
 | 4 MOS反相器电路 | 印刷108—147页 | 核心推导 + 设计 | 负载反相器、CMOS VTC、尺寸比 |
 
 **考场推荐顺序：** 先判定器件端电压与工作区，再列电流守恒，再代入模型，最后检验求出的工作区假设。单纯背公式而不检查工作区，是最常见的失分原因。
+
+## 教材原例题、计算方法与工艺专题
+
+原教材第2—4章明确编号的29个例题按教材页码保留索引：[教材原例题](/review-1to4/textbook-examples)。此外新增[公式推导与计算方法](/review-1to4/calculation-methods)、[制造工艺与版图数据表](/review-1to4/technology-tables)、[32道进阶综合习题](/review-1to4/advanced)。
 
 ## 延伸阅读
 

@@ -31,29 +31,46 @@ export default defineConfig({
       '/review-1to4/': [
         { text: '前四章专项', items: [
           { text: '复习总览', link: '/review-1to4/' },
-          { text: '48题互动题库', link: '/review-1to4/interactive' },
+          { text: '四章交互训练（80题）', link: '/review-1to4/interactive' },
+          { text: '在线电路实验', link: '/review-1to4/online-lab' },
+          { text: '独立计算方法', link: '/review-1to4/calculation-methods' },
+          { text: '工艺流程与数据表', link: '/review-1to4/technology-tables' },
+          { text: '教材原例题索引', link: '/review-1to4/textbook-examples' },
+          { text: '32道进阶训练总览', link: '/review-1to4/advanced' },
           { text: '六组 HSPICE 仿真实验', link: '/review-1to4/simulations' },
           { text: '公式和教材习题索引', link: '/review-1to4/reference' }
         ] },
         { text: '第1章 深亚微米数字集成电路设计', collapsed: true, items: [
           { text: '知识讲义', link: '/review-1to4/01-notes' },
           { text: '12道习题', link: '/review-1to4/01-exercises' },
-          { text: '答案解析', link: '/review-1to4/01-answers' }
+          { text: '答案解析', link: '/review-1to4/01-answers' },
+          { text: '章节交互20题', link: '/review-1to4/interactive-01' },
+          { text: '进阶习题8题', link: '/review-1to4/advanced-01-exercises' },
+          { text: '进阶详细解析', link: '/review-1to4/advanced-01-answers' }
         ] },
         { text: '第2章 MOS 晶体管', collapsed: true, items: [
           { text: '知识讲义', link: '/review-1to4/02-notes' },
           { text: '12道习题', link: '/review-1to4/02-exercises' },
-          { text: '答案解析', link: '/review-1to4/02-answers' }
+          { text: '答案解析', link: '/review-1to4/02-answers' },
+          { text: '章节交互20题', link: '/review-1to4/interactive-02' },
+          { text: '进阶习题8题', link: '/review-1to4/advanced-02-exercises' },
+          { text: '进阶详细解析', link: '/review-1to4/advanced-02-answers' }
         ] },
         { text: '第3章 制造、版图和模拟', collapsed: true, items: [
           { text: '知识讲义', link: '/review-1to4/03-notes' },
           { text: '12道习题', link: '/review-1to4/03-exercises' },
-          { text: '答案解析', link: '/review-1to4/03-answers' }
+          { text: '答案解析', link: '/review-1to4/03-answers' },
+          { text: '章节交互20题', link: '/review-1to4/interactive-03' },
+          { text: '进阶习题8题', link: '/review-1to4/advanced-03-exercises' },
+          { text: '进阶详细解析', link: '/review-1to4/advanced-03-answers' }
         ] },
         { text: '第4章 MOS 反相器电路', collapsed: true, items: [
           { text: '知识讲义', link: '/review-1to4/04-notes' },
           { text: '12道习题', link: '/review-1to4/04-exercises' },
-          { text: '答案解析', link: '/review-1to4/04-answers' }
+          { text: '答案解析', link: '/review-1to4/04-answers' },
+          { text: '章节交互20题', link: '/review-1to4/interactive-04' },
+          { text: '进阶习题8题', link: '/review-1to4/advanced-04-exercises' },
+          { text: '进阶详细解析', link: '/review-1to4/advanced-04-answers' }
         ] },
       ],
       '/fidelity': [

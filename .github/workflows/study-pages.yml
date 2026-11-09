@@ -65,6 +65,9 @@ jobs:
       - name: Validate Markdown and image references
         run: python3 study/midterm/scripts/validate.py
 
+      - name: Test browser circuit analysis models
+        run: node --test study/midterm/scripts/test-review-lab.mjs
+
       - name: Install VitePress
         if: steps.node-cache.outputs.cache-hit != 'true'
         working-directory: study/midterm

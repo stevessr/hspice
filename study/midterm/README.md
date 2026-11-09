@@ -108,3 +108,7 @@ Pages 的部署源需要在 **Settings → Pages → Build and deployment → So
 ## 前四章 HSPICE 教学网表
 
 [六组仿真实验](https://stevessr.github.io/hspice/review-1to4/simulations)：RC延迟、NMOS输出特性、体效应、分布互连、CMOS VTC、CMOS瞬态。源文件保存在 `review-1to4/netlists/*.sp`，不依赖外部课程工艺库。CI 静态检查，HSPICE 数值波形需在本机运行。
+
+## 本轮增强：按章80题、原教材例题与网页实验
+
+保留原48道自编基础题，新增32道自编进阶题、四个章节互动页（各20题）、可在浏览器实时计算的RC/MOS/CMOS实验、29个教材原编号例题的原书物理页码与Typst选段索引、独立计算方法以及第3章详细工艺数据表。网页模型为一阶教学模型，实际波形仍由HSPICE仿真验证。
