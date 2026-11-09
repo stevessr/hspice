@@ -375,10 +375,19 @@ onMounted(async () => {
           <button type="button" :disabled="!query && chapter === 'all' && kind === 'all' && status === 'all'"
             @click="resetFilters">清空筛选</button>
         </div>
+        <div v-if="savedSession" class="session-resume" role="status">
+          <div>
+            <strong>上次练习尚未完成</strong>
+            <p>已完成 {{ savedSession.cursor }} / {{ savedSession.ids.length }} 张；
+              继续练习不会重新抽卡，已评价的进度已保存。</p>
+          </div>
+          <button class="primary-button" type="button" @click="resumeSession">继续上次练习</button>
+          <button type="button" @click="discardSession">放弃断点</button>
+        </div>
         <div class="session-launch">
           <div>
             <strong>主动回忆练习</strong>
-            <p>先根据名称与适用条件默写，再翻面核对；逐题记录“不会 / 模糊 / 会了”。</p>
+            <p>默认优先安排到期题和未学题。根据名称、公式条件先默写，再翻面给出评价。</p>
           </div>
           <label>练习数量
             <select v-model.number="sessionSize" aria-label="每次练习卡片数量">
@@ -390,6 +399,7 @@ onMounted(async () => {
           </label>
           <label>练习顺序
             <select v-model="sessionOrder" aria-label="练习顺序">
+              <option value="priority">优先到期与新卡</option>
               <option value="shuffle">随机打乱</option>
               <option value="source">教材顺序</option>
             </select>
@@ -433,9 +443,16 @@ onMounted(async () => {
         </div>
         <details class="review-storage">
           <summary>学习记录与隐私</summary>
-          <p>复习评价仅保存在当前浏览器的本地存储，不上传到服务器，也不会随网址分享。清除浏览器数据会清除记录。</p>
+          <p>复习评价和未完成练习只保存在当前浏览器，不上传服务器。可以下载 JSON 备份，跨浏览器导入时按单卡最后复习时间合并，较新的记录优先；无效或不属于本教材的条目会被忽略。</p>
           <p>“不会”10 分钟后重学，“模糊”次日巩固，“会了”按 1 / 3 / 7 / 14 / 30 / 60 天递进安排。</p>
-          <button type="button" :disabled="stats.reviewed === 0" @click="clearProgress">清除本机复习记录</button>
+          <div class="backup-actions">
+            <button type="button" @click="downloadBackup">导出复习记录 JSON</button>
+            <label class="backup-file-label">导入记录并合并
+              <input type="file" accept=".json,application/json" @change="importBackup" aria-label="导入复习记录 JSON" />
+            </label>
+            <button type="button" :disabled="stats.reviewed === 0" @click="clearProgress">清除本机复习记录</button>
+          </div>
+          <p>备份只包含公式卡片 ID、评价和复习日期，不包含原书全文或公式源代码。</p>
         </details>
       </template>
 
@@ -443,7 +460,7 @@ onMounted(async () => {
         aria-label="公式默写练习" @keydown="onPracticeKeydown">
         <div class="practice-topbar">
           <span>默写练习 · {{ Math.min(cursor + 1, sessionIds.length) }} / {{ sessionIds.length }}</span>
-          <button type="button" @click="exitSession">结束练习，返回速查</button>
+          <button type="button" @click="exitSession">返回列表（保留断点）</button>
         </div>
         <progress :value="cursor" :max="sessionIds.length" aria-label="已完成卡片数"></progress>
         <template v-if="current">
@@ -452,7 +469,7 @@ onMounted(async () => {
           <p class="practice-note"><strong>回忆提示：</strong>{{ current.note || current.topic }}</p>
           <div v-if="!practiceRevealed" class="practice-obscured">
             <p>请先写出公式，并说出变量意义与适用条件。</p>
-            <button class="primary-button" type="button" @click="practiceRevealed = true">
+            <button class="primary-button" type="button" @click="revealAnswer">
               显示公式答案
             </button>
             <small>聚焦练习区后按空格也可以揭示答案。</small>
@@ -473,7 +490,7 @@ onMounted(async () => {
             <button type="button" @click="advance()">跳过本张 →</button>
           </div>
           <p v-if="copyStatus" class="finder-status" role="status">{{ copyStatus }}</p>
-          <p class="practice-help">键盘：空格揭示 · 揭示后按 1 / 2 / 3 评价 · → 跳过 · Esc 退出</p>
+          <p class="practice-help">键盘：空格揭示 · 揭示后按 1 / 2 / 3 评价 · → 跳过 · Esc 返回列表并保留断点</p>
         </template>
         <div v-else class="practice-finished">
           <h2>本轮练习完成</h2>
@@ -512,6 +529,14 @@ onMounted(async () => {
 .finder-toolbar { display:flex; flex-wrap:wrap; gap:.7rem; align-items:center; margin-bottom:.85rem; }
 .finder-toolbar p { color:var(--vp-c-text-2); margin:0 auto 0 0; font-size:.85rem; }
 .finder-switch { display:inline-flex; gap:.4rem; align-items:center; font-size:.83rem; }
+.session-resume { display:flex; flex-wrap:wrap; gap:.65rem; align-items:center; padding:.85rem 1rem; margin-bottom:.85rem; border:1px solid var(--vp-c-brand-2); border-radius:12px; }
+.session-resume>div { flex:1 1 220px; }
+.session-resume strong { font-size:.9rem; }
+.session-resume p { margin:.25rem 0; color:var(--vp-c-text-2); font-size:.8rem; line-height:1.6; }
+.backup-actions { display:flex; align-items:center; flex-wrap:wrap; gap:.6rem; margin:1rem 0; }
+.backup-file-label { position:relative; overflow:hidden; cursor:pointer; padding:.5rem .75rem; border:1px solid var(--vp-c-divider); border-radius:8px; background:var(--vp-c-bg-soft); color:var(--vp-c-text-1); font-size:.85rem; }
+.backup-file-label:focus-within { outline:2px solid var(--vp-c-brand-1); outline-offset:2px; }
+.backup-file-label input { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer; }
 .session-launch { display:flex; gap:.65rem; align-items:end; flex-wrap:wrap; padding:1rem; margin-bottom:1.1rem; background:var(--vp-c-bg-soft); border:1px solid var(--vp-c-divider); border-radius:12px; }
 .session-launch>div { flex:1 1 220px; }
 .session-launch strong { font-size:.93rem; }
@@ -568,6 +593,7 @@ onMounted(async () => {
   .finder-search { grid-column:auto; }
   .session-launch label { flex:1 1 120px; }
   .session-launch .primary-button { width:100%; }
+  .session-resume button { flex:1 1 auto; }
   .rating-controls { flex-direction:column; width:100%; }
   .rating-controls button { width:100%; }
   .practice-bottom button:last-child { margin-left:0; }
