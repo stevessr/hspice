@@ -7,10 +7,11 @@
   place(top+left,dx:x,dy:y + 5pt,line(length:16pt,stroke:.7pt))
   if label!="" {place(top+left,dx:x + 18pt,dy:y - 3pt,text(size:7.5pt)[#label])}
 }
-#let mos(x,y,label:"")={
+#let mos(x,y,label:"",p:false)={
   place(top+left,dx:x,dy:y,line(end:(0pt,28pt),stroke:.9pt))
   place(top+left,dx:x - 5pt,dy:y,line(end:(0pt,28pt),stroke:.9pt))
-  place(top+left,dx:x - 26pt,dy:y + 14pt,line(length:21pt,stroke:.9pt))
+  place(top+left,dx:x - 26pt,dy:y + 14pt,line(length:if p {15pt} else {21pt},stroke:.9pt))
+  if p {place(top+left,dx:x - 8pt,dy:y + 14pt,circle(radius:3pt,stroke:.8pt,fill:white))}
   if label!="" {place(top+left,dx:x + 6pt,dy:y + 8pt,text(size:7.5pt)[#label])}
 }
 #let fig612()=html.frame(block(width:300pt,height:170pt)[
@@ -35,12 +36,15 @@
 ])
 #let fig613()=html.frame(block(width:320pt,height:133pt)[
   #seg(128pt,12pt,128pt,33pt)
-  #mos(128pt,33pt,label:"PMOS")
+  #mos(128pt,33pt,label:"PMOS",p:true)
   #seg(128pt,61pt,128pt,71pt)
   #mos(128pt,71pt,label:"NMOS")
   #seg(128pt,99pt,128pt,116pt)
   #seg(128pt,68pt,215pt,68pt)
   #cap(208pt,84pt,label:"CL")
+  #seg(58pt,47pt,102pt,47pt)
+  #seg(58pt,47pt,58pt,85pt)
+  #seg(58pt,85pt,102pt,85pt)
   #place(top+left,dx:23pt,dy:62pt,text(size:7.5pt)[$V_("in")$]))
   #place(top+left,dx:220pt,dy:59pt,text(size:7.5pt)[$V_("out")$]))
   #place(top+left,dx:145pt,dy:18pt,text(size:7.5pt)[$i_("PMOS")$]))
@@ -65,7 +69,7 @@
   // Upper subfigure: CMOS circuit and an explicit capacitive output.
   #place(top+left,dx:82pt,dy:3pt,text(size:7pt)[$V_("DD")$]))
   #seg(94pt,16pt,94pt,30pt)
-  #mos(94pt,30pt,label:"P")
+  #mos(94pt,30pt,label:"P",p:true)
   #seg(94pt,58pt,94pt,67pt)
   #mos(94pt,67pt,label:"N")
   #seg(94pt,95pt,94pt,110pt)
@@ -75,6 +79,8 @@
   #place(top+left,dx:12pt,dy:63pt,text(size:7pt)[$V_("in")$]))
   #seg(44pt,63pt,66pt,63pt)
   #seg(66pt,44pt,66pt,87pt)
+  #seg(66pt,44pt,68pt,44pt)
+  #seg(66pt,81pt,68pt,81pt)
   // Lower contour: voltage-dependent switching trajectory with marked corners.
   #seg(30pt,221pt,174pt,221pt)
   #seg(30pt,221pt,30pt,123pt)

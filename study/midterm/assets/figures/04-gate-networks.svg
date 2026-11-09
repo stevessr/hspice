@@ -1,114 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="662.4pt" height="208.8pt" viewBox="0 0 662.4 208.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <metadata>
-  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-   <cc:Work>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-04T09:08:05.285258</dc:date>
-    <dc:format>image/svg+xml</dc:format>
-    <dc:creator>
-     <cc:Agent>
-      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
-     </cc:Agent>
-    </dc:creator>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs>
-  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
- </defs>
- <g id="figure_1">
-  <g id="patch_1">
-   <path d="M 0 208.8 
-L 662.4 208.8 
-L 662.4 0 
-L 0 0 
-z
-" style="fill: #ffffff"/>
-  </g>
-  <g id="axes_1">
-   <g id="text_1">
-    <text style="font-weight: 700; font-size: 16px; font-family: 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="175.68" y="38.831" transform="rotate(-0 175.68 38.831)">NAND</text>
-   </g>
-   <g id="text_2">
-    <g id="patch_2">
-     <path d="M 131.239687 96.766875 
-L 220.120312 96.766875 
-Q 226.120312 96.766875 226.120312 90.766875 
-L 226.120312 79.153125 
-Q 226.120312 73.153125 220.120312 73.153125 
-L 131.239687 73.153125 
-Q 125.239687 73.153125 125.239687 79.153125 
-L 125.239687 90.766875 
-Q 125.239687 96.766875 131.239687 96.766875 
-z
-" style="fill: #ffffff; stroke: #808080; stroke-linejoin: miter"/>
-    </g>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="175.68" y="88.27125" transform="rotate(-0 175.68 88.27125)">上拉网络：PMOS 并联</text>
-   </g>
-   <g id="text_3">
-    <g id="patch_3">
-     <path d="M 130.36875 164.806875 
-L 220.99125 164.806875 
-Q 226.99125 164.806875 226.99125 158.806875 
-L 226.99125 147.193125 
-Q 226.99125 141.193125 220.99125 141.193125 
-L 130.36875 141.193125 
-Q 124.36875 141.193125 124.36875 147.193125 
-L 124.36875 158.806875 
-Q 124.36875 164.806875 130.36875 164.806875 
-z
-" style="fill: #ffffff; stroke: #808080; stroke-linejoin: miter"/>
-    </g>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="175.68" y="156.31125" transform="rotate(-0 175.68 156.31125)">下拉网络：NMOS 串联</text>
-   </g>
-   <g id="patch_4">
-    <path d="M 175.68 108.340682 
-Q 175.68 119.951358 175.68 131.562034 
-" style="fill: none; stroke: #000000; stroke-width: 1.2; stroke-linecap: round"/>
-   </g>
-   <g id="text_4">
-    <text style="font-weight: 700; font-size: 16px; font-family: 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="486.72" y="38.831" transform="rotate(-0 486.72 38.831)">NOR</text>
-   </g>
-   <g id="text_5">
-    <g id="patch_5">
-     <path d="M 442.279687 96.766875 
-L 531.160312 96.766875 
-Q 537.160312 96.766875 537.160312 90.766875 
-L 537.160312 79.153125 
-Q 537.160312 73.153125 531.160312 73.153125 
-L 442.279687 73.153125 
-Q 436.279687 73.153125 436.279687 79.153125 
-L 436.279687 90.766875 
-Q 436.279687 96.766875 442.279687 96.766875 
-z
-" style="fill: #ffffff; stroke: #808080; stroke-linejoin: miter"/>
-    </g>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="486.72" y="88.27125" transform="rotate(-0 486.72 88.27125)">上拉网络：PMOS 串联</text>
-   </g>
-   <g id="text_6">
-    <g id="patch_6">
-     <path d="M 441.40875 164.806875 
-L 532.03125 164.806875 
-Q 538.03125 164.806875 538.03125 158.806875 
-L 538.03125 147.193125 
-Q 538.03125 141.193125 532.03125 141.193125 
-L 441.40875 141.193125 
-Q 435.40875 141.193125 435.40875 147.193125 
-L 435.40875 158.806875 
-Q 435.40875 164.806875 441.40875 164.806875 
-z
-" style="fill: #ffffff; stroke: #808080; stroke-linejoin: miter"/>
-    </g>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle" x="486.72" y="156.31125" transform="rotate(-0 486.72 156.31125)">下拉网络：NMOS 并联</text>
-   </g>
-   <g id="patch_7">
-    <path d="M 486.72 108.340682 
-Q 486.72 119.951358 486.72 131.562034 
-" style="fill: none; stroke: #000000; stroke-width: 1.2; stroke-linecap: round"/>
-   </g>
-  </g>
- </g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 860" width="1200" height="860" role="img" aria-labelledby="title desc">
+<title id="title">三输入 NAND3 与 NOR3 的静态 CMOS 晶体管电路图</title>
+<desc id="desc">左侧 NAND3：三只 PMOS 并联、三只 NMOS 串联；右侧 NOR3：三只 PMOS 串联、三只 NMOS 并联。显示实际 MOS 图符、栅输入 A B C、电源 VDD、地 GND 与输出 Y，舍略体端引线。</desc>
+<style>
+.wire{stroke:#191919;stroke-width:2.6;stroke-linecap:square;stroke-linejoin:miter;fill:none}
+.junction{fill:#191919}
+.heading{font:700 25px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#191919}
+.subhead{font:700 21px Georgia,"Noto Serif CJK SC",serif;fill:#191919}
+.pin{font:19px Georgia,"Noto Serif CJK SC",serif;fill:#191919}
+.note{font:16px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#333}
+</style>
+<rect width="1200" height="860" fill="#fff"/>
+<defs>
+ <g id="nmos3" class="wire"><path d="M0 -24 V24 M-25 -24 V24 M-70 0 H-25 M0 -55 V-24 M0 24 V55"/></g>
+ <g id="pmos3" class="wire"><path d="M0 -24 V24 M-25 -24 V24 M-70 0 H-39 M0 -55 V-24 M0 24 V55"/><circle cx="-32" cy="0" r="7" fill="white"/></g>
+</defs>
+<text x="600" y="44" text-anchor="middle" class="heading">三输入静态 CMOS 逻辑网络（晶体管级）</text>
+<text x="280" y="83" text-anchor="middle" class="subhead">NAND3 · Y = ¬(A·B·C)</text>
+<text x="865" y="83" text-anchor="middle" class="subhead">NOR3 · Y = ¬(A+B+C)</text>
+<path class="wire" d="M585 100 V781" stroke="#ccc"/>
+<text x="255" y="119" class="pin" text-anchor="middle">VDD</text>
+<path class="wire" d="M130 135 V105 H380 V135 M255 105 V135" id="nand-vdd" data-net="VDD"/>
+<g id="nand-pmos-a" data-device="pmos3" data-input="A"><use href="#pmos3" xlink:href="#pmos3" x="130" y="190"/></g><text x="46" y="196" class="pin">A</text>
+<g id="nand-pmos-b" data-device="pmos3" data-input="B"><use href="#pmos3" xlink:href="#pmos3" x="255" y="190"/></g><text x="171" y="196" class="pin">B</text>
+<g id="nand-pmos-c" data-device="pmos3" data-input="C"><use href="#pmos3" xlink:href="#pmos3" x="380" y="190"/></g><text x="296" y="196" class="pin">C</text>
+<path class="wire" d="M130 245 V287 H380 M255 245 V287 M380 245 V287 M255 287 H505" id="nand-output" data-net="NAND3_Y"/>
+<circle class="junction" cx="255" cy="287" r="4"/><text x="516" y="293" class="pin">Y</text>
+<path class="wire" d="M255 287 V335" />
+<g id="nand-nmos-a" data-device="nmos3" data-input="A"><use href="#nmos3" xlink:href="#nmos3" x="255" y="390"/></g><text x="171" y="396" class="pin">A</text>
+<g id="nand-nmos-b" data-device="nmos3" data-input="B"><use href="#nmos3" xlink:href="#nmos3" x="255" y="525"/></g><text x="171" y="531" class="pin">B</text>
+<g id="nand-nmos-c" data-device="nmos3" data-input="C"><use href="#nmos3" xlink:href="#nmos3" x="255" y="660"/></g><text x="171" y="666" class="pin">C</text>
+<path class="wire" d="M255 445 V470 M255 580 V605 M255 715 V740 M230 740 H280 M236 750 H274 M244 760 H266" id="nand-gnd" data-net="GND"/>
+<text x="294" y="753" class="note">GND</text>
+<text x="865" y="119" class="pin" text-anchor="middle">VDD</text>
+<path class="wire" d="M865 105 V135" id="nor-vdd" data-net="VDD"/>
+<g id="nor-pmos-a" data-device="pmos3" data-input="A"><use href="#pmos3" xlink:href="#pmos3" x="865" y="190"/></g><text x="781" y="196" class="pin">A</text>
+<g id="nor-pmos-b" data-device="pmos3" data-input="B"><use href="#pmos3" xlink:href="#pmos3" x="865" y="300"/></g><text x="781" y="306" class="pin">B</text>
+<g id="nor-pmos-c" data-device="pmos3" data-input="C"><use href="#pmos3" xlink:href="#pmos3" x="865" y="410"/></g><text x="781" y="416" class="pin">C</text>
+<path class="wire" d="M865 245 V245 M865 355 V355 M865 465 V486 H1097" id="nor-output" data-net="NOR3_Y"/>
+<circle class="junction" cx="865" cy="486" r="4"/><text x="1107" y="491" class="pin">Y</text>
+<path class="wire" d="M710 545 V486 H990 V545 M865 486 V545" />
+<g id="nor-nmos-a" data-device="nmos3" data-input="A"><use href="#nmos3" xlink:href="#nmos3" x="710" y="600"/></g><text x="626" y="606" class="pin">A</text>
+<g id="nor-nmos-b" data-device="nmos3" data-input="B"><use href="#nmos3" xlink:href="#nmos3" x="865" y="600"/></g><text x="781" y="606" class="pin">B</text>
+<g id="nor-nmos-c" data-device="nmos3" data-input="C"><use href="#nmos3" xlink:href="#nmos3" x="990" y="600"/></g><text x="906" y="606" class="pin">C</text>
+<path class="wire" d="M710 655 V740 H990 V655 M865 655 V740 M865 740 V747 M840 747 H890 M847 757 H883 M855 767 H875" id="nor-gnd" data-net="GND"/>
+<circle class="junction" cx="710" cy="486" r="4"/><circle class="junction" cx="990" cy="486" r="4"/><circle class="junction" cx="865" cy="740" r="4"/>
+<text x="900" y="758" class="note">GND</text>
+<text x="600" y="811" text-anchor="middle" class="note">按教材式 MOS 符号绘制：PMOS 栅极带圆圈，NMOS 不带；同名栅端连接同一输入。</text>
+<text x="600" y="836" text-anchor="middle" class="note">体端为简化视图：PMOS 的 B 接 VDD，NMOS 的 B 接 GND；图示为教学重绘而非原书扫描。</text>
 </svg>

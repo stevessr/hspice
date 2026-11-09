@@ -43,9 +43,32 @@ def check_fig(filename: str, n_count: int, p_count: int, has_body: bool):
 
 
 def run():
+    # Three-input circuit is distinct from two-input gate and contains 12 MOSFETs.
+    check_fig("04-gate-networks.svg", 6, 6, has_body=False)
     check_fig("06-mos-terminals.svg", 1, 1, has_body=True)
     check_fig("07-cmos-inverter.svg", 1, 1, has_body=True)
     check_fig("08-nand-nor-networks.svg", 4, 4, has_body=False)
+
+    resistor = load("13-nmos-resistor-inverter.svg")
+    assert len([e for e in resistor.iter() if e.get("data-device") == "nmos4"]) == 1
+    assert node(resistor, "output").get("data-net") == "Vout"
+    assert node(resistor, "input").get("data-net") == "Vin"
+    assert node(resistor, "ground").get("data-net") == "GND"
+    assert node(resistor, "supply").get("data-net") == "VDD"
+    assert node(resistor, "load-capacitor") is not None
+    assert "pmos4" not in ET.tostring(resistor, encoding="unicode")
+
+    triple = load("04-gate-networks.svg")
+    for gate in ("nand", "nor"):
+        for device in ("pmos", "nmos"):
+            for pin in ("a", "b", "c"):
+                part = node(triple, f"{gate}-{device}-{pin}")
+                assert part.get("data-input") == pin.upper(), (gate, device, pin)
+        assert node(triple, gate + "-output").get("data-net") == gate.upper() + "3_Y"
+    triple_src = (FIG / "04-gate-networks.svg").read_text(encoding="utf-8")
+    assert "上拉网络：PMOS" not in triple_src
+    assert "<rect " in triple_src  # white page background only
+    assert "<rect" not in triple_src.split("<defs>", 1)[1], "no functional rectangles"
 
     terminals = load("06-mos-terminals.svg")
     for kind in ("nmos", "pmos"):
@@ -70,11 +93,23 @@ def run():
         assert node(logic, gate + "-output").get("data-net")
 
     gallery = (BASE / "figures.md").read_text(encoding="utf-8")
-    for asset in ("06-mos-terminals.svg", "07-cmos-inverter.svg",
-                  "08-nand-nor-networks.svg"):
+    for asset in ("04-gate-networks.svg", "06-mos-terminals.svg",
+                  "07-cmos-inverter.svg", "08-nand-nor-networks.svg",
+                  "13-nmos-resistor-inverter.svg"):
         assert asset in gallery, asset
     assert "非标准晶体管图符" not in gallery
-    print("OK: textbook MOS/CMOS symbols, gate bubbles, terminals and gallery references")
+    assert "三输入 NAND3" in gallery and "电阻负载 NMOS 反相器" in gallery
+
+    native = BASE.parents[1] / "fullbook" / "native" / "figures"
+    ch5 = (native / "ch5-cmos-gates-native.typ").read_text(encoding="utf-8")
+    assert "上拉PUN：PMOS串联" not in ch5, "Chapter 5 still contains text-only NAND"
+    assert ch5.count("#mos(") >= 8
+    ch6 = (native / "ch6-delay-capacitance-native.typ").read_text(encoding="utf-8")
+    for name in ("equivalent", "stacking", "nand3-network"):
+        assert f"#let {name}()" in ch6
+    triple_typ = ch6.split("#let nand3-network()", 1)[1]
+    assert "rect(" not in triple_typ and "#cmos(" in triple_typ
+    print("OK: textbook MOS/CMOS symbols, transistor-level NAND2/3 NOR2/3, NMOS load and native Typst")
 
 
 if __name__ == "__main__":
