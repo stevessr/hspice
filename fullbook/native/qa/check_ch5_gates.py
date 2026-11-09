@@ -50,6 +50,7 @@ assert "并联的等效宽度" not in layout
 wide = fig.split("#let wide-nand()",1)[1].split("#let nand-vtc()",1)[0]
 assert "8 输入与门" in wide and "NAND8 + 反相器" in wide
 assert "curve.close" in wide and "8×NMOS" not in wide
+assert "逻辑 Y=A·B·C·D·E·F·G·H" in wide
 # Equivalent W check: 3 identical 3W in series yields W; parallel W+W+W=3W.
 W0=1.;r=1/(1/(3*W0)+1/(3*W0)+1/(3*W0))
 assert abs(r-W0)<1e-12 and abs((W0+W0+W0)-3*W0)<1e-12
