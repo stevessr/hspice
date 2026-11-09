@@ -15,7 +15,7 @@
   cwire(x-23pt,y+8.5pt,x-(if p {12pt} else {6pt}),y+8.5pt)
   if p {place(top+left,dx:x-9pt,dy:y+8.5pt,
     circle(radius:3pt,fill:white,stroke:.8pt))}
-  if gate!="" {place(top+left,dx:x-34pt,dy:y+3pt,text(size:7pt)[#gate])}
+  if gate != "" {place(top+left,dx:x-34pt,dy:y+3pt,text(size:7pt)[#gate])}
 }
 #let propagation() = html.frame(block(width:346pt,height:137pt)[
   #place(top+left,dx:7pt,dy:5pt,text(size:8pt)[图6.1：门链传播延迟与判定电平])
@@ -124,7 +124,7 @@
   #for i in range(3) [
     #let yy=83pt+i*23pt
     #cmos(190pt,yy,gate:("A","B","C").at(i))
-    #if i<2 [#cwire(190pt,yy+17pt,190pt,yy+23pt)]
+    #if i < 2 [#cwire(190pt,yy+17pt,190pt,yy+23pt)]
   ]
   #cwire(190pt,146pt,190pt,150pt)
   #cgnd(190pt,150pt)
