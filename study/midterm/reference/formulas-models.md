@@ -2,6 +2,8 @@
 
 > 按教材第 1—4、6、10—11 章，以及附录 A 整理，公式为**学习版归纳**。含近似号的式子必须检查使用条件；仿真时以实际模型库和电路偏置为准。
 
+**查原书公式编号和精确页码：** [第 1—6 章 97 项](/reference/formula-index) · [第 7—11 章 48 项](/reference/formula-index-systems)。本页保留模型含义、符号和 HSPICE 使用说明。
+
 [速查入口](/reference/) · [379 条术语](/reference/terms-device-process) · [教材数据表](/reference/data-tables)
 
 ## 1. MOS 端口、几何和电容
