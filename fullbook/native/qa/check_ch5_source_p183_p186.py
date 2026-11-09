@@ -38,7 +38,12 @@ size=fig.split("#let sr-nor-sizes() =",1)[1]
 assert size.count("#vmos(") == 8, "two NOR gates require 8 native transistor symbols"
 assert size.count("p:true") == 4
 assert "#wire(120pt,101pt,218pt,101pt)" in size
-assert "#wire(218pt,71pt,279pt,71pt)" in size
+assert "#wire(218pt,37pt,279pt,37pt)" in size
+assert "#wire(218pt,125pt,241pt,125pt)" in size
+assert "#vmos(305pt,23pt,[$bar(Q)$],p:true)" in size
+assert "#vmos(305pt,57pt,[R],p:true)" in size
+assert "#vmos(267pt,111pt,[$bar(Q)$])" in size
+assert "#vmos(342pt,111pt,[R])" in size
 assert "#wire(53pt,71pt,94pt,71pt)" in size
 assert "#wire(218pt,125pt,316pt,125pt)" not in size
 assert "#wire(53pt,125pt,131pt,125pt)" not in size
