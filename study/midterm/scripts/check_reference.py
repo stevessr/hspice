@@ -124,6 +124,7 @@ assert '/tools' in home and '/reference/' in home, 'Missing prominent learning d
 hub = (root / 'tools.md').read_text(encoding='utf-8')
 component = root / '.vitepress' / 'theme' / 'ToolsHub.vue'
 assert component.is_file() and '<ToolsHub />' in hub
-for route in expected_tool_routes:
+for route in expected_tool_routes - {'/tools'}:
     assert f"href: '{route}'" in component.read_text(encoding='utf-8'), route
+assert "link: '/tools'" in config, 'Tool hub must be accessible from top navigation'
 print('Compact navigation OK: 5 top-level items, 3 hero actions, and 8 unified tool routes')
