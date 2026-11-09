@@ -18,7 +18,7 @@
 <path d="M550 85 V639" stroke="#aaa" stroke-width="1"/>
 
 <!-- The textbook Figure 5.1 orders NOR2 on the left and NAND2 on the right. -->
-<g transform="translate(-500 0)" id="nor2-panel" data-source-figure="5.1a">
+<g transform="translate(-530 0)" id="nor2-panel" data-source-figure="5.1a">
 <!-- NOR: series P pull-up; parallel N pull-down. -->
 <text x="800" y="115" text-anchor="middle" class="label">VDD</text>
 <path class="wire" d="M800 125 V132"/>
@@ -38,7 +38,7 @@
 <circle class="junction" cx="800" cy="616" r="4"/>
 <text x="837" y="638" class="note">GND</text>
 </g>
-<g transform="translate(500 0)" id="nand2-panel" data-source-figure="5.1b">
+<g transform="translate(530 0)" id="nand2-panel" data-source-figure="5.1b">
 <text x="270" y="87" text-anchor="middle" class="subhead">NAND2：Y = ¬(A · B)</text>
 <text x="822" y="87" text-anchor="middle" class="subhead">NOR2：Y = ¬(A + B)</text>
 <!-- NAND: parallel P pull-up; series N pull-down. -->
