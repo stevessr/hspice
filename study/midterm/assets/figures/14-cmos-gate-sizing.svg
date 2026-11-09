@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1700 745" width="1700" height="745" role="img" aria-labelledby="title desc">
+<title id="title">教材图5.2：CMOS 反相器、NAND2 和 NOR2 的晶体管尺寸</title>
+<desc id="desc">三组真实 MOS 晶体管级电路，依次是反相器 PMOS 2W、NMOS W；NAND2 两 PMOS 2W 并联、两 NMOS 2W 串联；NOR2 两 PMOS 4W 串联、两 NMOS W 并联。输出均具有接地电容 CL。</desc>
+<style>.wire{stroke:#1d1d1d;stroke-width:2.7;stroke-linejoin:miter;stroke-linecap:square;fill:none}.junction{fill:#1d1d1d}.head{font:700 27px "Noto Sans CJK SC","Microsoft YaHei",sans-serif}.section{font:700 22px "Noto Sans CJK SC","Microsoft YaHei",sans-serif}.pin{font:20px Georgia,"Noto Serif CJK SC",serif}.size{font:italic 21px Georgia,"Noto Serif CJK SC",serif}.note{font:17px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#444}#grid-line{stroke:#bbb;stroke-width:1}</style>
+<rect width="1700" height="745" fill="white"/>
+<defs>
+<g id="nmos3" class="wire"><path d="M0 -25 V25 M-25 -25 V25 M-70 0 H-25 M0 -56 V-25 M0 25 V56"/></g>
+<g id="pmos3" class="wire"><path d="M0 -25 V25 M-25 -25 V25 M-70 0 H-39 M0 -56 V-25 M0 25 V56"/><circle cx="-32" cy="0" r="7" fill="white"/></g>
+</defs>
+<text class="head" x="850" y="46" text-anchor="middle">图 5.2 · 静态 CMOS 门的晶体管尺寸</text>
+<path class="wire" d="M555 105 V678 M1120 105 V678" id="grid-line"/>
+<text class="section" x="270" y="102" text-anchor="middle">(a) CMOS 反相器</text>
+<text class="section" x="820" y="102" text-anchor="middle">(b) NAND2 与非门</text>
+<text class="section" x="1410" y="102" text-anchor="middle">(c) NOR2 或非门</text>
+<text class="pin" x="260" y="138" text-anchor="middle">VDD</text>
+<path class="wire" d="M260 145 V149" id="inv-vdd" data-net="VDD"/>
+<g id="inv-pmos" data-device="pmos3" data-gate="A" data-input="A" data-source="VDD" data-drain="INV_Y" data-body="VDD" data-size="2W"><use href="#pmos3" xlink:href="#pmos3" x="260" y="205"/></g><text class="size" x="287" y="211" >2W</text><text class="pin" x="168" y="212" >A</text>
+<path class="wire" d="M260 261 V389 M260 327 H450" id="inv-output" data-net="INV_Y"/>
+<g id="inv-nmos" data-device="nmos3" data-gate="A" data-input="A" data-source="GND" data-drain="INV_Y" data-body="GND" data-size="W"><use href="#nmos3" xlink:href="#nmos3" x="260" y="445"/></g><text class="size" x="287" y="451" >W</text><text class="pin" x="168" y="452" >A</text>
+<path class="wire" d="M260 501 V560" id="inv-gnd" data-net="GND"/>
+<path class="wire" d="M260 560 V569 M232 569 H288 M242 580 H278 M251 591 H269"/>
+<path class="wire" d="M105 329 H157 V205 H190 M157 329 V445 H190" id="inv-input" data-net="A"/>
+<text class="pin" x="96" y="334" text-anchor="end">A</text>
+<text class="pin" x="460" y="333" >Y</text>
+<g class="wire" data-component="capacitor" data-net="Y"><path d="M398 327 V477 M373 477 H423 M373 493 H423 M398 493 V559"/><path d="M373 559 H423 M381 569 H415 M389 579 H407"/></g><text class="pin" x="432" y="497" >C<tspan baseline-shift='sub' font-size='15'>L</tspan></text>
+<circle class="junction" cx="260" cy="327" r="4"/><circle class="junction" cx="398" cy="327" r="4"/>
+<text class="pin" x="820" y="138" text-anchor="middle">VDD</text>
+<path class="wire" d="M700 149 V145 H920 V149 M820 145 V133" id="nand-vdd" data-net="VDD"/>
+<g id="nand-pmos-a" data-device="pmos3" data-gate="A" data-input="A" data-source="VDD" data-drain="NAND_Y" data-body="VDD" data-size="2W"><use href="#pmos3" xlink:href="#pmos3" x="700" y="205"/></g><text class="size" x="727" y="211" >2W</text><text class="pin" x="608" y="212" >A</text>
+<g id="nand-pmos-b" data-device="pmos3" data-gate="B" data-input="B" data-source="VDD" data-drain="NAND_Y" data-body="VDD" data-size="2W"><use href="#pmos3" xlink:href="#pmos3" x="920" y="205"/></g><text class="size" x="947" y="211" >2W</text><text class="pin" x="828" y="212" >B</text>
+<path class="wire" d="M700 261 V327 H1010 M920 261 V327 M820 327 V364" id="nand-output" data-net="NAND_Y"/>
+<circle class="junction" cx="820" cy="327" r="4"/>
+<text class="pin" x="1030" y="333" >Y</text>
+<g id="nand-nmos-a" data-device="nmos3" data-gate="A" data-input="A" data-source="N1" data-drain="NAND_Y" data-body="GND" data-size="2W"><use href="#nmos3" xlink:href="#nmos3" x="820" y="420"/></g><text class="size" x="847" y="426" >2W</text><text class="pin" x="728" y="427" >A</text>
+<path class="wire" d="M820 476 V489" id="nand-mid" data-net="N1"/>
+<g id="nand-nmos-b" data-device="nmos3" data-gate="B" data-input="B" data-source="GND" data-drain="N1" data-body="GND" data-size="2W"><use href="#nmos3" xlink:href="#nmos3" x="820" y="545"/></g><text class="size" x="847" y="551" >2W</text><text class="pin" x="728" y="552" >B</text>
+<path class="wire" d="M820 601 V638" id="nand-gnd" data-net="GND"/>
+<path class="wire" d="M820 638 V647 M792 647 H848 M802 658 H838 M811 669 H829"/>
+<g class="wire" data-component="capacitor" data-net="Y"><path d="M980 327 V476 M955 476 H1005 M955 492 H1005 M980 492 V615"/><path d="M955 615 H1005 M963 625 H997 M971 635 H989"/></g><text class="pin" x="1014" y="496" >C<tspan baseline-shift='sub' font-size='15'>L</tspan></text>
+<circle class="junction" cx="980" cy="327" r="4"/>
+<text class="pin" x="1400" y="138" text-anchor="middle">VDD</text>
+<path class="wire" d="M1400 145 V149" id="nor-vdd" data-net="VDD"/>
+<g id="nor-pmos-a" data-device="pmos3" data-gate="A" data-input="A" data-source="VDD" data-drain="P1" data-body="VDD" data-size="4W"><use href="#pmos3" xlink:href="#pmos3" x="1400" y="205"/></g><text class="size" x="1427" y="211" >4W</text><text class="pin" x="1308" y="212" >A</text>
+<path class="wire" d="M1400 261 V269" id="nor-mid" data-net="P1"/>
+<g id="nor-pmos-b" data-device="pmos3" data-gate="B" data-input="B" data-source="P1" data-drain="NOR_Y" data-body="VDD" data-size="4W"><use href="#pmos3" xlink:href="#pmos3" x="1400" y="325"/></g><text class="size" x="1427" y="331" >4W</text><text class="pin" x="1308" y="332" >B</text>
+<path class="wire" d="M1400 381 V428 H1610 M1300 428 H1490 M1300 428 V454 M1490 428 V454" id="nor-output" data-net="NOR_Y"/>
+<circle class="junction" cx="1400" cy="428" r="4"/>
+<text class="pin" x="1622" y="433" >Y</text>
+<g id="nor-nmos-a" data-device="nmos3" data-gate="A" data-input="A" data-source="GND" data-drain="NOR_Y" data-body="GND" data-size="W"><use href="#nmos3" xlink:href="#nmos3" x="1300" y="510"/></g><text class="size" x="1327" y="516" >W</text><text class="pin" x="1208" y="517" >A</text>
+<g id="nor-nmos-b" data-device="nmos3" data-gate="B" data-input="B" data-source="GND" data-drain="NOR_Y" data-body="GND" data-size="W"><use href="#nmos3" xlink:href="#nmos3" x="1490" y="510"/></g><text class="size" x="1517" y="516" >W</text><text class="pin" x="1398" y="517" >B</text>
+<path class="wire" d="M1300 566 V620 H1490 V566 M1400 620 V633" id="nor-gnd" data-net="GND"/>
+<path class="wire" d="M1400 633 V642 M1372 642 H1428 M1382 653 H1418 M1391 664 H1409"/>
+<g class="wire" data-component="capacitor" data-net="Y"><path d="M1576 428 V514 M1551 514 H1601 M1551 530 H1601 M1576 530 V618"/><path d="M1551 618 H1601 M1559 628 H1593 M1567 638 H1585"/></g><text class="pin" x="1610" y="534" >C<tspan baseline-shift='sub' font-size='15'>L</tspan></text>
+<circle class="junction" cx="1576" cy="428" r="4"/>
+<text class="note" x="850" y="716" text-anchor="middle">本图参照教材图 5.2（印刷第 151 页）重绘；尺寸以反相器 PMOS/NMOS＝2W/W 为参考。</text>
+</svg>
