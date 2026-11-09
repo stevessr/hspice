@@ -36,4 +36,8 @@ assert math.isclose(1.76/.44,4.0)
 # NOR SR forbids both inputs high; NAND SR forbids both low.
 fig=(ROOT/"figures/ch5-complex-sequential-native.typ").read_text(encoding="utf-8")
 assert "S=R=1禁止" in fig and "输入同时为0禁止" in fig
+# Device-level transistor source must not collapse back to labeled PUN/PDN placeholders.
+assert "example53()" in (W/"157-page-180.typ").read_text(encoding="utf-8")
+fig=(ROOT/"figures/ch5-complex-sequential-native.typ").read_text(encoding="utf-8")
+assert all(t in fig for t in ("#let vmos(","#let example53()=","#let xor-panel(","p:true"))
 print("Ch5 pages177–186: NAND VTC, AOI, XOR, MUX, SR and formula5.6 review OK")
