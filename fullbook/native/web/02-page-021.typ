@@ -2,10 +2,12 @@
 // Source-scan reconstructed original sequence: tradeoffs, MOS, CAD and SSI/MSI.
 // Editorial transcription; full text/glyph/line-spacing 1:1 still unverified.
 #set document(title:"第1章 · 绪论与集成电路产业历史开端 · PDF021")
-#set text(lang:"zh",size:7.45pt)
-#set par(justify:true,leading:2.2pt,spacing:4.4pt)
-#align(center)[#text(size:8pt,weight:"bold")[2　数字集成电路分析与设计——深亚微米工艺（第三版）]]
-#line(length:100%,stroke:.55pt)
+#set text(lang:"zh",size:9.4pt)
+#set par(justify:true,first-line-indent:1.8em,leading:4pt,spacing:3pt)
+#grid(columns:(44pt,1fr,44pt), [#text(size:10pt)[2]], [#align(center)[#text(size:9.5pt)[数字集成电路分析与设计——深亚微米工艺（第三版）]]], [])
+#line(length:100%,stroke:.7pt)
+#v(7pt)
+#par(first-line-indent:0pt)[间进行适当的平衡　折中通常是必须加以考虑的，并且需要对可选择方案进行评估。因此，对上面提到的各种专业人士而言，具有一定的相关领域的知识是很重要的。]
 
 电路设计工程师的任务是设计能够实现所需逻辑功能的晶体管电路。制造时，操作的高可靠性和成本与性能（如时序、功耗和面积）之间的适当平衡十分重要。同样，设计要求当出现工艺变化、电源波动和环境条件改变时也能正确操作。随后的各章将深入讨论影响这些特性的微电子设计问题。设计中需要特别关注的是集成电路的时序和功耗之间的折中，因为当今的设计不是高速的就是低功耗的。
 
@@ -13,11 +15,12 @@
 
 为了比较不同的电路类型（比如 NMOS 和 CMOS）之间的相关特征，需要对集成电路制造工艺有一定的理解。理解制造工艺的发展趋势对产品设计的改进是很重要的。进而，现代电路的设计需要很好地理解工艺中的统计变化。制造工艺和晶体管的结构在过去的 10 年中发生了不少变化，我们将进行探讨。虽然本书的目的不是要详细描述 IC 制造工艺，但为了理解 MOS 电路的版图和用模拟工具对这些电路进行分析时的重要参数来源，需要介绍当前所使用的基本工艺步骤。
 
-计算机辅助设计（CAD，computer-aided design）工具在数字集成电路的设计和分析中是必不可少的。我们将研究工业界中运用的具有代表性的工具类型，但主要集中于对单元库特性和定制 IC 设计极为重要的电路模拟方面。用于详细电路分析的主要工具是 SPICE。我们将花些时间来理解用于手工分析的 MOS 模型，并将其结果与电路模拟的结果进行比较，以验证手工分析的准确性。实际上，我们需要的模型不仅要能够适用于手工分析，而且还要能够精确地揭示实际电路操作的情况。详细的电路模拟可以检查第二级问题，并定位其他的第一级问题，如工艺、温度和电源变化等。
+计算机辅助设计（CAD，computer-aided design）工具在数字集成电路的设计和分析中是必不可少的。我们将研究工业界中运用的具有代表性的工具类型，但主要集中于对单元库特性和定制 IC 设计极为重要的电路模拟方面。用于详细电路分析的主要工具是 SPICE#super[①]。我们将花些时间来理解用于手工分析的 MOS 模型，并将其结果与电路模拟的结果进行比较，以验证手工分析的准确性。实际上，我们需要的模型不仅要能够适用于手工分析，而且还要足够精确以揭示实际电路操作的情况。详细的电路模拟可以检查第二级问题，并定位其他的第一级问题，如工艺、温度和电源变化等。
 
 == 1.2　集成电路产业的简要历史
 
-IC 产业开始于 20 世纪 60 年代末到 20 世纪 70 年代初的十微米（ten micron technology）工艺。这个工艺节点由能在芯片上印制的最小几何图形确定。我们把那个时代设计的电路称为小规模集成电路（SSI，small-scale integration）和中规模集成电路（MSI，medium-scale integration），这意味着在单块芯片上仅能集成几个门或者几百个门。大约每隔 3 年，工艺尺寸就会按比例缩小。
+IC 产业开始于 20 世纪 60 年代末到 20 世纪 70 年代初的十微米（ten micron technology）工艺。这个工艺节点由能在芯片上印制的最小几何图形确定。我们把那个时代设计的电路称为小规模集成电路（SSI，small-scale integration）和中规模集成电路（MSI，medium-scale integration），这意味着在单块芯片上仅能集成几个门或者几百个门。大约每隔 3 年，工艺尺寸就会按 $s$ 因子等比例地缩小。
 
-#v(4pt)
-#text(size:6.3pt)[① SPICE 是 Simulation Program with Integrated Circuit Emphasis 的首字母缩略词，最初由加利福尼亚大学伯克利分校在 20 世纪 70 年代发展起来。]
+#v(5pt)
+#line(length:34%,stroke:.45pt)
+#text(size:7pt)[① SPICE 是 Simulation Program with Integrated Circuit Emphasis 的首字母缩略词，最初是由加利福尼亚大学伯克利分校在 20 世纪 70 年代发展起来的。]

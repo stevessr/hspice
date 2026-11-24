@@ -347,24 +347,41 @@
     {
       "pdf_page": 20,
       "status": "partially-transcribed",
-      "proofread_round": "2026-11-05-pass2",
+      "proofread_round": "2026-11-24-ch1-source-reflow",
       "editorial_typst_draft": true,
-      "text_checked_against_scan": false,
+      "text_checked_against_scan": true,
       "formulas_checked_against_scan": false,
       "native_tables_checked": true,
       "layout_verified": false,
       "figures_verified": false,
-      "notes": "第1章标题、提要、1.1节开头与脚注已有部分人工转写；未完成整页核对。"
+      "notes": "恢复提要星标、脚注引用和跨页末行；依据扫描版心调整章首位置。 尚未进行逐字符和渲染叠图验收。",
+      "source_file": "web/01-page-020.typ",
+      "source_scan_landmarks_checked": true,
+      "human_verified": false
     },
     {
       "pdf_page": 21,
-      "status": "partially-transcribed"
+      "status": "partially-transcribed",
+      "proofread_round": "2026-11-24-ch1-source-reflow",
+      "source_file": "web/02-page-021.typ",
+      "editorial_typst_draft": true,
+      "source_scan_landmarks_checked": true,
+      "text_checked_against_scan": true,
+      "human_verified": false,
+      "layout_verified": false,
+      "notes": "恢复跨页起句、s 缩放因子及 SPICE 脚注；调整页眉、版心和字号。 尚未进行逐字符和渲染叠图验收。"
     },
     {
       "pdf_page": 22,
       "status": "partially-transcribed",
-      "source_file": "editorial/sample-history-timing.typ",
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending."
+      "source_file": "web/03-page-022.typ",
+      "notes": "纠正二次镶嵌、处理能力及集成数量表述；调整页眉与版心。 尚未进行逐字符和渲染叠图验收。",
+      "proofread_round": "2026-11-24-ch1-source-reflow",
+      "editorial_typst_draft": true,
+      "source_scan_landmarks_checked": true,
+      "text_checked_against_scan": true,
+      "human_verified": false,
+      "layout_verified": false
     },
     {
       "pdf_page": 23,

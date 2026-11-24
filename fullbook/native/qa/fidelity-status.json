@@ -445,13 +445,16 @@
         "layout_compared": false,
         "typst_html_compiled": false
       },
-      "evidence": {},
+      "evidence": {
+        "reference_scan_sha256": "9034121a83821b506887a937c6d4c31af1e89e06ad4ee81822248fdd2a529643",
+        "scan_method": "PyMuPDF 2x RGB PNG; visual source inspection 2026-11-24"
+      },
       "unresolved": [
-        "完整正文未逐字验收",
-        "公式、表格与图注尚待逐元素核验",
-        "版面、页眉与脚注尚未完整复刻"
+        "独立逐字符、标点和字形复核",
+        "源扫描与 Typst 实际渲染叠图、行距及版面比对",
+        "严格全页验收尚未完成"
       ],
-      "notes": "第1章标题、提要、1.1节开头与脚注已有部分人工转写；未完成整页核对。",
+      "notes": "恢复提要星标、脚注引用和跨页末行；依据扫描版心调整章首位置。",
       "page_source_verified": false
     },
     {
@@ -467,13 +470,16 @@
         "layout_compared": false,
         "typst_html_compiled": false
       },
-      "evidence": {},
+      "evidence": {
+        "reference_scan_sha256": "bfcc59fc09311e930d66d1b6a22c81bc98533a11f551d1f92c196022448f74f7",
+        "scan_method": "PyMuPDF 2x RGB PNG; visual source inspection 2026-11-24"
+      },
       "unresolved": [
-        "完整正文未逐字验收",
-        "公式、表格与图注尚待逐元素核验",
-        "版面、页眉与脚注尚未完整复刻"
+        "独立逐字符、标点和字形复核",
+        "源扫描与 Typst 实际渲染叠图、行距及版面比对",
+        "严格全页验收尚未完成"
       ],
-      "notes": "已有可编辑原生Typst章节选段；未完成所有原文、图示及版式的逐页验收",
+      "notes": "恢复跨页起句、s 缩放因子及 SPICE 脚注；调整页眉、版心和字号。",
       "page_source_verified": false
     },
     {
@@ -489,13 +495,16 @@
         "layout_compared": false,
         "typst_html_compiled": false
       },
-      "evidence": {},
+      "evidence": {
+        "reference_scan_sha256": "bbeb7e6fafe4bec4ef9fc562e4713b7e5ce1e7b5869d675b8046b832b05a3c94",
+        "scan_method": "PyMuPDF 2x RGB PNG; visual source inspection 2026-11-24"
+      },
       "unresolved": [
-        "完整正文未逐字验收",
-        "公式、表格与图注尚待逐元素核验",
-        "版面、页眉与脚注尚未完整复刻"
+        "独立逐字符、标点和字形复核",
+        "源扫描与 Typst 实际渲染叠图、行距及版面比对",
+        "严格全页验收尚未完成"
       ],
-      "notes": "Edit-ready sample/excerpts are present; complete verbatim page transcription and full visual QA are still pending.",
+      "notes": "纠正二次镶嵌、处理能力及集成数量表述；调整页眉与版心。",
       "page_source_verified": false
     },
     {
