@@ -34,4 +34,17 @@ fig=(root/"figures/ch10-inductance-antenna-native.typ").read_text(encoding="utf-
 assert all(f"#let fig10{i}()" in fig for i in range(20,29))
 assert data["reference_values"]["activity_factors"]==[0,1,2]
 assert math.isclose(data["reference_values"]["interconnect_inductance_pH_per_um"],.45)
+# Primary-source second pass: setup/hold derating, RLC response, current returns, antenna layering.
+for n,words in {
+  373:("建立时间","保持时间"),
+  374:("SPICE 瞬态分析",),
+  376:('exp(-t/(R C))',"衰减振铃"),
+  377:("time of flight","10.24"),
+  378:("闭合电流回路","返回电流"),
+  379:("逐层制造顺序",),
+  380:("制造时刻","跨层跳线"),
+}.items():
+  source=(root/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+  assert all(x in source for x in words),(n,words)
+
 print("Pass20 source-guided PDF373–380 landmarks, equations, editable figures and status passed; complete 1:1 0/445.")
