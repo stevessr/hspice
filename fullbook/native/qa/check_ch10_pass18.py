@@ -94,3 +94,6 @@ assert round(first_moment_s * 1e9, 1) == y["elmore_ns"]
 assert math.isclose(x["wire_ohm"] * 1e-3, .0054)
 assert round(6.25*3.2+(6.25+x["wire_ohm"]*1e-3)*11.6, 1)==x["with_R_ps"]
 print("Pass18 SI-unit and rounding regression passed; existing 445-page coverage retained.")
+
+example362=(r/"web/339-page-362.typ").read_text(encoding="utf-8")
+assert all(v in example362 for v in ('125 " Ω"', '1080 " Ω"', '1 " pF"', '1.3 " ns"'))

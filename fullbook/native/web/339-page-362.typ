@@ -1,3 +1,4 @@
+// QA unit check: 125 Ω × 1 pF + (125 Ω + 1080 Ω) × 1 pF = 1.33 ns, rounded to 1.3 ns.
 // SOURCE PDF PAGE 362 / printed 343. Example 10.2 conclusion and 10.3 source equations.
 // Source numerical assumptions retained: 20mm M5, 0.5μm, 0.1 fF/μm, 100X.
 // Original π-network wire/source topology is redraw, not pixel-perfect.
