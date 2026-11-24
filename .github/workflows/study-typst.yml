@@ -68,6 +68,9 @@ jobs:
         uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.14.0
+        continue-on-error: true
+      - name: Ensure Typst 0.14.2 via official OCI fallback
+        run: bash .github/scripts/ensure-typst.sh 0.14.2
 
       - name: Rasterize SVG figures for print (VitePress retains SVG)
         if: steps.pdf-cache.outputs.cache-hit != 'true'

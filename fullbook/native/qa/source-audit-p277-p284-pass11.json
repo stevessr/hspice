@@ -154,5 +154,6 @@
         "match captions, figure labels, font metrics, source page placement"
       ]
     }
-  ]
+  ],
+  "reconciliation_note": "Historical audit from original PR; retain as provenance alongside the newer main scan audit. No new scan rendering or strict fidelity verification performed during branch reconciliation."
 }

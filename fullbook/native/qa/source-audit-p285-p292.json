@@ -1,0 +1,73 @@
+{
+  "schema": "ch7-exercises-ch8-p285-p292-pass12",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    285,
+    292
+  ],
+  "pages": [
+    {
+      "pdf_page": 285,
+      "rendered_source_sha256": "2472eb8a0e0ff3e26ce8ed34ba599e1cbc40cdb65639dea8bb9d611e346c5643",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "landmarks": "7.6, 7.7, 7.8, 图P7.1"
+    },
+    {
+      "pdf_page": 286,
+      "rendered_source_sha256": "5775d7ad9ae16e00e51af6f754098cab2e6521deef692150f0e523506829497e",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "landmarks": "图P7.2, P7.3a"
+    },
+    {
+      "pdf_page": 287,
+      "rendered_source_sha256": "c427ce48dcd23ac9f8b4343cd4ea524f13d6068e05542e3e2e3a8437a44b2301",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "landmarks": "P7.3b, P7.4–P7.7, 图P7.5"
+    },
+    {
+      "pdf_page": 288,
+      "rendered_source_sha256": "6ae82490dd4806d5c7b6513c01ee0b88c1e3dc62c5b0edfcb8750928fdf025c7",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "landmarks": "图P7.7/P7.8, P7.8–P7.9"
+    },
+    {
+      "pdf_page": 289,
+      "rendered_source_sha256": "5eb10aabdc10821cd6da60fdb82c373726087b4f163d696af3e9849fe316deaa",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "landmarks": "图P7.9/P7.10, P7.10/P7.11"
+    },
+    {
+      "pdf_page": 290,
+      "rendered_source_sha256": "ee3f31335c2cf8b6ccdff7c01ab73d8880425ea825c58158fbd746f94200ec32",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "landmarks": "图P7.11/P7.13, P7.12–P7.15"
+    },
+    {
+      "pdf_page": 291,
+      "rendered_source_sha256": "c95cb95069d93eaefb8add0500576674a49aef628662ca70e3b4eb44a1e36738",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "landmarks": "图P7.14/P7.15"
+    },
+    {
+      "pdf_page": 292,
+      "rendered_source_sha256": "997ae61e8f9c97aaca27a361e856b42f9a8ec591d60d77b3b1dda13d2c4a5a9e",
+      "editable_typst_draft": true,
+      "full_page_accepted": false,
+      "landmarks": "第8章章首、8.1、SRAM DRAM ROM"
+    }
+  ],
+  "limitations": [
+    "原始照片之外，尚未执行OCR独立交叉核验、逐行/逐图/逐页接受",
+    "部分复杂习题布尔式因多重反相，保留为待核对项",
+    "所有练习网络图元是原生Typst草图，不是精确晶体管连接复刻"
+  ],
+  "strict_full_pages_accepted": 0
+}

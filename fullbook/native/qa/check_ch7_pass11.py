@@ -1,46 +1,56 @@
 #!/usr/bin/env python3
-"""Ensure PDF277–284 source math and native diagrams without falsely accepting 1:1."""
+"""Pass11 scan-backed editable chapter 7 source/text/math/figure checks, not strict 1:1."""
 from pathlib import Path
-import math
-import json
+import json,math
 root=Path(__file__).resolve().parents[1]
-ledger=json.loads((root/"qa/source-audit-p277-p284-pass11.json").read_text(encoding="utf-8"))
-status=json.loads((root/"page-status.json").read_text(encoding="utf-8"))["pages"]
-fidelity=json.loads((root/"qa/fidelity-status.json").read_text(encoding="utf-8"))["pages"]
-assert ledger["source_pdf_pages"]==445 and ledger["scope"]==[277,284]
-assert ledger["strict_full_page_accepted"]==0 and len(ledger["pages"])==8
-tokens={
-277:("图7.27","图7.28","fig727","fig728","多米诺"),
-278:("例7.7","fig-example77","Sum","overline","偏斜"),
-279:("7.5.1","7.5.2","图7.29","fig729","5/3","2/3","0.8"),
-280:("图7.30","图7.31","fig730","电荷共享","保持器","C_(\"out\")"),
-281:("例7.8","图7.31","fig731","fig-example78","C_(\"GD\")"),
-282:("7.5.3","图7.32","fig732","0.8","0.17","5 \" fF\"","1.08","0.73"),
-283:("图7.33","图7.34","例7.9","fig733","fig734"),
-284:("7.5.4","图7.35","fig735","自复位","后充")
+a=json.loads((root/"qa/source-audit-p277-p284.json").read_text(encoding="utf-8"))
+s=json.loads((root/"page-status.json").read_text(encoding="utf-8"))["pages"]
+f=json.loads((root/"qa/fidelity-status.json").read_text(encoding="utf-8"))["pages"]
+assert a["source_pdf_pages"]==445 and a["scope"]==[277,284]
+assert len(a["pages"])==8 and a["strict_full_pages_accepted"]==0
+required={
+ 277:("图7.27","图7.28","fig727","fig728","多米诺"),
+ 278:("例7.7","fig-example77","xor","sum","overline"),
+ 279:("7.5.1","7.5.2","图7.29","fig729","5/3","2/3","0.8"),
+ 280:("图7.30","fig730","V^","C_x","保持器"),
+ 281:("图7.31","例7.8","fig731","fig-example78","A B+C"),
+ 282:("7.5.3","图7.32","fig732","0.8","5.42","1.08"),
+ 283:("图7.33","图7.34","例7.9","fig733","fig734"),
+ 284:("7.5.4","图7.35","fig735","fig-example79","自复位")
 }
-for n,expected in tokens.items():
- bodyfile=root/"web"/f"{n-23}-page-{n:03d}.typ"
- layout=root/"web"/f"{n-23}-page-{n:03d}-layout.typ"
- body=bodyfile.read_text(encoding="utf-8")
- missing=[t for t in expected if t not in body]
- assert not missing,(n,missing)
- assert "#image(" not in body and "#image(" not in layout.read_text(encoding="utf-8")
- assert f'#include "{bodyfile.name}"' in layout.read_text(encoding="utf-8")
- assert status[n-1]["pdf_page"]==fidelity[n-1]["pdf_page"]==n
- assert status[n-1]["status"]==fidelity[n-1]["editorial_state"]=="partially-transcribed"
- assert not status[n-1]["human_verified"] and not status[n-1]["layout_verified"]
- assert not fidelity[n-1]["page_source_verified"]
- assert not all(fidelity[n-1]["checks"].values())
- assert not ledger["pages"][n-277]["strictly_accepted"]
-diagram=(root/"figures/ch7-domino-advanced-native.typ").read_text(encoding="utf-8")
-for name in ("fig727","fig728","fig-example77","fig729","fig730","fig731","fig-example78","fig732","fig733","fig734","fig735"):
- assert "#let "+name+"(" in diagram
-discrepancy=ledger["known_source_arithmetic_discrepancy"][0]
-assert discrepancy["pdf_page"]==282
+for n,words in required.items():
+ assert a["pages"][n-277]["pdf_page"]==n
+ assert len(a["pages"][n-277]["rendered_png_sha256"])==64
+ body=(root/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+ layout=(root/"web"/f"{n-23}-page-{n}-layout.typ").read_text(encoding="utf-8")
+ assert all(x in body for x in words),(n,[x for x in words if x not in body])
+ assert f'#include "{n-23}-page-{n}.typ"' in layout
+ assert "#image(" not in body
+ assert s[n-1]["status"]==f[n-1]["editorial_state"]=="partially-transcribed"
+ assert not s[n-1]["human_verified"] and not s[n-1]["layout_verified"]
+ assert not f[n-1]["page_source_verified"]
+ assert not all(f[n-1]["checks"].values())
+ assert not a["pages"][n-277]["full_page_accepted"]
+fig=(root/"figures/ch7-domino-continuation-native.typ").read_text(encoding="utf-8")
+for name in ("fig727","fig728","fig-example77","fig729","fig730","fig731","fig-example78","fig732","fig733","fig734","fig-example79","fig735"):
+ assert f"#let {name}(" in fig
+assert math.isclose(20/12,5/3)
+assert math.isclose(8/12,2/3)
+assert math.isclose(math.sqrt(2/3),0.816496580927726)
+assert math.isclose(0.8*1.2/(0.8+5),0.17,abs_tol=0.005)
+q=5*1.2-0.8*0.73
+assert math.isclose(q,5.42,abs_tol=0.005)
+assert math.isclose(q/5,1.08,abs_tol=0.005)
+print("Pass11: PDF277–284 editable native landmarks and source math checked; strict full pages 0/445")
+
+
+# Preserve the earlier source audit's reported arithmetic discrepancy, not a new scan claim.
+legacy=json.loads((root/"qa/source-audit-p277-p284-pass11.json").read_text(encoding="utf-8"))
+assert legacy["source_pdf_sha256"]==a["source_pdf_sha256"]
+assert legacy["scope"]==[277,284] and legacy["strict_full_page_accepted"]==0
+issue,=legacy["known_source_arithmetic_discrepancy"]
+assert issue["pdf_page"]==282 and issue["printed_result"]=="5 fF"
 assert math.isclose(1*40*.05+2*12*.05,3.2)
-assert discrepancy["printed_result"]=="5 fF"
-assert math.isclose((.8*1.2)/(.8+5),.1655172414,rel_tol=1e-7)
-assert math.isclose((5*1.2-.8*.73)/5,1.0832)
-assert (root/"web/259-page-282.typ").read_text(encoding="utf-8").count("5 \" fF\"")>=2
-print("PDF277–284 source landmarks and math discrepancies recorded; 0 strict pages accepted.")
+assert issue["direct_arithmetic"]=="3.2 fF"
+assert "3.2" in (root/"web/259-page-282.typ").read_text(encoding="utf-8")
+print("Pass11 historical source arithmetic discrepancy and downstream printed values retained.")

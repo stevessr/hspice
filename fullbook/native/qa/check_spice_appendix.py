@@ -1,0 +1,196 @@
+#!/usr/bin/env python3
+"""Check scan-guided editable appendices without conflating selections with full-page acceptance."""
+from pathlib import Path
+import json
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+WEB = ROOT / "web"
+START, END = 419, 445
+DATA = json.loads((ROOT / "page-status.json").read_text(encoding="utf-8"))
+assert DATA["source_pdf_pages"] == len(DATA["pages"]) == 445
+
+EXPECTED = {
+    419: ("A.1", "A.2"),
+    420: (".param Supply=1.8", ".tran 50ps 5ns", "Cload 3 0 10fF"),
+    421: (".opt scale=0.1u", ".plot tran v(3)"),
+    422: (".param Supply=1.8", ".opt scale=0.1um", "Mn 3 2 0 0 nmos"),
+    423: ("Vxxx", "Ixxx", "Rxxx", "Cxxx", "Lxxx", "Mxxx", "Dxxx"),
+    424: ("10^9", "10^6", "10^(-3)", "10^(-15)", "Meg"),
+    425: ("Mn 2 3 0 0 nmos", "Vsupply 5 0 15"),
+    426: ("PULSE", "PWL", "2ns 4ns 3ns 20ns 50ns"),
+    427: ("R7", "17Megohms", "Cin", "Lbig", "MOSFET"),
+    428: (".tran tstep tstop", "PMOS", "NMOS"),
+    429: (".tran 1m 10m", ".dc var1 start stop step"),
+    430: (".dc V1 0 10 1", "Vdrain", ".plot dc V(5)", ".print tran V(5)"),
+    431: (".ic V(5)=1.8 V(7)=0", "uic", "IV Characteristic of NMOS"),
+    432: ("图 A.12", "图 A.13", ".plot tran V(3)"),
+    433: ("B.1", "B.12", "双极结型晶体管"),
+    434: ("图 B.1", "图 B.2", "beta_F"),
+    435: ("(B.1)", "(B.2)", "tau_F"),
+    436: ("(B.3)", "(B.4.1a)", "肖特基"),
+    437: ("(B.4.1b)", "(B.4.5)", "integral"),
+    438: ("B.5", "V_(\"CC\")", "V_(\"CE\")"),
+    439: ("(B.5.1)", "(B.5.4)", "beta_F"),
+    440: ("(B.5.5)", "肖特基", "0.4"),
+    441: ("B.7", "B.8", "TTL"),
+    442: ("图 B.7", "B.9", "1.6 kΩ"),
+    443: ("BP1", "BP2", "BP3", "B.10"),
+    444: ("B.11", "B.12", "54/74 TTL", "10 ns"),
+    445: ("ISBN", "7-121-01666-4", "本书特点"),
+}
+# Correct spelling should not relapse to obvious machine-OCR confusions.
+BAD_TOKENS = ("MACHINE-OCR DRAFT ONLY", "pnos ", "W-0.4u", ".Eran ", "Vgatee ")
+for n in range(START, END + 1):
+    entry = DATA["pages"][n - 1]
+    assert entry["pdf_page"] == n, (n, "page mapping")
+    assert entry["status"] == "draft-transcribed", (n, entry["status"])
+    assert entry["editorial_typst_draft"] is True, n
+    assert entry["source_scan_landmarks_checked"] is True, n
+    assert entry["human_verified"] is False and entry["layout_verified"] is False, n
+    assert entry["figures_verified"] is False, n
+    stem = f"{n - 23:02d}-page-{n:03d}"
+    source = WEB / f"{stem}.typ"
+    assert entry["source_file"] == f"web/{stem}.typ", (n, entry["source_file"])
+    text = source.read_text(encoding="utf-8")
+    assert f"SOURCE PDF PAGE {n}" in text[:120], n
+    assert "#set document" in text, n
+    assert all(token in text for token in EXPECTED[n]), (n, "missing source-checked token")
+    assert not any(token in text for token in BAD_TOKENS), (n, "OCR corruption")
+    assert not re.search(r"#image\([^)]*page-\d{3}\.(?:png|jpg)", text), n
+    layout = WEB / f"{stem}-layout.typ"
+    assert layout.is_file() and f'#include "{stem}.typ"' in layout.read_text(encoding="utf-8"), n
+
+
+# Figures A.1–A.13 must be *embedded in their source pages* as editable Typst,
+# not merely referenced in a caption or shipped as unused source files.
+DRAWINGS = {
+    420: ("spice-flow", "cmos-inverter"),
+    424: ("a3-resistor", "a4-mos"),
+    425: ("a5-sources",),
+    426: ("a6-pulse",),
+    427: ("a7-rlc",),
+    428: ("a8-pass-gate", "a9-rc-step"),
+    429: ("a10-divider",),
+    430: ("a11-nmos-curves",),
+    432: ("a11-nmos-curves", "a13-transient"),
+}
+figure_file = ROOT / "figures" / "appendix-a-native.typ"
+figure_source = figure_file.read_text(encoding="utf-8")
+assert "html.frame" in figure_source
+assert "#image(" not in figure_source, "Figure panels cannot be flattened scan images"
+for page_number, names in DRAWINGS.items():
+    stem = f"{page_number - 23:02d}-page-{page_number:03d}"
+    page_source = (WEB / f"{stem}.typ").read_text(encoding="utf-8")
+    assert '#import "../figures/appendix-a-native.typ": *' in page_source, page_number
+    for name in names:
+        assert f"#let {name}(" in figure_source, (page_number, name)
+        assert f"#{name}()" in page_source, (page_number, name)
+assert len(DRAWINGS) == 9
+# Original source PDF430/432 uses *five* gate-bias DC values but *three*
+# visible conducting curves; the remaining two traces are near zero current.
+a11=figure_source.split("#let a11-nmos-curves()",1)[1].split("#let a13-transient()",1)[0]
+a13=figure_source.split("#let a13-transient()",1)[1]
+assert a11.count("curve.move((0pt,0pt))")==3, "A.11/A.12: three conducting curves"
+assert all(tok in a11 for tok in ("0.9","1.35","1.8",'V_("gate")','V_("drain")',
+                                  "circle(radius:11pt","NMOS"))
+assert all(tok in a13 for tok in ("Mp","Mn","10 fF",'V_("out")',"curve.cubic",
+                                  "CMOS",'V_("in")'))
+assert a13.count("curve.cubic(")>=5
+for number in (430,432):
+    src=(WEB/f"{number-23}-page-{number:03d}.typ").read_text(encoding="utf-8")
+    assert all(x in src for x in ("0.45","0.90","1.35","1.80")),number
+assert "三条非零" in (WEB/"409-page-432.typ").read_text(encoding="utf-8")
+# Fig A.7-A.10 visual topologies are traceable to the scan (PDF427-429).
+# These are structural tests only; successful tests do not accept a full page.
+for name in ("a7-rlc","a8-pass-gate","a9-rc-step","a10-divider"):
+    assert "#let "+name+"()" in figure_source
+a7=figure_source.split("#let a7-rlc()",1)[1].split("#let a8-pass-gate()",1)[0]
+a8=figure_source.split("#let a8-pass-gate()",1)[1].split("#let a9-rc-step()",1)[0]
+a9=figure_source.split("#let a9-rc-step()",1)[1].split("#let a10-divider()",1)[0]
+a10=figure_source.split("#let a10-divider()",1)[1].split("#let a11-nmos-curves()",1)[0]
+assert a7.count("curve.cubic(")>=4, "A.7 must have four editable coil loops"
+assert a7.count("#s(")>=11 and "#r(" not in a7, "A.7 must use a zigzag resistor"
+assert all(s in a7 for s in ("17 Meg","1.5 fF","0.7 mH"))
+assert all(s in a8 for s in ("图 A.8","circle(radius:3pt","[1]","[0]","[2]","[3]"))
+assert all(s in a9 for s in ("1k","1μF","10 V","circle(radius:12pt","curve.cubic"))
+assert a9.count("#s(")>=13, "A.9 requires both a resistor and capacitor"
+assert all(s in a10 for s in ('R_1','R_2','V_("source")','V_r','10'))
+assert a10.count("#s(")>=15 and "#r(" not in a10, "A.10 must show two zigzag resistors"
+s427=(WEB/"404-page-427.typ").read_text(encoding="utf-8")
+for token in ("resistanceval","capacitanceval","inductanceval",
+              "Rxxx","Cxxx","Lxxx","R7   1 2 17Megohms","Cin  2 3 1.5fF","Lbig 3 4 .7mH"):
+    assert token in s427, ("PDF427",token)
+# PDF424 Table A.2 must retain both printed forms (unit and E-notation),
+# and source figures A.3–A.5 must be circuits, not unrelated placeholder boxes.
+table_a2=(WEB/"401-page-424.typ").read_text(encoding="utf-8")
+for token in ("4.2 GHz", "4.2E9", ".2 Meg", ".2 E6", "27 kohms",
+              "273 mA", ".02 us", "4 ns", "95 pF", "3 fF", "2E-16P"):
+    assert token in table_a2, ("A.2", token)
+for factor, suffix in (("10^9","G"),("10^6","Meg"),("10^3","K"),
+                       ("10^(-3)","M"),("10^(-6)","U"),("10^(-9)","N"),
+                       ("10^(-12)","P"),("10^(-15)","F")):
+    assert factor in table_a2 and suffix in table_a2
+resistor=figure_source.split("#let a3-resistor()",1)[1].split("#let a4-mos()",1)[0]
+mos=figure_source.split("#let a4-mos()",1)[1].split("#let a5-sources()",1)[0]
+sources=figure_source.split("#let a5-sources()",1)[1].split("#let a6-pulse()",1)[0]
+assert resistor.count("#s(")>=7 and "#r(" not in resistor, "A.3 zigzag, not rectangle"
+assert "0/S" not in mos and "0/B" not in mos, "A.4 source/body must use distinct ground symbols"
+assert mos.count("#s(")>=10 and "3" in mos and "2" in mos
+assert "15 V" in sources and "12 A" in sources and "polygon" in sources
+s425=(WEB/"402-page-425.typ").read_text(encoding="utf-8")
+for token in ("0.2", "0.4", "Icc", "源区与漏区", "12 A"):
+    assert token in s425, ("PDF425", token)
+print("Appendix A native diagram integration: 9 scanned pages, 12 drawing functions.")
+
+
+# Appendix B device/transport/schottky/TTL topology is likewise native.
+B_DRAWINGS = {
+    434: ("b1-npn-section", "b2-minority-carriers"),
+    436: ("b3-schottky-section",),
+    440: ("b6-schottky-clamp",),
+    442: ("b7-ttl-nand",),
+}
+b_source = (ROOT / "figures" / "appendix-b-additional-native.typ").read_text(encoding="utf-8")
+assert "html.frame" in b_source and "#image(" not in b_source
+for number, names in B_DRAWINGS.items():
+    stem = f"{number - 23:02d}-page-{number:03d}"
+    text = (WEB / f"{stem}.typ").read_text(encoding="utf-8")
+    assert '#import "../figures/appendix-b-additional-native.typ": *' in text, number
+    for name in names:
+        assert f"#let {name}(" in b_source
+        assert f"#{name}()" in text
+print("Appendix B native diagrams embedded on PDF 434, 436, 440, 442.")
+
+
+# Back-cover PDF 445 ISBN is source-checked, and its native bar geometry
+# must encode the *actual* EAN-13 value, not a decorative approximation.
+back = (WEB / "422-page-445.typ").read_text(encoding="utf-8")
+assert "SOURCE PDF PAGE 445" in back[:100] and "9787121016660" in back
+assert "48.00 元" in back and "Resve A. Saleh" in back
+assert "#let isbn-bars()" in back and "html.frame" in back
+assert "#image(" not in back
+match = re.search(r"#for \(pos, count\) in \((.*?)\)\s*\[", back, re.S)
+assert match, "editable EAN bar runs not found"
+runs = [(int(x), int(y)) for x, y in re.findall(r"\((\d+),\s*(\d+)\)", match.group(1))]
+assert len(runs) == 30, len(runs)
+bars = ["0"] * 95
+for offset, length in runs:
+    assert 0 <= offset < 95 and length > 0 and offset + length <= 95
+    assert not any(bit == "1" for bit in bars[offset:offset+length]), offset
+    bars[offset:offset+length] = ["1"] * length
+ean = "9787121016660"
+assert (10 - (sum(int(ean[i]) * (1 if i % 2 == 0 else 3) for i in range(12)) % 10)) % 10 == int(ean[-1])
+L = ("0001101", "0011001", "0010011", "0111101", "0100011", "0110001",
+     "0101111", "0111011", "0110111", "0001011")
+G = ("0100111", "0110011", "0011011", "0100001", "0011101", "0111001",
+     "0000101", "0010001", "0001001", "0010111")
+R = ("1110010", "1100110", "1101100", "1000010", "1011100", "1001110",
+     "1010000", "1000100", "1001000", "1110100")
+parity9 = "LGGLGL"
+encoded = "101" + "".join((L if p == "L" else G)[int(d)] for p, d in zip(parity9, ean[1:7]))
+encoded += "01010" + "".join(R[int(d)] for d in ean[7:]) + "101"
+assert "".join(bars) == encoded, "EAN-13 native bars do not match ISBN"
+print("Source PDF 445: editable EAN-13 geometry, check digit, and back-cover metadata verified.")
+
+print(f"Appendix scan-guided editable drafts pass: {START}-{END} ({END-START+1} pages); full-page accepted: 0/445.")

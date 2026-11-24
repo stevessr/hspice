@@ -1,0 +1,140 @@
+{
+  "schema": "ch9-eprom-flash-ch10-interconnect-scan-pass17",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    341,
+    356
+  ],
+  "source_render": "PyMuPDF 1.5× RGB PNG",
+  "strict_full_pages_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 341,
+      "render_sha256": "19bd7bf4d15bc2078ba597f202ee575237c71d39cd31da66388e484d28e871cf",
+      "original_ocr_sha256": "7332f5e376804594edfd8aae868bb1d1774208b6ec2ff5f853bdb41e57b0088f",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 342,
+      "render_sha256": "453f7062dfd4564300e4774f001e0c8e3678b22c6a3369d45a71d011f2aa069c",
+      "original_ocr_sha256": "99d493bb4fd4c9cdde71a42b485461d0af031f3054efea3fadc6827d8bc569ea",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 343,
+      "render_sha256": "5374b83710400d5cff479ef28cf6f37b2c4af389c4769ea3e1d8bc52797d9e76",
+      "original_ocr_sha256": "b438c708a1e022a319e6afa3840d9e752f2ab60ea43fe535b8e1736530637635",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 344,
+      "render_sha256": "43e6f86e49a335a3fddb9bab67fd46a7eeb63fb228566c6953971a8be8be04f5",
+      "original_ocr_sha256": "5dc8f70c1dc3e1ddc61a0541bce1bd0e3aac911a3982d069f27e83d2d56a01b1",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 345,
+      "render_sha256": "ec6f6515c9a8858f07ecb0964d429ee5600a747cb7c58d2290917a9eb34bb8e6",
+      "original_ocr_sha256": "08e3841fe8800d9c373989783b1aeceffc244505c149795f86929e098dd4ff1e",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 346,
+      "render_sha256": "7836ba2945c47105a8cadd8d25ae0e2d830c0688223b828b9f687761e475d679",
+      "original_ocr_sha256": "7e6bdb4b3c87c047cc256810f32b6875d11cc5dba28b2aced48798b000a805c4",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 347,
+      "render_sha256": "c62271335f502678357b9ef9cae587c8aab84a616663fc2a63528197081c4c98",
+      "original_ocr_sha256": "71c195f2a38a51ed75ca1950f59d1dceaeacfe6ac6c222ddf3675f253b439445",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 348,
+      "render_sha256": "b7bfdf7b9cfbc6fe63f9e9349f3ef2900984b63676201abca522ba372593cbe2",
+      "original_ocr_sha256": "c82b3a204b212e1ee8b82ff55f7c9c161eaed386d96daf4c17d444e438e85e29",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 349,
+      "render_sha256": "9bce2b27b65a6b1e6ed72e06a6e685514b8db575048809a2751e57370cc9d506",
+      "original_ocr_sha256": "2455837a4ce3d9b6f3db4f7afe87e652bce5d2d06c5f8c2305c00e42e57cdd5e",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 350,
+      "render_sha256": "795fa1fac1f2fb64b84ca369bf3a192e26bc5413a9ff3a5d105362d191ea6555",
+      "original_ocr_sha256": "54615edf797ed2405c19de3ff18b132ebe8cec2454fc74b25cab2bb4e7a05586",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 351,
+      "render_sha256": "2d4048b8910557523604554b910e1d2bde2df0e1a79133e009992a9234cb0521",
+      "original_ocr_sha256": "cdcd1292367c37312a5dc7ef965025aafe2f3d96e09afa2c7c64061ae9094fd5",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 352,
+      "render_sha256": "7cd489e0da64c616d873df3705fb27c122b5254302b9f4527fde79ebe892d6f1",
+      "original_ocr_sha256": "38c1c24e6417f893ba1ffba93944302d7a63cae78ee66d51236b01461cfd8a39",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 353,
+      "render_sha256": "e67fd31b4a39c6a0b715336e6ba48f58b67f90ecc6b35ad9ca84c39ec08d3ee9",
+      "original_ocr_sha256": "c9e74751395e3a59378958aaa3f1bc839463b82dfffbc7d86dfcddf55a9330ae",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 354,
+      "render_sha256": "81c8e038b590b9bc12bc19d64ad56a9dd61f8a1cf1fb05751d2a17f998cadb35",
+      "original_ocr_sha256": "2c1cfb1a4e698777bfc9c3619bcbdd10d6d716924a4e739933530131660893aa",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 355,
+      "render_sha256": "829524af10a66a07f01915ce83d7196bfc42c8fe1fbee977f4e6f7a69c30a2f2",
+      "original_ocr_sha256": "af4cc23022fa7773c42475a4961d32dcc49b82423dc20558a0f132eb938fdf10",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 356,
+      "render_sha256": "b843fa1ddd311ca0c3c3f30eff4b9a3098f76b98aaed1f5fc5e8e0034ae97181",
+      "original_ocr_sha256": "b4c932e2d3b79ff5ea38ad570c0c531b02a56b95ddcebd4c30ead10b1de06e84",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    }
+  ],
+  "key_calculations": {
+    "eprom_original_external_VT_V": 2,
+    "eprom_programmed_external_VT_V": 8,
+    "eprom_coupling_C1_C2_equal": true,
+    "chapter10_R_formula": "rho L/(T W)",
+    "sheet_resistance": "rho/T"
+  },
+  "discrepancies": [
+    "PDF343 coupling formula final denominator printed C1 while algebra implies C2"
+  ],
+  "unresolved": [
+    "EEPROM/Flash electrical MOS connectivity and all figures9.21–9.33 geometry incomplete",
+    "Reference bibliography and exercise prompts not literal complete",
+    "Interconnect layout and original source physical dimensions not pixel aligned"
+  ]
+}
