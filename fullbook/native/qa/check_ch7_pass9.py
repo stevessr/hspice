@@ -39,3 +39,22 @@ assert math.isclose(104/100,1.04)
 prev=(r/"web"/"237-page-260.typ").read_text(encoding="utf-8")
 assert "1.04" in prev and "16" in prev and "7.2.4" in prev
 print("PDF260 source correction + PDF261–268 equation/figure landmarks present, strict 0/445.")
+
+
+# Original Pass9 truth table: verify the Boolean function independently.
+from itertools import product
+for A,B,C in product((False,True),repeat=3):
+    actual = (A and B) or (A and not B and C) or (not A and not C)
+    expected = {(False,False):not C,(False,True):not C,(True,False):C,(True,True):True}[A,B]
+    assert actual == expected,(A,B,C)
+legacy=json.loads((r/"qa/source-audit-p261-p268.json").read_text(encoding="utf-8"))
+assert legacy["scope"]==[261,268] and legacy["source_pages"]==445
+assert legacy["pdf_sha256"]==a["source_pdf_sha256"]
+assert [p["pdf_page"] for p in legacy["pages"]]==list(range(261,269))
+assert legacy["accepted_full_pages"]==0
+print("Pass9 original truth-table and historical scan record checked; newer native diagrams retained.")
+
+# Ensure the rendered table itself, not only a standalone Boolean expression, carries those rows.
+example=(r/"web/242-page-265.typ").read_text(encoding="utf-8")
+for row in ('[$0$],[$0$],[$overline(C)$]', '[$0$],[$1$],[$overline(C)$]', '[$1$],[$0$],[$C$]', '[$1$],[$1$],[$1$]'):
+    assert row in example,row

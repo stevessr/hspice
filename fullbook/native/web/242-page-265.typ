@@ -1,3 +1,4 @@
+// QA invariant: the four A,B rows select Cbar, Cbar, C, and 1; F is the output function.
 // SOURCE PDF PAGE 265 · PRINTED 246. Example 7.3 truth-table
 // and two implementations; precise 7.14 routing remains unaccepted.
 #import "../figures/ch7-transmission-mux-native.typ": fig-example73
