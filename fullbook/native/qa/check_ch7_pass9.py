@@ -53,3 +53,8 @@ assert legacy["pdf_sha256"]==a["source_pdf_sha256"]
 assert [p["pdf_page"] for p in legacy["pages"]]==list(range(261,269))
 assert legacy["accepted_full_pages"]==0
 print("Pass9 original truth-table and historical scan record checked; newer native diagrams retained.")
+
+# Ensure the rendered table itself, not only a standalone Boolean expression, carries those rows.
+example=(r/"web/242-page-265.typ").read_text(encoding="utf-8")
+for row in ('[$0$],[$0$],[$overline(C)$]', '[$0$],[$1$],[$overline(C)$]', '[$1$],[$0$],[$C$]', '[$1$],[$1$],[$1$]'):
+    assert row in example,row
