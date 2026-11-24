@@ -1,39 +1,49 @@
-// SOURCE PDF PAGE 362. Source scan-assisted Typst native editorial draft.
-// All circuit diagrams, text positions and equations still require strict 1:1 acceptance.
-#import "../figures/ch10-rc-elmore-native.typ": figure10more,fig-example102,fig-example101
-#set document(title:"第10章·连线RC与艾蒙延迟·PDF362")
-#align(center)[#text(size:8pt,weight:"bold")[343　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+// SOURCE PDF PAGE 362 / printed 343. Example 10.2 conclusion and 10.3 source equations.
+// Source numerical assumptions retained: 20mm M5, 0.5μm, 0.1 fF/μm, 100X.
+// Original π-network wire/source topology is redraw, not pixel-perfect.
+#import "../figures/ch10-rc-elmore-native.typ": figure10more
+#set document(title:"第10章 · 例10.2的92.6ps与例10.3的1.3ns · PDF362")
+#set text(size:7.2pt)
+#set par(justify:true,leading:2.5pt,spacing:4pt)
+#align(center)[#text(size:8pt,weight:"bold")[第 10 章　连线设计　　　　　　　　　343]]
 #line(length:100%,stroke:.55pt)
 
-*例10.2（续）*
+用艾蒙延迟进行计算得到：
 
-按照原书近似的π型网络，导线寄生电容分摊到两端，艾蒙延迟为：
+$ tau_("driver") = (6.25 " kΩ")(3.2 " fF") + (6.25 " kΩ"+5.4 " Ω")(11.6 " fF") $
 
-#align(center)[$tau approx (6.25 "kΩ")(3.2 "fF")+(6.25 "kΩ"+5.4 "Ω")(11.6 "fF")$]
-#align(center)[$tau approx 92.6 "ps"$]
+$ = 92.6 " ps" $
 
-因此对于20 μm的这条短线，计入导线电阻前后（92.5 ps与92.6 ps）没有明显差别，可以使用集总负载近似。
+*结论：* 导线电阻的引入对结果没有产生明显变化。
 
-*例10.3　驱动长导线的反相器延迟*
+上面的例子说明短导线可以（并且应该）用集总电容处理，其计算几乎或根本没有错误。短导线的定义取决于工艺，但是典型的几 μm 长或长到 20 μm 这样的导线应该用集总电容处理。芯片上超过 90% 的导线是短导线，所以也可以用这种方法处理。
 
-问题：第五层铝线长20 mm，由100X反相器驱动。线宽0.5 μm，单位长度电容0.1 fF/μm，高层金属方块电阻0.027 Ω/□。
+当连线的长度相对较短时，以上的分析是合适的，但当连线很长时并不合适。对后面这种情况，导线应该按分布式 RC 连线处理，而不应该作为一个简单的集总电容。可以考虑下面的例子来说明长导线的影响。
 
-导线的总电阻：
+== 例 10.3　驱动长导线的反相器延迟
 
-#align(center)[$R_("wire")=(0.027 "Ω") (20000/0.5)=1080 "Ω"$]
+*问题：* 考虑一条独立的第 5 层铝导线，长 20 mm 并且由一个 100X（也就是比最小反相器尺寸大 100 倍）的反相器驱动。由于导线是独立的，其电容是 0.1 fF/μm。假设导线的宽度是 0.5 μm，估计总的线电阻和总的线电容。用艾蒙 π 模型计算从输入反相器到导线终点的传输延迟是多少？
 
-导线电容：
+*解答：*
 
-#align(center)[$C_("wire")=(0.1 "fF/µm")(20000 "µm")=2 "pF"$]
+导线电阻是：
 
-放大100倍后的反相器等效电阻：
+$ R_("wire") = R_("int") L = (0.027 " Ω/□") / (0.5 " µm") times (20 000 " µm") = 1080 " Ω" $
 
-#align(center)[$R_("eff")=(12.5 "kΩ")/100=125 "Ω"$]
+导线电容是：
 
-在源书中，输出自电容写为 $C_("self")=C_("eff") (2W+W) 100=(1 "fF/µm")(0.6 "µm")100=60 "fF"$。其量级远小于长导线的 2 pF，因而该例按图中的 125 Ω 驱动电阻、1080 Ω 线电阻和两个 1 pF 对地电容构成的 π 型模型求解。
+$ C_("wire") = C_("int") L = (0.1 " fF/µm")(20 000 " µm") = 2 " pF" $
 
-假设自电容由 $C_("eff")$ 模型计算，约为60 fF，相比2 pF导线电容很小。将电容近似为两半分布，使用π型网络，则：
+反相器导通电阻是：
 
-#align(center)[$tau_("Elmore")=(125 "Ω")(1 "pF")+(125 "Ω"+1080 "Ω")(1 "pF") approx 1.3 "ns"$]
+$ R_("eff") = R_("eqn")/100 = (12.5 " kΩ")/100 = 125 " Ω" $
 
-这说明长连线延迟不能仅由晶体管负载电容估算。
+反相器输出电容是：
+
+$ C_("self") = C_("eff") (2W+W) 100 = (1 " fF/µm")(0.6 " µm")100 = 60 " fF" $
+
+结电容可以忽略，因为它很小。使用 π 模型，该模型中导线电容分为两半，但是使用完整的导线电阻；因此网络由 125 Ω 驱动电阻、1080 Ω 连线电阻和两个 1 pF 对地电容组成。
+
+$ tau_("Elmore") = (125 " Ω")(1 " pF") + (125 " Ω"+1080 " Ω")(1 " pF") approx 1.3 " ns" $
+
+为了分析长导线的大延迟，我们在图 10.9 中绘制了 4 扇出门延迟和几个在不同工艺尺寸下不同导线长度的导线延迟。

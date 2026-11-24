@@ -7,6 +7,18 @@
 
 #raw("Rxxx n+ n- resistanceval\nCxxx n+ n- capacitanceval\nLxxx n+ n- inductanceval", block: true)
 
+原书紧接在这些元件行之后给出了各字段的说明，特别是必须把两个端点和数值放在正确位置：
+#table(columns:(1fr,3fr),inset:(x:3pt,y:1.6pt),stroke:none,
+  [`Rxxx`],[电阻的名称],
+  [`Cxxx`],[电容的名称],
+  [`Lxxx`],[电感的名称],
+  [`n+`],[正节点],
+  [`n-`],[负节点],
+  [`resistanceval`],[元件的电阻值],
+  [`capacitanceval`],[元件的电容值],
+  [`inductanceval`],[元件的电感值],
+)
+
 原书*图 A.7* 是由 $17 " MΩ"$ 电阻、$1.5 " fF"$ 电容和 $0.7 " mH"$ 电感串联组成的 RLC 电路，节点顺序为1、2、3、4。
 
 #raw("R7   1 2 17Megohms\nCin  2 3 1.5fF\nLbig 3 4 .7mH", block: true)

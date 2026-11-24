@@ -87,6 +87,60 @@ for page_number, names in DRAWINGS.items():
         assert f"#let {name}(" in figure_source, (page_number, name)
         assert f"#{name}()" in page_source, (page_number, name)
 assert len(DRAWINGS) == 9
+# Original source PDF430/432 uses *five* gate-bias DC values but *three*
+# visible conducting curves; the remaining two traces are near zero current.
+a11=figure_source.split("#let a11-nmos-curves()",1)[1].split("#let a13-transient()",1)[0]
+a13=figure_source.split("#let a13-transient()",1)[1]
+assert a11.count("curve.move((0pt,0pt))")==3, "A.11/A.12: three conducting curves"
+assert all(tok in a11 for tok in ("0.9","1.35","1.8",'V_("gate")','V_("drain")',
+                                  "circle(radius:11pt","NMOS"))
+assert all(tok in a13 for tok in ("Mp","Mn","10 fF",'V_("out")',"curve.cubic",
+                                  "CMOS",'V_("in")'))
+assert a13.count("curve.cubic(")>=5
+for number in (430,432):
+    src=(WEB/f"{number-23}-page-{number:03d}.typ").read_text(encoding="utf-8")
+    assert all(x in src for x in ("0.45","0.90","1.35","1.80")),number
+assert "三条非零" in (WEB/"409-page-432.typ").read_text(encoding="utf-8")
+# Fig A.7-A.10 visual topologies are traceable to the scan (PDF427-429).
+# These are structural tests only; successful tests do not accept a full page.
+for name in ("a7-rlc","a8-pass-gate","a9-rc-step","a10-divider"):
+    assert "#let "+name+"()" in figure_source
+a7=figure_source.split("#let a7-rlc()",1)[1].split("#let a8-pass-gate()",1)[0]
+a8=figure_source.split("#let a8-pass-gate()",1)[1].split("#let a9-rc-step()",1)[0]
+a9=figure_source.split("#let a9-rc-step()",1)[1].split("#let a10-divider()",1)[0]
+a10=figure_source.split("#let a10-divider()",1)[1].split("#let a11-nmos-curves()",1)[0]
+assert a7.count("curve.cubic(")>=4, "A.7 must have four editable coil loops"
+assert a7.count("#s(")>=11 and "#r(" not in a7, "A.7 must use a zigzag resistor"
+assert all(s in a7 for s in ("17 Meg","1.5 fF","0.7 mH"))
+assert all(s in a8 for s in ("图 A.8","circle(radius:3pt","[1]","[0]","[2]","[3]"))
+assert all(s in a9 for s in ("1k","1μF","10 V","circle(radius:12pt","curve.cubic"))
+assert a9.count("#s(")>=13, "A.9 requires both a resistor and capacitor"
+assert all(s in a10 for s in ('R_1','R_2','V_("source")','V_r','10'))
+assert a10.count("#s(")>=15 and "#r(" not in a10, "A.10 must show two zigzag resistors"
+s427=(WEB/"404-page-427.typ").read_text(encoding="utf-8")
+for token in ("resistanceval","capacitanceval","inductanceval",
+              "Rxxx","Cxxx","Lxxx","R7   1 2 17Megohms","Cin  2 3 1.5fF","Lbig 3 4 .7mH"):
+    assert token in s427, ("PDF427",token)
+# PDF424 Table A.2 must retain both printed forms (unit and E-notation),
+# and source figures A.3–A.5 must be circuits, not unrelated placeholder boxes.
+table_a2=(WEB/"401-page-424.typ").read_text(encoding="utf-8")
+for token in ("4.2 GHz", "4.2E9", ".2 Meg", ".2 E6", "27 kohms",
+              "273 mA", ".02 us", "4 ns", "95 pF", "3 fF", "2E-16P"):
+    assert token in table_a2, ("A.2", token)
+for factor, suffix in (("10^9","G"),("10^6","Meg"),("10^3","K"),
+                       ("10^(-3)","M"),("10^(-6)","U"),("10^(-9)","N"),
+                       ("10^(-12)","P"),("10^(-15)","F")):
+    assert factor in table_a2 and suffix in table_a2
+resistor=figure_source.split("#let a3-resistor()",1)[1].split("#let a4-mos()",1)[0]
+mos=figure_source.split("#let a4-mos()",1)[1].split("#let a5-sources()",1)[0]
+sources=figure_source.split("#let a5-sources()",1)[1].split("#let a6-pulse()",1)[0]
+assert resistor.count("#s(")>=7 and "#r(" not in resistor, "A.3 zigzag, not rectangle"
+assert "0/S" not in mos and "0/B" not in mos, "A.4 source/body must use distinct ground symbols"
+assert mos.count("#s(")>=10 and "3" in mos and "2" in mos
+assert "15 V" in sources and "12 A" in sources and "polygon" in sources
+s425=(WEB/"402-page-425.typ").read_text(encoding="utf-8")
+for token in ("0.2", "0.4", "Icc", "源区与漏区", "12 A"):
+    assert token in s425, ("PDF425", token)
 print("Appendix A native diagram integration: 9 scanned pages, 12 drawing functions.")
 
 

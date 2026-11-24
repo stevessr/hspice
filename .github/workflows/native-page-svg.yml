@@ -5,11 +5,15 @@ on:
     paths:
       - 'fullbook/native/web/**'
       - 'fullbook/native/figures/**'
+      - 'fullbook/native/qa/check_ch1_opening.py'
+      - 'fullbook/native/qa/check_ch1_closing_source.py'
       - '.github/workflows/native-page-svg.yml'
   pull_request:
     paths:
       - 'fullbook/native/web/**'
       - 'fullbook/native/figures/**'
+      - 'fullbook/native/qa/check_ch1_opening.py'
+      - 'fullbook/native/qa/check_ch1_closing_source.py'
       - '.github/workflows/native-page-svg.yml'
   workflow_dispatch:
 permissions:
@@ -39,6 +43,8 @@ jobs:
           set -euo pipefail
           mkdir -p /tmp/source-pages
           python3 fullbook/native/web/validate_selections.py
+          python3 fullbook/native/qa/check_ch1_opening.py
+          python3 fullbook/native/qa/check_ch1_closing_source.py
           python3 fullbook/native/qa/check_mos_iv.py
           python3 fullbook/native/qa/check_velocity_sat.py
           python3 fullbook/native/qa/check_subthreshold_cap.py
@@ -53,6 +59,9 @@ jobs:
           python3 fullbook/native/qa/check_ch4_end.py
           python3 fullbook/native/qa/check_ch5_gates.py
           python3 fullbook/native/qa/check_ch5_complex_sequential.py
+          python3 fullbook/native/qa/check_ch5_source_p179_p182.py
+          python3 fullbook/native/qa/check_ch5_source_p183_p186.py
+          python3 fullbook/native/qa/check_ch5_transistors_p179_p181.py
           python3 fullbook/native/qa/check_ch5_jk.py
           python3 fullbook/native/qa/check_ch5_dff_power.py
           python3 fullbook/native/qa/check_ch5_end.py
@@ -85,7 +94,12 @@ jobs:
           python3 fullbook/native/qa/check_ch9_pass16.py
           python3 fullbook/native/qa/check_ch9_pass17.py
           python3 fullbook/native/qa/check_spice_appendix.py
+          python3 fullbook/native/qa/check_spice_syntax_source.py
           python3 fullbook/native/qa/check_frontmatter_toc.py
+          python3 fullbook/native/qa/check_frontmatter_source_review.py
+          python3 fullbook/native/qa/check_frontmatter_p003_p006.py
+          python3 fullbook/native/qa/check_ch1_original_p020_p023.py
+          python3 fullbook/native/qa/check_ch1_gates_p024_p025.py
           python3 fullbook/native/qa/check_ch10_pass18.py
           python3 fullbook/native/qa/check_ch10_pass19.py
           python3 fullbook/native/qa/check_ch10_pass20.py
