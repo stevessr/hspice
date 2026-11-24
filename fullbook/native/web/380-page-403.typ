@@ -1,24 +1,21 @@
-// SOURCE PDF PAGE 403; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第403页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("384        数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 403 printed 384, visually checked; native edit selection only, NOT 1:1.
+#import "../figures/ch11-clock-timing-native.typ": fig1116,fig1117,fig1118,fig1119,fig1120,fig1121,fig1122,fig1123,fig1124,fig1125,fig1126,fig1127,fig1128
+#set document(title:"第11章·时钟、偏斜、抖动、功耗·PDF403")
+#set text(size:7.15pt)
+#show par: set par(leading:2.2pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[384　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("fo of- 于\"六 po")
+#fig1124()
+#align(center)[*图11.24　用于降低功耗的门控时钟（可编辑示意）*]
 
-#text("cx                ch                ck")
+时钟门控需要在合适的时序位置产生使能信号；仅用普通组合与门直接门控时钟，可能在使能变化时产生毛刺。原书强调，门控本身的复杂性、时钟偏斜与功耗收益必须共同评估。
 
-#text("ck\nwee 一\n图 14.24 PRE n REA Ete")
+== 11.3.5　时钟发生器
 
-#text("有很多与门控时钟相关的问题- AG, NER ERE TT IE A A ER EY\n很显然，在所有触发器输入端的门控时钟不会节省多少功耗，所以,这种门在芯片各处的位置应\n该仔细确定，其次，这种门可能增加时钟的偏余，所以必须用平衡的方法插人，也就是说，即使\n某块不需要，也应该加入一个门来保持平衡- 但这与第一个问题背道而驰.第三，使能信号需要\n一定数量的多辑电路，这可能影响性能或消耗功率根据门控时钟的复杂程度，应该监控这个折\n中来确保这里的收益不被其他地方的损耗抵消最后.对这种方法来说，一个块的时序验证复杂\n性和可重用性需要痢外进行考虑- 不过，这项技术现在非常普遍，因为在门控模块内部省掉了不\n需要的时钟活动")
+常见的芯片内简单时钟源是环形振荡器，由奇数级反相器首尾相接形成自激振荡。振荡周期取决于单级延迟和级数，频率稳定性可能不足以支持高性能时钟系统。
 
-#text("11.3.5 时钟发生器")
+#fig1125()
+#align(center)[*图11.25　环形振荡器构成简单的芯片上时钟发生器（原生示意）*]
 
-#text("在完成了基本的定义和设计的考虑之后,我们现在把注意力转向时钟电路本身的设计，在芯\n片上一个基本时钟信号的一项简单技术是使用环振 ( 环形振东器，ring oscillator )，如图 11.25 所\n示”一个环振有奇数级反相器，在每个节点产生一个振荡信号、环振的周期取决于每级的延迟和\n级数，这种时钟电路已经用于低端微处理器芯片、然而，产生的时钟信号非常依赖于工艺并且不\n稳定。 因此，使用蝇振的单独的时钟芯片用于高性能的 VLSI 电路中")
-
-#text("cK")
-
-#text("图 11.25 ”用环振实现简单的芯片上时钟发生器")
-
-#text("通常，一个 VLSI 电路从外部时钟源收到一个或更多的基本时钟信号并且产生需要的派生信\n号在其内部使用通常，我们必须为内部使用同时生成真的和互补的时钟信号，图 11.26 显示了\n一个使用传输门 (TG，transmission gate ) 延迟元件的 CMOS 发和器/驱动器。驱动器链中的第一\n个驱动器是一个由晶体管 Mp1 和 Mnl 构成的反相器. 链的上面的分支由两个级联的反相器构成\nPASH mw CLK: 而下面的分支仅由一个反相器和一个传输门组成，并产生由 = CLK。传输\n门用做延迟元件来最小化两个生成的信号间的时钟偏斜")
+更稳定的外部时钟可借助片上缓冲器和调相电路在芯片各处使用。原书图11.26还展示了利用传输门延迟单元产生互补时钟的电路。

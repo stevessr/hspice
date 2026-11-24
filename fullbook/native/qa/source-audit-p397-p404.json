@@ -1,0 +1,91 @@
+{
+  "schema": "ch11-clock-source-pass23",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    397,
+    404
+  ],
+  "strict_full_pages_accepted": 0,
+  "source_render": "pdftoppm 105dpi PNG; PDF397-404 source manually viewed",
+  "pages": [
+    {
+      "pdf_page": 397,
+      "source_render_sha256": "fa6b825223ba0603e3e6bc0d68d543bdbdc0b9b27ef55ccccb7f20f66dac4e2c",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 398,
+      "source_render_sha256": "d6e848f2f16ae62f7d895ff3d0f2158e8b1e70f919a5fbbf9c89aec599eab3b0",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 399,
+      "source_render_sha256": "8e4f59b9dc0ecfb7a83f34c29dd9b4a526d68f2bdce41024f11f08b52fc1a402",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 400,
+      "source_render_sha256": "ba7eb2a906830a9fa01436842a8540fcacc20c7011629b978d0471bd7c96d9c3",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 401,
+      "source_render_sha256": "6537c8dadfb8a1012145a6918a14d4c3622aca0f119edcf2e1ab3cebd4cc457b",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 402,
+      "source_render_sha256": "6ca42f6f82429e58e9d75d60bfd8ba4ab42ffa474166ab5cc7dac9d94789f625",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 403,
+      "source_render_sha256": "bd0a683ee87bc23160a8a830a80e21b05b7f01f7759319ba7db593883fd28d18",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 404,
+      "source_render_sha256": "954c9f330e832ba6b60d8ae57aa8d3b8d2c091dff4a083f7d77098113b409b69",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    }
+  ],
+  "numerical_reference": {
+    "clock_power_C_nF": 1,
+    "clock_power_Vdd_V": 1.8,
+    "clock_frequency_MHz": 500,
+    "clock_power_W": 1.62
+  },
+  "equation_numbers": [
+    "11.6",
+    "11.7"
+  ],
+  "figure_numbers": [
+    "11.16",
+    "11.17",
+    "11.18",
+    "11.19",
+    "11.20",
+    "11.21",
+    "11.22",
+    "11.23",
+    "11.24",
+    "11.25",
+    "11.26",
+    "11.27",
+    "11.28"
+  ],
+  "limitations": [
+    "Waveforms are conceptual source-guided SVG, not exact measured data",
+    "All original circuit nodes and layout not 1:1",
+    "Source page literal paragraphs, photos and footnotes not fully checked"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "source_pdf_pages": 445,
+  "scope": [
+    407,
+    408
+  ],
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "rendering": "pdftoppm -r 125 -png",
+  "pages": [
+    {
+      "pdf_page": 407,
+      "printed_page": 388,
+      "source_render_sha256": "53d4c302e96fd8c2d425772d7541d0c4256a6b4cd3305125dceeedc4d37243fe",
+      "figures": [
+        "11.32"
+      ],
+      "landmarks": [
+        "11.8",
+        "20 mA/μm²",
+        "EM",
+        "RMS"
+      ]
+    },
+    {
+      "pdf_page": 408,
+      "printed_page": 389,
+      "source_render_sha256": "0ee7d2f73be3cffaea2f9a86685f5bef9749d49915d1cec133fbca4e0111b87e",
+      "figures": [
+        "11.33",
+        "11.34"
+      ],
+      "landmarks": [
+        "11.4",
+        "J_rms",
+        "锁相环",
+        "锁延迟环"
+      ]
+    }
+  ],
+  "strict_full_pages_accepted": 0,
+  "note": "Visually inspected source scans, edited textual content and source-position conceptual vector figures. No claim of 1:1 bitmap layout/circuit correctness."
+}

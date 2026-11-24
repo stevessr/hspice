@@ -1,28 +1,30 @@
-// SOURCE PDF PAGE 394; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第394页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("第 11 章 电源网格和时钟设计                    375")
+// SOURCE PDF PAGE 394 / printed 375; scan-guided editable Typst excerpt only.
+// Literal paragraphs, layouts, photographed micrographs and electrical nets not fully verified.
+#import "../figures/ch11-power-grid-em-native.typ": fig113,fig114,fig115,fig116,fig117,fig118,fig119,fig1110,fig1111,fig1112,fig1113,fig1114,fig1115
+#set document(title:"第11章·电源完整性、电迁移与去耦电容·PDF394")
+#set text(size:7.15pt)
+#show par: set par(leading:2.3pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[375　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("的沟道反型层构成。电容的一阶计算给出如下:\nCosy = Cog WL")
+芯片上常利用MOS晶体管构成去耦电容。教材给出：通过栅与源漏形成大面积的氧化层电容，MOS器件的工作方式需保持在电压允许范围内。
 
-#text("因此，可以通过正确选择 W 和上的值来获得需要的去而电容值")
+#align(center)[$C_"decap" = C_"ox" W L$]
 
-#text("图1L11 使用MOS 电容的芯片上去看电容")
+#fig1111()
+#align(center)[*图11.11　用MOS电容的芯片上去耦电容（可编辑示意）*]
 
-#text("更精确的模型要包括多晶硅边沿到源/漏区的边沿电容和覆盖电容:\nCam = CaWL + CW")
+如果考虑多晶硅边沿与源漏区之间的边缘/覆盖电容，可得到：
 
-#text("两个主要的设计问题是决定要用多少去精电容和将其放在包里。假设我们设法知道了需要的\n去看电容数量，则必须选择正确的 WALL 值来优化去击电容并达到一个目标电容值。对 W 和上\n值的正确选择可以基于对如图 11.10 所示的有去而电容的反相器的大量电路仿真上。去丰电容的\n位置应该根据在峰值需求期间发生变化的大缓冲器的位置来确定。仿真可以在电源焊块之间的电\n源网格的一个代表性的块上进行，如图 11.12 所示。电源焊块实质上是连接到Wp5的焊块。连接\n到这个网格的任何电路应该能代表在这种设计中通常可以见到的缓冲器和驱动器的不同类型-")
+#align(center)[$C_"decap" = C_"ox" W L + C_"ol" W$]
 
-#text("ihe             2)")
+电容大小还取决于工艺模型，原书说明应针对栅氧化层、覆盖电容等项选择正确的器件尺寸。
 
-#text("电源得块|                                                        Cama")
+#fig1112()
+#align(center)[*图11.12　对芯片中的一块进行电源网格模拟（原生网格示意）*]
 
-#text("图 11.12 对芯片中的一块进行模拟")
+去耦电容布置需要兼顾不同模块的电流需求、节点的供电阻抗和电容自身的有效频率。原书指出，电容数量可能是无用区域中某些空隙的填充方案，但不能代替对整个电源网格的IR与EM分析。
 
-#text("当决定要使用多少电容和放置位置时有很多因素要考虑。首先，由于电路中存在不发生变化\n的器件，因此已经有了一定数量的去电容。对所有充电到Vpp的节点，这些电容包括栅电容和\n源/漏电容。这个值可以从电路中所需要的目标去枫电容中减去。我们也需要知道对噪声的预算\n电路的变化活动、电源网格提供的电流和相对于时间的电流变化。由于去而电容的实际位置和数\n量很难用最佳的方法决定，所以采用了一些相略的方法来确保正确的性能。典型情况下去耦电容\n的数量应该是变化电容数量的 10 倍，并且去丰电容应该在芯片的无用区域中尽可能多地安排\n另外，去耦电容应该位于电源管脚附近，以抵消由于焊接块或压焊线产生的电感的影响-")
+== 11.2.5　电源分布设计举例
 
-#text("11.2.5 ”电源分布设计举例")
-
-#text("我们以下通过一个电源分布设计的例子来加强前面各节描述的概念。图 11.13 显示了一个大\n型数字芯片实际的电源分布系统。在这里只显示了与电源网格相关的金属连线。在这个设计中有\n可清晰分辩的大块，每块由独立的小组设计完成。在每块中的电源网格的垂直和水平连线十分明")
+下一页开始一个真实芯片的布局例子。原书使用片上电源网格、功能块电源需求和IR/EM的图形分析结果示范从测量到设计修改的过程。

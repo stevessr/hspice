@@ -1,36 +1,35 @@
-// SOURCE PDF PAGE 369; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第369页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("350      数字集成电路分析与设计一一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 369. Scan-guided editable Typst selection; NOT full 1:1 acceptance.
+// Original source scan: printed page 350; images/figures are editable abstractions.
+#import "../figures/ch10-coupling-native.typ": fig1011,fig1012,fig1013,fig1014,fig1015,fig1016,fig1017,fig1018,fig1019
+#set document(title:"第10章·连线设计·源扫描PDF369")
+#set text(size:7.2pt)
+#show par: set par(leading:2.3pt,spacing:3.4pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[350　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("array")
+#fig1015()
+#align(center)[*图10.15　近间距与远间距情况下的侧向电容（可编辑示意）*]
 
-#text("Comers          Ca\n上-一")
+两根同层导线非常接近时，可用平板公式近似其侧向电容。$T$ 为金属厚度，$S$ 为相邻线间距：
 
-#text("ow")
+#align(center)[$C_"lateral" = epsilon_"ox" T/S quad (10.12)$]
+#align(center)[$C_"lateral" approx 0.035 T/S "fF/μm"$]
 
-#text("图 1045 侧向电容模型\n下面我们探讨侧向电容。这个值计算起来很复杂，但是在两种限制情形下，可以有助于得出\n简单的公式。 这两种情形如图 10.15 所示。从图 10.15 (a) 中可以看到，当导线间距非常近，间")
+教材采用的0.18 μm工艺上层金属条件为 $T=0.8 "μm"$、$S=0.4 "μm"$。原扫描该段结果疑似印为“0.0070 fF/μm”，但按同页给出的公式和数值计算是：
 
-#text("PARAL 4入时，可以用平板电容的公式计算该电容:")
+#align(center)[$0.035 times (0.8/0.4) = 0.070 "fF/μm"$]
 
-#text("T")
+对于图10.15(b)较远的间距（40λ），教材给出的侧向电容约为0.007 fF/μm，可近似忽略。
 
-#text("Cert = Box\"\nneal ~ Son's           (10.12)")
+边缘电容在导线间距较远时比较突出。图10.16(a)显示紧邻导线由侧向电容主导，图10.16(b)则显示导线边缘形成的额外耦合。
 
-#text("该电容与间距3成反比，将介电常数值代入上述公式，\nT                       T        T\n= ey 5 = 4(88.5 % 10° fF/mm) = 0.035 人/pm")
+#align(center)[$C_"fringe" = epsilon_"ox" ln(1 + T/H) quad (10.13)$]
 
-#text("Ca = sm")
+对于 $T=H=0.5 "μm"$ 的例子：
 
-#text("在普通的 0.18 um 工艺中,上层金属的T= 0.8 pm, S=0.4 pm. PEVL, Ciypers A 0.0070 fF/um. 如\n图 10.15 (b) 所示，当导线间距为 40和时，Cueu是 0.007 fFlum，可以完全忽路")
+#align(center)[$C_"fringe" = 4 (88.5 times 10^(-4) "fF/μm") ln(1 + 0.5/0.5) approx 0.025 "fF/μm"$]
 
-#text("最后要考虑的电容是边缘电容. 其复杂性再次阻碍了任何一种简单分析。 然而对于手工计算 ,\n考虑图 10.16 所示的两种情况就足够了。在图 10.16 (a) 中的第一种情况是，由紧密排列的导线\n构成的侧向电容起主导作用。 这种情况下Chiee大约是零- 然而, 如果导线间距很宽, 如图 10.16(b )\n所示，每个边缘上就有一个边缘电容，近似为:")
+#fig1016()
+#align(center)[*图10.16　边缘电容的近、远间距模型（可编辑示意）*]
 
-#text("T\nC   -ea人 + 7)\n“ome          H.                       (10.13)")
-
-#text("WE TAH TARE, HURT ILE SAK, SURE EMMY, (TR\n们这里的建模目的来说是足够的。可以计算边缘成分的值如下:")
-
-#text("T               本               05\nCu = ealn(1 + 7) = 4(88.5 10  mmjn人 1 + °)")
-
-#text("= 0.025 fF/um")
+*校勘提示：* 源扫描第350印刷页的近间距小数与相邻第351页的计算不完全一致，原生版保留这一差异并列出按公式计算的结果，未静默更改教材。

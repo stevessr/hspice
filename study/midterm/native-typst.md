@@ -114,7 +114,7 @@ onMounted(async () => {
         <a :href="previewUrl" target="_blank" rel="noopener">独立打开 HTML</a>
         <a :href="sourceUrl" target="_blank" rel="noopener">查看可编辑 Typst 源码</a>
         <a v-if="canVisual" :href="layoutUrl" target="_blank" rel="noopener">单独打开 SVG</a>
-        <a href="/fidelity">逐页严格验收矩阵</a>
+        <a :href="withBase('/native-workbench?page=' + page)">在线修改此页 · 查看验收矩阵</a>
       </div>
       <div class="native-reader-tabs" v-if="canVisual">
         <button type="button" :aria-pressed="view==='html'" @click="view='html'">HTML · 文本可检索</button>
@@ -156,4 +156,4 @@ onMounted(async () => {
 
 可编辑源码全书覆盖只是第一层。PDF20–324属于人工辅助编辑选段，PDF1–19、325–445属于OCR机器草稿。每一页还需分别完成文字、数学、图表、MOS电路全部端口、页眉脚注和逐页视觉版式的校对。**严格 1:1 验收进度仍为0/445。**
 
-[打开 445 页原扫描与 Typst 的本地校对工作台](/native-workbench) · [查看逐页验收矩阵](/fidelity)
+[打开统一在线校对与验收工作台](/native-workbench) · [查看逐页验收矩阵](/fidelity)

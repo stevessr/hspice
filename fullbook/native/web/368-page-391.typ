@@ -1,38 +1,35 @@
-// SOURCE PDF PAGE 391; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第391页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("372         数字集成电路分析与设计一一深亚微米工艺 { 第三版 )")
+// SOURCE PDF PAGE 391 / printed 372; scan-guided editable Typst excerpt only.
+// Literal paragraphs, layouts, photographed micrographs and electrical nets not fully verified.
+#import "../figures/ch11-power-grid-em-native.typ": fig113,fig114,fig115,fig116,fig117,fig118,fig119,fig1110,fig1111,fig1112,fig1113,fig1114,fig1115
+#set document(title:"第11章·电源完整性、电迁移与去耦电容·PDF391")
+#set text(size:7.15pt)
+#show par: set par(leading:2.3pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[372　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("例11.1 用MTTF 建立最大允许电流密度")
+=== 例11.1　用MTTF建立最大允许电流密度
 
-#text("一项设计需要 10 年的寿命. 使用加速测试方法测基锅的电迁移, 显示A = 2 X 10” hremyA.\nAH = 085 eV 在温度为 125乙时，铅连线中允许的最大电流密度是多少?")
+题设要求10年寿命，以加速测试得到的电迁移模型为基础，采用教材给定的经验系数及 $Delta H=0.85 "eV"$、温度 $125 °"C"$。
 
-#text("解答:\nMTTF 是 50%的部件将失效的时间，也就是ko”对希望寿命是 10 年的情况，MTTF 应该比")
+由于 MTTF 是部分器件失效的统计量，原书为安全采用因子10：
 
-#text("这个值大5-10 倍“ 为了安全可靠采用因子 10:\nfo = MITE = 10 yx 10年x 365天x 24小时= 88 x 105小时")
+#align(center)[$t_"target" = 10 times (10 "年" times 365 "天/年" times 24 "小时/天") approx 8.8 times 10^5 "h"$]
 
-#text("使用式 (14.3 人能解出 如se")
+将这一数值带入式（11.3）求允许的电流密度：
 
-#text("_ [208          2\n一Va80oJ *\\ a62 x 10 Fev/*K(3%")
+#align(center)[$J_"max" = sqrt(A / t_"target" exp((Delta H)/(k T)))$]
+#align(center)[$J_"max" approx 8.95 times 10^5 "A/cm²"$]
 
-#text("= 8.95(10°)A/em?")
+对实际互连金属，平均电流密度定义为：
 
-#text("这个值能用做对于电迁移最大的允许电流密度")
+#align(center)[$J_"avg" = I_"avg" / (W T) quad (11.4)$]
 
-#text("每一导线段的电流密度可以使用导线尺寸计算如下，\n1,")
+其中 $W$ 为线宽，$T$ 为线厚。原书将电迁移的失效风险判据写为：
 
-#text("vg")
+#align(center)[$J_"avg" > J_"max" quad (11.5)$]
 
-#text("J")
+通常应该反向设计，使运行条件下的 $J_"avg"$ 不超过工艺允许值。金属通孔也需要单独检查电流容量与电迁移可靠性。
 
-#text("WxT                            (a4)\n其中 WARFARE. TR EAIAE. 电迁移失效的标准是:\nJog > Irs                       as)")
+== 11.2.3　电源布线要考虑的问题
 
-#text("这种比较必须对电源网格中的每一段导线和每个通孔进行，以识别那些在指定寿命中易于出现\nEM 失效的线网。可能失效的金属线和通孔必须进行修正，典型方法是依照式 ( 11.4 ) 调整导线\nROE, 直到不再违反条件式 { 11.5 ) 不是所有的 EM 失效都必须修正，因为金属线的断独并不一\n定意味着这部分就失效了。然而，这可能增加其他分支失效的可能性，因为到每个门通常有很多\n不同的电流路径。失效应该以某种方式有序安排，随后按顺序修正，直到失效的可能性在预先设\n定的阔值以下为止")
-
-#text("1.23 ”电源布线要考虑的问题")
-
-#text("设计集成电路电源分布系统是用来给完成芯片还辑功能的晶体管提供所需的电压和电流。为\n了了可靠地操作，集成电路设计者在设计电源系统时必须牢记式 ( 11.2 ) 和式 (11.3 ) 只有将诸如\nTR 压降、地线反跳、Ldifdr 和电迁移等效应一起考虑的时候，才可以获得一个电源网格完整性的\n全稻，这些者是全芯片问题，必须用具有足够能力与性能的连线验证工具来解决，并且需要能在\n合理的时间里分析芯片的详细表现。我们把这些高水平的问题留给 CAD 工具和提供商，而将焦\n点放在避免这类问题的方法上-")
-
-#text("最初可以从 R，C 和工的计算结果估计 IR 压降和 Ldildy，通常设计者通过计算沿着导线的方\n块数重并且乘以薄层电图率来计算导线电阻类似地，连线电容是用连线长度乘以单位长度电容\n来计算的，焊线和焊块的电感可以进行估计，电源连线的电感也可以相略估计.使用这些信息和")
+电源网络除线阻与封装电感外，还受逻辑门的同时开关、布局密度、峰值和平均电流以及温度影响。布局布线时应同时考虑 IR 压降、地线反跳、瞬态 $L dif i/dif t$ 与电迁移。

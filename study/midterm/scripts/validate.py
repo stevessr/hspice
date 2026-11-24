@@ -20,6 +20,63 @@ for source in files:
     for rel in re.findall(r'\]\((\.{1,2}/[^)]+\.md)\)', data):
         assert (source.parent / rel).resolve().is_file(), f'Broken local link: {source} -> {rel}'
 
+# Textbook chapters 1–4: ensure files, figures and all 48 answer pairs.
+review = root / 'review-1to4'
+wanted = ['index.md', 'reference.md', 'interactive.md'] + [
+    f'{chapter:02d}-{kind}.md' for chapter in range(1, 5)
+    for kind in ('notes', 'exercises', 'answers')
+]
+for name in wanted:
+    page = review / name
+    assert page.is_file(), f'Missing review page: {page}'
+    body = page.read_text(encoding='utf-8')
+    assert body.startswith('# '), f'Missing review title: {page}'
+    for image in re.findall(r'!\[[^]]*\]\(([^)]+)\)', body):
+        assert (page.parent / image).is_file(), f'Broken review image: {page} -> {image}'
+for chapter in range(1, 5):
+    qs = (review / f'{chapter:02d}-exercises.md').read_text(encoding='utf-8')
+    answers = (review / f'{chapter:02d}-answers.md').read_text(encoding='utf-8')
+    question_ids = re.findall(r'^\*\*(S[1-4]-\d{2})', qs, re.M)
+    answer_ids = re.findall(r'^## (S[1-4]-\d{2})', answers, re.M)
+    expected = [f'S{chapter}-{number:02d}' for number in range(1, 13)]
+    assert question_ids == expected, f'Bad question IDs: {chapter}: {question_ids}'
+    assert answer_ids == expected, f'Bad answer IDs: {chapter}: {answer_ids}'
+# Four chapter-specific interactive pages: original 48 + 32 advanced.
+extra = ['advanced.md', 'textbook-examples.md', 'calculation-methods.md',
+         'technology-tables.md', 'online-lab.md']
+for name in extra:
+    assert (review / name).is_file(), f'Missing review subject: {name}'
+for name in ('ReviewLab.vue', 'lab-core.mjs'):
+    assert (review / name).is_file(), f'Missing experiment source: {name}'
+for chapter in range(1, 5):
+    n = f'{chapter:02d}'
+    q = review / f'advanced-{n}-exercises.md'
+    a = review / f'advanced-{n}-answers.md'
+    t = review / f'interactive-{n}.md'
+    for doc in (q, a, t):
+        assert doc.is_file(), f'Missing advanced page: {doc}'
+        assert doc.read_text(encoding='utf-8').startswith('# ')
+    expected_extra = [f'A{chapter}-{j:02d}' for j in range(1, 9)]
+    qids = re.findall(r'^## (A[1-4]-\d{2})', q.read_text(encoding='utf-8'), re.M)
+    aids = re.findall(r'^## (A[1-4]-\d{2})', a.read_text(encoding='utf-8'), re.M)
+    assert qids == expected_extra, f'Advanced questions wrong: {chapter}: {qids}'
+    assert aids == expected_extra, f'Advanced answers wrong: {chapter}: {aids}'
+    live = t.read_text(encoding='utf-8')
+    originals = re.findall(r'^### (S[1-4]-\d{2})$', live, re.M)
+    additions = re.findall(r'^### (A[1-4]-\d{2})$', live, re.M)
+    assert originals == [f'S{chapter}-{j:02d}' for j in range(1, 13)], originals
+    assert additions == expected_extra, additions
+    assert 'localStorage' in live and 'resetChapter' in live
+source_index = (review / 'textbook-examples.md').read_text(encoding='utf-8')
+for chapter, count in ((2, 13), (3, 7), (4, 9)):
+    for number in range(1, count + 1):
+        assert f'| 例{chapter}.{number} |' in source_index
+assert 'online-lab' in (review / 'index.md').read_text(encoding='utf-8')
+
+
+from check_review_spice import validate_review_decks
+validate_review_decks(root)
+
 if '--generated' in sys.argv:
     expected = (['reading-guide.typ']
                 + [f'sections/{f.stem}.typ' for f in sorted((content/'chapters').glob('*.md'))]

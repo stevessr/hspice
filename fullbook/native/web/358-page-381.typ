@@ -1,40 +1,37 @@
-// SOURCE PDF PAGE 381; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第381页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("362         数字集成电路分析与设计一深亚微米工艺 ( 第三版 )")
+// SOURCE PDF PAGE 381. Native Typst source-scan editorial selection, not 1:1 complete.
+// Printed page 362; line-by-line transcription and source geometry remain unverified.
+#import "../figures/ch10-summary-ch11-power-native.typ": fig1028,figp104,figp105,figp106,figp108,fig111,fig112
+#set document(title:"第10章章末与第11章电源分布·源PDF381")
+#set text(size:7.15pt)
+#show par: set par(leading:2.3pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[362　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("Poway ttttttt+++t++++t++tt++4+++ teases")
+#fig1028()
+#align(center)[*图10.28　金属线跨层连通以避免天线效应（可编辑示意）*]
 
-#text("Pare)                     nem 1\n一六 _")
+在制造过程中，若把较长的连接推迟到更晚的金属层步骤，可以减少早期敏感栅所暴露的金属收集面积。这种处理和保护二极管一样，需要版图与工艺规则共同保证。
 
-#text("插入通筷                           an) (eh")
+== 10.7　小结
 
-#text("«yu\n—\nMoT oa")
+原书对0.18 μm及0.13 μm工艺的互连参数给出如下典型示例：
 
-#text("tal\nyet LT")
+#table(columns:4,inset:3pt,stroke:.35pt,
+ [*工艺*],[*金属层*],[*ρ（μΩ·cm）*],[*方块电阻*],
+ [0.18 μm],[铝1—4],[2.7],[54 mΩ/□],
+ [0.18 μm],[铝5],[2.7],[27 mΩ/□],
+ [0.13 μm],[铜1—6],[1.7],[42 mΩ/□],
+ [0.13 μm],[铜7—8],[1.7],[21 mΩ/□])
 
-#text("a or\nP1028 SARA Le KER")
+#align(center)[$R = rho L/A = (rho/T) (L/W) = R_"sq" (L/W)$]
 
-#text("总结: 天线问题的正确解决取决于物理设计方法学、工具以及与设计相关的工程折中，所有\n以上的解决方法只要经过仔细考虑进行折中都是可行的。在先进加工过程中，二极管和缓冲器揪\n人看来非常有用-未来的工具将有希望代替设计者自动考虑这个问题")
+艾蒙延迟计算使用给定电阻路径上的电容加权求和：
 
-#text("10.7 小结")
+#align(center)[$tau_i = sum_(k) C_k R_(i k)$]
 
-#text("连线数据:")
+长线缓冲器插入时，教材整理的最优分段数与缓冲器尺寸为：
 
-#text("(a) 0.18 pm 的5 层铝加工工艺: P= 27A0-cm; 1-4层金属 T= 05Hhm, H=05 um.\nWoin= 0.3 um; 第5层金属 T=1um, H=0.S5um, Woig= 0.4 um")
+#align(center)[$N = sqrt((R_"int" C_"int" L^2/2)/(R_"eqn"(C_J+C_G)(1+beta)))$]
+#align(center)[$M = sqrt((R_"eqn" C_"int")/((C_G(1+beta)) R_"int"))$]
 
-#text("(b) 0.13 um 的8 AMT TE: p:         ~6 2, T=04 um, H=05 um,\nWin = 02Hm; 7-8层金属、           0.5 Am, Wan = 0.4 sm")
-
-#text("导线电阻计算:")
-
-#text("一 27m0/0 名 金属层5")
-
-#text("4 一 42 mg/口 铜 金属层1-6")
-
-#text("= 21 mO/O 铀 金属展7-8\nSRE:\nm= (GX Ra)")
-
-#text(".     .     R   17/2\nBR N= VR + casi)\n_    RewCine\nCS ee")
-
-#text("优化缓冲器插入:")
+本章其余总结位于下一页，包括区域/侧向/边缘电容、噪声串扰、电感和天线效应。

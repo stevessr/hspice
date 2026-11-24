@@ -4,6 +4,9 @@
 
 ## 在线阅读
 
+- **教材前四章专项复习（四章讲义、48题、逐题解析）：** https://stevessr.github.io/hspice/review-1to4/
+- **48题交互训练：** https://stevessr.github.io/hspice/review-1to4/interactive
+
 - **VitePress 网站：** https://stevessr.github.io/hspice/
 - **系统复习：** https://stevessr.github.io/hspice/content/00-reading-guide
 - **实践题库（五大主题，题解分离）：** https://stevessr.github.io/hspice/content/practice/
@@ -97,3 +100,15 @@ Pages 的部署源需要在 **Settings → Pages → Build and deployment → So
 `build_pdf.py` 在同一次成功构建中提供 `midterm-review.pdf`（期中复习整册）、`textbook-review.pdf`（教材九章 Typst 精编整册）、所有原有讲义的独立章节 PDF，以及教材九章的独立 PDF。输出目录为 `build/publish/`，同时生成 `pdf-index.json`，列出每份资料的标题、类别、页数与链接。Pages 工作流下载最新成功的 `hspice-study-pdf-bundle` 并原样发布，不在网站任务中重复进行 Typst 编译。
 
 教材精编为按目录结构组织的原创学习资料；上传教材的目录章名和页码已进行核对，内容旨在课堂复习而非逐字复刻教材。课程期中范围之外的存储器章节作为拓展保留。
+
+## 教材第1—4章专项资源
+
+`review-1to4/` 新增四章可编辑讲义、48道原创训练题、48份解析、考前公式及教材原习题索引。 `scripts/validate.py` 校验四章文件与题号匹配。
+
+## 前四章 HSPICE 教学网表
+
+[六组仿真实验](https://stevessr.github.io/hspice/review-1to4/simulations)：RC延迟、NMOS输出特性、体效应、分布互连、CMOS VTC、CMOS瞬态。源文件保存在 `review-1to4/netlists/*.sp`，不依赖外部课程工艺库。CI 静态检查，HSPICE 数值波形需在本机运行。
+
+## 本轮增强：按章80题、原教材例题与网页实验
+
+保留原48道自编基础题，新增32道自编进阶题、四个章节互动页（各20题）、可在浏览器实时计算的RC/MOS/CMOS实验、29个教材原编号例题的原书物理页码与Typst选段索引、独立计算方法以及第3章详细工艺数据表。网页模型为一阶教学模型，实际波形仍由HSPICE仿真验证。

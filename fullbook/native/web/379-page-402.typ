@@ -1,36 +1,24 @@
-// SOURCE PDF PAGE 402; MACHINE-OCR DRAFT ONLY. NOT PROOFREAD.
-// All original figures, mathematics, table structure and layout remain unverified.
-#align(center)[#text(size:7.8pt,weight:"bold")[原始扫描 PDF 第402页 — 未校对机器文本]]
-#set text(size:7.5pt)
-#show par: set par(leading:3.4pt,spacing:3pt)
-#text("HUE 电源网格和时钟设计                383")
+// SOURCE PDF PAGE 402 printed 383, visually checked; native edit selection only, NOT 1:1.
+#import "../figures/ch11-clock-timing-native.typ": fig1116,fig1117,fig1118,fig1119,fig1120,fig1121,fig1122,fig1123,fig1124,fig1125,fig1126,fig1127,fig1128
+#set document(title:"第11章·时钟、偏斜、抖动、功耗·PDF402")
+#set text(size:7.15pt)
+#show par: set par(leading:2.2pt,spacing:3pt)
+#align(center)[#text(size:7.5pt,weight:"bold")[383　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-#text("个不看所的变化”所以，在触发器数据输入端的大量噪声是不能;")
+为了减小图11.22的耦合噪声，原书讨论电源/地屏蔽和加大时钟线与噪声线间距的方法。屏蔽线提供相对稳定的参考电位，可降低时钟沿附近的串扰风险，但附加电容会增加时钟线的负载与功耗。
 
-#text("为了限制触发器周咯的噪声事件. 可以使用前面描述过的间隔与屏巩技术 例如, 在图 11.23\nSY GTS BAGG CU 的位着彼此非常接近，在这些信号之问由于耦合电容有发生吧记事件的可\n能可能的版图解决方法是把信和号 BANE Clk 用是够的间距分并.或用Ypp和 Gnd 屏蔽 Clk\n间卫的方法可以是使用较低的电容、所以在某种程度上减少了功耗”然而，屏页对解决电容看合\n和电感炬合帮基有益的”通常对时钟进行屏蔽来加以保护，使其免受不希望的噪声干扰. 但也保\n护了其他缴感信号免受不希望的与时钟的互感耦合  屏需的代价是电容和功杯的增加")
+#fig1123()
+#align(center)[*图11.23　耦合问题的版图解决方法（编辑示意）*]
 
-#text("T 3")
+== 11.3.4　时钟的功耗
 
-#text("[ 工     Re   *               “")
+大型时钟网络几乎每个周期都进行切换，因此动态功耗可能显著。原书指出，在某些高性能设计中时钟相关功耗可占芯片总功耗的30%—40%。
 
-#text("Te         CC\ner 3")
+#align(center)[$P = C V_"DD"^2 f_"clk"$]
 
-#text("© feo fom")
+对0.18 μm示例，若 $V_"DD"=1.8 "V"$、工作频率500 MHz、时钟总电容1 nF：
 
-#text("图 11.23 AR eee NRE DR")
+#align(center)[$P = (1 "nF") (1.8 "V")^2 (500 "MHz") approx 1.6 "W"$]
 
-#text("11.3.4 时钟的功耗")
-
-#text("时钟电路的总功耗可以很大 冉如前面所提到的，在高性能设计里可能占总功耗的")
-
-#text("30%-40锡”功耗最主要的部分是由动态变化引起的:")
-
-#text("P= CVbp fax\nFEE, HHI PAAR ATR, AI RAE A ABE He ECR = 1\nWA So 和电源电压Ypp已知.要计算的项仅剩下|     值 C，在大规模数字电路中由时钟产生的电\n容非常商，可能在纳法 ( nF ) 的数量级")
-
-#text("作为“个例子，考虑0.18 um 工艺，Voo = 1.8 V 如果电路工作在 500 MHz，并且时钟电")
-
-#text("容为1nF，仅时钟电路的总功耗为:")
-
-#text("P= (1nF)(1.8)2(500)(105) = 1.6 W\n时钟的电容来源很多“首先，金属线的连线电容是电容的一个主要来源，第二，在时钟分布网络\n中有大的缓冲器.引起了大肩出和本身电容项第三， 存在与时钟驱动的触发器输入相关联的电\n容，节后，每当触发器触发时有另一种功耗来源，那就是，每次时钟信号变换时触发器本身要耗\n也”设计时钟分布网络时，将所有这些电容最小化是很重要的、因为会直接产生功耗。")
-
-#text("时钟门控是一种流行的技术“这是一个相当简单的慨念。如图 11.24 所示。 如果一个功能单\n元在较长的时间内不需要工作. 可以通过用一个使能信号和时钟信号进行远辑与操作的方法将局\n人模块的时钟关闭”大多数功能单元在多数时间是不活动的“例如， 执行一些整数运算时一个浮\n点单匹可能不活动 假如时钟继续一转与这个单元相联系的 D 触发器. 则能量被不必要地消耗了\n门控时钟可以付止该单元从而节省该触发器消耗的功率")
+可通过*门控时钟（clock gating）*降低不活跃模块的时钟翻转，但需确保门控控制信号不会产生毛刺或破坏时序。

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="title desc">
+<title id="title">教材图1.12 电阻负载 NMOS 反相器</title>
+<desc id="desc">VDD 经负载电阻 RL 接到 NMOS 漏极与 Vout；NMOS 栅极受 Vin 控制，源极和体端接 GND。输出 Vout 带对地负载电容 CL。图中的晶体管是 NMOS 标准符号，无栅极圆圈。</desc>
+<style>
+.wire{stroke:#171717;stroke-width:2.8;fill:none;stroke-linecap:square;stroke-linejoin:miter}
+.node{fill:#171717}
+.heading{font:700 25px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#171717}
+.pin{font:21px Georgia,"Noto Serif CJK SC",serif;fill:#171717}
+.note{font:16px "Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#333}
+</style>
+<rect width="960" height="500" fill="white"/>
+<defs><g id="nmos4" class="wire">
+<path d="M0 -27 V27 M-25 -27 V27 M-70 0 H-25 M0 -55 V-27 M0 27 V55 M0 0 H70"/>
+</g></defs>
+<text x="480" y="42" text-anchor="middle" class="heading">电阻负载 NMOS 反相器</text>
+<text x="410" y="87" text-anchor="middle" class="pin">VDD</text>
+<path class="wire" id="supply" data-net="VDD" d="M410 94 V118 M410 118 l-10 10 20 15 -20 15 20 15 -20 15 10 10 V223"/>
+<text x="441" y="167" class="pin">R<tspan baseline-shift="sub" font-size="14">L</tspan></text>
+<path class="wire" id="output" data-net="Vout" d="M410 223 V309 M410 255 H695"/>
+<circle class="node" cx="410" cy="255" r="4"/>
+<text x="713" y="261" class="pin">V<tspan baseline-shift="sub" font-size="14">out</tspan></text>
+<g id="nmos-device" data-device="nmos4">
+<use href="#nmos4" xlink:href="#nmos4" x="410" y="364"/>
+<text x="510" y="356" class="pin">NMOS</text>
+<text x="510" y="385" class="note">B → GND</text>
+</g>
+<path class="wire" id="input" data-net="Vin" d="M169 364 H340"/>
+<text x="156" y="370" class="pin" text-anchor="end">V<tspan baseline-shift="sub" font-size="14">in</tspan></text>
+<path class="wire" id="ground" data-net="GND" d="M410 419 V441 H480 V364 H480 M383 441 H437 M390 452 H430 M399 463 H421"/>
+<circle class="node" cx="410" cy="441" r="4"/>
+<g id="load-capacitor">
+<circle class="node" cx="635" cy="255" r="4"/>
+<path class="wire" d="M635 255 V344 M611 344 H659 M611 358 H659 M635 358 V441 M611 441 H659 M619 452 H651 M627 463 H643"/>
+<text x="668" y="356" class="pin">C<tspan baseline-shift="sub" font-size="14">L</tspan></text>
+</g>
+<text x="480" y="490" text-anchor="middle" class="note">参照教材图 1.12（印刷第 15 页）重绘；NMOS 栅极无圆圈，输出位于 R<tspan baseline-shift="sub" font-size="11">L</tspan> 与漏极之间。</text>
+</svg>

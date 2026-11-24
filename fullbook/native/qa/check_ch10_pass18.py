@@ -11,8 +11,10 @@ assert a["strict_full_pages_accepted"]==0
 marks={357:("10.2.2","10.3","10.4","10.5"),358:("图10.5","艾蒙"),359:("图10.6","例10.1","10.6"),360:("10.2.3","10.7","图10.7","图10.8"),361:("例10.2","14.8","92.5"),362:("例10.3","1080","1.3"),363:("图10.9","10.3"),364:("图10.10",'R_("eqn")')}
 for n,words in marks.items():
  p=(r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
- assert all(x in p for x in words),(n,[x for x in words if x not in p])
- assert s[n-1]["status"]==q[n-1]["editorial_state"]=="partially-transcribed"
+ compact = ''.join(p.split())
+ assert all(''.join(x.split()) in compact for x in words),(n,[x for x in words if ''.join(x.split()) not in compact])
+ assert s[n-1]["status"]==q[n-1]["editorial_state"]=="draft-transcribed"
+ assert s[n-1]["editorial_typst_draft"] is True and s[n-1]["source_scan_landmarks_checked"] is True
  assert not s[n-1]["human_verified"] and not all(q[n-1]["checks"].values())
  assert len(a["pages"][n-357]["source_render_sha256"])==64
 x=a["numerical_reference"]["example102"]
@@ -24,4 +26,71 @@ assert math.isclose(0.027*(20000/0.5),y["wire_ohm"])
 assert math.isclose(0.1*20000/1000,y["wire_pF"])
 assert math.isclose(0.125*1+(0.125+1.08)*1,y["elmore_ns"],abs_tol=0.05)
 assert "#let figure10more(" in (r/"figures/ch10-rc-elmore-native.typ").read_text(encoding="utf-8")
-print("Pass18 RC/Elmore PDF357–364 math, figure and status landmarks passed; strict 0/445.")
+
+# Numerical landmarks from the primary source PDF, printed pp. 338–345.
+for n, tokens in {
+    357: ("2.7", "1.7", "54", "27", "42", "21"),
+    358: ("125", "135", "17.5", "10"),
+    360: ("π 型", "T 型", "L 型"),
+    361: ("3.2", "11.6", "14.8"),
+    363: ("FO4", "2.5", "1035", "460", "116"),
+    364: ('R_("int")', 'C_("int")'),
+}.items():
+    native = (r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+    assert all(token in native for token in tokens), (n, tokens)
+example = a["numerical_reference"]["chapter10_f04_interconnect"]
+assert example["technology_nm"] == [350, 130, 65]
+assert example["length_mm"] == [1, 2, 3]
+assert example["delay_ps_by_nm"]["65"] == [116, 460, 1035]
+assert example["fo4_ps"] == [150, 40, 25]
+discrepancy, = a["source_discrepancies"]
+assert discrepancy["pdf_page"] == 358
+assert math.isclose(0.054 * 1000 / 0.4, discrepancy["arithmetic_ohms"])
+assert discrepancy["arithmetic_ohms"] != discrepancy["source_printed_ohms"]
+assert discrepancy["source_printed_ohms"] == 125
+# Require the first-moment integral and source-faithful metal stack values,
+# not just a summarized statement that an Elmore model exists.
+for n,anchors in {
+    357: ("2.7", "1.7", "0.5", "1.0", "0.4", "0.8", "54", "27", "42", "21", 'R_("wire")', 'C_("wire")'),
+    358: ("3～4λ", "30～40λ", "0.054", "125", "135", "17.5", "10", "integral_0^oo", 'R_("wire") C_("wire")', "tau"),
+    359: ("C_1=C_2=0", "R_2=R_3=0", "sum_k", 'R_(i k)', "tau_1", "tau_2", "tau_3"),
+}.items():
+    source=(r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+    assert all(x in source for x in anchors),(n,[x for x in anchors if x not in source])
+print("PDF357–359 complete source landmarks, Elmore integral and branch-node equations checked.")
+print("PDF 358 source arithmetic mismatch retained and audited; PDF 363 FO4 data matched.")
+
+# Extend source-anchored numerical and formula-preservation checks to PDF360–364.
+for n,anchors in {
+  360: ("n(n+1)", "0.38", "10.7", "π 模型", "T 模型", "L 模型", "10.8"),
+  361: ("0.8", "0.4", "0.2", "9.6", "1.2", "4", "14.8", "92.5", "5.4", "3.2", "11.6"),
+  362: ("92.6", "100X", "20 mm", "0.027", "1080", "125", "60", "2", "1.3"),
+  363: ("150", "40", "25", "116", "460", "1035", "2.5", 'L_("crit")', "0.38"),
+  364: ("10.10", 'R_("int")', 'C_("int")', 'R_("eqn")', 'C_("out")', 'C_("in")', "beta", "M"),
+}.items():
+    source=(r/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+    compact="".join(source.split())
+    assert all("".join(x.split()) in compact for x in anchors), (n, [x for x in anchors if "".join(x.split()) not in compact])
+f=(r/"figures/ch10-rc-elmore-native.typ").read_text(encoding="utf-8")
+# Structural guard: L, π, T, waveform, physical process axis and full buffered segment.
+for anchor in ("#let shunt(", "k==0", "k==1", "C/2", "R/2", "Cwire",
+               "(a) 集总 RC 波形", "(b) 分布式 RC 波形",
+               "工艺尺寸（从大到小）", "(3,27,116)", "(12,110,460)",
+               "(30,240,1035)", "(150,40,25)",
+               "(a) 长为 L", "(b) 缓冲器", "(c) 单段 π 模型", "Reqn/M", "Rint L/N"):
+    assert anchor in f, ("native RC figure missing",anchor)
+print("Native Fig10.5/10.8/10.9/10.10 waveform/topology/technology axes landmarks passed.")
+print("Pass18 chapter10 PDF357–364 source-scan formula/units and diagram landmarks passed; strict 0/445.")
+
+
+
+# Independently check SI dimensions and Elmore delays without relying on rounded source values.
+wire_r_ohm = y["wire_ohm"]
+wire_c_f = y["wire_pF"] * 1e-12
+source_r_ohm = y["driver_ohm"]
+first_moment_s = (source_r_ohm + wire_r_ohm/2) * wire_c_f
+assert math.isclose(first_moment_s, 1.33e-9, rel_tol=1e-9)
+assert round(first_moment_s * 1e9, 1) == y["elmore_ns"]
+assert math.isclose(x["wire_ohm"] * 1e-3, .0054)
+assert round(6.25*3.2+(6.25+x["wire_ohm"]*1e-3)*11.6, 1)==x["with_R_ps"]
+print("Pass18 SI-unit and rounding regression passed; existing 445-page coverage retained.")

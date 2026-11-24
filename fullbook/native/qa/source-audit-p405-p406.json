@@ -1,0 +1,43 @@
+{
+  "source_pdf_pages": 445,
+  "scope": [
+    405,
+    406
+  ],
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "rendering": "pdftoppm -r 125 -png",
+  "pages": [
+    {
+      "pdf_page": 405,
+      "printed_page": 386,
+      "source_render_sha256": "7dcd11937d0989e8125e7d27778a871c4a6dca64a2854c41a5e523e541147db3",
+      "figures": [
+        "11.29",
+        "11.30"
+      ],
+      "landmarks": [
+        "宽总线",
+        "胖时钟总线",
+        "特征阻抗",
+        "缓冲器尺寸"
+      ]
+    },
+    {
+      "pdf_page": 406,
+      "printed_page": 387,
+      "source_render_sha256": "1f691659a034d7e95383b1e08155632f27f3fbdac09812cd71be4cc37aac3bf3",
+      "figures": [
+        "11.31"
+      ],
+      "landmarks": [
+        "11.3.7",
+        "门控时钟",
+        "IR 压降",
+        "RMS",
+        "11.32"
+      ]
+    }
+  ],
+  "strict_full_pages_accepted": 0,
+  "note": "Directly visually inspected two scan pages and transcribed major prose and figure captions. Native figures are conceptual topology diagrams only, not pixel or terminal exact."
+}
