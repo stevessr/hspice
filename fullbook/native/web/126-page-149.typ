@@ -1,4 +1,5 @@
 // SOURCE PDF PAGE 149 / printed 130
+// Scan proofread: complete region-IV velocity-saturation current equation restored.
 #set document(title:"第4章 · 例4.6切换点及区域IV/V · PDF149")
 = 第4章 · 印刷第130页
 
@@ -10,7 +11,7 @@
 
 $ W_N=0.1 " μm", quad W_P=0.4 " μm" $
 
-$ chi = sqrt((W_N E_("cP"))/(W_P E_("cN"))) =
+$ chi = sqrt((W_N/(E_("cN") L_N))/(W_P/(E_("cP") L_P))) = sqrt((W_N E_("cP"))/(W_P E_("cN"))) =
 sqrt((0.1 times 24)/(0.4 times 6))=1.0 $
 
 $ V_S=(0.8+(0.4) times 1.0)/(1+1.0)=0.6 " V" $
@@ -31,7 +32,16 @@ NMOS漏源压较小，在线性区导通，PMOS仍在饱和区：
 
 $ I_("DN")("lin") = I_("DP")("sat") $
 
-在原书中，将线性区的NMOS电流与速度饱和PMOS电流相等，再求本区域内的 $V_("out")$。
+原扫描在此处给出了两边的完整电流表达式，而不仅是工作区的名称：
+
+$ (W_N/L_N) (mu_n C_("ox")) /
+(1 + V_("out") / (E_("cN") L_N))
+[(V_("in") - V_("TN")) V_("out") - V_("out")^2 / 2]
+=
+(W_P v_("sat") C_("ox") (V_("DD") - V_("in") - abs(V_("TP")))^2) /
+((V_("DD") - V_("in") - abs(V_("TP"))) + E_("cP") L_P) $
+
+将 $V_("in")$ 的给定值代入上式，就能求出区域 IV 对应的 $V_("out")$；当 $V_("in")$ 接近 $V_("DD")-abs(V_("TP"))$ 时，PMOS 电流趋近于零。
 
 == 区域V：n-lin, p-off
 

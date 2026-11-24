@@ -1,10 +1,13 @@
 // SOURCE PDF PAGE 436 / printed page 417
 // Native editable equations and editorial captions; Fig B.3 geometry not yet reconstructed.
+#import "../figures/appendix-b-additional-native.typ": *
 #set document(title:"附录B 肖特基二极管图B.3、式B.3与Ebers-Moll · PDF436")
 = 附录 B · 印刷第417页
 == B.2　肖特基势垒二极管（续）
 
 图 B.3 是肖特基势垒二极管（Schottky barrier diode, SBD）的截面图：金属与轻掺杂 $n$ 型半导体构成整流接触，旁边通过 $n^+$ 区形成欧姆接触。正向偏置时，主要是多数载流子跨过金属—半导体势垒，因此少数载流子存储很小。
+
+#align(center)[#b3-schottky-section()]
 
 教材采用的电流—电压关系为：
 

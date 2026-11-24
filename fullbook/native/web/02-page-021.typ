@@ -1,13 +1,23 @@
-// SOURCE PDF PAGE 021 / printed page 2
-// Editable editorial excerpt: not complete verbatim transcription.
-#set document(title:"第1章：绪论续与集成电路产业历史")
-= 第1章 · 印刷第2页
-== 1.1 绪论（续）
-数字系统工程师常以 HDL 描述数字逻辑，并通过计算机辅助设计（CAD，computer-aided design）完成综合、时序分析和物理实现。SPICE（Simulation Program with Integrated Circuit Emphasis）则用于验证器件与电路的电气特性。
+// SOURCE PDF PAGE 021 / printed page 2.
+// Source-scan reconstructed original sequence: tradeoffs, MOS, CAD and SSI/MSI.
+// Editorial transcription; full text/glyph/line-spacing 1:1 still unverified.
+#set document(title:"第1章 · 绪论与集成电路产业历史开端 · PDF021")
+#set text(lang:"zh",size:7.45pt)
+#set par(justify:true,leading:2.2pt,spacing:4.4pt)
+#align(center)[#text(size:8pt,weight:"bold")[2　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
 
-深亚微米技术使电路尺寸不断缩小、晶体管数量增加，同时也给互连延迟、功率密度、噪声与模型精度带来新的要求。因此，设计者需要在理想门级模型和真实的模拟电压、电流行为之间建立联系。
+电路设计工程师的任务是设计能够实现所需逻辑功能的晶体管电路。制造时，操作的高可靠性和成本与性能（如时序、功耗和面积）之间的适当平衡十分重要。同样，设计要求当出现工艺变化、电源波动和环境条件改变时也能正确操作。随后的各章将深入讨论影响这些特性的微电子设计问题。设计中需要特别关注的是集成电路的时序和功耗之间的折中，因为当今的设计不是高速的就是低功耗的。
 
-== 1.2 集成电路产业的简要历史
-本节从集成技术的演进讨论数字集成电路设计的背景。技术发展不只是最小特征尺寸的缩小，还涉及制程、布线、建模方法与系统复杂度的改变。
+实际上，如今所有的数字系统都是基于集成电路技术的。设计中存在着各种各样的选择和折中，在电路类型、集成度（一个芯片上电路的数量）和可编程与固定功能（“硬连线”）的电路之间必须做出选择。当前使用的 IC 工艺技术多种多样，最普遍的工艺是金属-氧化物-半导体（MOS，metal-oxide-semiconductor）工艺。其他的工艺，譬如双极、GaAs 和 SiGe 也是可以使用的，但是它们只占整个市场份额中的一小部分。各种集成电路的工艺特性很不相同。在双极类型中，过去普遍使用的是晶体管-晶体管逻辑（TTL，transistor-transistor logic）和发射极-耦合逻辑（ECL，emitter-coupled logic）。近 20 年来，由于 MOS 技术的高集成度，集成电路工艺戏剧性地转向使用 MOS 技术。实际上，集成电路工艺与器件工程师每隔两到三年都会对这些工艺做出重要的改进。20 世纪 70 年代，n 沟道 MOS（NMOS）工艺是普遍采用的技术。自 1980 年以来，互补 MOS（CMOS）由于低功耗特征而成为主导的工艺技术。
 
-_本页对照原扫描页21的主题顺序；完整历史叙述、具体年份和脚注仍须逐项转写复核。_
+为了比较不同的电路类型（比如 NMOS 和 CMOS）之间的相关特征，需要对集成电路制造工艺有一定的理解。理解制造工艺的发展趋势对产品设计的改进是很重要的。进而，现代电路的设计需要很好地理解工艺中的统计变化。制造工艺和晶体管的结构在过去的 10 年中发生了不少变化，我们将进行探讨。虽然本书的目的不是要详细描述 IC 制造工艺，但为了理解 MOS 电路的版图和用模拟工具对这些电路进行分析时的重要参数来源，需要介绍当前所使用的基本工艺步骤。
+
+计算机辅助设计（CAD，computer-aided design）工具在数字集成电路的设计和分析中是必不可少的。我们将研究工业界中运用的具有代表性的工具类型，但主要集中于对单元库特性和定制 IC 设计极为重要的电路模拟方面。用于详细电路分析的主要工具是 SPICE。我们将花些时间来理解用于手工分析的 MOS 模型，并将其结果与电路模拟的结果进行比较，以验证手工分析的准确性。实际上，我们需要的模型不仅要能够适用于手工分析，而且还要能够精确地揭示实际电路操作的情况。详细的电路模拟可以检查第二级问题，并定位其他的第一级问题，如工艺、温度和电源变化等。
+
+== 1.2　集成电路产业的简要历史
+
+IC 产业开始于 20 世纪 60 年代末到 20 世纪 70 年代初的十微米（ten micron technology）工艺。这个工艺节点由能在芯片上印制的最小几何图形确定。我们把那个时代设计的电路称为小规模集成电路（SSI，small-scale integration）和中规模集成电路（MSI，medium-scale integration），这意味着在单块芯片上仅能集成几个门或者几百个门。大约每隔 3 年，工艺尺寸就会按比例缩小。
+
+#v(4pt)
+#text(size:6.3pt)[① SPICE 是 Simulation Program with Integrated Circuit Emphasis 的首字母缩略词，最初由加利福尼亚大学伯克利分校在 20 世纪 70 年代发展起来。]

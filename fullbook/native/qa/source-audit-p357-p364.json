@@ -82,11 +82,57 @@
       "wire_pF": 2,
       "driver_ohm": 125,
       "elmore_ns": 1.3
+    },
+    "chapter10_f04_interconnect": {
+      "technology_nm": [
+        350,
+        130,
+        65
+      ],
+      "fo4_ps": [
+        150,
+        40,
+        25
+      ],
+      "length_mm": [
+        1,
+        2,
+        3
+      ],
+      "delay_ps_by_nm": {
+        "65": [
+          116,
+          460,
+          1035
+        ],
+        "130": [
+          27,
+          110,
+          240
+        ],
+        "350": [
+          3,
+          12,
+          30
+        ]
+      },
+      "critical_length_um_at_180nm": 2500
     }
   },
   "limitations": [
     "Original page literal paragraphs and topology not fully 1:1",
     "Circuit figure10.4–10.10 fully editable functional drawings not original terminal-by-terminal geometries",
     "Source scan/Typst SVG optical overlay not run on these pages"
+  ],
+  "source_discrepancies": [
+    {
+      "pdf_page": 358,
+      "printed_page": 339,
+      "description": "Source prints R_wire = 0.054 Ω/sq × 1000 µm / 0.4 µm = 125 Ω, but those operands calculate to 135 Ω.",
+      "source_printed_ohms": 125,
+      "arithmetic_ohms": 135,
+      "downstream_source_delay_ps": 17.5,
+      "disposition": "Retain printed 125 Ω and 17.5 ps as scanned; document arithmetic mismatch as separate editorial note; not a full-page verification."
+    }
   ]
 }

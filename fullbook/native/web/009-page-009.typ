@@ -1,20 +1,20 @@
-// SOURCE PDF PAGE 009 / original printed p.8. Source-scan guided editable Chinese preface.
-// Text and heading hierarchy transcribed against source scan; exact 1:1 layout remains unaccepted.
-#set document(title:"《数字集成电路分析与设计》第三版前言 · 原书印刷第8页")
-#set text(lang:"zh",size:7.5pt)
-#show par: set par(leading:3pt,spacing:4.2pt)
-#v(38pt)
-#align(center)[#text(size:14pt,weight:"bold")[第三版前言]]
-#v(16pt)
-#text(size:9.5pt,weight:"bold")[第三版的目的]
+// SOURCE PDF PAGE 009 / printed page 8
+// Manually retranscribed against the supplied scan on 2026-11-08.
+// Body, bullet content and chronology checked; exact page composition not yet accepted.
+#set document(title: "第三版前言 · 原书扫描第9页")
+#set text(size: 7.4pt)
+#align(center)[#text(size: 14pt, weight: "bold")[第三版前言]]
+#v(12pt)
 
-自从 15 年前出版了本书的第二版之后，集成电路（IC, integrated circuit）工业发生了巨大的变革。最显著的趋势是 CMOS 作为主流 IC 工艺的出现。其他诸如 NMOS、双极和 GaAs 工艺由于功耗、集成度和费用等方面的原因都让位于 CMOS 工艺。CMOS 工艺中有大范围普及的工具、工艺和诀窍，因而在下一个 10 年中能够继续引领这一工业领域。
+== 第三版的目的
+
+自从 15 年前出版了本书的第二版之后，集成电路（IC，integrated circuit）工业发生了巨大的变革。最显著的趋势是 CMOS 作为主流 IC 工艺的出现。其他诸如 NMOS、双极和 GaAs 工艺由于功耗、集成度和费用等方面的原因都让位于 CMOS 工艺。CMOS 工艺中有大范围普及的工具、工艺和诀窍，因而在下一个 10 年中能够继续引领这一工业领域。
 
 第二个重要趋势是电路尺寸根据摩尔定律持续缩减。约在本书第二版出版时，集成电路工业的最小线条宽度达到了 1 μm。人们曾一度认为这是尺寸缩减的物理和心理极限。但是，人们很快认识到晶体管的最小尺寸可以做得远低于 1 μm，并由此引发亚微米时代的开端。从那时起，我们目睹了 6 代工艺缩减：0.8 μm、0.5 μm、0.35 μm、0.25 μm、0.18 μm 和 0.13 μm。
 
 大约在 0.35 μm 的工艺节点上进入了深亚微米时代，其中在晶体管和连线的特性方面产生了一些根本性的改变。器件经历了一些短沟道效应，其中最重要的可能是速度饱和。互连线开始控制设计的很多电学性质，比如延迟、噪声、功耗和可靠性等。作为结果，工艺从 0.18 μm 到 0.13 μm 的转变也触发了连线材料从铝到铜的大规模转变，从而减轻了这些新的互连问题。正是由于 IC 工业发生了这些基础变化，所以需要对本书进行全面修订。
 
-#text(size:9.5pt,weight:"bold")[在新版中有哪些内容]
+== 在新版中有哪些内容
 
 - 重点讨论 CMOS 工艺，将双极的材料放到附录中。
 - 内容基于 0.18 μm 和 0.13 μm CMOS 工艺。
@@ -29,6 +29,4 @@
 - 在附录 A 中提供了一个 SPICE 使用指南。
 - 本版本中删除了有关砷化镓的内容。
 
-伴随这些变化，在未来很多年内本书的新版都将是有价值的。
-
-#align(left)[#text(size:6.8pt)[• 8 •]]
+伴随这些变化，在未来很多年内本书的新版本都将是有价值的。

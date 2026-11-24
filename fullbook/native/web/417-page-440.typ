@@ -1,5 +1,6 @@
 // SOURCE PDF PAGE 440 / printed page 421
 // Source-checked BJT thresholds and Schottky clamped inverter explanation.
+#import "../figures/appendix-b-additional-native.typ": *
 #set document(title:"附录B 例：BJT门限及肖特基钳位反相器 · PDF440")
 = 附录 B · 印刷第421页
 == B.5　电压传输特性（续）
@@ -20,6 +21,8 @@ table.header([*断点*],[*输入电压*],[*输出电压*]),
 $ a_v = (Delta V_("out"))/(Delta V_("in")) quad "(B.5.5)" $
 
 == B.6　肖特基钳位反相器
+
+#align(center)[#b6-schottky-clamp()]
 
 图 B.6 描述肖特基势垒二极管跨接在 BJT 基极与集电极之间的结构。输入电压继续升高时，SBD 先导通并转移部分基极电流，限制晶体管进入深饱和，从而减少关断期间必须释放的少数载流子存储电荷。
 

@@ -1,10 +1,23 @@
 // SOURCE PDF PAGE 427 / printed page 408
 // Source-checked passive RLC and MOSFET connection syntax.
+#import "../figures/appendix-a-native.typ": *
 #set document(title:"附录A RLC与MOSFET元件语法 · PDF427")
 = 附录 A · 印刷第408页
 == A.3.3　电阻、电容和电感
 
 #raw("Rxxx n+ n- resistanceval\nCxxx n+ n- capacitanceval\nLxxx n+ n- inductanceval", block: true)
+
+原书紧接在这些元件行之后给出了各字段的说明，特别是必须把两个端点和数值放在正确位置：
+#table(columns:(1fr,3fr),inset:(x:3pt,y:1.6pt),stroke:none,
+  [`Rxxx`],[电阻的名称],
+  [`Cxxx`],[电容的名称],
+  [`Lxxx`],[电感的名称],
+  [`n+`],[正节点],
+  [`n-`],[负节点],
+  [`resistanceval`],[元件的电阻值],
+  [`capacitanceval`],[元件的电容值],
+  [`inductanceval`],[元件的电感值],
+)
 
 原书*图 A.7* 是由 $17 " MΩ"$ 电阻、$1.5 " fF"$ 电容和 $0.7 " mH"$ 电感串联组成的 RLC 电路，节点顺序为1、2、3、4。
 
@@ -16,6 +29,8 @@ table.header([*器件*],[*两端节点*],[*参数*]),
 [电容 Cin],[2—3],[1.5 fF],
 [电感 Lbig],[3—4],[0.7 mH],
 )
+
+#align(center)[#a7-rlc()]
 
 === MOSFET
 

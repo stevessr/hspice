@@ -1,13 +1,12 @@
-// SOURCE PDF PAGE 007 / original printed p.6. Translator's foreword, native editable text.
-// Source-scan guided transcription; typographic 1:1 acceptance is not yet claimed.
-#set document(title:"译者序 · 原书印刷第6页")
-#set text(lang:"zh",size:7.6pt)
-#show par: set par(leading:3.5pt,spacing:4.3pt)
-#v(49pt)
-#align(center)[#text(size:13.5pt,weight:"bold")[译　者　序]]
-#v(18pt)
+// SOURCE PDF PAGE 007 / printed page 6
+// Manually retranscribed against the supplied scan on 2026-11-08.
+// Text and reading order checked; font metrics, paragraph breaks and page geometry remain unverified.
+#set document(title: "译者序 · 原书扫描第7页")
+#set text(size: 7.5pt)
+#align(center)[#text(size: 14pt, weight: "bold")[译　者　序]]
+#v(13pt)
 
-集成电路的制造工艺水平基本按照摩尔定律不断提高，这种发展给集成电路的设计带来了很多新的变化。本书就是全面介绍深亚微米数字集成电路设计技术的一本优秀教材。书中以半导体器件物理的内容为基础，逐步阐述了深亚微米工艺中数字 IC 设计的关键问题。其内容包括器件模型和公式、基本门电路、静态与动态电路形式、存储器设计、互连线产生的效应和芯片中电源网格与时钟的分布等。介绍了最新的 CMOS 制造工艺以及相关的器件模型。书中的讨论主要是基于 0.18 μm 和 0.13 μm CMOS 工艺进行的，突出了深亚微米工艺中互连线带来的新问题及其对设计的影响。此外，还强调了 SPICE 模拟工具在电路设计中的应用。
+集成电路的制造工艺水平基本按照摩尔定律不断提高，这种发展给集成电路的设计带来了很多新的变化。本书就是全面介绍深亚微米数字集成电路设计技术的一本优秀教材。书中以半导体器件物理的内容为基础，逐步阐述了深亚微米工艺中数字 IC 设计的关键问题。其中内容包括器件模型和公式、基本门电路、静态与动态电路形式、存储器设计、互连线产生的效应和芯片中电源网格与时钟的分布等。介绍了最新的 CMOS 制造工艺以及相关的器件模型。书中的讨论主要是基于 0.18 μm 和 0.13 μm CMOS 工艺进行的，突出了深亚微米工艺中互连线带来的新问题及其对设计的影响。此外，还强调了 SPICE 模拟工具在电路设计中的应用。
 
 本书内容丰富全面，共分为 11 章。第 1 章是对深亚微米时代数字设计技术的透视，由此引出了随后各章的主题。第 2 章引入后面各章要用到的短沟道器件模型。第 3 章探讨集成电路设计过程中的制造、版图和模拟之间的关系。第 4 章介绍 MOS 数字反相器，引入了电压传输特性、噪声容限、反相器结构和简单时序计算、功耗计算的相关概念。第 5 章研究静态 NAND 门、NOR 门和其他复杂门的设计问题。第 6 章探讨高速逻辑设计中涉及的相关问题，为阶跃输入和斜坡输入的转变延迟计算建立了非常有用的公式。第 7 章讨论利用传输门和预充电逻辑的动态电路设计技巧。第 8 章论述半导体存储器的分析和设计。第 9 章探讨几种其他半导体存储器的体系结构、存取机制和单元构造。第 10 章深入研究深亚微米工艺中 IC 设计师所面临的互连问题。第 11 章讨论两个受互连控制的芯片级设计问题，即电源系统分配和时钟分配。此后，附录 A 简要介绍了电路模拟工具 SPICE 的使用，附录 B 介绍了双极晶体管和电路。
 
@@ -19,10 +18,10 @@
 
 由于译者水平有限，在翻译中难免有错误或不妥之处。真诚希望各位读者在阅读中发现错误时及时指正，以便我们能提高翻译的质量。我们的联系方式如下：
 
-#align(left)[#text(size:7.5pt,weight:"bold")[apjiang@ime.pku.edu.cn]
-#text(size:7.5pt,weight:"bold")[wangxa@szpku.edu.cn]]
+#text("apjiang@ime.pku.edu.cn")
 
-#align(right)[译者
-2005 年 8 月]
+#text("wangxa@szpku.edu.cn")
 
-#align(left)[#text(size:7pt)[• 6 •]]
+#align(right)[译者]
+
+#align(right)[2005 年 8 月]

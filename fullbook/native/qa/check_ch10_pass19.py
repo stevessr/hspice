@@ -36,4 +36,12 @@ assert a["source_text_discrepancy"]["printed"]=="0.0070 fF/μm"
 assert a["source_text_discrepancy"]["downstream_pdf370_uses"]=="0.070 fF/μm"
 f=(root/"figures/ch10-coupling-native.typ").read_text(encoding="utf-8")
 assert all(f"#let fig10{i}()" in f for i in range(11,20))
+for n,anchors in {
+  365: ('t_"segment"', 'N (C_G + C_J)', '10.8', '10.9', '10.10', '4X'),
+  371: ('10.4.2', '10.17', '10.18', '0.2～0.3', 'C_L'),
+  372: ('10.14', '10.15', '10.16', '3^2', '3^n', '1/S', '屏蔽', 'k'),
+}.items():
+    content=(root/"web"/f"{n-23}-page-{n}.typ").read_text(encoding="utf-8")
+    assert all(a in content for a in anchors), (n,[a for a in anchors if a not in content])
+print("Pass27: source-first segment delay, coupling switching states and shielding details retained.")
 print("Pass19 PDF365–372 source/figure/equation/numeric checks passed. Strict full-page accepted remains 0/445.")

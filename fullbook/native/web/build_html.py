@@ -20,10 +20,10 @@ if len(STATUS_BY_PAGE) != 445 or set(STATUS_BY_PAGE) != set(range(1,446)):
 SECTIONS = [
     ("001-page-001", "原书PDF1：封面书名与出版信息（扫描重排选段）", [1]),
     ("002-page-002", "原书PDF2：书名页、作者、译者与出版项（扫描重排选段）", [2]),
-    ("003-page-003", "原书PDF3：前置页机器OCR未校对", [3]),
+    ("003-page-003", "原书PDF3：内容简介、版权与CIP书目原生重排", [3]),
     ("004-page-004", "原书PDF4：前置页机器OCR未校对", [4]),
     ("005-page-005", "原书PDF5：前置页机器OCR未校对", [5]),
-    ("006-page-006", "原书PDF6：前置页机器OCR未校对", [6]),
+    ("006-page-006", "原书PDF6：教材出版委员会三栏可编辑原生排版", [6]),
     ("007-page-007", "原书PDF7：前置页机器OCR未校对", [7]),
     ("008-page-008", "原书PDF8：前置页机器OCR未校对", [8]),
     ("009-page-009", "原书PDF9：前置页机器OCR未校对", [9]),
@@ -508,6 +508,10 @@ def main():
             raise RuntimeError(f"HTML head not found: {dest}")
         if not re.search(r"<body(?:\\s|>)", html, re.I) or len(html) < 600:
             raise RuntimeError(f"Export missing its source content: {dest}")
+        if stem == "05-page-024":
+            missing = [word for word in ("图1.3", "NAND", "NOR", "反相器") if word not in html]
+            if missing or html.lower().count("<table") < 4 or "<svg" not in html.lower():
+                raise RuntimeError(f"Source PDF24 gate figures lost in semantic HTML: missing={missing}; tables={html.lower().count('<table')}; svg={'<svg' in html.lower()}")
         if stem == "03-page-026":
             missing = [token for token in ("图1.4", "图1.5", "触发器", "激励表") if token not in html]
             if missing or "<svg" not in html.lower() or "<table" not in html.lower():

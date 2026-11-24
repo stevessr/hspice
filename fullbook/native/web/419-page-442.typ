@@ -1,10 +1,13 @@
 // SOURCE PDF PAGE 442 / printed page 423
 // Editable 74-series TTL elements and chapter B.9 VTC introduction.
+#import "../figures/appendix-b-additional-native.typ": *
 #set document(title:"附录B 图B.7 TTL与非门电路及B.9特性 · PDF442")
 = 附录 B · 印刷第423页
 == B.8　双极数字门电路（续）
 
 *图 B.7(a)*：标准的两输入 TTL 与非门。原图的节点结构包括从5 V电源到多发射极输入管 $Q_1$ 的 $R_1$，电平转换器 $Q_2$，图腾柱上拉管 $Q_4$、下拉管 $Q_3$ 和钳位二极管 $D_1$。输出标注为 F，输入标注为 A 和 B。
+
+#align(center)[#b7-ttl-nand()]
 
 #table(columns:(1fr,1fr,2.5fr),inset:(x:3pt,y:2pt),
 table.header([*元件/参数*],[*原图值*],[*功能*]),

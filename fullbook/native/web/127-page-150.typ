@@ -1,6 +1,9 @@
 // SOURCE PDF PAGE 150 / printed 131
+// Restore full/approximated source current balances before equation (4.16).
 #set document(title:"第4章 · CMOS输入低门限与式4.16 · PDF150")
 = 第4章 · 印刷第131页
+
+承接上一页区域 V 的结论：当输入进一步增大到 $V_("DD")$ 时，输出仍保持在零电平。
 
 CMOS反相器的直流电流仅在 $V_("TN") < V_("in") < V_("DD")-abs(V_("TP"))$ 内明显流通，其他工作区稳态没有直流电流；峰值电流出现在两器件同时饱和的区域III。
 
@@ -10,7 +13,25 @@ CMOS反相器的直流电流仅在 $V_("TN") < V_("in") < V_("DD")-abs(V_("TP"))
 
 $ I_("DN")("sat") = I_("DP")("lin") $
 
-代入本书的器件模型，并利用 $V_("in")-V_("TN")$ 比 $E_("cN")L_N$ 小、$V_("DD")-V_("out")$ 比 $E_("cP")L_P$ 小的近似：
+先代入本书的速度饱和器件模型，得到原扫描页给出的完整电流关系：
+
+$ (W_N v_("sat") C_("ox") (V_("in") - V_("TN"))^2) /
+((V_("in") - V_("TN")) + E_("cN") L_N)
+=
+(W_P/L_P) (mu_p C_("ox")) /
+(1 + (V_("DD") - V_("out")) / (E_("cP") L_P))
+[(V_("DD") - V_("in") - abs(V_("TP"))) (V_("DD") - V_("out"))
+- (V_("DD") - V_("out"))^2 / 2] $
+
+在 $V_("in")=V_("IL")$ 附近，原书认为 NMOS 分母中的 $V_("in")-V_("TN")$ 相对 $E_("cN")L_N$ 很小；由于 $V_("out")$ 接近 $V_("DD")$，PMOS 的 $(V_("DD")-V_("out"))/(E_("cP")L_P)$ 也很小，故近似忽略两项：
+
+$ (W_N v_("sat") C_("ox") (V_("in") - V_("TN"))^2) / (E_("cN") L_N)
+=
+(W_P/L_P) mu_p C_("ox")
+[(V_("DD") - V_("in") - abs(V_("TP"))) (V_("DD") - V_("out"))
+- (V_("DD") - V_("out"))^2 / 2] $
+
+再由 $v_("sat")=mu_n E_("cN")/2$ 化简，得到教材编号（4.16）的电流平衡式：
 
 $ (W_N/L_N) mu_n C_("ox")/2 (V_("in")-V_("TN"))^2 = $
 $ (W_P/L_P) mu_p C_("ox") [
