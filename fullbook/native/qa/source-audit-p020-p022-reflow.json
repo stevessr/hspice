@@ -1,0 +1,38 @@
+{
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "source_pdf_pages": 445,
+  "scope": [
+    20,
+    22
+  ],
+  "scan_method": "PyMuPDF get_pixmap(matrix=Matrix(2,2), alpha=False).save PNG",
+  "review_date": "2026-11-24",
+  "source_page_size_pt": [
+    506.8346,
+    729.6
+  ],
+  "pages": [
+    {
+      "pdf_page": 20,
+      "printed_page": 1,
+      "reference_scan_sha256": "9034121a83821b506887a937c6d4c31af1e89e06ad4ee81822248fdd2a529643",
+      "corrections": "恢复提要星标、脚注引用和跨页末行；依据扫描版心调整章首位置。",
+      "strictly_accepted": false
+    },
+    {
+      "pdf_page": 21,
+      "printed_page": 2,
+      "reference_scan_sha256": "bfcc59fc09311e930d66d1b6a22c81bc98533a11f551d1f92c196022448f74f7",
+      "corrections": "恢复跨页起句、s 缩放因子及 SPICE 脚注；调整页眉、版心和字号。",
+      "strictly_accepted": false
+    },
+    {
+      "pdf_page": 22,
+      "printed_page": 3,
+      "reference_scan_sha256": "bbeb7e6fafe4bec4ef9fc562e4713b7e5ce1e7b5869d675b8046b832b05a3c94",
+      "corrections": "纠正二次镶嵌、处理能力及集成数量表述；调整页眉与版心。",
+      "strictly_accepted": false
+    }
+  ],
+  "limitations": "Original scan inspected visually; source typography approximated, not independently verified by render overlay. No full-page acceptance claimed."
+}
