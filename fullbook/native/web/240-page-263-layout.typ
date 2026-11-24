@@ -1,7 +1,6 @@
-// PDF 263: editable source-size Typst draft; exact source verification incomplete
-#set page(width:506.8346pt,height:729.6pt,margin:(top:33pt,bottom:24pt,left:44pt,right:43pt))
-#set text(font:("Noto Serif CJK SC","DejaVu Serif"),size:9.3pt,lang:"zh")
-#set par(justify:true,first-line-indent:1.7em,leading:4.5pt,spacing:5pt)
-#show heading.where(level:2):set text(font:"Noto Sans CJK SC",size:11pt,weight:"bold")
-#show heading.where(level:3):set text(font:"Noto Sans CJK SC",size:10pt,weight:"bold")
+// SOURCE PDF 263, printed 244; native editable, no 1:1 acceptance.
+#set page(width:506.8346pt,height:729.6pt,margin:(top:35pt,bottom:24pt,left:44pt,right:44pt))
+#set text(font:("Noto Serif CJK SC","DejaVu Serif"),size:9.4pt,lang:"zh")
+#set par(justify:true,first-line-indent:1.7em,leading:4.3pt,spacing:4.7pt)
+#show heading.where(level:2):set text(font:"Noto Sans CJK SC",size:11.5pt,weight:"bold")
 #include "240-page-263.typ"

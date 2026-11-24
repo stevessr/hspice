@@ -1,0 +1,107 @@
+{
+  "schema": "ch10-end-ch11-power-source-pass21",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    381,
+    388
+  ],
+  "source_render": "pdftoppm 105dpi PNG individual page files, visually inspected; SHA256 values below",
+  "strict_full_pages_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 381,
+      "source_render_sha256": "7d755b65bf31fde7ddea6cafa1ead4432f46f19112b6eca30e8d10f139091027",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 382,
+      "source_render_sha256": "0315b23186b3f48f0c58a647c759d62c010fce8ed6f619c9e0d96ec9c2930f52",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 383,
+      "source_render_sha256": "eca96153ac9e0cf09d33f7ef340875908bcd0098abb6b4214a643ae2dd7cc2be",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 384,
+      "source_render_sha256": "da965b030e150d1e8df68c9c137bb03effae92363e21fc3a06cc24832cb91255",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 385,
+      "source_render_sha256": "a7a2c2f248c51f83b7d3c58f4118b9b6154b8c8b6d982df644d84da17480ea0c",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 386,
+      "source_render_sha256": "9b2963d100b45a3d18f053556409ea438628e0a07257bf6b60e2eb3a18660009",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 387,
+      "source_render_sha256": "9ef8006628f1b8e05053bcd2bca2a09d971a3443063b85f57faecdabb2f91737",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 388,
+      "source_render_sha256": "37d15467942c5d8e15ef6d927625517d6d85d9126695e8fc19dbf6ec7e2b5617",
+      "typst_native_partial": true,
+      "full_page_accepted": false
+    }
+  ],
+  "milestones": {
+    "chapters": [
+      "10 conclusion",
+      "11 power distribution introduction"
+    ],
+    "exercises": [
+      "P10.1",
+      "P10.2",
+      "P10.3",
+      "P10.4",
+      "P10.5",
+      "P10.6",
+      "P10.7",
+      "P10.8",
+      "P10.9",
+      "P10.10",
+      "P10.11",
+      "P10.12"
+    ],
+    "figure_numbers": [
+      "10.28",
+      "P10.4",
+      "P10.5",
+      "P10.6",
+      "P10.8",
+      "11.1",
+      "11.2"
+    ],
+    "formulas": [
+      "11.1",
+      "11.2"
+    ],
+    "reference_values": {
+      "target_impedance_milliohm": 1.2,
+      "vdd_v": 1.2,
+      "idd_a": 100,
+      "noise_pct": 10,
+      "wire_length_mm": 18,
+      "driving_factor": 25
+    }
+  },
+  "limitations": [
+    "Instructional source excerpts are not verbatim scanned prose",
+    "Native circuits are simplified draft and not original graph geometry",
+    "Full-page fidelity audit unchanged 0/445"
+  ]
+}

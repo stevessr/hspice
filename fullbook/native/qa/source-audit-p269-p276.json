@@ -1,0 +1,92 @@
+{
+  "schema": "source-scan-native-ch7-p269-p276",
+  "source_pdf_pages": 445,
+  "scope": [
+    269,
+    276
+  ],
+  "scan": "uploaded Chinese 445-page source PDF, rendered at 2x via PyMuPDF",
+  "archived_text": "original OCR draft raw_text/page-xxx.txt; scanned figures/equations manually reviewed",
+  "independent_second_ocr": "not_completed",
+  "strict_full_pages_accepted": 0,
+  "known_fidelity_gaps": [
+    "native MOS/TG diagrams provisional; source-node topology and caption positions not completely 1:1",
+    "text has not had full punctuation-by-punctuation proofreading",
+    "font, leading and page composition require source-vs-SVG overlay and signoff"
+  ],
+  "pages": [
+    {
+      "pdf_page": 269,
+      "source_scan_png_sha256": "5c80fc2c4ff8028faf0af4ee9be8fa2a53dd8d77401c68583f3600856402d552",
+      "archived_ocr_characters": 668,
+      "editable_typst_draft": true,
+      "formula_spotcheck": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 270,
+      "source_scan_png_sha256": "88731a9e0c9e8e7b65c7b547770c371f0aa429cafe0648c950ed8d3a49ec06ba",
+      "archived_ocr_characters": 1129,
+      "editable_typst_draft": true,
+      "formula_spotcheck": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 271,
+      "source_scan_png_sha256": "e90382f98f489ff963cebd401cea64001d8896eb4d2239a63ef5cfaf74c45989",
+      "archived_ocr_characters": 880,
+      "editable_typst_draft": true,
+      "formula_spotcheck": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 272,
+      "source_scan_png_sha256": "7eba278b22dd6bae63f9808f86e4e970ad0a610c6bd6ecac12094cf56969dfa5",
+      "archived_ocr_characters": 866,
+      "editable_typst_draft": true,
+      "formula_spotcheck": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 273,
+      "source_scan_png_sha256": "5b8b11f1cf84d6c644d175de1c5b90e5120009c776973edc6da41994c5e34f6d",
+      "archived_ocr_characters": 1342,
+      "editable_typst_draft": true,
+      "formula_spotcheck": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 274,
+      "source_scan_png_sha256": "219e0d11b6f26c2c63a70a0bd0a6b7e55450c7e71c6e8a7738b3aab4e6ab0e0c",
+      "archived_ocr_characters": 821,
+      "editable_typst_draft": true,
+      "formula_spotcheck": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 275,
+      "source_scan_png_sha256": "e18446fbe25cccdb1a79cd7246bc0c6177e849705d4b901b32f161244ca5ee1d",
+      "archived_ocr_characters": 1599,
+      "editable_typst_draft": true,
+      "formula_spotcheck": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 276,
+      "source_scan_png_sha256": "50ac862d3ae9323f4b17619ea407e5a420a16d647d36ea31c621dbf318a91394",
+      "archived_ocr_characters": 953,
+      "editable_typst_draft": true,
+      "formula_spotcheck": true,
+      "full_page_accepted": false
+    }
+  ],
+  "manual_equation_checks": [
+    "7.10 Cin=Cout=Ceff(Wn+Wp)+1/2(CgWn+CgWp)",
+    "7.11 Cin=Cout=2WCeff+WCg",
+    "Elmore R1C1+(R1+R2)C2 and MUX three-stage formula",
+    "Example7.4 C1=5Ceff+Cg, C2=6Ceff+2Cg, C3=4Ceff+Cg+3fCg; t1/RW=29Ceff+8Cg+9fCg",
+    "Example7.4 t2/RW=21Ceff+3Cg+6fCg",
+    "TG LE A/sel: 2 and 2/3; at 3X: 4/3 and 4/3",
+    "Example7.5 gate A,sel: 8/3,2/3 vs 5/3,5/3"
+  ]
+}

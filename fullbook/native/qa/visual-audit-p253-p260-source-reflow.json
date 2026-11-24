@@ -1,0 +1,134 @@
+{
+  "schema": "scan-vs-svg-p253-p260-second-reflow-v1",
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    253,
+    260
+  ],
+  "before_source_revision_run_id": 42384916651,
+  "current_source_revision_run_id": 42432604109,
+  "comparison_method": {
+    "scale": 1.25,
+    "greyscale_threshold": 190,
+    "tolerance_pixels": 2,
+    "precision_recall": "dilated two-way pixel foreground matches",
+    "supports_semantic_acceptance": false
+  },
+  "previous_mean_f1": 0.31911,
+  "current_mean_f1": 0.42725,
+  "previous_mean_excluding_gray_page254": 0.31871,
+  "current_mean_excluding_gray_page254": 0.36884,
+  "strict_accepted_full_pages": 0,
+  "pages": [
+    {
+      "pdf_page": 253,
+      "prior_f1": 0.35727,
+      "current_f1": 0.31997,
+      "delta": -0.0373,
+      "accepted": false,
+      "not_verified": [
+        "all original words and punctuation",
+        "electrical connectivity and transistor source/drain/gate polarity",
+        "original figure and equation geometry",
+        "full page exact typography and sign-off"
+      ]
+    },
+    {
+      "pdf_page": 254,
+      "prior_f1": 0.32187,
+      "current_f1": 0.83611,
+      "delta": 0.51424,
+      "accepted": false,
+      "not_verified": [
+        "all original words and punctuation",
+        "electrical connectivity and transistor source/drain/gate polarity",
+        "original figure and equation geometry",
+        "full page exact typography and sign-off"
+      ]
+    },
+    {
+      "pdf_page": 255,
+      "prior_f1": 0.27286,
+      "current_f1": 0.31415,
+      "delta": 0.04129,
+      "accepted": false,
+      "not_verified": [
+        "all original words and punctuation",
+        "electrical connectivity and transistor source/drain/gate polarity",
+        "original figure and equation geometry",
+        "full page exact typography and sign-off"
+      ]
+    },
+    {
+      "pdf_page": 256,
+      "prior_f1": 0.45044,
+      "current_f1": 0.4656,
+      "delta": 0.01516,
+      "accepted": false,
+      "not_verified": [
+        "all original words and punctuation",
+        "electrical connectivity and transistor source/drain/gate polarity",
+        "original figure and equation geometry",
+        "full page exact typography and sign-off"
+      ]
+    },
+    {
+      "pdf_page": 257,
+      "prior_f1": 0.25685,
+      "current_f1": 0.40023,
+      "delta": 0.14338,
+      "accepted": false,
+      "not_verified": [
+        "all original words and punctuation",
+        "electrical connectivity and transistor source/drain/gate polarity",
+        "original figure and equation geometry",
+        "full page exact typography and sign-off"
+      ]
+    },
+    {
+      "pdf_page": 258,
+      "prior_f1": 0.32789,
+      "current_f1": 0.33093,
+      "delta": 0.00304,
+      "accepted": false,
+      "not_verified": [
+        "all original words and punctuation",
+        "electrical connectivity and transistor source/drain/gate polarity",
+        "original figure and equation geometry",
+        "full page exact typography and sign-off"
+      ]
+    },
+    {
+      "pdf_page": 259,
+      "prior_f1": 0.28831,
+      "current_f1": 0.38068,
+      "delta": 0.09237,
+      "accepted": false,
+      "not_verified": [
+        "all original words and punctuation",
+        "electrical connectivity and transistor source/drain/gate polarity",
+        "original figure and equation geometry",
+        "full page exact typography and sign-off"
+      ]
+    },
+    {
+      "pdf_page": 260,
+      "prior_f1": 0.27739,
+      "current_f1": 0.37035,
+      "delta": 0.09296,
+      "accepted": false,
+      "not_verified": [
+        "all original words and punctuation",
+        "electrical connectivity and transistor source/drain/gate polarity",
+        "original figure and equation geometry",
+        "full page exact typography and sign-off"
+      ]
+    }
+  ],
+  "caveats": [
+    "PDF254 has a large filled grey chapter-summary panel. At threshold190, matching panel area dominates foreground F1; score 0.83611 is not 83.6% text accuracy.",
+    "PDF253 regresses from 0.35727 to 0.31997 despite expanded literal text; keep as open issue.",
+    "Native Chapter7 gate diagrams are editable teaching schematics; neither source transistor terminals nor all output arrow geometry have been finally signed off.",
+    "F1 does not represent a completion percentage. Entire 445-page source still has zero certified full pages."
+  ]
+}

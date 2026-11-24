@@ -30,7 +30,7 @@ permissions:
   actions: read
 
 concurrency:
-  group: vitepress-pages-${{ github.ref }}
+  group: vitepress-pages-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -43,7 +43,7 @@ jobs:
        github.event.workflow_run.head_branch == 'main' &&
        github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -62,13 +62,43 @@ jobs:
             study/midterm/node_modules
           key: vitepress-node22-${{ runner.os }}-${{ hashFiles('study/midterm/package.json') }}
 
+      - name: Test online Typst editor validation and dependency graph
+        run: node --test study/midterm/scripts/native-review.test.mjs
+
+      - name: Generate and test textbook figure quick-reference
+        run: |
+          python3 study/midterm/scripts/test_figure_index.py
+          python3 study/midterm/scripts/build_figure_index.py
+
+      - name: Test active recall card scheduling and browsing
+        run: node --test study/midterm/scripts/formula-review-core.test.mjs
+
+      - name: Generate and test unified formula revision index
+        run: |
+          python3 study/midterm/scripts/test_revision_formulas.py
+          python3 study/midterm/scripts/build_revision_formulas.py
+
+      - name: Validate textbook glossary and data sheets
+        run: python3 study/midterm/scripts/check_reference.py
+
+      - name: Check textbook MOS symbols and conduction truth tables
+        run: |
+          python3 study/midterm/scripts/test_mos_symbols.py
+          python3 study/midterm/scripts/test_mos_netlists.py
+
       - name: Validate Markdown and image references
         run: python3 study/midterm/scripts/validate.py
+
+      - name: Test browser circuit analysis models
+        run: node --test study/midterm/scripts/test-review-lab.mjs
 
       - name: Install VitePress
         if: steps.node-cache.outputs.cache-hit != 'true'
         working-directory: study/midterm
         run: npm install --no-audit --no-fund --prefer-offline
+
+      - name: Render formula cards as MathJax SVG (offline)
+        run: node study/midterm/scripts/render_revision_formulas.mjs
 
       - name: Copy original experiment PDFs
         shell: bash
@@ -143,6 +173,9 @@ jobs:
         uses: typst-community/setup-typst@v5
         with:
           typst-version: ^0.15.0
+        continue-on-error: true
+      - name: Ensure Typst 0.15.1 via official OCI fallback
+        run: bash .github/scripts/ensure-typst.sh 0.15.1
 
       - name: Install CJK fonts with bounded mirror wait
         timeout-minutes: 4
@@ -156,7 +189,28 @@ jobs:
       - name: Export reviewed native Typst sections to semantic HTML
         run: python3 fullbook/native/web/build_html.py --output study/midterm/public/native-typst
 
-      - name: Export all 249 source-sized Typst page SVG previews
+      - name: Publish layout wrappers and native figure sources for in-browser Typst compilation
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil
+          dest = Path('study/midterm/public/native-typst')
+          wrappers = list(Path('fullbook/native/web').glob('*-page-*-layout.typ'))
+          assert len(wrappers) == 445, len(wrappers)
+          for src in wrappers:
+              shutil.copy2(src, dest / src.name)
+          figures = Path('fullbook/native/figures')
+          count = 0
+          for src in figures.rglob('*.typ'):
+              target = dest / 'figures' / src.relative_to(figures)
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copy2(src, target)
+              count += 1
+          assert count > 0
+          print(f'Published {len(wrappers)} layout wrappers and {count} figure libraries')
+          PY
+
+      - name: Export all 445 source-sized Typst page SVG previews
         shell: bash
         run: |
           set -euo pipefail
@@ -176,6 +230,11 @@ jobs:
           python3 fullbook/native/qa/check_ch4_end.py
           python3 fullbook/native/qa/check_ch5_gates.py
           python3 fullbook/native/qa/check_ch5_complex_sequential.py
+          python3 fullbook/native/qa/check_ch5_source_p179_p182.py
+          python3 fullbook/native/qa/check_ch5_source_p183_p186.py
+          python3 fullbook/native/qa/check_ch11_pass24.py
+          python3 fullbook/native/qa/check_ch11_pass25.py
+          python3 fullbook/native/qa/check_ch11_pass26.py
           for source in fullbook/native/web/*-page-*-layout.typ; do
             stem="$(basename "${source%-layout.typ}")"
             target="study/midterm/public/native-typst/${stem}-layout.svg"
@@ -192,7 +251,9 @@ jobs:
           data=json.loads((root/'index.json').read_text(encoding='utf-8'))
           assert data['format']=='native-typst-html'
           assert data['accepted_full_pages']==0
-          assert len(data['items'])==251
+          assert len(data['items'])==447
+          assert len(list(root.glob('*-page-*-layout.typ'))) == 445
+          assert list((root/'figures').rglob('*.typ'))
           ids=set()
           for item in data['items']:
               assert item['id'] not in ids,item
@@ -202,7 +263,7 @@ jobs:
               assert (root/item['typst']).is_file(),item
               if '-page-' in item['id']:
                   assert (root/(item['id']+'-layout.svg')).is_file(),item
-          print(f'Validated {len(ids)} Typst HTML selections and 249 editable page SVGs')
+          print(f'Validated {len(ids)} Typst HTML selections and 445 editable page SVGs')
           PY
       - name: Publish strict 1-to-1 fidelity status (metadata only)
         run: |
@@ -235,6 +296,8 @@ jobs:
             exit 1
           fi
           test -s study/midterm/.vitepress/dist/native-workbench.html
+          test -s study/midterm/.vitepress/dist/native-typst/05-page-024-layout.typ
+          test -s study/midterm/.vitepress/dist/native-typst/figures/gate-symbols.typ
           test -s study/midterm/.vitepress/dist/native-fidelity.json
           test -s study/midterm/.vitepress/dist/native-typst.html
           test -s study/midterm/.vitepress/dist/native-typst/01-gates-noise-delay.html

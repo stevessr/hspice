@@ -1,0 +1,86 @@
+{
+  "schema": "chapter9-cam-fpga-editable-pass15",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    325,
+    332
+  ],
+  "source_raster": "PyMuPDF 1.3x RGB PNG",
+  "strict_full_pages_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 325,
+      "source_scan_sha256": "85f9ed1a5e36bf437b4ef7f473ab0b1268c6f9e30ee383f9ff7b8739c4857f0f",
+      "machine_ocr_sha256": "c345f788039d2f673728ff511e4ea3f381954c0670869280e737c3ff08f4ce0a",
+      "partial_typst": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 326,
+      "source_scan_sha256": "6a996e8f89ec148903ecd945397aa2531b0065c9352b7eaf3877ea7b16ffe9c3",
+      "machine_ocr_sha256": "757cbb52d72a2d58273f078ad7314e590f3de7c3ac1067470758ba4b6c2b746f",
+      "partial_typst": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 327,
+      "source_scan_sha256": "32ac8b3344ba2b635800a46d233583cd583d55cb83cc08ef383d1088457627b7",
+      "machine_ocr_sha256": "da65aef31461203c7430a6eb89755c8b0aeb4f0cbb2346bb16ba20ce921dc205",
+      "partial_typst": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 328,
+      "source_scan_sha256": "d4a45c3349617b0645572b6f146903c840a9e18123f5064445798fe2f156e697",
+      "machine_ocr_sha256": "848a0ab1abae81f87089b5e98bfc9354c296ab29a77e9eac2d3de2f4a9c93cac",
+      "partial_typst": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 329,
+      "source_scan_sha256": "4e41d0c4598ad5ce5a3bc76d5ae59997e971515ed9d4ee8ef5974291fd3dad5e",
+      "machine_ocr_sha256": "fa872d5ec43ebb6d21fbdf759c737d2f5a23d037738439590a157ad6111f5221",
+      "partial_typst": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 330,
+      "source_scan_sha256": "b3cc245857fca2da6295f124fd1e4198f0240d69d2672725dc82caf43247f800",
+      "machine_ocr_sha256": "e8d287d90c7414e9a620ef8c43d61630da996cdf5af7bd33ba297debd192615c",
+      "partial_typst": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 331,
+      "source_scan_sha256": "c4ef7ca2aa6c920c8f292183f0161b813defe74c4182bdf83fdbef005cca1da3",
+      "machine_ocr_sha256": "ab920d3001cfbcf24186c6d1408fe47625987418a6bbfb11c92cfe0af1acb587",
+      "partial_typst": true,
+      "full_page_accepted": false
+    },
+    {
+      "pdf_page": 332,
+      "source_scan_sha256": "5ceb0a1c944c501eafe0f3d84679a257e93eb12261ebec60ce3bee0ecb8a1b40",
+      "machine_ocr_sha256": "6b38555fbb890ef74cd2e3d0e0d27e4bdca5e0e1902a45b69d8986101b540699",
+      "partial_typst": true,
+      "full_page_accepted": false
+    }
+  ],
+  "math": {
+    "tag_fF": 450,
+    "in_fF": 3,
+    "ratio": 150,
+    "stages": 4,
+    "stage_effort": 3.5,
+    "tau_ps": 15,
+    "tag_delay_ps": 240,
+    "match_res_kOhm": 1.6,
+    "match_fF": 200,
+    "match_delay_ps": 320,
+    "total_ps": 560
+  },
+  "unresolved": [
+    "MOS and FPGA physical circuit connections are conceptual editable drafts only",
+    "Full-page text, figures and layout have not passed source scan pixel and character comparison"
+  ]
+}

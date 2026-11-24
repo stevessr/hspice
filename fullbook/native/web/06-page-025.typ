@@ -1,28 +1,37 @@
-// SOURCE PDF PAGE 025 / printed page 6
-// Editable editorial excerpt with independently inspectable mathematical syntax.
-#set document(title:"第1章：布尔代数、XOR与MUX")
-= 第1章 · 印刷第6页
-== 1.3.1 基本的逻辑函数（续）
-原书以和项之积、积项之和说明等价布尔表达式。对变量 $A,B,C,D$，教材给出的示例包含：
+// SOURCE PDF PAGE 025 / printed p.6 / canonical Boolean forms and De Morgan.
+// Scan-guided editable textual reconstruction and equation 1.1.
+// No false full-page layout or glyph acceptance.
+#set document(title:"第1章 · 布尔函数、XOR、MUX、De Morgan定律 · PDF025")
+#set text(lang:"zh",size:7.45pt)
+#set par(justify:true,leading:2.25pt,spacing:4pt)
+#align(center)[#text(size:8pt,weight:"bold")[6　数字集成电路分析与设计——深亚微米工艺（第三版）]]
+#line(length:100%,stroke:.55pt)
+
+逻辑函数通常使用两种规范形式中的一种来表示：积之和形式以及和之积形式。例如，一个积之和表示法采用如下的形式：
 
 $ F = A C + B C + A D + B D $
+
+这个函数的和之积表示法则采用下面的形式：
+
 $ F = (A+B)(C+D) $
 
-异或函数仅在两个输入取值不同时输出逻辑 1：
+和函数总是用符号“+”来表示；积函数可以用“\*”或者“·”来表示，也可以完全将其省略。特别地，我们将使用积之和的形式，但是这两种表示法都是很有用的。其他有用的组合门，例如异或（XOR）、同或（XNOR）和多路选择器（MUX），都可以使用图 1.3 所示的基本逻辑门轻易地实现。例如，异或门具有如下的功能：
 
-$ F = A xor B = overline(A) B + A overline(B) $
+$ F = A xor B = A overline(B) + overline(A) B $
 
-二选一选择器根据选择信号 $S$ 决定输出。当 $S=0$ 时选择 $B$，当 $S=1$ 时选择 $A$：
+字母上面有一条横线表示该变量的反变量。假设只有 A 和 B 可以作为输入，那么这个函数可以利用两个与非门、一个或非门和 5 个反相器来实现。另一种更有效的实现是使用 3 个与非门和 2 个反相器。
+
+多路选择器重要的是选择输入 $S$ 的不同选择值决定对特定输入 $A$ 或 $B$ 的选择：
 
 $ F = A S + B overline(S) $
 
-=== 德摩根定律（原书式1.1）
-$ overline(A+B) = overline(A) dot overline(B) $
-$ overline(A dot B) = overline(A) + overline(B) $
+另一个常用的电路功能是缓冲器，它是一个输出与输入相同的门。使用图 1.3 中的门，我们将用两级反相器来实现这种功能。对于缓冲器有两种可能的符号，如图 1.4 所示。既然这种门的功能是执行一个缓冲操作，我们就在逻辑电路中以某种方式反映这一点。可以使用一个缓冲器的符号来表示，也可以用两个级连的反相器并在第二个反相器的前面（不是后面）加一个小圆圈（如图 1.4 所示）来表示。简单地使用两个反相器级连可能会在后面的设计过程中引起混淆。
 
-这两个式子说明，适当变更门级反相逻辑后，可以通过 NAND、NOR 网络实现多种组合函数。
+同样，根据小圆圈放置位置的不同，与非门和或非门也有两种可能的表示法，如图 1.4 所示。这两种表示法可以通过摩根定律（DeMorgan's Laws）来构造。根据摩根定律，这两种门的最基本形式可以表示为：
 
-=== 后续图示
-原扫描在图 1.4 与图 1.5 中继续介绍缓冲器、三输入 NAND/NOR、异或/同或符号、二选一多路选择器以及上升沿触发 D 触发器。
+$ overline(a+b) = overline(a) dot overline(b) $
+$ overline(a dot b) = overline(a) + overline(b) quad "(1.1)" $
 
-_此页为公式与主题的原生 Typst 校对稿；未宣称原书整页文字和图形已复刻完成。_
+通常，摩根定律规定，一个函数的反函数可以通过将这个函数的每个变量和元素用其反变量来代替，然后再互换 NAND 和 NOR 这两个操作得到。这同样告诉我们，可以使用两种方法表示 NOR 门和 NAND 门，如图 1.4 所示。两组对应门的功能是一样的。
+
+哪一种表示法更好呢？这取决于门所要实现的功能。如果这个函数的目的是要执行逻辑“AND”的操作，那么设计者应当使用输入端带小圆圈的 AND 函数（而不是 NOR 函数）；如果这个函数的目的是要执行逻辑“OR”的操作，那么设计者应当使用输入端带小圆圈的 OR 函数（而不是 NAND 函数）。如果想得到的逻辑功能同实际的逻辑描述看起来并不相同，那么想象一下调试时会出现什么样的混乱。为了避免这种混乱，我们通常使用能够代表设计意图的门表示法。

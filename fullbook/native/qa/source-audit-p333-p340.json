@@ -1,0 +1,90 @@
+{
+  "schema": "chapter9-dram-rom-source-scan-pass16",
+  "source_pdf_pages": 445,
+  "source_pdf_sha256": "9ef22a54a6813c640e9130f82e8e7e3d838d5eb0d31527e7dfbee9fb47970427",
+  "scope": [
+    333,
+    340
+  ],
+  "source_render": "PyMuPDF 2.0x RGB PNG",
+  "strict_full_pages_accepted": 0,
+  "pages": [
+    {
+      "pdf_page": 333,
+      "source_render_sha256": "3e919f7a640058054ef2bb9d6d53957eb700a8c0883b0917fe4a940006e69ba1",
+      "initial_ocr_sha256": "183f987beed334f89ad5fc28efc5d6ff9b36e0d86b5b4a765ec85f4e531ce717",
+      "edited_native_typst": true,
+      "full_page_accepted": false,
+      "figure_topology_verified": false
+    },
+    {
+      "pdf_page": 334,
+      "source_render_sha256": "f18a557316074f3317d68c2afea043a03ac7cbb288940ad2bf46af215956cbeb",
+      "initial_ocr_sha256": "3c8b6755473394d43e635b14c80f3373c953503e8b6b7829e03fe9929b9e616d",
+      "edited_native_typst": true,
+      "full_page_accepted": false,
+      "figure_topology_verified": false
+    },
+    {
+      "pdf_page": 335,
+      "source_render_sha256": "57c946bb2319839e0fe5e451daeb6ef90aa14bd57e00a8a602e5a1bd4bf4309e",
+      "initial_ocr_sha256": "8bfeefdb9f733728711c01809f8421ee888eef1de563c77b523706378f366a10",
+      "edited_native_typst": true,
+      "full_page_accepted": false,
+      "figure_topology_verified": false
+    },
+    {
+      "pdf_page": 336,
+      "source_render_sha256": "beee628b657aaf72db7b3b8e254e27973c14ff65a1ad406e50ee716b50b7da75",
+      "initial_ocr_sha256": "a12d9d7ed5a660d90a34c9193a91d18cee2cad5bdbaba214b116e2f2cee26bf4",
+      "edited_native_typst": true,
+      "full_page_accepted": false,
+      "figure_topology_verified": false
+    },
+    {
+      "pdf_page": 337,
+      "source_render_sha256": "9d51fce42d839c09bdea42f90f3f0bcc14634d8b7106682c685b77ea2027262e",
+      "initial_ocr_sha256": "1b057d911e3f1e128673ce958231812e6e2898f396eecfd6b23edb98d8f1b115",
+      "edited_native_typst": true,
+      "full_page_accepted": false,
+      "figure_topology_verified": false
+    },
+    {
+      "pdf_page": 338,
+      "source_render_sha256": "7ad8e1162efcc8520acbf84118234351f4cc50fd1f9b5d24d092a873708d11bf",
+      "initial_ocr_sha256": "799021efb0ad07f6b29bcc8a86aa3674c81dd14414b5302fb4e29c0d159d001b",
+      "edited_native_typst": true,
+      "full_page_accepted": false,
+      "figure_topology_verified": false
+    },
+    {
+      "pdf_page": 339,
+      "source_render_sha256": "d97c3d108f8d33af2013be1ac6da40b909a2412b3ec3be8c3b95d9afb770445a",
+      "initial_ocr_sha256": "1601e1eddc00d79621bcea0a4287287b37d041910062072a63a1e526cdc830b9",
+      "edited_native_typst": true,
+      "full_page_accepted": false,
+      "figure_topology_verified": false
+    },
+    {
+      "pdf_page": 340,
+      "source_render_sha256": "e307a4cc5f8b62a24d733426e6ce68fb9fc54ca8c7b240ac15e19d93c9b42982",
+      "initial_ocr_sha256": "bde18bbd4d5494905f3bed38f550981654ea7e93d90344f87e06998df3479fe9",
+      "edited_native_typst": true,
+      "full_page_accepted": false,
+      "figure_topology_verified": false
+    }
+  ],
+  "numeric": {
+    "precharge_fraction": 0.5,
+    "bitline_to_cell_capacity": 10,
+    "one_fraction": 0.55,
+    "zero_fraction": 0.45,
+    "supply_V": 1.8,
+    "delta_reference_mV": 90
+  },
+  "unresolved": [
+    "原始PDF全文逐字校对尚未结束",
+    "源图MOS管端口与版面尺寸待复核",
+    "版式与原扫描叠图待实际执行"
+  ]
+}

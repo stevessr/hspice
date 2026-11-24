@@ -1,42 +1,55 @@
 #!/usr/bin/env python3
-"""Chapter7 source pages261–268 figure/mathematical landmarks; NOT whole page acceptance."""
-import json,math
+"""Require source and native-figure landmarks for PDF261–268 without 1:1 claims."""
 from pathlib import Path
+import json,math
 r=Path(__file__).resolve().parents[1]
-a=json.loads((r/"qa/source-audit-p261-p268.json").read_text(encoding="utf-8"))
-status=json.loads((r/"page-status.json").read_text(encoding="utf-8"))["pages"]
-qa=json.loads((r/"qa/fidelity-status.json").read_text(encoding="utf-8"))["pages"]
-assert a["scope"]==[261,268] and a["source_pages"]==445
-assert len(a["pages"])==8 and a["accepted_full_pages"]==0
-expected={
-261:("7.3","图7.7","fig77","soft errors"),
-262:("7.3.1","图7.8","图7.9","fig78","fig79"),
-263:("图7.10","图7.11","fig710","fig711","XNOR"),
-264:("图7.12","图7.13","fig712","fig713"),
-265:("例7.3","overline(B)","table.header","fig714"),
-266:("7.3.2","图7.14","图7.15","fig714","fig715","R_(\"TG\")"),
-267:("图7.16","fig716","I_(\"Dsat,n\")","I_(\"Dlin,n\")"),
-268:("图7.17","fig717","(7.7)","(7.8)","(7.9)","0.83")
+a=json.loads((r/"qa/second-pass-p261-p268.json").read_text(encoding="utf-8"))
+s=json.loads((r/"page-status.json").read_text(encoding="utf-8"))["pages"]
+q=json.loads((r/"qa/fidelity-status.json").read_text(encoding="utf-8"))["pages"]
+assert a["scope"]==[261,268] and len(a["pages"])==8 and a["strict_accepted_pages"]==0
+markers={
+261:("7.3","图 7.7","fig77","电荷泄漏"),
+262:("7.3.1","图 7.8","图 7.9","fig78","fig79","F=A S"),
+263:("图 7.10","图 7.11","fig710","fig711","四选一"),
+264:("图 7.12","图 7.13","fig712","fig713","错误"),
+265:("例 7.3","fig-example73","overline(C)","真值表"),
+266:("7.3.2","图 7.14","图 7.15","fig715","R_(\"on\")"),
+267:("图 7.16","fig716","R_N","R_P","I_(\"Dlin,p\")"),
+268:("(7.7)","(7.8)","(7.9)","fig717","0.83","1.1")
 }
-for n,tokens in expected.items():
- src=r/"web"/f"{n-23}-page-{n:03d}.typ"
+for n,tokens in markers.items():
+ p=r/"web"/f"{n-23}-page-{n:03d}.typ"
  lay=r/"web"/f"{n-23}-page-{n:03d}-layout.typ"
- text=src.read_text(encoding="utf8")
- for token in tokens:
-  assert token in text,(n,token)
- assert "#image(" not in text
- assert f'#include "{src.name}"' in lay.read_text(encoding="utf8")
- s=status[n-1];q=qa[n-1]
- assert s["status"]==q["editorial_state"]=="partially-transcribed"
- assert not s["human_verified"] and not s["layout_verified"]
- assert not q["page_source_verified"] and not all(q["checks"].values())
- assert not a["pages"][n-261]["strictly_accepted"]
-fig=(r/"figures/ch7-pass9-native.typ").read_text(encoding="utf8")
-for n in range(77,80):
- assert f"#let fig{n}(" in fig
-for n in range(710,718):
- assert f"#let fig{n}(" in fig
-assert math.isclose(2*12500*30000/(25000+30000),13636.3636,rel_tol=.00001)
-assert math.isclose(12500*60000/(12500+60000),10344.8276,rel_tol=.00001)
-assert math.isclose(.83*12.5,10.375)
-print("PDF261–268 native source math and topology placeholders present; strict acceptance0/445.")
+ assert p.is_file() and lay.is_file()
+ txt=p.read_text(encoding="utf-8")
+ assert all(t in txt for t in tokens),(n,[t for t in tokens if t not in txt])
+ assert "#image(" not in txt
+ assert f'#include "{p.name}"' in lay.read_text(encoding="utf-8")
+ assert s[n-1]["status"]==q[n-1]["editorial_state"]=="partially-transcribed"
+ assert not s[n-1]["human_verified"] and not s[n-1]["layout_verified"]
+ assert q[n-1]["page_source_verified"] is False
+ assert not all(q[n-1]["checks"].values())
+ assert a["pages"][n-261]["strictly_accepted"] is False
+fig=(r/"figures/ch7-transmission-mux-native.typ").read_text(encoding="utf-8")
+for f in ["fig77","fig78","fig79","fig710","fig711","fig712","fig713","fig714","fig-example73","fig715","fig716","fig717"]:
+ assert "#let "+f+"(" in fig
+assert math.isclose(25*30/(25+30),13.636363636,rel_tol=1e-6)
+assert math.isclose((1*4.8)/(1+4.8),.827586,rel_tol=1e-5)
+assert math.isclose(104/100,1.04)
+prev=(r/"web"/"237-page-260.typ").read_text(encoding="utf-8")
+assert "1.04" in prev and "16" in prev and "7.2.4" in prev
+print("PDF260 source correction + PDF261–268 equation/figure landmarks present, strict 0/445.")
+
+
+# Original Pass9 truth table: verify the Boolean function independently.
+from itertools import product
+for A,B,C in product((False,True),repeat=3):
+    actual = (A and B) or (A and not B and C) or (not A and not C)
+    expected = {(False,False):not C,(False,True):not C,(True,False):C,(True,True):True}[A,B]
+    assert actual == expected,(A,B,C)
+legacy=json.loads((r/"qa/source-audit-p261-p268.json").read_text(encoding="utf-8"))
+assert legacy["scope"]==[261,268] and legacy["source_pages"]==445
+assert legacy["pdf_sha256"]==a["source_pdf_sha256"]
+assert [p["pdf_page"] for p in legacy["pages"]]==list(range(261,269))
+assert legacy["accepted_full_pages"]==0
+print("Pass9 original truth-table and historical scan record checked; newer native diagrams retained.")

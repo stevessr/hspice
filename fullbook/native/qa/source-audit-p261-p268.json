@@ -90,5 +90,6 @@
     "Figure7.15 transmission gate RC: RTG and terminal capacitances",
     "Equations7.7 RTG≈Reqn L/W; 7.8 Cin=Cout=Ceff(Wn+Wp);7.9=2 Ceff W",
     "Parallel equivalent above/below threshold RC is approximate, not exact"
-  ]
+  ],
+  "reconciliation_note": "Historical audit from original PR; retain as provenance alongside the newer main scan audit. No new scan rendering or strict fidelity verification performed during branch reconciliation."
 }
