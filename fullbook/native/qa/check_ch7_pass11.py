@@ -42,3 +42,15 @@ q=5*1.2-0.8*0.73
 assert math.isclose(q,5.42,abs_tol=0.005)
 assert math.isclose(q/5,1.08,abs_tol=0.005)
 print("Pass11: PDF277–284 editable native landmarks and source math checked; strict full pages 0/445")
+
+
+# Preserve the earlier source audit's reported arithmetic discrepancy, not a new scan claim.
+legacy=json.loads((root/"qa/source-audit-p277-p284-pass11.json").read_text(encoding="utf-8"))
+assert legacy["source_pdf_sha256"]==a["source_pdf_sha256"]
+assert legacy["scope"]==[277,284] and legacy["strict_full_page_accepted"]==0
+issue,=legacy["known_source_arithmetic_discrepancy"]
+assert issue["pdf_page"]==282 and issue["printed_result"]=="5 fF"
+assert math.isclose(1*40*.05+2*12*.05,3.2)
+assert issue["direct_arithmetic"]=="3.2 fF"
+assert "3.2" in (root/"web/259-page-282.typ").read_text(encoding="utf-8")
+print("Pass11 historical source arithmetic discrepancy and downstream printed values retained.")

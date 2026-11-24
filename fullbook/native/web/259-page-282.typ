@@ -14,6 +14,8 @@
 
 #align(center)[$C_("gnd")=C_("eff")(16lambda+16lambda+8lambda)+C_g(8lambda+4lambda)=5 "fF"$]
 
+*校对注：* 较早的源扫描审计记录指出，原印刷式采用的系数直接计算为 $1 times 40 times 0.05+2 times 12 times 0.05=3.2 "fF"$，与印刷结果 5 fF 不一致。本例后续计算保留印刷采用的 5 fF；该差异仍待原扫描独立复核。
+
 馈通电压是：
 
 #align(center)[$Delta V_x=(C_f Delta V_("clk"))/(C_f+C_("gnd"))=(0.8 "fF" times 1.2 "V")/(0.8 "fF"+5 "fF") approx 0.17 "V"$]
