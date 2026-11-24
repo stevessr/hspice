@@ -6,6 +6,8 @@ on:
       - 'fullbook/native/web/**'
       - 'fullbook/native/figures/**'
       - 'fullbook/native/qa/check_ch1_opening.py'
+      - 'fullbook/native/qa/check_frontmatter_pass27.py'
+      - 'fullbook/native/qa/source-audit-p003-p013.json'
       - 'fullbook/native/qa/check_ch1_closing_source.py'
       - '.github/workflows/native-page-svg.yml'
   pull_request:
@@ -13,6 +15,8 @@ on:
       - 'fullbook/native/web/**'
       - 'fullbook/native/figures/**'
       - 'fullbook/native/qa/check_ch1_opening.py'
+      - 'fullbook/native/qa/check_frontmatter_pass27.py'
+      - 'fullbook/native/qa/source-audit-p003-p013.json'
       - 'fullbook/native/qa/check_ch1_closing_source.py'
       - '.github/workflows/native-page-svg.yml'
   workflow_dispatch:
@@ -83,6 +87,7 @@ jobs:
           python3 fullbook/native/qa/check_ch6_visual_progress.py
           python3 fullbook/native/qa/check_ch6_spice_sources.py
           python3 fullbook/native/qa/check_status_consistency.py
+          python3 fullbook/native/qa/check_frontmatter_pass27.py
           python3 fullbook/native/qa/check_ch7_pass9.py
           python3 fullbook/native/qa/check_ch7_visual_pass9.py
           python3 fullbook/native/qa/check_ch7_pass10.py
