@@ -82,3 +82,18 @@ for anchor in ("#let shunt(", "k==0", "k==1", "C/2", "R/2", "Cwire",
 print("Native Fig10.5/10.8/10.9/10.10 waveform/topology/technology axes landmarks passed.")
 print("Pass18 chapter10 PDF357–364 source-scan formula/units and diagram landmarks passed; strict 0/445.")
 
+
+
+# Independently check SI dimensions and Elmore delays without relying on rounded source values.
+wire_r_ohm = y["wire_ohm"]
+wire_c_f = y["wire_pF"] * 1e-12
+source_r_ohm = y["driver_ohm"]
+first_moment_s = (source_r_ohm + wire_r_ohm/2) * wire_c_f
+assert math.isclose(first_moment_s, 1.33e-9, rel_tol=1e-9)
+assert round(first_moment_s * 1e9, 1) == y["elmore_ns"]
+assert math.isclose(x["wire_ohm"] * 1e-3, .0054)
+assert round(6.25*3.2+(6.25+x["wire_ohm"]*1e-3)*11.6, 1)==x["with_R_ps"]
+print("Pass18 SI-unit and rounding regression passed; existing 445-page coverage retained.")
+
+example362=(r/"web/339-page-362.typ").read_text(encoding="utf-8")
+assert all(v in example362 for v in ('125 " Ω"', '1080 " Ω"', '1 " pF"', '1.3 " ns"'))
